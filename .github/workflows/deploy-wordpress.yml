@@ -14,17 +14,48 @@ jobs:
       - name: Trigger Deployer for Git
         env:
           DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
         run: |
           if [ -z "$DEPLOY_URL" ]; then
             echo "Repository secret DEPLOY_URL is not configured."
             exit 1
           fi
 
-          curl \
-            --fail \
+          headers_file="$(mktemp)"
+          body_file="$(mktemp)"
+          auth_args=()
+
+          if [ -n "$DEPLOY_USER" ] && [ -n "$DEPLOY_PASSWORD" ]; then
+            auth_args+=(--user "$DEPLOY_USER:$DEPLOY_PASSWORD")
+          fi
+
+          set +e
+          http_status="$(curl \
             --location \
             --silent \
             --show-error \
             --retry 3 \
             --retry-delay 5 \
-            "$DEPLOY_URL"
+            --dump-header "$headers_file" \
+            --output "$body_file" \
+            --write-out '%{http_code}' \
+            "${auth_args[@]}" \
+            "$DEPLOY_URL")"
+          curl_exit=$?
+          set -e
+
+          echo "HTTP status: $http_status"
+          grep -iE '^(server|content-type|www-authenticate):' "$headers_file" || true
+
+          if [ "$curl_exit" -ne 0 ]; then
+            echo "The deployment request could not be completed by curl."
+            exit "$curl_exit"
+          fi
+
+          if [ "$http_status" -lt 200 ] || [ "$http_status" -ge 300 ]; then
+            echo "The deployment endpoint rejected the request."
+            exit 22
+          fi
+
+          echo "Deployment endpoint accepted the request."
