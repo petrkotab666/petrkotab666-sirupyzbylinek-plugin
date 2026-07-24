@@ -3,7 +3,7 @@
  * Plugin Name: SirupyZBylinek.cz – automatizace
  * Plugin URI: https://github.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin
  * Description: Řízené affiliate a obsahové moduly pro SirupyZBylinek.cz. První modul zobrazuje tematickou kampaň produktů BrainMax v období 1. 8.–30. 9. 2026.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Petr Kotáb
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -70,7 +70,7 @@ function szb_auto_bm_products() {
 			'limit_response_size' => 12 * 1024 * 1024,
 			'headers'             => array(
 				'Accept'     => 'application/xml,text/xml;q=0.9,*/*;q=0.8',
-				'User-Agent' => 'SirupyZBylinek.cz affiliate module/1.0',
+				'User-Agent' => 'SirupyZBylinek.cz affiliate module/1.0.1',
 			),
 		)
 	);
