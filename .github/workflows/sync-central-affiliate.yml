@@ -6,6 +6,8 @@ on:
     paths:
       - 'assets/affiliate-site-config.json'
       - '.github/workflows/sync-central-affiliate.yml'
+  issues:
+    types: [opened]
   schedule:
     - cron: '22 */6 * * *'
   workflow_dispatch:
@@ -19,6 +21,7 @@ concurrency:
 
 jobs:
   sync:
+    if: github.event_name != 'issues' || github.event.issue.title == '[affiliate-sync] trigger'
     uses: petrkotab666/pojistime.to/.github/workflows/reusable-affiliate-sync.yml@main
     with:
       runs_on: '["ubuntu-latest"]'
