@@ -1,0 +1,24 @@
+name: Synchronizace centrální affiliate databáze
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/affiliate-site-config.json'
+      - '.github/workflows/sync-central-affiliate.yml'
+  schedule:
+    - cron: '22 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: central-affiliate-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    uses: petrkotab666/pojistime.to/.github/workflows/reusable-affiliate-sync.yml@main
+    with:
+      runs_on: '["ubuntu-latest"]'
