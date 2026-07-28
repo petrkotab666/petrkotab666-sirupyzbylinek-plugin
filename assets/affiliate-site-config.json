@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "syncRevision": 1,
+  "site": "sirupyzbylinek.cz",
+  "mode": "filtered",
+  "aliases": [
+    "sirupyzbylinek",
+    "sirupyzbylinek.cz",
+    "sirupy z bylinek"
+  ],
+  "allowedPartnerIds": [
+    "brainmarket",
+    "ehub-e9a1924a",
+    "e9a1924a"
+  ],
+  "allowedCategories": [
+    "zdravi-a-vyziva",
+    "doplnky-stravy",
+    "funkcni-potraviny",
+    "sport-a-regenerace",
+    "vitaminy-a-mineraly",
+    "brainmax"
+  ],
+  "autoPublish": true,
+  "centralSyncReason": "WordPress plugin je přímý provozní spotřebitel centrálního BrainMarket/BrainMax affiliate záznamu pro schválenou doménu sirupyzbylinek.cz."
+}
