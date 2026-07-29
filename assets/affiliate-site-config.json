@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "syncRevision": 1,
+  "syncRevision": 2,
   "site": "sirupyzbylinek.cz",
   "mode": "filtered",
   "aliases": [
@@ -23,5 +23,5 @@
   ],
   "autoPublish": true,
   "centralSyncReason": "WordPress plugin je přímý provozní spotřebitel centrálního BrainMarket/BrainMax affiliate záznamu pro schválenou doménu sirupyzbylinek.cz.",
-  "lastConnectionAudit": "2026-07-28T21:50:00Z"
+  "lastConnectionAudit": "2026-07-29T08:39:43Z"
 }
