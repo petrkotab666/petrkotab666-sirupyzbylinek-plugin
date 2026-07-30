@@ -1,0 +1,79 @@
+name: Zapnout soukromé statistiky webu
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: private-site-stats
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Doplnit měření a adresu statistik do pluginu
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path=Path('sirupyzbylinek-automatizace.php')
+          text=path.read_text(encoding='utf-8')
+          marker='SZB_PRIVATE_STATS_V1'
+          changed=False
+          text2=re.sub(r'(?m)^ \* Version: 1\.0\.1$', ' * Version: 1.0.2', text)
+          if text2 != text:
+              text=text2; changed=True
+          if marker not in text:
+              block=r'''
+
+/* SZB_PRIVATE_STATS_V1 */
+function szb_auto_private_stats_script() {
+	if ( is_admin() ) {
+		return;
+	}
+	wp_enqueue_script(
+		'szb-private-stats',
+		'https://nasekadan.cz/_nkstats/tracker.js',
+		array(),
+		'20260730-1',
+		true
+	);
+	wp_script_add_data( 'szb-private-stats', 'strategy', 'defer' );
+}
+add_action( 'wp_enqueue_scripts', 'szb_auto_private_stats_script', 5 );
+
+function szb_auto_private_stats_redirect() {
+	$request_path = isset( $_SERVER['REQUEST_URI'] ) ? wp_parse_url( wp_unslash( $_SERVER['REQUEST_URI'] ), PHP_URL_PATH ) : '';
+	if ( 'statistiky' !== trim( (string) $request_path, '/' ) ) {
+		return;
+	}
+	wp_redirect( 'https://nasekadan.cz/statistiky-webu/?site=sirupyzbylinek.cz', 302, 'SirupyZBylinek.cz' );
+	exit;
+}
+add_action( 'template_redirect', 'szb_auto_private_stats_redirect', 1 );
+'''
+              text=text.rstrip()+block+'\n'; changed=True
+          if changed:
+              path.write_text(text,encoding='utf-8')
+              print('Plugin doplněn o soukromé statistiky.')
+          else:
+              print('Soukromé statistiky už jsou v pluginu přítomné.')
+          PY
+      - name: Uložit změny
+        shell: bash
+        run: |
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then exit 0; fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add sirupyzbylinek-automatizace.php
+          git commit -m 'Zapnout soukromé statistiky webu'
+          git push
