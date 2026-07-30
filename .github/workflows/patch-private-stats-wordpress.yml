@@ -1,0 +1,66 @@
+name: Doplnit soukromé statistiky do WordPress pluginu
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/patch-private-stats-wordpress.yml'
+      - '.github/wordpress-stats-trigger.txt'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Doplnit měření a adresu statistik
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('sirupyzbylinek-automatizace.php')
+          text=p.read_text(encoding='utf-8')
+          marker='SZB_PRIVATE_STATS_V1'
+          if marker not in text:
+              text=text.replace(' * Version: 1.0.1',' * Version: 1.0.2')
+              text += r'''
+
+/* SZB_PRIVATE_STATS_V1 */
+function szb_private_stats_enqueue() {
+	if ( is_admin() ) {
+		return;
+	}
+	wp_enqueue_script(
+		'szb-private-stats',
+		'https://nasekadan.cz/_nkstats/tracker.js',
+		array(),
+		'20260730-1',
+		false
+	);
+}
+add_action( 'wp_enqueue_scripts', 'szb_private_stats_enqueue', 1 );
+
+function szb_private_stats_redirect() {
+	$path = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_parse_url( wp_unslash( $_SERVER['REQUEST_URI'] ), PHP_URL_PATH ) : '';
+	if ( '/statistiky' === rtrim( $path, '/' ) ) {
+		wp_safe_redirect( 'https://nasekadan.cz/statistiky-webu/?site=sirupyzbylinek.cz', 302 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'szb_private_stats_redirect', 0 );
+'''
+              p.write_text(text,encoding='utf-8')
+          PY
+          php -l sirupyzbylinek-automatizace.php
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add sirupyzbylinek-automatizace.php
+          if ! git diff --cached --quiet; then
+            git commit -m 'Zapnout soukromé statistiky SirupyZBylinek.cz'
+            git push origin HEAD:main
+          fi
