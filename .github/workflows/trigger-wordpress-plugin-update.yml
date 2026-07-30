@@ -1,0 +1,44 @@
+name: Vyvolat aktualizaci pluginu SirupyZBylinek
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/trigger-wordpress-plugin-update.yml'
+      - '.github/trigger-wordpress-plugin-update.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Vyvolat WordPress cron a ověřit novou verzi
+        id: check
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          : > "$RUNNER_TEMP/result.txt"
+          ok=0
+          for n in $(seq 1 25); do
+            curl -kLsS --max-time 30 -o /dev/null "https://www.sirupyzbylinek.cz/wp-cron.php?doing_wp_cron=$(date +%s).$n" || true
+            body=$(curl -kLsS -A 'Mozilla/5.0 PluginUpdateVerify' --max-time 30 "https://www.sirupyzbylinek.cz/?plugin-stats=$n-$(date +%s)" || true)
+            if grep -q '_nkstats/tracker.js' <<<"$body"; then ok=1; break; fi
+            sleep 10
+          done
+          echo "TRACKER_LIVE=$ok" | tee "$RUNNER_TEMP/result.txt"
+          test "$ok" = 1
+          h=$(mktemp); curl -kLsS -A 'Mozilla/5.0 PluginUpdateVerify' --max-time 30 -D "$h" -o /dev/null 'https://www.sirupyzbylinek.cz/statistiky/' || true
+          grep -i '^location:' "$h" | tee -a "$RUNNER_TEMP/result.txt" || true
+          grep -qi 'location:.*nasekadan.cz/statistiky-webu' "$h"
+      - name: Zapsat výsledek
+        if: always()
+        uses: actions/github-script@v7
+        env: {OUTCOME: "${{ steps.check.outcome }}"}
+        with:
+          script: |
+            const fs=require('fs');let log='';try{log=fs.readFileSync(`${process.env.RUNNER_TEMP}/result.txt`,'utf8')}catch{};const ok=process.env.OUTCOME==='success';const i=await github.rest.issues.create({owner:context.repo.owner,repo:context.repo.repo,title:`[SIRUPY CRON UPDATE] ${ok?'Úspěch':'Selhání'} ${new Date().toISOString()}`,body:'```text\n'+log+'\n```'});if(ok)await github.rest.issues.update({owner:context.repo.owner,repo:context.repo.repo,issue_number:i.data.number,state:'closed',state_reason:'completed'});
+      - if: steps.check.outcome != 'success'
+        run: exit 1
