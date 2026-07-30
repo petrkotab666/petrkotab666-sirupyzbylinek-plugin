@@ -1,0 +1,58 @@
+name: Nasadit soukromé statistiky SirupyZBylinek nyní
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deploy-private-stats-now.yml'
+      - '.github/deploy-private-stats-now-trigger.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Vyvolat produkční deploy pluginu
+        id: deploy
+        continue-on-error: true
+        env:
+          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
+        shell: bash
+        run: |
+          set -o pipefail
+          test -n "$DEPLOY_URL"
+          code=$(curl --location --silent --show-error --retry 3 --retry-delay 3 --max-time 60 -o "$RUNNER_TEMP/body" -w '%{http_code}' "$DEPLOY_URL" || true)
+          echo "DEPLOY_CODE=$code" | tee "$RUNNER_TEMP/deploy.log"
+          head -c 1000 "$RUNNER_TEMP/body" | sed -E 's#https?://[^[:space:]"<]+#[URL REDACTED]#g' | tee -a "$RUNNER_TEMP/deploy.log"
+          test "$code" -ge 200 && test "$code" -lt 300
+      - name: Ověřit veřejný web
+        id: verify
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          ok=0
+          for n in $(seq 1 30); do
+            body=$(curl -kLsS -A 'Mozilla/5.0 PrivateStatsVerify' --max-time 20 "https://www.sirupyzbylinek.cz/?stats-check=$n-$(date +%s)" || true)
+            if grep -q '_nkstats/tracker.js' <<<"$body"; then ok=1; break; fi
+            sleep 4
+          done
+          echo "TRACKER_LIVE=$ok" | tee "$RUNNER_TEMP/verify.log"
+          stats_code=$(curl -kLsS -A 'Mozilla/5.0 PrivateStatsVerify' --max-time 20 -D "$RUNNER_TEMP/stats-h" -o "$RUNNER_TEMP/stats-b" -w '%{http_code}' "https://www.sirupyzbylinek.cz/statistiky/" || true)
+          echo "STATS_CODE=$stats_code" | tee -a "$RUNNER_TEMP/verify.log"
+          grep -i '^location:' "$RUNNER_TEMP/stats-h" | tee -a "$RUNNER_TEMP/verify.log" || true
+          test "$ok" = 1
+          grep -qi 'location:.*nasekadan.cz/statistiky-webu' "$RUNNER_TEMP/stats-h"
+      - name: Zapsat výsledek
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          DEPLOY: ${{ steps.deploy.outcome }}
+          VERIFY: ${{ steps.verify.outcome }}
+        with:
+          script: |
+            const fs=require('fs');let a='',b='';try{a=fs.readFileSync(`${process.env.RUNNER_TEMP}/deploy.log`,'utf8')}catch{}try{b=fs.readFileSync(`${process.env.RUNNER_TEMP}/verify.log`,'utf8')}catch{}const ok=process.env.DEPLOY==='success'&&process.env.VERIFY==='success';const i=await github.rest.issues.create({owner:context.repo.owner,repo:context.repo.repo,title:`[SIRUPY STATISTIKY] ${ok?'Úspěch':'Selhání'} ${new Date().toISOString()}`,body:'```text\n'+(a+'\n'+b).replace(/```/g,'---')+'\n```'});if(ok)await github.rest.issues.update({owner:context.repo.owner,repo:context.repo.repo,issue_number:i.data.number,state:'closed',state_reason:'completed'});
+      - if: steps.deploy.outcome != 'success' || steps.verify.outcome != 'success'
+        run: exit 1
