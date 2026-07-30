@@ -1,0 +1,1 @@
+Vyvolání WordPress cron aktualizace: 2026-07-30
