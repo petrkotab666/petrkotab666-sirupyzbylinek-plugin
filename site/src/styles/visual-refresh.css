@@ -1,136 +1,365 @@
-/* Výraznější, ale stále klidná vizuální vrstva hlavních boxů. */
+/*
+ * Obrazový rukopis webu inspirovaný původní zeleno-oranžovou verzí.
+ * Hlavní grafiku tvoří vlastní SVG ilustrace, nikoli emoji v pastelových boxech.
+ */
+
+:root{
+  --heritage-green:#164f2a;
+  --heritage-green-dark:#103b20;
+  --heritage-green-light:#5f943f;
+  --heritage-orange:#efa12b;
+  --heritage-orange-dark:#c9781d;
+  --heritage-cream:#fff5d9;
+  --heritage-paper:#f8f1df;
+  --heritage-ink:#19371f;
+  --heritage-shadow:0 24px 64px rgba(22,61,31,.20);
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 14%,rgba(113,154,76,.08),transparent 24%),
+    radial-gradient(circle at 90% 8%,rgba(239,161,43,.09),transparent 26%),
+    linear-gradient(180deg,#fbf7ea 0%,#f6f0df 100%);
+}
+
+/* Hlavička podobná původnímu webu */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  border-bottom:6px solid var(--heritage-orange);
+  background:rgba(20,75,40,.97);
+  box-shadow:0 10px 28px rgba(13,51,27,.20);
+  backdrop-filter:blur(12px);
+}
+.header-inner{min-height:88px;max-width:1240px;padding:0 24px}
+.brand{
+  align-self:stretch;
+  gap:14px;
+  min-width:290px;
+  margin-right:20px;
+  padding:11px 22px 11px 18px;
+  border-radius:0 0 24px 24px;
+  background:linear-gradient(145deg,#f4ae39,#df8820);
+  color:#fff;
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+}
+.brand-mark{
+  width:60px;
+  height:60px;
+  flex:0 0 60px;
+  border:2px solid rgba(255,255,255,.82);
+  border-radius:18px;
+  background:#fff4d4;
+  color:var(--heritage-green-dark);
+  box-shadow:0 8px 20px rgba(77,45,13,.18);
+}
+.brand-mark svg{display:block;width:47px;height:47px}
+.brand-copy strong{font-size:1.35rem;color:#fff;text-shadow:0 2px 10px rgba(78,43,7,.24)}
+.brand-copy small{color:#fff4d6;font-size:.76rem}
+.main-menu{gap:3px}
+.main-menu a{
+  color:#f8f3df;
+  font-weight:780;
+  padding:11px 12px;
+  text-shadow:0 1px 3px rgba(0,0,0,.16);
+}
+.main-menu a:hover,.main-menu a[aria-current="page"]{
+  background:rgba(255,255,255,.14);
+  color:#fff;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);
+}
+.menu-button{border-color:rgba(255,255,255,.36);background:rgba(255,255,255,.12);color:#fff}
+
+/* Botanické SVG ilustrace */
+.botanical-artwork{display:block;width:100%;height:100%;overflow:visible}
+.botanical-artwork *{vector-effect:non-scaling-stroke}
+
+/* Hlavní ilustrovaný banner */
+.hero.legacy-home-hero{
+  max-width:none;
+  min-height:480px;
+  margin:0;
+  padding:74px 24px;
+  border-radius:0;
+  background:var(--heritage-green-dark);
+  box-shadow:none;
+  display:grid;
+  place-items:center;
+  isolation:isolate;
+}
+.hero.legacy-home-hero::before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(9,46,23,.82),rgba(9,46,23,.48) 48%,rgba(9,46,23,.70)),
+    linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.35));
+}
+.hero.legacy-home-hero::after{content:none}
+.home-hero-art{position:absolute;z-index:0;inset:-36px -24px -44px;opacity:.94}
+.home-hero-art .botanical-artwork{width:100%;height:100%;filter:saturate(1.04) contrast(1.03)}
+.legacy-home-hero .hero-copy{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  text-align:center;
+}
+.legacy-home-hero .eyebrow{color:#f5c75f;text-shadow:0 2px 14px rgba(0,0,0,.28)}
+.legacy-home-hero h1{
+  max-width:900px;
+  margin:.3rem auto 1.2rem;
+  font-size:clamp(2.8rem,6vw,5.2rem);
+  text-wrap:balance;
+  text-shadow:0 5px 28px rgba(0,0,0,.48);
+}
+.legacy-home-hero p{
+  max-width:720px;
+  margin:0 auto;
+  color:#f7f0db;
+  text-shadow:0 3px 16px rgba(0,0,0,.38);
+}
+.legacy-home-hero .hero-actions{justify-content:center}
+.button{
+  border:0;
+  background:linear-gradient(145deg,#f7b63e,#e58f22);
+  color:#17391f;
+  box-shadow:0 12px 28px rgba(70,40,8,.25);
+}
+.button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.button.secondary{border:1px solid rgba(255,255,255,.62);background:rgba(13,60,31,.36);color:#fff;backdrop-filter:blur(6px)}
+
+/* Nadpisy sekcí */
+.centered-heading{max-width:820px;margin-right:auto;margin-left:auto;text-align:center}
+.section-heading>span{color:#c7761e}
+.section-heading h2{color:var(--heritage-green-dark)}
+.home-directory-section{padding-top:76px}
+
+/* Obrazové rozcestníky */
+.illustrated-directory{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+.illustrated-directory-card{
+  position:relative;
+  isolation:isolate;
+  min-height:330px;
+  overflow:hidden;
+  border:1px solid rgba(25,77,39,.20);
+  border-radius:30px;
+  background:#dce9c9;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 18px 46px rgba(24,66,33,.16);
+  transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease;
+}
+.illustrated-directory-art{position:absolute;z-index:0;inset:-10px;transition:transform .36s ease,filter .36s ease}
+.illustrated-directory-art .botanical-artwork{width:100%;height:100%}
+.illustrated-directory-shade{
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:linear-gradient(180deg,rgba(9,46,23,.02) 22%,rgba(9,46,23,.36) 55%,rgba(9,38,20,.94) 100%);
+}
+.illustrated-directory-copy{
+  position:absolute;
+  z-index:2;
+  right:0;
+  bottom:0;
+  left:0;
+  display:grid;
+  gap:7px;
+  padding:88px 27px 25px;
+}
+.illustrated-directory-copy small{
+  color:#ffd271;
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.illustrated-directory-copy>strong{font:700 1.58rem/1.12 Georgia,serif;text-shadow:0 3px 14px rgba(0,0,0,.34)}
+.illustrated-directory-copy>span{color:#eff6e9;font-size:.93rem;line-height:1.46}
+.illustrated-directory-copy b{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  width:max-content;
+  margin-top:3px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(239,161,43,.94);
+  color:#17391f;
+  font-size:.78rem;
+  box-shadow:0 7px 18px rgba(0,0,0,.22);
+}
+.illustrated-directory-card:hover{transform:translateY(-8px);border-color:rgba(239,161,43,.70);box-shadow:0 30px 66px rgba(18,61,29,.26)}
+.illustrated-directory-card:hover .illustrated-directory-art{transform:scale(1.045);filter:saturate(1.08)}
+
+/* Široký ilustrovaný pás jako na původním webu */
+.legacy-pantry-banner{
+  max-width:1192px;
+  min-height:330px;
+  margin:78px auto 0;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.06fr .94fr;
+  align-items:center;
+  border:1px solid rgba(20,78,39,.26);
+  border-radius:34px;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.12),transparent 28%),
+    linear-gradient(135deg,#174e29,#286c37 58%,#d68720 58%,#eeac37);
+  color:#fff;
+  box-shadow:var(--heritage-shadow);
+}
+.legacy-pantry-copy{position:relative;z-index:2;padding:48px 52px}
+.legacy-pantry-copy>span{color:#f6c866;font-size:.76rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.legacy-pantry-copy h2{margin:.42rem 0 .75rem;font:700 clamp(2rem,4vw,3.5rem)/1.02 Georgia,serif}
+.legacy-pantry-copy p{max-width:570px;color:#e7f0e3;font-size:1.06rem}
+.legacy-pantry-art{align-self:stretch;min-height:330px;padding:20px 18px 12px}
+.legacy-pantry-art .botanical-artwork{filter:drop-shadow(0 18px 30px rgba(54,31,5,.25))}
+
+/* Obrazový banner hlavních rubrik */
+.visual-section-hero{
+  position:relative;
+  isolation:isolate;
+  max-width:1192px;
+  min-height:390px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  align-items:center;
+  gap:16px;
+  margin:46px auto 0;
+  border:1px solid rgba(25,78,39,.22);
+  border-radius:34px;
+  background:linear-gradient(135deg,#174e29,#357344);
+  color:#fff;
+  box-shadow:var(--heritage-shadow);
+}
+.visual-section-hero::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  background:radial-gradient(circle at 12% 18%,rgba(255,255,255,.10),transparent 28%);
+}
+.visual-section-hero--amber{background:linear-gradient(135deg,#7b4b1c,#d68720)}
+.visual-section-hero--purple{background:linear-gradient(135deg,#41344d,#765d91)}
+.visual-section-hero--blue{background:linear-gradient(135deg,#174954,#397c88)}
+.visual-section-hero-copy{padding:52px 0 52px 56px}
+.visual-section-hero-copy>span{color:#f7cb68;font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.visual-section-hero-copy h1{margin:.38rem 0 .8rem;font:700 clamp(2.4rem,5vw,4.4rem)/1.02 Georgia,serif;text-wrap:balance}
+.visual-section-hero-copy p{max-width:620px;margin:0;color:#edf4e9;font-size:1.08rem}
+.visual-section-hero-art{align-self:stretch;min-height:390px;padding:18px 18px 10px 0}
+.visual-section-hero-art .botanical-artwork{filter:drop-shadow(0 20px 34px rgba(0,0,0,.20))}
+
+/* Fallback pro starší stránky, které ještě používají section-card */
 .section-grid{gap:22px}
 .section-card{
   position:relative;
-  isolation:isolate;
-  min-height:260px;
+  min-height:230px;
   overflow:hidden;
-  padding:32px 30px 28px;
-  border:1px solid rgba(55,96,56,.18);
-  background:linear-gradient(145deg,#fff 0%,#f8fbf4 58%,#eef5e7 100%);
-  box-shadow:0 15px 38px rgba(37,72,39,.10);
+  padding:30px;
+  border:1px solid rgba(29,82,42,.20);
+  border-radius:26px;
+  background:linear-gradient(145deg,#fffaf0,#e8efd3);
+  box-shadow:0 15px 38px rgba(30,71,37,.11);
 }
-.section-card::before{
+.section-card::before,.section-card::after{content:none!important}
+.section-card:hover{transform:translateY(-6px);border-color:rgba(225,139,31,.62);box-shadow:0 25px 54px rgba(26,67,33,.18)}
+.section-card .section-icon{width:58px;height:58px;border:0;border-radius:18px;background:#174e29;color:#fff;box-shadow:0 10px 24px rgba(22,61,31,.20)}
+.section-card h3{font-size:1.48rem}
+.section-card strong{color:#b76516}
+
+/* Běžné archivní hlavičky dostávají výraznější banner místo plochého bloku */
+.archive-header{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid rgba(25,78,39,.20);
+  background:
+    radial-gradient(circle at 88% 25%,rgba(239,161,43,.24),transparent 28%),
+    radial-gradient(circle at 72% 80%,rgba(116,164,82,.22),transparent 30%),
+    linear-gradient(135deg,#f8f1d8,#dde9c9);
+  box-shadow:0 18px 46px rgba(30,71,37,.11);
+}
+.archive-header::after{
+  content:"";
   position:absolute;
   z-index:-1;
-  right:-12px;
-  top:-18px;
-  display:grid;
-  width:146px;
-  height:146px;
-  place-items:center;
-  border-radius:42% 58% 55% 45%;
-  font-size:5.2rem;
-  line-height:1;
-  opacity:.25;
-  filter:saturate(1.18);
-  transform:rotate(8deg);
-  transition:transform .24s ease,opacity .24s ease;
+  right:-70px;
+  bottom:-90px;
+  width:300px;
+  height:300px;
+  border:36px solid rgba(34,95,47,.09);
+  border-radius:42% 58% 47% 53%;
+  transform:rotate(18deg);
 }
-.section-card::after{
-  content:"";
-  position:absolute;
-  z-index:-2;
-  inset:auto -50px -70px auto;
-  width:190px;
-  height:190px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(255,255,255,.65),rgba(255,255,255,0) 68%);
-}
-.section-card:nth-child(1){background:linear-gradient(145deg,#fffdf4,#eef6dc)}
-.section-card:nth-child(1)::before{content:"🧺";background:linear-gradient(145deg,#f6d89e,#c8df98)}
-.section-card:nth-child(2){background:linear-gradient(145deg,#fff9ee,#f7e0bb)}
-.section-card:nth-child(2)::before{content:"🍯";background:linear-gradient(145deg,#ffd681,#e6aa43)}
-.section-card:nth-child(3){background:linear-gradient(145deg,#f5fff7,#d8eedc)}
-.section-card:nth-child(3)::before{content:"🌿";background:linear-gradient(145deg,#b7dfb8,#6dae77)}
-.section-card:nth-child(4){background:linear-gradient(145deg,#fbf8ff,#e5dcf1)}
-.section-card:nth-child(4)::before{content:"📖";background:linear-gradient(145deg,#dbcdf0,#9d85bd)}
-.section-card:nth-child(5){background:linear-gradient(145deg,#fffaf1,#f6e2b7)}
-.section-card:nth-child(5)::before{content:"🏷️";background:linear-gradient(145deg,#ffe09b,#dcb257)}
-.section-card:nth-child(6){background:linear-gradient(145deg,#f5fbff,#d9ecf2)}
-.section-card:nth-child(6)::before{content:"🧩";background:linear-gradient(145deg,#bfe4ed,#70afbf)}
-.section-card:hover::before{opacity:.42;transform:rotate(2deg) scale(1.08)}
-.section-card:hover{transform:translateY(-7px);box-shadow:0 24px 55px rgba(31,70,36,.17)}
-.section-card .section-icon{
-  width:64px;
-  height:64px;
-  border:1px solid rgba(255,255,255,.86);
-  border-radius:21px;
-  background:rgba(255,255,255,.76);
-  box-shadow:0 10px 25px rgba(34,70,36,.12),inset 0 0 0 1px rgba(53,107,57,.08);
-  font-size:2rem;
-  backdrop-filter:blur(6px);
-}
-.section-card h3{font-size:1.52rem;margin-top:22px}
-.section-card p{max-width:82%;font-size:.97rem}
-.section-card strong{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(53,107,57,.11)}
+.archive-header>span{color:#bb6819}
 
-/* Horní doporučené boxy: větší ikona, barevný pruh a hloubka. */
-.context-ads{
-  position:relative;
-  overflow:hidden;
-  border-color:#cfddc9;
-  background:linear-gradient(145deg,#fff,#f7faef);
-  box-shadow:0 20px 48px rgba(44,75,48,.12);
+/* Reklamy zůstávají čitelné, ale nesmějí přebít vlastní obsah */
+.context-ads,.product-feed{
+  border-color:rgba(28,79,40,.20);
+  background:rgba(255,252,241,.94);
+  box-shadow:0 18px 44px rgba(31,70,36,.11);
 }
-.context-ads::before{
-  content:"";
-  position:absolute;
-  inset:0 0 auto;
-  height:7px;
-  background:linear-gradient(90deg,#356b39,#d4a83e,#7f5ca5,#3b8293);
-}
-.context-ad-grid{gap:16px}
+.context-ads::before{height:5px;background:linear-gradient(90deg,#174e29,#efa12b,#174e29)}
 .context-ad-card{
-  position:relative;
-  isolation:isolate;
-  min-height:190px;
-  overflow:hidden;
-  padding:22px;
-  border-color:rgba(54,102,55,.16);
-  background:linear-gradient(150deg,#fff,#f0f7ea);
-  box-shadow:0 10px 26px rgba(38,76,40,.08);
+  min-height:178px;
+  border-color:rgba(31,82,42,.15);
+  background:linear-gradient(145deg,#fffdf5,#edf3df);
+  box-shadow:0 10px 28px rgba(31,70,36,.08);
 }
-.context-ad-card::after{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  right:-34px;
-  bottom:-40px;
-  width:125px;
-  height:125px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(72,137,73,.20),rgba(72,137,73,0) 70%);
-}
-.context-ad-card:nth-child(2){background:linear-gradient(150deg,#fffdf4,#f7ebcc)}
-.context-ad-card:nth-child(2)::after{background:radial-gradient(circle,rgba(211,159,45,.24),rgba(211,159,45,0) 70%)}
-.context-ad-card:nth-child(3){background:linear-gradient(150deg,#fbf8ff,#eae1f3)}
-.context-ad-card:nth-child(3)::after{background:radial-gradient(circle,rgba(124,84,157,.22),rgba(124,84,157,0) 70%)}
-.context-ad-icon{
-  width:58px;
-  height:58px;
-  border:1px solid rgba(255,255,255,.8);
-  border-radius:19px;
-  background:rgba(255,255,255,.72);
-  box-shadow:0 10px 24px rgba(35,71,37,.13);
-  font-size:1.9rem;
-}
-.context-ad-copy strong{font:700 1.12rem/1.26 Georgia,serif}
-.context-ad-cta{display:inline-flex;align-items:center;gap:6px;width:max-content;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(53,107,57,.12)}
-.context-ad-card:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(37,75,39,.15)}
+.context-ad-card::after{content:none}
+.context-ad-icon{background:#174e29;color:#fff}
+.context-ad-card:hover{border-color:rgba(224,139,31,.55)}
 
-/* Stejný rukopis také na kartách herny. */
-.game-launch-card{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(145deg,#fff,#f0f7eb);box-shadow:0 16px 38px rgba(42,78,44,.11)}
-.game-launch-card::after{content:"";position:absolute;z-index:-1;right:-45px;top:-45px;width:165px;height:165px;border-radius:50%;background:radial-gradient(circle,rgba(80,143,81,.22),rgba(80,143,81,0) 68%)}
-.game-launch-card:nth-child(2){background:linear-gradient(145deg,#fffaf1,#f4e2bd)}
-.game-launch-card:nth-child(2)::after{background:radial-gradient(circle,rgba(211,158,45,.22),rgba(211,158,45,0) 68%)}
-.game-launch-card:nth-child(3){background:linear-gradient(145deg,#faf7ff,#e8def2)}
-.game-launch-card:nth-child(3)::after{background:radial-gradient(circle,rgba(124,84,157,.22),rgba(124,84,157,0) 68%)}
-.game-launch-icon{width:78px;height:78px;border:1px solid rgba(255,255,255,.85);border-radius:24px;background:rgba(255,255,255,.74);box-shadow:0 12px 28px rgba(39,75,41,.14);font-size:2.35rem}
+/* Článkové karty */
+.article-card{border-color:rgba(28,79,40,.18);background:#fffdf6;box-shadow:0 13px 36px rgba(30,70,36,.10)}
+.article-card:hover{transform:translateY(-4px);box-shadow:0 23px 50px rgba(27,66,33,.16)}
+.card-image{background:linear-gradient(145deg,#e7efd3,#f2d99f)}
+.card-body h2 a:hover{color:#b76818}
 
-@media(max-width:650px){
-  .section-card{min-height:230px;padding:26px 23px}
-  .section-card::before{right:-25px;top:-22px;width:132px;height:132px;font-size:4.5rem}
-  .section-card p{max-width:88%}
-  .context-ad-card{min-height:0}
+/* Herní a slevové karty nesmí používat velké dekorativní emoji */
+.game-launch-card::after{content:none}
+.game-launch-card{background:linear-gradient(145deg,#fffaf0,#e3ecd1);border-color:rgba(28,79,40,.20)}
+.game-launch-icon{background:#174e29;color:#fff}
+.deal-card{border-color:rgba(28,79,40,.20);background:#fffdf6;box-shadow:0 14px 38px rgba(30,70,36,.11)}
+.product-button{background:linear-gradient(145deg,#235d31,#174e29)}
+
+/* Patička */
+.site-footer{border-top:8px solid var(--heritage-orange);background:linear-gradient(145deg,#103b20,#174e29)}
+
+@media(max-width:1000px){
+  .brand{min-width:0;margin-right:auto;border-radius:0 0 20px 20px}
+  .main-menu{top:82px;background:#174e29;border-color:rgba(255,255,255,.18)}
+  .main-menu a{color:#fff}
+  .illustrated-directory{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .legacy-pantry-banner,.visual-section-hero{margin-right:18px;margin-left:18px;grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:720px){
+  .header-inner{min-height:76px}
+  .brand{padding:8px 12px}
+  .brand-mark{width:50px;height:50px;flex-basis:50px}
+  .brand-mark svg{width:39px;height:39px}
+  .brand-copy strong{font-size:1.06rem}
+  .brand-copy small{display:none}
+  .hero.legacy-home-hero{min-height:440px;padding:60px 20px}
+  .home-hero-art{inset:-10px -180px -20px -150px;opacity:.86}
+  .legacy-home-hero h1{font-size:clamp(2.45rem,12vw,3.5rem)}
+  .illustrated-directory{grid-template-columns:1fr}
+  .illustrated-directory-card{min-height:315px}
+  .legacy-pantry-banner,.visual-section-hero{grid-template-columns:1fr;margin-top:58px}
+  .legacy-pantry-copy,.visual-section-hero-copy{padding:38px 28px}
+  .legacy-pantry-art,.visual-section-hero-art{min-height:260px;padding:0 15px 12px}
+  .visual-section-hero-art{order:-1}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .illustrated-directory-card,.illustrated-directory-art,.button,.article-card{transition:none!important}
 }
