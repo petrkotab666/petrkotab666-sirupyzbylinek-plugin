@@ -2,9 +2,14 @@
 import type { ArticleEntry } from '../lib/articles';
 import { topicKey } from '../lib/articles';
 
-interface Props { entry: ArticleEntry }
-const { entry } = Astro.props;
-const topic = topicKey(entry);
+interface Props {
+  entry?: ArticleEntry;
+  topic?: string;
+  heading?: string;
+}
+
+const { entry, topic: topicOverride, heading = 'Co se může hodit k tomuto tématu' } = Astro.props;
+const topic = topicOverride || (entry ? topicKey(entry) : 'bylinky');
 
 const campaigns = {
   bylik: {
@@ -35,6 +40,13 @@ const campaigns = {
     href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=e9a1924a',
     cta: 'Zobrazit nabídku',
   },
+  econea: {
+    icon: '🦟',
+    title: 'Ochrana proti komárům a klíšťatům',
+    text: 'Repelenty, ochranné spreje a přípravky do přírody.',
+    href: 'https://www.econea.cz/collections/produkty-do-prirody-proti-hmyzu?a_box=se8pw4uc',
+    cta: 'Vybrat ochranu do přírody',
+  },
 };
 
 const byTopic: Record<string, Array<keyof typeof campaigns>> = {
@@ -47,7 +59,7 @@ const byTopic: Record<string, Array<keyof typeof campaigns>> = {
   vyziva: ['brainmax', 'bylik', 'knihy'],
   krasa: ['bylik', 'knihy', 'brainmax'],
   zvirata: ['bylik', 'knihy', 'sklo'],
-  repelenty: ['bylik', 'knihy', 'sklo'],
+  repelenty: ['econea', 'bylik', 'knihy'],
   bylinky: ['bylik', 'knihy', 'sklo'],
 };
 
@@ -56,7 +68,7 @@ const selected = (byTopic[topic] || byTopic.bylinky).map((key) => campaigns[key]
 <aside class="context-ads" aria-label="Tematické komerční nabídky">
   <div class="ad-heading">
     <span>Reklama</span>
-    <strong>Co se může hodit k tomuto tématu</strong>
+    <strong>{heading}</strong>
   </div>
   <div class="context-ad-grid">
     {selected.map((campaign) => (
