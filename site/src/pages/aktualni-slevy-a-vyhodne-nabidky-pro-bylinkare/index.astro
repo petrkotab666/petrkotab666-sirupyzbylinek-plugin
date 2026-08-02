@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+import productsJson from '../../data/affiliate-products.json';
+
+interface Product {
+  title: string;
+  brand?: string;
+  category?: string;
+  image: string;
+  price?: string;
+  link: string;
+}
+
+const deals = (productsJson as Product[])
+  .filter((product) => product.title && product.image && product.link)
+  .slice(0, 12);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Aktuální nabídky pro bylinkáře',
+  description: 'Aktuální produkty z partnerského feedu s přímým odkazem na nabídku prodejce.',
+  url: new URL('/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', Astro.site || Astro.url.origin).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: deals.length,
+    itemListElement: deals.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: product.title,
+      url: product.link,
+    })),
+  },
+};
+---
+<BaseLayout
+  title="Aktuální nabídky pro bylinkáře | Sirupy z bylinek"
+  description="Přehled aktuálních produktů z partnerského feedu. U každé nabídky najdete obrázek, cenu a přímý odkaz na prodejce."
+  canonical="/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/"
+  image="/obrazky/bylinky.svg"
+  structuredData={[schema]}
+>
+  <section class="archive-header deals-hero">
+    <span>Reklama · partnerské nabídky</span>
+    <h1>Aktuální nabídky pro bylinkáře</h1>
+    <p>Ceny a dostupnost se mohou měnit. Rozhodující jsou vždy aktuální údaje na stránce prodejce.</p>
+  </section>
+
+  <ContextAds topic="bylinky" heading="Oblíbené obchody a vybavení pro bylinkáře" />
+
+  <section class="section-wrap deals-section">
+    <div class="section-heading centered-heading">
+      <span>Produktový feed</span>
+      <h2>Vybrané aktuální nabídky</h2>
+      <p>Každá karta vede přímo na konkrétní produkt. Odkazy jsou partnerské.</p>
+    </div>
+    {deals.length ? (
+      <div class="deals-grid">
+        {deals.map((product) => (
+          <article class="deal-card">
+            <a class="deal-image" href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label={product.title}>
+              <img src={product.image} alt={product.title} width="520" height="390" loading="lazy" decoding="async" />
+            </a>
+            <div class="deal-body">
+              <span class="deal-badge">Aktuální nabídka</span>
+              <h2><a href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer">{product.title}</a></h2>
+              {product.brand && <p class="deal-brand">{product.brand}</p>}
+              <strong class="deal-price">{product.price || 'Cena u prodejce'}</strong>
+              <a class="product-button" href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer">Zobrazit nabídku</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <h2>Nabídky se právě aktualizují</h2>
+        <p>Produktový feed bude znovu načten při dalším sestavení webu.</p>
+      </div>
+    )}
+    <p class="ad-disclosure deals-disclosure">Partnerské odkazy mohou provozovateli přinést provizi, cena pro návštěvníka se tím nemění.</p>
+  </section>
+
+  <ProductFeed topic="bylinky" heading="Další produkty z partnerského feedu" />
+</BaseLayout>
