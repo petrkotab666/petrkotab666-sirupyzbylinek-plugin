@@ -1,0 +1,300 @@
+---
+interface Props {
+  variant?: 'hero' | 'harvest' | 'recipes' | 'pharmacy' | 'magazine' | 'deals' | 'games' | 'timing' | 'identify' | 'ethics' | 'avoid' | 'places' | 'process';
+  class?: string;
+}
+
+const { variant = 'hero', class: className = '' } = Astro.props;
+const uid = `botanical-${variant}-${Math.random().toString(36).slice(2, 8)}`;
+---
+<svg
+  class:list={['botanical-artwork', `botanical-artwork--${variant}`, className]}
+  viewBox="0 0 640 420"
+  role="img"
+  aria-hidden="true"
+  focusable="false"
+>
+  <defs>
+    <linearGradient id={`${uid}-cream`} x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff8df" />
+      <stop offset="1" stop-color="#e8efcf" />
+    </linearGradient>
+    <linearGradient id={`${uid}-green`} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6e9e4f" />
+      <stop offset="1" stop-color="#285d34" />
+    </linearGradient>
+    <linearGradient id={`${uid}-amber`} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd15c" />
+      <stop offset="1" stop-color="#e68a1f" />
+    </linearGradient>
+    <filter id={`${uid}-shadow`} x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#17391f" flood-opacity=".18" />
+    </filter>
+  </defs>
+
+  {variant === 'hero' && (
+    <>
+      <rect width="640" height="420" rx="42" fill={`url(#${uid}-cream)`} />
+      <circle cx="520" cy="78" r="72" fill="#f5c75c" opacity=".72" />
+      <path d="M0 330C102 278 188 305 281 340C378 376 491 357 640 292V420H0Z" fill="#cfe0aa" />
+      <path d="M0 365C111 321 207 344 302 376C405 410 510 388 640 340V420H0Z" fill="#8eb56d" opacity=".9" />
+      <g stroke="#245a31" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M92 315C88 246 103 179 142 105" fill="none" />
+        <path d="M139 111C108 106 88 89 78 65C113 64 139 81 150 103Z" fill="#76a755" />
+        <path d="M121 158C88 160 65 145 51 121C86 113 116 128 130 151Z" fill="#5d9447" />
+        <path d="M111 211C78 220 51 211 31 191C62 174 96 184 118 204Z" fill="#78aa58" />
+        <path d="M101 264C72 278 44 276 20 260C47 237 83 241 108 256Z" fill="#5d9348" />
+      </g>
+      <g transform="translate(210 134)" filter={`url(#${uid}-shadow)`}>
+        <path d="M26 28H94L86 63V198C86 216 74 228 60 228S34 216 34 198V63Z" fill="#fff8e5" stroke="#23542f" stroke-width="6" />
+        <rect x="38" y="78" width="44" height="132" rx="20" fill={`url(#${uid}-amber)`} />
+        <rect x="42" y="0" width="36" height="35" rx="9" fill="#d99027" stroke="#23542f" stroke-width="6" />
+        <path d="M40 121H80" stroke="#fff3b0" stroke-width="7" stroke-linecap="round" opacity=".8" />
+      </g>
+      <g transform="translate(342 177)" filter={`url(#${uid}-shadow)`}>
+        <path d="M12 38H126L116 175H22Z" fill="#fff8e5" stroke="#23542f" stroke-width="6" stroke-linejoin="round" />
+        <path d="M26 61H112L103 158H35Z" fill="#b64048" opacity=".88" />
+        <rect x="4" y="16" width="130" height="34" rx="12" fill="#e7a52e" stroke="#23542f" stroke-width="6" />
+        <path d="M52 10C52-3 61-14 69-14S86-3 86 10" fill="none" stroke="#23542f" stroke-width="6" />
+      </g>
+      <g transform="translate(485 183)" stroke="#285d34" stroke-width="5" stroke-linecap="round">
+        <path d="M52 156C57 99 51 52 38 0" fill="none" />
+        <path d="M40 30C12 22 3 5 1-13C27-12 43 4 47 24Z" fill="#6da04f" />
+        <path d="M46 72C17 70 2 55-4 36C23 33 44 47 51 66Z" fill="#82ae5d" />
+        <path d="M50 116C20 119 2 107-8 89C18 81 43 91 56 109Z" fill="#67994b" />
+      </g>
+      <g fill="#7e5fa2" stroke="#4f3d68" stroke-width="3">
+        <circle cx="171" cy="101" r="10" /><circle cx="184" cy="88" r="9" /><circle cx="197" cy="106" r="10" />
+        <path d="M184 99V282" fill="none" stroke="#3f6f39" stroke-width="5" />
+      </g>
+    </>
+  )}
+
+  {variant === 'harvest' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#dce9bc" />
+      <circle cx="520" cy="84" r="62" fill="#f2c256" opacity=".76" />
+      <path d="M0 305C127 260 253 301 371 314C475 326 556 306 640 266V420H0Z" fill="#8fb36d" />
+      <g transform="translate(174 159)" filter={`url(#${uid}-shadow)`}>
+        <path d="M24 69H268L238 218H54Z" fill="#d99b45" stroke="#3e612e" stroke-width="7" stroke-linejoin="round" />
+        <path d="M70 69C75 3 217 3 222 69" fill="none" stroke="#3e612e" stroke-width="12" stroke-linecap="round" />
+        <path d="M73 97H230M64 135H238M58 174H230" stroke="#f6d48e" stroke-width="9" opacity=".8" />
+      </g>
+      <g stroke="#2e6335" stroke-width="5" stroke-linecap="round">
+        <path d="M245 197C234 137 238 92 251 47" fill="none" />
+        <path d="M250 74C215 69 197 53 190 31C222 28 248 44 258 66Z" fill="#5f9b49" />
+        <path d="M249 120C217 120 198 106 188 86C216 78 243 91 255 112Z" fill="#77aa59" />
+        <path d="M367 202C382 142 386 91 376 49" fill="none" />
+        <path d="M378 80C407 70 432 77 450 95C423 111 397 104 378 88Z" fill="#6ca252" />
+        <path d="M374 132C406 126 430 137 445 158C415 170 390 158 373 140Z" fill="#8ab967" />
+      </g>
+    </>
+  )}
+
+  {variant === 'recipes' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#f6e0b5" />
+      <path d="M0 330C146 284 251 316 365 337C472 357 557 337 640 298V420H0Z" fill="#d7a957" opacity=".62" />
+      <g transform="translate(126 110)" filter={`url(#${uid}-shadow)`}>
+        <ellipse cx="172" cy="224" rx="153" ry="29" fill="#8f5c31" opacity=".25" />
+        <path d="M34 97H300L272 225H64Z" fill="#f7b13f" stroke="#74491f" stroke-width="7" />
+        <path d="M16 84H318" stroke="#74491f" stroke-width="18" stroke-linecap="round" />
+        <path d="M73 86C84 27 250 27 260 86" fill="none" stroke="#74491f" stroke-width="8" />
+        <path d="M130 32C138 8 165-2 184 9C201 19 208 38 204 61" fill="none" stroke="#366b36" stroke-width="7" />
+        <path d="M173 14C149 2 126 7 111 23C132 39 156 36 176 22Z" fill="#6ca34d" stroke="#366b36" stroke-width="5" />
+      </g>
+      <g transform="translate(420 134)" filter={`url(#${uid}-shadow)`}>
+        <path d="M25 34H111L104 203H32Z" fill="#fff8e5" stroke="#74491f" stroke-width="6" />
+        <path d="M39 85H97V187H39Z" fill="#c84b49" />
+        <rect x="39" y="0" width="57" height="41" rx="9" fill="#e59b2d" stroke="#74491f" stroke-width="6" />
+      </g>
+    </>
+  )}
+
+  {variant === 'pharmacy' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#d9ead2" />
+      <g transform="translate(99 62)" filter={`url(#${uid}-shadow)`}>
+        <rect width="442" height="302" rx="28" fill="#f3ead4" stroke="#245630" stroke-width="7" />
+        <path d="M221 0V302M0 145H442" stroke="#8b6843" stroke-width="7" />
+        {[52, 146, 268, 362].map((x, index) => (
+          <g transform={`translate(${x} ${index % 2 ? 174 : 36})`}>
+            <rect x="0" y="24" width="58" height="85" rx="12" fill={index % 2 ? '#d8a33c' : '#7fa15e'} stroke="#315b34" stroke-width="5" />
+            <rect x="12" width="34" height="34" rx="7" fill="#916439" stroke="#315b34" stroke-width="5" />
+            <rect x="10" y="52" width="38" height="24" rx="6" fill="#fff4d2" opacity=".9" />
+          </g>
+        ))}
+        <g transform="translate(250 188)" stroke="#2e6335" stroke-width="5" stroke-linecap="round">
+          <path d="M30 96C35 58 30 28 14 0" fill="none" />
+          <path d="M18 28C-6 23-18 8-20-9C3-9 19 3 25 22Z" fill="#6fa44e" />
+          <path d="M24 60C1 60-13 47-18 31C5 26 21 38 29 54Z" fill="#83b15e" />
+        </g>
+      </g>
+    </>
+  )}
+
+  {variant === 'magazine' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#e8dfef" />
+      <circle cx="520" cy="80" r="64" fill="#d8b052" opacity=".72" />
+      <g transform="translate(104 115)" filter={`url(#${uid}-shadow)`}>
+        <path d="M16 38C104 8 170 15 216 54V238C159 207 92 207 16 235Z" fill="#fffaf0" stroke="#4f4764" stroke-width="7" />
+        <path d="M416 38C328 8 262 15 216 54V238C273 207 340 207 416 235Z" fill="#fffaf0" stroke="#4f4764" stroke-width="7" />
+        <path d="M216 54V238" stroke="#a88343" stroke-width="7" />
+        <path d="M52 88H167M52 126H183M52 164H153M280 88H381M260 126H381M288 164H381" stroke="#b7a9bd" stroke-width="8" stroke-linecap="round" />
+      </g>
+      <g stroke="#2e6335" stroke-width="5" stroke-linecap="round">
+        <path d="M94 349C89 297 76 257 54 224" fill="none" />
+        <path d="M65 244C39 239 23 225 18 206C43 203 63 215 72 236Z" fill="#6c9c4e" />
+        <path d="M80 286C52 285 34 274 25 255C51 248 73 259 86 279Z" fill="#83af62" />
+        <path d="M547 348C555 299 570 259 594 226" fill="none" />
+        <path d="M584 247C611 240 629 226 635 207C609 205 588 218 579 239Z" fill="#6c9c4e" />
+        <path d="M566 288C594 285 614 273 624 253C597 248 574 260 560 281Z" fill="#83af62" />
+      </g>
+    </>
+  )}
+
+  {variant === 'deals' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#f2dfb6" />
+      <path d="M0 336C141 303 273 329 385 345C485 360 562 346 640 316V420H0Z" fill="#d6b46e" opacity=".72" />
+      <g transform="translate(114 155)" filter={`url(#${uid}-shadow)`}>
+        <path d="M0 78H412L377 220H35Z" fill="#ba7a35" stroke="#5d421f" stroke-width="7" />
+        <path d="M31 112H381M23 158H390" stroke="#edc17b" stroke-width="10" />
+        {[50, 155, 260].map((x, index) => (
+          <g transform={`translate(${x} ${index === 1 ? -22 : 0})`}>
+            <path d="M18 0H91L84 126H25Z" fill={index === 1 ? '#b84b54' : '#f5c04c'} stroke="#315b34" stroke-width="6" />
+            <rect x="28" y="-34" width="53" height="40" rx="8" fill="#e9a63a" stroke="#315b34" stroke-width="6" />
+            <rect x="31" y="44" width="49" height="31" rx="7" fill="#fff1c7" opacity=".9" />
+          </g>
+        ))}
+      </g>
+      <g transform="translate(475 77)" rotate(12)" >
+        <path d="M0 0H116V80H0Z" fill="#fff5d7" stroke="#8d5b25" stroke-width="6" />
+        <circle cx="18" cy="18" r="7" fill="#8d5b25" />
+        <path d="M34 26H91M28 49H83" stroke="#d99128" stroke-width="8" stroke-linecap="round" />
+      </g>
+    </>
+  )}
+
+  {variant === 'games' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#d7e7d5" />
+      <circle cx="515" cy="85" r="67" fill="#f3c85c" opacity=".7" />
+      <g transform="translate(115 83)" filter={`url(#${uid}-shadow)`}>
+        <g transform="rotate(-8 110 136)">
+          <rect x="0" y="20" width="170" height="230" rx="24" fill="#fff9e7" stroke="#315d35" stroke-width="7" />
+          <path d="M83 192C83 126 91 87 113 54" fill="none" stroke="#2e6938" stroke-width="6" />
+          <path d="M108 64C78 61 61 46 54 26C82 22 105 37 115 56Z" fill="#70a953" stroke="#2e6938" stroke-width="5" />
+          <path d="M96 112C67 114 47 102 37 82C65 75 89 87 102 105Z" fill="#8cbf68" stroke="#2e6938" stroke-width="5" />
+        </g>
+        <g transform="translate(218 5) rotate(8 100 135)">
+          <rect width="180" height="240" rx="24" fill="#f6dfaa" stroke="#674d27" stroke-width="7" />
+          <circle cx="90" cy="103" r="48" fill="#e39831" />
+          <path d="M52 168H128" stroke="#fff4cf" stroke-width="12" stroke-linecap="round" />
+        </g>
+      </g>
+      <g transform="translate(469 263)" fill="#7b5ca3" stroke="#4d3d65" stroke-width="5">
+        <path d="M0 24C0 11 11 0 24 0H52V28H80V56H52V84H24C11 84 0 73 0 60V52H28V32H0Z" />
+      </g>
+    </>
+  )}
+
+  {variant === 'timing' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#e7e9c5" />
+      <circle cx="165" cy="108" r="63" fill="#f4c85a" />
+      <path d="M478 56A70 70 0 1 0 531 164A57 57 0 1 1 478 56Z" fill="#765d9d" />
+      <g transform="translate(194 112)" filter={`url(#${uid}-shadow)`}>
+        <circle cx="126" cy="126" r="112" fill="#fff8df" stroke="#315d35" stroke-width="8" />
+        <path d="M126 126V58M126 126L181 151" stroke="#315d35" stroke-width="10" stroke-linecap="round" />
+        <circle cx="126" cy="126" r="12" fill="#e59a2c" />
+      </g>
+      <path d="M83 354C87 306 105 266 138 229" fill="none" stroke="#33703b" stroke-width="6" />
+      <path d="M113 259C82 258 61 244 50 222C80 214 105 226 120 250Z" fill="#79ab58" stroke="#33703b" stroke-width="5" />
+    </>
+  )}
+
+  {variant === 'identify' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#dbe8cc" />
+      <g transform="translate(92 66)" filter={`url(#${uid}-shadow)`}>
+        {[0, 1, 2].map((index) => (
+          <g transform={`translate(${index * 152} ${index % 2 ? 28 : 0}) rotate(${index === 0 ? -6 : index === 2 ? 6 : 0} 70 140)`}>
+            <rect width="132" height="280" rx="22" fill="#fff9e8" stroke="#315d35" stroke-width="7" />
+            <path d="M66 214C66 147 72 104 86 64" fill="none" stroke="#2f6a38" stroke-width="6" />
+            <path d="M83 78C52 76 35 59 29 38C58 36 81 51 91 70Z" fill={index === 1 ? '#7d5da5' : '#72aa51'} stroke="#2f6a38" stroke-width="5" />
+            <path d="M75 126C48 130 29 119 18 100C44 92 68 103 82 119Z" fill={index === 2 ? '#d9a73e' : '#8fbd69'} stroke="#2f6a38" stroke-width="5" />
+            <path d="M28 244H104" stroke="#c7b99b" stroke-width="10" stroke-linecap="round" />
+          </g>
+        ))}
+      </g>
+    </>
+  )}
+
+  {variant === 'ethics' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#e3ecd0" />
+      <g transform="translate(115 70)" filter={`url(#${uid}-shadow)`}>
+        <path d="M48 224C106 168 151 160 203 189C155 253 94 276 31 266Z" fill="#f2bf91" stroke="#7c4c2b" stroke-width="7" />
+        <path d="M362 224C304 168 259 160 207 189C255 253 316 276 379 266Z" fill="#f2bf91" stroke="#7c4c2b" stroke-width="7" />
+        <path d="M205 202C205 128 205 82 207 35" fill="none" stroke="#2f6838" stroke-width="8" />
+        <path d="M205 86C157 84 129 59 118 25C162 20 199 45 216 77Z" fill="#6ea34f" stroke="#2f6838" stroke-width="7" />
+        <path d="M207 138C251 132 285 149 306 181C265 199 229 180 204 148Z" fill="#87b764" stroke="#2f6838" stroke-width="7" />
+      </g>
+    </>
+  )}
+
+  {variant === 'avoid' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#f2ddc0" />
+      <g transform="translate(172 53)" filter={`url(#${uid}-shadow)`}>
+        <path d="M148 0L296 270H0Z" fill="#f3b63f" stroke="#6d4924" stroke-width="9" stroke-linejoin="round" />
+        <path d="M148 213V119" stroke="#6d4924" stroke-width="18" stroke-linecap="round" />
+        <circle cx="148" cy="239" r="11" fill="#6d4924" />
+      </g>
+      <g transform="translate(45 216)" stroke="#315d35" stroke-width="5" stroke-linecap="round">
+        <path d="M53 138C57 86 52 42 38 0" fill="none" />
+        <path d="M40 32C14 27 0 13-5-6C20-7 38 7 46 25Z" fill="#6ea34f" />
+        <path d="M47 76C18 75 1 62-7 43C21 37 42 49 53 68Z" fill="#80b05e" />
+      </g>
+      <path d="M77 344L563 77" stroke="#a33b3f" stroke-width="20" stroke-linecap="round" opacity=".9" />
+    </>
+  )}
+
+  {variant === 'places' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#d9e8ca" />
+      <circle cx="510" cy="79" r="61" fill="#f3c75a" />
+      <path d="M0 272L116 157L218 254L326 128L474 276L565 182L640 246V420H0Z" fill="#759c68" />
+      <path d="M0 316C118 275 228 307 331 330C443 355 544 338 640 297V420H0Z" fill="#a5c67a" />
+      <g transform="translate(231 236)" filter={`url(#${uid}-shadow)`}>
+        <path d="M26 62H190L170 159H46Z" fill="#d69a45" stroke="#4b652f" stroke-width="7" />
+        <path d="M66 62C69 12 148 12 151 62" fill="none" stroke="#4b652f" stroke-width="10" />
+      </g>
+    </>
+  )}
+
+  {variant === 'process' && (
+    <>
+      <rect width="640" height="420" rx="38" fill="#f0e1bd" />
+      <g transform="translate(74 57)" stroke="#5f4527" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M0 52H492M46 52V316M446 52V316" fill="none" />
+        {[90, 193, 296, 399].map((x, index) => (
+          <g transform={`translate(${x} 58)`}>
+            <path d="M0 0V38" />
+            <path d="M0 38C-35 66-39 105-19 137C2 119 13 82 0 38Z" fill={index % 2 ? '#7c5da2' : '#6fa44f'} stroke="#315d35" stroke-width="6" />
+          </g>
+        ))}
+      </g>
+      <g transform="translate(190 279)" filter={`url(#${uid}-shadow)`}>
+        {[0, 1, 2].map((index) => (
+          <g transform={`translate(${index * 88} ${index === 1 ? -24 : 0})`}>
+            <path d="M10 30H72L66 105H16Z" fill={index === 1 ? '#bf4b54' : '#e9a93c'} stroke="#315d35" stroke-width="6" />
+            <rect x="18" width="46" height="36" rx="8" fill="#d7a24b" stroke="#315d35" stroke-width="6" />
+          </g>
+        ))}
+      </g>
+    </>
+  )}
+</svg>
