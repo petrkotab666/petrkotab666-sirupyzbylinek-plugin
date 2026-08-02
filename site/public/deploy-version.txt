@@ -1,5 +1,7 @@
 sirupyzbylinek deployment
-version: 2026-08-02T17:54:00+02:00
-commit-purpose: monitored direct production deployment via GitHub Actions
+version: 2026-08-02T21:10:00+02:00
+commit-purpose: verify games deals centered grids and site-wide legacy block cleanup
 expected-cultivation-category: Pěstování bylinek
 expected-cultivation-image: /obrazky/pestovani.svg
+expected-game-count: 3
+expected-deal-card-count: 12
