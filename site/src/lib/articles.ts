@@ -28,8 +28,8 @@ const EDITORIAL_JUNK = [
 
 const TOPIC_TESTS: Array<[string, RegExp]> = [
   ['repelenty', /komar|klist|repelent|hmyz/u],
-  ['zvirata', /pes|kock|slep|kurat|drubez|zvirat|kun|kralik/u],
   ['pestovani', /pestov|zahrad|sazen|kvetinac|substrat|zalev/u],
+  ['zvirata', /\b(?:pes|psi|psa|psu|kocka|kocky|kocku|slepice|slepic|kurata|kurat|drubez|zvire|zvirata|zvirat|kun|kone|kralik|kralici)\b/u],
   ['sber', /sber|sbirat|susit|skladovat|herbar/u],
   ['zavarovani', /zavar|sklenic|lahv|vick|marmelad|dzem/u],
   ['napoje', /limonad|koktejl|napoj|caj|smoothie/u],
@@ -41,8 +41,8 @@ const TOPIC_TESTS: Array<[string, RegExp]> = [
 
 const TOPIC_LABELS: Record<string, string> = {
   repelenty: 'Přírodní repelenty',
-  zvirata: 'Bylinky a zvířata',
   pestovani: 'Pěstování bylinek',
+  zvirata: 'Bylinky a zvířata',
   sber: 'Sběr a zpracování bylinek',
   zavarovani: 'Zavařování a skladování',
   napoje: 'Bylinkové nápoje',
@@ -158,8 +158,13 @@ export function firstBodyImage(entry: ArticleEntry) {
   return match?.[1];
 }
 
-function importedImageMatches(entry: ArticleEntry, image?: string) {
+function imageMatchesArticle(entry: ArticleEntry, image?: string) {
   if (!image) return false;
+
+  if (image.startsWith('/obrazky/')) {
+    return image === topicImage(entry);
+  }
+
   if (!image.startsWith('/media/imported/')) return true;
 
   const imageGroup = image.split('/').filter(Boolean)[2] || '';
@@ -175,10 +180,10 @@ function importedImageMatches(entry: ArticleEntry, image?: string) {
 
 export function articleImage(entry: ArticleEntry) {
   const frontmatterImage = entry.data.image?.trim();
-  if (importedImageMatches(entry, frontmatterImage)) return frontmatterImage as string;
+  if (imageMatchesArticle(entry, frontmatterImage)) return frontmatterImage as string;
 
   const bodyImage = firstBodyImage(entry);
-  if (importedImageMatches(entry, bodyImage)) return bodyImage as string;
+  if (imageMatchesArticle(entry, bodyImage)) return bodyImage as string;
 
   return topicImage(entry);
 }
