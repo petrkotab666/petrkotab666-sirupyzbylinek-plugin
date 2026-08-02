@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/sanitize-legacy-markdown.mjs && node scripts/remove-editorial-fillers.mjs && node scripts/fetch-affiliate-feed.mjs",
+    "prebuild": "node scripts/patch-herb-player.mjs && node scripts/sanitize-legacy-markdown.mjs && node scripts/remove-editorial-fillers.mjs && node scripts/fetch-affiliate-feed.mjs",
     "build": "astro build",
     "postbuild": "node scripts/audit-built-site.mjs && node scripts/audit-herb-master.mjs",
     "preview": "astro preview",
