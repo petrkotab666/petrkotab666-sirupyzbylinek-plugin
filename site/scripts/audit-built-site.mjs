@@ -12,6 +12,12 @@ const LEGAL_PATH_PARTS = [
   'obchodni-podminky',
 ];
 
+const BROKEN_FEATURE_MARKERS = [
+  /jednoduché recepty/iu,
+  /bezpečné použití/iu,
+  /vhodné i pro děti/iu,
+];
+
 async function filesIn(directory) {
   const result = [];
   for (const name of await readdir(directory)) {
@@ -45,7 +51,14 @@ function decodeEntities(value = '') {
 }
 
 function plainText(value = '') {
-  return decodeEntities(value.replace(/<script\b[\s\S]*?<\/script>/giu, ' ').replace(/<style\b[\s\S]*?<\/style>/giu, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
+  return decodeEntities(
+    value
+      .replace(/<script\b[\s\S]*?<\/script>/giu, ' ')
+      .replace(/<style\b[\s\S]*?<\/style>/giu, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim(),
+  );
 }
 
 function isLegalPath(relativePath) {
@@ -75,8 +88,9 @@ function htmlPathForHref(href) {
   return `${clean.replace(/^\//u, '').replace(/\/$/u, '')}/index.html`;
 }
 
-const htmlFiles = (await filesIn(DIST)).filter((file) => file.endsWith('.html'));
-const allFiles = new Set((await filesIn(DIST)).map((file) => path.relative(DIST, file).replaceAll(path.sep, '/')));
+const allGeneratedFiles = await filesIn(DIST);
+const htmlFiles = allGeneratedFiles.filter((file) => file.endsWith('.html'));
+const allFiles = new Set(allGeneratedFiles.map((file) => path.relative(DIST, file).replaceAll(path.sep, '/')));
 const banned = [
   /přepsaný článek se seo strukturou/iu,
   /hlavní klíčové slovo:/iu,
@@ -101,6 +115,10 @@ for (const file of htmlFiles) {
     if (pattern.test(visibleText)) errors.push(`${relative}: contains banned editorial text ${pattern}`);
   }
 
+  if (BROKEN_FEATURE_MARKERS.every((pattern) => pattern.test(visibleText))) {
+    errors.push(`${relative}: contains the broken three-column legacy feature block`);
+  }
+
   if (html.includes('class="article-shell')) {
     articlePages += 1;
     const heroCount = (html.match(/class="hero-image"/g) || []).length;
@@ -119,12 +137,22 @@ const home = await readRequired('index.html');
 const magazine = await readRequired('magazin/index.html');
 const recipesLanding = await readRequired('osvedcene-recepty/index.html');
 const healthLanding = await readRequired('domu/prirodni-lekarna/index.html');
+const gamesLanding = await readRequired('bylinkova-herna/index.html');
+const memoryGame = await readRequired('bylinkove-pexeso/index.html');
+const identifyGame = await readRequired('poznej-bylinku/index.html');
+const quizGame = await readRequired('bylinkovy-mistr/index.html');
+const dealsLanding = await readRequired('aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/index.html');
 
 for (const [relative, html] of [
   ['index.html', home],
   ['magazin/index.html', magazine],
   ['osvedcene-recepty/index.html', recipesLanding],
   ['domu/prirodni-lekarna/index.html', healthLanding],
+  ['bylinkova-herna/index.html', gamesLanding],
+  ['bylinkove-pexeso/index.html', memoryGame],
+  ['poznej-bylinku/index.html', identifyGame],
+  ['bylinkovy-mistr/index.html', quizGame],
+  ['aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/index.html', dealsLanding],
 ]) {
   requireMonetization(relative, html);
 }
@@ -142,6 +170,9 @@ if (cards === 0) errors.push('magazin/index.html: no article cards found');
 const magazineText = plainText(magazine);
 if (/kam pokračovat dál/iu.test(magazineText)) errors.push('magazin/index.html: auxiliary block “Kam pokračovat dál” is rendered as an article');
 if (/další články,? recepty a témata ze stejné oblasti/iu.test(magazineText)) errors.push('magazin/index.html: auxiliary related-content description is rendered as an article');
+for (const oldUtilityTitle of ['Bylinkové pexeso: praktický bezpečný průvodce', 'Poznej bylinku: praktický bezpečný průvodce', 'Bylinkový mistr: praktický bezpečný průvodce', 'Slevy a výhodné nabídky pro bylinkáře']) {
+  if (magazineText.includes(oldUtilityTitle)) errors.push(`magazin/index.html: dedicated utility page is still rendered as an article: ${oldUtilityTitle}`);
+}
 
 const navMatch = home.match(/<nav\b[^>]*id="main-menu"[^>]*>([\s\S]*?)<\/nav>/iu);
 if (!navMatch) {
@@ -158,6 +189,26 @@ if (!navMatch) {
     if (generated && !allFiles.has(generated)) errors.push(`index.html: navigation target ${href} does not generate ${generated}`);
   }
 }
+
+const gameLaunchCount = (gamesLanding.match(/class="game-launch-card"/g) || []).length;
+if (gameLaunchCount !== 3) errors.push(`bylinkova-herna/index.html: expected 3 playable games, found ${gameLaunchCount}`);
+for (const route of ['/bylinkove-pexeso/', '/poznej-bylinku/', '/bylinkovy-mistr/']) {
+  if (!gamesLanding.includes(`href="${route}"`)) errors.push(`bylinkova-herna/index.html: missing game link ${route}`);
+}
+if (!memoryGame.includes('data-game="memory"')) errors.push('bylinkove-pexeso/index.html: memory game interface is missing');
+if (!identifyGame.includes('data-game="identify"')) errors.push('poznej-bylinku/index.html: identification game interface is missing');
+if (!quizGame.includes('data-game="quiz"')) errors.push('bylinkovy-mistr/index.html: quiz interface is missing');
+
+const dealCards = (dealsLanding.match(/class="deal-card"/g) || []).length;
+const dealImages = (dealsLanding.match(/class="deal-image"/g) || []).length;
+const dealPrices = (dealsLanding.match(/class="deal-price"/g) || []).length;
+const dealButtons = (dealsLanding.match(/class="product-button"/g) || []).length;
+if (dealCards < 8) errors.push(`deals page: expected at least 8 functional product cards, found ${dealCards}`);
+if (dealImages !== dealCards) errors.push(`deals page: expected one image link per card, found ${dealImages}/${dealCards}`);
+if (dealPrices !== dealCards) errors.push(`deals page: expected one current price per card, found ${dealPrices}/${dealCards}`);
+if (dealButtons < dealCards) errors.push(`deals page: expected a clickable button on every card, found ${dealButtons}/${dealCards}`);
+const dealsText = plainText(dealsLanding);
+if (/načítáme další výhodné nabídky/iu.test(dealsText)) errors.push('deals page: old loading placeholder is still visible');
 
 const cultivation = await readRequired('nejcastejsi-chyby-pri-pestovani-bylinek/index.html');
 const cultivationText = plainText(cultivation);
@@ -197,5 +248,5 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exitCode = 1;
 } else {
-  console.log(`Content quality audit passed: ${htmlFiles.length} HTML pages, ${articlePages} article pages, ${fullyMonetizedArticlePages} fully monetized nonlegal article pages, ${cards} cards on magazine page 1.`);
+  console.log(`Content quality audit passed: ${htmlFiles.length} HTML pages, ${articlePages} article pages, ${fullyMonetizedArticlePages} fully monetized nonlegal article pages, ${cards} cards on magazine page 1, ${gameLaunchCount} games and ${dealCards} deal cards.`);
 }
