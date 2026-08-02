@@ -35,7 +35,7 @@ const notices: Array<{ pattern: RegExp; notice: CriticalRecipeNotice }> = [
       title: 'Arnika není vhodná pro domácí sirup',
       explanation: 'Arnika je určená především pro zevní použití v hotových přípravcích. Vnitřní užití může být toxické a domácí sirup proto není bezpečnou formou.',
       alternatives: [
-        { href: '/bylinne-pripravky/mesickovy-balzam/', label: 'Jemný měsíčkový balzám' },
+        { href: '/bylinne-pripravky/mesickova-mast/', label: 'Jemná měsíčková mast' },
         { href: '/bylinne-masti-a-balzamy/', label: 'Masti a balzámy pro zevní použití' },
       ],
     },
