@@ -1,0 +1,50 @@
+name: Build diagnostic
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/build-diagnostic.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install dependencies
+        working-directory: site
+        run: npm install --no-audit --no-fund
+      - name: Capture concise build failure
+        working-directory: site
+        shell: bash
+        run: |
+          set +e
+          npm run build > /tmp/full-build.log 2>&1
+          status=$?
+          {
+            echo "BUILD_STATUS=$status"
+            echo
+            echo "===== ERROR MATCHES ====="
+            grep -nEi '(^|[^a-z])(error|failed|failure|syntaxerror|typeerror|referenceerror|cannot|expected|unexpected|invalid|duplicate)([^a-z]|$)' /tmp/full-build.log | tail -n 240 || true
+            echo
+            echo "===== LAST 400 LINES ====="
+            tail -n 400 /tmp/full-build.log
+          } > build-diagnostic.txt
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-diagnostic
+          path: site/build-diagnostic.txt
+          if-no-files-found: error
+          retention-days: 3
