@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - '.github/workflows/bootstrap-sirupy-astro.yml'
+  schedule:
+    - cron: '*/5 * * * *'
 
 permissions:
   contents: write
@@ -69,5 +71,21 @@ jobs:
           git add site/src/content/articles site/public/media/imported site/import-report.json site/package-lock.json
           if ! git diff --cached --quiet; then
             git commit -m "Převést obsah SirupyZBylinek z WordPressu"
+            git push
+          fi
+
+      - name: Disable one-time schedule after success
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('.github/workflows/bootstrap-sirupy-astro.yml')
+          text = path.read_text(encoding='utf-8')
+          text = text.replace("  schedule:\n    - cron: '*/5 * * * *'\n", '')
+          path.write_text(text, encoding='utf-8')
+          PY
+          git add .github/workflows/bootstrap-sirupy-astro.yml
+          if ! git diff --cached --quiet; then
+            git commit -m "Ukončit jednorázovou migraci SirupyZBylinek"
             git push
           fi
