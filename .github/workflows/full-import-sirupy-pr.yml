@@ -1,0 +1,64 @@
+name: Full SirupyZBylinek import
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'site/.full-import-request'
+      - 'site/scripts/import-wordpress.mjs'
+      - '.github/workflows/full-import-sirupy-pr.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: full-sirupy-import-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  import-and-build:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout migration branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm install --no-audit --no-fund
+
+      - name: Import complete public WordPress content
+        working-directory: site
+        env:
+          WP_BASE_URL: https://www.sirupyzbylinek.cz/
+          MAX_PAGES: 1200
+          IMPORT_IMAGES: 'true'
+        run: npm run import:wordpress
+
+      - name: Verify complete production build
+        working-directory: site
+        run: npm run build
+
+      - name: Save imported content to migration branch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          printf 'completed=%s\n' "$(date -u +%FT%TZ)" > site/.full-import-complete
+          git add site/src/content/articles site/public/media/imported site/import-report.json site/package-lock.json site/.full-import-complete
+          if git diff --cached --quiet; then
+            echo "Import produced no file changes."
+          else
+            git commit -m "Převést celý WordPress SirupyZBylinek do Astro"
+            git push origin "HEAD:${{ github.head_ref }}"
+          fi
