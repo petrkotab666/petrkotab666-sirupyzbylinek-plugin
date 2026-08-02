@@ -1,0 +1,85 @@
+name: Deploy SirupyZBylinek to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy-cloudflare-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: sirupyzbylinek-cloudflare-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Build, deploy and verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Verify Cloudflare API token
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "Repository secret CLOUDFLARE_API_TOKEN is not configured."
+            exit 1
+          fi
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci --no-audit --no-fund
+
+      - name: Build and audit site
+        working-directory: site
+        run: npm run build
+
+      - name: Deploy production to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 87659411eeb4335b3c1e2c01014edbfb
+          workingDirectory: site
+          command: pages deploy dist --project-name=sirupyzbylinek-astro --branch=main --commit-hash=${{ github.sha }} --commit-message="${{ github.event.head_commit.message || 'Manual production deployment' }}"
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify public production deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..12}; do
+            VERSION="$(curl -fsS --max-time 20 'https://sirupyzbylinek-astro.pages.dev/deploy-version.txt' || true)"
+            ARTICLE="$(curl -fsS --max-time 20 'https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/' || true)"
+
+            if printf '%s' "$VERSION" | grep -q 'expected-cultivation-category: Pěstování bylinek' \
+              && printf '%s' "$ARTICLE" | grep -q 'Pěstování bylinek' \
+              && printf '%s' "$ARTICLE" | grep -q '/obrazky/pestovani.svg' \
+              && ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení'; then
+              echo "Production deployment verified successfully."
+              exit 0
+            fi
+
+            echo "Production is not updated yet (attempt $attempt/12). Waiting 10 seconds..."
+            sleep 10
+          done
+
+          echo "Cloudflare accepted the workflow, but the public production URL did not pass verification."
+          exit 1
