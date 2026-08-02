@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import ContextAds from '../../components/ContextAds.astro';
 import ProductFeed from '../../components/ProductFeed.astro';
+import SectionHero from '../../components/SectionHero.astro';
+import IllustratedDirectory from '../../components/IllustratedDirectory.astro';
 import { getPublishedArticles, topicKey } from '../../lib/articles';
 
 const allArticles = await getPublishedArticles();
@@ -11,11 +13,11 @@ const recipes = allArticles
   .slice(0, 12);
 
 const categories = [
-  { href: '/domaci-sirupy/', icon: '🍯', title: 'Domácí sirupy', text: 'Bezové, jitrocelové, mátové, ovocné i další sirupy krok za krokem.' },
-  { href: '/tinktury/', icon: '🌿', title: 'Bylinné tinktury', text: 'Přehled surovin, postupů, skladování a bezpečného používání.' },
-  { href: '/recepty-na-domaci-limonady/', icon: '🥤', title: 'Domácí limonády', text: 'Limonády ze sirupů, bylinných výluhů, macerace i fermentace.' },
-  { href: '/sklenice-na-sirupy-a-zavarovani/', icon: '🫙', title: 'Lahve a sklenice', text: 'Jak vybrat správnou velikost, uzávěr a vybavení pro domácí výrobu.' },
-];
+  { href: '/domaci-sirupy/', art: 'recipes', kicker: 'Bylinky a ovoce', title: 'Domácí sirupy', text: 'Bezové, jitrocelové, mátové, ovocné i další sirupy krok za krokem.' },
+  { href: '/tinktury/', art: 'pharmacy', kicker: 'Výluhy a kapky', title: 'Bylinné tinktury', text: 'Suroviny, postupy, skladování a bezpečné používání domácích výluhů.' },
+  { href: '/recepty-na-domaci-limonady/', art: 'harvest', kicker: 'Letní osvěžení', title: 'Domácí limonády', text: 'Limonády ze sirupů, bylinných výluhů, macerace i fermentace.' },
+  { href: '/sklenice-na-sirupy-a-zavarovani/', art: 'process', kicker: 'Čistota a skladování', title: 'Lahve a sklenice', text: 'Jak vybrat správnou velikost, uzávěr a vybavení pro domácí výrobu.' },
+] as const;
 
 const itemListSchema = {
   '@context': 'https://schema.org',
@@ -41,24 +43,17 @@ const itemListSchema = {
   image="/obrazky/recepty.svg"
   structuredData={[itemListSchema]}
 >
-  <section class="archive-header">
-    <span>Recepty a domácí výroba</span>
-    <h1>Osvědčené recepty z bylinek</h1>
-    <p>Sirupy, tinktury, limonády a další domácí výrobky přehledně, bezpečně a s praktickými postupy.</p>
-  </section>
+  <SectionHero
+    eyebrow="Recepty a domácí výroba"
+    title="Osvědčené recepty z bylinek"
+    text="Sirupy, tinktury, limonády a další domácí výrobky přehledně, bezpečně a s praktickými postupy."
+    art="recipes"
+    theme="amber"
+  />
 
   <section class="section-wrap section-directory">
-    <div class="section-heading"><span>Vyberte si oblast</span><h2>Co chcete připravit?</h2></div>
-    <div class="section-grid">
-      {categories.map((item) => (
-        <a class="section-card" href={item.href}>
-          <span class="section-icon" aria-hidden="true">{item.icon}</span>
-          <h3>{item.title}</h3>
-          <p>{item.text}</p>
-          <strong>Otevřít <span aria-hidden="true">→</span></strong>
-        </a>
-      ))}
-    </div>
+    <div class="section-heading centered-heading"><span>Vyberte si oblast</span><h2>Co chcete připravit?</h2><p>Začněte hlavním rozcestníkem a pokračujte do konkrétních receptů.</p></div>
+    <IllustratedDirectory items={categories} />
   </section>
 
   <ContextAds topic="recepty" heading="Vybavení a suroviny pro domácí recepty" />
