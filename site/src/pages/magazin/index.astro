@@ -2,10 +2,23 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+
+const nonArticlePaths = new Set([
+  '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/',
+  '/bylinkovy-magazin/',
+  '/novinky/',
+]);
+
 const articles = (await getCollection('articles', ({ data }) => !data.draft))
+  .filter((entry) => {
+    const words = (entry.body ?? '').split(/\s+/).filter(Boolean).length;
+    return words >= 120
+      && !nonArticlePaths.has(entry.data.path)
+      && !/\/page\/\d+\/$/.test(entry.data.path);
+  })
   .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
 ---
 <BaseLayout title="Bylinkový magazín | Sirupy z bylinek" description="Všechny články, recepty a praktické návody na jednom místě.">
-  <section class="archive-header"><span>Magazín</span><h1>Články, recepty a návody</h1><p>Obsah je po migraci uložený jako přehledné Markdown soubory v GitHubu.</p></section>
+  <section class="archive-header"><span>Magazín</span><h1>Články, recepty a návody</h1><p>Praktické texty o bylinkách, domácích receptech, sběru, pěstování a bezpečném používání.</p></section>
   <section class="section-wrap"><div class="articles-grid">{articles.map((entry) => <ArticleCard entry={entry} />)}</div></section>
 </BaseLayout>
