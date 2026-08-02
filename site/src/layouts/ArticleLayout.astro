@@ -4,7 +4,7 @@ const { entry } = Astro.props;
 const { title, description, image, category, date, updated, sourceUrl } = entry.data;
 ---
 <BaseLayout title={`${title} | Sirupy z bylinek`} description={description} image={image} canonical={entry.data.path} type="article">
-  <article class="article-shell">
+  <article class:list={["article-shell", { "has-hero-image": Boolean(image) }]}>
     <header class="article-header">
       <div class="article-kicker">{category}</div>
       <h1>{title}</h1>
@@ -13,7 +13,7 @@ const { title, description, image, category, date, updated, sourceUrl } = entry.
         {date && <time datetime={date.toISOString()}>Publikováno {date.toLocaleDateString('cs-CZ')}</time>}
         {updated && <time datetime={updated.toISOString()}>Aktualizováno {updated.toLocaleDateString('cs-CZ')}</time>}
       </div>
-      {image && <img class="hero-image" src={image} alt={title} decoding="async" />}
+      {image && <img class="hero-image" src={image} alt={title} decoding="async" fetchpriority="high" />}
     </header>
     <div class="article-content"><slot /></div>
     <aside class="safety-box">
