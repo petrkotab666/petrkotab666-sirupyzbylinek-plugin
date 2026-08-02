@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HerbGame from '../../components/HerbGame.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Game',
+  name: 'Bylinkové pexeso',
+  description: 'Paměťová hra se šesti dvojicemi známých bylinek.',
+  url: new URL('/bylinkove-pexeso/', Astro.site || Astro.url.origin).href,
+  gamePlatform: 'Web browser',
+  inLanguage: 'cs-CZ',
+};
+---
+<BaseLayout
+  title="Bylinkové pexeso – online paměťová hra | Sirupy z bylinek"
+  description="Najděte šest dvojic známých bylinek v jednoduchém online pexesu."
+  canonical="/bylinkove-pexeso/"
+  image="/obrazky/bylinky.svg"
+  structuredData={[schema]}
+>
+  <section class="archive-header compact-game-header">
+    <span>Bylinková herna</span>
+    <h1>Bylinkové pexeso</h1>
+    <p>Otočte vždy dvě karty a najděte všech šest dvojic.</p>
+  </section>
+  <div class="game-page-wrap">
+    <HerbGame mode="memory" />
+    <p class="back-to-games"><a href="/bylinkova-herna/">← Zpět do Bylinkové herny</a></p>
+  </div>
+  <ContextAds topic="bylinky" heading="Další inspirace pro poznávání bylin" />
+  <ProductFeed topic="bylinky" heading="Doporučené produkty pro bylinkáře" />
+</BaseLayout>
