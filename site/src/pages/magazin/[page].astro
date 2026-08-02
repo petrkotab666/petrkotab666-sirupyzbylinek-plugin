@@ -76,12 +76,11 @@ const itemListSchema = {
     <p>Pokračování přehledu praktických textů o bylinkách, domácích receptech, sběru a pěstování.</p>
   </section>
 
-  <ContextAds topic="bylinky" heading="Doporučené nabídky pro čtenáře magazínu" />
-
   <section class="section-wrap magazine-list">
     <div class="articles-grid">{pageArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
     <Pagination currentPage={currentPage} totalPages={totalPages} />
   </section>
 
+  <ContextAds topic="bylinky" heading="Doporučené nabídky pro čtenáře magazínu" />
   <ProductFeed topic="bylinky" heading="Produkty související s bylinkami a domácí výrobou" />
 </BaseLayout>
