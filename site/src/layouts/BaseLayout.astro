@@ -5,6 +5,7 @@ import '../styles/global.css';
 import '../styles/modules.css';
 import '../styles/unified-media.css';
 import '../styles/visual-refresh.css';
+import '../styles/hub-navigation.css';
 
 const {
   title = 'Sirupy z bylinek – recepty, sběr a přírodní inspirace',
@@ -72,7 +73,7 @@ const commonSchemas = [
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
-    <meta name="theme-color" content="#356b39" />
+    <meta name="theme-color" content="#174e29" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>" />
 
     {[...commonSchemas, ...schemas].filter(Boolean).map((schema) => (
