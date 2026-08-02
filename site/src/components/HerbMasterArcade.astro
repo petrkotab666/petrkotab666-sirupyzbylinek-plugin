@@ -1,0 +1,659 @@
+<section class="herb-master-arcade" data-game="herb-master" aria-label="Bylinkový mistr – arkádová hra se sbíráním ingrediencí">
+  <div class="herb-master-frame">
+    <canvas data-herb-master-canvas width="600" height="500" aria-label="Herní plocha Bylinkového mistra">
+      Váš prohlížeč nepodporuje herní plátno.
+    </canvas>
+    <div class="herb-master-warning" data-life-warning role="alert" aria-live="assertive" hidden>
+      <strong>POZOR!</strong>
+      <span>Nebezpečný předmět – ztrácíte život.</span>
+    </div>
+  </div>
+
+  <div class="herb-master-controls" aria-label="Ovládání hry">
+    <button type="button" data-move="left" aria-label="Pohyb doleva">◀</button>
+    <button type="button" class="herb-master-action" data-action>Start / pokračovat</button>
+    <button type="button" data-move="right" aria-label="Pohyb doprava">▶</button>
+    <button type="button" class="herb-master-small" data-pause>⏸ Pauza</button>
+    <button type="button" class="herb-master-small" data-sound>🔊 Zvuk</button>
+  </div>
+
+  <p class="herb-master-help">
+    Pohyb: šipky, myš nebo dotyk. Enter spustí hru a pokračuje mezi úrovněmi. Chytejte ingredience z receptu, vyhýbejte se 💀, ⭐ přidává život a ⚡ na tři sekundy zpomalí pád.
+  </p>
+  <p class="sr-only" data-game-status aria-live="polite"></p>
+</section>
+
+<script is:inline>
+  (() => {
+    const roots = document.querySelectorAll('[data-game="herb-master"]');
+
+    const LEVELS = [
+      { name: 'Mátový sirup', color: '#247447', recipe: [
+        { id: 'mata', emoji: '🌿', label: 'máta', need: 5 },
+        { id: 'citron', emoji: '🍋', label: 'citron', need: 2 },
+        { id: 'med', emoji: '🍯', label: 'med', need: 1 },
+      ]},
+      { name: 'Bezový sirup', color: '#597f38', recipe: [
+        { id: 'bez', emoji: '🌼', label: 'bezový květ', need: 6 },
+        { id: 'citron', emoji: '🍋', label: 'citron', need: 2 },
+        { id: 'cukr', emoji: '◇', label: 'cukr', need: 2 },
+      ]},
+      { name: 'Meduňkový sirup', color: '#3b8451', recipe: [
+        { id: 'medunka', emoji: '🍃', label: 'meduňka', need: 6 },
+        { id: 'voda', emoji: '💧', label: 'voda', need: 2 },
+        { id: 'med', emoji: '🍯', label: 'med', need: 2 },
+      ]},
+      { name: 'Pampeliškový sirup', color: '#9a7419', recipe: [
+        { id: 'pampeliska', emoji: '🌻', label: 'pampeliška', need: 7 },
+        { id: 'citron', emoji: '🍋', label: 'citron', need: 2 },
+        { id: 'voda', emoji: '💧', label: 'voda', need: 2 },
+      ]},
+      { name: 'Jitrocelový sirup', color: '#456f32', recipe: [
+        { id: 'jitrocel', emoji: '🌱', label: 'jitrocel', need: 7 },
+        { id: 'med', emoji: '🍯', label: 'med', need: 2 },
+        { id: 'citron', emoji: '🍋', label: 'citron', need: 2 },
+      ]},
+      { name: 'Levandulový sirup', color: '#72518c', recipe: [
+        { id: 'levandule', emoji: '💜', label: 'levandule', need: 7 },
+        { id: 'citron', emoji: '🍋', label: 'citron', need: 3 },
+        { id: 'cukr', emoji: '◇', label: 'cukr', need: 3 },
+      ]},
+      { name: 'Šípkový sirup', color: '#8c3e3e', recipe: [
+        { id: 'sipek', emoji: '🔴', label: 'šípek', need: 8 },
+        { id: 'jablko', emoji: '🍎', label: 'jablko', need: 3 },
+        { id: 'med', emoji: '🍯', label: 'med', need: 2 },
+      ]},
+      { name: 'Zázvorový sirup', color: '#9b6a2e', recipe: [
+        { id: 'zazvor', emoji: '🫚', label: 'zázvor', need: 8 },
+        { id: 'citron', emoji: '🍋', label: 'citron', need: 3 },
+        { id: 'med', emoji: '🍯', label: 'med', need: 3 },
+      ]},
+      { name: 'Rakytníkový sirup', color: '#b26122', recipe: [
+        { id: 'rakytnik', emoji: '🟠', label: 'rakytník', need: 9 },
+        { id: 'pomeranc', emoji: '🍊', label: 'pomeranč', need: 3 },
+        { id: 'med', emoji: '🍯', label: 'med', need: 3 },
+      ]},
+    ];
+
+    const SAFE_ITEMS = [...new Map(LEVELS.flatMap((level) => level.recipe).map((item) => [item.id, item])).values()];
+    const WIDTH = 600;
+    const HEIGHT = 500;
+    const MAX_LIVES = 5;
+    const BOSS_MAX_HP = 18;
+    const POOL_SIZE = 44;
+
+    roots.forEach((root) => {
+      if (root.dataset.ready === 'true') return;
+      root.dataset.ready = 'true';
+
+      const canvas = root.querySelector('[data-herb-master-canvas]');
+      const ctx = canvas.getContext('2d');
+      const warning = root.querySelector('[data-life-warning]');
+      const status = root.querySelector('[data-game-status]');
+      const actionButton = root.querySelector('[data-action]');
+      const pauseButton = root.querySelector('[data-pause]');
+      const soundButton = root.querySelector('[data-sound]');
+      const moveButtons = root.querySelectorAll('[data-move]');
+
+      const objects = Array.from({ length: POOL_SIZE }, () => ({
+        active: false, type: '', id: '', emoji: '', label: '', x: 0, y: 0, vy: 0, size: 32, spin: 0, rotation: 0,
+      }));
+
+      let screen = 'start';
+      let levelIndex = 0;
+      let lives = 3;
+      let score = 0;
+      let bestScore = Number(localStorage.getItem('szb-herb-master-best') || 0);
+      let collected = {};
+      let bossHp = BOSS_MAX_HP;
+      let playerX = WIDTH / 2;
+      let moveDirection = 0;
+      let spawnClock = 0;
+      let lastFrame = performance.now();
+      let slowUntil = 0;
+      let levelStarUsed = false;
+      let starCooldownUntil = 0;
+      let flashUntil = 0;
+      let paused = false;
+      let muted = false;
+      let audioContext = null;
+      let warningTimer = 0;
+
+      function audio() {
+        if (muted) return null;
+        if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioContext.state === 'suspended') audioContext.resume();
+        return audioContext;
+      }
+
+      function beep(frequency, duration = 0.09, type = 'sine', volume = 0.045, finishFrequency = frequency) {
+        const ac = audio();
+        if (!ac) return;
+        const oscillator = ac.createOscillator();
+        const gain = ac.createGain();
+        const now = ac.currentTime;
+        oscillator.type = type;
+        oscillator.frequency.setValueAtTime(frequency, now);
+        oscillator.frequency.exponentialRampToValueAtTime(Math.max(40, finishFrequency), now + duration);
+        gain.gain.setValueAtTime(volume, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+        oscillator.connect(gain).connect(ac.destination);
+        oscillator.start(now);
+        oscillator.stop(now + duration);
+      }
+
+      function sound(name) {
+        if (name === 'collect') beep(520, 0.07, 'triangle', 0.04, 760);
+        if (name === 'bonus') { beep(660, 0.08, 'sine', 0.05, 880); setTimeout(() => beep(880, 0.1, 'sine', 0.04, 1100), 75); }
+        if (name === 'danger') { beep(180, 0.22, 'sawtooth', 0.075, 70); }
+        if (name === 'level') { beep(440, 0.08, 'triangle', 0.045, 660); setTimeout(() => beep(660, 0.12, 'triangle', 0.045, 990), 90); }
+        if (name === 'boss') beep(115, 0.3, 'square', 0.055, 70);
+        if (name === 'hit') beep(330, 0.09, 'square', 0.045, 210);
+        if (name === 'win') { [523, 659, 784, 1047].forEach((f, i) => setTimeout(() => beep(f, 0.16, 'triangle', 0.04, f * 1.08), i * 120)); }
+      }
+
+      function announce(text) {
+        status.textContent = '';
+        requestAnimationFrame(() => { status.textContent = text; });
+      }
+
+      function resetPool() {
+        objects.forEach((object) => { object.active = false; });
+        spawnClock = 0;
+      }
+
+      function currentLevel() {
+        return LEVELS[levelIndex] || null;
+      }
+
+      function setScreen(next) {
+        screen = next;
+        actionButton.textContent = next === 'playing' ? 'Hra běží' : (
+          next === 'start' ? 'Spustit hru' :
+          next === 'intro' ? 'Začít úroveň' :
+          next === 'life-lost' ? 'Pokračovat' :
+          next === 'level-complete' ? 'Další úroveň' :
+          'Hrát znovu'
+        );
+        actionButton.disabled = next === 'playing';
+      }
+
+      function beginNewGame() {
+        levelIndex = 0;
+        lives = 3;
+        score = 0;
+        bossHp = BOSS_MAX_HP;
+        collected = {};
+        playerX = WIDTH / 2;
+        resetPool();
+        showIntro();
+      }
+
+      function showIntro() {
+        resetPool();
+        collected = {};
+        slowUntil = 0;
+        levelStarUsed = false;
+        starCooldownUntil = performance.now() + 16000;
+        setScreen('intro');
+        const label = levelIndex < LEVELS.length ? `Úroveň ${levelIndex + 1}: ${currentLevel().name}` : 'Úroveň 10: BOSS';
+        announce(label);
+      }
+
+      function startLevel() {
+        resetPool();
+        playerX = WIDTH / 2;
+        lastFrame = performance.now();
+        paused = false;
+        pauseButton.textContent = '⏸ Pauza';
+        setScreen('playing');
+        announce(levelIndex < LEVELS.length ? `Začíná ${currentLevel().name}.` : 'Začíná závěrečný souboj s Černým kotlem.');
+        if (levelIndex >= LEVELS.length) sound('boss');
+      }
+
+      function activateObject(spec) {
+        const object = objects.find((candidate) => !candidate.active);
+        if (!object) return;
+        Object.assign(object, spec, { active: true, y: -36, rotation: 0, spin: (Math.random() - 0.5) * 1.8 });
+      }
+
+      function neededItems() {
+        const level = currentLevel();
+        return level ? level.recipe.filter((item) => (collected[item.id] || 0) < item.need) : [];
+      }
+
+      function spawn(now) {
+        const boss = levelIndex >= LEVELS.length;
+        const levelFactor = boss ? 10 : levelIndex;
+        const speed = (1.75 + levelFactor * 0.16) * (now < slowUntil ? 0.5 : 1);
+        const roll = Math.random();
+
+        if (!levelStarUsed && lives < MAX_LIVES && now > starCooldownUntil && roll < 0.012) {
+          levelStarUsed = true;
+          activateObject({ type: 'life', id: 'life', emoji: '⭐', label: 'život', x: 34 + Math.random() * 532, vy: speed * 0.82, size: 31 });
+          return;
+        }
+        if (roll < 0.037) {
+          activateObject({ type: 'slow', id: 'slow', emoji: '⚡', label: 'zpomalení', x: 34 + Math.random() * 532, vy: speed * 0.9, size: 31 });
+          return;
+        }
+
+        const dangerChance = boss ? 0.34 : Math.min(0.18 + levelIndex * 0.015, 0.30);
+        if (roll < dangerChance) {
+          activateObject({ type: 'danger', id: 'danger', emoji: '💀', label: 'nebezpečí', x: 34 + Math.random() * 532, vy: speed * 1.08, size: 34 });
+          return;
+        }
+
+        if (boss) {
+          if (Math.random() < 0.72) {
+            activateObject({ type: 'boss-hit', id: 'essence', emoji: '🧪', label: 'mistrovská esence', x: 34 + Math.random() * 532, vy: speed, size: 32 });
+          } else {
+            const decoy = SAFE_ITEMS[Math.floor(Math.random() * SAFE_ITEMS.length)];
+            activateObject({ type: 'safe', ...decoy, x: 34 + Math.random() * 532, vy: speed * 0.96, size: 31 });
+          }
+          return;
+        }
+
+        const needed = neededItems();
+        const source = needed.length && Math.random() < 0.78 ? needed : SAFE_ITEMS;
+        const item = source[Math.floor(Math.random() * source.length)];
+        activateObject({ type: 'safe', ...item, x: 34 + Math.random() * 532, vy: speed, size: 31 });
+      }
+
+      function loseLife() {
+        if (screen !== 'playing') return;
+        lives -= 1;
+        flashUntil = performance.now() + 520;
+        resetPool();
+        sound('danger');
+        warning.hidden = false;
+        clearTimeout(warningTimer);
+        warningTimer = setTimeout(() => { warning.hidden = true; }, 1450);
+        announce(`Pozor! Nebezpečný předmět. Zbývají ${Math.max(lives, 0)} životy.`);
+        if (lives <= 0) {
+          bestScore = Math.max(bestScore, score);
+          localStorage.setItem('szb-herb-master-best', String(bestScore));
+          setScreen('game-over');
+        } else {
+          setScreen('life-lost');
+        }
+      }
+
+      function levelFinished() {
+        if (screen !== 'playing') return;
+        score += 500 * (levelIndex + 1);
+        bestScore = Math.max(bestScore, score);
+        localStorage.setItem('szb-herb-master-best', String(bestScore));
+        resetPool();
+        sound('level');
+        setScreen('level-complete');
+        announce(`Recept ${currentLevel().name} je hotový.`);
+      }
+
+      function finishGame() {
+        score += 5000 + lives * 750;
+        bestScore = Math.max(bestScore, score);
+        localStorage.setItem('szb-herb-master-best', String(bestScore));
+        resetPool();
+        sound('win');
+        setScreen('won');
+        announce(`Vyhráli jste Bylinkového mistra se skóre ${score}.`);
+      }
+
+      function catchObject(object, now) {
+        object.active = false;
+        if (object.type === 'danger') {
+          loseLife();
+          return;
+        }
+        if (object.type === 'life') {
+          lives = Math.min(MAX_LIVES, lives + 1);
+          score += 100;
+          sound('bonus');
+          announce(`Hvězda přidala život. Máte ${lives} životů.`);
+          return;
+        }
+        if (object.type === 'slow') {
+          slowUntil = now + 3000;
+          score += 75;
+          sound('bonus');
+          announce('Pád je na tři sekundy zpomalený.');
+          return;
+        }
+        if (object.type === 'boss-hit') {
+          bossHp = Math.max(0, bossHp - 1);
+          score += 180;
+          sound('hit');
+          announce(`Zásah bosse. Zbývá ${bossHp} bodů odolnosti.`);
+          if (bossHp <= 0) finishGame();
+          return;
+        }
+
+        const level = currentLevel();
+        const required = level?.recipe.find((item) => item.id === object.id);
+        if (required && (collected[required.id] || 0) < required.need) {
+          collected[required.id] = (collected[required.id] || 0) + 1;
+          score += 100 + levelIndex * 12;
+          sound('collect');
+          const complete = level.recipe.every((item) => (collected[item.id] || 0) >= item.need);
+          if (complete) levelFinished();
+        } else {
+          // Bezpečná, ale právě nepotřebná ingredience nikdy neubírá život.
+          score += 5;
+          beep(300, 0.045, 'sine', 0.018, 250);
+        }
+      }
+
+      function update(delta, now) {
+        if (screen !== 'playing' || paused) return;
+        const boss = levelIndex >= LEVELS.length;
+        const playerSpeed = 330;
+        playerX += moveDirection * playerSpeed * delta;
+        playerX = Math.max(35, Math.min(WIDTH - 35, playerX));
+
+        const interval = Math.max(315, (boss ? 500 : 720 - levelIndex * 38));
+        spawnClock += delta * 1000;
+        while (spawnClock >= interval) {
+          spawnClock -= interval;
+          spawn(now);
+        }
+
+        const playerY = HEIGHT - 48;
+        for (const object of objects) {
+          if (!object.active) continue;
+          const effectiveSpeed = now < slowUntil ? object.vy * 0.5 : object.vy;
+          object.y += effectiveSpeed * delta * 60;
+          object.rotation += object.spin * delta;
+          if (object.y > HEIGHT + 45) {
+            object.active = false;
+            continue;
+          }
+          const dx = object.x - playerX;
+          const dy = object.y - playerY;
+          if (Math.abs(dx) < 38 && Math.abs(dy) < 36) catchObject(object, now);
+        }
+      }
+
+      function roundedRect(x, y, width, height, radius) {
+        ctx.beginPath();
+        ctx.roundRect(x, y, width, height, radius);
+      }
+
+      function drawBackground(now) {
+        const level = currentLevel();
+        const top = level?.color || '#35213f';
+        const gradient = ctx.createLinearGradient(0, 0, 0, HEIGHT);
+        gradient.addColorStop(0, top);
+        gradient.addColorStop(0.62, '#8ecb77');
+        gradient.addColorStop(1, '#386b32');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+        ctx.globalAlpha = 0.14;
+        ctx.fillStyle = '#fff';
+        for (let i = 0; i < 14; i += 1) {
+          const x = (i * 97 + now * 0.012) % 680 - 40;
+          const y = 88 + (i % 4) * 73;
+          ctx.beginPath();
+          ctx.arc(x, y, 22 + (i % 3) * 8, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+
+        ctx.fillStyle = '#234f27';
+        ctx.fillRect(0, HEIGHT - 36, WIDTH, 36);
+        ctx.fillStyle = '#4c843f';
+        for (let x = 0; x < WIDTH; x += 18) {
+          ctx.beginPath();
+          ctx.moveTo(x, HEIGHT - 36);
+          ctx.lineTo(x + 6, HEIGHT - 50 - (x % 4) * 2);
+          ctx.lineTo(x + 11, HEIGHT - 36);
+          ctx.fill();
+        }
+      }
+
+      function drawHud(now) {
+        ctx.fillStyle = 'rgba(15,35,18,.78)';
+        roundedRect(12, 12, 576, levelIndex >= LEVELS.length ? 76 : 92, 15);
+        ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.font = '700 17px system-ui, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText(`❤️ ${lives}`, 27, 38);
+        ctx.fillText(`Lvl ${Math.min(levelIndex + 1, 10)}/10`, 112, 38);
+        ctx.fillText(`Body ${score}`, 216, 38);
+        ctx.textAlign = 'right';
+        ctx.fillText(`Rekord ${bestScore}`, 573, 38);
+        ctx.textAlign = 'left';
+
+        if (levelIndex >= LEVELS.length) {
+          ctx.fillStyle = '#ffd77b';
+          ctx.font = '800 15px system-ui, sans-serif';
+          ctx.fillText('BOSS – Černý kotel', 27, 70);
+          ctx.fillStyle = '#4b1f25';
+          roundedRect(208, 55, 350, 18, 9); ctx.fill();
+          ctx.fillStyle = '#f05d64';
+          roundedRect(208, 55, 350 * (bossHp / BOSS_MAX_HP), 18, 9); ctx.fill();
+          return;
+        }
+
+        const level = currentLevel();
+        ctx.fillStyle = '#dff3d9';
+        ctx.font = '700 13px system-ui, sans-serif';
+        ctx.fillText(level.name, 27, 65);
+        let x = 27;
+        level.recipe.forEach((item) => {
+          const value = Math.min(collected[item.id] || 0, item.need);
+          const text = `${item.emoji} ${value}/${item.need}`;
+          ctx.fillStyle = value >= item.need ? '#9cff96' : '#fff';
+          ctx.fillText(text, x, 88);
+          x += ctx.measureText(text).width + 22;
+        });
+        if (now < slowUntil) {
+          ctx.fillStyle = '#ffe76f';
+          ctx.fillText(`⚡ ${Math.max(1, Math.ceil((slowUntil - now) / 1000))} s`, 505, 88);
+        }
+      }
+
+      function drawObjects() {
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        for (const object of objects) {
+          if (!object.active) continue;
+          ctx.save();
+          ctx.translate(object.x, object.y);
+          ctx.rotate(object.rotation);
+          if (object.type === 'danger') {
+            ctx.fillStyle = 'rgba(160,12,20,.46)';
+            ctx.beginPath(); ctx.arc(0, 1, 24, 0, Math.PI * 2); ctx.fill();
+          } else if (object.type === 'life' || object.type === 'slow' || object.type === 'boss-hit') {
+            ctx.fillStyle = 'rgba(255,245,143,.35)';
+            ctx.beginPath(); ctx.arc(0, 1, 24, 0, Math.PI * 2); ctx.fill();
+          }
+          ctx.font = `${object.size}px "Apple Color Emoji","Segoe UI Emoji",sans-serif`;
+          ctx.fillStyle = '#fff';
+          ctx.fillText(object.emoji, 0, 0);
+          ctx.restore();
+        }
+        ctx.textBaseline = 'alphabetic';
+      }
+
+      function drawPlayer(now) {
+        ctx.save();
+        ctx.translate(playerX, HEIGHT - 46);
+        const bounce = screen === 'playing' && !paused ? Math.sin(now / 120) * 1.5 : 0;
+        ctx.translate(0, bounce);
+        ctx.fillStyle = 'rgba(0,0,0,.22)';
+        ctx.beginPath(); ctx.ellipse(0, 25, 31, 8, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.font = '48px "Apple Color Emoji","Segoe UI Emoji",sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('👩‍🌾', 0, 17);
+        ctx.restore();
+      }
+
+      function drawOverlay(title, lines, dark = false, accent = '#356b39') {
+        ctx.fillStyle = dark ? 'rgba(0,0,0,.90)' : 'rgba(255,255,255,.94)';
+        roundedRect(62, 78, 476, 344, 28);
+        ctx.fill();
+        ctx.strokeStyle = dark ? 'rgba(255,255,255,.18)' : '#cfe0c9';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.textAlign = 'center';
+        ctx.fillStyle = dark ? '#fff' : '#17391f';
+        ctx.font = '800 34px Georgia, serif';
+        ctx.fillText(title, WIDTH / 2, 137);
+        ctx.fillStyle = dark ? '#d8e6d6' : '#4f5d51';
+        ctx.font = '600 17px system-ui, sans-serif';
+        lines.forEach((line, index) => ctx.fillText(line, WIDTH / 2, 181 + index * 32));
+        ctx.fillStyle = accent;
+        roundedRect(175, 344, 250, 48, 24);
+        ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.font = '800 16px system-ui, sans-serif';
+        ctx.fillText('ENTER NEBO TLAČÍTKO', WIDTH / 2, 375);
+      }
+
+      function draw(now) {
+        drawBackground(now);
+        if (screen === 'playing' || screen === 'life-lost') {
+          drawObjects();
+          drawPlayer(now);
+          drawHud(now);
+          if (paused && screen === 'playing') drawOverlay('Pauza', ['Stiskněte P nebo tlačítko Pauza.'], true, '#356b39');
+        }
+
+        if (screen === 'start') {
+          const gradient = ctx.createLinearGradient(0, 0, WIDTH, HEIGHT);
+          gradient.addColorStop(0, '#163b22');
+          gradient.addColorStop(1, '#4f8b3d');
+          ctx.fillStyle = gradient;
+          ctx.fillRect(0, 0, WIDTH, HEIGHT);
+          ctx.textAlign = 'center';
+          ctx.font = '74px "Apple Color Emoji","Segoe UI Emoji",sans-serif';
+          ctx.fillText('🌿', WIDTH / 2, 128);
+          ctx.fillStyle = '#fff';
+          ctx.font = '800 48px Georgia, serif';
+          ctx.fillText('Bylinkový mistr', WIDTH / 2, 198);
+          ctx.fillStyle = '#dcebd8';
+          ctx.font = '600 18px system-ui, sans-serif';
+          ctx.fillText('Chytejte ingredience a dokončete devět receptů.', WIDTH / 2, 239);
+          ctx.fillText('V desáté úrovni porazte Černý kotel.', WIDTH / 2, 270);
+          ctx.fillStyle = '#f3c969';
+          roundedRect(164, 326, 272, 54, 27); ctx.fill();
+          ctx.fillStyle = '#17391f';
+          ctx.font = '900 17px system-ui, sans-serif';
+          ctx.fillText('ENTER – SPUSTIT HRU', WIDTH / 2, 360);
+          ctx.fillStyle = '#dcebd8';
+          ctx.font = '600 13px system-ui, sans-serif';
+          ctx.fillText(`Nejlepší skóre: ${bestScore}`, WIDTH / 2, 416);
+        } else if (screen === 'intro') {
+          if (levelIndex < LEVELS.length) {
+            const level = currentLevel();
+            const lines = [`Úroveň ${levelIndex + 1} z 10`, level.name, ...level.recipe.map((item) => `${item.emoji} ${item.label}: ${item.need}×`)];
+            drawOverlay(level.name, lines, false, level.color);
+          } else {
+            drawOverlay('BOSS: Černý kotel', ['Úroveň 10 z 10', 'Chytejte 🧪 a snižte odolnost bosse.', 'Bezpečné ingredience vám neublíží.', 'Vyhýbejte se 💀.'], true, '#a53f49');
+          }
+        } else if (screen === 'life-lost') {
+          drawOverlay('Ztráta života', [`Zbývá životů: ${lives}`, 'Padající předměty byly vyčištěny.', 'Pokračujete od stejného receptu.'], true, '#b9383e');
+        } else if (screen === 'level-complete') {
+          drawOverlay('Recept hotový!', [`${currentLevel().name} je dokončený.`, `Body: ${score}`, `Životy: ${lives}`], false, '#356b39');
+        } else if (screen === 'game-over') {
+          drawOverlay('Konec hry', [`Dosažené skóre: ${score}`, `Nejlepší skóre: ${bestScore}`, 'Zkuste to znovu.'], true, '#a53f49');
+        } else if (screen === 'won') {
+          drawOverlay('Jste Bylinkový mistr!', [`Černý kotel je poražen.`, `Konečné skóre: ${score}`, `Nejlepší skóre: ${bestScore}`], true, '#c99b32');
+        }
+
+        if (performance.now() < flashUntil) {
+          ctx.fillStyle = 'rgba(210,0,18,.22)';
+          ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        }
+      }
+
+      function advance() {
+        audio();
+        if (screen === 'start' || screen === 'game-over' || screen === 'won') {
+          beginNewGame();
+        } else if (screen === 'intro') {
+          startLevel();
+        } else if (screen === 'life-lost') {
+          startLevel();
+        } else if (screen === 'level-complete') {
+          levelIndex += 1;
+          showIntro();
+        }
+      }
+
+      function canvasPosition(clientX) {
+        const rect = canvas.getBoundingClientRect();
+        return ((clientX - rect.left) / rect.width) * WIDTH;
+      }
+
+      canvas.addEventListener('pointerdown', (event) => {
+        audio();
+        if (screen !== 'playing') {
+          advance();
+          return;
+        }
+        playerX = Math.max(35, Math.min(WIDTH - 35, canvasPosition(event.clientX)));
+        canvas.setPointerCapture?.(event.pointerId);
+      });
+      canvas.addEventListener('pointermove', (event) => {
+        if (screen !== 'playing' || !event.isPrimary) return;
+        if (event.pointerType === 'mouse' || event.buttons) playerX = Math.max(35, Math.min(WIDTH - 35, canvasPosition(event.clientX)));
+      });
+
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') { event.preventDefault(); moveDirection = -1; audio(); }
+        if (event.key === 'ArrowRight') { event.preventDefault(); moveDirection = 1; audio(); }
+        if (event.key === 'Enter') { event.preventDefault(); advance(); }
+        if (event.key.toLowerCase() === 'p' && screen === 'playing') {
+          paused = !paused;
+          pauseButton.textContent = paused ? '▶ Pokračovat' : '⏸ Pauza';
+          announce(paused ? 'Hra pozastavena.' : 'Hra pokračuje.');
+        }
+      });
+      window.addEventListener('keyup', (event) => {
+        if ((event.key === 'ArrowLeft' && moveDirection < 0) || (event.key === 'ArrowRight' && moveDirection > 0)) moveDirection = 0;
+      });
+
+      actionButton.addEventListener('click', advance);
+      pauseButton.addEventListener('click', () => {
+        if (screen !== 'playing') return;
+        paused = !paused;
+        pauseButton.textContent = paused ? '▶ Pokračovat' : '⏸ Pauza';
+        announce(paused ? 'Hra pozastavena.' : 'Hra pokračuje.');
+      });
+      soundButton.addEventListener('click', () => {
+        muted = !muted;
+        soundButton.textContent = muted ? '🔇 Bez zvuku' : '🔊 Zvuk';
+        if (!muted) sound('collect');
+      });
+
+      moveButtons.forEach((button) => {
+        const direction = button.dataset.move === 'left' ? -1 : 1;
+        const start = (event) => { event.preventDefault(); audio(); moveDirection = direction; };
+        const stop = (event) => { event.preventDefault(); if (moveDirection === direction) moveDirection = 0; };
+        button.addEventListener('pointerdown', start);
+        button.addEventListener('pointerup', stop);
+        button.addEventListener('pointercancel', stop);
+        button.addEventListener('pointerleave', stop);
+      });
+
+      function frame(now) {
+        const delta = Math.min(0.034, Math.max(0, (now - lastFrame) / 1000));
+        lastFrame = now;
+        update(delta, now);
+        draw(now);
+        requestAnimationFrame(frame);
+      }
+
+      setScreen('start');
+      requestAnimationFrame(frame);
+    });
+  })();
+</script>
+
+<style>
+  .herb-master-arcade{max-width:900px;margin:auto}.herb-master-frame{position:relative;max-width:760px;margin:auto;padding:14px;border:1px solid #b9d0b4;border-radius:30px;background:linear-gradient(145deg,#f7f3df,#dcebd7);box-shadow:0 24px 55px rgba(28,70,35,.18)}canvas{display:block;width:100%;height:auto;aspect-ratio:6/5;border-radius:20px;background:#17391f;touch-action:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}.herb-master-warning{position:absolute;left:50%;top:50%;z-index:3;width:min(82%,560px);padding:22px;transform:translate(-50%,-50%);border:4px solid #fff;border-radius:24px;background:rgba(177,20,30,.96);color:#fff;text-align:center;box-shadow:0 20px 55px rgba(92,0,8,.45);animation:warning-pulse .22s ease-in-out 3}.herb-master-warning strong,.herb-master-warning span{display:block}.herb-master-warning strong{font-size:clamp(1.8rem,5vw,3rem);letter-spacing:.08em}.herb-master-warning span{margin-top:4px;font-size:clamp(1rem,2.5vw,1.25rem);font-weight:800}.herb-master-controls{display:grid;grid-template-columns:72px minmax(180px,1fr) 72px auto auto;gap:10px;max-width:760px;margin:16px auto 0}.herb-master-controls button{min-height:50px;padding:10px 15px;border:1px solid #b6ccb1;border-radius:16px;background:#fff;color:#234d2b;font:800 .92rem system-ui,sans-serif;cursor:pointer;box-shadow:0 6px 18px rgba(34,75,42,.08);touch-action:none}.herb-master-controls button:hover:not(:disabled){transform:translateY(-2px);border-color:#5f995f}.herb-master-controls button:disabled{opacity:.55;cursor:default}.herb-master-controls .herb-master-action{background:linear-gradient(135deg,#2b6f39,#4e904b);color:#fff}.herb-master-controls .herb-master-small{font-size:.78rem}.herb-master-help{max-width:760px;margin:14px auto 0;color:#5d685e;font-size:.88rem;text-align:center}@keyframes warning-pulse{50%{transform:translate(-50%,-50%) scale(1.035)}}@media(max-width:720px){.herb-master-frame{padding:7px;border-radius:20px}.herb-master-controls{grid-template-columns:64px 1fr 64px}.herb-master-controls .herb-master-small{grid-column:span 1}.herb-master-controls .herb-master-small:first-of-type{grid-column:1/2}.herb-master-help{padding:0 8px}.herb-master-warning{padding:16px}}@media(prefers-reduced-motion:reduce){.herb-master-warning{animation:none}.herb-master-controls button{transition:none}}
+</style>
