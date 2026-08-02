@@ -1,0 +1,17 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const reserved = new Set(['/magazin/', '/rss.xml/', '/404/']);
+  const entries = await getCollection('articles', ({ data }) => !data.draft && data.path !== '/' && !reserved.has(data.path));
+  return entries.map((entry) => ({
+    params: { slug: entry.data.path.replace(/^\//, '').replace(/\/$/, '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<ArticleLayout entry={entry}><Content /></ArticleLayout>
