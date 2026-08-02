@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { entry } = Astro.props;
+const { title, description, image, category, date, updated, sourceUrl } = entry.data;
+---
+<BaseLayout title={`${title} | Sirupy z bylinek`} description={description} image={image} canonical={entry.data.path} type="article">
+  <article class="article-shell">
+    <header class="article-header">
+      <div class="article-kicker">{category}</div>
+      <h1>{title}</h1>
+      {description && <p class="article-lead">{description}</p>}
+      <div class="article-meta">
+        {date && <time datetime={date.toISOString()}>Publikováno {date.toLocaleDateString('cs-CZ')}</time>}
+        {updated && <time datetime={updated.toISOString()}>Aktualizováno {updated.toLocaleDateString('cs-CZ')}</time>}
+      </div>
+      {image && <img class="hero-image" src={image} alt={title} decoding="async" />}
+    </header>
+    <div class="article-content"><slot /></div>
+    <aside class="safety-box">
+      <strong>Bezpečnost na prvním místě</strong>
+      <p>Bylinky mohou ovlivňovat léky a nejsou vhodné pro každého. Zvláštní opatrnost je nutná u dětí, těhotných a kojících žen, chronicky nemocných a zvířat.</p>
+    </aside>
+    {sourceUrl && <p class="legacy-source">Původní adresa při migraci: <a href={sourceUrl}>{sourceUrl}</a></p>}
+  </article>
+</BaseLayout>
