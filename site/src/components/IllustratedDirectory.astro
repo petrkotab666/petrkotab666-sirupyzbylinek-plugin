@@ -7,6 +7,8 @@ interface DirectoryItem {
   text: string;
   art: 'harvest' | 'recipes' | 'pharmacy' | 'magazine' | 'deals' | 'games' | 'timing' | 'identify' | 'ethics' | 'avoid' | 'places' | 'process';
   kicker?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 interface Props {
@@ -18,9 +20,20 @@ const { items, class: className = '' } = Astro.props;
 ---
 <div class:list={['illustrated-directory', className]}>
   {items.map((item) => (
-    <a class="illustrated-directory-card" href={item.href}>
-      <span class="illustrated-directory-art" aria-hidden="true">
-        <BotanicalArtwork variant={item.art} />
+    <a class:list={['illustrated-directory-card', item.image && 'illustrated-directory-card--photo']} href={item.href}>
+      <span class="illustrated-directory-art" aria-hidden={!item.image ? 'true' : undefined}>
+        {item.image ? (
+          <img
+            src={item.image}
+            alt={item.imageAlt || ''}
+            width="1024"
+            height="576"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <BotanicalArtwork variant={item.art} />
+        )}
       </span>
       <span class="illustrated-directory-shade" aria-hidden="true"></span>
       <span class="illustrated-directory-copy">
