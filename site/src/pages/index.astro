@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft))
+  .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
+const latest = articles.slice(0, 6);
+const sections = [
+  { href: '/domu/sber-bylinek/', icon: '🧺', title: 'Sběr bylinek', text: 'Jak bylinky bezpečně poznat, kdy je sbírat a jak je šetrně zpracovat.' },
+  { href: '/osvedcene-recepty/', icon: '🍯', title: 'Osvědčené recepty', text: 'Domácí sirupy, tinktury, čaje, limonády a další praktické návody.' },
+  { href: '/domu/prirodni-lekarna/', icon: '🌿', title: 'Přírodní lékárna', text: 'Přehled bylinek, jejich tradičního využití, omezení a bezpečnosti.' },
+  { href: '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/', icon: '📖', title: 'Bylinkový magazín', text: 'Sezónní sběr, pěstování, kuchyňské využití a nová inspirace.' },
+  { href: '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', icon: '🏷️', title: 'Slevové akce', text: 'Doporučené vybavení, suroviny a výhodné nabídky pro domácí výrobu.' },
+  { href: '/bylinkova-herna/', icon: '🧩', title: 'Bylinková herna', text: 'Poznávačky, pexeso a zábavné objevování přírody pro děti i dospělé.' },
+];
+---
+<BaseLayout>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Prakticky, bezpečně a bez zbytečných slibů</span>
+      <h1>Síla přírody v každé kapce</h1>
+      <p>Průvodce domácími sirupy, tinkturami, čaji, limonádami, pěstováním a šetrným sběrem bylinek.</p>
+      <div class="hero-actions"><a class="button" href="/osvedcene-recepty/">Prohlédnout recepty</a><a class="button secondary" href="/domu/sber-bylinek/">Jak začít se sběrem</a></div>
+    </div>
+    <div class="hero-visual" aria-hidden="true"><span>🌿</span><span>🍯</span><span>🌼</span></div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-heading"><span>Rychlý výběr</span><h2>Vyberte si, co vás zajímá</h2><p>Všechny hlavní části webu mají stejné menu, vzhled a jasnou strukturu.</p></div>
+    <div class="section-grid">
+      {sections.map((item) => <a class="section-card" href={item.href}><span class="section-icon" aria-hidden="true">{item.icon}</span><h3>{item.title}</h3><p>{item.text}</p><strong>Otevřít <span aria-hidden="true">→</span></strong></a>)}
+    </div>
+  </section>
+
+  {latest.length > 0 && <section class="section-wrap latest"><div class="section-heading"><span>Nově na webu</span><h2>Nejnovější články</h2></div><div class="articles-grid">{latest.map((entry) => <ArticleCard entry={entry} />)}</div></section>}
+
+  <section class="trust-strip"><div><strong>Jednotná redakce</strong><span>Každý článek je uložený v GitHubu a dohledatelný v historii změn.</span></div><div><strong>Rychlý web</strong><span>Stránky se sestavují staticky bez závislosti na WordPress pluginech.</span></div><div><strong>Bezpečné nasazení</strong><span>Každá změna projde buildem před zveřejněním.</span></div></section>
+</BaseLayout>
