@@ -3,24 +3,78 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
-import BotanicalArtwork from '../components/BotanicalArtwork.astro';
 import IllustratedDirectory from '../components/IllustratedDirectory.astro';
 import { getPublishedArticles } from '../lib/articles';
 
 const articles = await getPublishedArticles();
 const latest = articles.slice(0, 6);
+const heroImage = '/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png';
 const sections = [
-  { href: '/domu/sber-bylinek/', art: 'harvest', kicker: 'Od louky ke košíku', title: 'Sběr bylinek', text: 'Kdy a kde sbírat, co si vzít s sebou a jak bylinky bezpečně poznat.' },
-  { href: '/osvedcene-recepty/', art: 'recipes', kicker: 'Domácí výroba', title: 'Osvědčené recepty', text: 'Sirupy, tinktury, limonády a další recepty krok za krokem.' },
-  { href: '/domu/prirodni-lekarna/', art: 'pharmacy', kicker: 'Tradiční využití', title: 'Přírodní lékárna', text: 'Přehled bylin, jejich omezení, bezpečnosti a praktického použití.' },
-  { href: '/magazin/', art: 'magazine', kicker: 'Čtení a inspirace', title: 'Bylinkový magazín', text: 'Sezónní témata, pěstování, zpracování a nové nápady z přírody.' },
-  { href: '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', art: 'deals', kicker: 'Výbava a suroviny', title: 'Slevové akce', text: 'Aktuální nabídky sklenic, knih, bylin a vybavení pro domácí výrobu.' },
-  { href: '/bylinkova-herna/', art: 'games', kicker: 'Pro děti i dospělé', title: 'Bylinková herna', text: 'Pexeso, poznávačky a arkádová hra Bylinkový mistr.' },
+  {
+    href: '/domu/sber-bylinek/',
+    art: 'harvest',
+    image: '/media/imported/jak-kombinovat-bylinky/byliny-6083d43d.png',
+    imageAlt: 'Bylinky připravené ke sběru a zpracování',
+    kicker: 'Od louky ke košíku',
+    title: 'Sběr bylinek',
+    text: 'Kdy a kde sbírat, co si vzít s sebou a jak bylinky bezpečně poznat.',
+  },
+  {
+    href: '/osvedcene-recepty/',
+    art: 'recipes',
+    image: '/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png',
+    imageAlt: 'Domácí bylinkové sirupy',
+    kicker: 'Domácí výroba',
+    title: 'Osvědčené recepty',
+    text: 'Sirupy, tinktury, limonády a další recepty krok za krokem.',
+  },
+  {
+    href: '/domu/prirodni-lekarna/',
+    art: 'pharmacy',
+    image: '/media/imported/prirodni-sila-pro-imunitu-a-obranyschopnost/3obr-07cd0380.png',
+    imageAlt: 'Bylinky a přírodní lékárna',
+    kicker: 'Tradiční využití',
+    title: 'Přírodní lékárna',
+    text: 'Přehled bylin, jejich omezení, bezpečnosti a praktického použití.',
+  },
+  {
+    href: '/magazin/',
+    art: 'magazine',
+    image: '/media/imported/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/bylinkovymagazin-58281674.png',
+    imageAlt: 'Bylinkový magazín',
+    kicker: 'Čtení a inspirace',
+    title: 'Bylinkový magazín',
+    text: 'Sezónní témata, pěstování, zpracování a nové nápady z přírody.',
+  },
+  {
+    href: '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/',
+    art: 'deals',
+    image: '/media/imported/sklenice-na-sirupy-a-zavarovani/sklenice-na-sirupy-a-zavarovani-4b170c4d.webp',
+    imageAlt: 'Sklenice, lahve a vybavení pro domácí výrobu',
+    kicker: 'Výbava a suroviny',
+    title: 'Slevové akce',
+    text: 'Aktuální nabídky sklenic, knih, bylin a vybavení pro domácí výrobu.',
+  },
+  {
+    href: '/bylinkova-herna/',
+    art: 'games',
+    kicker: 'Pro děti i dospělé',
+    title: 'Bylinková herna',
+    text: 'Pexeso, poznávačky a arkádová hra Bylinkový mistr.',
+  },
 ] as const;
 ---
 <BaseLayout>
-  <section class="hero legacy-home-hero">
-    <div class="home-hero-art" aria-hidden="true"><BotanicalArtwork variant="hero" /></div>
+  <section class="hero legacy-home-hero legacy-home-hero--original">
+    <img
+      class="home-hero-original-image"
+      src={heroImage}
+      alt="Domácí bylinkové sirupy – Sirupy z bylinek"
+      width="1024"
+      height="545"
+      fetchpriority="high"
+      decoding="async"
+    />
     <div class="hero-copy">
       <span class="eyebrow">Vůně bylinek, chuť přírody</span>
       <h1>Objevte kouzlo domácích bylinkových sirupů</h1>
@@ -41,21 +95,23 @@ const sections = [
     <IllustratedDirectory items={sections} />
   </section>
 
-  <section class="legacy-pantry-banner">
+  <section class="legacy-pantry-banner legacy-pantry-banner--original">
     <div class="legacy-pantry-copy">
       <span>Domácí výroba bez zmatku</span>
       <h2>Sirupů plná spižírna</h2>
       <p>Od správného sběru přes šetrné zpracování až po čisté lahve, skladování a podávání.</p>
       <a class="button" href="/domaci-sirupy/">Prohlédnout domácí sirupy</a>
     </div>
-    <div class="legacy-pantry-art" aria-hidden="true"><BotanicalArtwork variant="recipes" /></div>
+    <div class="legacy-pantry-photo">
+      <img src="/media/imported/jak-kombinovat-bylinky/byliny-6083d43d.png" alt="Bylinky pro domácí výrobu" width="1024" height="576" loading="lazy" decoding="async" />
+    </div>
   </section>
 
   <ContextAds topic="bylinky" heading="Oblíbené nabídky pro bylinkáře" />
 
   {latest.length > 0 && (
     <section class="section-wrap latest">
-      <div class="section-heading"><span>Nově na webu</span><h2>Nejnovější články</h2><p>Nové recepty, rady a sezónní inspirace.</p></div>
+      <div class="section-heading centered-heading"><span>Nově na webu</span><h2>Nejnovější články</h2><p>Nové recepty, rady a sezónní inspirace.</p></div>
       <div class="articles-grid">{latest.map((entry) => <ArticleCard entry={entry} />)}</div>
     </section>
   )}
