@@ -3,10 +3,16 @@
  * Tato vrstva je načtená jako poslední, aby opravila předchozí vizuální experimenty.
  */
 
-/* Původní logo v hlavičce */
+/* Původní světlá hlavička a skutečné logo */
+.site-header{
+  border-bottom:4px solid #d8922d;
+  background:rgba(255,252,242,.98);
+  box-shadow:0 8px 24px rgba(53,67,43,.13);
+}
+.header-inner{min-height:96px}
 .brand.brand--original{
   min-width:0;
-  min-height:82px;
+  min-height:88px;
   align-self:center;
   margin:0;
   padding:3px 10px;
@@ -17,9 +23,24 @@
 .brand-original-logo{
   display:block;
   width:auto;
-  height:76px;
-  max-width:210px;
+  height:86px;
+  max-width:220px;
   object-fit:contain;
+}
+.main-menu a{
+  color:#28442c;
+  text-shadow:none;
+}
+.main-menu a:hover,
+.main-menu a[aria-current="page"]{
+  background:#e9f1df;
+  color:#173f23;
+  box-shadow:inset 0 0 0 1px rgba(45,91,48,.12);
+}
+.menu-button{
+  border-color:#cddbc4;
+  background:#fff;
+  color:#174e29;
 }
 
 /* Úvodní banner: obrázek je vždy pevně oříznutý uvnitř banneru. */
@@ -93,6 +114,113 @@
 .illustrated-directory-copy>span{max-width:31rem}
 .illustrated-directory-copy b{margin-inline:auto}
 
+/* Jednoduchý centrovaný úvod Sběru bylinek podle původní stránky */
+.heritage-simple-header{
+  max-width:1192px;
+  margin:42px auto 0;
+  padding:44px 28px 18px;
+  text-align:center;
+}
+.heritage-simple-header>span{
+  display:block;
+  color:#ad671f;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.heritage-simple-header h1{
+  margin:.25rem 0 1rem;
+  color:#6f452a;
+  font:700 clamp(2.6rem,5vw,4.25rem)/1.05 Georgia,serif;
+}
+.heritage-simple-header p{
+  max-width:1040px;
+  margin:0 auto;
+  color:#785f52;
+  font-size:1.08rem;
+  line-height:1.75;
+}
+
+/* Přesný původní rozcestník: nadpis, černo-zlatý obrázek a tlačítko pod ním. */
+.original-sber-directory{padding-top:54px}
+.original-sber-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:38px 32px;
+  align-items:stretch;
+}
+.original-sber-card{
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+  align-items:center;
+  padding:23px 20px 20px;
+  border:3px solid #343434;
+  border-radius:15px;
+  background:#fff;
+  color:#70482e;
+  text-align:center;
+  text-decoration:none;
+  box-shadow:0 10px 23px rgba(31,38,28,.24);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.original-sber-card h3{
+  margin:0 0 22px;
+  font:700 clamp(1.55rem,2.5vw,2rem)/1.15 Georgia,serif;
+}
+.original-sber-image{
+  display:block;
+  width:100%;
+  max-width:310px;
+  aspect-ratio:1;
+  overflow:hidden;
+  border-radius:12px;
+  background:#171717;
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+.original-sber-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+}
+.original-sber-card>strong{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  margin-top:auto;
+  padding:11px 22px;
+  border-radius:999px;
+  background:#805133;
+  color:#fff;
+  font-size:.9rem;
+  font-weight:850;
+  box-shadow:0 7px 16px rgba(93,54,29,.20);
+}
+.original-sber-image+strong{margin-top:28px}
+.original-sber-card:hover{
+  transform:translateY(-6px);
+  border-color:#875634;
+  box-shadow:0 20px 38px rgba(31,38,28,.28);
+}
+.original-sber-card:focus-visible{
+  outline:4px solid #efa12b;
+  outline-offset:4px;
+}
+
+/* Podrobné rozcestníky mají nadpisy také vystředěné. */
+.hub-branch-heading{
+  justify-items:center;
+  text-align:center;
+}
+.hub-branch-heading>div p{
+  margin-right:auto;
+  margin-left:auto;
+}
+
 /* Zarovnání hlavních boxů na střed */
 .centered-heading,
 .section-heading.centered-heading{
@@ -100,9 +228,7 @@
   margin-left:auto;
   text-align:center;
 }
-.section-card{
-  text-align:center;
-}
+.section-card{text-align:center}
 .section-card .section-icon,
 .section-card strong{
   margin-right:auto;
@@ -124,12 +250,8 @@
 }
 
 /* Původní obrázek ve spodním ilustrovaném pásu */
-.legacy-pantry-banner--original{
-  overflow:hidden;
-}
-.legacy-pantry-copy{
-  text-align:center;
-}
+.legacy-pantry-banner--original{overflow:hidden}
+.legacy-pantry-copy{text-align:center}
 .legacy-pantry-copy p,
 .legacy-pantry-copy .button{
   margin-right:auto;
@@ -150,25 +272,31 @@
 }
 
 /* Hlavní bannery rubrik také skutečně na střed. */
-.visual-section-hero-copy{
-  text-align:center;
-}
+.visual-section-hero-copy{text-align:center}
 .visual-section-hero-copy p{
   margin-right:auto;
   margin-left:auto;
 }
 
 @media(max-width:1000px){
-  .brand.brand--original{min-height:72px;padding:3px 4px}
-  .brand-original-logo{height:66px;max-width:174px}
+  .header-inner{min-height:82px}
+  .brand.brand--original{min-height:76px;padding:3px 4px}
+  .brand-original-logo{height:74px;max-width:188px}
   .hero.legacy-home-hero--original{min-height:460px}
+  .original-sber-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .legacy-pantry-banner--original{grid-template-columns:1fr}
   .legacy-pantry-photo{min-height:260px}
 }
 
 @media(max-width:650px){
-  .brand-original-logo{height:58px;max-width:150px}
+  .brand-original-logo{height:64px;max-width:165px}
   .hero.legacy-home-hero--original{min-height:430px;padding:52px 20px}
   .illustrated-directory-copy{padding-right:20px;padding-left:20px}
+  .heritage-simple-header{margin-top:22px;padding:34px 18px 8px}
+  .heritage-simple-header p{font-size:.98rem}
+  .original-sber-directory{padding-top:42px}
+  .original-sber-grid{grid-template-columns:1fr;gap:25px}
+  .original-sber-card{padding:21px 18px 19px}
+  .original-sber-image{max-width:330px}
   .legacy-pantry-copy{padding:36px 24px}
 }
