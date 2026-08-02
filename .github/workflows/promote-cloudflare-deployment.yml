@@ -1,4 +1,4 @@
-name: Promote Cloudflare Pages deployment
+name: Verify Cloudflare Pages production
 
 on:
   pull_request:
@@ -12,54 +12,73 @@ permissions:
   contents: read
 
 jobs:
-  promote:
+  verify:
     if: github.event_name != 'pull_request' || github.head_ref == 'force-cloudflare-production-deploy'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
       CLOUDFLARE_ACCOUNT_ID: 87659411eeb4335b3c1e2c01014edbfb
       CLOUDFLARE_PROJECT_NAME: sirupyzbylinek-astro
-      TARGET_DEPLOYMENT_ID: 10f32724-d8b7-4438-a984-9db748d218e1
 
     steps:
-      - name: Inspect project and current deployments
+      - name: Confirm canonical production deployment
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           set -euo pipefail
-          PROJECT="$(curl --silent --show-error \
+          PROJECT="$(curl --fail --silent --show-error \
             "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" \
             --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
 
-          echo 'PROJECT SUMMARY'
-          printf '%s' "$PROJECT" | jq '{success, errors, result: (.result | {name, subdomain, production_branch, source, canonical_deployment: (.canonical_deployment | {id, environment, url, aliases, branch: .deployment_trigger.metadata.branch, commit_hash: .deployment_trigger.metadata.commit_hash}), latest_deployment: (.latest_deployment | {id, environment, url, aliases, branch: .deployment_trigger.metadata.branch, commit_hash: .deployment_trigger.metadata.commit_hash})})}'
+          printf '%s' "$PROJECT" | jq -r '"Canonical deployment: \(.result.canonical_deployment.id)\nEnvironment: \(.result.canonical_deployment.environment)\nURL: \(.result.canonical_deployment.url)\nCommit: \(.result.canonical_deployment.deployment_trigger.metadata.commit_hash)"'
+          printf '%s' "$PROJECT" | jq -e '.success == true and .result.canonical_deployment.environment == "production" and .result.canonical_deployment.latest_stage.status == "success"' >/dev/null
 
-          DEPLOYMENTS="$(curl --silent --show-error \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments?env=production" \
-            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
-
-          echo 'RECENT PRODUCTION DEPLOYMENTS'
-          printf '%s' "$DEPLOYMENTS" | jq '[.result[0:10][] | {id, environment, url, aliases, created_on, branch: .deployment_trigger.metadata.branch, commit_hash: .deployment_trigger.metadata.commit_hash, status: .latest_stage.status}]'
-
-      - name: Attempt production promotion and show complete response
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Verify main pages.dev address without cache
         run: |
           set -euo pipefail
-          BODY_FILE="$(mktemp)"
-          STATUS="$(curl --silent --show-error \
-            --output "$BODY_FILE" \
-            --write-out '%{http_code}' \
-            --request POST \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments/${TARGET_DEPLOYMENT_ID}/rollback" \
-            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-            --header "Content-Type: application/json" \
-            --data '{}')"
+          for attempt in {1..12}; do
+            CACHE_BUSTER="$(date +%s)-${attempt}"
+            VERSION_FILE="$(mktemp)"
+            ARTICLE_FILE="$(mktemp)"
+            VERSION_HEADERS="$(mktemp)"
+            ARTICLE_HEADERS="$(mktemp)"
 
-          echo "Rollback HTTP status: $STATUS"
-          cat "$BODY_FILE" | jq . || cat "$BODY_FILE"
+            curl --silent --show-error --location --max-time 30 \
+              --header 'Cache-Control: no-cache' \
+              --header 'Pragma: no-cache' \
+              --dump-header "$VERSION_HEADERS" \
+              --output "$VERSION_FILE" \
+              "https://sirupyzbylinek-astro.pages.dev/deploy-version.txt?v=${CACHE_BUSTER}" || true
 
-          if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 300 ]; then
-            exit 0
-          fi
+            curl --silent --show-error --location --max-time 30 \
+              --header 'Cache-Control: no-cache' \
+              --header 'Pragma: no-cache' \
+              --dump-header "$ARTICLE_HEADERS" \
+              --output "$ARTICLE_FILE" \
+              "https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" || true
+
+            if grep -q 'expected-cultivation-category: Pěstování bylinek' "$VERSION_FILE" \
+              && grep -q 'Pěstování bylinek' "$ARTICLE_FILE" \
+              && grep -q '/obrazky/pestovani.svg' "$ARTICLE_FILE" \
+              && ! grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení' "$ARTICLE_FILE"; then
+              echo "Main pages.dev address serves the verified production deployment."
+              echo 'VERSION RESPONSE HEADERS'
+              cat "$VERSION_HEADERS"
+              exit 0
+            fi
+
+            echo "Main address verification failed on attempt $attempt/12."
+            echo 'VERSION RESPONSE HEADERS'
+            cat "$VERSION_HEADERS" || true
+            echo 'VERSION BODY'
+            head -c 500 "$VERSION_FILE" || true
+            echo
+            echo 'ARTICLE RESPONSE HEADERS'
+            cat "$ARTICLE_HEADERS" || true
+            echo 'ARTICLE MATCHES'
+            grep -Eio 'Pěstování bylinek|Bylinky a zvířata|Rychlé shrnutí článku|produktový XML feed' "$ARTICLE_FILE" | head -n 20 || true
+            sleep 10
+          done
+
+          echo "The Cloudflare API has the new canonical deployment, but the public subdomain still serves different content."
           exit 1
