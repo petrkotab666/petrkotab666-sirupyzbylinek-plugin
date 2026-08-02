@@ -1,0 +1,61 @@
+name: Full browser audit
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/full-browser-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install site and browser audit dependencies
+        working-directory: site
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save --no-audit --no-fund puppeteer-core@24
+      - name: Build and run static audits
+        working-directory: site
+        run: npm run build
+      - name: Start static server
+        run: |
+          python3 -m http.server 4321 --directory site/dist >/tmp/sirupy-full-audit.log 2>&1 &
+          echo $! >/tmp/sirupy-full-audit.pid
+          for attempt in {1..40}; do
+            curl -fsS http://127.0.0.1:4321/ >/dev/null && exit 0
+            sleep 1
+          done
+          cat /tmp/sirupy-full-audit.log
+          exit 1
+      - name: Open every page and test interactions
+        working-directory: site
+        env:
+          AUDIT_BASE_URL: http://127.0.0.1:4321
+          CHROME_PATH: /usr/bin/google-chrome
+        run: node scripts/browser-audit.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-site-audit-report
+          path: |
+            site/dist/site-audit.json
+            site/dist/site-audit.md
+            site/dist/browser-audit.json
+            site/dist/browser-audit.md
+            site/dist/browser-audit-screenshots/*.png
+          if-no-files-found: warn
+          retention-days: 14
