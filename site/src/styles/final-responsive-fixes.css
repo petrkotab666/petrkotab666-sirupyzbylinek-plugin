@@ -1,0 +1,20 @@
+/* Poslední responsivní korekce po vizuální kontrole skutečných screenshotů. */
+@media (max-width: 900px) {
+  .recipe-hero > img,
+  .preparation-category-hero > img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .recipe-hero > img,
+  .preparation-category-hero > img {
+    border-radius: 0;
+  }
+}
