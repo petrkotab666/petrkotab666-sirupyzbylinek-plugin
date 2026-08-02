@@ -1,0 +1,136 @@
+/* Výraznější, ale stále klidná vizuální vrstva hlavních boxů. */
+.section-grid{gap:22px}
+.section-card{
+  position:relative;
+  isolation:isolate;
+  min-height:260px;
+  overflow:hidden;
+  padding:32px 30px 28px;
+  border:1px solid rgba(55,96,56,.18);
+  background:linear-gradient(145deg,#fff 0%,#f8fbf4 58%,#eef5e7 100%);
+  box-shadow:0 15px 38px rgba(37,72,39,.10);
+}
+.section-card::before{
+  position:absolute;
+  z-index:-1;
+  right:-12px;
+  top:-18px;
+  display:grid;
+  width:146px;
+  height:146px;
+  place-items:center;
+  border-radius:42% 58% 55% 45%;
+  font-size:5.2rem;
+  line-height:1;
+  opacity:.25;
+  filter:saturate(1.18);
+  transform:rotate(8deg);
+  transition:transform .24s ease,opacity .24s ease;
+}
+.section-card::after{
+  content:"";
+  position:absolute;
+  z-index:-2;
+  inset:auto -50px -70px auto;
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.65),rgba(255,255,255,0) 68%);
+}
+.section-card:nth-child(1){background:linear-gradient(145deg,#fffdf4,#eef6dc)}
+.section-card:nth-child(1)::before{content:"🧺";background:linear-gradient(145deg,#f6d89e,#c8df98)}
+.section-card:nth-child(2){background:linear-gradient(145deg,#fff9ee,#f7e0bb)}
+.section-card:nth-child(2)::before{content:"🍯";background:linear-gradient(145deg,#ffd681,#e6aa43)}
+.section-card:nth-child(3){background:linear-gradient(145deg,#f5fff7,#d8eedc)}
+.section-card:nth-child(3)::before{content:"🌿";background:linear-gradient(145deg,#b7dfb8,#6dae77)}
+.section-card:nth-child(4){background:linear-gradient(145deg,#fbf8ff,#e5dcf1)}
+.section-card:nth-child(4)::before{content:"📖";background:linear-gradient(145deg,#dbcdf0,#9d85bd)}
+.section-card:nth-child(5){background:linear-gradient(145deg,#fffaf1,#f6e2b7)}
+.section-card:nth-child(5)::before{content:"🏷️";background:linear-gradient(145deg,#ffe09b,#dcb257)}
+.section-card:nth-child(6){background:linear-gradient(145deg,#f5fbff,#d9ecf2)}
+.section-card:nth-child(6)::before{content:"🧩";background:linear-gradient(145deg,#bfe4ed,#70afbf)}
+.section-card:hover::before{opacity:.42;transform:rotate(2deg) scale(1.08)}
+.section-card:hover{transform:translateY(-7px);box-shadow:0 24px 55px rgba(31,70,36,.17)}
+.section-card .section-icon{
+  width:64px;
+  height:64px;
+  border:1px solid rgba(255,255,255,.86);
+  border-radius:21px;
+  background:rgba(255,255,255,.76);
+  box-shadow:0 10px 25px rgba(34,70,36,.12),inset 0 0 0 1px rgba(53,107,57,.08);
+  font-size:2rem;
+  backdrop-filter:blur(6px);
+}
+.section-card h3{font-size:1.52rem;margin-top:22px}
+.section-card p{max-width:82%;font-size:.97rem}
+.section-card strong{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(53,107,57,.11)}
+
+/* Horní doporučené boxy: větší ikona, barevný pruh a hloubka. */
+.context-ads{
+  position:relative;
+  overflow:hidden;
+  border-color:#cfddc9;
+  background:linear-gradient(145deg,#fff,#f7faef);
+  box-shadow:0 20px 48px rgba(44,75,48,.12);
+}
+.context-ads::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:7px;
+  background:linear-gradient(90deg,#356b39,#d4a83e,#7f5ca5,#3b8293);
+}
+.context-ad-grid{gap:16px}
+.context-ad-card{
+  position:relative;
+  isolation:isolate;
+  min-height:190px;
+  overflow:hidden;
+  padding:22px;
+  border-color:rgba(54,102,55,.16);
+  background:linear-gradient(150deg,#fff,#f0f7ea);
+  box-shadow:0 10px 26px rgba(38,76,40,.08);
+}
+.context-ad-card::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  right:-34px;
+  bottom:-40px;
+  width:125px;
+  height:125px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(72,137,73,.20),rgba(72,137,73,0) 70%);
+}
+.context-ad-card:nth-child(2){background:linear-gradient(150deg,#fffdf4,#f7ebcc)}
+.context-ad-card:nth-child(2)::after{background:radial-gradient(circle,rgba(211,159,45,.24),rgba(211,159,45,0) 70%)}
+.context-ad-card:nth-child(3){background:linear-gradient(150deg,#fbf8ff,#eae1f3)}
+.context-ad-card:nth-child(3)::after{background:radial-gradient(circle,rgba(124,84,157,.22),rgba(124,84,157,0) 70%)}
+.context-ad-icon{
+  width:58px;
+  height:58px;
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:19px;
+  background:rgba(255,255,255,.72);
+  box-shadow:0 10px 24px rgba(35,71,37,.13);
+  font-size:1.9rem;
+}
+.context-ad-copy strong{font:700 1.12rem/1.26 Georgia,serif}
+.context-ad-cta{display:inline-flex;align-items:center;gap:6px;width:max-content;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(53,107,57,.12)}
+.context-ad-card:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(37,75,39,.15)}
+
+/* Stejný rukopis také na kartách herny. */
+.game-launch-card{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(145deg,#fff,#f0f7eb);box-shadow:0 16px 38px rgba(42,78,44,.11)}
+.game-launch-card::after{content:"";position:absolute;z-index:-1;right:-45px;top:-45px;width:165px;height:165px;border-radius:50%;background:radial-gradient(circle,rgba(80,143,81,.22),rgba(80,143,81,0) 68%)}
+.game-launch-card:nth-child(2){background:linear-gradient(145deg,#fffaf1,#f4e2bd)}
+.game-launch-card:nth-child(2)::after{background:radial-gradient(circle,rgba(211,158,45,.22),rgba(211,158,45,0) 68%)}
+.game-launch-card:nth-child(3){background:linear-gradient(145deg,#faf7ff,#e8def2)}
+.game-launch-card:nth-child(3)::after{background:radial-gradient(circle,rgba(124,84,157,.22),rgba(124,84,157,0) 68%)}
+.game-launch-icon{width:78px;height:78px;border:1px solid rgba(255,255,255,.85);border-radius:24px;background:rgba(255,255,255,.74);box-shadow:0 12px 28px rgba(39,75,41,.14);font-size:2.35rem}
+
+@media(max-width:650px){
+  .section-card{min-height:230px;padding:26px 23px}
+  .section-card::before{right:-25px;top:-22px;width:132px;height:132px;font-size:4.5rem}
+  .section-card p{max-width:88%}
+  .context-ad-card{min-height:0}
+}
