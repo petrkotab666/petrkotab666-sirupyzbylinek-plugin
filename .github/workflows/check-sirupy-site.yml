@@ -1,0 +1,28 @@
+name: Check SirupyZBylinek site
+
+on:
+  push:
+    paths:
+      - 'site/**'
+      - '.github/workflows/check-sirupy-site.yml'
+  pull_request:
+    paths:
+      - 'site/**'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        working-directory: site
+        run: npm install --no-audit --no-fund
+      - name: Build
+        working-directory: site
+        run: npm run build
