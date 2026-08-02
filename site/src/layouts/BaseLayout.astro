@@ -1,0 +1,42 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const {
+  title = 'Sirupy z bylinek – recepty, sběr a přírodní inspirace',
+  description = 'Praktický průvodce bylinkami, domácími sirupy, tinkturami, čaji, limonádami a bezpečným sběrem.',
+  image,
+  canonical,
+  type = 'website',
+} = Astro.props;
+const canonicalUrl = canonical ? new URL(canonical, Astro.site) : new URL(Astro.url.pathname, Astro.site);
+const imageUrl = image ? new URL(image, Astro.site) : undefined;
+---
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title="Sirupy z bylinek" href="/rss.xml" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Sirupy z bylinek" />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+    <meta name="theme-color" content="#356b39" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>" />
+  </head>
+  <body>
+    <a class="skip-link" href="#obsah">Přejít k obsahu</a>
+    <Header />
+    <main id="obsah"><slot /></main>
+    <Footer />
+  </body>
+</html>
