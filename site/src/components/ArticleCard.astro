@@ -1,10 +1,11 @@
 ---
 import ArticleImage from './ArticleImage.astro';
-import { cleanDescription, type ArticleEntry } from '../lib/articles';
+import { cleanDescription, topicLabel, type ArticleEntry } from '../lib/articles';
 
 interface Props { entry: ArticleEntry }
 const { entry } = Astro.props;
-const { title, path, category, date } = entry.data;
+const { title, path, date } = entry.data;
+const category = topicLabel(entry);
 const description = cleanDescription(entry.data.description, entry.body);
 ---
 <article class="article-card">
