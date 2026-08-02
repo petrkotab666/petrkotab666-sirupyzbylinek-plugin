@@ -1,2 +1,6 @@
 /feed/ /rss.xml 301
 /feed /rss.xml 301
+/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/ /magazin/ 301
+/bylinkovy-magazin/ /magazin/ 301
+/bylinkovy-magazin/page/* /magazin/ 301
+/novinky/ /magazin/ 301
