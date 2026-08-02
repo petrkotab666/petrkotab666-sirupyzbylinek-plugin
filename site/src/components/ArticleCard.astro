@@ -1,0 +1,15 @@
+---
+const { entry } = Astro.props;
+const { title, description, path, image, category, date } = entry.data;
+---
+<article class="article-card">
+  <a class="card-image" href={path} aria-label={title}>
+    {image ? <img src={image} alt="" loading="lazy" decoding="async" /> : <span aria-hidden="true">🌱</span>}
+  </a>
+  <div class="card-body">
+    <div class="card-meta"><span>{category}</span>{date && <time datetime={date.toISOString()}>{date.toLocaleDateString('cs-CZ')}</time>}</div>
+    <h2><a href={path}>{title}</a></h2>
+    <p>{description}</p>
+    <a class="text-link" href={path}>Číst dál <span aria-hidden="true">→</span></a>
+  </div>
+</article>
