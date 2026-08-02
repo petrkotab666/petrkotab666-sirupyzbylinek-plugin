@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import ContextAds from '../components/ContextAds.astro';
+import ProductFeed from '../components/ProductFeed.astro';
 import { getPublishedArticles } from '../lib/articles';
 
 const articles = await getPublishedArticles();
@@ -32,7 +34,11 @@ const sections = [
     </div>
   </section>
 
+  <ContextAds topic="bylinky" heading="Oblíbené nabídky pro bylinkáře" />
+
   {latest.length > 0 && <section class="section-wrap latest"><div class="section-heading"><span>Nově na webu</span><h2>Nejnovější články</h2></div><div class="articles-grid">{latest.map((entry) => <ArticleCard entry={entry} />)}</div></section>}
+
+  <ProductFeed topic="bylinky" heading="Doporučené produkty z partnerských obchodů" />
 
   <section class="trust-strip"><div><strong>Jednotná redakce</strong><span>Každý článek prochází stejnou šablonou, kontrolou popisů a obrázků.</span></div><div><strong>Rychlý web</strong><span>Stránky se sestavují staticky bez závislosti na WordPress pluginech.</span></div><div><strong>Bezpečné nasazení</strong><span>Každá změna projde buildem před zveřejněním.</span></div></section>
 </BaseLayout>
