@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionHero from '../../../components/SectionHero.astro';
+import IllustratedDirectory from '../../../components/IllustratedDirectory.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import ContextAds from '../../../components/ContextAds.astro';
+import ProductFeed from '../../../components/ProductFeed.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+
+const topBranches = [
+  { href: '#kdy-sbirat', art: 'timing', kicker: 'Roční doba a počasí', title: 'Kdy sbírat', text: 'Měsíční kalendář, vhodná denní doba a správná zralost rostlin.' },
+  { href: '#co-sbirat', art: 'identify', kicker: 'Listy, květy i kořeny', title: 'Co sbírat', text: 'Jak poznat vhodnou část rostliny a vybrat bezpečnou surovinu.' },
+  { href: '#etika-sberu', art: 'ethics', kicker: 'Ohleduplnost k přírodě', title: 'Etika sběru', text: 'Kolik rostlin ponechat, jak nepoškodit lokalitu a co respektovat.' },
+  { href: '#co-nesbirat', art: 'avoid', kicker: 'Záměny a rizika', title: 'Co nesbírat', text: 'Neznámé, chráněné, znečištěné nebo jinak rizikové rostliny.' },
+  { href: '#kde-sbirat', art: 'places', kicker: 'Louka, les a zahrada', title: 'Kde a kam sbírat', text: 'Čistá místa, vhodné nádoby a bezpečná cesta domů.' },
+  { href: '#zpracovani', art: 'process', kicker: 'Od košíku do spižírny', title: 'Zpracování bylin', text: 'Třídění, sušení, uchování, výluhy, sirupy a skladování.' },
+] as const;
+
+const branchGroups = [
+  {
+    id: 'kdy-sbirat',
+    eyebrow: 'Čas sběru',
+    title: 'Kdy vyrazit do přírody',
+    text: 'Doba sběru se mění podle části rostliny, počasí a fáze kvetení. Začněte celkovým průvodcem nebo konkrétním měsícem.',
+    links: [
+      ['/kdy-a-jak-spravne-sbirat-bylinky/', 'Kdy a jak správně sbírat bylinky', 'Základní pravidla, počasí, denní doba a bezpečné určování.'],
+      ['/co-sbirat-v-kvetnu/', 'Co sbírat v květnu', 'Jarní listy, květy a mladé výhonky.'],
+      ['/co-sbirat-v-cervnu/', 'Co sbírat v červnu', 'Hlavní období květů a aromatických natí.'],
+      ['/co-sbirat-v-cervenci/', 'Co sbírat v červenci', 'Letní květy, natě a první plody.'],
+    ],
+  },
+  {
+    id: 'co-sbirat',
+    eyebrow: 'Určování rostlin',
+    title: 'Co sbírat a kterou část použít',
+    text: 'Nesbírejte podle jediné fotografie. Všímejte si listů, stonku, květu, vůně, stanoviště i možných záměn.',
+    links: [
+      ['/poznej-bylinku/', 'Poznej bylinku', 'Zábavná poznávačka základních znaků známých bylin.'],
+      ['/jake-bylinky-pestovat-doma/', 'Jaké bylinky pěstovat doma', 'Bezpečná alternativa pro začátečníky a městské pěstování.'],
+      ['/bylinne-sirupy/', 'Bylinky vhodné do domácích sirupů', 'Přehled surovin a navazujících receptů.'],
+      ['/gemmoterapie-tinktury-z-pupenu-navod/', 'Pupeny a mladé části rostlin', 'Co je gemmoterapie a proč je při sběru pupenů nutná střídmost.'],
+    ],
+  },
+  {
+    id: 'etika-sberu',
+    eyebrow: 'Šetrnost',
+    title: 'Etika sběru a ohleduplnost k lokalitě',
+    text: 'Vezměte jen tolik, kolik skutečně zpracujete. Nechte dost rostlin pro další růst, opylovače a obnovu porostu.',
+    links: [
+      ['/kdy-a-jak-spravne-sbirat-bylinky/', 'Pravidla šetrného sběru', 'Čistota lokality, pravidlo jedné třetiny a správná nádoba.'],
+      ['/jak-uchovat-cerstve-bylinky/', 'Jak neznehodnotit nasbírané bylinky', 'Rychlý převoz, třídění a zpracování bez zapaření.'],
+      ['/jak-kombinovat-bylinky/', 'Jak pracovat s více druhy bylin', 'Přehlednost, označování a opatrnost při směsích.'],
+      ['/domu/prirodni-lekarna/', 'Bezpečnost bylin', 'Omezení, interakce a situace, kdy domácí použití nestačí.'],
+    ],
+  },
+  {
+    id: 'co-nesbirat',
+    eyebrow: 'Bezpečnost',
+    title: 'Co raději nechat v přírodě',
+    text: 'Neznámé rostliny, exempláře u silnic a skládek, plesnivé části, chemicky ošetřené porosty a chráněné druhy do košíku nepatří.',
+    links: [
+      ['/poznej-bylinku/', 'Nejdříve rostlinu bezpečně určete', 'Procvičte si rozlišovací znaky, ale nespoléhejte jen na hru či aplikaci.'],
+      ['/nebezpecne-byliny-pro-psy-a-kocky/', 'Nebezpečné byliny pro zvířata', 'Co může být rizikové pro psy a kočky.'],
+      ['/kdy-a-jak-spravne-sbirat-bylinky/', 'Riziková místa a časté chyby', 'Proč se vyhnout silnicím, postřikovaným polím a nečistým lokalitám.'],
+      ['/domu/prirodni-lekarna/', 'Kdy vyhledat odbornou pomoc', 'Domácí bylinky nenahrazují lékařské ani veterinární vyšetření.'],
+    ],
+  },
+  {
+    id: 'kde-sbirat',
+    eyebrow: 'Místo a výbava',
+    title: 'Kde sbírat a v čem bylinky odnést',
+    text: 'Hledejte čisté, neznečištěné lokality mimo silnice, průmysl a intenzivně ošetřovaná pole. Použijte košík, papír nebo plátno.',
+    links: [
+      ['/kdy-a-jak-spravne-sbirat-bylinky/', 'Jak vybrat čisté místo', 'Stanoviště, počasí a zásady před první cestou.'],
+      ['/co-sbirat-v-kvetnu/', 'Jarní sběr', 'Kde hledat první běžné byliny a mladé části.'],
+      ['/co-sbirat-v-cervenci/', 'Letní sběr', 'Louky, meze a další typická červencová stanoviště.'],
+      ['/jak-uchovat-cerstve-bylinky/', 'Cesta z louky domů', 'Jak zabránit zapaření a rychlé ztrátě kvality.'],
+    ],
+  },
+  {
+    id: 'zpracovani',
+    eyebrow: 'Sušení a uchování',
+    title: 'Jak nasbírané bylinky zpracovat',
+    text: 'Po návratu bylinky roztřiďte, odstraňte poškozené části a zvolte sušení, čerstvé zpracování nebo výrobu domácího produktu.',
+    links: [
+      ['/jak-spravne-susit-bylinky/', 'Jak správně sušit bylinky', 'Teplota, proudění vzduchu, kontrola a skladování.'],
+      ['/jak-susit-lipovy-kvet/', 'Jak sušit lipový květ', 'Konkrétní příklad práce s citlivými květy.'],
+      ['/jak-uchovat-cerstve-bylinky/', 'Jak uchovat čerstvé bylinky', 'Krátkodobé skladování a rychlé zpracování.'],
+      ['/jak-vyuzit-susene-bylinky/', 'Jak využít sušené bylinky', 'Čaje, směsi, kuchyňské použití a označování zásob.'],
+      ['/domu/sber-bylinek/zpracovani-bylin/sirupy-za-studena/', 'Sirupy za studena', 'Šetrná metoda pro vybrané byliny a plody.'],
+    ],
+  },
+] as const;
+
+const allArticles = await getPublishedArticles();
+const collectingArticles = allArticles
+  .filter((entry) => /sběr|sbírat|sušit|sušen|uchovat|pěstovat/i.test(`${entry.data.title} ${entry.data.description || ''}`))
+  .slice(0, 9);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Sběr bylinek – víceúrovňový průvodce',
+  description: 'Rozcestník pro správnou dobu sběru, určování rostlin, etiku, bezpečnost, vhodná místa a zpracování bylin.',
+  url: new URL('/domu/sber-bylinek/', Astro.site || Astro.url.origin).href,
+};
+---
+<BaseLayout
+  title="Sběr bylinek – kdy, kde a jak správně sbírat | Sirupy z bylinek"
+  description="Víceúrovňový průvodce sběrem bylinek: kdy a co sbírat, etika, bezpečnost, vhodná místa, sušení a další zpracování."
+  canonical="/domu/sber-bylinek/"
+  structuredData={[schema]}
+>
+  <SectionHero
+    eyebrow="Od louky až do spižírny"
+    title="Sběr a sušení bylinek"
+    text="Vyberte si období, rostlinu, pravidla bezpečného sběru nebo způsob zpracování. Jednotlivé rozcestníky na sebe znovu navazují."
+    art="harvest"
+    theme="green"
+  />
+
+  <section class="section-wrap section-directory">
+    <div class="section-heading centered-heading"><span>Hlavní rozcestník</span><h2>Co potřebujete zjistit?</h2><p>Šest základních větví vás dovede k dalším podrobným návodům.</p></div>
+    <IllustratedDirectory items={topBranches} />
+  </section>
+
+  <section class="section-wrap hub-branches" aria-label="Podrobné rozcestníky sběru bylinek">
+    {branchGroups.map((group, index) => (
+      <article class="hub-branch" id={group.id}>
+        <div class="hub-branch-heading">
+          <span>{String(index + 1).padStart(2, '0')}</span>
+          <div><small>{group.eyebrow}</small><h2>{group.title}</h2><p>{group.text}</p></div>
+        </div>
+        <div class="hub-branch-links">
+          {group.links.map(([href, title, description]) => (
+            <a href={href}><strong>{title}</strong><span>{description}</span><b aria-hidden="true">→</b></a>
+          ))}
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <ContextAds topic="bylinky" heading="Výbava pro sběr, sušení a určování bylin" />
+
+  {collectingArticles.length > 0 && (
+    <section class="section-wrap section-articles">
+      <div class="section-heading"><span>Další návody</span><h2>Články o sběru a zpracování</h2></div>
+      <div class="articles-grid">{collectingArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
+    </section>
+  )}
+
+  <ProductFeed topic="bylinky" heading="Doporučené pomůcky a suroviny" />
+</BaseLayout>
