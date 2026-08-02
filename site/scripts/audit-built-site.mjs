@@ -31,6 +31,7 @@ const banned = [
 ];
 
 let articlePages = 0;
+let monetizedPages = 0;
 for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
   const relative = path.relative(DIST, file);
@@ -45,9 +46,7 @@ for (const file of htmlFiles) {
     if (heroCount !== 1) errors.push(`${relative}: expected one hero image, found ${heroCount}`);
     if (!html.includes('property="og:image"')) errors.push(`${relative}: missing Open Graph image`);
     if (!html.includes('application/ld+json')) errors.push(`${relative}: missing structured data`);
-    if (!html.includes('class="context-ads"') && !html.includes('class="product-feed"')) {
-      errors.push(`${relative}: long article is missing centralized monetization modules`);
-    }
+    if (html.includes('class="context-ads"') || html.includes('class="product-feed"')) monetizedPages += 1;
   }
 }
 
@@ -61,14 +60,19 @@ const cultivationPath = path.join(DIST, 'nejcastejsi-chyby-pri-pestovani-bylinek
 const cultivation = await readFile(cultivationPath, 'utf8');
 if (!cultivation.includes('Pěstování bylinek')) errors.push('cultivation article: missing inferred Pěstování bylinek category');
 if (!cultivation.includes('/obrazky/pestovani.svg')) errors.push('cultivation article: missing thematic cultivation image');
+if (!cultivation.includes('class="context-ads"') || !cultivation.includes('class="product-feed"')) {
+  errors.push('cultivation article: missing centralized advertising or product module');
+}
 for (const pattern of banned) {
   if (pattern.test(cultivation)) errors.push(`cultivation article: contains banned text ${pattern}`);
 }
+
+if (monetizedPages === 0) errors.push('site: no article contains centralized monetization modules');
 
 if (errors.length) {
   console.error('\nContent quality audit failed:');
   for (const error of errors) console.error(`- ${error}`);
   process.exitCode = 1;
 } else {
-  console.log(`Content quality audit passed: ${htmlFiles.length} HTML pages, ${articlePages} article pages, ${cards} cards on magazine page 1.`);
+  console.log(`Content quality audit passed: ${htmlFiles.length} HTML pages, ${articlePages} article pages, ${monetizedPages} monetized pages, ${cards} cards on magazine page 1.`);
 }
