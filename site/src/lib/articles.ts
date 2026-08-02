@@ -26,6 +26,38 @@ const EDITORIAL_JUNK = [
   /produktový xml feed:[^\n]*/giu,
 ];
 
+const TOPIC_TESTS: Array<[string, RegExp]> = [
+  ['repelenty', /komar|klist|repelent|hmyz/u],
+  ['pestovani', /pestov|zahrad|sazen|kvetinac|substrat|zalev/u],
+  ['zvirata', /\b(?:pes|psi|psa|psu|kocka|kocky|kocku|slepice|slepic|kurata|kurat|drubez|zvire|zvirata|zvirat|kun|kone|kralik|kralici)\b/u],
+  ['sber', /sber|sbirat|susit|skladovat|herbar/u],
+  ['zavarovani', /zavar|sklenic|lahv|vick|marmelad|dzem/u],
+  ['napoje', /limonad|koktejl|napoj|caj|smoothie/u],
+  ['recepty', /recept|sirup|tinktur|bonbon|kuchyn|med/u],
+  ['krasa', /plet|vlasy|kosmetik|mast|balzam|koupel/u],
+  ['vyziva', /vitamin|mineral|kolagen|probiot|protein|omega|horcik/u],
+  ['zdravi', /zdravi|imunit|spanek|traven|kasel|bolest|lekarna/u],
+];
+
+const TOPIC_LABELS: Record<string, string> = {
+  repelenty: 'Přírodní repelenty',
+  pestovani: 'Pěstování bylinek',
+  zvirata: 'Bylinky a zvířata',
+  sber: 'Sběr a zpracování bylinek',
+  zavarovani: 'Zavařování a skladování',
+  napoje: 'Bylinkové nápoje',
+  recepty: 'Recepty a domácí výroba',
+  krasa: 'Přírodní péče',
+  vyziva: 'Výživa a doplňky',
+  zdravi: 'Přírodní lékárna',
+  bylinky: 'Bylinkový magazín',
+};
+
+const STOP_WORDS = new Set([
+  'a', 'i', 'jak', 'na', 'o', 'od', 'po', 'pro', 'pri', 's', 'se', 'u', 'v', 've', 'z', 'ze',
+  'co', 'ktere', 'ktery', 'nejlepsi', 'prirodni', 'domaci', 'recept', 'navod', 'pruvodce',
+]);
+
 function normalize(value = '') {
   return value
     .normalize('NFKD')
@@ -43,6 +75,14 @@ function stripMarkdown(value = '') {
     .replace(/[|*_`~]/gu, ' ')
     .replace(/\s+/gu, ' ')
     .trim();
+}
+
+function words(value = '') {
+  return new Set(
+    normalize(value)
+      .split(/[^a-z0-9]+/u)
+      .filter((word) => word.length > 2 && !STOP_WORDS.has(word)),
+  );
 }
 
 export function cleanDescription(description = '', body = '') {
@@ -101,20 +141,12 @@ export async function getPublishedArticles() {
 }
 
 export function topicKey(entry: ArticleEntry) {
-  const haystack = normalize(`${entry.data.title} ${entry.data.category} ${entry.data.path}`);
-  const tests: Array<[string, RegExp]> = [
-    ['repelenty', /komar|klist|repelent|hmyz/u],
-    ['zvirata', /pes|kock|slep|kurat|drubez|zvirat|kun|kralik/u],
-    ['pestovani', /pestov|zahrad|sazen|kvetinac|substrat|zalev/u],
-    ['sber', /sber|sbirat|susit|skladovat|herbar/u],
-    ['zavarovani', /zavar|sklenic|lahv|vick|marmelad|dzem/u],
-    ['napoje', /limonad|koktejl|napoj|caj|smoothie/u],
-    ['recepty', /recept|sirup|tinktur|bonbon|kuchyn|med/u],
-    ['krasa', /plet|vlasy|kosmetik|mast|balzam|koupel/u],
-    ['vyziva', /vitamin|mineral|kolagen|probiot|protein|omega|horcik/u],
-    ['zdravi', /zdravi|imunit|spanek|traven|kasel|bolest|lekarna/u],
-  ];
-  return tests.find(([, pattern]) => pattern.test(haystack))?.[0] || 'bylinky';
+  const haystack = normalize(`${entry.data.title} ${entry.data.path}`);
+  return TOPIC_TESTS.find(([, pattern]) => pattern.test(haystack))?.[0] || 'bylinky';
+}
+
+export function topicLabel(entry: ArticleEntry) {
+  return TOPIC_LABELS[topicKey(entry)] || TOPIC_LABELS.bylinky;
 }
 
 export function topicImage(entry: ArticleEntry) {
@@ -126,8 +158,34 @@ export function firstBodyImage(entry: ArticleEntry) {
   return match?.[1];
 }
 
+function imageMatchesArticle(entry: ArticleEntry, image?: string) {
+  if (!image) return false;
+
+  if (image.startsWith('/obrazky/')) {
+    return image === topicImage(entry);
+  }
+
+  if (!image.startsWith('/media/imported/')) return true;
+
+  const imageGroup = image.split('/').filter(Boolean)[2] || '';
+  const slug = entry.data.path.split('/').filter(Boolean).at(-1) || '';
+  if (imageGroup === slug) return true;
+
+  const imageWords = words(imageGroup);
+  const slugWords = words(slug);
+  let matches = 0;
+  for (const word of imageWords) if (slugWords.has(word)) matches += 1;
+  return matches >= 2;
+}
+
 export function articleImage(entry: ArticleEntry) {
-  return entry.data.image?.trim() || firstBodyImage(entry) || topicImage(entry);
+  const frontmatterImage = entry.data.image?.trim();
+  if (imageMatchesArticle(entry, frontmatterImage)) return frontmatterImage as string;
+
+  const bodyImage = firstBodyImage(entry);
+  if (imageMatchesArticle(entry, bodyImage)) return bodyImage as string;
+
+  return topicImage(entry);
 }
 
 export function isMonetizable(entry: ArticleEntry) {

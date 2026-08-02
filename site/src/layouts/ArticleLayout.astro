@@ -8,12 +8,14 @@ import {
   articleUrl,
   cleanDescription,
   isMonetizable,
+  topicLabel,
   type ArticleEntry,
 } from '../lib/articles';
 
 interface Props { entry: ArticleEntry }
 const { entry } = Astro.props;
-const { title, category, date, updated } = entry.data;
+const { title, date, updated } = entry.data;
+const category = topicLabel(entry);
 const description = cleanDescription(entry.data.description, entry.body);
 const image = articleImage(entry);
 const canonicalUrl = articleUrl(entry, Astro.site || Astro.url.origin);
