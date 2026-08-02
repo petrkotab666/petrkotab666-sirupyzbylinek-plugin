@@ -30,6 +30,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
+    env:
+      CLOUDFLARE_ACCOUNT_ID: 87659411eeb4335b3c1e2c01014edbfb
+      CLOUDFLARE_PROJECT_NAME: sirupyzbylinek-astro
+
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -58,21 +62,81 @@ jobs:
         working-directory: site
         run: npm run build
 
-      - name: Deploy production to Cloudflare Pages
-        id: deploy
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 87659411eeb4335b3c1e2c01014edbfb
-          workingDirectory: site
-          command: pages deploy dist --project-name=sirupyzbylinek-astro --branch=main --commit-hash=${{ github.sha }} --commit-message="${{ github.event.head_commit.message || 'Controlled production deployment' }}"
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Force production branch to main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          RESPONSE="$(curl --fail --silent --show-error \
+            --request PATCH \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            --header "Content-Type: application/json" \
+            --data '{"production_branch":"main"}')"
 
-      - name: Verify public production deployment
+          printf '%s' "$RESPONSE" | jq -e '.success == true and .result.production_branch == "main"' >/dev/null
+          echo "Cloudflare production branch is main."
+
+      - name: Deploy production with current Wrangler
+        id: deploy
+        working-directory: site
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@4 pages deploy dist \
+            --project-name="${CLOUDFLARE_PROJECT_NAME}" \
+            --branch=main \
+            --commit-hash="${GITHUB_SHA}" \
+            --commit-message="Controlled production deployment" \
+            --commit-dirty=true | tee /tmp/wrangler-output.txt
+
+          DEPLOYMENT_URL="$(grep -Eo 'https://[a-z0-9]+\.sirupyzbylinek-astro\.pages\.dev' /tmp/wrangler-output.txt | tail -n 1)"
+          if [ -z "$DEPLOYMENT_URL" ]; then
+            echo "Wrangler did not return a deployment URL."
+            exit 1
+          fi
+          echo "deployment_url=$DEPLOYMENT_URL" >> "$GITHUB_OUTPUT"
+          echo "Cloudflare deployment URL: $DEPLOYMENT_URL"
+
+      - name: Inspect Cloudflare deployment environment
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          RESPONSE="$(curl --fail --silent --show-error \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments" \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
+
+          MATCH="$(printf '%s' "$RESPONSE" | jq -c --arg sha "$GITHUB_SHA" '[.result[] | select(.deployment_trigger.metadata.commit_hash == $sha)][0]')"
+          if [ "$MATCH" = "null" ] || [ -z "$MATCH" ]; then
+            echo "Could not find the deployment created by this workflow."
+            printf '%s' "$RESPONSE" | jq -r '.result[0:5][] | [.id, .environment, .url, .deployment_trigger.metadata.branch, .deployment_trigger.metadata.commit_hash] | @tsv'
+            exit 1
+          fi
+
+          printf '%s' "$MATCH" | jq -r '"Deployment id: \(.id)\nEnvironment: \(.environment)\nURL: \(.url)\nAliases: \((.aliases // []) | join(", "))\nBranch: \(.deployment_trigger.metadata.branch)"'
+          printf '%s' "$MATCH" | jq -e '.latest_stage.status == "success" and .environment == "production"' >/dev/null
+
+      - name: Verify uploaded deployment URL
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment_url }}
+        run: |
+          set -euo pipefail
+          VERSION="$(curl -fsS --max-time 20 "${DEPLOYMENT_URL}/deploy-version.txt")"
+          ARTICLE="$(curl -fsS --max-time 20 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/")"
+
+          printf '%s' "$VERSION" | grep -q 'expected-cultivation-category: Pěstování bylinek'
+          printf '%s' "$ARTICLE" | grep -q 'Pěstování bylinek'
+          printf '%s' "$ARTICLE" | grep -q '/obrazky/pestovani.svg'
+          ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení'
+          echo "Uploaded deployment content verified successfully."
+
+      - name: Verify public production alias
         shell: bash
         run: |
           set -euo pipefail
-          for attempt in {1..12}; do
+          for attempt in {1..18}; do
             VERSION="$(curl -fsS --max-time 20 'https://sirupyzbylinek-astro.pages.dev/deploy-version.txt' || true)"
             ARTICLE="$(curl -fsS --max-time 20 'https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/' || true)"
 
@@ -84,9 +148,9 @@ jobs:
               exit 0
             fi
 
-            echo "Production is not updated yet (attempt $attempt/12). Waiting 10 seconds..."
+            echo "Production alias is not updated yet (attempt $attempt/18). Waiting 10 seconds..."
             sleep 10
           done
 
-          echo "Cloudflare accepted the workflow, but the public production URL did not pass verification."
+          echo "The deployment is valid, but the production alias did not update."
           exit 1
