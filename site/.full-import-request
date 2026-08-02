@@ -1,0 +1,5 @@
+requested=2026-08-02T08:30:00+02:00
+source=https://www.sirupyzbylinek.cz/
+target=Astro
+preserve_paths=true
+download_images=true
