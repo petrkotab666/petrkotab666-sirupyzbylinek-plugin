@@ -8,6 +8,21 @@ const NON_ARTICLE_PATHS = new Set([
   '/novinky/',
 ]);
 
+const NON_ARTICLE_TITLES = [
+  /^kam pokračovat dál$/iu,
+  /^další články(?:,| a|$)/iu,
+  /^další témata(?:,| a|$)/iu,
+  /^související (?:články|témata)$/iu,
+  /^číst dál$/iu,
+  /^reklama$/iu,
+];
+
+const NON_ARTICLE_DESCRIPTIONS = [
+  /další články,? recepty a témata ze stejné oblasti/iu,
+  /pokračujte na další související články/iu,
+  /rozcestník dalších článků/iu,
+];
+
 const LEGAL_PATH_PARTS = [
   'ochrana-osobnich-udaju',
   'zasady-cookies',
@@ -57,6 +72,8 @@ const STOP_WORDS = new Set([
   'a', 'i', 'jak', 'na', 'o', 'od', 'po', 'pro', 'pri', 's', 'se', 'u', 'v', 've', 'z', 'ze',
   'co', 'ktere', 'ktery', 'nejlepsi', 'prirodni', 'domaci', 'recept', 'navod', 'pruvodce',
 ]);
+
+const GENERIC_IMAGE_NAMES = /(?:^|[-_.])(logo|logotyp|favicon|avatar|placeholder|brand|kampan|banner|reklama)(?:[-_.]|$)|\b(?:300x250|570x240|728x90|970x250|970x310)\b/iu;
 
 function normalize(value = '') {
   return value
@@ -128,9 +145,18 @@ export function isLegalPage(entry: ArticleEntry) {
   return LEGAL_PATH_PARTS.some((part) => path.includes(part));
 }
 
+export function isAuxiliaryPage(entry: ArticleEntry) {
+  const title = entry.data.title?.trim() || '';
+  const description = entry.data.description?.trim() || '';
+  if (entry.data.draft || NON_ARTICLE_PATHS.has(entry.data.path)) return true;
+  if (/\/page\/\d+\/$/u.test(entry.data.path)) return true;
+  if (NON_ARTICLE_TITLES.some((pattern) => pattern.test(title))) return true;
+  if (NON_ARTICLE_DESCRIPTIONS.some((pattern) => pattern.test(description))) return true;
+  return false;
+}
+
 export function isEditorialArticle(entry: ArticleEntry) {
-  if (entry.data.draft || NON_ARTICLE_PATHS.has(entry.data.path)) return false;
-  if (/\/page\/\d+\/$/u.test(entry.data.path) || isLegalPage(entry)) return false;
+  if (isAuxiliaryPage(entry) || isLegalPage(entry)) return false;
   return wordCount(entry) >= 120;
 }
 
@@ -153,13 +179,17 @@ export function topicImage(entry: ArticleEntry) {
   return `/obrazky/${topicKey(entry)}.svg`;
 }
 
+export function bodyImages(entry: ArticleEntry) {
+  const matches = [...(entry.body || '').matchAll(/!\[[^\]]*\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/gu)];
+  return matches.map((match) => match[1]).filter(Boolean);
+}
+
 export function firstBodyImage(entry: ArticleEntry) {
-  const match = (entry.body || '').match(/!\[[^\]]*\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/u);
-  return match?.[1];
+  return bodyImages(entry).find((image) => !GENERIC_IMAGE_NAMES.test(image));
 }
 
 function imageMatchesArticle(entry: ArticleEntry, image?: string) {
-  if (!image) return false;
+  if (!image || GENERIC_IMAGE_NAMES.test(image)) return false;
 
   if (image.startsWith('/obrazky/')) {
     return image === topicImage(entry);
@@ -182,14 +212,14 @@ export function articleImage(entry: ArticleEntry) {
   const frontmatterImage = entry.data.image?.trim();
   if (imageMatchesArticle(entry, frontmatterImage)) return frontmatterImage as string;
 
-  const bodyImage = firstBodyImage(entry);
-  if (imageMatchesArticle(entry, bodyImage)) return bodyImage as string;
+  const bodyImage = bodyImages(entry).find((image) => imageMatchesArticle(entry, image));
+  if (bodyImage) return bodyImage;
 
   return topicImage(entry);
 }
 
 export function isMonetizable(entry: ArticleEntry) {
-  return !isLegalPage(entry) && wordCount(entry) >= 220;
+  return !isLegalPage(entry) && !isAuxiliaryPage(entry);
 }
 
 export function articleUrl(entry: ArticleEntry, site: URL | string) {
