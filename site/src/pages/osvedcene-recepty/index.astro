@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+import { getPublishedArticles, topicKey } from '../../lib/articles';
+
+const allArticles = await getPublishedArticles();
+const recipes = allArticles
+  .filter((entry) => ['recepty', 'napoje', 'zavarovani'].includes(topicKey(entry)))
+  .slice(0, 12);
+
+const categories = [
+  { href: '/domaci-sirupy/', icon: '🍯', title: 'Domácí sirupy', text: 'Bezové, jitrocelové, mátové, ovocné i další sirupy krok za krokem.' },
+  { href: '/tinktury/', icon: '🌿', title: 'Bylinné tinktury', text: 'Přehled surovin, postupů, skladování a bezpečného používání.' },
+  { href: '/recepty-na-domaci-limonady/', icon: '🥤', title: 'Domácí limonády', text: 'Limonády ze sirupů, bylinných výluhů, macerace i fermentace.' },
+  { href: '/sklenice-na-sirupy-a-zavarovani/', icon: '🫙', title: 'Lahve a sklenice', text: 'Jak vybrat správnou velikost, uzávěr a vybavení pro domácí výrobu.' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Osvědčené recepty na sirupy, tinktury a limonády',
+  url: new URL('/osvedcene-recepty/', Astro.site || Astro.url.origin).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: recipes.length,
+    itemListElement: recipes.map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: entry.data.title,
+      url: new URL(entry.data.path, Astro.site || Astro.url.origin).href,
+    })),
+  },
+};
+---
+<BaseLayout
+  title="Osvědčené recepty na sirupy, tinktury a limonády | Sirupy z bylinek"
+  description="Praktické recepty na domácí bylinkové sirupy, tinktury, čaje, limonády, bonbony a další výrobky včetně správného skladování."
+  canonical="/osvedcene-recepty/"
+  image="/obrazky/recepty.svg"
+  structuredData={[itemListSchema]}
+>
+  <section class="archive-header">
+    <span>Recepty a domácí výroba</span>
+    <h1>Osvědčené recepty z bylinek</h1>
+    <p>Sirupy, tinktury, limonády a další domácí výrobky přehledně, bezpečně a s praktickými postupy.</p>
+  </section>
+
+  <section class="section-wrap section-directory">
+    <div class="section-heading"><span>Vyberte si oblast</span><h2>Co chcete připravit?</h2></div>
+    <div class="section-grid">
+      {categories.map((item) => (
+        <a class="section-card" href={item.href}>
+          <span class="section-icon" aria-hidden="true">{item.icon}</span>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          <strong>Otevřít <span aria-hidden="true">→</span></strong>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <ContextAds topic="recepty" heading="Vybavení a suroviny pro domácí recepty" />
+
+  <section class="section-wrap section-articles">
+    <div class="section-heading"><span>Nejnovější recepty</span><h2>Vyzkoušejte nové postupy</h2><p>Aktuální návody ze všech částí receptáře.</p></div>
+    <div class="articles-grid">{recipes.map((entry) => <ArticleCard entry={entry} />)}</div>
+  </section>
+
+  <ProductFeed topic="recepty" heading="Produkty vhodné pro domácí výrobu" />
+</BaseLayout>
