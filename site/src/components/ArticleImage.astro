@@ -1,0 +1,36 @@
+---
+import type { ArticleEntry } from '../lib/articles';
+import { articleImage, topicImage } from '../lib/articles';
+
+interface Props {
+  entry: ArticleEntry;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  decorative?: boolean;
+}
+
+const {
+  entry,
+  class: className,
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  decorative = false,
+} = Astro.props;
+
+const src = articleImage(entry);
+const fallback = topicImage(entry);
+const alt = decorative ? '' : entry.data.title;
+const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)}`;
+---
+<img
+  class={className}
+  src={src}
+  alt={alt}
+  width="1200"
+  height="675"
+  loading={loading}
+  decoding="async"
+  fetchpriority={fetchpriority}
+  onerror={onerror}
+/>
