@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Bylinkářské vybavení</title>
+  <desc id="desc">Dekorativní ilustrace sklenic, lahvičky a bylinek pro produkt bez dostupné fotografie.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8df"/><stop offset="1" stop-color="#dce9c6"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2bd4a"/><stop offset="1" stop-color="#d88328"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#173f25" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="1200" height="900" rx="50" fill="url(#bg)"/>
+  <circle cx="1000" cy="150" r="135" fill="#efc15b" opacity=".32"/>
+  <path d="M0 700C210 620 390 656 584 724C788 796 982 770 1200 652V900H0Z" fill="#91b76f" opacity=".48"/>
+  <g filter="url(#shadow)" stroke="#285a34" stroke-width="14" stroke-linejoin="round">
+    <path d="M366 302H622L594 716H394Z" fill="#fffaf0"/>
+    <rect x="342" y="245" width="304" height="92" rx="28" fill="url(#gold)"/>
+    <path d="M422 410H566V638H422Z" fill="#b54f55" opacity=".86" stroke="none"/>
+    <path d="M717 350H901L883 714H735Z" fill="#fffaf0"/>
+    <rect x="755" y="250" width="108" height="116" rx="22" fill="#ad7236"/>
+    <path d="M763 460H855V650H763Z" fill="#84a960" stroke="none"/>
+  </g>
+  <g transform="translate(180 340)" stroke="#285a34" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 390C66 260 79 134 136 0" fill="none"/>
+    <path d="M120 70C55 71 18 41 4-7C66-18 119 12 145 56Z" fill="#75a755"/>
+    <path d="M98 172C28 181-18 156-41 108C21 87 82 111 116 153Z" fill="#91bd6c"/>
+    <path d="M80 281C18 303-34 287-67 246C-15 212 51 225 93 262Z" fill="#67994c"/>
+  </g>
+  <text x="600" y="820" text-anchor="middle" fill="#275a34" font-family="Georgia,serif" font-size="48" font-weight="700">Vybavení pro bylinkáře</text>
+</svg>
