@@ -4,23 +4,25 @@ import ArticleImage from '../components/ArticleImage.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
 import {
-  articleImage,
   articleUrl,
   cleanDescription,
   isMonetizable,
   topicLabel,
   type ArticleEntry,
 } from '../lib/articles';
+import { displayArticleImage } from '../lib/display-image';
+import { articleSafetyWarnings } from '../lib/safety';
 
 interface Props { entry: ArticleEntry }
 const { entry } = Astro.props;
 const { title, date, updated } = entry.data;
 const category = topicLabel(entry);
 const description = cleanDescription(entry.data.description, entry.body);
-const image = articleImage(entry);
+const image = displayArticleImage(entry);
 const canonicalUrl = articleUrl(entry, Astro.site || Astro.url.origin);
 const imageUrl = new URL(image, Astro.site || Astro.url.origin).href;
 const monetizable = isMonetizable(entry);
+const safetyWarnings = articleSafetyWarnings(entry);
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -38,7 +40,7 @@ const articleSchema = {
     '@type': 'Organization',
     name: 'Sirupy z bylinek',
     url: new URL('/', Astro.site || Astro.url.origin).href,
-    logo: { '@type': 'ImageObject', url: new URL('/obrazky/bylinky.svg', Astro.site || Astro.url.origin).href },
+    logo: { '@type': 'ImageObject', url: new URL('/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png', Astro.site || Astro.url.origin).href },
   },
 };
 
@@ -76,6 +78,13 @@ const breadcrumbSchema = {
 
     {monetizable && <ContextAds entry={entry} />}
 
+    {safetyWarnings.length > 0 && (
+      <aside class="safety-box safety-box--specific">
+        <strong>Důležité upozornění k této bylince</strong>
+        <ul>{safetyWarnings.map((warning) => <li>{warning}</li>)}</ul>
+      </aside>
+    )}
+
     <div class="article-content"><slot /></div>
 
     {monetizable && <ProductFeed entry={entry} />}
@@ -92,4 +101,6 @@ const breadcrumbSchema = {
   .has-hero-image .article-content > p:first-child:has(> a:only-child > img:only-child) {
     display: none;
   }
+  .safety-box--specific ul{margin:.75rem 0 0;padding-left:1.2rem}
+  .safety-box--specific li+li{margin-top:.45rem}
 </style>
