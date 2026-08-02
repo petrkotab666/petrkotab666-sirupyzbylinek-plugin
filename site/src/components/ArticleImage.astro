@@ -1,6 +1,7 @@
 ---
 import type { ArticleEntry } from '../lib/articles';
-import { articleImage, topicImage } from '../lib/articles';
+import { topicImage } from '../lib/articles';
+import { displayArticleImage, emergencyArticleImage } from '../lib/display-image';
 
 interface Props {
   entry: ArticleEntry;
@@ -20,8 +21,8 @@ const {
   mode = 'article',
 } = Astro.props;
 
-const fallback = topicImage(entry);
-const src = mode === 'topic' ? fallback : articleImage(entry);
+const src = mode === 'topic' ? topicImage(entry) : displayArticleImage(entry);
+const fallback = emergencyArticleImage(entry);
 const alt = decorative ? '' : entry.data.title;
 const imageKind = src.endsWith('.svg') ? 'illustration' : 'photo';
 const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)};this.dataset.imageKind='illustration'`;
