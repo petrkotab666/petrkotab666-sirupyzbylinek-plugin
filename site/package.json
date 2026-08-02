@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/fetch-affiliate-feed.mjs",
+    "prebuild": "node scripts/sanitize-legacy-markdown.mjs && node scripts/fetch-affiliate-feed.mjs",
     "build": "astro build",
     "postbuild": "node scripts/audit-built-site.mjs",
     "preview": "astro preview",
