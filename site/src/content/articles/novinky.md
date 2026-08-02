@@ -2,7 +2,7 @@
 title: "Rubrika: Novinky"
 description: "Bylinkový magazín Aromaterapie doma je praktický průvodce, který rozšiřuje původní krátký článek do podrobnější a lépe propojené podoby. Najdete zde základní pravidla, časté chyby, bezpečnostní upozornění, doporučené vybavení,…"
 path: "/novinky/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

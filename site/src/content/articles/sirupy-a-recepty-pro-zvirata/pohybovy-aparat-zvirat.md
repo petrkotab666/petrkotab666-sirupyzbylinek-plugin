@@ -2,7 +2,7 @@
 title: "Rubrika: Pohybový aparát zvířat"
 description: "Pohybový aparát zvířat vyžaduje péči v každém věku. Objevte přírodní cesty a bylinné recepty pro zdravé klouby a kosti vašich mazlíčků ze 100% ověřených zdrojů."
 path: "/sirupy-a-recepty-pro-zvirata/pohybovy-aparat-zvirat/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

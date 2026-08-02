@@ -4,7 +4,7 @@ description: "Přečtěte si, jakým způsobem sirupyzbylinek.cz používá soub
 path: "/zasady-cookies/"
 date: "2026-02-10"
 updated: "2026-07-10"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Bylinky"
 featured: false
 legacy: true
@@ -12,7 +12,7 @@ draft: false
 sourceUrl: "https://www.sirupyzbylinek.cz/zasady-cookies/"
 ---
 
-![Zásady cookies (EU) – recept Sirupy z bylinek](/media/imported/devetsilova-tinktura-prirodni-spazmolytikum-na-krece-migreny-a-dychaci-cesty/byliny-6083d43d.png)
+![Zásady cookies (EU) – recept Sirupy z bylinek](/media/imported/jak-kombinovat-bylinky/byliny-6083d43d.png)
 
 [Zpět na bylinkový magazín](/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/)
 

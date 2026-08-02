@@ -2,7 +2,7 @@
 title: "Rubrika: Imunita a obranyschopnost"
 description: "Objevte přírodní tinktury pro posílení imunity a zdravé dýchání. Recepty na extrakty z lichořeřišnice, bezu a dalších bylin."
 path: "/tinktury/tinktury-imunita-dychani/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

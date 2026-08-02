@@ -2,7 +2,7 @@
 title: "Rubrika: Limonády ze sirupu"
 description: "Limonády ze sirupu patří mezi nejjednodušší a nejoblíbenější domácí nápoje. Stačí kvalitní bylinný sirup, voda a pár čerstvých ingrediencí – a během chvilky si připravíte osvěžující limonádu plnou chuti i přírodních účinků. V této kategorii najdete recepty na limonády z různých druhů sirupů, jako je bezový, mátový, med"
 path: "/recepty-na-domaci-limonady/limonady-ze-sirupu/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

@@ -2,7 +2,7 @@
 title: "Rubrika: Ženské a mužské zdraví"
 description: "Přírodní podpora hormonální rovnováhy a vitality. Tinktury z kontryhelu, kotvičníku a dalších bylin."
 path: "/tinktury/tinktury-zeny-muzi/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

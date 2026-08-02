@@ -2,7 +2,7 @@
 title: "Rubrika: Tinktury pro lidi"
 description: "Velký receptář domácích bylinných tinktur. Naučte se vyrábět silné extrakty pro zdraví, imunitu i pro zvířata. Tradiční postupy krok za krokem."
 path: "/tinktury/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

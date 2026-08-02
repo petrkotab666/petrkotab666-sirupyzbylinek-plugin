@@ -2,7 +2,7 @@
 title: "Rubrika: Kůže a srst zvířat"
 description: "Kůže a srst zvířat odráží jejich celkové zdraví. Objevte přírodní recepty a bylinné kúry pro zdravou kůži a lesklou srst vašich mazlíčků ze 100% ověřených zdrojů."
 path: "/sirupy-a-recepty-pro-zvirata/kuze-a-srst-zvirat/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

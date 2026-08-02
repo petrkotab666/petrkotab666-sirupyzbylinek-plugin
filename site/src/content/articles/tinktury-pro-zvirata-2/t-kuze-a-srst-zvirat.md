@@ -2,7 +2,7 @@
 title: "Rubrika: T-kůže a srst zvířat"
 description: "Nejdříve bezpečnost, potom recept. U potíží zvířete patří přednost veterináři."
 path: "/tinktury-pro-zvirata-2/t-kuze-a-srst-zvirat/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

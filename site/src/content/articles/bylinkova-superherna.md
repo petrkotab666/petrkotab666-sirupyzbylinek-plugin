@@ -2,7 +2,7 @@
 title: "Rubrika: Bylinková herna"
 description: "Bylinková herna na sirupyzbylinek.cz vám přináší interaktivní hry, kvízy a poznávačky bylinek pro celou rodinu. Zábavné učení o léčivých rostlinách v naší herně zvýší vaše znalosti přírody hrou."
 path: "/bylinkova-superherna/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

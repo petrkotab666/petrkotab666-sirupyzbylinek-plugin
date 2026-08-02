@@ -2,7 +2,7 @@
 title: "Rubrika: Fermentované limonády"
 description: "Fermentované limonády jsou přirozeně perlivé nápoje, které vznikají díky procesu kvašení. Tento tradiční způsob přípravy dodává limonádám nejen jemné bublinky, ale také prospěšné probiotické látky podporující trávení a imunitu. V této kategorii najdete recepty na domácí fermentované limonády z ovoce, bylinek i koření, "
 path: "/recepty-na-domaci-limonady/fermentovane-limonady/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

@@ -2,7 +2,7 @@
 title: "Rubrika: Trávení a metabolismus"
 description: "Recepty na domácí tinktury podporující trávení a zdraví žaludku. Přírodní síla pampelišky a dalších bylin."
 path: "/tinktury/tinktury-traveni-metabolismus/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

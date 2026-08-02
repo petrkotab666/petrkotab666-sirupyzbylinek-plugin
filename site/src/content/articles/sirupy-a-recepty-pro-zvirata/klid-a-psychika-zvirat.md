@@ -2,7 +2,7 @@
 title: "Rubrika: Klid a psychika zvířat"
 description: "Klid a psychika zvířat jsou základem spokojeného domova. Objevte šetrné bylinné recepty pro zklidnění stresu a úzkosti u mazlíčků ze 100% ověřených zdrojů."
 path: "/sirupy-a-recepty-pro-zvirata/klid-a-psychika-zvirat/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

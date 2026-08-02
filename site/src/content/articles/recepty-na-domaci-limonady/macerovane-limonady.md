@@ -2,7 +2,7 @@
 title: "Rubrika: Macerované limonády"
 description: "Macerované limonády vynikají svou intenzivní chutí a přírodním aroma, které vzniká díky louhování ovoce a bylinek ve vodě. Tento způsob přípravy umožňuje uvolnit maximum chuti, vůně i prospěšných látek bez nutnosti použití umělých přísad. V této kategorii najdete recepty na domácí limonády z čerstvého ovoce, jako jsou "
 path: "/recepty-na-domaci-limonady/macerovane-limonady/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

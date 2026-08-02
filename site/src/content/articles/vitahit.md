@@ -2,7 +2,7 @@
 title: "VITAHIT"
 description: "Vitahit - tekutá probiotika s maximální vstřebatelností, bez stabilizátorů a konzervantů, s léčivými bylinkami a houbamí."
 path: "/vitahit/"
-image: "/media/imported/vitahit/hp-f52f7ee1.png"
+image: "/media/imported/vitahit/hp-46015f17.png"
 category: "Bylinky"
 featured: false
 legacy: true

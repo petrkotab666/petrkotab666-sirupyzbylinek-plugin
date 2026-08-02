@@ -4,7 +4,7 @@ description: "Růžový sirup: voňavý domácí recept Domácí recept: surovin
 path: "/ruzovy-sirup-recept-na-vitalitu/"
 date: "2026-02-15"
 updated: "2026-07-10"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Imunita a vitalita"
 featured: false
 legacy: true
@@ -12,7 +12,7 @@ draft: false
 sourceUrl: "https://www.sirupyzbylinek.cz/ruzovy-sirup-recept-na-vitalitu/"
 ---
 
-![Růžový sirup: voňavý domácí recept – recept Sirupy z bylinek](/media/imported/kminovy-sirup-pro-traveni/domaci-limonady-ovoce-bylinky-citron-mata-988c2aa3.png)
+![Růžový sirup: voňavý domácí recept – recept Sirupy z bylinek](/media/imported/citronova-limonada-s-levanduli/domaci-limonady-ovoce-bylinky-citron-mata-988c2aa3.png)
 
 Domácí sirupy jsou oblíbené hlavně proto, že z jedné dávky připravíte více nápojů. Stačí lžička nebo lžíce sirupu, voda, citron a případně led. U bylinkových receptů je ale důležité nepřehánět množství suroviny a nečekat od sirupu léčebný účinek.
 
@@ -85,7 +85,7 @@ U tohoto receptu platí důležité upozornění: používejte pouze nechemicky 
 
 Reklama
 
-[Láhve ![Lahev DORICA 250 ml 31,5 mm na olej a mošt | Zavarovacisklo.cz Počet kusů v balení: 1](/media/imported/jak-kombinovat-bylinky/165-4_250-ml-olivac-4d1a5deb.png)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Flahev-dorica-250-ml-31-5-mm-na-olej-a-most%2F%3FvariantId%3D495) 
+[Láhve ![Lahev DORICA 250 ml 31,5 mm na olej a mošt | Zavarovacisklo.cz Počet kusů v balení: 1](/media/imported/bylinkove-cucave-bonbony-na-bolest-v-krku-a-kasel/165-4_250-ml-olivac-4d1a5deb.png)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Flahev-dorica-250-ml-31-5-mm-na-olej-a-most%2F%3FvariantId%3D495) 
 
 ### [Lahev DORICA 250 ml 31,5 mm na olej a mošt | Zavarovacisklo.cz Počet kusů v balení: 1](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Flahev-dorica-250-ml-31-5-mm-na-olej-a-most%2F%3FvariantId%3D495)
 
@@ -93,7 +93,7 @@ Reklama
 
 [Zobrazit nabídku](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Flahev-dorica-250-ml-31-5-mm-na-olej-a-most%2F%3FvariantId%3D495)
 
-[Sklenice ![Zavařovací sklenice 120 ml TO 63 na džem | Zavarovacisklo.cz Počet kusů v balení: 35](/media/imported/devetsilova-tinktura-prirodni-spazmolytikum-na-krece-migreny-a-dychaci-cesty/67-2_120-ml-svicka-0e3fd4ca.png)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-sklenice-120-ml-to-63-na-dzem%2F%3FvariantId%3D144) 
+[Sklenice ![Zavařovací sklenice 120 ml TO 63 na džem | Zavarovacisklo.cz Počet kusů v balení: 35](/media/imported/bylinkove-cucave-bonbony-na-bolest-v-krku-a-kasel/67-2_120-ml-svicka-0e3fd4ca.png)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-sklenice-120-ml-to-63-na-dzem%2F%3FvariantId%3D144) 
 
 ### [Zavařovací sklenice 120 ml TO 63 na džem | Zavarovacisklo.cz Počet kusů v balení: 35](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-sklenice-120-ml-to-63-na-dzem%2F%3FvariantId%3D144)
 
@@ -101,7 +101,7 @@ Reklama
 
 [Zobrazit nabídku](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-sklenice-120-ml-to-63-na-dzem%2F%3FvariantId%3D144)
 
-[Víčka ![Zavařovací víčko ČERVENÉ TO 82 RSB S KLIPEM (paster do 105°C) | Zavarovacisklo.cz Počet kusů v balení: 1](/media/imported/devetsilova-tinktura-prirodni-spazmolytikum-na-krece-migreny-a-dychaci-cesty/171_82-rsb-cervene-8f27f3c9.jpg)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-vicko-cervene-to-82-rsb-s-klipem--paster-do-105--c%2F%3FvariantId%3D4296) 
+[Víčka ![Zavařovací víčko ČERVENÉ TO 82 RSB S KLIPEM (paster do 105°C) | Zavarovacisklo.cz Počet kusů v balení: 1](/media/imported/bylinkove-cucave-bonbony-na-bolest-v-krku-a-kasel/171_82-rsb-cervene-8f27f3c9.jpg)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-vicko-cervene-to-82-rsb-s-klipem--paster-do-105--c%2F%3FvariantId%3D4296) 
 
 ### [Zavařovací víčko ČERVENÉ TO 82 RSB S KLIPEM (paster do 105°C) | Zavarovacisklo.cz Počet kusů v balení: 1](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-vicko-cervene-to-82-rsb-s-klipem--paster-do-105--c%2F%3FvariantId%3D4296)
 
@@ -109,7 +109,7 @@ Reklama
 
 [Zobrazit nabídku](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Fzavarovaci-vicko-cervene-to-82-rsb-s-klipem--paster-do-105--c%2F%3FvariantId%3D4296)
 
-[Láhve ![Lahev DORICA 250 ml 31,5 mm na olej a mošt | Zavarovacisklo.cz Počet kusů v balení: 35](/media/imported/jak-kombinovat-bylinky/165-4_250-ml-olivac-4d1a5deb.png)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Flahev-dorica-250-ml-31-5-mm-na-olej-a-most%2F%3FvariantId%3D498) 
+[Láhve ![Lahev DORICA 250 ml 31,5 mm na olej a mošt | Zavarovacisklo.cz Počet kusů v balení: 35](/media/imported/bylinkove-cucave-bonbony-na-bolest-v-krku-a-kasel/165-4_250-ml-olivac-4d1a5deb.png)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Flahev-dorica-250-ml-31-5-mm-na-olej-a-most%2F%3FvariantId%3D498) 
 
 ### [Lahev DORICA 250 ml 31,5 mm na olej a mošt | Zavarovacisklo.cz Počet kusů v balení: 35](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb&desturl=https%3A%2F%2Fwww.zavarovacisklo.cz%2Flahev-dorica-250-ml-31-5-mm-na-olej-a-most%2F%3FvariantId%3D498)
 

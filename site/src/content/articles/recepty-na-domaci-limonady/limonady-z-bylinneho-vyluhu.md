@@ -2,7 +2,7 @@
 title: "Rubrika: Limonády z bylinného výluhu"
 description: "Limonády z bylinného výluhu jsou ideální volbou pro ty, kteří chtějí využít sílu přírody v každodenním pití. Základem je kvalitní výluh z bylinek, který dodá limonádě nejen jedinečnou chuť, ale i blahodárné účinky na organismus. V této kategorii najdete recepty na domácí limonády z různých bylin, jako je máta, meduňka,"
 path: "/recepty-na-domaci-limonady/limonady-z-bylinneho-vyluhu/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true

@@ -2,7 +2,7 @@
 title: "Rubrika: Dýchací cesty a nachlazení"
 description: "Domácí tinktury mohou být zajímavou součástí bylinkové praxe, ale nejsou běžným nápojem ani univerzálním řešením zdravotních potíží. U receptu na devětsilová tinktura je důležité vědět, jakou bylinu používáte,…"
 path: "/tinktury/dychaci-cesty-a-nachlazeni/"
-image: "/media/imported/jak-kombinovat-bylinky/sirupyzbylineklogo1-1-53a25adc.png"
+image: "/media/imported/prirodni-repelenty-proti-komarum-a-klistatum/sirupyzbylineklogo1-1-53a25adc.png"
 category: "Přejít k obsahu"
 featured: false
 legacy: true
