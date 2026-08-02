@@ -1,0 +1,31 @@
+name: Recover original Sber assets
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/scripts/recover-original-sber-assets.mjs'
+      - '.github/workflows/recover-original-sber-assets.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Puppeteer client
+        run: npm install --no-save --no-audit --no-fund puppeteer-core@24
+      - name: Recover rendered assets
+        run: node .github/scripts/recover-original-sber-assets.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recovered-original-sber-assets
+          path: recovered-original-assets/**
+          if-no-files-found: error
+          retention-days: 3
