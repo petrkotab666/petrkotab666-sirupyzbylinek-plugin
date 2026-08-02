@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContextAds from '../../components/ContextAds.astro';
 import ProductFeed from '../../components/ProductFeed.astro';
+import SectionHero from '../../components/SectionHero.astro';
 import productsJson from '../../data/affiliate-products.json';
 
 interface Product {
@@ -42,11 +43,13 @@ const schema = {
   image="/obrazky/bylinky.svg"
   structuredData={[schema]}
 >
-  <section class="archive-header deals-hero">
-    <span>Reklama · partnerské nabídky</span>
-    <h1>Aktuální nabídky pro bylinkáře</h1>
-    <p>Ceny a dostupnost se mohou měnit. Rozhodující jsou vždy aktuální údaje na stránce prodejce.</p>
-  </section>
+  <SectionHero
+    eyebrow="Reklama · partnerské nabídky"
+    title="Aktuální nabídky pro bylinkáře"
+    text="Sklenice, lahve, knihy, suroviny a vybavení pro domácí výrobu. Ceny a dostupnost určuje prodejce."
+    art="deals"
+    theme="amber"
+  />
 
   <ContextAds topic="bylinky" heading="Oblíbené obchody a vybavení pro bylinkáře" />
 
