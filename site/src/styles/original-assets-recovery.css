@@ -1,0 +1,174 @@
+/*
+ * Obnova původních obrazových souborů a bezpečné centrování.
+ * Tato vrstva je načtená jako poslední, aby opravila předchozí vizuální experimenty.
+ */
+
+/* Původní logo v hlavičce */
+.brand.brand--original{
+  min-width:0;
+  min-height:82px;
+  align-self:center;
+  margin:0;
+  padding:3px 10px;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.brand-original-logo{
+  display:block;
+  width:auto;
+  height:76px;
+  max-width:210px;
+  object-fit:contain;
+}
+
+/* Úvodní banner: obrázek je vždy pevně oříznutý uvnitř banneru. */
+.hero.legacy-home-hero--original{
+  position:relative;
+  isolation:isolate;
+  min-height:520px;
+  overflow:hidden;
+  padding:72px 24px;
+  background:#123c20;
+}
+.hero.legacy-home-hero--original::before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(8,43,21,.82),rgba(8,43,21,.46) 52%,rgba(8,43,21,.72)),
+    linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.38));
+}
+.hero.legacy-home-hero--original::after{content:none}
+.home-hero-art{display:none!important}
+.home-hero-original-image{
+  position:absolute!important;
+  z-index:0;
+  inset:0!important;
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.legacy-home-hero--original .hero-copy{
+  position:relative;
+  z-index:2;
+  width:min(900px,100%);
+  margin-inline:auto;
+  text-align:center;
+}
+.legacy-home-hero--original .hero-copy h1,
+.legacy-home-hero--original .hero-copy p{
+  margin-right:auto;
+  margin-left:auto;
+}
+.legacy-home-hero--original .hero-actions{justify-content:center}
+
+/* Obrazové rozcestníky s původními obrázky */
+.illustrated-directory-card--photo .illustrated-directory-art{
+  inset:0;
+  overflow:hidden;
+}
+.illustrated-directory-card--photo .illustrated-directory-art img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .35s ease,filter .35s ease;
+}
+.illustrated-directory-card--photo:hover .illustrated-directory-art img{
+  transform:scale(1.045);
+  filter:saturate(1.06) contrast(1.02);
+}
+.illustrated-directory-copy{
+  align-items:center;
+  justify-items:center;
+  text-align:center;
+}
+.illustrated-directory-copy>span{max-width:31rem}
+.illustrated-directory-copy b{margin-inline:auto}
+
+/* Zarovnání hlavních boxů na střed */
+.centered-heading,
+.section-heading.centered-heading{
+  margin-right:auto;
+  margin-left:auto;
+  text-align:center;
+}
+.section-card{
+  text-align:center;
+}
+.section-card .section-icon,
+.section-card strong{
+  margin-right:auto;
+  margin-left:auto;
+}
+.section-card p{
+  max-width:36rem;
+  margin-right:auto;
+  margin-left:auto;
+}
+.context-ad-card{
+  align-items:center;
+  text-align:center;
+}
+.context-ad-icon,
+.context-ad-cta{
+  margin-right:auto;
+  margin-left:auto;
+}
+
+/* Původní obrázek ve spodním ilustrovaném pásu */
+.legacy-pantry-banner--original{
+  overflow:hidden;
+}
+.legacy-pantry-copy{
+  text-align:center;
+}
+.legacy-pantry-copy p,
+.legacy-pantry-copy .button{
+  margin-right:auto;
+  margin-left:auto;
+}
+.legacy-pantry-photo{
+  align-self:stretch;
+  min-height:330px;
+  overflow:hidden;
+}
+.legacy-pantry-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* Hlavní bannery rubrik také skutečně na střed. */
+.visual-section-hero-copy{
+  text-align:center;
+}
+.visual-section-hero-copy p{
+  margin-right:auto;
+  margin-left:auto;
+}
+
+@media(max-width:1000px){
+  .brand.brand--original{min-height:72px;padding:3px 4px}
+  .brand-original-logo{height:66px;max-width:174px}
+  .hero.legacy-home-hero--original{min-height:460px}
+  .legacy-pantry-banner--original{grid-template-columns:1fr}
+  .legacy-pantry-photo{min-height:260px}
+}
+
+@media(max-width:650px){
+  .brand-original-logo{height:58px;max-width:150px}
+  .hero.legacy-home-hero--original{min-height:430px;padding:52px 20px}
+  .illustrated-directory-copy{padding-right:20px;padding-left:20px}
+  .legacy-pantry-copy{padding:36px 24px}
+}
