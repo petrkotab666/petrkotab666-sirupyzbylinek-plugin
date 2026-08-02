@@ -1,0 +1,34 @@
+---
+import BotanicalArtwork from './BotanicalArtwork.astro';
+
+interface DirectoryItem {
+  href: string;
+  title: string;
+  text: string;
+  art: 'harvest' | 'recipes' | 'pharmacy' | 'magazine' | 'deals' | 'games' | 'timing' | 'identify' | 'ethics' | 'avoid' | 'places' | 'process';
+  kicker?: string;
+}
+
+interface Props {
+  items: DirectoryItem[];
+  class?: string;
+}
+
+const { items, class: className = '' } = Astro.props;
+---
+<div class:list={['illustrated-directory', className]}>
+  {items.map((item) => (
+    <a class="illustrated-directory-card" href={item.href}>
+      <span class="illustrated-directory-art" aria-hidden="true">
+        <BotanicalArtwork variant={item.art} />
+      </span>
+      <span class="illustrated-directory-shade" aria-hidden="true"></span>
+      <span class="illustrated-directory-copy">
+        {item.kicker && <small>{item.kicker}</small>}
+        <strong>{item.title}</strong>
+        <span>{item.text}</span>
+        <b>Otevřít <span aria-hidden="true">→</span></b>
+      </span>
+    </a>
+  ))}
+</div>
