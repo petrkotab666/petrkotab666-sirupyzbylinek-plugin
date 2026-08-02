@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+import PreparationCard from '../../components/PreparationCard.astro';
+import {
+  herbalPreparations,
+  preparationCategories,
+  preparationsByCategory,
+  type PreparationCategory,
+} from '../../data/herbal-preparations';
+
+const categories = Object.entries(preparationCategories) as Array<[PreparationCategory, (typeof preparationCategories)[PreparationCategory]]>;
+const featured = herbalPreparations.filter((recipe) => recipe.featured).slice(0, 9);
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Bylinné přípravky a domácí recepty',
+  description: 'Rozcestník čajů, koupelí, mastí, olejů, octů, obkladů a kuchyňských bylinných výrobků.',
+  url: new URL('/bylinne-pripravky/', Astro.site || Astro.url.origin).href,
+};
+---
+<BaseLayout
+  title="Bylinné přípravky – čaje, koupele, masti, oleje a další recepty"
+  description="Kompletní rozcestník domácích bylinných přípravků s přesnými postupy, skladováním a bezpečnostními upozorněními."
+  canonical="/bylinne-pripravky/"
+  image="/obrazky/recepty/mesickova-mast.svg"
+  structuredData={[schema]}
+>
+  <section class="preparations-hero">
+    <div>
+      <span>Rozšířený bylinkový receptář</span>
+      <h1>Co všechno lze šetrně připravit z bylinek</h1>
+      <p>Čaje, koupele, masti, balzámy, olejové maceráty, octy, oxymely, obklady i kuchyňské výrobky. Každý recept uvádí přesný postup, skladování a omezení.</p>
+      <a href="#kategorie">Vybrat kategorii <b aria-hidden="true">↓</b></a>
+    </div>
+    <img src="/obrazky/recepty/mesickova-mast.svg" alt="Bylinné přípravky a domácí recepty" width="1200" height="675" loading="eager" />
+  </section>
+
+  <section id="kategorie" class="preparation-category-directory">
+    <div class="section-heading centered-heading"><span>Hlavní rozcestník</span><h2>Vyberte si způsob zpracování</h2><p>V sedmi oblastech najdete celkem {herbalPreparations.length} nových receptů.</p></div>
+    <div class="preparation-category-grid">
+      {categories.map(([key, meta]) => {
+        const recipes = preparationsByCategory(key);
+        const image = recipes[0] ? `/obrazky/recepty/${recipes[0].slug}.svg` : '/obrazky/recepty.svg';
+        return (
+          <a class="preparation-category-card" href={meta.path}>
+            <img src={image} alt="" width="1200" height="675" loading="lazy" />
+            <div><span>{recipes.length} receptů</span><h2>{meta.title}</h2><p>{meta.description}</p><b>Otevřít rozcestník →</b></div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <ContextAds topic="recepty" heading="Suroviny a vybavení pro domácí bylinnou výrobu" />
+
+  <section class="featured-preparations">
+    <div class="section-heading centered-heading"><span>Doporučený začátek</span><h2>Vybrané recepty napříč kategoriemi</h2></div>
+    <div class="preparation-grid">{featured.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
+  </section>
+
+  <ProductFeed topic="recepty" heading="Sklenice, sušené bylinky a další pomůcky" />
+</BaseLayout>
+
+<style>
+  .preparations-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);width:min(1180px,calc(100% - 2rem));margin:2rem auto;overflow:hidden;border-radius:34px;background:#174c2b;box-shadow:0 26px 60px rgba(23,58,32,.2)}
+  .preparations-hero>div{display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,5vw,4.2rem);text-align:center;color:#fff}
+  .preparations-hero span{font-size:.78rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#f5b743}
+  .preparations-hero h1{margin:.65rem 0 .8rem;font-size:clamp(2.6rem,5.5vw,5rem);line-height:.98;color:#fffdf0}
+  .preparations-hero p{max-width:700px;margin:0 auto;color:#dfebdd;font-size:1.08rem;line-height:1.72}
+  .preparations-hero a{align-self:center;margin-top:1.3rem;padding:.78rem 1.15rem;border-radius:999px;background:#f4a82e;color:#173f25;text-decoration:none;font-weight:900}
+  .preparations-hero img{width:100%;height:100%;min-height:520px;object-fit:cover}
+  .preparation-category-directory,.featured-preparations{width:min(1180px,calc(100% - 2rem));margin:3.5rem auto}
+  .preparation-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
+  .preparation-category-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(31,75,39,.17);border-radius:26px;background:#fffdf7;color:inherit;text-decoration:none;box-shadow:0 18px 42px rgba(31,67,38,.1);transition:transform .25s ease,box-shadow .25s ease}
+  .preparation-category-card:hover{transform:translateY(-5px);box-shadow:0 25px 52px rgba(31,67,38,.16)}
+  .preparation-category-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+  .preparation-category-card>div{display:flex;flex:1;flex-direction:column;align-items:center;padding:1.3rem;text-align:center}
+  .preparation-category-card span{font-size:.75rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#b46d28}
+  .preparation-category-card h2{margin:.45rem 0 .5rem;color:#174c2b;font-size:1.45rem}
+  .preparation-category-card p{margin:0;color:#647064;line-height:1.55}
+  .preparation-category-card b{margin-top:auto;padding-top:1rem;color:#2f743e}
+  .preparation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
+  @media(max-width:950px){.preparations-hero{grid-template-columns:1fr}.preparations-hero img{order:-1;min-height:320px}.preparation-category-grid,.preparation-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:640px){.preparations-hero,.preparation-category-directory,.featured-preparations{width:min(100% - 1rem,1180px)}.preparation-category-grid,.preparation-grid{grid-template-columns:1fr}.preparations-hero h1{font-size:2.6rem}}
+</style>
