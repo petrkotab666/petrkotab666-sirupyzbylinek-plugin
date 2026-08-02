@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import ContextAds from '../../../components/ContextAds.astro';
+import ProductFeed from '../../../components/ProductFeed.astro';
+import { getPublishedArticles, topicKey } from '../../../lib/articles';
+
+const allArticles = await getPublishedArticles();
+const healthArticles = allArticles
+  .filter((entry) => ['zdravi', 'vyziva', 'krasa'].includes(topicKey(entry)))
+  .slice(0, 12);
+
+const categories = [
+  { href: '/prirodni-pomocnici-pro-imunitu/', icon: '🛡️', title: 'Imunita a vitalita', text: 'Bylinky, běžná výživa a praktická prevence bez přehnaných slibů.' },
+  { href: '/prirodni-pomocnici-pro-traveni-a-zazivani/', icon: '🌱', title: 'Trávení a zažívání', text: 'Přehled tradičně používaných bylin a důležitých omezení.' },
+  { href: '/tinktury/', icon: '🧪', title: 'Bylinné tinktury', text: 'Výroba, dávkování podle výrobku, skladování a bezpečnost.' },
+  { href: '/nejlepsi-bylinky-na-spanek-a-uklidneni-prirodni-pomoc-pri-nespavosti-a-stresu/', icon: '🌙', title: 'Spánek a zklidnění', text: 'Večerní režim, bylinky a situace, kdy je vhodná odborná pomoc.' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Přírodní lékárna – bylinky, bezpečnost a praktické přehledy',
+  url: new URL('/domu/prirodni-lekarna/', Astro.site || Astro.url.origin).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: healthArticles.length,
+    itemListElement: healthArticles.map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: entry.data.title,
+      url: new URL(entry.data.path, Astro.site || Astro.url.origin).href,
+    })),
+  },
+};
+---
+<BaseLayout
+  title="Přírodní lékárna – bylinky, účinky a bezpečnost | Sirupy z bylinek"
+  description="Přehled tradičního využití bylin, tinktur a přírodních přípravků včetně omezení, interakcí, bezpečnosti a situací, kdy vyhledat odborníka."
+  canonical="/domu/prirodni-lekarna/"
+  image="/obrazky/zdravi.svg"
+  structuredData={[itemListSchema]}
+>
+  <section class="archive-header">
+    <span>Přírodní lékárna</span>
+    <h1>Bylinky přehledně a bezpečně</h1>
+    <p>Tradiční využití, praktické postupy, důležitá omezení a jasné upozornění, kdy domácí péče nestačí.</p>
+  </section>
+
+  <section class="section-wrap section-directory">
+    <div class="section-heading"><span>Hlavní témata</span><h2>Najděte oblast, která vás zajímá</h2></div>
+    <div class="section-grid">
+      {categories.map((item) => (
+        <a class="section-card" href={item.href}>
+          <span class="section-icon" aria-hidden="true">{item.icon}</span>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          <strong>Otevřít <span aria-hidden="true">→</span></strong>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <ContextAds topic="zdravi" heading="Doporučené knihy, bylinky a doplňky" />
+
+  <section class="section-wrap section-articles">
+    <div class="section-heading"><span>Nové přehledy</span><h2>Články o bylinkách a zdraví</h2><p>Texty jsou informativní a nenahrazují lékařskou ani veterinární péči.</p></div>
+    <div class="articles-grid">{healthArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
+  </section>
+
+  <ProductFeed topic="zdravi" heading="Produkty související se zdravím a vitalitou" />
+</BaseLayout>
