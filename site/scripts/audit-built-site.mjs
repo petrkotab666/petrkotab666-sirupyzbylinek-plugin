@@ -24,6 +24,10 @@ const banned = [
   /xml produktový feed/iu,
   /cíl:\s*lepší čitelnost/iu,
   /seo 90\+/iu,
+  /rychlé shrnutí článku/iu,
+  /rozšiřuje původní krátký článek/iu,
+  /affiliate doporučení/iu,
+  /interní odkazy/iu,
 ];
 
 let articlePages = 0;
@@ -41,6 +45,9 @@ for (const file of htmlFiles) {
     if (heroCount !== 1) errors.push(`${relative}: expected one hero image, found ${heroCount}`);
     if (!html.includes('property="og:image"')) errors.push(`${relative}: missing Open Graph image`);
     if (!html.includes('application/ld+json')) errors.push(`${relative}: missing structured data`);
+    if (!html.includes('class="context-ads"') && !html.includes('class="product-feed"')) {
+      errors.push(`${relative}: long article is missing centralized monetization modules`);
+    }
   }
 }
 
@@ -49,6 +56,14 @@ const magazine = await readFile(magazinePath, 'utf8');
 const cards = (magazine.match(/class="article-card"/g) || []).length;
 if (cards > 12) errors.push(`magazin/index.html: expected at most 12 article cards, found ${cards}`);
 if (cards === 0) errors.push('magazin/index.html: no article cards found');
+
+const cultivationPath = path.join(DIST, 'nejcastejsi-chyby-pri-pestovani-bylinek', 'index.html');
+const cultivation = await readFile(cultivationPath, 'utf8');
+if (!cultivation.includes('Pěstování bylinek')) errors.push('cultivation article: missing inferred Pěstování bylinek category');
+if (!cultivation.includes('/obrazky/pestovani.svg')) errors.push('cultivation article: missing thematic cultivation image');
+for (const pattern of banned) {
+  if (pattern.test(cultivation)) errors.push(`cultivation article: contains banned text ${pattern}`);
+}
 
 if (errors.length) {
   console.error('\nContent quality audit failed:');
