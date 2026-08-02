@@ -4,3 +4,6 @@
 /bylinkovy-magazin/ /magazin/ 301
 /bylinkovy-magazin/page/* /magazin/ 301
 /novinky/ /magazin/ 301
+/recepty/ /osvedcene-recepty/ 301
+/domu/osvedcene-recepty-na-sirupy/ /osvedcene-recepty/ 301
+/prirodni-lekarna/ /domu/prirodni-lekarna/ 301
