@@ -99,27 +99,17 @@ jobs:
           echo "deployment_url=$DEPLOYMENT_URL" >> "$GITHUB_OUTPUT"
           echo "Cloudflare deployment URL: $DEPLOYMENT_URL"
 
-      - name: Inspect Cloudflare deployment environment
-        id: inspect
+      - name: Confirm deployment is active production
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           set -euo pipefail
           RESPONSE="$(curl --fail --silent --show-error \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments" \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" \
             --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
 
-          MATCH="$(printf '%s' "$RESPONSE" | jq -c --arg sha "$GITHUB_SHA" '[.result[] | select(.deployment_trigger.metadata.commit_hash == $sha)][0]')"
-          if [ "$MATCH" = "null" ] || [ -z "$MATCH" ]; then
-            echo "Could not find the deployment created by this workflow."
-            printf '%s' "$RESPONSE" | jq -r '.result[0:5][] | [.id, .environment, .url, .deployment_trigger.metadata.branch, .deployment_trigger.metadata.commit_hash] | @tsv'
-            exit 1
-          fi
-
-          DEPLOYMENT_ID="$(printf '%s' "$MATCH" | jq -r '.id')"
-          echo "deployment_id=$DEPLOYMENT_ID" >> "$GITHUB_OUTPUT"
-          printf '%s' "$MATCH" | jq -r '"Deployment id: \(.id)\nEnvironment: \(.environment)\nURL: \(.url)\nAliases: \((.aliases // []) | join(", "))\nBranch: \(.deployment_trigger.metadata.branch)"'
-          printf '%s' "$MATCH" | jq -e '.latest_stage.status == "success" and .environment == "production"' >/dev/null
+          printf '%s' "$RESPONSE" | jq -r '"Canonical deployment: \(.result.canonical_deployment.id)\nEnvironment: \(.result.canonical_deployment.environment)\nURL: \(.result.canonical_deployment.url)\nBranch: \(.result.canonical_deployment.deployment_trigger.metadata.branch)\nStatus: \(.result.canonical_deployment.latest_stage.status)"'
+          printf '%s' "$RESPONSE" | jq -e '.success == true and .result.canonical_deployment.environment == "production" and .result.canonical_deployment.deployment_trigger.metadata.branch == "main" and .result.canonical_deployment.latest_stage.status == "success"' >/dev/null
 
       - name: Verify uploaded deployment URL
         env:
@@ -131,45 +121,32 @@ jobs:
 
           printf '%s' "$VERSION" | grep -q 'expected-cultivation-category: Pěstování bylinek'
           printf '%s' "$ARTICLE" | grep -q 'Pěstování bylinek'
-          printf '%s' "$ARTICLE" | grep -q '/obrazky/pestovani.svg'
+          ! printf '%s' "$ARTICLE" | grep -Fq 'Bylinky a zvířata'
           ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení'
+          curl -fsS --max-time 20 --output /dev/null "${DEPLOYMENT_URL}/obrazky/pestovani.svg"
           echo "Uploaded deployment content verified successfully."
-
-      - name: Promote verified deployment to active production
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          DEPLOYMENT_ID: ${{ steps.inspect.outputs.deployment_id }}
-        run: |
-          set -euo pipefail
-          RESPONSE="$(curl --fail --silent --show-error \
-            --request POST \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments/${DEPLOYMENT_ID}/rollback" \
-            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-            --header "Content-Type: application/json" \
-            --data '{}')"
-
-          printf '%s' "$RESPONSE" | jq -e '.success == true' >/dev/null
-          printf '%s' "$RESPONSE" | jq -r '"Promoted deployment: \(.result.id)\nEnvironment: \(.result.environment)\nURL: \(.result.url)\nAliases: \((.result.aliases // []) | join(", "))"'
 
       - name: Verify public production alias
         shell: bash
         run: |
           set -euo pipefail
-          for attempt in {1..18}; do
-            VERSION="$(curl -fsS --max-time 20 'https://sirupyzbylinek-astro.pages.dev/deploy-version.txt' || true)"
-            ARTICLE="$(curl -fsS --max-time 20 'https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/' || true)"
+          for attempt in {1..12}; do
+            CACHE_BUSTER="$(date +%s)-${attempt}"
+            VERSION="$(curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/deploy-version.txt?v=${CACHE_BUSTER}" || true)"
+            ARTICLE="$(curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" || true)"
 
             if printf '%s' "$VERSION" | grep -q 'expected-cultivation-category: Pěstování bylinek' \
               && printf '%s' "$ARTICLE" | grep -q 'Pěstování bylinek' \
-              && printf '%s' "$ARTICLE" | grep -q '/obrazky/pestovani.svg' \
-              && ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení'; then
+              && ! printf '%s' "$ARTICLE" | grep -Fq 'Bylinky a zvířata' \
+              && ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení' \
+              && curl -fsS --max-time 20 --output /dev/null "https://sirupyzbylinek-astro.pages.dev/obrazky/pestovani.svg?v=${CACHE_BUSTER}"; then
               echo "Production deployment verified successfully."
               exit 0
             fi
 
-            echo "Production alias is not updated yet (attempt $attempt/18). Waiting 10 seconds..."
+            echo "Production alias is not updated yet (attempt $attempt/12). Waiting 10 seconds..."
             sleep 10
           done
 
-          echo "The deployment is valid, but the production alias did not update."
+          echo "The public production address did not pass content verification."
           exit 1
