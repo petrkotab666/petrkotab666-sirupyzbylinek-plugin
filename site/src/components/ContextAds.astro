@@ -1,0 +1,71 @@
+---
+import type { ArticleEntry } from '../lib/articles';
+import { topicKey } from '../lib/articles';
+
+interface Props { entry: ArticleEntry }
+const { entry } = Astro.props;
+const topic = topicKey(entry);
+
+const campaigns = {
+  bylik: {
+    icon: '🌿',
+    title: 'Sušené bylinky, koření a plody',
+    text: 'Suroviny pro čaje, sirupy, tinktury i domácí směsi.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=55880a67',
+    cta: 'Prohlédnout nabídku',
+  },
+  sklo: {
+    icon: '🫙',
+    title: 'Lahve, sklenice a víčka',
+    text: 'Vybavení pro sirupy, zavařování, med, džemy a domácí výrobu.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb',
+    cta: 'Vybrat sklenice',
+  },
+  knihy: {
+    icon: '📚',
+    title: 'Knihy o bylinkách a domácích receptech',
+    text: 'Atlasy, receptáře a praktické příručky pro začátečníky i zkušené.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=1ec2df65',
+    cta: 'Najít vhodnou knihu',
+  },
+  brainmax: {
+    icon: '🧬',
+    title: 'Výživa, vitaminy a minerály',
+    text: 'Doplňky pro běžnou výživu, regeneraci a aktivní životní styl.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=e9a1924a',
+    cta: 'Zobrazit nabídku',
+  },
+};
+
+const byTopic: Record<string, Array<keyof typeof campaigns>> = {
+  recepty: ['sklo', 'bylik', 'knihy'],
+  napoje: ['sklo', 'bylik', 'knihy'],
+  zavarovani: ['sklo', 'knihy', 'bylik'],
+  sber: ['bylik', 'knihy', 'sklo'],
+  pestovani: ['bylik', 'knihy', 'sklo'],
+  zdravi: ['brainmax', 'bylik', 'knihy'],
+  vyziva: ['brainmax', 'bylik', 'knihy'],
+  krasa: ['bylik', 'knihy', 'brainmax'],
+  zvirata: ['bylik', 'knihy', 'sklo'],
+  repelenty: ['bylik', 'knihy', 'sklo'],
+  bylinky: ['bylik', 'knihy', 'sklo'],
+};
+
+const selected = (byTopic[topic] || byTopic.bylinky).map((key) => campaigns[key]);
+---
+<aside class="context-ads" aria-label="Tematické komerční nabídky">
+  <div class="ad-heading">
+    <span>Reklama</span>
+    <strong>Co se může hodit k tomuto tématu</strong>
+  </div>
+  <div class="context-ad-grid">
+    {selected.map((campaign) => (
+      <a class="context-ad-card" href={campaign.href} target="_blank" rel="nofollow sponsored noopener noreferrer">
+        <span class="context-ad-icon" aria-hidden="true">{campaign.icon}</span>
+        <span class="context-ad-copy"><strong>{campaign.title}</strong><small>{campaign.text}</small></span>
+        <span class="context-ad-cta">{campaign.cta} →</span>
+      </a>
+    ))}
+  </div>
+  <p class="ad-disclosure">Za nákup přes označený odkaz může provozovatel získat provizi. Cena pro čtenáře se tím nemění.</p>
+</aside>
