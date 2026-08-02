@@ -1,0 +1,26 @@
+.hub-branches{display:grid;gap:34px;padding-top:76px}
+.hub-branch{scroll-margin-top:118px;overflow:hidden;border:1px solid rgba(24,77,38,.2);border-radius:32px;background:rgba(255,252,241,.96);box-shadow:0 18px 48px rgba(28,67,34,.12)}
+.hub-branch-heading{display:grid;grid-template-columns:86px 1fr;gap:24px;align-items:start;padding:34px 38px;background:linear-gradient(135deg,#174e29,#2d7040);color:#fff}
+.hub-branch:nth-child(even) .hub-branch-heading{background:linear-gradient(135deg,#754619,#d08420)}
+.hub-branch-heading>span{display:grid;place-items:center;width:72px;height:72px;border:2px solid rgba(255,255,255,.42);border-radius:50%;background:rgba(255,255,255,.1);color:#f7c864;font:800 1.45rem Georgia,serif;box-shadow:inset 0 0 0 7px rgba(255,255,255,.05)}
+.hub-branch-heading small{display:block;margin-bottom:4px;color:#f6c865;font-size:.72rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.hub-branch-heading h2{margin:0 0 8px;font:700 clamp(1.8rem,3.3vw,2.75rem)/1.08 Georgia,serif;color:#fff}
+.hub-branch-heading p{max-width:850px;margin:0;color:#e8f0e5;font-size:1rem}
+.hub-branch:nth-child(even) .hub-branch-heading small{color:#fff0bd}
+.hub-branch-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(25,78,39,.13)}
+.hub-branch-links a{position:relative;display:grid;grid-template-columns:1fr auto;gap:5px 18px;min-height:126px;padding:24px 25px;background:#fffdf6;text-decoration:none;transition:background .18s ease,transform .18s ease}
+.hub-branch-links a:nth-child(4n+2),.hub-branch-links a:nth-child(4n+3){background:#f3f5e7}
+.hub-branch-links a:hover{z-index:1;background:#fff1ca;box-shadow:0 10px 28px rgba(31,69,35,.14);transform:translateY(-2px)}
+.hub-branch-links strong{align-self:end;color:#174e29;font:700 1.08rem/1.25 Georgia,serif}
+.hub-branch-links span{grid-column:1;color:#687268;font-size:.88rem;line-height:1.48}
+.hub-branch-links b{grid-column:2;grid-row:1/3;align-self:center;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#efa12b;color:#17391f;font-size:1.1rem}
+
+@media(max-width:760px){
+  .hub-branches{padding-top:58px}
+  .hub-branch{border-radius:24px}
+  .hub-branch-heading{grid-template-columns:1fr;gap:14px;padding:28px 24px}
+  .hub-branch-heading>span{width:58px;height:58px;font-size:1.15rem}
+  .hub-branch-links{grid-template-columns:1fr}
+  .hub-branch-links a,.hub-branch-links a:nth-child(4n+2),.hub-branch-links a:nth-child(4n+3){background:#fffdf6}
+  .hub-branch-links a:nth-child(even){background:#f3f5e7}
+}
