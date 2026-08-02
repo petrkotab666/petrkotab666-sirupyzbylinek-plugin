@@ -1,0 +1,23 @@
+---
+import BotanicalArtwork from './BotanicalArtwork.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  text: string;
+  art: 'harvest' | 'recipes' | 'pharmacy' | 'magazine' | 'deals' | 'games' | 'timing' | 'identify' | 'ethics' | 'avoid' | 'places' | 'process';
+  theme?: 'green' | 'amber' | 'purple' | 'blue';
+}
+
+const { eyebrow, title, text, art, theme = 'green' } = Astro.props;
+---
+<section class:list={['visual-section-hero', `visual-section-hero--${theme}`]}>
+  <div class="visual-section-hero-copy">
+    <span>{eyebrow}</span>
+    <h1>{title}</h1>
+    <p>{text}</p>
+  </div>
+  <div class="visual-section-hero-art" aria-hidden="true">
+    <BotanicalArtwork variant={art} />
+  </div>
+</section>
