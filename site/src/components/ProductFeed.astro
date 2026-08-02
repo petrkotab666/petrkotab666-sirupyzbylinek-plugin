@@ -13,9 +13,18 @@ interface Product {
   search?: string;
 }
 
-interface Props { entry: ArticleEntry }
-const { entry } = Astro.props;
-const topic = topicKey(entry);
+interface Props {
+  entry?: ArticleEntry;
+  topic?: string;
+  heading?: string;
+}
+
+const {
+  entry,
+  topic: topicOverride,
+  heading = 'Doporučené produkty související s tématem',
+} = Astro.props;
+const topic = topicOverride || (entry ? topicKey(entry) : 'bylinky');
 const products = productsJson as Product[];
 
 const keywordMap: Record<string, string[]> = {
@@ -47,14 +56,22 @@ const selected = products
 <section class="product-feed" aria-label="Doporučené produkty z partnerského feedu">
   <div class="ad-heading">
     <span>Reklama · produktový feed</span>
-    <strong>Doporučené produkty související s tématem</strong>
+    <strong>{heading}</strong>
   </div>
   {selected.length > 0 ? (
     <div class="product-feed-grid">
       {selected.map((product) => (
         <article class="product-card">
           <a href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label={product.title}>
-            <img src={product.image} alt={product.title} width="420" height="315" loading="lazy" decoding="async" />
+            <img
+              src={product.image}
+              alt={product.title}
+              width="420"
+              height="315"
+              loading="lazy"
+              decoding="async"
+              onerror="this.closest('.product-card').classList.add('product-image-missing');this.remove()"
+            />
           </a>
           <div class="product-card-body">
             <h3><a href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer">{product.title}</a></h3>
