@@ -3,42 +3,68 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
+import BotanicalArtwork from '../components/BotanicalArtwork.astro';
+import IllustratedDirectory from '../components/IllustratedDirectory.astro';
 import { getPublishedArticles } from '../lib/articles';
 
 const articles = await getPublishedArticles();
 const latest = articles.slice(0, 6);
 const sections = [
-  { href: '/domu/sber-bylinek/', icon: '🧺', title: 'Sběr bylinek', text: 'Jak bylinky bezpečně poznat, kdy je sbírat a jak je šetrně zpracovat.' },
-  { href: '/osvedcene-recepty/', icon: '🍯', title: 'Osvědčené recepty', text: 'Domácí sirupy, tinktury, čaje, limonády a další praktické návody.' },
-  { href: '/domu/prirodni-lekarna/', icon: '🌿', title: 'Přírodní lékárna', text: 'Přehled bylinek, jejich tradičního využití, omezení a bezpečnosti.' },
-  { href: '/magazin/', icon: '📖', title: 'Bylinkový magazín', text: 'Sezónní sběr, pěstování, kuchyňské využití a nová inspirace.' },
-  { href: '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', icon: '🏷️', title: 'Slevové akce', text: 'Doporučené vybavení, suroviny a výhodné nabídky pro domácí výrobu.' },
-  { href: '/bylinkova-herna/', icon: '🧩', title: 'Bylinková herna', text: 'Poznávačky, pexeso a zábavné objevování přírody pro děti i dospělé.' },
-];
+  { href: '/domu/sber-bylinek/', art: 'harvest', kicker: 'Od louky ke košíku', title: 'Sběr bylinek', text: 'Kdy a kde sbírat, co si vzít s sebou a jak bylinky bezpečně poznat.' },
+  { href: '/osvedcene-recepty/', art: 'recipes', kicker: 'Domácí výroba', title: 'Osvědčené recepty', text: 'Sirupy, tinktury, limonády a další recepty krok za krokem.' },
+  { href: '/domu/prirodni-lekarna/', art: 'pharmacy', kicker: 'Tradiční využití', title: 'Přírodní lékárna', text: 'Přehled bylin, jejich omezení, bezpečnosti a praktického použití.' },
+  { href: '/magazin/', art: 'magazine', kicker: 'Čtení a inspirace', title: 'Bylinkový magazín', text: 'Sezónní témata, pěstování, zpracování a nové nápady z přírody.' },
+  { href: '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', art: 'deals', kicker: 'Výbava a suroviny', title: 'Slevové akce', text: 'Aktuální nabídky sklenic, knih, bylin a vybavení pro domácí výrobu.' },
+  { href: '/bylinkova-herna/', art: 'games', kicker: 'Pro děti i dospělé', title: 'Bylinková herna', text: 'Pexeso, poznávačky a arkádová hra Bylinkový mistr.' },
+] as const;
 ---
 <BaseLayout>
-  <section class="hero">
+  <section class="hero legacy-home-hero">
+    <div class="home-hero-art" aria-hidden="true"><BotanicalArtwork variant="hero" /></div>
     <div class="hero-copy">
-      <span class="eyebrow">Prakticky, bezpečně a bez zbytečných slibů</span>
-      <h1>Síla přírody v každé kapce</h1>
-      <p>Průvodce domácími sirupy, tinkturami, čaji, limonádami, pěstováním a šetrným sběrem bylinek.</p>
-      <div class="hero-actions"><a class="button" href="/osvedcene-recepty/">Prohlédnout recepty</a><a class="button secondary" href="/domu/sber-bylinek/">Jak začít se sběrem</a></div>
+      <span class="eyebrow">Vůně bylinek, chuť přírody</span>
+      <h1>Objevte kouzlo domácích bylinkových sirupů</h1>
+      <p>Recepty, sběr, sušení i tradiční inspirace přehledně na jednom místě.</p>
+      <div class="hero-actions">
+        <a class="button" href="/osvedcene-recepty/">Recepty a tipy</a>
+        <a class="button secondary" href="/domu/sber-bylinek/">Průvodce sběrem</a>
+      </div>
     </div>
-    <div class="hero-visual" aria-hidden="true"><span>🌿</span><span>🍯</span><span>🌼</span></div>
   </section>
 
-  <section class="section-wrap">
-    <div class="section-heading"><span>Rychlý výběr</span><h2>Vyberte si, co vás zajímá</h2><p>Všechny hlavní části webu mají stejné menu, vzhled a jasnou strukturu.</p></div>
-    <div class="section-grid">
-      {sections.map((item) => <a class="section-card" href={item.href}><span class="section-icon" aria-hidden="true">{item.icon}</span><h3>{item.title}</h3><p>{item.text}</p><strong>Otevřít <span aria-hidden="true">→</span></strong></a>)}
+  <section class="section-wrap home-directory-section">
+    <div class="section-heading centered-heading">
+      <span>Začněte tady</span>
+      <h2>Vyberte si cestu do světa bylinek</h2>
+      <p>Každá část má vlastní rozcestník, obrazovou navigaci a navazující témata.</p>
     </div>
+    <IllustratedDirectory items={sections} />
+  </section>
+
+  <section class="legacy-pantry-banner">
+    <div class="legacy-pantry-copy">
+      <span>Domácí výroba bez zmatku</span>
+      <h2>Sirupů plná spižírna</h2>
+      <p>Od správného sběru přes šetrné zpracování až po čisté lahve, skladování a podávání.</p>
+      <a class="button" href="/domaci-sirupy/">Prohlédnout domácí sirupy</a>
+    </div>
+    <div class="legacy-pantry-art" aria-hidden="true"><BotanicalArtwork variant="recipes" /></div>
   </section>
 
   <ContextAds topic="bylinky" heading="Oblíbené nabídky pro bylinkáře" />
 
-  {latest.length > 0 && <section class="section-wrap latest"><div class="section-heading"><span>Nově na webu</span><h2>Nejnovější články</h2></div><div class="articles-grid">{latest.map((entry) => <ArticleCard entry={entry} />)}</div></section>}
+  {latest.length > 0 && (
+    <section class="section-wrap latest">
+      <div class="section-heading"><span>Nově na webu</span><h2>Nejnovější články</h2><p>Nové recepty, rady a sezónní inspirace.</p></div>
+      <div class="articles-grid">{latest.map((entry) => <ArticleCard entry={entry} />)}</div>
+    </section>
+  )}
 
   <ProductFeed topic="bylinky" heading="Doporučené produkty z partnerských obchodů" />
 
-  <section class="trust-strip"><div><strong>Jednotná redakce</strong><span>Každý článek prochází stejnou šablonou, kontrolou popisů a obrázků.</span></div><div><strong>Rychlý web</strong><span>Stránky se sestavují staticky bez závislosti na WordPress pluginech.</span></div><div><strong>Bezpečné nasazení</strong><span>Každá změna projde buildem před zveřejněním.</span></div></section>
+  <section class="trust-strip">
+    <div><strong>Praktické návody</strong><span>Postupy jsou rozdělené do jasných kroků a navazujících rozcestníků.</span></div>
+    <div><strong>Bezpečnost na prvním místě</strong><span>Upozorňujeme na omezení, záměny rostlin a situace, kdy domácí péče nestačí.</span></div>
+    <div><strong>Rychlý a přehledný web</strong><span>Obsah zůstává snadno dostupný na počítači i v telefonu.</span></div>
+  </section>
 </BaseLayout>
