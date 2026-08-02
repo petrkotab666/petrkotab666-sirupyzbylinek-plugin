@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+const articles = (await getCollection('articles', ({ data }) => !data.draft))
+  .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
+---
+<BaseLayout title="Bylinkový magazín | Sirupy z bylinek" description="Všechny články, recepty a praktické návody na jednom místě.">
+  <section class="archive-header"><span>Magazín</span><h1>Články, recepty a návody</h1><p>Obsah je po migraci uložený jako přehledné Markdown soubory v GitHubu.</p></section>
+  <section class="section-wrap"><div class="articles-grid">{articles.map((entry) => <ArticleCard entry={entry} />)}</div></section>
+</BaseLayout>
