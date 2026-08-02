@@ -10,7 +10,7 @@ const description = cleanDescription(entry.data.description, entry.body);
 ---
 <article class="article-card">
   <a class="card-image" href={path} aria-label={title}>
-    <ArticleImage entry={entry} decorative={true} />
+    <ArticleImage entry={entry} mode="topic" decorative={true} />
   </a>
   <div class="card-body">
     <div class="card-meta"><span>{category}</span>{date && <time datetime={date.toISOString()}>{date.toLocaleDateString('cs-CZ')}</time>}</div>
