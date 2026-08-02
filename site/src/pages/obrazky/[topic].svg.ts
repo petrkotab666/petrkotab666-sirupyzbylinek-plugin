@@ -11,7 +11,7 @@ const topics = {
   vyziva: { label: 'Výživa a vitalita', from: '#e1e6f4', to: '#e9f0d8', accent: '#445c93', motif: 'heart' },
   krasa: { label: 'Přírodní péče', from: '#f3dfe9', to: '#e5efdc', accent: '#8b496d', motif: 'flower' },
   zvirata: { label: 'Bylinky pro zvířata', from: '#e8e2cf', to: '#dcebd9', accent: '#6e5a35', motif: 'paw' },
-  repelenty: { label: 'Přírodní ochrana', from: '#d8ebdf', to: '#efe3c8', accent: '#346c50', motif: 'shield' },
+  repelenty: { label: 'Ochrana proti komárům a klíšťatům', from: '#d8ebdf', to: '#efe3c8', accent: '#346c50', motif: 'repellent' },
 } as const;
 
 type Topic = keyof typeof topics;
@@ -37,8 +37,18 @@ function motif(type: string, accent: string) {
       return `<circle ${common} cx="600" cy="500" r="70"/><circle ${common} cx="600" cy="350" r="80"/><circle ${common} cx="600" cy="650" r="80"/><circle ${common} cx="450" cy="500" r="80"/><circle ${common} cx="750" cy="500" r="80"/><path ${common} d="M600 720v100M600 780c-65-45-110-15-140 25M600 780c65-45 110-15 140 25"/>`;
     case 'paw':
       return `<ellipse ${common} cx="600" cy="620" rx="145" ry="120"/><circle ${common} cx="455" cy="430" r="58"/><circle ${common} cx="565" cy="370" r="58"/><circle ${common} cx="680" cy="385" r="58"/><circle ${common} cx="775" cy="465" r="58"/>`;
-    case 'shield':
-      return `<path ${common} d="M600 245c90 65 170 70 220 75v210c0 145-92 230-220 300-128-70-220-155-220-300V320c50-5 130-10 220-75z"/><path ${common} d="M515 520l65 65 120-145"/>`;
+    case 'repellent':
+      return `<g ${common}>
+        <ellipse cx="485" cy="520" rx="24" ry="78"/>
+        <circle cx="485" cy="414" r="22"/>
+        <ellipse cx="425" cy="470" rx="78" ry="34" transform="rotate(-27 425 470)"/>
+        <ellipse cx="545" cy="470" rx="78" ry="34" transform="rotate(27 545 470)"/>
+        <path d="M470 435l-82-92M500 435l82-92M470 500l-110-18M500 500l110-18M470 555l-92 78M500 555l92 78M485 392v-78"/>
+        <circle cx="725" cy="540" r="70"/>
+        <circle cx="725" cy="435" r="34"/>
+        <path d="M680 490l-82-68M670 530l-92-12M680 575l-82 70M770 490l82-68M780 530l92-12M770 575l82 70M700 420l-42-74M750 420l42-74"/>
+        <path d="M405 730c80-112 155-130 230-74M430 700c-52-2-84-34-86-84 52-3 85 27 86 84zM535 660c12-54 48-80 100-70-8 51-42 78-100 70z"/>
+      </g>`;
     default:
       return `<path ${common} d="M600 780V330"/><path ${common} d="M600 460c-115-5-180-75-170-180 115 0 180 65 170 180z"/><path ${common} d="M602 570c120 0 183-66 178-170-112-5-176 55-178 170z"/><path ${common} d="M600 680c-92-2-145-55-142-138 90-3 140 45 142 138z"/>`;
   }
