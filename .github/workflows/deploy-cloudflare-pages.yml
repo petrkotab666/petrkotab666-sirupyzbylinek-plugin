@@ -52,7 +52,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: site
-        run: npm ci --no-audit --no-fund
+        run: npm install --no-audit --no-fund
 
       - name: Build and audit site
         working-directory: site
