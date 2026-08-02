@@ -1,0 +1,19 @@
+{
+  "name": "sirupyzbylinek-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "import:wordpress": "node scripts/import-wordpress.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "4.0.19",
+    "@astrojs/sitemap": "3.7.3",
+    "astro": "7.1.4",
+    "cheerio": "1.2.0",
+    "turndown": "7.2.4"
+  }
+}
