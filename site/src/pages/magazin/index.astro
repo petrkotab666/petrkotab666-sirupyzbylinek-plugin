@@ -1,24 +1,44 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import Pagination from '../../components/Pagination.astro';
+import { getPublishedArticles } from '../../lib/articles';
 
-const nonArticlePaths = new Set([
-  '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/',
-  '/bylinkovy-magazin/',
-  '/novinky/',
-]);
-
-const articles = (await getCollection('articles', ({ data }) => !data.draft))
-  .filter((entry) => {
-    const words = (entry.body ?? '').split(/\s+/).filter(Boolean).length;
-    return words >= 120
-      && !nonArticlePaths.has(entry.data.path)
-      && !/\/page\/\d+\/$/.test(entry.data.path);
-  })
-  .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
+const PAGE_SIZE = 12;
+const articles = await getPublishedArticles();
+const totalPages = Math.max(1, Math.ceil(articles.length / PAGE_SIZE));
+const pageArticles = articles.slice(0, PAGE_SIZE);
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Bylinkový magazín',
+  url: new URL('/magazin/', Astro.site || Astro.url.origin).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: articles.length,
+    itemListElement: pageArticles.map((entry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: entry.data.title,
+      url: new URL(entry.data.path, Astro.site || Astro.url.origin).href,
+    })),
+  },
+};
 ---
-<BaseLayout title="Bylinkový magazín | Sirupy z bylinek" description="Všechny články, recepty a praktické návody na jednom místě.">
-  <section class="archive-header"><span>Magazín</span><h1>Články, recepty a návody</h1><p>Praktické texty o bylinkách, domácích receptech, sběru, pěstování a bezpečném používání.</p></section>
-  <section class="section-wrap"><div class="articles-grid">{articles.map((entry) => <ArticleCard entry={entry} />)}</div></section>
+<BaseLayout
+  title="Bylinkový magazín – články, recepty a návody | Sirupy z bylinek"
+  description="Praktické články o bylinkách, domácích receptech, sběru, pěstování, zpracování a bezpečném používání."
+  canonical="/magazin/"
+  next={totalPages > 1 ? '/magazin/2/' : undefined}
+  structuredData={[itemListSchema]}
+>
+  <section class="archive-header">
+    <span>Magazín</span>
+    <h1>Články, recepty a návody</h1>
+    <p>Praktické texty o bylinkách, domácích receptech, sběru, pěstování a bezpečném používání.</p>
+  </section>
+  <section class="section-wrap magazine-list">
+    <div class="articles-grid">{pageArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
+    <Pagination currentPage={1} totalPages={totalPages} />
+  </section>
 </BaseLayout>

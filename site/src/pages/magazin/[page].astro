@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Pagination from '../../components/Pagination.astro';
+import { getPublishedArticles, type ArticleEntry } from '../../lib/articles';
+
+export async function getStaticPaths() {
+  const pageSize = 12;
+  const articles = await getPublishedArticles();
+  const totalPages = Math.max(1, Math.ceil(articles.length / pageSize));
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
+    const currentPage = index + 2;
+    const start = (currentPage - 1) * pageSize;
+    return {
+      params: { page: String(currentPage) },
+      props: {
+        currentPage,
+        totalPages,
+        pageArticles: articles.slice(start, start + pageSize),
+        totalArticles: articles.length,
+      },
+    };
+  });
+}
+
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  pageArticles: ArticleEntry[];
+  totalArticles: number;
+}
+
+const pageSize = 12;
+const { currentPage, totalPages, pageArticles, totalArticles } = Astro.props;
+const canonical = `/magazin/${currentPage}/`;
+const prev = currentPage === 2 ? '/magazin/' : `/magazin/${currentPage - 1}/`;
+const next = currentPage < totalPages ? `/magazin/${currentPage + 1}/` : undefined;
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Bylinkový magazín – strana ${currentPage}`,
+  url: new URL(canonical, Astro.site || Astro.url.origin).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: totalArticles,
+    itemListElement: pageArticles.map((entry, index) => ({
+      '@type': 'ListItem',
+      position: (currentPage - 1) * pageSize + index + 1,
+      name: entry.data.title,
+      url: new URL(entry.data.path, Astro.site || Astro.url.origin).href,
+    })),
+  },
+};
+---
+<BaseLayout
+  title={`Bylinkový magazín – strana ${currentPage} | Sirupy z bylinek`}
+  description={`Další praktické články o bylinkách, receptech, sběru a pěstování. Strana ${currentPage} z ${totalPages}.`}
+  canonical={canonical}
+  prev={prev}
+  next={next}
+  structuredData={[itemListSchema]}
+>
+  <section class="archive-header">
+    <span>Magazín · strana {currentPage}</span>
+    <h1>Články, recepty a návody</h1>
+    <p>Pokračování přehledu praktických textů o bylinkách, domácích receptech, sběru a pěstování.</p>
+  </section>
+  <section class="section-wrap magazine-list">
+    <div class="articles-grid">{pageArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
+    <Pagination currentPage={currentPage} totalPages={totalPages} />
+  </section>
+</BaseLayout>

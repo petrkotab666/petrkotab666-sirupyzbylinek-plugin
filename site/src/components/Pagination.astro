@@ -1,0 +1,33 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+}
+
+const { currentPage, totalPages } = Astro.props;
+const hrefFor = (page: number) => page === 1 ? '/magazin/' : `/magazin/${page}/`;
+const pages = Array.from({ length: totalPages }, (_, index) => index + 1)
+  .filter((page) => page === 1 || page === totalPages || Math.abs(page - currentPage) <= 2);
+
+const visible: Array<number | 'ellipsis'> = [];
+for (const page of pages) {
+  const previous = visible.at(-1);
+  if (typeof previous === 'number' && page - previous > 1) visible.push('ellipsis');
+  visible.push(page);
+}
+---
+{totalPages > 1 && (
+  <nav class="pagination" aria-label="Stránkování magazínu">
+    {currentPage > 1
+      ? <a class="pagination-prev" href={hrefFor(currentPage - 1)} rel="prev">← Novější články</a>
+      : <span class="pagination-placeholder" aria-hidden="true"></span>}
+    <div class="pagination-pages">
+      {visible.map((item) => item === 'ellipsis'
+        ? <span class="pagination-ellipsis" aria-hidden="true">…</span>
+        : <a href={hrefFor(item)} aria-current={item === currentPage ? 'page' : undefined}>{item}</a>)}
+    </div>
+    {currentPage < totalPages
+      ? <a class="pagination-next" href={hrefFor(currentPage + 1)} rel="next">Starší články →</a>
+      : <span class="pagination-placeholder" aria-hidden="true"></span>}
+  </nav>
+)}

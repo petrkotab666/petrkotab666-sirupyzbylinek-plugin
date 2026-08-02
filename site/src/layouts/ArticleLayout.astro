@@ -1,9 +1,65 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ArticleImage from '../components/ArticleImage.astro';
+import ContextAds from '../components/ContextAds.astro';
+import ProductFeed from '../components/ProductFeed.astro';
+import {
+  articleImage,
+  articleUrl,
+  cleanDescription,
+  isMonetizable,
+  type ArticleEntry,
+} from '../lib/articles';
+
+interface Props { entry: ArticleEntry }
 const { entry } = Astro.props;
-const { title, description, image, category, date, updated, sourceUrl } = entry.data;
+const { title, category, date, updated } = entry.data;
+const description = cleanDescription(entry.data.description, entry.body);
+const image = articleImage(entry);
+const canonicalUrl = articleUrl(entry, Astro.site || Astro.url.origin);
+const imageUrl = new URL(image, Astro.site || Astro.url.origin).href;
+const monetizable = isMonetizable(entry);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: [imageUrl],
+  mainEntityOfPage: canonicalUrl,
+  datePublished: date?.toISOString(),
+  dateModified: (updated || date)?.toISOString(),
+  articleSection: category,
+  inLanguage: 'cs-CZ',
+  author: { '@type': 'Organization', name: 'Redakce Sirupy z bylinek', url: new URL('/', Astro.site || Astro.url.origin).href },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Sirupy z bylinek',
+    url: new URL('/', Astro.site || Astro.url.origin).href,
+    logo: { '@type': 'ImageObject', url: new URL('/obrazky/bylinky.svg', Astro.site || Astro.url.origin).href },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Domů', item: new URL('/', Astro.site || Astro.url.origin).href },
+    { '@type': 'ListItem', position: 2, name: 'Magazín', item: new URL('/magazin/', Astro.site || Astro.url.origin).href },
+    { '@type': 'ListItem', position: 3, name: title, item: canonicalUrl },
+  ],
+};
 ---
-<BaseLayout title={`${title} | Sirupy z bylinek`} description={description} image={image} canonical={entry.data.path} type="article">
+<BaseLayout
+  title={`${title} | Sirupy z bylinek`}
+  description={description}
+  image={image}
+  canonical={entry.data.path}
+  type="article"
+  published={date}
+  modified={updated || date}
+  structuredData={[articleSchema, breadcrumbSchema]}
+>
   <article class:list={["article-shell", { "has-hero-image": Boolean(image) }]}>
     <header class="article-header">
       <div class="article-kicker">{category}</div>
@@ -13,14 +69,19 @@ const { title, description, image, category, date, updated, sourceUrl } = entry.
         {date && <time datetime={date.toISOString()}>Publikováno {date.toLocaleDateString('cs-CZ')}</time>}
         {updated && <time datetime={updated.toISOString()}>Aktualizováno {updated.toLocaleDateString('cs-CZ')}</time>}
       </div>
-      {image && <img class="hero-image" src={image} alt={title} decoding="async" fetchpriority="high" />}
+      <ArticleImage entry={entry} class="hero-image" loading="eager" fetchpriority="high" />
     </header>
+
+    {monetizable && <ContextAds entry={entry} />}
+
     <div class="article-content"><slot /></div>
+
+    {monetizable && <ProductFeed entry={entry} />}
+
     <aside class="safety-box">
       <strong>Bezpečnost na prvním místě</strong>
       <p>Bylinky mohou ovlivňovat léky a nejsou vhodné pro každého. Zvláštní opatrnost je nutná u dětí, těhotných a kojících žen, chronicky nemocných a zvířat.</p>
     </aside>
-    {sourceUrl && <p class="legacy-source">Původní adresa při migraci: <a href={sourceUrl}>{sourceUrl}</a></p>}
   </article>
 </BaseLayout>
 

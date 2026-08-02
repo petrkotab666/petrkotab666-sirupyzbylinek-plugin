@@ -1,22 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import { getPublishedArticles } from '../lib/articles';
 
-const nonArticlePaths = new Set([
-  '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/',
-  '/bylinkovy-magazin/',
-  '/novinky/',
-]);
-
-const articles = (await getCollection('articles', ({ data }) => !data.draft))
-  .filter((entry) => {
-    const words = (entry.body ?? '').split(/\s+/).filter(Boolean).length;
-    return words >= 120
-      && !nonArticlePaths.has(entry.data.path)
-      && !/\/page\/\d+\/$/.test(entry.data.path);
-  })
-  .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
+const articles = await getPublishedArticles();
 const latest = articles.slice(0, 6);
 const sections = [
   { href: '/domu/sber-bylinek/', icon: '🧺', title: 'Sběr bylinek', text: 'Jak bylinky bezpečně poznat, kdy je sbírat a jak je šetrně zpracovat.' },
@@ -47,5 +34,5 @@ const sections = [
 
   {latest.length > 0 && <section class="section-wrap latest"><div class="section-heading"><span>Nově na webu</span><h2>Nejnovější články</h2></div><div class="articles-grid">{latest.map((entry) => <ArticleCard entry={entry} />)}</div></section>}
 
-  <section class="trust-strip"><div><strong>Jednotná redakce</strong><span>Každý článek je uložený v GitHubu a dohledatelný v historii změn.</span></div><div><strong>Rychlý web</strong><span>Stránky se sestavují staticky bez závislosti na WordPress pluginech.</span></div><div><strong>Bezpečné nasazení</strong><span>Každá změna projde buildem před zveřejněním.</span></div></section>
+  <section class="trust-strip"><div><strong>Jednotná redakce</strong><span>Každý článek prochází stejnou šablonou, kontrolou popisů a obrázků.</span></div><div><strong>Rychlý web</strong><span>Stránky se sestavují staticky bez závislosti na WordPress pluginech.</span></div><div><strong>Bezpečné nasazení</strong><span>Každá změna projde buildem před zveřejněním.</span></div></section>
 </BaseLayout>
