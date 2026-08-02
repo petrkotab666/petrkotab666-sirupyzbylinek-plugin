@@ -1,0 +1,5 @@
+sirupyzbylinek deployment
+version: 2026-08-02T17:42:00+02:00
+commit-purpose: force Cloudflare Pages production rebuild after content cleanup
+expected-cultivation-category: Pěstování bylinek
+expected-cultivation-image: /obrazky/pestovani.svg
