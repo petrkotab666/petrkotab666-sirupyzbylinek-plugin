@@ -1,34 +1,56 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HerbGame from '../../components/HerbGame.astro';
+import HerbMasterArcade from '../../components/HerbMasterArcade.astro';
 import ContextAds from '../../components/ContextAds.astro';
 import ProductFeed from '../../components/ProductFeed.astro';
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Quiz',
+  '@type': 'VideoGame',
   name: 'Bylinkový mistr',
-  description: 'Bodovaný kvíz o bezpečném sběru, skladování a používání bylinek.',
+  description: 'Arkádová hra se sbíráním ingrediencí do bylinkových sirupů, deseti úrovněmi, bonusy a závěrečným bossem.',
   url: new URL('/bylinkovy-mistr/', Astro.site || Astro.url.origin).href,
   inLanguage: 'cs-CZ',
+  gamePlatform: 'Webový prohlížeč',
+  playMode: 'SinglePlayer',
+  genre: ['Arcade', 'Educational'],
 };
 ---
 <BaseLayout
-  title="Bylinkový mistr – vědomostní kvíz | Sirupy z bylinek"
-  description="Otestujte si znalosti bezpečného sběru, skladování a používání bylinek."
+  title="Bylinkový mistr – arkádová hra | Sirupy z bylinek"
+  description="Chytejte ingredience do devíti bylinkových receptů, vyhněte se nebezpečným předmětům a v desáté úrovni porazte bosse."
   canonical="/bylinkovy-mistr/"
   image="/obrazky/bylinky.svg"
   structuredData={[schema]}
 >
-  <section class="archive-header compact-game-header">
+  <section class="archive-header compact-game-header herb-master-header">
     <span>Bylinková herna</span>
     <h1>Bylinkový mistr</h1>
-    <p>Osm otázek prověří, zda znáte základní pravidla bezpečného bylinkaření.</p>
+    <p>Obnovená arkádová hra: sbírejte správné ingredience, dokončete devět receptů a v závěrečné desáté úrovni porazte Černý kotel.</p>
   </section>
-  <div class="game-page-wrap">
-    <HerbGame mode="quiz" />
+
+  <div class="game-page-wrap herb-master-page">
+    <HerbMasterArcade />
+    <section class="herb-master-rules" aria-labelledby="herb-master-rules-title">
+      <div>
+        <span>Jak se hraje</span>
+        <h2 id="herb-master-rules-title">Staňte se mistrem deseti úrovní</h2>
+      </div>
+      <ul>
+        <li>👩‍🌾 pohybujte šipkami, myší nebo dotykem;</li>
+        <li>chytejte jen tolik ingrediencí, kolik vyžaduje recept;</li>
+        <li>bezpečná ingredience nikdy neubere život, i když ji právě nepotřebujete;</li>
+        <li>💀 ubírá život, ⭐ život přidává a ⚡ zpomalí pád na tři sekundy;</li>
+        <li>po ztrátě života se herní plocha vyčistí a pokračujete od stejného receptu.</li>
+      </ul>
+    </section>
     <p class="back-to-games"><a href="/bylinkova-herna/">← Zpět do Bylinkové herny</a></p>
   </div>
+
   <ContextAds topic="bylinky" heading="Knihy a pomůcky pro další studium" />
   <ProductFeed topic="bylinky" heading="Doporučené produkty pro bylinkáře" />
 </BaseLayout>
+
+<style>
+  .herb-master-header{background:radial-gradient(circle at 82% 18%,rgba(255,255,255,.55) 0 8%,transparent 9%),linear-gradient(135deg,#e5f1d8,#f8e9be)}.herb-master-page{max-width:980px}.herb-master-rules{display:grid;grid-template-columns:.72fr 1.28fr;gap:28px;max-width:760px;margin:32px auto 0;padding:26px;border:1px solid #c9dbc3;border-radius:24px;background:linear-gradient(145deg,#fff,#f0f7eb);box-shadow:0 12px 34px rgba(44,75,48,.08)}.herb-master-rules span{color:#478347;font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.herb-master-rules h2{margin:.4rem 0 0;font:700 1.65rem/1.16 Georgia,serif;color:#17391f}.herb-master-rules ul{margin:0;padding-left:1.25rem;color:#4f5c51}.herb-master-rules li+li{margin-top:.42rem}@media(max-width:700px){.herb-master-rules{grid-template-columns:1fr;padding:20px}}
+</style>
