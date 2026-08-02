@@ -1,0 +1,37 @@
+---
+const pathname = Astro.url.pathname;
+const links = [
+  { href: '/domu/sber-bylinek/', label: 'Sběr bylinek' },
+  { href: '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/', label: 'Magazín' },
+  { href: '/bylinkova-herna/', label: 'Herna' },
+  { href: '/osvedcene-recepty/', label: 'Recepty' },
+  { href: '/domu/prirodni-lekarna/', label: 'Přírodní lékárna' },
+  { href: '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', label: 'Slevy' },
+];
+const active = (href) => href === '/' ? pathname === '/' : pathname.startsWith(href);
+---
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Sirupy z bylinek – domů">
+      <span class="brand-mark" aria-hidden="true">🌿</span>
+      <span><strong>Sirupy z bylinek</strong><small>Praktický průvodce bylinkami</small></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-menu">
+      <span class="sr-only">Otevřít menu</span><span aria-hidden="true">☰</span>
+    </button>
+    <nav id="main-menu" class="main-menu" aria-label="Hlavní navigace">
+      {links.map((link) => <a href={link.href} aria-current={active(link.href) ? 'page' : undefined}>{link.label}</a>)}
+    </nav>
+  </div>
+</header>
+<script is:inline>
+  const button = document.querySelector('.menu-button');
+  const menu = document.querySelector('#main-menu');
+  if (button && menu) {
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open', !open);
+    });
+  }
+</script>
