@@ -100,6 +100,7 @@ jobs:
           echo "Cloudflare deployment URL: $DEPLOYMENT_URL"
 
       - name: Inspect Cloudflare deployment environment
+        id: inspect
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
@@ -115,6 +116,8 @@ jobs:
             exit 1
           fi
 
+          DEPLOYMENT_ID="$(printf '%s' "$MATCH" | jq -r '.id')"
+          echo "deployment_id=$DEPLOYMENT_ID" >> "$GITHUB_OUTPUT"
           printf '%s' "$MATCH" | jq -r '"Deployment id: \(.id)\nEnvironment: \(.environment)\nURL: \(.url)\nAliases: \((.aliases // []) | join(", "))\nBranch: \(.deployment_trigger.metadata.branch)"'
           printf '%s' "$MATCH" | jq -e '.latest_stage.status == "success" and .environment == "production"' >/dev/null
 
@@ -131,6 +134,22 @@ jobs:
           printf '%s' "$ARTICLE" | grep -q '/obrazky/pestovani.svg'
           ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení'
           echo "Uploaded deployment content verified successfully."
+
+      - name: Promote verified deployment to active production
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          DEPLOYMENT_ID: ${{ steps.inspect.outputs.deployment_id }}
+        run: |
+          set -euo pipefail
+          RESPONSE="$(curl --fail --silent --show-error \
+            --request POST \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments/${DEPLOYMENT_ID}/rollback" \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            --header "Content-Type: application/json" \
+            --data '{}')"
+
+          printf '%s' "$RESPONSE" | jq -e '.success == true' >/dev/null
+          printf '%s' "$RESPONSE" | jq -r '"Promoted deployment: \(.result.id)\nEnvironment: \(.result.environment)\nURL: \(.result.url)\nAliases: \((.result.aliases // []) | join(", "))"'
 
       - name: Verify public production alias
         shell: bash
