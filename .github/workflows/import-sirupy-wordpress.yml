@@ -1,0 +1,55 @@
+name: Import SirupyZBylinek WordPress
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'site/.import-wordpress-trigger'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sirupy-wordpress-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm install --no-audit --no-fund
+
+      - name: Import public WordPress content
+        working-directory: site
+        env:
+          WP_BASE_URL: https://www.sirupyzbylinek.cz/
+          MAX_PAGES: 1200
+          IMPORT_IMAGES: 'true'
+        run: npm run import:wordpress
+
+      - name: Build migrated site
+        working-directory: site
+        run: npm run build
+
+      - name: Commit imported content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/src/content/articles site/public/media/imported site/import-report.json site/package-lock.json
+          if git diff --cached --quiet; then
+            echo "No imported changes to commit."
+          else
+            git commit -m "Importovat obsah SirupyZBylinek z WordPressu"
+            git push
+          fi
