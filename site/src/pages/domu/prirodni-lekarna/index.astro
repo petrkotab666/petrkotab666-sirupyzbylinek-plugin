@@ -3,6 +3,8 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ArticleCard from '../../../components/ArticleCard.astro';
 import ContextAds from '../../../components/ContextAds.astro';
 import ProductFeed from '../../../components/ProductFeed.astro';
+import SectionHero from '../../../components/SectionHero.astro';
+import IllustratedDirectory from '../../../components/IllustratedDirectory.astro';
 import { getPublishedArticles, topicKey } from '../../../lib/articles';
 
 const allArticles = await getPublishedArticles();
@@ -11,11 +13,11 @@ const healthArticles = allArticles
   .slice(0, 12);
 
 const categories = [
-  { href: '/prirodni-pomocnici-pro-imunitu/', icon: '🛡️', title: 'Imunita a vitalita', text: 'Bylinky, běžná výživa a praktická prevence bez přehnaných slibů.' },
-  { href: '/prirodni-pomocnici-pro-traveni-a-zazivani/', icon: '🌱', title: 'Trávení a zažívání', text: 'Přehled tradičně používaných bylin a důležitých omezení.' },
-  { href: '/tinktury/', icon: '🧪', title: 'Bylinné tinktury', text: 'Výroba, dávkování podle výrobku, skladování a bezpečnost.' },
-  { href: '/nejlepsi-bylinky-na-spanek-a-uklidneni-prirodni-pomoc-pri-nespavosti-a-stresu/', icon: '🌙', title: 'Spánek a zklidnění', text: 'Večerní režim, bylinky a situace, kdy je vhodná odborná pomoc.' },
-];
+  { href: '/prirodni-pomocnici-pro-imunitu/', art: 'pharmacy', kicker: 'Odolnost organismu', title: 'Imunita a vitalita', text: 'Bylinky, běžná výživa a praktická prevence bez přehnaných slibů.' },
+  { href: '/prirodni-pomocnici-pro-traveni-a-zazivani/', art: 'harvest', kicker: 'Každodenní pohoda', title: 'Trávení a zažívání', text: 'Přehled tradičně používaných bylin a důležitých omezení.' },
+  { href: '/tinktury/', art: 'process', kicker: 'Domácí výluhy', title: 'Bylinné tinktury', text: 'Výroba, dávkování podle výrobku, skladování a bezpečnost.' },
+  { href: '/nejlepsi-bylinky-na-spanek-a-uklidneni-prirodni-pomoc-pri-nespavosti-a-stresu/', art: 'timing', kicker: 'Večerní režim', title: 'Spánek a zklidnění', text: 'Bylinky, klidový režim a situace, kdy je vhodná odborná pomoc.' },
+] as const;
 
 const itemListSchema = {
   '@context': 'https://schema.org',
@@ -41,24 +43,17 @@ const itemListSchema = {
   image="/obrazky/zdravi.svg"
   structuredData={[itemListSchema]}
 >
-  <section class="archive-header">
-    <span>Přírodní lékárna</span>
-    <h1>Bylinky přehledně a bezpečně</h1>
-    <p>Tradiční využití, praktické postupy, důležitá omezení a jasné upozornění, kdy domácí péče nestačí.</p>
-  </section>
+  <SectionHero
+    eyebrow="Přírodní lékárna"
+    title="Bylinky přehledně a bezpečně"
+    text="Tradiční využití, praktické postupy, důležitá omezení a jasné upozornění, kdy domácí péče nestačí."
+    art="pharmacy"
+    theme="green"
+  />
 
   <section class="section-wrap section-directory">
-    <div class="section-heading"><span>Hlavní témata</span><h2>Najděte oblast, která vás zajímá</h2></div>
-    <div class="section-grid">
-      {categories.map((item) => (
-        <a class="section-card" href={item.href}>
-          <span class="section-icon" aria-hidden="true">{item.icon}</span>
-          <h3>{item.title}</h3>
-          <p>{item.text}</p>
-          <strong>Otevřít <span aria-hidden="true">→</span></strong>
-        </a>
-      ))}
-    </div>
+    <div class="section-heading centered-heading"><span>Hlavní témata</span><h2>Najděte oblast, která vás zajímá</h2><p>Každý obrazový rozcestník vede k podrobnějším článkům a návazným tématům.</p></div>
+    <IllustratedDirectory items={categories} />
   </section>
 
   <ContextAds topic="zdravi" heading="Doporučené knihy, bylinky a doplňky" />
