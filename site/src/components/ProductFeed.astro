@@ -1,0 +1,73 @@
+---
+import type { ArticleEntry } from '../lib/articles';
+import { topicKey } from '../lib/articles';
+import productsJson from '../data/affiliate-products.json';
+
+interface Product {
+  title: string;
+  brand?: string;
+  category?: string;
+  image: string;
+  price?: string;
+  link: string;
+  search?: string;
+}
+
+interface Props { entry: ArticleEntry }
+const { entry } = Astro.props;
+const topic = topicKey(entry);
+const products = productsJson as Product[];
+
+const keywordMap: Record<string, string[]> = {
+  zdravi: ['imunit', 'vitamin', 'mineral', 'probiot', 'omega', 'zinek', 'selen', 'horcik', 'spanek'],
+  vyziva: ['protein', 'vitamin', 'mineral', 'superpotrav', 'omega', 'elektrolyt', 'probiot'],
+  krasa: ['kolagen', 'plet', 'vlasy', 'antioxid', 'vitamin'],
+  napoje: ['matcha', 'kakao', 'caj', 'superpotrav', 'protein'],
+  recepty: ['superpotrav', 'kakao', 'matcha', 'protein', 'med'],
+  zvirata: ['omega', 'probiot', 'vitamin', 'mineral'],
+  repelenty: ['vitamin', 'mineral', 'antioxid'],
+  sber: ['caj', 'superpotrav', 'vitamin'],
+  pestovani: ['caj', 'superpotrav', 'vitamin'],
+  zavarovani: ['superpotrav', 'kakao', 'matcha'],
+  bylinky: ['caj', 'superpotrav', 'vitamin', 'mineral'],
+};
+
+const keywords = keywordMap[topic] || keywordMap.bylinky;
+const selected = products
+  .map((product) => {
+    const haystack = (product.search || `${product.title} ${product.brand || ''} ${product.category || ''}`).toLowerCase();
+    const score = keywords.reduce((total, keyword) => total + (haystack.includes(keyword) ? 1 : 0), 0);
+    return { product, score };
+  })
+  .sort((a, b) => b.score - a.score || a.product.title.localeCompare(b.product.title, 'cs'))
+  .filter((item, index, all) => item.score > 0 || all.every((candidate) => candidate.score === 0))
+  .slice(0, 4)
+  .map((item) => item.product);
+---
+<section class="product-feed" aria-label="Doporučené produkty z partnerského feedu">
+  <div class="ad-heading">
+    <span>Reklama · produktový feed</span>
+    <strong>Doporučené produkty související s tématem</strong>
+  </div>
+  {selected.length > 0 ? (
+    <div class="product-feed-grid">
+      {selected.map((product) => (
+        <article class="product-card">
+          <a href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label={product.title}>
+            <img src={product.image} alt={product.title} width="420" height="315" loading="lazy" decoding="async" />
+          </a>
+          <div class="product-card-body">
+            <h3><a href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer">{product.title}</a></h3>
+            {product.price && <strong class="product-price">{product.price}</strong>}
+            <a class="product-button" href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer">Zobrazit nabídku</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  ) : (
+    <a class="feed-fallback-banner" href="https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=04244f53" target="_blank" rel="nofollow sponsored noopener noreferrer">
+      <img src="https://doc.ehub.cz/b/f709cff7/04244f53.png" alt="BrainMarket.cz – nabídka produktů BrainMax" width="970" height="310" loading="lazy" decoding="async" />
+    </a>
+  )}
+  <p class="ad-disclosure">Doplňky stravy nejsou náhradou pestré stravy ani odborné zdravotní péče. Dostupnost a cenu ověřte u prodejce.</p>
+</section>
