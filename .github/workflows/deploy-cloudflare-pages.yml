@@ -7,6 +7,12 @@ on:
     paths:
       - 'site/**'
       - '.github/workflows/deploy-cloudflare-pages.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy-cloudflare-pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -20,6 +26,7 @@ concurrency:
 jobs:
   deploy:
     name: Build, deploy and verify
+    if: github.event_name != 'pull_request' || github.head_ref == 'force-cloudflare-production-deploy'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -58,7 +65,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 87659411eeb4335b3c1e2c01014edbfb
           workingDirectory: site
-          command: pages deploy dist --project-name=sirupyzbylinek-astro --branch=main --commit-hash=${{ github.sha }} --commit-message="${{ github.event.head_commit.message || 'Manual production deployment' }}"
+          command: pages deploy dist --project-name=sirupyzbylinek-astro --branch=main --commit-hash=${{ github.sha }} --commit-message="${{ github.event.head_commit.message || 'Controlled production deployment' }}"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Verify public production deployment
