@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Pagination from '../../components/Pagination.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
 import { getPublishedArticles } from '../../lib/articles';
 
 const PAGE_SIZE = 12;
@@ -37,8 +39,13 @@ const itemListSchema = {
     <h1>Články, recepty a návody</h1>
     <p>Praktické texty o bylinkách, domácích receptech, sběru, pěstování a bezpečném používání.</p>
   </section>
+
+  <ContextAds topic="bylinky" heading="Doporučené nabídky pro čtenáře magazínu" />
+
   <section class="section-wrap magazine-list">
     <div class="articles-grid">{pageArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
     <Pagination currentPage={1} totalPages={totalPages} />
   </section>
+
+  <ProductFeed topic="bylinky" heading="Produkty související s bylinkami a domácí výrobou" />
 </BaseLayout>
