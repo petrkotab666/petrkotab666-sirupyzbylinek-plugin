@@ -116,15 +116,50 @@ jobs:
           DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment_url }}
         run: |
           set -euo pipefail
-          VERSION="$(curl -fsS --max-time 20 "${DEPLOYMENT_URL}/deploy-version.txt")"
-          ARTICLE="$(curl -fsS --max-time 20 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/")"
-
-          printf '%s' "$VERSION" | grep -q 'expected-cultivation-category: Pěstování bylinek'
-          printf '%s' "$ARTICLE" | grep -q 'Pěstování bylinek'
-          ! printf '%s' "$ARTICLE" | grep -Fq 'Bylinky a zvířata'
-          ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení'
+          curl -fsS --max-time 20 "${DEPLOYMENT_URL}/deploy-version.txt" -o /tmp/deploy-version.txt
+          curl -fsS --max-time 20 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" -o /tmp/article.html
           curl -fsS --max-time 20 --output /dev/null "${DEPLOYMENT_URL}/obrazky/pestovani.svg"
-          echo "Uploaded deployment content verified successfully."
+          python3 - /tmp/deploy-version.txt /tmp/article.html <<'PY'
+          from html import unescape
+          from pathlib import Path
+          import re
+          import sys
+
+          version = Path(sys.argv[1]).read_text(encoding='utf-8')
+          markup = Path(sys.argv[2]).read_text(encoding='utf-8')
+
+          def plain(value: str) -> str:
+              return ' '.join(unescape(re.sub(r'<[^>]+>', ' ', value)).split())
+
+          kicker_match = re.search(r'class="article-kicker"[^>]*>([\s\S]*?)</div>', markup, re.I)
+          hero_match = re.search(r'<img\b[^>]*class=["\'][^"\']*hero-image[^"\']*["\'][^>]*>', markup, re.I)
+          hero_src_match = re.search(r'\bsrc=["\']([^"\']+)["\']', hero_match.group(0), re.I) if hero_match else None
+          kicker = plain(kicker_match.group(1)) if kicker_match else ''
+          hero_src = hero_src_match.group(1) if hero_src_match else ''
+          visible = plain(markup)
+          banned = [
+              'Rychlé shrnutí článku',
+              'hlavní klíčové slovo',
+              'SEO 90+',
+              'produktový XML feed',
+              'affiliate doporučení',
+          ]
+
+          errors = []
+          if 'expected-cultivation-category: Pěstování bylinek' not in version:
+              errors.append('deployment marker is missing')
+          if kicker != 'Pěstování bylinek':
+              errors.append(f'wrong article kicker: {kicker!r}')
+          if '/obrazky/pestovani.svg' not in hero_src:
+              errors.append(f'wrong hero image: {hero_src!r}')
+          for phrase in banned:
+              if phrase.casefold() in visible.casefold():
+                  errors.append(f'banned visible phrase: {phrase}')
+
+          if errors:
+              raise SystemExit('\n'.join(errors))
+          print(f'Uploaded deployment verified: kicker={kicker!r}, hero={hero_src!r}.')
+          PY
 
       - name: Verify public production alias
         shell: bash
@@ -132,19 +167,50 @@ jobs:
           set -euo pipefail
           for attempt in {1..12}; do
             CACHE_BUSTER="$(date +%s)-${attempt}"
-            VERSION="$(curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/deploy-version.txt?v=${CACHE_BUSTER}" || true)"
-            ARTICLE="$(curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" || true)"
+            if curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/deploy-version.txt?v=${CACHE_BUSTER}" -o /tmp/public-version.txt \
+              && curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" -o /tmp/public-article.html \
+              && curl -fsS --max-time 20 --output /dev/null "https://sirupyzbylinek-astro.pages.dev/obrazky/pestovani.svg?v=${CACHE_BUSTER}" \
+              && python3 - /tmp/public-version.txt /tmp/public-article.html <<'PY'
+          from html import unescape
+          from pathlib import Path
+          import re
+          import sys
 
-            if printf '%s' "$VERSION" | grep -q 'expected-cultivation-category: Pěstování bylinek' \
-              && printf '%s' "$ARTICLE" | grep -q 'Pěstování bylinek' \
-              && ! printf '%s' "$ARTICLE" | grep -Fq 'Bylinky a zvířata' \
-              && ! printf '%s' "$ARTICLE" | grep -Eiq 'Rychlé shrnutí článku|hlavní klíčové slovo|SEO 90\+|produktový XML feed|affiliate doporučení' \
-              && curl -fsS --max-time 20 --output /dev/null "https://sirupyzbylinek-astro.pages.dev/obrazky/pestovani.svg?v=${CACHE_BUSTER}"; then
+          version = Path(sys.argv[1]).read_text(encoding='utf-8')
+          markup = Path(sys.argv[2]).read_text(encoding='utf-8')
+
+          def plain(value: str) -> str:
+              return ' '.join(unescape(re.sub(r'<[^>]+>', ' ', value)).split())
+
+          kicker_match = re.search(r'class="article-kicker"[^>]*>([\s\S]*?)</div>', markup, re.I)
+          hero_match = re.search(r'<img\b[^>]*class=["\'][^"\']*hero-image[^"\']*["\'][^>]*>', markup, re.I)
+          hero_src_match = re.search(r'\bsrc=["\']([^"\']+)["\']', hero_match.group(0), re.I) if hero_match else None
+          kicker = plain(kicker_match.group(1)) if kicker_match else ''
+          hero_src = hero_src_match.group(1) if hero_src_match else ''
+          visible = plain(markup)
+          banned = [
+              'Rychlé shrnutí článku',
+              'hlavní klíčové slovo',
+              'SEO 90+',
+              'produktový XML feed',
+              'affiliate doporučení',
+          ]
+
+          ok = (
+              'expected-cultivation-category: Pěstování bylinek' in version
+              and kicker == 'Pěstování bylinek'
+              and '/obrazky/pestovani.svg' in hero_src
+              and not any(phrase.casefold() in visible.casefold() for phrase in banned)
+          )
+          print(f'Public check: kicker={kicker!r}, hero={hero_src!r}, ok={ok}.')
+          raise SystemExit(0 if ok else 1)
+          PY
+            then
               echo "Production deployment verified successfully."
               exit 0
             fi
 
-            echo "Production alias is not updated yet (attempt $attempt/12). Waiting 10 seconds..."
+            echo "Production alias verification failed (attempt $attempt/12). Waiting 10 seconds..."
             sleep 10
           done
 
