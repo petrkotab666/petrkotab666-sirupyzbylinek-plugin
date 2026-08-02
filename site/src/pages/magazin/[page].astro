@@ -4,20 +4,19 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import Pagination from '../../components/Pagination.astro';
 import { getPublishedArticles, type ArticleEntry } from '../../lib/articles';
 
-const PAGE_SIZE = 12;
-
 export async function getStaticPaths() {
+  const pageSize = 12;
   const articles = await getPublishedArticles();
-  const totalPages = Math.max(1, Math.ceil(articles.length / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(articles.length / pageSize));
   return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
     const currentPage = index + 2;
-    const start = (currentPage - 1) * PAGE_SIZE;
+    const start = (currentPage - 1) * pageSize;
     return {
       params: { page: String(currentPage) },
       props: {
         currentPage,
         totalPages,
-        pageArticles: articles.slice(start, start + PAGE_SIZE),
+        pageArticles: articles.slice(start, start + pageSize),
         totalArticles: articles.length,
       },
     };
@@ -31,6 +30,7 @@ interface Props {
   totalArticles: number;
 }
 
+const pageSize = 12;
 const { currentPage, totalPages, pageArticles, totalArticles } = Astro.props;
 const canonical = `/magazin/${currentPage}/`;
 const prev = currentPage === 2 ? '/magazin/' : `/magazin/${currentPage - 1}/`;
@@ -45,7 +45,7 @@ const itemListSchema = {
     numberOfItems: totalArticles,
     itemListElement: pageArticles.map((entry, index) => ({
       '@type': 'ListItem',
-      position: (currentPage - 1) * PAGE_SIZE + index + 1,
+      position: (currentPage - 1) * pageSize + index + 1,
       name: entry.data.title,
       url: new URL(entry.data.path, Astro.site || Astro.url.origin).href,
     })),
