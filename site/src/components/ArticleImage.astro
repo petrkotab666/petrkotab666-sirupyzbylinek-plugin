@@ -8,6 +8,7 @@ interface Props {
   loading?: 'lazy' | 'eager';
   fetchpriority?: 'high' | 'low' | 'auto';
   decorative?: boolean;
+  mode?: 'article' | 'topic';
 }
 
 const {
@@ -16,12 +17,14 @@ const {
   loading = 'lazy',
   fetchpriority = 'auto',
   decorative = false,
+  mode = 'article',
 } = Astro.props;
 
-const src = articleImage(entry);
 const fallback = topicImage(entry);
+const src = mode === 'topic' ? fallback : articleImage(entry);
 const alt = decorative ? '' : entry.data.title;
-const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)}`;
+const imageKind = src.endsWith('.svg') ? 'illustration' : 'photo';
+const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)};this.dataset.imageKind='illustration'`;
 ---
 <img
   class={className}
@@ -32,5 +35,6 @@ const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)}`;
   loading={loading}
   decoding="async"
   fetchpriority={fetchpriority}
+  data-image-kind={imageKind}
   onerror={onerror}
 />
