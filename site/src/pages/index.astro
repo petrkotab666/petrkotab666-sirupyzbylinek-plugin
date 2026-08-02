@@ -3,14 +3,26 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 
+const nonArticlePaths = new Set([
+  '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/',
+  '/bylinkovy-magazin/',
+  '/novinky/',
+]);
+
 const articles = (await getCollection('articles', ({ data }) => !data.draft))
+  .filter((entry) => {
+    const words = (entry.body ?? '').split(/\s+/).filter(Boolean).length;
+    return words >= 120
+      && !nonArticlePaths.has(entry.data.path)
+      && !/\/page\/\d+\/$/.test(entry.data.path);
+  })
   .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
 const latest = articles.slice(0, 6);
 const sections = [
   { href: '/domu/sber-bylinek/', icon: '🧺', title: 'Sběr bylinek', text: 'Jak bylinky bezpečně poznat, kdy je sbírat a jak je šetrně zpracovat.' },
   { href: '/osvedcene-recepty/', icon: '🍯', title: 'Osvědčené recepty', text: 'Domácí sirupy, tinktury, čaje, limonády a další praktické návody.' },
   { href: '/domu/prirodni-lekarna/', icon: '🌿', title: 'Přírodní lékárna', text: 'Přehled bylinek, jejich tradičního využití, omezení a bezpečnosti.' },
-  { href: '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/', icon: '📖', title: 'Bylinkový magazín', text: 'Sezónní sběr, pěstování, kuchyňské využití a nová inspirace.' },
+  { href: '/magazin/', icon: '📖', title: 'Bylinkový magazín', text: 'Sezónní sběr, pěstování, kuchyňské využití a nová inspirace.' },
   { href: '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', icon: '🏷️', title: 'Slevové akce', text: 'Doporučené vybavení, suroviny a výhodné nabídky pro domácí výrobu.' },
   { href: '/bylinkova-herna/', icon: '🧩', title: 'Bylinková herna', text: 'Poznávačky, pexeso a zábavné objevování přírody pro děti i dospělé.' },
 ];
