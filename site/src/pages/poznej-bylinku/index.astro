@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HerbGame from '../../components/HerbGame.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Game',
+  name: 'Poznej bylinku',
+  description: 'Poznávačka známých bylinek podle jejich typických znaků.',
+  url: new URL('/poznej-bylinku/', Astro.site || Astro.url.origin).href,
+  gamePlatform: 'Web browser',
+  inLanguage: 'cs-CZ',
+};
+---
+<BaseLayout
+  title="Poznej bylinku – online poznávačka | Sirupy z bylinek"
+  description="Poznávejte známé bylinky podle vůně, vzhledu a typických znaků."
+  canonical="/poznej-bylinku/"
+  image="/obrazky/bylinky.svg"
+  structuredData={[schema]}
+>
+  <section class="archive-header compact-game-header">
+    <span>Bylinková herna</span>
+    <h1>Poznej bylinku</h1>
+    <p>Přečtěte si nápovědu a vyberte správnou bylinku.</p>
+  </section>
+  <div class="game-page-wrap">
+    <HerbGame mode="identify" />
+    <p class="back-to-games"><a href="/bylinkova-herna/">← Zpět do Bylinkové herny</a></p>
+  </div>
+  <ContextAds topic="sber" heading="Pomůcky a knihy pro poznávání bylin" />
+  <ProductFeed topic="bylinky" heading="Doporučené produkty pro bylinkáře" />
+</BaseLayout>

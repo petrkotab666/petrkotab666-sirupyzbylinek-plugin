@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HerbGame from '../../components/HerbGame.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: 'Bylinkový mistr',
+  description: 'Bodovaný kvíz o bezpečném sběru, skladování a používání bylinek.',
+  url: new URL('/bylinkovy-mistr/', Astro.site || Astro.url.origin).href,
+  inLanguage: 'cs-CZ',
+};
+---
+<BaseLayout
+  title="Bylinkový mistr – vědomostní kvíz | Sirupy z bylinek"
+  description="Otestujte si znalosti bezpečného sběru, skladování a používání bylinek."
+  canonical="/bylinkovy-mistr/"
+  image="/obrazky/bylinky.svg"
+  structuredData={[schema]}
+>
+  <section class="archive-header compact-game-header">
+    <span>Bylinková herna</span>
+    <h1>Bylinkový mistr</h1>
+    <p>Osm otázek prověří, zda znáte základní pravidla bezpečného bylinkaření.</p>
+  </section>
+  <div class="game-page-wrap">
+    <HerbGame mode="quiz" />
+    <p class="back-to-games"><a href="/bylinkova-herna/">← Zpět do Bylinkové herny</a></p>
+  </div>
+  <ContextAds topic="bylinky" heading="Knihy a pomůcky pro další studium" />
+  <ProductFeed topic="bylinky" heading="Doporučené produkty pro bylinkáře" />
+</BaseLayout>

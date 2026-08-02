@@ -1,0 +1,228 @@
+---
+type GameMode = 'memory' | 'identify' | 'quiz';
+interface Props { mode: GameMode }
+const { mode } = Astro.props;
+
+const memoryCards = [
+  { pair: 'mata', icon: '🌿', label: 'Máta' },
+  { pair: 'levandule', icon: '💜', label: 'Levandule' },
+  { pair: 'hermanek', icon: '🌼', label: 'Heřmánek' },
+  { pair: 'kopriva', icon: '🍃', label: 'Kopřiva' },
+  { pair: 'sipky', icon: '🔴', label: 'Šípek' },
+  { pair: 'medunka', icon: '🍋', label: 'Meduňka' },
+].flatMap((item) => [item, item]);
+
+const identifyQuestions = [
+  { clue: 'Má svěží mentolovou vůni a často se používá do letních nápojů.', options: ['Máta', 'Kopřiva', 'Měsíček'], answer: 0 },
+  { clue: 'Má fialové klasy, výrazně voní a bývá součástí voňavých sáčků.', options: ['Levandule', 'Pampeliška', 'Jitrocel'], answer: 0 },
+  { clue: 'Její listy mají žahavé chloupky a na jaře se sbírají mladé vrcholky.', options: ['Meduňka', 'Kopřiva', 'Šalvěj'], answer: 1 },
+  { clue: 'Má drobné bílé okvětní lístky kolem žlutého středu a jemnou vůni.', options: ['Heřmánek', 'Tymián', 'Rozmarýn'], answer: 0 },
+  { clue: 'Její červené plody dozrávají na podzim a uvnitř mají jemné chloupky.', options: ['Bez černý', 'Šípek', 'Rakytník'], answer: 1 },
+];
+
+const quizQuestions = [
+  { question: 'Kde by se bylinky neměly sbírat?', options: ['Na čisté louce', 'U rušné silnice', 'Na vlastní zahradě'], answer: 1 },
+  { question: 'Co udělat, když bylinu bezpečně nepoznáte?', options: ['Nesbírat ji', 'Ochutnat ji', 'Použít ji jen trochu'], answer: 0 },
+  { question: 'Jaké byliny se nemají používat?', options: ['Čerstvé', 'Voňavé', 'Plesnivé nebo zatuchlé'], answer: 2 },
+  { question: 'Proč se domácí výrobky označují datem?', options: ['Kvůli vzhledu', 'Kvůli kontrole stáří a skladování', 'Kvůli barvě etikety'], answer: 1 },
+  { question: 'Co je bezpečnější při první zkoušce?', options: ['Mnoho nových bylin najednou', 'Jedna jednoduchá surovina', 'Nejsilnější možná směs'], answer: 1 },
+  { question: 'Kdo vyžaduje zvýšenou opatrnost?', options: ['Pouze sportovci', 'Děti, těhotné a lidé užívající léky', 'Pouze zahrádkáři'], answer: 1 },
+  { question: 'Co dělat při neobvyklé reakci?', options: ['Pokračovat ve větší dávce', 'Přestat a poradit se s odborníkem', 'Přidat další bylinu'], answer: 1 },
+  { question: 'Nahrazují bylinky lékařskou péči?', options: ['Ano, vždy', 'Pouze o víkendu', 'Ne'], answer: 2 },
+];
+
+const questions = mode === 'identify' ? identifyQuestions : quizQuestions;
+---
+{mode === 'memory' ? (
+  <section class="herb-game" data-game="memory" aria-label="Bylinkové pexeso">
+    <div class="game-toolbar">
+      <span>Tahy: <strong data-moves>0</strong></span>
+      <span>Nalezené dvojice: <strong data-matches>0</strong>/6</span>
+      <button class="game-reset" type="button">Nová hra</button>
+    </div>
+    <div class="memory-board" data-memory-board>
+      {memoryCards.map((card, index) => (
+        <button class="memory-card" type="button" data-pair={card.pair} aria-label={`Otočit kartu ${index + 1}`}>
+          <span class="memory-card-back" aria-hidden="true">?</span>
+          <span class="memory-card-front"><b aria-hidden="true">{card.icon}</b><small>{card.label}</small></span>
+        </button>
+      ))}
+    </div>
+    <p class="game-message" data-message aria-live="polite">Najděte šest dvojic bylinek.</p>
+  </section>
+) : (
+  <section class="herb-game" data-game={mode} aria-label={mode === 'identify' ? 'Poznej bylinku' : 'Bylinkový mistr'}>
+    <script type="application/json" data-game-questions set:html={JSON.stringify(questions)} />
+    <div class="game-toolbar">
+      <span>Otázka: <strong data-progress>1/{questions.length}</strong></span>
+      <span>Body: <strong data-score>0</strong></span>
+      <button class="game-reset" type="button">Začít znovu</button>
+    </div>
+    <div class="quiz-panel">
+      <div class="quiz-symbol" aria-hidden="true">{mode === 'identify' ? '🌱' : '🏆'}</div>
+      <h2 data-question>{mode === 'identify' ? identifyQuestions[0].clue : quizQuestions[0].question}</h2>
+      <div class="quiz-options" data-options></div>
+      <p class="game-message" data-message aria-live="polite">Vyberte jednu odpověď.</p>
+      <button class="button game-next" type="button" data-next hidden>Další otázka</button>
+    </div>
+  </section>
+)}
+
+<script is:inline>
+  function shuffle(items) {
+    for (let index = items.length - 1; index > 0; index -= 1) {
+      const target = Math.floor(Math.random() * (index + 1));
+      [items[index], items[target]] = [items[target], items[index]];
+    }
+    return items;
+  }
+
+  document.querySelectorAll('.herb-game').forEach((game) => {
+    const mode = game.dataset.game;
+    const reset = game.querySelector('.game-reset');
+
+    if (mode === 'memory') {
+      const board = game.querySelector('[data-memory-board]');
+      const movesNode = game.querySelector('[data-moves]');
+      const matchesNode = game.querySelector('[data-matches]');
+      const message = game.querySelector('[data-message]');
+      let first = null;
+      let second = null;
+      let locked = false;
+      let moves = 0;
+      let matches = 0;
+
+      const start = () => {
+        first = null;
+        second = null;
+        locked = false;
+        moves = 0;
+        matches = 0;
+        movesNode.textContent = '0';
+        matchesNode.textContent = '0';
+        message.textContent = 'Najděte šest dvojic bylinek.';
+        const cards = shuffle([...board.querySelectorAll('.memory-card')]);
+        cards.forEach((card) => {
+          card.classList.remove('is-flipped', 'is-matched');
+          card.disabled = false;
+          board.appendChild(card);
+        });
+      };
+
+      board.addEventListener('click', (event) => {
+        const card = event.target.closest('.memory-card');
+        if (!card || locked || card === first || card.classList.contains('is-matched')) return;
+        card.classList.add('is-flipped');
+        if (!first) {
+          first = card;
+          return;
+        }
+
+        second = card;
+        moves += 1;
+        movesNode.textContent = String(moves);
+        locked = true;
+
+        if (first.dataset.pair === second.dataset.pair) {
+          first.classList.add('is-matched');
+          second.classList.add('is-matched');
+          first.disabled = true;
+          second.disabled = true;
+          matches += 1;
+          matchesNode.textContent = String(matches);
+          message.textContent = matches === 6 ? `Hotovo za ${moves} tahů!` : 'Správná dvojice.';
+          first = null;
+          second = null;
+          locked = false;
+          return;
+        }
+
+        message.textContent = 'Tyto karty k sobě nepatří.';
+        window.setTimeout(() => {
+          first.classList.remove('is-flipped');
+          second.classList.remove('is-flipped');
+          first = null;
+          second = null;
+          locked = false;
+        }, 750);
+      });
+
+      reset.addEventListener('click', start);
+      start();
+      return;
+    }
+
+    const dataNode = game.querySelector('[data-game-questions]');
+    const questions = JSON.parse(dataNode.textContent || '[]');
+    const questionNode = game.querySelector('[data-question]');
+    const optionsNode = game.querySelector('[data-options]');
+    const progressNode = game.querySelector('[data-progress]');
+    const scoreNode = game.querySelector('[data-score]');
+    const message = game.querySelector('[data-message]');
+    const next = game.querySelector('[data-next]');
+    let current = 0;
+    let score = 0;
+    let answered = false;
+
+    const render = () => {
+      answered = false;
+      next.hidden = true;
+      const item = questions[current];
+      questionNode.textContent = mode === 'identify' ? item.clue : item.question;
+      progressNode.textContent = `${current + 1}/${questions.length}`;
+      scoreNode.textContent = String(score);
+      message.textContent = 'Vyberte jednu odpověď.';
+      optionsNode.replaceChildren(...item.options.map((option, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'quiz-option';
+        button.textContent = option;
+        button.dataset.index = String(index);
+        return button;
+      }));
+    };
+
+    optionsNode.addEventListener('click', (event) => {
+      const button = event.target.closest('.quiz-option');
+      if (!button || answered) return;
+      answered = true;
+      const item = questions[current];
+      const selected = Number(button.dataset.index);
+      [...optionsNode.children].forEach((option, index) => {
+        option.disabled = true;
+        if (index === item.answer) option.classList.add('is-correct');
+      });
+      if (selected === item.answer) {
+        score += 1;
+        scoreNode.textContent = String(score);
+        message.textContent = 'Správně!';
+      } else {
+        button.classList.add('is-wrong');
+        message.textContent = `Správná odpověď: ${item.options[item.answer]}.`;
+      }
+      next.hidden = false;
+      next.textContent = current === questions.length - 1 ? 'Zobrazit výsledek' : 'Další otázka';
+    });
+
+    next.addEventListener('click', () => {
+      if (current < questions.length - 1) {
+        current += 1;
+        render();
+        return;
+      }
+      questionNode.textContent = mode === 'identify' ? 'Poznávačka dokončena' : 'Kvíz dokončen';
+      optionsNode.replaceChildren();
+      progressNode.textContent = `${questions.length}/${questions.length}`;
+      message.textContent = `Získali jste ${score} bodů z ${questions.length}.`;
+      next.hidden = true;
+    });
+
+    reset.addEventListener('click', () => {
+      current = 0;
+      score = 0;
+      render();
+    });
+
+    render();
+  });
+</script>

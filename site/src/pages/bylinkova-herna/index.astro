@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+
+const games = [
+  {
+    href: '/bylinkove-pexeso/',
+    icon: '🧠',
+    title: 'Bylinkové pexeso',
+    text: 'Otočte karty a najděte šest dvojic známých bylinek.',
+    meta: 'Paměťová hra',
+  },
+  {
+    href: '/poznej-bylinku/',
+    icon: '🌱',
+    title: 'Poznej bylinku',
+    text: 'Poznávejte bylinky podle vůně, vzhledu a typických znaků.',
+    meta: 'Poznávačka',
+  },
+  {
+    href: '/bylinkovy-mistr/',
+    icon: '🏆',
+    title: 'Bylinkový mistr',
+    text: 'Prověřte si znalosti bezpečného sběru, skladování a používání bylin.',
+    meta: 'Bodovaný kvíz',
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Bylinková herna',
+  description: 'Tři interaktivní hry o bylinkách: pexeso, poznávačka a vědomostní kvíz.',
+  url: new URL('/bylinkova-herna/', Astro.site || Astro.url.origin).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: games.map((game, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: game.title,
+      url: new URL(game.href, Astro.site || Astro.url.origin).href,
+    })),
+  },
+};
+---
+<BaseLayout
+  title="Bylinková herna – pexeso, poznávačka a kvíz | Sirupy z bylinek"
+  description="Zahrajte si bylinkové pexeso, poznávačku bylin a vědomostní kvíz Bylinkový mistr."
+  canonical="/bylinkova-herna/"
+  image="/obrazky/bylinky.svg"
+  structuredData={[schema]}
+>
+  <section class="archive-header game-hero">
+    <span>Hry pro malé i velké bylinkáře</span>
+    <h1>Bylinková herna</h1>
+    <p>Tři skutečné interaktivní hry. Vyberte si paměťové pexeso, poznávačku nebo bodovaný vědomostní kvíz.</p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-heading centered-heading">
+      <span>Vyberte hru</span>
+      <h2>Co si dnes zahrajete?</h2>
+      <p>Hry fungují přímo v prohlížeči a není potřeba nic instalovat.</p>
+    </div>
+    <div class="game-launch-grid">
+      {games.map((game) => (
+        <a class="game-launch-card" href={game.href}>
+          <span class="game-launch-icon" aria-hidden="true">{game.icon}</span>
+          <small>{game.meta}</small>
+          <h2>{game.title}</h2>
+          <p>{game.text}</p>
+          <strong>Spustit hru <span aria-hidden="true">→</span></strong>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <ContextAds topic="bylinky" heading="Knihy, pomůcky a bylinky pro další poznávání" />
+  <ProductFeed topic="bylinky" heading="Doporučené produkty pro bylinkáře" />
+</BaseLayout>

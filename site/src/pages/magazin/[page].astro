@@ -8,7 +8,15 @@ import { getPublishedArticles, type ArticleEntry } from '../../lib/articles';
 
 export async function getStaticPaths() {
   const pageSize = 12;
-  const articles = await getPublishedArticles();
+  const hiddenPaths = new Set([
+    '/bylinkova-herna/',
+    '/bylinkova-superherna/',
+    '/bylinkove-pexeso/',
+    '/poznej-bylinku/',
+    '/bylinkovy-mistr/',
+    '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/',
+  ]);
+  const articles = (await getPublishedArticles()).filter((entry) => !hiddenPaths.has(entry.data.path));
   const totalPages = Math.max(1, Math.ceil(articles.length / pageSize));
   return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
     const currentPage = index + 2;
