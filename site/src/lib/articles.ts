@@ -73,7 +73,10 @@ export function cleanDescription(description = '', body = '') {
     const shortened = cleaned.slice(0, 168);
     cleaned = shortened.replace(/\s+\S*$/u, '').trim();
   }
-  return cleaned.replace(/[,:;\-–—\s]+$/u, '').trim() + (cleaned ? '.' : '');
+
+  cleaned = cleaned.replace(/[,:;\-–—\s]+$/u, '').trim();
+  if (!cleaned) return '';
+  return /[.!?]$/u.test(cleaned) ? cleaned : `${cleaned}.`;
 }
 
 export function wordCount(entry: ArticleEntry) {
