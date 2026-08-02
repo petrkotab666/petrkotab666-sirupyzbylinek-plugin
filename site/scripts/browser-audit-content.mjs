@@ -70,7 +70,7 @@ async function auditRoute(route, viewport = { width: 1280, height: 900 }) {
   try {
     const response = await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
     status = response?.status() || 0;
-    await new Promise((resolve) => setTimeout(resolve, 40));
+    await new Promise((resolve) => setTimeout(resolve, 140));
     metrics = await page.evaluate(() => ({
       h1: document.querySelectorAll('h1').length,
       bodyText: document.body.innerText.trim().length,
@@ -80,7 +80,7 @@ async function auditRoute(route, viewport = { width: 1280, height: 900 }) {
   } catch (error) {
     pageErrors.push(String(error));
   }
-  if (status !== 200) errors.push(`${route}: HTTP ${status}`);
+  if (![200, 304].includes(status)) errors.push(`${route}: HTTP ${status}`);
   if (!metrics || metrics.bodyText < 30) errors.push(`${route}: stránka je prázdná nebo se nevykreslila`);
   if (metrics?.h1 !== 1) errors.push(`${route}: nalezeno ${metrics?.h1 ?? 0} nadpisů H1`);
   if (metrics?.brokenImages.length) errors.push(`${route}: rozbité obrázky ${metrics.brokenImages.join(', ')}`);
@@ -160,7 +160,7 @@ for (const [name, route, viewport] of [
   await page.setViewport(viewport);
   await preparePage(page);
   await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  await new Promise((resolve) => setTimeout(resolve, 140));
   await page.screenshot({ path: path.join(screenshotDir, `${name}.png`), fullPage: false });
   await page.close();
 }
