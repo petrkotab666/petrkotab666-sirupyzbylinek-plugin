@@ -23,6 +23,12 @@ const EDITORIAL_MARKERS = [
   'jednoduchost je v domaci bylinkove praxi casto vyhoda',
 ];
 
+const BROKEN_FEATURE_MARKERS = [
+  'jednoduche recepty',
+  'bezpecne pouziti',
+  'vhodne i pro deti',
+];
+
 const TOPICS = [
   ['repelenty', /komar|klist|repelent|hmyz/u],
   ['pestovani', /pestov|zahrad|sazen|kvetinac|substrat|zalev/u],
@@ -86,6 +92,24 @@ function topicKey(title, pagePath) {
   return TOPICS.find(([, pattern]) => pattern.test(haystack))?.[0] || 'bylinky';
 }
 
+function removeBrokenFeatureClusters(blocks) {
+  const result = [...blocks];
+  while (result.length) {
+    const normalized = result.map((block) => normalize(block));
+    const indexes = BROKEN_FEATURE_MARKERS.map((marker) => normalized.findIndex((block) => block.includes(marker)));
+    if (indexes.some((index) => index < 0)) break;
+
+    const first = Math.min(...indexes);
+    const last = Math.max(...indexes);
+    if (last - first > 12) break;
+
+    const start = Math.max(0, first - 3);
+    const end = Math.min(result.length, last + 4);
+    result.splice(start, end - start);
+  }
+  return result;
+}
+
 function cleanBody(body) {
   const blocks = body
     .replace(/\r\n/g, '\n')
@@ -93,11 +117,12 @@ function cleanBody(body) {
     .map((block) => block.trim())
     .filter(Boolean);
 
-  return blocks
-    .filter((block) => {
-      const normalized = normalize(block);
-      return !EDITORIAL_MARKERS.some((marker) => normalized.includes(marker));
-    })
+  const withoutEditorialFillers = blocks.filter((block) => {
+    const normalized = normalize(block);
+    return !EDITORIAL_MARKERS.some((marker) => normalized.includes(marker));
+  });
+
+  return removeBrokenFeatureClusters(withoutEditorialFillers)
     .join('\n\n')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
@@ -138,8 +163,10 @@ for (const file of files) {
 
   const normalizedBody = normalize(body);
   const remaining = EDITORIAL_MARKERS.filter((marker) => normalizedBody.includes(marker));
-  if (remaining.length) {
-    remainingErrors.push(`${path.relative(ROOT, file)}: ${remaining.join(', ')}`);
+  const brokenFeatureBlockRemains = BROKEN_FEATURE_MARKERS.every((marker) => normalizedBody.includes(marker));
+  if (remaining.length || brokenFeatureBlockRemains) {
+    const details = [...remaining, ...(brokenFeatureBlockRemains ? ['broken feature block'] : [])];
+    remainingErrors.push(`${path.relative(ROOT, file)}: ${details.join(', ')}`);
   }
 }
 
