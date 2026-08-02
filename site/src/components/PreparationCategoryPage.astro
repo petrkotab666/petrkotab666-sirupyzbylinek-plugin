@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContextAds from './ContextAds.astro';
+import ProductFeed from './ProductFeed.astro';
+import PreparationCard from './PreparationCard.astro';
+import {
+  preparationCategories,
+  preparationsByCategory,
+  preparationPath,
+  type PreparationCategory,
+} from '../data/herbal-preparations';
+
+interface Props { category: PreparationCategory }
+const { category } = Astro.props;
+const meta = preparationCategories[category];
+const recipes = preparationsByCategory(category);
+const image = recipes[0] ? `/obrazky/recepty/${recipes[0].slug}.svg` : '/obrazky/recepty.svg';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: meta.title,
+  description: meta.description,
+  url: new URL(meta.path, Astro.site || Astro.url.origin).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: recipes.length,
+    itemListElement: recipes.map((recipe, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: recipe.title,
+      url: new URL(preparationPath(recipe), Astro.site || Astro.url.origin).href,
+    })),
+  },
+};
+---
+<BaseLayout
+  title={`${meta.title} – domácí recepty | Sirupy z bylinek`}
+  description={meta.description}
+  canonical={meta.path}
+  image={image}
+  structuredData={[schema]}
+>
+  <section class="preparation-category-hero">
+    <div>
+      <a href="/osvedcene-recepty/">Recepty a domácí výroba</a>
+      <h1>{meta.title}</h1>
+      <p>{meta.description}</p>
+      <span>{recipes.length} podrobných receptů</span>
+    </div>
+    {recipes[0] && <img src={`/obrazky/recepty/${recipes[0].slug}.svg`} alt={meta.title} width="1200" height="675" loading="eager" />}
+  </section>
+
+  <section class="category-recipe-section">
+    <div class="section-heading centered-heading"><span>Vyberte recept</span><h2>Postupy krok za krokem</h2><p>Každý recept obsahuje přesné suroviny, skladování a konkrétní bezpečnostní upozornění.</p></div>
+    <div class="preparation-grid">{recipes.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
+  </section>
+
+  <ContextAds topic="recepty" heading={`Pomůcky a suroviny: ${meta.title}`} />
+  <ProductFeed topic="recepty" heading="Doporučené vybavení pro domácí výrobu" />
+</BaseLayout>
+
+<style>
+  .preparation-category-hero{display:grid;grid-template-columns:1fr minmax(360px,.85fr);width:min(1180px,calc(100% - 2rem));margin:2rem auto;overflow:hidden;border:1px solid rgba(34,77,42,.16);border-radius:32px;background:linear-gradient(135deg,#fff9e9,#e7efd3);box-shadow:0 24px 55px rgba(30,66,36,.12)}
+  .preparation-category-hero>div{display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,5vw,4rem);text-align:center}
+  .preparation-category-hero a{align-self:center;color:#b46725;text-decoration:none;font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+  .preparation-category-hero h1{margin:.65rem 0 .75rem;color:#174c2b;font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.02}
+  .preparation-category-hero p{max-width:670px;margin:0 auto;color:#5c695e;font-size:1.08rem;line-height:1.7}
+  .preparation-category-hero span{align-self:center;margin-top:1.2rem;padding:.55rem .9rem;border-radius:999px;background:#fff;color:#517046;font-weight:850}
+  .preparation-category-hero img{width:100%;height:100%;min-height:420px;object-fit:cover}
+  .category-recipe-section{width:min(1180px,calc(100% - 2rem));margin:3rem auto}
+  .preparation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+  @media(max-width:900px){.preparation-category-hero{grid-template-columns:1fr}.preparation-category-hero img{order:-1;min-height:300px}.preparation-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.preparation-category-hero,.category-recipe-section{width:min(100% - 1rem,1180px)}.preparation-grid{grid-template-columns:1fr}}
+</style>
