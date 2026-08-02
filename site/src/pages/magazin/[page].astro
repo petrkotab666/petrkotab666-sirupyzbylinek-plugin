@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Pagination from '../../components/Pagination.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
 import { getPublishedArticles, type ArticleEntry } from '../../lib/articles';
 
 export async function getStaticPaths() {
@@ -65,8 +67,13 @@ const itemListSchema = {
     <h1>Články, recepty a návody</h1>
     <p>Pokračování přehledu praktických textů o bylinkách, domácích receptech, sběru a pěstování.</p>
   </section>
+
+  <ContextAds topic="bylinky" heading="Doporučené nabídky pro čtenáře magazínu" />
+
   <section class="section-wrap magazine-list">
     <div class="articles-grid">{pageArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
     <Pagination currentPage={currentPage} totalPages={totalPages} />
   </section>
+
+  <ProductFeed topic="bylinky" heading="Produkty související s bylinkami a domácí výrobou" />
 </BaseLayout>
