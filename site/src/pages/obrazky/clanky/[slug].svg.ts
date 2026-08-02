@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import { articleArtworkKey } from '../../../lib/display-image';
 import { inferArtworkTopic, renderArticleArtwork } from '../../../lib/artwork';
 
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   }));
 }
 
-export async function GET({ props }: { props: { entry: Awaited<ReturnType<typeof getCollection<'articles'>>>[number] } }) {
+export async function GET({ props }: { props: { entry: CollectionEntry<'articles'> } }) {
   const { entry } = props;
   const topic = inferArtworkTopic(`${entry.data.title} ${entry.data.category} ${entry.data.path}`);
   const svg = renderArticleArtwork({
