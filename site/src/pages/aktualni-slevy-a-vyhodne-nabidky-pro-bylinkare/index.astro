@@ -17,6 +17,8 @@ interface Product {
 const deals = (productsJson as Product[])
   .filter((product) => product.title && product.image && product.link)
   .slice(0, 12);
+const fallbackImage = '/obrazky/produkt-nahrada.svg';
+const fallbackHandler = `this.onerror=null;this.src='${fallbackImage}';this.dataset.fallback='true'`;
 
 const schema = {
   '@context': 'https://schema.org',
@@ -40,7 +42,7 @@ const schema = {
   title="Aktuální nabídky pro bylinkáře | Sirupy z bylinek"
   description="Přehled aktuálních produktů z partnerského feedu. U každé nabídky najdete obrázek, cenu a přímý odkaz na prodejce."
   canonical="/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/"
-  image="/obrazky/bylinky.svg"
+  image="/obrazky/produkt-nahrada.svg"
   structuredData={[schema]}
 >
   <SectionHero
@@ -64,7 +66,7 @@ const schema = {
         {deals.map((product) => (
           <article class="deal-card">
             <a class="deal-image" href={product.link} target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label={product.title}>
-              <img src={product.image} alt={product.title} width="520" height="390" loading="lazy" decoding="async" />
+              <img src={product.image} alt={product.title} width="520" height="390" loading="lazy" decoding="async" onerror={fallbackHandler} />
             </a>
             <div class="deal-body">
               <span class="deal-badge">Aktuální nabídka</span>
