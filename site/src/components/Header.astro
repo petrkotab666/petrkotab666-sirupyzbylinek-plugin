@@ -14,8 +14,15 @@ const active = (href) => href === '/' ? pathname === '/' : pathname.startsWith(h
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="/" aria-label="Sirupy z bylinek – domů">
-      <span class="brand-mark" aria-hidden="true">🌿</span>
-      <span><strong>Sirupy z bylinek</strong><small>Praktický průvodce bylinkami</small></span>
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img" focusable="false">
+          <path d="M16 49C23 34 30 22 47 10" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+          <path d="M41 17C29 18 23 13 20 6C32 3 42 7 47 14Z" fill="#86b85f" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+          <path d="M31 30C20 32 13 28 8 21C19 16 29 20 35 26Z" fill="#6da44e" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+          <path d="M24 42C14 46 7 43 2 37C11 31 21 33 28 38Z" fill="#9ac66e" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+        </svg>
+      </span>
+      <span class="brand-copy"><strong>Sirupy z bylinek</strong><small>Recepty, sběr a přírodní inspirace</small></span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-menu">
       <span class="sr-only">Otevřít menu</span><span aria-hidden="true">☰</span>
