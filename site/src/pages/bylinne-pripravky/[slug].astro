@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+import PreparationCard from '../../components/PreparationCard.astro';
+import {
+  herbalPreparations,
+  preparationCategories,
+  preparationPath,
+  type HerbalPreparation,
+} from '../../data/herbal-preparations';
+
+export function getStaticPaths() {
+  return herbalPreparations.map((recipe) => ({ params: { slug: recipe.slug }, props: { recipe } }));
+}
+
+interface Props { recipe: HerbalPreparation }
+const { recipe } = Astro.props;
+const category = preparationCategories[recipe.category];
+const image = `/obrazky/recepty/${recipe.slug}.svg`;
+const related = herbalPreparations.filter((item) => item.category === recipe.category && item.slug !== recipe.slug).slice(0, 3);
+const totalMinutes = recipe.prepMinutes + (recipe.restMinutes || 0);
+const duration = (minutes: number) => `PT${Math.max(1, minutes)}M`;
+const canonical = preparationPath(recipe);
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: recipe.title,
+  description: recipe.description,
+  image: [new URL(image, Astro.site || Astro.url.origin).href],
+  recipeCategory: category.title,
+  recipeCuisine: 'Česká domácí bylinná výroba',
+  prepTime: duration(recipe.prepMinutes),
+  totalTime: duration(totalMinutes),
+  recipeYield: recipe.yield,
+  recipeIngredient: recipe.ingredients,
+  recipeInstructions: recipe.steps.map((step, index) => ({ '@type': 'HowToStep', position: index + 1, text: step })),
+  keywords: recipe.tags.join(', '),
+  author: { '@type': 'Organization', name: 'Sirupy z bylinek' },
+};
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Domů', item: new URL('/', Astro.site || Astro.url.origin).href },
+    { '@type': 'ListItem', position: 2, name: 'Recepty', item: new URL('/osvedcene-recepty/', Astro.site || Astro.url.origin).href },
+    { '@type': 'ListItem', position: 3, name: category.title, item: new URL(category.path, Astro.site || Astro.url.origin).href },
+    { '@type': 'ListItem', position: 4, name: recipe.title, item: new URL(canonical, Astro.site || Astro.url.origin).href },
+  ],
+};
+---
+<BaseLayout
+  title={`${recipe.title} – přesný postup | Sirupy z bylinek`}
+  description={recipe.description}
+  image={image}
+  canonical={canonical}
+  type="article"
+  structuredData={[schema, breadcrumb]}
+>
+  <article class="recipe-detail" data-recipe-page>
+    <header class="recipe-hero">
+      <div class="recipe-hero-copy">
+        <a class="recipe-category-link" href={category.path}>{category.title}</a>
+        <h1>{recipe.title}</h1>
+        <p>{recipe.description}</p>
+        <dl class="recipe-facts">
+          <div><dt>Příprava</dt><dd>{recipe.prepMinutes} minut</dd></div>
+          {recipe.restMinutes && <div><dt>Odležení</dt><dd>{Math.round(recipe.restMinutes / 60)} hodin</dd></div>}
+          <div><dt>Množství</dt><dd>{recipe.yield}</dd></div>
+        </dl>
+      </div>
+      <img src={image} alt={recipe.title} width="1200" height="675" loading="eager" fetchpriority="high" />
+    </header>
+
+    <ContextAds topic="recepty" heading={`Vybavení pro recept: ${recipe.title}`} />
+
+    <div class="recipe-columns">
+      <section class="recipe-panel" aria-labelledby="ingredients-title">
+        <span>Co si připravit</span>
+        <h2 id="ingredients-title">Suroviny</h2>
+        <ul class="ingredient-list">{recipe.ingredients.map((ingredient) => <li>{ingredient}</li>)}</ul>
+      </section>
+      <section class="recipe-panel recipe-panel--steps" aria-labelledby="steps-title">
+        <span>Krok za krokem</span>
+        <h2 id="steps-title">Postup</h2>
+        <ol class="method-list">{recipe.steps.map((step) => <li><span>{step}</span></li>)}</ol>
+      </section>
+    </div>
+
+    <section class="recipe-storage">
+      <div><span>Skladování</span><h2>Jak recept uchovat</h2><p>{recipe.storage}</p></div>
+      <div class="recipe-safety"><span>Bezpečnost</span><h2>Na co dát pozor</h2><ul>{recipe.safety.map((item) => <li>{item}</li>)}</ul></div>
+    </section>
+
+    <aside class="recipe-method-note">
+      <strong>Domácí recept není léčivý přípravek</strong>
+      <p>Postup je určen pro běžné kuchyňské nebo zevní domácí použití. Neřeší diagnózu ani nenahrazuje doporučení lékaře, lékárníka nebo veterináře.</p>
+    </aside>
+
+    <ProductFeed topic="recepty" heading="Suroviny, sklenice a pomůcky pro domácí výrobu" />
+
+    {related.length > 0 && (
+      <section class="related-preparations">
+        <div class="section-heading centered-heading"><span>Pokračujte dál</span><h2>Další recepty ze stejné oblasti</h2></div>
+        <div class="preparation-grid">{related.map((item) => <PreparationCard recipe={item} />)}</div>
+      </section>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .recipe-detail{width:min(1180px,calc(100% - 2rem));margin:0 auto;padding:2rem 0 4rem}
+  .recipe-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);overflow:hidden;border:1px solid rgba(35,78,43,.16);border-radius:32px;background:linear-gradient(135deg,#fffaf0,#edf3d9);box-shadow:0 24px 55px rgba(28,65,37,.12)}
+  .recipe-hero-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,5vw,4rem);text-align:center}
+  .recipe-category-link{align-self:center;color:#b36824;text-decoration:none;font-size:.8rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+  .recipe-hero h1{margin:.7rem 0 .8rem;color:#174c2b;font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.02}
+  .recipe-hero p{max-width:680px;margin:0 auto;color:#59685b;font-size:1.08rem;line-height:1.7}
+  .recipe-hero>img{width:100%;height:100%;min-height:420px;object-fit:cover}
+  .recipe-facts{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:1.45rem 0 0}
+  .recipe-facts div{min-width:120px;padding:.75rem 1rem;border-radius:16px;background:rgba(255,255,255,.72)}
+  .recipe-facts dt{font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#8b6e42}
+  .recipe-facts dd{margin:.2rem 0 0;color:#244f2e;font-weight:850}
+  .recipe-columns{display:grid;grid-template-columns:minmax(280px,.75fr) minmax(0,1.25fr);gap:1.25rem;margin:2rem 0}
+  .recipe-panel{padding:clamp(1.5rem,4vw,2.4rem);border:1px solid rgba(35,78,43,.15);border-radius:26px;background:#fffdf8;box-shadow:0 16px 36px rgba(31,70,38,.08)}
+  .recipe-panel>span,.recipe-storage span{font-size:.76rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#b36c27}
+  .recipe-panel h2,.recipe-storage h2{margin:.4rem 0 1rem;color:#174c2b}
+  .ingredient-list{display:grid;gap:.72rem;margin:0;padding:0;list-style:none}
+  .ingredient-list li{position:relative;padding:.7rem .8rem .7rem 2.35rem;border-radius:14px;background:#f3f6e8;color:#445646}
+  .ingredient-list li::before{content:'✓';position:absolute;left:.85rem;color:#408148;font-weight:900}
+  .method-list{display:grid;gap:1rem;counter-reset:step;margin:0;padding:0;list-style:none}
+  .method-list li{counter-increment:step;display:grid;grid-template-columns:44px 1fr;gap:.9rem;align-items:start}
+  .method-list li::before{content:counter(step);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#174c2b;color:#fff;font-weight:900}
+  .method-list span{padding-top:.55rem;color:#4f5e50;line-height:1.65}
+  .recipe-storage{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+  .recipe-storage>div{padding:1.7rem 1.9rem;border-radius:24px;background:#edf3df}
+  .recipe-storage p,.recipe-storage li{color:#526053;line-height:1.65}
+  .recipe-storage ul{margin:0;padding-left:1.15rem}
+  .recipe-storage li+li{margin-top:.55rem}
+  .recipe-safety{background:#fff0df!important;border:1px solid rgba(179,93,42,.22)}
+  .recipe-method-note{margin:1.5rem 0;padding:1.35rem 1.5rem;border-left:5px solid #d9912b;border-radius:0 18px 18px 0;background:#fff9e7;color:#5b5e49}
+  .recipe-method-note strong{display:block;color:#68421e;margin-bottom:.3rem}
+  .recipe-method-note p{margin:0;line-height:1.65}
+  .related-preparations{margin-top:2.5rem}
+  .preparation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
+  @media(max-width:900px){.recipe-hero{grid-template-columns:1fr}.recipe-hero>img{min-height:300px;order:-1}.recipe-columns,.recipe-storage{grid-template-columns:1fr}.preparation-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.recipe-detail{width:min(100% - 1rem,1180px)}.recipe-hero-copy{padding:1.6rem 1.15rem 2rem}.recipe-hero h1{font-size:2.35rem}.preparation-grid{grid-template-columns:1fr}.recipe-facts{display:grid;grid-template-columns:1fr 1fr;width:100%}.recipe-facts div{min-width:0}}
+</style>
