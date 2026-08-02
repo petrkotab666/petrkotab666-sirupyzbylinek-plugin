@@ -23,3 +23,10 @@ const { title, description, image, category, date, updated, sourceUrl } = entry.
     {sourceUrl && <p class="legacy-source">Původní adresa při migraci: <a href={sourceUrl}>{sourceUrl}</a></p>}
   </article>
 </BaseLayout>
+
+<style is:global>
+  .has-hero-image .article-content > p:first-child:has(> img:only-child),
+  .has-hero-image .article-content > p:first-child:has(> a:only-child > img:only-child) {
+    display: none;
+  }
+</style>
