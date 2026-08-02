@@ -17,6 +17,16 @@ const replacements = [
     `if (!quizGame.includes('data-game="herb-master"')) errors.push('bylinkovy-mistr/index.html: arcade interface is missing');`,
     'kontrola arkádového Bylinkového mistra',
   ],
+  [
+    `if (!heroSrc.includes('/obrazky/pestovani.svg')) errors.push(\`cultivation article: expected thematic cultivation image, rendered \${JSON.stringify(heroSrc)}\`);`,
+    `if (!heroSrc.includes('/obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg') && !heroSrc.includes('/obrazky/pestovani.svg')) errors.push(\`cultivation article: expected unique thematic cultivation image, rendered \${JSON.stringify(heroSrc)}\`);`,
+    'jedinečný obrázek článku o pěstování',
+  ],
+  [
+    `if (!repellentHeroSrc.includes('/obrazky/repelenty.svg') && !repellentHeroSrc.includes('/prirodni-repelenty-proti-komarum-a-klistatum/')) {\n  errors.push(\`repellent article: hero is not tied to the article topic: \${JSON.stringify(repellentHeroSrc)}\`);\n}`,
+    `if (!repellentHeroSrc.includes('/obrazky/clanky/prirodni-repelenty-proti-komarum-a-klistatum.svg') && !repellentHeroSrc.includes('/obrazky/repelenty.svg') && !repellentHeroSrc.includes('/prirodni-repelenty-proti-komarum-a-klistatum/')) {\n  errors.push(\`repellent article: hero is not tied to the article topic: \${JSON.stringify(repellentHeroSrc)}\`);\n}`,
+    'jedinečný obrázek článku o repelentech',
+  ],
 ];
 
 let changed = false;
@@ -29,7 +39,7 @@ for (const [before, after, label] of replacements) {
 
 if (changed) {
   await writeFile(target, source, 'utf8');
-  console.log('Audit webu byl aktualizován pro obrazovou hernu a arkádovou hru.');
+  console.log('Audit webu byl aktualizován pro obrazovou hernu, arkádovou hru a jedinečné tematické obrázky.');
 } else {
-  console.log('Audit webu už odpovídá obrazové herně a arkádové hře.');
+  console.log('Audit webu už odpovídá obrazové herně, arkádové hře a jedinečným tematickým obrázkům.');
 }
