@@ -73,7 +73,7 @@ const STOP_WORDS = new Set([
   'co', 'ktere', 'ktery', 'nejlepsi', 'prirodni', 'domaci', 'recept', 'navod', 'pruvodce',
 ]);
 
-const GENERIC_IMAGE_NAMES = /(?:^|[-_.])(logo|logotyp|favicon|avatar|placeholder|brand|kampan|banner|reklama)(?:[-_.]|$)|\b(?:300x250|570x240|728x90|970x250|970x310)\b/iu;
+const GENERIC_IMAGE_NAMES = /(?:logo|logotyp|favicon|avatar|placeholder|brand|kampan|banner|reklama)|\b(?:300x250|570x240|728x90|970x250|970x310)\b/iu;
 
 function normalize(value = '') {
   return value
