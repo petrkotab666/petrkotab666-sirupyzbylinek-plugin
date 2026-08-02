@@ -12,6 +12,7 @@ import {
 
 const categories = Object.entries(preparationCategories) as Array<[PreparationCategory, (typeof preparationCategories)[PreparationCategory]]>;
 const featured = herbalPreparations.filter((recipe) => recipe.featured).slice(0, 9);
+const heroImage = '/obrazky/bylinne-pripravky-hero.svg';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -24,7 +25,7 @@ const schema = {
   title="Bylinné přípravky – čaje, koupele, masti, oleje a další recepty"
   description="Kompletní rozcestník domácích bylinných přípravků s přesnými postupy, skladováním a bezpečnostními upozorněními."
   canonical="/bylinne-pripravky/"
-  image="/obrazky/recepty/mesickova-mast.svg"
+  image={heroImage}
   structuredData={[schema]}
 >
   <section class="preparations-hero">
@@ -34,7 +35,7 @@ const schema = {
       <p>Čaje, koupele, masti, balzámy, olejové maceráty, octy, oxymely, obklady i kuchyňské výrobky. Každý recept uvádí přesný postup, skladování a omezení.</p>
       <a href="#kategorie">Vybrat kategorii <b aria-hidden="true">↓</b></a>
     </div>
-    <img src="/obrazky/recepty/mesickova-mast.svg" alt="Bylinné přípravky a domácí recepty" width="1200" height="675" loading="eager" />
+    <img src={heroImage} alt="Čaj, mast, lahvička a bylinky jako přehled domácích bylinných přípravků" width="1200" height="900" loading="eager" />
   </section>
 
   <section id="kategorie" class="preparation-category-directory">
@@ -82,6 +83,6 @@ const schema = {
   .preparation-category-card p{margin:0;color:#647064;line-height:1.55}
   .preparation-category-card b{margin-top:auto;padding-top:1rem;color:#2f743e}
   .preparation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
-  @media(max-width:950px){.preparations-hero{grid-template-columns:1fr}.preparations-hero img{order:-1;min-height:320px}.preparation-category-grid,.preparation-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:950px){.preparations-hero{grid-template-columns:1fr}.preparations-hero img{order:-1;height:auto;min-height:0;aspect-ratio:4/3}.preparation-category-grid,.preparation-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:640px){.preparations-hero,.preparation-category-directory,.featured-preparations{width:min(100% - 1rem,1180px)}.preparation-category-grid,.preparation-grid{grid-template-columns:1fr}.preparations-hero h1{font-size:2.6rem}}
 </style>
