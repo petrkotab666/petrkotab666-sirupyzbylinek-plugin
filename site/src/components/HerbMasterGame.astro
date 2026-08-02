@@ -1,0 +1,389 @@
+---
+const questions = [
+  {
+    category: 'Sběr',
+    question: 'Kde se bylinky nemají sbírat?',
+    options: ['Na čisté louce', 'U rušné silnice', 'Na vlastní zahradě'],
+    answer: 1,
+    explanation: 'Rostliny u silnic mohou být znečištěné prachem, výfukovými plyny a dalšími látkami.',
+  },
+  {
+    category: 'Poznávání',
+    question: 'Co udělat, když si nejste jistí určením rostliny?',
+    options: ['Ochutnat malý kousek', 'Raději ji nesbírat', 'Smíchat ji s dobře známou bylinou'],
+    answer: 1,
+    explanation: 'Nejasně určená rostlina do kuchyně ani domácích přípravků nepatří.',
+  },
+  {
+    category: 'Sběr',
+    question: 'Jaká nádoba je pro čerstvě nasbírané bylinky vhodnější?',
+    options: ['Prodyšný košík nebo plátěná taška', 'Uzavřený igelitový sáček', 'Mokrá plastová krabice'],
+    answer: 0,
+    explanation: 'V prodyšné nádobě se bylinky méně zapaří a snižuje se riziko rychlého kažení.',
+  },
+  {
+    category: 'Sušení',
+    question: 'Jaké místo je obvykle vhodné pro sušení bylinek?',
+    options: ['Vlhké a teplé', 'Vzdušné, suché a mimo ostré slunce', 'Uzavřené bez proudění vzduchu'],
+    answer: 1,
+    explanation: 'Sucho, stín a proudění vzduchu pomáhají omezit plísně a zachovat kvalitu rostlin.',
+  },
+  {
+    category: 'Skladování',
+    question: 'Co patří na štítek domácí bylinné směsi?',
+    options: ['Jen barva obalu', 'Název a datum přípravy', 'Pouze jméno výrobce'],
+    answer: 1,
+    explanation: 'Název a datum usnadní kontrolu stáří, složení i správného použití.',
+  },
+  {
+    category: 'Bezpečnost',
+    question: 'Co udělat s plesnivou nebo zatuchlou bylinou?',
+    options: ['Opláchnout ji', 'Použít ji jen do koupele', 'Vyhodit ji'],
+    answer: 2,
+    explanation: 'Plesnivé a zatuchlé suroviny se nepoužívají ani po opláchnutí nebo převaření.',
+  },
+  {
+    category: 'Příroda',
+    question: 'Jak se chovat k místu, kde bylinky sbíráte?',
+    options: ['Vysbírat všechny rostliny', 'Nechat dostatek rostlin pro obnovu a živočichy', 'Vytrhávat vždy celé rostliny i s kořeny'],
+    answer: 1,
+    explanation: 'Šetrný sběr ponechává část porostu přírodě a umožňuje rostlinám další rozmnožování.',
+  },
+  {
+    category: 'Bezpečnost',
+    question: 'Kdo by měl být při používání bylin zvlášť opatrný?',
+    options: ['Děti, těhotné, chronicky nemocní a lidé užívající léky', 'Jen profesionální sportovci', 'Pouze lidé, kteří bylinky pěstují'],
+    answer: 0,
+    explanation: 'U rizikových skupin je důležitá individuální konzultace s lékařem nebo lékárníkem.',
+  },
+  {
+    category: 'Domácí výroba',
+    question: 'Proč je lepší začít s jednoduchým jednodruhovým přípravkem?',
+    options: ['Snáze poznáte vlastní reakci', 'Vždy vydrží neomezeně dlouho', 'Nemusí se označovat'],
+    answer: 0,
+    explanation: 'U jednoduchého složení se lépe sleduje snášenlivost i případná nežádoucí reakce.',
+  },
+  {
+    category: 'Bezpečnost',
+    question: 'Co dělat při neobvyklé nebo zhoršující se reakci?',
+    options: ['Zvýšit dávku', 'Přestat přípravek používat a poradit se s odborníkem', 'Přidat další bylinu'],
+    answer: 1,
+    explanation: 'Pokračování nebo kombinování dalších surovin může situaci zkomplikovat.',
+  },
+  {
+    category: 'Skladování',
+    question: 'Kde se obvykle uchovávají dobře usušené bylinky?',
+    options: ['V suchu, temnu a čisté uzavřené nádobě', 'Na přímém slunci', 'V otevřené nádobě vedle sporáku'],
+    answer: 0,
+    explanation: 'Sucho, tma a čistá nádoba omezují vlhkost, světlo, pachy a další znehodnocení.',
+  },
+  {
+    category: 'Sběr',
+    question: 'Kdy je nevhodné sbírat nadzemní části bylinek?',
+    options: ['Když jsou mokré od deště nebo rosy', 'Za suchého počasí', 'Když máte čistý košík'],
+    answer: 0,
+    explanation: 'Mokré rostliny se snadněji zapaří a hůře se bezpečně suší.',
+  },
+  {
+    category: 'Zvířata',
+    question: 'Lze lidský bylinný recept automaticky použít pro psa nebo kočku?',
+    options: ['Ano, stačí poloviční dávka', 'Ne, vhodnost musí posoudit veterinář', 'Ano, pokud přípravek dobře voní'],
+    answer: 1,
+    explanation: 'Zvířata mohou některé látky zpracovávat jinak než člověk a některé rostliny jsou pro ně nevhodné.',
+  },
+  {
+    category: 'Poznávání',
+    question: 'Který znak sám o sobě nestačí k bezpečnému určení byliny?',
+    options: ['Pouze podobná barva květu', 'Kombinace listů, stonku, květu a stanoviště', 'Ověření ve spolehlivém atlasu'],
+    answer: 0,
+    explanation: 'Řada různých rostlin má podobnou barvu květu. Rozhoduje soubor více znaků.',
+  },
+  {
+    category: 'Domácí výroba',
+    question: 'Co je důležité před plněním domácího sirupu nebo výluhu?',
+    options: ['Použít čisté vhodné nádoby', 'Přidat náhodnou směs koření', 'Nechat nádoby otevřené venku'],
+    answer: 0,
+    explanation: 'Čistota nádob a pomůcek je základ bezpečné domácí výroby.',
+  },
+  {
+    category: 'Bezpečnost',
+    question: 'Mohou bylinky ovlivňovat účinek léků?',
+    options: ['Ne, nikdy', 'Ano, některé mohou s léky interagovat', 'Jen tehdy, když jsou čerstvé'],
+    answer: 1,
+    explanation: 'Některé byliny mohou účinek léků zesílit, oslabit nebo jinak změnit.',
+  },
+  {
+    category: 'Příroda',
+    question: 'Co dělat s chráněnou nebo vzácnou rostlinou ve volné přírodě?',
+    options: ['Nesbírat ji', 'Vzít jen květ', 'Přesadit ji domů'],
+    answer: 0,
+    explanation: 'Chráněné a vzácné rostliny se ve volné přírodě nesbírají ani nepřesazují.',
+  },
+  {
+    category: 'Bezpečnost',
+    question: 'Nahrazují bylinky lékařskou péči při vážných nebo přetrvávajících potížích?',
+    options: ['Ano, vždy', 'Ne', 'Jen o víkendu'],
+    answer: 1,
+    explanation: 'Bylinky mohou být doplňkem, ale nemají oddalovat potřebné vyšetření a léčbu.',
+  },
+];
+---
+<section class="herb-master" data-game="quiz" data-game-version="master-v2" aria-label="Bylinkový mistr">
+  <script type="application/json" data-master-questions set:html={JSON.stringify(questions)} />
+
+  <div class="master-start" data-start-screen>
+    <div class="master-emblem" aria-hidden="true"><span>🌿</span><b>★</b></div>
+    <p class="master-kicker">Vědomostní výprava</p>
+    <h2>Staňte se Bylinkovým mistrem</h2>
+    <p class="master-lead">Vyberte obtížnost. Otázky i pořadí odpovědí se při každé hře promíchají.</p>
+    <div class="difficulty-grid" aria-label="Výběr obtížnosti">
+      <button type="button" data-difficulty="6" data-label="Učedník">
+        <span aria-hidden="true">🌱</span><strong>Učedník</strong><small>6 otázek</small>
+      </button>
+      <button type="button" data-difficulty="10" data-label="Znalec">
+        <span aria-hidden="true">🌿</span><strong>Znalec</strong><small>10 otázek</small>
+      </button>
+      <button type="button" data-difficulty="14" data-label="Mistr">
+        <span aria-hidden="true">🏆</span><strong>Mistr</strong><small>14 otázek</small>
+      </button>
+    </div>
+    <p class="master-best">Nejlepší výsledek: <strong data-best-score>zatím žádný</strong></p>
+  </div>
+
+  <div class="master-play" data-play-screen hidden>
+    <div class="master-toolbar">
+      <div><span>Otázka</span><strong data-progress>1/10</strong></div>
+      <div><span>Body</span><strong data-score>0</strong></div>
+      <div><span>Série</span><strong data-streak>0</strong></div>
+      <button type="button" data-restart>Nová hra</button>
+    </div>
+    <div class="master-progress" aria-hidden="true"><span data-progress-bar></span></div>
+    <div class="master-question-card">
+      <span class="master-category" data-category>Sběr</span>
+      <h2 data-question></h2>
+      <div class="master-options" data-options></div>
+      <div class="master-feedback" data-feedback aria-live="polite">Vyberte jednu odpověď.</div>
+      <button class="master-next" type="button" data-next hidden>Další otázka</button>
+    </div>
+    <p class="master-keyboard">Tip: odpověď můžete zvolit také klávesami 1, 2 nebo 3.</p>
+  </div>
+
+  <div class="master-result" data-result-screen hidden>
+    <div class="result-medal" data-result-icon aria-hidden="true">🏆</div>
+    <p class="master-kicker">Výprava dokončena</p>
+    <h2 data-result-title>Bylinkový mistr</h2>
+    <p class="result-score" data-result-score></p>
+    <p data-result-text></p>
+    <div class="result-actions">
+      <button type="button" data-play-again>Hrát znovu</button>
+      <button type="button" class="secondary" data-share>Sdílet výsledek</button>
+    </div>
+    <p class="share-status" data-share-status aria-live="polite"></p>
+  </div>
+</section>
+
+<script is:inline>
+  const shuffleMasterItems = (items) => {
+    const result = [...items];
+    for (let index = result.length - 1; index > 0; index -= 1) {
+      const target = Math.floor(Math.random() * (index + 1));
+      [result[index], result[target]] = [result[target], result[index]];
+    }
+    return result;
+  };
+
+  document.querySelectorAll('[data-game-version="master-v2"]').forEach((game) => {
+    const questionData = JSON.parse(game.querySelector('[data-master-questions]')?.textContent || '[]');
+    const startScreen = game.querySelector('[data-start-screen]');
+    const playScreen = game.querySelector('[data-play-screen]');
+    const resultScreen = game.querySelector('[data-result-screen]');
+    const progress = game.querySelector('[data-progress]');
+    const progressBar = game.querySelector('[data-progress-bar]');
+    const scoreNode = game.querySelector('[data-score]');
+    const streakNode = game.querySelector('[data-streak]');
+    const categoryNode = game.querySelector('[data-category]');
+    const questionNode = game.querySelector('[data-question]');
+    const optionsNode = game.querySelector('[data-options]');
+    const feedbackNode = game.querySelector('[data-feedback]');
+    const nextButton = game.querySelector('[data-next]');
+    const bestScoreNode = game.querySelector('[data-best-score]');
+    const resultIcon = game.querySelector('[data-result-icon]');
+    const resultTitle = game.querySelector('[data-result-title]');
+    const resultScore = game.querySelector('[data-result-score]');
+    const resultText = game.querySelector('[data-result-text]');
+    const shareStatus = game.querySelector('[data-share-status]');
+    const storageKey = 'bylinkovyMistrBestV2';
+
+    let activeQuestions = [];
+    let current = 0;
+    let score = 0;
+    let streak = 0;
+    let answered = false;
+    let currentDifficulty = 'Znalec';
+    let lastShareText = '';
+
+    const loadBest = () => {
+      try {
+        const value = Number(localStorage.getItem(storageKey) || 0);
+        bestScoreNode.textContent = value > 0 ? `${value} %` : 'zatím žádný';
+      } catch {
+        bestScoreNode.textContent = 'zatím žádný';
+      }
+    };
+
+    const saveBest = (percent) => {
+      try {
+        const previous = Number(localStorage.getItem(storageKey) || 0);
+        if (percent > previous) localStorage.setItem(storageKey, String(percent));
+      } catch {
+        // Hra funguje i v prohlížeči, který místní úložiště blokuje.
+      }
+      loadBest();
+    };
+
+    const showScreen = (screen) => {
+      startScreen.hidden = screen !== 'start';
+      playScreen.hidden = screen !== 'play';
+      resultScreen.hidden = screen !== 'result';
+    };
+
+    const renderQuestion = () => {
+      answered = false;
+      nextButton.hidden = true;
+      const item = activeQuestions[current];
+      const choices = shuffleMasterItems(item.options.map((text, index) => ({ text, correct: index === item.answer })));
+      categoryNode.textContent = item.category;
+      questionNode.textContent = item.question;
+      progress.textContent = `${current + 1}/${activeQuestions.length}`;
+      progressBar.style.width = `${((current + 1) / activeQuestions.length) * 100}%`;
+      scoreNode.textContent = String(score);
+      streakNode.textContent = String(streak);
+      feedbackNode.className = 'master-feedback';
+      feedbackNode.textContent = 'Vyberte jednu odpověď.';
+      optionsNode.replaceChildren(...choices.map((choice, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'master-option';
+        button.dataset.correct = choice.correct ? 'true' : 'false';
+        button.innerHTML = `<span>${index + 1}</span><b></b>`;
+        button.querySelector('b').textContent = choice.text;
+        return button;
+      }));
+      optionsNode.querySelector('button')?.focus();
+    };
+
+    const finishGame = () => {
+      const percent = Math.round((score / activeQuestions.length) * 100);
+      let title = 'Bylinkový učedník';
+      let icon = '🌱';
+      let text = 'Základ už máte. Zkuste si hru znovu a upevněte si pravidla bezpečného bylinkaření.';
+      if (percent >= 85) {
+        title = 'Bylinkový mistr';
+        icon = '🏆';
+        text = 'Výborně. V bezpečném sběru, skladování a používání bylin se opravdu vyznáte.';
+      } else if (percent >= 60) {
+        title = 'Bylinkový znalec';
+        icon = '🌿';
+        text = 'Velmi dobrý výsledek. K titulu mistra už vám chybí jen několik detailů.';
+      }
+      resultIcon.textContent = icon;
+      resultTitle.textContent = title;
+      resultScore.textContent = `${score} z ${activeQuestions.length} správně · ${percent} %`;
+      resultText.textContent = text;
+      lastShareText = `V kvízu Bylinkový mistr jsem získal(a) ${score} z ${activeQuestions.length} bodů (${percent} %).`;
+      saveBest(percent);
+      shareStatus.textContent = '';
+      showScreen('result');
+      resultTitle.focus?.();
+    };
+
+    const selectAnswer = (button) => {
+      if (answered || !button) return;
+      answered = true;
+      const item = activeQuestions[current];
+      const correct = button.dataset.correct === 'true';
+      optionsNode.querySelectorAll('button').forEach((option) => {
+        option.disabled = true;
+        if (option.dataset.correct === 'true') option.classList.add('is-correct');
+      });
+      if (correct) {
+        score += 1;
+        streak += 1;
+        button.classList.add('is-correct');
+        feedbackNode.classList.add('is-correct');
+        feedbackNode.innerHTML = `<strong>Správně.</strong> ${item.explanation}`;
+      } else {
+        streak = 0;
+        button.classList.add('is-wrong');
+        feedbackNode.classList.add('is-wrong');
+        feedbackNode.innerHTML = `<strong>Tentokrát ne.</strong> ${item.explanation}`;
+      }
+      scoreNode.textContent = String(score);
+      streakNode.textContent = String(streak);
+      nextButton.hidden = false;
+      nextButton.textContent = current === activeQuestions.length - 1 ? 'Zobrazit výsledek' : 'Další otázka';
+      nextButton.focus();
+    };
+
+    const startGame = (count, label) => {
+      activeQuestions = shuffleMasterItems(questionData).slice(0, count);
+      currentDifficulty = label;
+      current = 0;
+      score = 0;
+      streak = 0;
+      showScreen('play');
+      renderQuestion();
+    };
+
+    game.querySelectorAll('[data-difficulty]').forEach((button) => {
+      button.addEventListener('click', () => startGame(Number(button.dataset.difficulty), button.dataset.label || 'Znalec'));
+    });
+
+    optionsNode.addEventListener('click', (event) => selectAnswer(event.target.closest('.master-option')));
+
+    nextButton.addEventListener('click', () => {
+      if (current < activeQuestions.length - 1) {
+        current += 1;
+        renderQuestion();
+      } else {
+        finishGame();
+      }
+    });
+
+    game.querySelector('[data-restart]').addEventListener('click', () => showScreen('start'));
+    game.querySelector('[data-play-again]').addEventListener('click', () => showScreen('start'));
+
+    game.querySelector('[data-share]').addEventListener('click', async () => {
+      try {
+        if (navigator.share) {
+          await navigator.share({ title: 'Bylinkový mistr', text: lastShareText, url: window.location.href });
+          shareStatus.textContent = 'Výsledek je připraven ke sdílení.';
+        } else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(`${lastShareText} ${window.location.href}`);
+          shareStatus.textContent = 'Výsledek byl zkopírován do schránky.';
+        } else {
+          shareStatus.textContent = lastShareText;
+        }
+      } catch (error) {
+        if (error?.name !== 'AbortError') shareStatus.textContent = 'Sdílení se nepodařilo. Výsledek můžete zkopírovat ručně.';
+      }
+    });
+
+    game.addEventListener('keydown', (event) => {
+      if (playScreen.hidden || answered || !['1', '2', '3'].includes(event.key)) return;
+      const button = optionsNode.querySelectorAll('.master-option')[Number(event.key) - 1];
+      if (button) selectAnswer(button);
+    });
+
+    loadBest();
+    showScreen('start');
+  });
+</script>
+
+<style>
+  .herb-master{position:relative;overflow:hidden;border:1px solid rgba(38,98,54,.2);border-radius:32px;background:linear-gradient(145deg,#fffef8 0%,#f4faef 58%,#e7f3df 100%);box-shadow:0 28px 70px rgba(35,76,42,.16)}
+  .herb-master:before,.herb-master:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.herb-master:before{width:300px;height:300px;right:-160px;top:-170px;background:rgba(105,157,80,.16)}.herb-master:after{width:220px;height:220px;left:-130px;bottom:-140px;background:rgba(216,166,58,.13)}
+  .master-start,.master-result{position:relative;z-index:1;padding:clamp(30px,6vw,64px);text-align:center}.master-emblem{position:relative;display:grid;width:116px;height:116px;margin:0 auto 20px;place-items:center;border:1px solid rgba(255,255,255,.8);border-radius:34px;background:linear-gradient(145deg,#356b39,#17391f);box-shadow:0 18px 36px rgba(23,57,31,.25);font-size:3.5rem;transform:rotate(-3deg)}.master-emblem b{position:absolute;right:-9px;top:-10px;display:grid;width:39px;height:39px;place-items:center;border:4px solid #f8f5df;border-radius:50%;background:#d8a63a;color:#fff;font-size:1rem}.master-kicker{margin:0;color:#4e7b4f;font-size:.73rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.master-start h2,.master-result h2{margin:.45rem auto .8rem;max-width:720px;color:#17391f;font:700 clamp(2rem,5vw,3.7rem)/1.02 Georgia,serif}.master-lead,.master-result>p:not(.master-kicker):not(.result-score):not(.share-status){max-width:690px;margin:0 auto;color:#5f6d61;font-size:1.04rem}.difficulty-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:760px;margin:30px auto 0}.difficulty-grid button{display:grid;gap:5px;place-items:center;padding:22px 14px;border:1px solid #cedfc9;border-radius:22px;background:rgba(255,255,255,.82);color:#17391f;cursor:pointer;box-shadow:0 10px 28px rgba(44,75,48,.08);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}.difficulty-grid button:hover,.difficulty-grid button:focus-visible{transform:translateY(-5px);border-color:#6e9a69;box-shadow:0 18px 38px rgba(44,75,48,.16)}.difficulty-grid button span{font-size:2rem}.difficulty-grid button strong{font:700 1.2rem Georgia,serif}.difficulty-grid button small{color:#667069}.master-best{margin:23px 0 0!important;color:#667069!important;font-size:.9rem!important}.master-best strong{color:#356b39}.master-play{position:relative;z-index:1;padding:22px}.master-toolbar{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:10px;align-items:stretch;margin-bottom:14px}.master-toolbar>div{display:grid;gap:1px;padding:11px 14px;border:1px solid #dbe7d7;border-radius:15px;background:rgba(255,255,255,.78)}.master-toolbar span{color:#728075;font-size:.68rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.master-toolbar strong{color:#17391f;font-size:1.05rem}.master-toolbar button,.result-actions button{padding:11px 17px;border:0;border-radius:15px;background:#356b39;color:#fff;font:inherit;font-weight:850;cursor:pointer}.master-progress{height:8px;margin-bottom:18px;overflow:hidden;border-radius:999px;background:#dfeadd}.master-progress span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#d8a63a,#478347);transition:width .25s ease}.master-question-card{padding:clamp(22px,5vw,46px);border:1px solid rgba(255,255,255,.85);border-radius:25px;background:rgba(255,255,255,.86);box-shadow:0 16px 42px rgba(44,75,48,.09);text-align:center}.master-category{display:inline-flex;padding:6px 12px;border-radius:999px;background:#e9f3e7;color:#356b39;font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.master-question-card h2{max-width:760px;min-height:2.5em;margin:18px auto 26px;color:#17391f;font:700 clamp(1.45rem,3.4vw,2.25rem)/1.24 Georgia,serif}.master-options{display:grid;gap:12px;max-width:760px;margin:auto}.master-option{display:grid;grid-template-columns:42px 1fr;align-items:center;gap:13px;width:100%;padding:12px 17px;border:1px solid #d5e2d1;border-radius:17px;background:#fff;color:#253127;font:inherit;text-align:left;cursor:pointer;transition:transform .15s ease,border-color .15s ease,background .15s ease}.master-option:hover:not(:disabled),.master-option:focus-visible:not(:disabled){transform:translateX(4px);border-color:#679266;background:#f7fbf5}.master-option>span{display:grid;width:34px;height:34px;place-items:center;border-radius:11px;background:#edf5e9;color:#356b39;font-weight:900}.master-option b{font-weight:760}.master-option.is-correct{border-color:#55905a;background:#e7f5e5}.master-option.is-correct>span{background:#478347;color:#fff}.master-option.is-wrong{border-color:#bd6a6a;background:#fff0ef}.master-option.is-wrong>span{background:#b65e5e;color:#fff}.master-feedback{max-width:760px;margin:18px auto 0;padding:13px 16px;border-radius:15px;background:#f3f6f1;color:#667069;text-align:left}.master-feedback.is-correct{background:#e8f5e5;color:#2f6334}.master-feedback.is-wrong{background:#fff0ef;color:#874444}.master-next{margin-top:18px;padding:12px 20px;border:0;border-radius:999px;background:#17391f;color:#fff;font:inherit;font-weight:850;cursor:pointer}.master-keyboard{margin:14px 0 0;color:#7c857d;font-size:.78rem;text-align:center}.result-medal{display:grid;width:104px;height:104px;margin:0 auto 20px;place-items:center;border-radius:34px;background:linear-gradient(145deg,#fff6cf,#f2cf68);box-shadow:0 18px 38px rgba(126,91,17,.18);font-size:3.2rem}.result-score{margin:12px 0!important;color:#356b39!important;font-size:1.35rem!important;font-weight:900}.result-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin-top:28px}.result-actions .secondary{border:1px solid #aac4a5;background:#fff;color:#356b39}.share-status{min-height:1.5em;margin:13px 0 0;color:#667069;font-size:.83rem}
+  [hidden]{display:none!important}
+  @media(max-width:700px){.difficulty-grid{grid-template-columns:1fr}.master-play{padding:14px}.master-toolbar{grid-template-columns:repeat(3,1fr)}.master-toolbar button{grid-column:1/-1}.master-question-card{padding:23px 16px}.master-question-card h2{min-height:0}.master-option{grid-template-columns:36px 1fr;padding:11px}.master-option>span{width:30px;height:30px}.master-keyboard{display:none}}
+</style>
