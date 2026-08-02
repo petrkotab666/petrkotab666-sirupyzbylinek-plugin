@@ -1,0 +1,65 @@
+name: Promote Cloudflare Pages deployment
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/promote-cloudflare-deployment.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  promote:
+    if: github.event_name != 'pull_request' || github.head_ref == 'force-cloudflare-production-deploy'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_ACCOUNT_ID: 87659411eeb4335b3c1e2c01014edbfb
+      CLOUDFLARE_PROJECT_NAME: sirupyzbylinek-astro
+      TARGET_DEPLOYMENT_ID: 10f32724-d8b7-4438-a984-9db748d218e1
+
+    steps:
+      - name: Inspect project and current deployments
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          PROJECT="$(curl --silent --show-error \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
+
+          echo 'PROJECT SUMMARY'
+          printf '%s' "$PROJECT" | jq '{success, errors, result: (.result | {name, subdomain, production_branch, source, canonical_deployment: (.canonical_deployment | {id, environment, url, aliases, branch: .deployment_trigger.metadata.branch, commit_hash: .deployment_trigger.metadata.commit_hash}), latest_deployment: (.latest_deployment | {id, environment, url, aliases, branch: .deployment_trigger.metadata.branch, commit_hash: .deployment_trigger.metadata.commit_hash})})}'
+
+          DEPLOYMENTS="$(curl --silent --show-error \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments?env=production" \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
+
+          echo 'RECENT PRODUCTION DEPLOYMENTS'
+          printf '%s' "$DEPLOYMENTS" | jq '[.result[0:10][] | {id, environment, url, aliases, created_on, branch: .deployment_trigger.metadata.branch, commit_hash: .deployment_trigger.metadata.commit_hash, status: .latest_stage.status}]'
+
+      - name: Attempt production promotion and show complete response
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          BODY_FILE="$(mktemp)"
+          STATUS="$(curl --silent --show-error \
+            --output "$BODY_FILE" \
+            --write-out '%{http_code}' \
+            --request POST \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments/${TARGET_DEPLOYMENT_ID}/rollback" \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            --header "Content-Type: application/json" \
+            --data '{}')"
+
+          echo "Rollback HTTP status: $STATUS"
+          cat "$BODY_FILE" | jq . || cat "$BODY_FILE"
+
+          if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 300 ]; then
+            exit 0
+          fi
+          exit 1
