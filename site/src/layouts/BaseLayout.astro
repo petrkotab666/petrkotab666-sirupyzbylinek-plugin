@@ -7,6 +7,7 @@ import '../styles/unified-media.css';
 import '../styles/visual-refresh.css';
 import '../styles/hub-navigation.css';
 import '../styles/original-assets-recovery.css';
+import '../styles/final-responsive-fixes.css';
 
 const {
   title = 'Sirupy z bylinek – recepty, sběr a přírodní inspirace',
@@ -55,7 +56,7 @@ const commonSchemas = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={metaDescription} />
-    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'} />
+    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:large'} />
     <link rel="canonical" href={canonicalUrl} />
     {prev && <link rel="prev" href={new URL(prev, siteUrl)} />}
     {next && <link rel="next" href={new URL(next, siteUrl)} />}
