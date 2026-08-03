@@ -6,9 +6,15 @@ interface Props {
   entry?: ArticleEntry;
   topic?: string;
   heading?: string;
+  placement?: 'primary' | 'secondary';
 }
 
-const { entry, topic: topicOverride, heading = 'Co se může hodit k tomuto tématu' } = Astro.props;
+const {
+  entry,
+  topic: topicOverride,
+  heading = 'Co se může hodit k tomuto tématu',
+  placement = 'primary',
+} = Astro.props;
 const topic = topicOverride || (entry ? topicKey(entry) : 'bylinky');
 
 const campaigns = {
@@ -47,9 +53,39 @@ const campaigns = {
     href: 'https://www.econea.cz/collections/produkty-do-prirody-proti-hmyzu?a_box=se8pw4uc',
     cta: 'Vybrat ochranu do přírody',
   },
+  drpopov: {
+    icon: '💧',
+    title: 'Bylinné kapky a tradiční přípravky',
+    text: 'Výběr bylinných kapek, čajů, mastí a dalších hotových přípravků.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4e3651a5',
+    cta: 'Prohlédnout bylinné přípravky',
+  },
+  nadeje: {
+    icon: '🌱',
+    title: 'Bylinné výtažky a přírodní péče',
+    text: 'Hotové bylinné produkty a výtažky pro ty, kdo nechtějí vyrábět doma.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f361f12',
+    cta: 'Zobrazit nabídku',
+  },
+  vivaco: {
+    icon: '🧴',
+    title: 'Přírodní kosmetika a domácí péče',
+    text: 'Kosmetika, bylinné balzámy a další produkty pro zevní péči.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=759c16de',
+    cta: 'Vybrat přírodní péči',
+  },
+  naturprodukt: {
+    icon: '🍃',
+    title: 'Přírodní produkty a bylinná inspirace',
+    text: 'Další výběr bylinných produktů, čajů a přírodní domácí péče.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=d72003c9',
+    cta: 'Otevřít nabídku',
+  },
 };
 
-const byTopic: Record<string, Array<keyof typeof campaigns>> = {
+type CampaignKey = keyof typeof campaigns;
+
+const primaryByTopic: Record<string, CampaignKey[]> = {
   recepty: ['sklo', 'bylik', 'knihy'],
   napoje: ['sklo', 'bylik', 'knihy'],
   zavarovani: ['sklo', 'knihy', 'bylik'],
@@ -57,15 +93,32 @@ const byTopic: Record<string, Array<keyof typeof campaigns>> = {
   pestovani: ['bylik', 'knihy', 'sklo'],
   zdravi: ['brainmax', 'bylik', 'knihy'],
   vyziva: ['brainmax', 'bylik', 'knihy'],
-  krasa: ['bylik', 'knihy', 'brainmax'],
+  krasa: ['vivaco', 'bylik', 'knihy'],
   zvirata: ['bylik', 'knihy', 'sklo'],
   repelenty: ['econea', 'bylik', 'knihy'],
   bylinky: ['bylik', 'knihy', 'sklo'],
 };
 
-const selected = (byTopic[topic] || byTopic.bylinky).map((key) => campaigns[key]);
+const secondaryByTopic: Record<string, CampaignKey[]> = {
+  recepty: ['drpopov', 'nadeje', 'naturprodukt'],
+  napoje: ['naturprodukt', 'drpopov', 'nadeje'],
+  zavarovani: ['naturprodukt', 'drpopov', 'vivaco'],
+  sber: ['drpopov', 'nadeje', 'naturprodukt'],
+  pestovani: ['nadeje', 'naturprodukt', 'drpopov'],
+  zdravi: ['drpopov', 'nadeje', 'naturprodukt'],
+  vyziva: ['naturprodukt', 'drpopov', 'nadeje'],
+  krasa: ['vivaco', 'drpopov', 'naturprodukt'],
+  zvirata: ['naturprodukt', 'drpopov', 'nadeje'],
+  repelenty: ['vivaco', 'naturprodukt', 'drpopov'],
+  bylinky: ['drpopov', 'nadeje', 'naturprodukt'],
+};
+
+const selectedKeys = placement === 'secondary'
+  ? (secondaryByTopic[topic] || secondaryByTopic.bylinky)
+  : (primaryByTopic[topic] || primaryByTopic.bylinky);
+const selected = selectedKeys.map((key) => campaigns[key]);
 ---
-<aside class="context-ads" aria-label="Tematické komerční nabídky">
+<aside class:list={['context-ads', `context-ads--${placement}`]} data-ad-placement={placement} aria-label="Tematické komerční nabídky">
   <div class="ad-heading">
     <span>Reklama</span>
     <strong>{heading}</strong>
