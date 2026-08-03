@@ -63,7 +63,6 @@ const byTopic = {
 } as const;
 const keys = byTopic[topic as keyof typeof byTopic] || byTopic.bylinky;
 const selected = keys.map((key) => campaigns[key]);
-const position = placement === 'lower' ? 5 : 2;
 ---
 <aside class="article-inline-ad" data-inline-article-ad data-placement={placement}>
   <span class="article-inline-ad-label">Reklama · doporučení k tématu</span>
@@ -77,19 +76,3 @@ const position = placement === 'lower' ? 5 : 2;
     ))}
   </div>
 </aside>
-<script is:inline define:vars={{ position }}>
-  (() => {
-    const script = document.currentScript;
-    const ad = script?.previousElementSibling;
-    const article = ad?.closest('.article-shell');
-    const content = article?.querySelector('.article-content');
-    if (!ad || !content || ad.dataset.moved === 'true') return;
-    const headings = [...content.querySelectorAll(':scope > h2')];
-    const paragraphs = [...content.querySelectorAll(':scope > p')];
-    const target = headings[position - 1] || paragraphs[Math.min(position + 2, paragraphs.length - 1)];
-    if (target) {
-      target.insertAdjacentElement('afterend', ad);
-      ad.dataset.moved = 'true';
-    }
-  })();
-</script>
