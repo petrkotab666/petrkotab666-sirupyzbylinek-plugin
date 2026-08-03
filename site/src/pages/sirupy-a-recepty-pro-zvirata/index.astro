@@ -1,0 +1,31 @@
+---
+import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  { href: '/sirupy-a-recepty-pro-zvirata/dychaci-ustroji-zvirat/', title: 'Dýchací ústrojí zvířat', text: 'Přehled tradičních bylin a situací, kdy má vždy přednost veterinární vyšetření.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--dychaci-ustroji-zvirat.svg', kicker: 'Kašel a dýchání' },
+  { href: '/sirupy-a-recepty-pro-zvirata/imunitni-system-zvirat/', title: 'Imunitní systém', text: 'Bezpečné potravinové doplňky, omezení a rizika lidských receptů u zvířat.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--imunitni-system-zvirat.svg', kicker: 'Vitalita' },
+  { href: '/sirupy-a-recepty-pro-zvirata/klid-a-psychika-zvirat/', title: 'Klid a psychika', text: 'Byliny se zklidňujícím účinkem vyžadují přesné dávkování a odbornou konzultaci.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--klid-a-psychika-zvirat.svg', kicker: 'Stres a neklid' },
+  { href: '/sirupy-a-recepty-pro-zvirata/kuze-a-srst-zvirat/', title: 'Kůže a srst', text: 'Zevní péče, oplachy, riziko olizování a přehled nevhodných esenciálních olejů.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--kuze-a-srst-zvirat.svg', kicker: 'Zevní použití' },
+  { href: '/sirupy-a-recepty-pro-zvirata/pohybovy-aparat-zvirat/', title: 'Pohybový aparát', text: 'Klouby, svaly a regenerace bez přenášení lidských tinktur a mastí na zvířata.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--pohybovy-aparat-zvirat.svg', kicker: 'Klouby a svaly' },
+  { href: '/sirupy-a-recepty-pro-zvirata/zazivani-zvirat/', title: 'Zažívání zvířat', text: 'Jemné potravinové suroviny, hydratace a varovné příznaky vyžadující veterináře.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--zazivani-zvirat.svg', kicker: 'Trávení' },
+  { href: '/sirupy-a-recepty-pro-zvirata/prirodni-lekarna-pro-zvirata/', title: 'Přírodní lékárna pro zvířata', text: 'Hlavní bezpečnostní rozcestník, rozdíly mezi druhy a rizikové domácí postupy.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--prirodni-lekarna-pro-zvirata.svg', kicker: 'Začněte bezpečně' },
+  { href: '/nebezpecne-byliny-pro-psy-a-kocky/', title: 'Nebezpečné byliny pro psy a kočky', text: 'Rostliny, éterické oleje a lidské přípravky, kterým je potřeba se vyhnout.', image: '/obrazky/clanky/nebezpecne-byliny-pro-psy-a-kocky.svg', kicker: 'Důležité varování' },
+] as const;
+---
+<HeritageHubLayout
+  title="Bylinky a recepty pro zvířata – bezpečný tematický rozcestník"
+  description="Obnovený obrazový rozcestník bylinných témat pro psy, kočky a další zvířata s důrazem na bezpečnost a veterinární péči."
+  canonical="/sirupy-a-recepty-pro-zvirata/"
+  eyebrow="Bylinky a zvířata"
+  heading="Recepty a přírodní péče pro zvířata"
+  intro="Zvířata zpracovávají rostlinné látky jinak než lidé. Vyberte oblast a vždy respektujte druh, hmotnost, léky a doporučení veterináře."
+  heroImage="/obrazky/clanky/sirupy-a-recepty-pro-zvirata.svg"
+  heroAlt="Bezpečná bylinná péče pro psy, kočky a další zvířata"
+  cards={cards}
+  directoryTitle="Vyberte oblast péče o zvířata"
+  directoryText="Původní podkategorie jsou znovu dostupné z jednoho přehledného rozcestníku."
+  adTopic="zvirata"
+  adHeading="Knihy, bylinky a vybavení pro chovatele"
+  feedTopic="zvirata"
+  feedHeading="Produkty související s péčí o zvířata"
+/>
