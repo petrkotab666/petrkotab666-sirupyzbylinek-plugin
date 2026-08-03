@@ -1,0 +1,65 @@
+---
+import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  {
+    href: '/kdy-a-jak-spravne-sbirat-bylinky/',
+    title: 'Pravidlo šetrného sběru',
+    text: 'Vezměte jen malou část porostu a ponechte dost rostlin pro obnovu, opylovače i semena.',
+    image: '/obrazky/clanky/kdy-a-jak-spravne-sbirat-bylinky.svg',
+    kicker: 'Základní zásady',
+  },
+  {
+    href: '/chyby-pri-sberu-bylinek/',
+    title: 'Nejčastější chyby',
+    text: 'Trhání celých rostlin, sběr mokrých bylin, ničení lokality a zbytečně velké množství.',
+    image: '/obrazky/clanky/chyby-pri-sberu-bylinek.svg',
+    kicker: 'Čemu se vyhnout',
+  },
+  {
+    href: '/bylinky-ktere-lakaji-vcely-a-motyly/',
+    title: 'Nechte část květů opylovačům',
+    text: 'Kvetoucí byliny jsou zdrojem potravy pro včely, motýly a další užitečný hmyz.',
+    image: '/obrazky/clanky/bylinky-ktere-lakaji-vcely-a-motyly.svg',
+    kicker: 'Ohleduplnost',
+  },
+  {
+    href: '/jak-uchovat-cerstve-bylinky/',
+    title: 'Sbírejte jen to, co zpracujete',
+    text: 'Rychlé třídění a uchování zabrání tomu, aby nasbírané byliny skončily zapařené nebo vyhozené.',
+    image: '/obrazky/clanky/jak-uchovat-cerstve-bylinky.svg',
+    kicker: 'Bez plýtvání',
+  },
+  {
+    href: '/gemmoterapie-tinktury-z-pupenu-navod/',
+    title: 'Šetrný odběr pupenů',
+    text: 'Z jednoho stromu nebo keře odebírejte jen nepatrné množství a nepoškozujte hlavní výhony.',
+    image: '/obrazky/clanky/gemmoterapie-tinktury-z-pupenu-navod.svg',
+    kicker: 'Stromy a keře',
+  },
+  {
+    href: '/domu/prirodni-lekarna/',
+    title: 'Bezpečnost má přednost',
+    text: 'Nejistě určenou, chráněnou nebo znečištěnou rostlinu vždy ponechte na místě.',
+    image: '/obrazky/zdravi.svg',
+    kicker: 'Odpovědný přístup',
+  },
+] as const;
+---
+<HeritageHubLayout
+  title="Etika sběru bylinek – šetrně k přírodě i lokalitě"
+  description="Obnovený rozcestník etického sběru bylinek: střídmost, ochrana porostu, opylovačů, čistých lokalit a šetrné zpracování."
+  canonical="/etika-sberu/"
+  eyebrow="Úcta k přírodě"
+  heading="Etika sběru"
+  intro="Dobrý sběr nekončí plným košíkem. Důležité je ponechat lokalitu zdravou, neplýtvat a odnášet jen tolik, kolik skutečně využijete."
+  heroImage="/media/original/sber/etika-sberu.webp"
+  heroAlt="Šetrný a etický sběr léčivých bylinek v přírodě"
+  cards={cards}
+  directoryTitle="Jak sbírat ohleduplně"
+  directoryText="Původní samostatný rozcestník etiky sběru je opět propojený s praktickými návody."
+  adTopic="sber"
+  adHeading="Pomůcky pro šetrný sběr a určování rostlin"
+  feedTopic="sber"
+  feedHeading="Košíky, plátěné sáčky a další výbava"
+/>
