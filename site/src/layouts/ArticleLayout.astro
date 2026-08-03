@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import ArticleImage from '../components/ArticleImage.astro';
 import ContextAds from '../components/ContextAds.astro';
+import InlineArticleAd from '../components/InlineArticleAd.astro';
 import ProductFeed from '../components/ProductFeed.astro';
 import {
   articleUrl,
@@ -25,6 +26,14 @@ const imageUrl = new URL(image, Astro.site || Astro.url.origin).href;
 const monetizable = isMonetizable(entry);
 const safetyWarnings = articleSafetyWarnings(entry);
 const criticalNotice = criticalRecipeNotice(entry);
+const articleTextLength = entry.body
+  .replace(/!\[[^\]]*\]\([^)]*\)/gu, ' ')
+  .replace(/\[[^\]]+\]\([^)]*\)/gu, ' ')
+  .replace(/<[^>]+>/gu, ' ')
+  .replace(/\s+/gu, ' ')
+  .trim().length;
+const showMiddleAd = monetizable && !criticalNotice && articleTextLength >= 1800;
+const showLowerAd = monetizable && !criticalNotice && articleTextLength >= 7000;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -66,7 +75,7 @@ const breadcrumbSchema = {
   modified={updated || date}
   structuredData={[articleSchema, breadcrumbSchema]}
 >
-  <article class:list={["article-shell", { "has-hero-image": Boolean(image) }]}>
+  <article class:list={["article-shell", { "has-hero-image": Boolean(image) }]} data-article-text-length={articleTextLength}>
     <header class="article-header">
       <div class="article-kicker">{category}</div>
       <h1>{title}</h1>
@@ -98,6 +107,24 @@ const breadcrumbSchema = {
           </aside>
         )}
         <div class="article-content"><slot /></div>
+        {showMiddleAd && <InlineArticleAd entry={entry} placement="middle" />}
+        {showLowerAd && <InlineArticleAd entry={entry} placement="lower" />}
+        <script is:inline define:vars={{ image }}>
+          (() => {
+            const content = document.currentScript?.closest('.article-shell')?.querySelector('.article-content');
+            if (!content || !image) return;
+            const heroPath = new URL(image, location.origin).pathname;
+            const seen = new Set();
+            for (const node of content.querySelectorAll('img')) {
+              const src = node.getAttribute('src');
+              if (!src) continue;
+              const path = new URL(src, location.origin).pathname;
+              const wrapper = node.closest('figure, p, a') || node;
+              if (path === heroPath || seen.has(path)) wrapper.remove();
+              else seen.add(path);
+            }
+          })();
+        </script>
       </>
     )}
 
