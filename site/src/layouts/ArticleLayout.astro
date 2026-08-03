@@ -78,7 +78,7 @@ const breadcrumbSchema = {
       <ArticleImage entry={entry} class="hero-image" loading="eager" fetchpriority="high" />
     </header>
 
-    {monetizable && <ContextAds entry={entry} />}
+    {monetizable && <ContextAds entry={entry} placement="primary" />}
 
     {criticalNotice ? (
       <section class="critical-recipe-notice" aria-labelledby="critical-recipe-title">
@@ -101,6 +101,7 @@ const breadcrumbSchema = {
       </>
     )}
 
+    {monetizable && <ContextAds entry={entry} placement="secondary" heading="Další doporučené nabídky k tématu" />}
     {monetizable && <ProductFeed entry={entry} />}
 
     <aside class="safety-box">
@@ -108,12 +109,44 @@ const breadcrumbSchema = {
       <p>Bylinky mohou ovlivňovat léky a nejsou vhodné pro každého. Zvláštní opatrnost je nutná u dětí, těhotných a kojících žen, chronicky nemocných a zvířat.</p>
     </aside>
   </article>
+
+  <script is:inline>
+    document.querySelectorAll('.article-shell').forEach((article) => {
+      const hero = article.querySelector('.hero-image');
+      if (!(hero instanceof HTMLImageElement)) return;
+
+      let heroPath = '';
+      try {
+        heroPath = new URL(hero.currentSrc || hero.src, window.location.href).pathname;
+      } catch {
+        return;
+      }
+
+      article.querySelectorAll('.article-content img').forEach((image) => {
+        if (!(image instanceof HTMLImageElement)) return;
+        let contentPath = '';
+        try {
+          contentPath = new URL(image.currentSrc || image.src, window.location.href).pathname;
+        } catch {
+          return;
+        }
+        if (contentPath !== heroPath) return;
+
+        const wrapper = image.closest('figure, p');
+        const duplicate = wrapper || image;
+        duplicate.setAttribute('hidden', '');
+        duplicate.setAttribute('aria-hidden', 'true');
+        duplicate.setAttribute('data-duplicate-hero', 'true');
+      });
+    });
+  </script>
 </BaseLayout>
 
 <style is:global>
   .has-hero-image .article-content > p:first-child:has(> img:only-child),
-  .has-hero-image .article-content > p:first-child:has(> a:only-child > img:only-child) {
-    display: none;
+  .has-hero-image .article-content > p:first-child:has(> a:only-child > img:only-child),
+  .article-content [data-duplicate-hero="true"] {
+    display: none !important;
   }
   .safety-box--specific ul{margin:.75rem 0 0;padding-left:1.2rem}
   .safety-box--specific li+li{margin-top:.45rem}
