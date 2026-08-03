@@ -2,21 +2,14 @@
 import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
 import { getPublishedArticles } from '../../../lib/articles';
 import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
-
-const categories = [
-  { slug: 't-dychaci-ustroji-zvirat', title: 'Tinktury a dýchací ústrojí zvířat', eyebrow: 'Kašel a dýchání', pattern: /kasel|dych|prudus|plic|hrdlo/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-dychaci-ustroji-zvirat.svg' },
-  { slug: 't-imunitni-system-zvirat', title: 'Tinktury a imunitní systém zvířat', eyebrow: 'Vitalita a obranyschopnost', pattern: /imunit|vital|obranyschop|regener/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-imunitni-system-zvirat.svg' },
-  { slug: 't-klid-a-psychika-zvirat', title: 'Tinktury pro klid a psychiku zvířat', eyebrow: 'Stres a neklid', pattern: /klid|psychik|stres|spanek|uklid|nerv/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-klid-a-psychika-zvirat.svg' },
-  { slug: 't-kuze-a-srst-zvirat', title: 'Tinktury pro kůži a srst zvířat', eyebrow: 'Zevní péče', pattern: /kuze|srst|plet|hojen/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-kuze-a-srst-zvirat.svg' },
-  { slug: 't-pohybovy-aparat-zvirat', title: 'Tinktury pro pohybový aparát zvířat', eyebrow: 'Klouby a svaly', pattern: /kloub|sval|pohyb|regener|revma/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-pohybovy-aparat-zvirat.svg' },
-  { slug: 't-zazivani-zvirat', title: 'Tinktury a zažívání zvířat', eyebrow: 'Trávení a metabolismus', pattern: /traven|zaziv|zalud|strev|brisko|nadym/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-zazivani-zvirat.svg' },
-] as const;
+import { animalTinctureHubCategories } from '../../../data/restored-hub-categories';
 
 export function getStaticPaths() {
-  return categories.map((category) => ({ params: { category: category.slug }, props: { category } }));
+  return animalTinctureHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
 }
 
-const { category } = Astro.props;
+const category = animalTinctureHubCategories.find((item) => item.slug === Astro.props.categorySlug);
+if (!category) throw new Error(`Neznámá kategorie tinktur pro zvířata: ${Astro.props.categorySlug}`);
 const allArticles = await getPublishedArticles();
 const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
 const entries = allArticles.filter((entry) => {
