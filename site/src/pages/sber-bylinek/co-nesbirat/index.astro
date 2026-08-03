@@ -1,0 +1,65 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  {
+    href: '/chyby-pri-sberu-bylinek/',
+    title: 'Rostliny z nečistých míst',
+    text: 'Okolí silnic, skládek, průmyslových areálů a chemicky ošetřovaných polí do košíku nepatří.',
+    image: '/obrazky/clanky/chyby-pri-sberu-bylinek.svg',
+    kicker: 'Znečištěné lokality',
+  },
+  {
+    href: '/poznej-bylinku/',
+    title: 'Nejistě určené rostliny',
+    text: 'Jedna fotografie nestačí. Při pochybnostech rostlinu nesbírejte a ověřte ji v atlasu.',
+    image: '/obrazky/clanky/poznej-bylinku.svg',
+    kicker: 'Riziko záměny',
+  },
+  {
+    href: '/nebezpecne-byliny-pro-psy-a-kocky/',
+    title: 'Rizikové byliny pro zvířata',
+    text: 'Lidské bylinné recepty nelze automaticky používat pro psy, kočky ani další zvířata.',
+    image: '/obrazky/clanky/nebezpecne-byliny-pro-psy-a-kocky.svg',
+    kicker: 'Psi a kočky',
+  },
+  {
+    href: '/jak-poznat-kvalitni-susene-bylinky/',
+    title: 'Plesnivé a poškozené části',
+    text: 'Skvrny, plíseň, hniloba, zatuchlý pach nebo silné napadení jsou důvodem rostlinu ponechat.',
+    image: '/obrazky/clanky/jak-poznat-kvalitni-susene-bylinky.svg',
+    kicker: 'Kontrola kvality',
+  },
+  {
+    href: '/kdy-a-jak-spravne-sbirat-bylinky/',
+    title: 'Chráněné a vzácné druhy',
+    text: 'Než začnete sbírat, ověřte ochranu druhu i pravidla konkrétního chráněného území.',
+    image: '/obrazky/clanky/kdy-a-jak-spravne-sbirat-bylinky.svg',
+    kicker: 'Ochrana přírody',
+  },
+  {
+    href: '/domu/prirodni-lekarna/',
+    title: 'Silně působící a toxické byliny',
+    text: 'Bez odborných znalostí nesbírejte rostliny určené jen pro kontrolované nebo zevní použití.',
+    image: '/obrazky/zdravi.svg',
+    kicker: 'Bezpečnost',
+  },
+] as const;
+---
+<HeritageHubLayout
+  title="Co nesbírat – nebezpečné, chráněné a znečištěné rostliny"
+  description="Obnovený rozcestník rostlin a lokalit, kterým se při sběru vyhnout: záměny, toxické a chráněné druhy, plíseň a znečištění."
+  canonical="/sber-bylinek/co-nesbirat/"
+  eyebrow="Bezpečný košík"
+  heading="Co nesbírat"
+  intro="Nejbezpečnější rozhodnutí je někdy rostlinu nechat na místě. Vyhněte se neznámým druhům, chráněným rostlinám, poškozeným částem a znečištěným lokalitám."
+  heroImage="/media/original/sber/co-nesbirat.webp"
+  heroAlt="Rostliny a místa, kterým je potřeba se při sběru vyhnout"
+  cards={cards}
+  directoryTitle="Kdy rostlinu ponechat na místě"
+  directoryText="Samostatný bezpečnostní rozcestník znovu vysvětluje hlavní důvody, proč některé byliny nesbírat."
+  adTopic="sber"
+  adHeading="Atlasy a pomůcky pro bezpečné určování"
+  feedTopic="sber"
+  feedHeading="Knihy a vybavení pro zodpovědný sběr"
+/>
