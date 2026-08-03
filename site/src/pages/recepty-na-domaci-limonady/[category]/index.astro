@@ -2,55 +2,14 @@
 import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
 import { getPublishedArticles } from '../../../lib/articles';
 import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
-
-const categories = [
-  {
-    slug: 'limonady-ze-sirupu',
-    title: 'Limonády ze sirupu',
-    eyebrow: 'Rychlá domácí příprava',
-    pattern: /limonada-ze-sirupu|limonady-ze-sirupu|ze-sirupu/u,
-    image: '/obrazky/clanky/recepty-na-domaci-limonady--limonady-ze-sirupu.svg',
-    intro: 'Hotový sirup, voda, citrusy, ovoce a led. Vyberte příchuť a upravte sladkost podle použitého sirupu.',
-  },
-  {
-    slug: 'limonady-z-bylinneho-vyluhu',
-    title: 'Limonády z bylinného výluhu',
-    eyebrow: 'Nálev jako základ nápoje',
-    pattern: /z-vyluhu|bylinneho-vyluhu|vyluh/u,
-    image: '/obrazky/clanky/recepty-na-domaci-limonady--limonady-z-bylinneho-vyluhu.svg',
-    intro: 'Bylinky se nejprve krátce vylouhují, nálev se ochladí a doplní vodou, ovocem nebo citrusy.',
-  },
-  {
-    slug: 'fresh-limonady',
-    title: 'Fresh limonády',
-    eyebrow: 'Čerstvé ovoce a bylinky',
-    pattern: /fresh|okurkova-limonada|citrusova-limonada|broskvova-limonada|mangova-limonada|kiwi-limonada|melounova-limonada/u,
-    image: '/obrazky/clanky/recepty-na-domaci-limonady--fresh-limonady.svg',
-    intro: 'Čerstvé ovoce, zelenina, bylinky, voda a led bez dlouhého louhování nebo fermentace.',
-  },
-  {
-    slug: 'macerovane-limonady',
-    title: 'Macerované limonády',
-    eyebrow: 'Studené louhování',
-    pattern: /macerovan/u,
-    image: '/obrazky/clanky/recepty-na-domaci-limonady--macerovane-limonady.svg',
-    intro: 'Ovoce, citrusy a bylinky se nechají několik hodin v chladu uvolnit do vody bez vaření.',
-  },
-  {
-    slug: 'fermentovane-limonady',
-    title: 'Fermentované limonády',
-    eyebrow: 'Kontrolované kvašení',
-    pattern: /fermentovan|ginger-bug|water-kefir|divoka-fermentace/u,
-    image: '/obrazky/clanky/recepty-na-domaci-limonady--fermentovane-limonady.svg',
-    intro: 'Vyberte konkrétní recept nebo základní metodu. Sledujte čistotu, tlak v lahvích, vůni a dobu kvašení.',
-  },
-] as const;
+import { lemonadeHubCategories } from '../../../data/restored-hub-categories';
 
 export function getStaticPaths() {
-  return categories.map((category) => ({ params: { category: category.slug }, props: { category } }));
+  return lemonadeHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
 }
 
-const { category } = Astro.props;
+const category = lemonadeHubCategories.find((item) => item.slug === Astro.props.categorySlug);
+if (!category) throw new Error(`Neznámá kategorie limonád: ${Astro.props.categorySlug}`);
 const allArticles = await getPublishedArticles();
 const entries = allArticles.filter((entry) => {
   if (entry.data.path === `/recepty-na-domaci-limonady/${category.slug}/`) return false;
@@ -65,7 +24,7 @@ const cards = articleHubCards(entries, 'Domácí limonáda');
   canonical={`/recepty-na-domaci-limonady/${category.slug}/`}
   eyebrow={category.eyebrow}
   heading={category.title}
-  intro={category.intro}
+  intro={category.intro || 'Vyberte konkrétní recept a pokračujte k přesnému postupu.'}
   heroImage={category.image}
   heroAlt={category.title}
   cards={cards}
