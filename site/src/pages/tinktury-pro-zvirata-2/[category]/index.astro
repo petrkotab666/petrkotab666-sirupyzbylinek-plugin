@@ -1,0 +1,45 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+
+const categories = [
+  { slug: 't-dychaci-ustroji-zvirat', title: 'Tinktury a dýchací ústrojí zvířat', eyebrow: 'Kašel a dýchání', pattern: /kasel|dych|prudus|plic|hrdlo/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-dychaci-ustroji-zvirat.svg' },
+  { slug: 't-imunitni-system-zvirat', title: 'Tinktury a imunitní systém zvířat', eyebrow: 'Vitalita a obranyschopnost', pattern: /imunit|vital|obranyschop|regener/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-imunitni-system-zvirat.svg' },
+  { slug: 't-klid-a-psychika-zvirat', title: 'Tinktury pro klid a psychiku zvířat', eyebrow: 'Stres a neklid', pattern: /klid|psychik|stres|spanek|uklid|nerv/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-klid-a-psychika-zvirat.svg' },
+  { slug: 't-kuze-a-srst-zvirat', title: 'Tinktury pro kůži a srst zvířat', eyebrow: 'Zevní péče', pattern: /kuze|srst|plet|hojen/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-kuze-a-srst-zvirat.svg' },
+  { slug: 't-pohybovy-aparat-zvirat', title: 'Tinktury pro pohybový aparát zvířat', eyebrow: 'Klouby a svaly', pattern: /kloub|sval|pohyb|regener|revma/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-pohybovy-aparat-zvirat.svg' },
+  { slug: 't-zazivani-zvirat', title: 'Tinktury a zažívání zvířat', eyebrow: 'Trávení a metabolismus', pattern: /traven|zaziv|zalud|strev|brisko|nadym/u, image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-zazivani-zvirat.svg' },
+] as const;
+
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { category: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/tinktury-pro-zvirata-2/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return /tinktur/u.test(haystack) && animalPattern.test(haystack) && category.pattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Tinktura a zvířata');
+---
+<HeritageHubLayout
+  title={`${category.title} – bezpečnostní přehled`}
+  description={`${category.title}: související články, omezení alkoholových výluhů a situace vyžadující veterináře.`}
+  canonical={`/tinktury-pro-zvirata-2/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro="Alkoholové tinktury se zvířatům nepodávají podle lidských receptů. Každý postup musí posoudit veterinář podle druhu, hmotnosti, léků a zdravotního stavu."
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Související články a bezpečnostní přehledy"
+  directoryText={`V této oblasti je propojeno ${cards.length} tematických stránek.`}
+  adTopic="zvirata"
+  adHeading="Knihy a pomůcky pro odpovědnou péči o zvířata"
+  feedTopic="zvirata"
+  feedHeading="Produkty související s péčí o zvířata"
+/>
