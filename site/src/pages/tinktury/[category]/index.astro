@@ -1,0 +1,48 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+
+const categories = [
+  { slug: 'dychaci-cesty-a-nachlazeni', title: 'Tinktury pro dýchací cesty', eyebrow: 'Hrdlo, průdušky a nachlazení', pattern: /kasel|dych|prudus|plic|odhlen|hlasiv|hrdlo|nachlazen/u, image: '/obrazky/clanky/tinktury--dychaci-cesty-a-nachlazeni.svg' },
+  { slug: 'tinktury-imunita-dychani', title: 'Tinktury pro imunitu a obranyschopnost', eyebrow: 'Odolnost organismu', pattern: /imunit|obranyschop|vital|nachlazen|alerg/u, image: '/obrazky/clanky/tinktury--tinktury-imunita-dychani.svg' },
+  { slug: 'tinktury-traveni-metabolismus', title: 'Tinktury pro trávení a metabolismus', eyebrow: 'Hořké a aromatické byliny', pattern: /traven|zaziv|zalud|strev|nadym|metabol|zluc|jatra/u, image: '/obrazky/clanky/tinktury--tinktury-traveni-metabolismus.svg' },
+  { slug: 'tinktury-spanek-nervy', title: 'Tinktury pro spánek a nervy', eyebrow: 'Zklidnění a večerní režim', pattern: /spanek|nerv|stres|uklid|psychik|nespav|uzkost/u, image: '/obrazky/clanky/tinktury--tinktury-spanek-nervy.svg' },
+  { slug: 'tinktury-srdce-krevni-obeh', title: 'Tinktury pro srdce a krevní oběh', eyebrow: 'Cévy, tlak a oběh', pattern: /srdce|krevni|obeh|cev|zily|tlak|cholesterol/u, image: '/obrazky/clanky/tinktury--tinktury-srdce-krevni-obeh.svg' },
+  { slug: 'tinktury-klouby-svaly', title: 'Tinktury pro klouby a svaly', eyebrow: 'Pohybový aparát', pattern: /kloub|sval|pohyb|revma|regener|krece/u, image: '/obrazky/clanky/tinktury--tinktury-klouby-svaly.svg' },
+  { slug: 'tinktury-mocove-cesty-ledviny', title: 'Tinktury pro močové cesty a ledviny', eyebrow: 'Vylučování a prostata', pattern: /ledvin|mocov|prostat|odvod|vyluc/u, image: '/obrazky/clanky/tinktury--tinktury-mocove-cesty-ledviny.svg' },
+  { slug: 'tinktury-zeny-muzi', title: 'Tinktury pro ženská a mužská témata', eyebrow: 'Hormony a specifická období', pattern: /zen|muz|hormon|plodnost|menstru|prostat|kojeni/u, image: '/obrazky/clanky/tinktury--tinktury-zeny-muzi.svg' },
+  { slug: 'tinktury-detoxikace-ocista', title: 'Tinktury pro detoxikaci a očistu', eyebrow: 'Játra a látková výměna', pattern: /detox|ocist|jatra|zluc|krev|metabol/u, image: '/obrazky/clanky/tinktury--tinktury-detoxikace-ocista.svg' },
+] as const;
+
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { category: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/tinktury/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return /tinktur/u.test(haystack) && category.pattern.test(haystack) && !animalPattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Bylinná tinktura');
+---
+<HeritageHubLayout
+  title={`${category.title} – recepty, omezení a domácí výroba`}
+  description={`${category.title}: obrazový přehled jednotlivých bylinných tinktur, postupů, omezení a bezpečnostních upozornění.`}
+  canonical={`/tinktury/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro="Vyberte konkrétní bylinu nebo recept. Tinktury obsahují alkohol, mohou ovlivňovat léky a nejsou vhodné pro každého."
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Vyberte konkrétní tinkturu"
+  directoryText={`V této oblasti je propojeno ${cards.length} samostatných receptů a bezpečnostních přehledů.`}
+  adTopic="recepty"
+  adHeading="Lahvičky, sušené bylinky a knihy o tinkturách"
+  feedTopic="recepty"
+  feedHeading="Pomůcky a suroviny pro domácí maceraci"
+/>
