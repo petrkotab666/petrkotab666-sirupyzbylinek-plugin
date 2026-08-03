@@ -52,6 +52,14 @@
   grid-template-columns:repeat(4,minmax(0,1fr));
 }
 .restored-directory--recipes>:nth-last-child(2){grid-column:2}
+.restored-directory--recipes>:nth-child(9) .illustrated-directory-art img{
+  object-position:82% center;
+  transform:scale(1.07);
+}
+.restored-directory--recipes>:nth-child(10) .illustrated-directory-art img{
+  object-position:18% center;
+  transform:scale(1.07);
+}
 
 .restored-subhubs{
   padding-top:1rem;
