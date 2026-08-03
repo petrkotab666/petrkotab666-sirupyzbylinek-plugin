@@ -91,13 +91,13 @@ for (const file of allFiles.filter((target) => target.endsWith('.html'))) {
   const length = Number(article.attr('data-article-text-length') || 0);
   const inlineAds = $('.article-inline-ad').length;
   stats.inlineAdModules += inlineAds;
-  if (!isCriticalSafetyPage && length >= 1800) {
+  if (!isCriticalSafetyPage && length >= 600) {
     stats.longArticles += 1;
-    if (inlineAds < 1) errors.push(`${relative}: dlouhý článek nemá reklamu uvnitř obsahu`);
+    if (inlineAds < 1) errors.push(`${relative}: článek střední nebo větší délky nemá další reklamu v obsahu`);
   }
-  if (!isCriticalSafetyPage && length >= 7000) {
+  if (!isCriticalSafetyPage && length >= 3500) {
     stats.veryLongArticles += 1;
-    if (inlineAds < 2) errors.push(`${relative}: velmi dlouhý článek nemá druhou reklamu v nižší části`);
+    if (inlineAds < 2) errors.push(`${relative}: velmi dlouhý článek nemá druhý reklamní modul`);
   }
 
   const hero = $('.hero-image').first().attr('src');
@@ -117,7 +117,7 @@ for (const file of allFiles.filter((target) => target.endsWith('.html'))) {
   }
 }
 
-console.log(`Restoration audit: health cards=${healthCards}, recipe cards=${recipeCards}, articles=${stats.articlePages}, critical safety pages=${stats.criticalSafetyPages}, long=${stats.longArticles}, very long=${stats.veryLongArticles}, inline ads=${stats.inlineAdModules}, duplicate heroes=${stats.duplicateHeroImages}, repeated body images=${stats.repeatedBodyImages}.`);
+console.log(`Restoration audit: health cards=${healthCards}, recipe cards=${recipeCards}, articles=${stats.articlePages}, critical safety pages=${stats.criticalSafetyPages}, articles with extra ads=${stats.longArticles}, very long=${stats.veryLongArticles}, inline ads=${stats.inlineAdModules}, duplicate heroes=${stats.duplicateHeroImages}, repeated body images=${stats.repeatedBodyImages}.`);
 if (errors.length) {
   console.error('Restoration audit failed:');
   errors.slice(0, 160).forEach((error) => console.error(`- ${error}`));
