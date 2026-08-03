@@ -122,35 +122,30 @@ jobs:
           DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment_url }}
         run: |
           set -euo pipefail
-          curl -fsS --max-time 30 \
-            "${DEPLOYMENT_URL}/deploy-version.txt" \
-            -o /tmp/deploy-version.txt
-          curl -fsS --max-time 30 \
-            "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" \
-            -o /tmp/article.html
-          curl -fsS --max-time 30 --output /dev/null \
-            "${DEPLOYMENT_URL}/obrazky/pestovani.svg"
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/deploy-version.txt" -o /tmp/deploy-version.txt
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" -o /tmp/article.html
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/" -o /tmp/home.html
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/domu/prirodni-lekarna/" -o /tmp/health.html
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/osvedcene-recepty/" -o /tmp/recipes.html
+          curl -fsS --max-time 30 --output /dev/null "${DEPLOYMENT_URL}/media/ui/bylinkova-herna-photo.svg"
           python3 site/scripts/verify-deployed-article.py \
-            /tmp/deploy-version.txt /tmp/article.html
+            /tmp/deploy-version.txt /tmp/article.html /tmp/home.html /tmp/health.html /tmp/recipes.html
 
       - name: Verify public production address
         run: |
           set -euo pipefail
           for attempt in {1..12}; do
             CACHE_BUSTER="$(date +%s)-${attempt}"
+            BASE="https://sirupyzbylinek-astro.pages.dev"
 
-            if curl -fsS --max-time 30 \
-                -H 'Cache-Control: no-cache' \
-                "https://sirupyzbylinek-astro.pages.dev/deploy-version.txt?v=${CACHE_BUSTER}" \
-                -o /tmp/public-version.txt \
-              && curl -fsS --max-time 30 \
-                -H 'Cache-Control: no-cache' \
-                "https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" \
-                -o /tmp/public-article.html \
-              && curl -fsS --max-time 30 --output /dev/null \
-                "https://sirupyzbylinek-astro.pages.dev/obrazky/pestovani.svg?v=${CACHE_BUSTER}" \
+            if curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/deploy-version.txt?v=${CACHE_BUSTER}" -o /tmp/public-version.txt \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" -o /tmp/public-article.html \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/?v=${CACHE_BUSTER}" -o /tmp/public-home.html \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/domu/prirodni-lekarna/?v=${CACHE_BUSTER}" -o /tmp/public-health.html \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/osvedcene-recepty/?v=${CACHE_BUSTER}" -o /tmp/public-recipes.html \
+              && curl -fsS --max-time 30 --output /dev/null "${BASE}/media/ui/bylinkova-herna-photo.svg?v=${CACHE_BUSTER}" \
               && python3 site/scripts/verify-deployed-article.py \
-                /tmp/public-version.txt /tmp/public-article.html; then
+                /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html; then
               echo "Production deployment verified successfully."
               exit 0
             fi
