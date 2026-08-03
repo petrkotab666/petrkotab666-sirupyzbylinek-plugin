@@ -1,0 +1,31 @@
+---
+import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  { href: '/domaci-sirupy/sirupy-na-dychani/', title: 'Sirupy na dýchací cesty', text: 'Jitrocel, mateřídouška, tymián, divizna, smrk a další tradiční suroviny.', image: '/obrazky/clanky/domaci-sirupy--sirupy-na-dychani.svg', kicker: 'Kašel a průdušky' },
+  { href: '/domaci-sirupy/traveni-a-zazivani/', title: 'Trávení a zažívání', text: 'Máta, fenykl, kmín, anýz, meduňka a další chuťově výrazné sirupy.', image: '/obrazky/clanky/domaci-sirupy--traveni-a-zazivani.svg', kicker: 'Po jídle' },
+  { href: '/domaci-sirupy/imunita-a-vitalita/', title: 'Imunita a vitalita', text: 'Šípky, rakytník, bezinky, aronie, rybíz a další plody vhodné pro domácí sirupy.', image: '/obrazky/clanky/domaci-sirupy--imunita-a-vitalita.svg', kicker: 'Plody a vitaminy' },
+  { href: '/domaci-sirupy/uklidneni-a-spanek/', title: 'Uklidnění a spánek', text: 'Meduňka, levandule, chmel a další aromatické byliny v kuchyňském sirupu.', image: '/obrazky/clanky/domaci-sirupy--uklidneni-a-spanek.svg', kicker: 'Večerní pohoda' },
+  { href: '/domaci-sirupy/mocove-cesty-a-ledviny/', title: 'Močové cesty a ledviny', text: 'Brusinky, klikva a další recepty se zvláštním důrazem na omezení a bezpečnost.', image: '/obrazky/clanky/domaci-sirupy--mocove-cesty-a-ledviny.svg', kicker: 'Bez přehnaných slibů' },
+  { href: '/domaci-sirupy/pohybovy-aparat-a-kuze/', title: 'Pohybový aparát a kůže', text: 'Přehled receptů a důležité rozlišení mezi kuchyňským a pouze zevním použitím.', image: '/obrazky/clanky/domaci-sirupy--pohybovy-aparat-a-kuze.svg', kicker: 'Bezpečnost forem' },
+  { href: '/bezovy-sirup-za-studena/', title: 'Sirupy za studena', text: 'Šetrné macerování vybraných květů a plodů, čistota nádob a skladování.', image: '/obrazky/clanky/bezovy-sirup-za-studena.svg', kicker: 'Studená metoda' },
+  { href: '/limonady-ze-sirupu/', title: 'Jak sirupy využít', text: 'Poměry ředění, domácí limonády, ledové nápoje a servírování.', image: '/obrazky/clanky/limonady-ze-sirupu.svg', kicker: 'Hotový sirup' },
+] as const;
+---
+<HeritageHubLayout
+  title="Domácí sirupy – velký rozcestník receptů z bylinek a ovoce"
+  description="Obnovený obrazový receptář domácích sirupů podle použití, surovin a způsobu přípravy, včetně bezpečnostních upozornění."
+  canonical="/domaci-sirupy/"
+  eyebrow="Bylinky, květy a plody"
+  heading="Domácí sirupy"
+  intro="Vyberte si hlavní oblast, surovinu nebo způsob přípravy. Každý rozcestník vede k jednotlivým receptům a bezpečnostním poznámkám."
+  heroImage="/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png"
+  heroAlt="Domácí bylinné a ovocné sirupy ve skleněných lahvích"
+  cards={cards}
+  directoryTitle="Vyberte si druh domácího sirupu"
+  directoryText="Původní víceúrovňový receptář je znovu dostupný jako obrazová navigace."
+  adTopic="recepty"
+  adHeading="Lahve, bylinky a vybavení pro výrobu sirupů"
+  feedTopic="recepty"
+  feedHeading="Suroviny a pomůcky pro domácí sirupy"
+/>
