@@ -68,7 +68,22 @@ for (const file of files) {
     output.push(block.trim());
   }
 
-  const body = output.filter(Boolean).join('\n\n').trim();
+  let body = output.filter(Boolean).join('\n\n').trim();
+  const inlineSeen = new Set(seen);
+  body = body.replace(/!\[[^\]]*\]\(([^\s)]+)(?:\s+["'][^"']*["'])?\)/gu, (match, image) => {
+    if (hero && image === hero) {
+      removedHeroCopies += 1;
+      return '';
+    }
+    if (inlineSeen.has(image)) {
+      removedRepeatedImages += 1;
+      return '';
+    }
+    inlineSeen.add(image);
+    return match;
+  });
+  body = body.replace(/\[\s*\]\([^)]*\)/gu, '').replace(/\n{3,}/gu, '\n\n').trim();
+
   const next = `---\n${parsed.frontmatter.trim()}\n---\n\n${body}\n`;
   if (next !== source) {
     await writeFile(file, next, 'utf8');
@@ -76,4 +91,4 @@ for (const file of files) {
   }
 }
 
-console.log(`Duplicate article image cleanup: ${changedFiles} files changed, ${removedHeroCopies} hero copies and ${removedRepeatedImages} repeated image blocks removed.`);
+console.log(`Duplicate article image cleanup: ${changedFiles} files changed, ${removedHeroCopies} hero copies and ${removedRepeatedImages} repeated image occurrences removed.`);
