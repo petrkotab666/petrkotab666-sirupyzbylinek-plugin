@@ -1,11 +1,14 @@
 sirupyzbylinek deployment
-version: 2026-08-02T21:49:00+02:00
-commit-purpose: restore Bylinkovy mistr arcade v28 and refresh visual section cards
+version: 2026-08-03T21:12:00+02:00
+commit-purpose: final restoration of original hubs, graphics, ads and image deduplication
 expected-cultivation-category: Pěstování bylinek
-expected-cultivation-image: /obrazky/pestovani.svg
+expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
+expected-restored-natural-pharmacy-cards: 9
+expected-restored-recipe-cards: 10
+expected-home-photographic-cards: 6
+expected-herb-game-photo: /media/original/home/bylinkova-herna-photo.svg
 expected-game-count: 3
 expected-deal-card-count: 12
 expected-herb-master-engine: arcade-canvas-600x500
 expected-herb-master-levels: 10
 expected-herb-master-boss: Cerny-kotel
-expected-home-card-graphics: visual-refresh
