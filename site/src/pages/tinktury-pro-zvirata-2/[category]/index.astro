@@ -1,0 +1,38 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+import { animalTinctureHubCategories } from '../../../data/restored-hub-categories';
+
+export function getStaticPaths() {
+  return animalTinctureHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
+}
+
+const category = animalTinctureHubCategories.find((item) => item.slug === Astro.props.categorySlug);
+if (!category) throw new Error(`Neznámá kategorie tinktur pro zvířata: ${Astro.props.categorySlug}`);
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/tinktury-pro-zvirata-2/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return /tinktur/u.test(haystack) && animalPattern.test(haystack) && category.pattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Tinktura a zvířata');
+---
+<HeritageHubLayout
+  title={`${category.title} – bezpečnostní přehled`}
+  description={`${category.title}: související články, omezení alkoholových výluhů a situace vyžadující veterináře.`}
+  canonical={`/tinktury-pro-zvirata-2/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro="Alkoholové tinktury se zvířatům nepodávají podle lidských receptů. Každý postup musí posoudit veterinář podle druhu, hmotnosti, léků a zdravotního stavu."
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Související články a bezpečnostní přehledy"
+  directoryText={`V této oblasti je propojeno ${cards.length} tematických stránek.`}
+  adTopic="zvirata"
+  adHeading="Knihy a pomůcky pro odpovědnou péči o zvířata"
+  feedTopic="zvirata"
+  feedHeading="Produkty související s péčí o zvířata"
+/>

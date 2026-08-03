@@ -1,0 +1,38 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+import { tinctureHubCategories } from '../../../data/restored-hub-categories';
+
+export function getStaticPaths() {
+  return tinctureHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
+}
+
+const category = tinctureHubCategories.find((item) => item.slug === Astro.props.categorySlug);
+if (!category) throw new Error(`Neznámá kategorie tinktur: ${Astro.props.categorySlug}`);
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/tinktury/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return /tinktur/u.test(haystack) && category.pattern.test(haystack) && !animalPattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Bylinná tinktura');
+---
+<HeritageHubLayout
+  title={`${category.title} – recepty, omezení a domácí výroba`}
+  description={`${category.title}: obrazový přehled jednotlivých bylinných tinktur, postupů, omezení a bezpečnostních upozornění.`}
+  canonical={`/tinktury/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro="Vyberte konkrétní bylinu nebo recept. Tinktury obsahují alkohol, mohou ovlivňovat léky a nejsou vhodné pro každého."
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Vyberte konkrétní tinkturu"
+  directoryText={`V této oblasti je propojeno ${cards.length} samostatných receptů a bezpečnostních přehledů.`}
+  adTopic="recepty"
+  adHeading="Lahvičky, sušené bylinky a knihy o tinkturách"
+  feedTopic="recepty"
+  feedHeading="Pomůcky a suroviny pro domácí maceraci"
+/>

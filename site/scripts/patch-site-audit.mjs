@@ -18,6 +18,11 @@ const replacements = [
     'kontrola arkádového Bylinkového mistra',
   ],
   [
+    `function hasContextAds(html) {\n  return html.includes('class="context-ads"');\n}`,
+    `function hasContextAds(html) {\n  return /class=["'][^"']*\\bcontext-ads\\b[^"']*["']/iu.test(html);\n}`,
+    'rozpoznání více variant tříd reklamního bloku',
+  ],
+  [
     `if (!heroSrc.includes('/obrazky/pestovani.svg')) errors.push(\`cultivation article: expected thematic cultivation image, rendered \${JSON.stringify(heroSrc)}\`);`,
     `if (!heroSrc.includes('/obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg') && !heroSrc.includes('/obrazky/pestovani.svg')) errors.push(\`cultivation article: expected unique thematic cultivation image, rendered \${JSON.stringify(heroSrc)}\`);`,
     'jedinečný obrázek článku o pěstování',
@@ -39,7 +44,7 @@ for (const [before, after, label] of replacements) {
 
 if (changed) {
   await writeFile(target, source, 'utf8');
-  console.log('Audit webu byl aktualizován pro obrazovou hernu, arkádovou hru a jedinečné tematické obrázky.');
+  console.log('Audit webu byl aktualizován pro obrazovou hernu, arkádovou hru, dvě reklamní sady a jedinečné tematické obrázky.');
 } else {
-  console.log('Audit webu už odpovídá obrazové herně, arkádové hře a jedinečným tematickým obrázkům.');
+  console.log('Audit webu už odpovídá obrazové herně, arkádové hře, dvěma reklamním sadám a jedinečným tematickým obrázkům.');
 }

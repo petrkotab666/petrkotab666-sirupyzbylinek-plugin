@@ -1,0 +1,78 @@
+---
+import type { ArticleEntry } from '../lib/articles';
+import { topicKey } from '../lib/articles';
+
+interface Props {
+  entry: ArticleEntry;
+  placement?: 'middle' | 'lower';
+}
+
+const { entry, placement = 'middle' } = Astro.props;
+const topic = topicKey(entry);
+const campaigns = {
+  bylik: {
+    title: 'Sušené bylinky, koření a plody',
+    text: 'Suroviny pro čaje, sirupy, tinktury a domácí směsi.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=55880a67',
+    cta: 'Prohlédnout bylinky',
+  },
+  sklo: {
+    title: 'Lahve, sklenice a víčka',
+    text: 'Nádoby pro sirupy, oleje, masti, medy a domácí výrobu.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb',
+    cta: 'Vybrat vhodné nádoby',
+  },
+  knihy: {
+    title: 'Atlasy a knihy o bylinkách',
+    text: 'Praktické příručky pro určování rostlin a domácí zpracování.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=1ec2df65',
+    cta: 'Prohlédnout knihy',
+  },
+  priroda: {
+    title: 'Výbava pro sběr a pobyt v přírodě',
+    text: 'Košíky, nůžky, rukavice a další praktické vybavení.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=4f262bbb',
+    cta: 'Zobrazit vybavení',
+  },
+  wellness: {
+    title: 'Přírodní péče a domácí wellness',
+    text: 'Pomůcky a produkty pro koupele, balzámy a běžnou péči.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=759c16de',
+    cta: 'Otevřít nabídku',
+  },
+  vyziva: {
+    title: 'Výživa, vitaminy a minerály',
+    text: 'Doplňky pro běžnou výživu, regeneraci a aktivní životní styl.',
+    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=e9a1924a',
+    cta: 'Zobrazit nabídku',
+  },
+} as const;
+
+const byTopic = {
+  recepty: ['sklo', 'bylik'],
+  napoje: ['sklo', 'bylik'],
+  zavarovani: ['sklo', 'knihy'],
+  sber: ['priroda', 'knihy'],
+  pestovani: ['priroda', 'knihy'],
+  zdravi: ['knihy', 'vyziva'],
+  vyziva: ['vyziva', 'knihy'],
+  krasa: ['wellness', 'bylik'],
+  zvirata: ['knihy', 'bylik'],
+  repelenty: ['priroda', 'knihy'],
+  bylinky: ['bylik', 'knihy'],
+} as const;
+const keys = byTopic[topic as keyof typeof byTopic] || byTopic.bylinky;
+const selected = keys.map((key) => campaigns[key]);
+---
+<aside class="article-inline-ad" data-inline-article-ad data-placement={placement}>
+  <span class="article-inline-ad-label">Reklama · doporučení k tématu</span>
+  <div class="article-inline-ad-grid">
+    {selected.map((campaign) => (
+      <a href={campaign.href} target="_blank" rel="nofollow sponsored noopener noreferrer">
+        <strong>{campaign.title}</strong>
+        <span>{campaign.text}</span>
+        <b>{campaign.cta} →</b>
+      </a>
+    ))}
+  </div>
+</aside>

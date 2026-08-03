@@ -1,0 +1,36 @@
+/* Úplná obnova a sjednocení hlavních rozcestníků. */
+.restored-hub-section{padding-top:3.5rem}
+.restored-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;align-items:stretch}
+.restored-directory .illustrated-directory-card{min-height:365px;height:100%}
+.restored-directory .illustrated-directory-art,.restored-directory .illustrated-directory-art img,.restored-directory .illustrated-directory-art svg{width:100%;height:100%}
+.restored-directory .illustrated-directory-art img{object-fit:cover;object-position:center}
+.restored-directory .illustrated-directory-copy{display:flex;min-height:100%;flex-direction:column;align-items:center;justify-content:flex-end;padding:1.65rem 1.35rem 1.35rem;text-align:center}
+.restored-directory .illustrated-directory-copy small{min-height:1.1em;color:#ffd35f}
+.restored-directory .illustrated-directory-copy strong{margin:.42rem auto .5rem;font-size:clamp(1.45rem,2vw,2rem);line-height:1.08}
+.restored-directory .illustrated-directory-copy>span{min-height:3.2em;display:flex;align-items:center;justify-content:center;line-height:1.5}
+.restored-directory .illustrated-directory-copy b{margin-top:1rem}
+.restored-directory--recipes{grid-template-columns:repeat(4,minmax(0,1fr))}
+.restored-directory--recipes>:nth-last-child(2){grid-column:2}
+.restored-directory--recipes>:nth-child(9) .illustrated-directory-art img{object-position:82% center;transform:scale(1.07)}
+.restored-directory--recipes>:nth-child(10) .illustrated-directory-art img{object-position:18% center;transform:scale(1.07)}
+.restored-subhubs{padding-top:1rem;padding-bottom:2rem}
+.restored-subhub-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.35rem;align-items:stretch}
+.restored-subhub-grid--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.restored-subhub-card{display:flex;min-width:0;flex-direction:column;align-items:center;padding:clamp(1.4rem,3vw,2.2rem);border:1px solid rgba(40,82,44,.16);border-radius:28px;background:linear-gradient(145deg,#fffdf6,#eef4df);box-shadow:0 18px 42px rgba(30,63,35,.10);text-align:center}
+.restored-subhub-card>span{color:#ad681f;font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.restored-subhub-card h3{margin:.55rem 0 1.2rem;color:#174c2b;font:700 clamp(1.55rem,2.5vw,2.1rem)/1.12 Georgia,serif}
+.restored-link-cloud{display:grid;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.restored-link-cloud a{display:flex;min-height:48px;align-items:center;justify-content:space-between;gap:.65rem;padding:.72rem .85rem;border:1px solid rgba(45,91,48,.14);border-radius:14px;background:rgba(255,255,255,.8);color:#285c34;text-align:left;text-decoration:none;font-size:.91rem;font-weight:750;line-height:1.25;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.restored-link-cloud a:hover{transform:translateY(-2px);border-color:rgba(45,91,48,.36);background:#fff}
+.restored-link-cloud b{color:#c27825}
+.restored-subhub-main{display:inline-flex;justify-content:center;margin-top:auto;padding-top:1.25rem;color:#174c2b;font-weight:900;text-decoration-thickness:2px;text-underline-offset:4px}
+.article-inline-ad{margin:2rem 0;padding:1.2rem;border:1px solid rgba(197,124,31,.28);border-radius:22px;background:linear-gradient(135deg,#fffaf0,#f3f7e8);box-shadow:0 14px 34px rgba(40,68,36,.09);text-align:center}
+.article-inline-ad-label{display:block;margin-bottom:.75rem;color:#9a641f;font-size:.72rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.article-inline-ad-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
+.article-inline-ad a{display:flex;min-height:92px;flex-direction:column;align-items:center;justify-content:center;padding:1rem;border-radius:17px;background:#fff;color:#234f2d;text-decoration:none;box-shadow:inset 0 0 0 1px rgba(43,85,45,.12)}
+.article-inline-ad a strong{font-family:Georgia,serif;font-size:1.05rem}
+.article-inline-ad a span{margin-top:.35rem;color:#738071;font-size:.86rem;line-height:1.35}
+.article-inline-ad a b{margin-top:.55rem;color:#a85f1c;font-size:.84rem}
+@media(max-width:1100px){.restored-directory--recipes{grid-template-columns:repeat(3,minmax(0,1fr))}.restored-directory--recipes>:nth-last-child(2){grid-column:auto}.restored-directory--recipes>:last-child{grid-column:2}.restored-subhub-grid--three{grid-template-columns:1fr 1fr}.restored-subhub-grid--three>:last-child{grid-column:1/-1;width:min(680px,100%);justify-self:center}}
+@media(max-width:820px){.restored-directory,.restored-directory--recipes{grid-template-columns:repeat(2,minmax(0,1fr))}.restored-directory--recipes>:last-child{grid-column:auto}.restored-subhub-grid,.restored-subhub-grid--three{grid-template-columns:1fr}.restored-subhub-grid--three>:last-child{grid-column:auto;width:100%}}
+@media(max-width:590px){.restored-hub-section{padding-top:2.2rem}.restored-directory,.restored-directory--recipes{grid-template-columns:1fr;gap:1rem}.restored-directory .illustrated-directory-card{min-height:350px}.restored-link-cloud{grid-template-columns:1fr}.article-inline-ad-grid{grid-template-columns:1fr}}

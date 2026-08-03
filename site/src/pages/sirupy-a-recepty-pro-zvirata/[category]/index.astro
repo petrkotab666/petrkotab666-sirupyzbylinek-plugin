@@ -1,0 +1,38 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+import { animalRecipeHubCategories } from '../../../data/restored-hub-categories';
+
+export function getStaticPaths() {
+  return animalRecipeHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
+}
+
+const category = animalRecipeHubCategories.find((item) => item.slug === Astro.props.categorySlug);
+if (!category) throw new Error(`Neznámá kategorie péče pro zvířata: ${Astro.props.categorySlug}`);
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez|pece-o-ledviny-psa/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/sirupy-a-recepty-pro-zvirata/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return animalPattern.test(haystack) && category.pattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Bylinky a zvířata');
+---
+<HeritageHubLayout
+  title={`${category.title} – bezpečný přehled`}
+  description={`${category.title}: obrazový rozcestník článků, receptů, omezení a situací, kdy je nutná veterinární péče.`}
+  canonical={`/sirupy-a-recepty-pro-zvirata/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro="Zvířata zpracovávají rostlinné látky jinak než lidé. Domácí postup vždy přizpůsobte druhu, hmotnosti, zdravotnímu stavu a doporučení veterináře."
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Vyberte konkrétní článek nebo recept"
+  directoryText={`V této oblasti je propojeno ${cards.length} bezpečnostních přehledů a domácích témat.`}
+  adTopic="zvirata"
+  adHeading="Knihy a vybavení pro chovatele"
+  feedTopic="zvirata"
+  feedHeading="Produkty související s péčí o zvířata"
+/>

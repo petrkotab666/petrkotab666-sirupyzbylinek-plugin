@@ -1,0 +1,79 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  {
+    href: '/bylinky-pro-zacatecniky/',
+    title: 'Bylinky pro začátečníky',
+    text: 'Snadněji rozpoznatelné druhy a pravidla, která omezují riziko záměny.',
+    image: '/obrazky/clanky/bylinky-pro-zacatecniky.svg',
+    kicker: 'První košík',
+  },
+  {
+    href: '/co-sbirat-v-kvetnu/',
+    title: 'Květy a mladé listy',
+    text: 'Jarní květy, čerstvé listy a natě vhodné pro čaje, sirupy i sušení.',
+    image: '/obrazky/clanky/co-sbirat-v-kvetnu.svg',
+    kicker: 'Jaro',
+  },
+  {
+    href: '/co-sbirat-v-cervnu/',
+    title: 'Kvetoucí natě',
+    text: 'Hlavní sezona aromatických natí, lipového květu, heřmánku a měsíčku.',
+    image: '/obrazky/clanky/co-sbirat-v-cervnu.svg',
+    kicker: 'Začátek léta',
+  },
+  {
+    href: '/co-sbirat-v-cervenci/',
+    title: 'Plody a letní byliny',
+    text: 'Letní natě, první zralé plody a rostliny určené k rychlému zpracování.',
+    image: '/obrazky/clanky/co-sbirat-v-cervenci.svg',
+    kicker: 'Léto',
+  },
+  {
+    href: '/gemmoterapie-tinktury-z-pupenu-navod/',
+    title: 'Pupeny a mladé výhonky',
+    text: 'Kdy a jak šetrně odebírat pupeny, aniž byste poškodili strom nebo keř.',
+    image: '/obrazky/clanky/gemmoterapie-tinktury-z-pupenu-navod.svg',
+    kicker: 'Gemmoterapie',
+  },
+  {
+    href: '/kdy-a-jak-spravne-sbirat-bylinky/',
+    title: 'Kořeny, kůra a semena',
+    text: 'Specifické části rostlin vyžadují správné období, šetrný postup a jisté určení druhu.',
+    image: '/obrazky/clanky/kdy-a-jak-spravne-sbirat-bylinky.svg',
+    kicker: 'Pod zemí i na stromech',
+  },
+  {
+    href: '/poznej-bylinku/',
+    title: 'Procvičte si poznávání',
+    text: 'Interaktivní poznávačka pomůže zapamatovat základní znaky, nenahrazuje však atlas.',
+    image: '/obrazky/clanky/poznej-bylinku.svg',
+    kicker: 'Bylinková herna',
+  },
+  {
+    href: '/domaci-sirupy/',
+    title: 'Co sbírat pro domácí sirupy',
+    text: 'Přehled bylin, květů, výhonků a plodů s návaznými recepty.',
+    image: '/obrazky/clanky/domaci-sirupy.svg',
+    kicker: 'Navazující zpracování',
+  },
+] as const;
+---
+<HeritageHubLayout
+  title="Co sbírat – bylinky, květy, listy, kořeny a plody"
+  description="Obnovený rozcestník částí rostlin vhodných ke sběru: květy, listy, natě, kořeny, pupeny, plody a semena."
+  canonical="/domu/co-sbirat/"
+  eyebrow="Určování a výběr"
+  heading="Co sbírat"
+  intro="Ne každá část rostliny se sbírá ve stejnou dobu a ke stejnému účelu. Vyberte typ suroviny nebo období a pokračujte k podrobnému přehledu."
+  heroImage="/media/original/sber/co-sbirat.webp"
+  heroAlt="Přehled bylinek a částí rostlin vhodných ke sběru"
+  cards={cards}
+  directoryTitle="Vyberte část rostliny nebo období"
+  directoryText="Obnovený rozcestník propojuje určování rostlin, měsíční kalendáře a navazující zpracování."
+  adTopic="sber"
+  adHeading="Atlasy, nůžky a vybavení pro správné určování"
+  feedTopic="sber"
+  feedHeading="Pomůcky pro sběr, třídění a uchování bylin"
+/>

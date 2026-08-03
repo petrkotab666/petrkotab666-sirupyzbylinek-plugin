@@ -1,0 +1,37 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+import { lemonadeHubCategories } from '../../../data/restored-hub-categories';
+
+export function getStaticPaths() {
+  return lemonadeHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
+}
+
+const category = lemonadeHubCategories.find((item) => item.slug === Astro.props.categorySlug);
+if (!category) throw new Error(`Neznámá kategorie limonád: ${Astro.props.categorySlug}`);
+const allArticles = await getPublishedArticles();
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/recepty-na-domaci-limonady/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return /limonad|ginger-bug|water-kefir|ferment/u.test(haystack) && category.pattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Domácí limonáda');
+---
+<HeritageHubLayout
+  title={`${category.title} – recepty krok za krokem`}
+  description={`${category.title}: obrazový přehled domácích nápojů, přesných postupů, skladování a bezpečnostních pravidel.`}
+  canonical={`/recepty-na-domaci-limonady/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro={category.intro || 'Vyberte konkrétní recept a pokračujte k přesnému postupu.'}
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Vyberte konkrétní limonádu"
+  directoryText={`V této kategorii je propojeno ${cards.length} receptů a navazujících návodů.`}
+  adTopic="napoje"
+  adHeading="Džbány, lahve, bylinky a suroviny pro nápoje"
+  feedTopic="napoje"
+  feedHeading="Pomůcky a přísady pro domácí limonády"
+/>

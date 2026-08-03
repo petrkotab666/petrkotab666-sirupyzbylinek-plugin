@@ -1,83 +1,54 @@
 name: Deploy SirupyZBylinek to Cloudflare Pages
-
 on:
   push:
-    branches:
-      - main
-    paths:
-      - 'site/**'
-      - '.github/workflows/deploy-cloudflare-pages.yml'
+    branches: [main]
+    paths: ['site/**','.github/workflows/deploy-cloudflare-pages.yml']
   pull_request:
-    branches:
-      - main
-    paths:
-      - 'site/**'
-      - '.github/workflows/deploy-cloudflare-pages.yml'
+    branches: [main]
+    paths: ['site/**','.github/workflows/deploy-cloudflare-pages.yml']
   workflow_dispatch:
-
 permissions:
   contents: read
   deployments: write
-
 concurrency:
   group: sirupyzbylinek-cloudflare-production
   cancel-in-progress: true
-
 jobs:
   deploy:
     name: Build, deploy and verify
     if: github.event_name != 'pull_request' || startsWith(github.head_ref, 'force-cloudflare-production-deploy')
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
     env:
       CLOUDFLARE_ACCOUNT_ID: 87659411eeb4335b3c1e2c01014edbfb
       CLOUDFLARE_PROJECT_NAME: sirupyzbylinek-astro
-
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: npm
           cache-dependency-path: site/package-lock.json
-
       - name: Verify Cloudflare API token
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "Repository secret CLOUDFLARE_API_TOKEN is not configured."
-            exit 1
-          fi
-
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Repository secret CLOUDFLARE_API_TOKEN is not configured."; exit 1; fi
       - name: Install dependencies
         working-directory: site
         run: npm install --no-audit --no-fund
-
       - name: Build and audit site
         working-directory: site
         run: npm run build
-
       - name: Force production branch to main
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           set -euo pipefail
-          RESPONSE="$(curl --fail --silent --show-error \
-            --request PATCH \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" \
-            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-            --header "Content-Type: application/json" \
-            --data '{"production_branch":"main"}')"
-
-          printf '%s' "$RESPONSE" | jq -e \
-            '.success == true and .result.production_branch == "main"' >/dev/null
-          echo "Cloudflare production branch is main."
-
+          RESPONSE="$(curl --fail --silent --show-error --request PATCH "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" --header "Content-Type: application/json" --data '{"production_branch":"main"}')"
+          printf '%s' "$RESPONSE" | jq -e '.success == true and .result.production_branch == "main"' >/dev/null
       - name: Deploy production with Wrangler
         id: deploy
         working-directory: site
@@ -85,79 +56,43 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           set -euo pipefail
-          npx --yes wrangler@4 pages deploy dist \
-            --project-name="${CLOUDFLARE_PROJECT_NAME}" \
-            --branch=main \
-            --commit-hash="${GITHUB_SHA}" \
-            --commit-message="Controlled production deployment" \
-            --commit-dirty=true | tee /tmp/wrangler-output.txt
-
+          npx --yes wrangler@4 pages deploy dist --project-name="${CLOUDFLARE_PROJECT_NAME}" --branch=main --commit-hash="${GITHUB_SHA}" --commit-message="Controlled production deployment" --commit-dirty=true | tee /tmp/wrangler-output.txt
           DEPLOYMENT_URL="$(grep -Eo 'https://[a-z0-9]+\.sirupyzbylinek-astro\.pages\.dev' /tmp/wrangler-output.txt | tail -n 1)"
-          if [ -z "$DEPLOYMENT_URL" ]; then
-            echo "Wrangler did not return a deployment URL."
-            exit 1
-          fi
+          test -n "$DEPLOYMENT_URL"
           echo "deployment_url=$DEPLOYMENT_URL" >> "$GITHUB_OUTPUT"
-          echo "Cloudflare deployment URL: $DEPLOYMENT_URL"
-
       - name: Confirm active production deployment
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           set -euo pipefail
-          RESPONSE="$(curl --fail --silent --show-error \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" \
-            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
-
-          printf '%s' "$RESPONSE" | jq -r \
-            '"Canonical deployment: \(.result.canonical_deployment.id)\nEnvironment: \(.result.canonical_deployment.environment)\nURL: \(.result.canonical_deployment.url)\nBranch: \(.result.canonical_deployment.deployment_trigger.metadata.branch)\nStatus: \(.result.canonical_deployment.latest_stage.status)"'
-          printf '%s' "$RESPONSE" | jq -e \
-            '.success == true
-             and .result.canonical_deployment.environment == "production"
-             and .result.canonical_deployment.deployment_trigger.metadata.branch == "main"
-             and .result.canonical_deployment.latest_stage.status == "success"' >/dev/null
-
+          RESPONSE="$(curl --fail --silent --show-error "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")"
+          printf '%s' "$RESPONSE" | jq -e '.success == true and .result.canonical_deployment.environment == "production" and .result.canonical_deployment.deployment_trigger.metadata.branch == "main" and .result.canonical_deployment.latest_stage.status == "success"' >/dev/null
       - name: Verify uploaded deployment
         env:
           DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment_url }}
         run: |
           set -euo pipefail
-          curl -fsS --max-time 30 \
-            "${DEPLOYMENT_URL}/deploy-version.txt" \
-            -o /tmp/deploy-version.txt
-          curl -fsS --max-time 30 \
-            "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" \
-            -o /tmp/article.html
-          curl -fsS --max-time 30 --output /dev/null \
-            "${DEPLOYMENT_URL}/obrazky/pestovani.svg"
-          python3 site/scripts/verify-deployed-article.py \
-            /tmp/deploy-version.txt /tmp/article.html
-
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/deploy-version.txt" -o /tmp/deploy-version.txt
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" -o /tmp/article.html
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/" -o /tmp/home.html
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/domu/prirodni-lekarna/" -o /tmp/health.html
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/osvedcene-recepty/" -o /tmp/recipes.html
+          curl -fsS --max-time 30 --output /dev/null "${DEPLOYMENT_URL}/media/original/home/bylinkova-herna-photo.svg"
+          python3 site/scripts/verify-deployed-article.py /tmp/deploy-version.txt /tmp/article.html /tmp/home.html /tmp/health.html /tmp/recipes.html
       - name: Verify public production address
         run: |
           set -euo pipefail
           for attempt in {1..12}; do
-            CACHE_BUSTER="$(date +%s)-${attempt}"
-
-            if curl -fsS --max-time 30 \
-                -H 'Cache-Control: no-cache' \
-                "https://sirupyzbylinek-astro.pages.dev/deploy-version.txt?v=${CACHE_BUSTER}" \
-                -o /tmp/public-version.txt \
-              && curl -fsS --max-time 30 \
-                -H 'Cache-Control: no-cache' \
-                "https://sirupyzbylinek-astro.pages.dev/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" \
-                -o /tmp/public-article.html \
-              && curl -fsS --max-time 30 --output /dev/null \
-                "https://sirupyzbylinek-astro.pages.dev/obrazky/pestovani.svg?v=${CACHE_BUSTER}" \
-              && python3 site/scripts/verify-deployed-article.py \
-                /tmp/public-version.txt /tmp/public-article.html; then
-              echo "Production deployment verified successfully."
-              exit 0
+            CACHE_BUSTER="$(date +%s)-${attempt}"; BASE="https://sirupyzbylinek-astro.pages.dev"
+            if curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/deploy-version.txt?v=${CACHE_BUSTER}" -o /tmp/public-version.txt \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" -o /tmp/public-article.html \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/?v=${CACHE_BUSTER}" -o /tmp/public-home.html \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/domu/prirodni-lekarna/?v=${CACHE_BUSTER}" -o /tmp/public-health.html \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/osvedcene-recepty/?v=${CACHE_BUSTER}" -o /tmp/public-recipes.html \
+              && curl -fsS --max-time 30 --output /dev/null "${BASE}/media/original/home/bylinkova-herna-photo.svg?v=${CACHE_BUSTER}" \
+              && python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html; then
+              echo "Production deployment verified successfully."; exit 0
             fi
-
-            echo "Production verification failed (attempt $attempt/12). Waiting 10 seconds..."
-            sleep 10
+            echo "Production verification failed (attempt $attempt/12). Waiting 10 seconds..."; sleep 10
           done
-
-          echo "The public production address did not pass verification."
           exit 1

@@ -24,13 +24,15 @@ const requirements = [
   ['závěrečný boss', 'Černý kotel'],
   ['desátá úroveň', 'Úroveň 10'],
   ['produktový feed', 'class="product-feed"'],
-  ['reklamní blok', 'class="context-ads"'],
 ];
 
 for (const [label, marker] of requirements) {
   if (!html.includes(marker)) errors.push(`chybí ${label}: ${marker}`);
 }
 
+if (!/class=["'][^"']*\bcontext-ads\b[^"']*["']/iu.test(html)) {
+  errors.push('chybí reklamní blok s třídou context-ads');
+}
 if (!/<canvas\b[^>]*width="600"[^>]*height="500"/iu.test(html)) {
   errors.push('herní plátno nemá zachovaný logický rozměr 600 × 500');
 }

@@ -1,0 +1,38 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+import { syrupHubCategories } from '../../../data/restored-hub-categories';
+
+export function getStaticPaths() {
+  return syrupHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
+}
+
+const category = syrupHubCategories.find((item) => item.slug === Astro.props.categorySlug);
+if (!category) throw new Error(`Neznámá kategorie domácích sirupů: ${Astro.props.categorySlug}`);
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/domaci-sirupy/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return /sirup/u.test(haystack) && category.pattern.test(haystack) && !animalPattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Domácí sirup');
+---
+<HeritageHubLayout
+  title={`${category.title} – recepty a bezpečnost`}
+  description={category.description || `${category.title}: recepty, postupy a bezpečnostní upozornění.`}
+  canonical={`/domaci-sirupy/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro={category.intro || 'Vyberte konkrétní bylinu nebo recept a pokračujte k přesnému postupu a omezením.'}
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Vyberte konkrétní sirup"
+  directoryText={`V této oblasti je nyní propojeno ${cards.length} samostatných receptů a bezpečnostních přehledů.`}
+  adTopic="recepty"
+  adHeading="Bylinky, lahve a knihy k domácím sirupům"
+  feedTopic="recepty"
+  feedHeading="Suroviny a vybavení pro výrobu sirupů"
+/>

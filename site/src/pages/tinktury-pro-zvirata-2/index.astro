@@ -1,0 +1,29 @@
+---
+import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  { href: '/tinktury-pro-zvirata-2/t-dychaci-ustroji-zvirat/', title: 'Dýchací ústrojí zvířat', text: 'Tinktury a bylinná témata spojená s dýcháním, kašlem a hrdlem.', image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-dychaci-ustroji-zvirat.svg', kicker: 'Kašel a dýchání' },
+  { href: '/tinktury-pro-zvirata-2/t-imunitni-system-zvirat/', title: 'Imunitní systém zvířat', text: 'Rostliny spojované s vitalitou a obranyschopností včetně omezení.', image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-imunitni-system-zvirat.svg', kicker: 'Vitalita' },
+  { href: '/tinktury-pro-zvirata-2/t-klid-a-psychika-zvirat/', title: 'Klid a psychika zvířat', text: 'Silněji působící byliny, které vyžadují veterinární dohled a přesné dávkování.', image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-klid-a-psychika-zvirat.svg', kicker: 'Stres a neklid' },
+  { href: '/tinktury-pro-zvirata-2/t-kuze-a-srst-zvirat/', title: 'Kůže a srst zvířat', text: 'Zevní formy, riziko olizování a rozdíly mezi jednotlivými druhy zvířat.', image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-kuze-a-srst-zvirat.svg', kicker: 'Zevní péče' },
+  { href: '/tinktury-pro-zvirata-2/t-pohybovy-aparat-zvirat/', title: 'Pohybový aparát zvířat', text: 'Klouby, svaly a regenerace bez automatického přebírání lidských receptů.', image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-pohybovy-aparat-zvirat.svg', kicker: 'Klouby a svaly' },
+  { href: '/tinktury-pro-zvirata-2/t-zazivani-zvirat/', title: 'Zažívání zvířat', text: 'Tinktury jsou kvůli alkoholu zvlášť citlivé téma; vždy je nutná odborná konzultace.', image: '/obrazky/clanky/tinktury-pro-zvirata-2--t-zazivani-zvirat.svg', kicker: 'Trávení' },
+] as const;
+---
+<HeritageHubLayout
+  title="Bylinné tinktury pro zvířata – bezpečnostní rozcestník"
+  description="Obnovený obrazový rozcestník tinktur a bylinných výluhů pro zvířata s důrazem na alkohol, dávkování a veterinární péči."
+  canonical="/tinktury-pro-zvirata-2/"
+  eyebrow="Zvýšená veterinární opatrnost"
+  heading="Tinktury pro zvířata"
+  intro="Alkoholové tinktury nejsou běžným domácím doplňkem pro zvířata. Stránky slouží hlavně jako bezpečnostní přehled a nenahrazují veterináře."
+  heroImage="/obrazky/clanky/tinktury-pro-zvirata-2.svg"
+  heroAlt="Bylinné tinktury a bezpečnost u zvířat"
+  cards={cards}
+  directoryTitle="Vyberte oblast"
+  directoryText="Šest původních podkategorií je znovu dostupných jako samostatné obrazové rozcestníky."
+  adTopic="zvirata"
+  adHeading="Knihy a vybavení pro odpovědnou péči o zvířata"
+  feedTopic="zvirata"
+  feedHeading="Produkty související s péčí o zvířata"
+/>

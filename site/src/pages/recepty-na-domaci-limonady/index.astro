@@ -1,0 +1,31 @@
+---
+import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  { href: '/recepty-na-domaci-limonady/limonady-ze-sirupu/', title: 'Limonády ze sirupu', text: 'Rychlé nápoje z hotových domácích sirupů, vody, citrusů, ovoce a ledu.', image: '/obrazky/clanky/recepty-na-domaci-limonady--limonady-ze-sirupu.svg', kicker: 'Nejrychlejší příprava' },
+  { href: '/recepty-na-domaci-limonady/limonady-z-bylinneho-vyluhu/', title: 'Limonády z bylinného výluhu', text: 'Máta, meduňka, heřmánek, tymián a další bylinky připravené jako jemný výluh.', image: '/obrazky/clanky/recepty-na-domaci-limonady--limonady-z-bylinneho-vyluhu.svg', kicker: 'Čerstvé i sušené byliny' },
+  { href: '/recepty-na-domaci-limonady/fresh-limonady/', title: 'Fresh limonády', text: 'Ovoce, zelenina, čerstvé bylinky a led bez dlouhého louhování nebo kvašení.', image: '/obrazky/clanky/recepty-na-domaci-limonady--fresh-limonady.svg', kicker: 'Čerstvé osvěžení' },
+  { href: '/recepty-na-domaci-limonady/macerovane-limonady/', title: 'Macerované limonády', text: 'Studené louhování ovoce, citrusů a bylinek pro jemnou chuť bez vaření.', image: '/obrazky/clanky/recepty-na-domaci-limonady--macerovane-limonady.svg', kicker: 'Studená metoda' },
+  { href: '/recepty-na-domaci-limonady/fermentovane-limonady/', title: 'Fermentované limonády', text: 'Kontrolované kvašení, čistota nádob, tlak v lahvích a bezpečné skladování.', image: '/obrazky/clanky/recepty-na-domaci-limonady--fermentovane-limonady.svg', kicker: 'Živá fermentace' },
+  { href: '/jak-na-water-kefir/', title: 'Water kefír', text: 'Základní postup s tibicos kulturou, cukerným roztokem a druhotným ochucením.', image: '/obrazky/clanky/jak-na-water-kefir.svg', kicker: 'Fermentační kultura' },
+  { href: '/domaci-starter-ze-zazvoru-ginger-bug/', title: 'Ginger bug', text: 'Domácí zázvorový startér pro perlivé nápoje a zásady bezpečné údržby.', image: '/obrazky/clanky/domaci-starter-ze-zazvoru-ginger-bug.svg', kicker: 'Zázvorový startér' },
+  { href: '/divoka-fermentace-limonady/', title: 'Divoká fermentace', text: 'Co hlídat u spontánního kvašení, kdy nápoj vyhodit a jak zabránit přetlaku.', image: '/obrazky/clanky/divoka-fermentace-limonady.svg', kicker: 'Pokročilá metoda' },
+] as const;
+---
+<HeritageHubLayout
+  title="Domácí limonády – sirupové, fresh, macerované i fermentované"
+  description="Obnovený obrazový rozcestník domácích limonád: ze sirupu, z bylinného výluhu, fresh, macerované, fermentované, water kefír a ginger bug."
+  canonical="/recepty-na-domaci-limonady/"
+  eyebrow="Osvěžení z bylinek a ovoce"
+  heading="Domácí limonády"
+  intro="Vyberte si způsob přípravy podle času, surovin a zkušeností. Od rychlé limonády ze sirupu až po kontrolovanou fermentaci."
+  heroImage="/obrazky/clanky/recepty-na-domaci-limonady.svg"
+  heroAlt="Domácí bylinné a ovocné limonády s ledem"
+  cards={cards}
+  directoryTitle="Jakou limonádu chcete připravit"
+  directoryText="Pět původních kategorií a navazující fermentační návody jsou znovu propojené obrazovou navigací."
+  adTopic="napoje"
+  adHeading="Sklenice, džbány, lahve a suroviny pro limonády"
+  feedTopic="napoje"
+  feedHeading="Pomůcky a přísady pro domácí nápoje"
+/>

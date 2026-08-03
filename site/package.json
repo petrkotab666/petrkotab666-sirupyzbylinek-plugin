@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/patch-herb-player.mjs && node scripts/sanitize-legacy-markdown.mjs && node scripts/remove-editorial-fillers.mjs && node scripts/fetch-affiliate-feed.mjs",
+    "prebuild": "node scripts/patch-herb-player.mjs && node scripts/sanitize-legacy-markdown.mjs && node scripts/remove-duplicate-article-images.mjs && node scripts/remove-editorial-fillers.mjs && node scripts/fetch-affiliate-feed.mjs",
     "build": "astro build",
-    "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/patch-site-audit.mjs && node scripts/audit-built-site.mjs && node scripts/audit-herb-master.mjs && node scripts/audit-full-site.mjs",
+    "postbuild": "node scripts/generate-legacy-redirects.mjs && node scripts/deduplicate-built-article-images.mjs && node scripts/patch-site-audit.mjs && node scripts/audit-built-site.mjs && node scripts/audit-herb-master.mjs && node scripts/audit-full-site.mjs && node scripts/audit-restored-directories.mjs && node scripts/audit-restored-site.mjs",
     "preview": "astro preview",
     "import:wordpress": "node scripts/import-wordpress.mjs"
   },
