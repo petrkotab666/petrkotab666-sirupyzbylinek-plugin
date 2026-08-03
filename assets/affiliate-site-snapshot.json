@@ -6,10 +6,10 @@
   "overlaySources": [
     "https://pojistime.to/assets/ehub-partner-assets/brainmarket.json"
   ],
-  "centralUpdatedAt": "2026-07-28",
-  "centralSha256": "4f964cfef69e9efa955156b89f8fba1d3b5625a0499a959fbf7e689cb00b9d95",
+  "centralUpdatedAt": "2026-08-03",
+  "centralSha256": "364e794a84ab654123674f5377f3d3387ab853c9a71411d83d9d280934281e95",
   "configSha256": "5c62a932681c59cd071a7042eb0b48c14ed4763e5ac2cc43d64c42fd7dc62df6",
-  "generatedAt": "2026-07-29T08:51:12+00:00",
+  "generatedAt": "2026-08-03T20:00:48+00:00",
   "sourceProgramCount": 105,
   "partnerCount": 5,
   "feedCount": 9,
