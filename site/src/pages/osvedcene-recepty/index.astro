@@ -1,62 +1,46 @@
 ---
-import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import ContextAds from '../../components/ContextAds.astro';
+import ProductFeed from '../../components/ProductFeed.astro';
+import SectionHero from '../../components/SectionHero.astro';
+import IllustratedDirectory from '../../components/IllustratedDirectory.astro';
 import PreparationCard from '../../components/PreparationCard.astro';
 import { getPublishedArticles, topicKey } from '../../lib/articles';
 import { herbalPreparations } from '../../data/herbal-preparations';
-
-const allArticles = await getPublishedArticles();
-const recipes = allArticles
-  .filter((entry) => ['recepty', 'napoje', 'zavarovani'].includes(topicKey(entry)))
-  .slice(0, 12);
-const featuredPreparations = herbalPreparations.filter((recipe) => recipe.featured).slice(0, 6);
-
-const cards = [
-  { href: '/domaci-sirupy/', title: 'Domácí sirupy', text: 'Bylinné, květové a ovocné sirupy rozdělené do tematických podkategorií.', image: '/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png', kicker: 'Květy, byliny a plody' },
-  { href: '/tinktury/', title: 'Bylinné tinktury', text: 'Macerace, filtrace, lahvičky, bezpečnost a přehled receptů podle témat.', image: '/obrazky/clanky/tinktury.svg', kicker: 'Výluhy a kapky' },
-  { href: '/recepty-na-domaci-limonady/', title: 'Domácí limonády', text: 'Ze sirupu, výluhu, čerstvého ovoce, macerace i kontrolované fermentace.', image: '/obrazky/clanky/recepty-na-domaci-limonady.svg', kicker: 'Osvěžení' },
-  { href: '/bylinne-caje/', title: 'Bylinné čaje a nálevy', text: 'Jednodruhové i jemné směsi s přesnou teplotou vody, dobou louhování a omezeními.', image: '/obrazky/recepty/medunkovy-caj-pro-klidny-vecer.svg', kicker: 'Nálevy a odvary' },
-  { href: '/bylinne-koupele/', title: 'Bylinné koupele', text: 'Celkové koupele, lázně na nohy, koupelové sáčky a šetrné kombinace.', image: '/obrazky/recepty/levandulovo-ovesna-koupel.svg', kicker: 'Relaxace a zevní péče' },
-  { href: '/bylinne-masti-a-balzamy/', title: 'Masti a balzámy', text: 'Olejové základy, vosk, čisté kelímky a postupy určené pro zevní použití.', image: '/obrazky/recepty/mesickova-mast.svg', kicker: 'Domácí kosmetika' },
-  { href: '/bylinne-oleje-a-maceraty/', title: 'Oleje a maceráty', text: 'Měsíček, levandule, heřmánek, růže, jitrocel a rozmarýn v olejových základech.', image: '/obrazky/recepty/mesickovy-olejovy-macerat.svg', kicker: 'Olejové výluhy' },
-  { href: '/bylinne-octy-a-oxymely/', title: 'Octy a oxymely', text: 'Bylinkové octy, medovo-octové základy a přesné podmínky skladování.', image: '/obrazky/recepty/tymianovy-oxymel.svg', kicker: 'Ocet a med' },
-  { href: '/bylinne-obklady-a-kloktadla/', title: 'Obklady a kloktadla', text: 'Zevní obklady, oplachy, bylinná pára a krátkodobé domácí použití.', image: '/obrazky/recepty/hermankovy-obklad.svg', kicker: 'Místní použití' },
-  { href: '/bylinky-v-kuchyni-recepty/', title: 'Bylinky v kuchyni', text: 'Bylinkové soli, cukry, másla, pesta, medy a ledové kostky pro běžné vaření.', image: '/obrazky/recepty/univerzalni-bylinkova-sul.svg', kicker: 'Kuchyňské výrobky' },
-  { href: '/sirupy-a-recepty-pro-zvirata/', title: 'Recepty pro zvířata', text: 'Samostatný bezpečnostní rozcestník pro psy, kočky a další zvířata.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata.svg', kicker: 'Veterinární opatrnost' },
+const allArticles=await getPublishedArticles();
+const recipes=allArticles.filter((entry)=>['recepty','napoje','zavarovani'].includes(topicKey(entry))).slice(0,12);
+const featuredPreparations=herbalPreparations.filter((recipe)=>recipe.featured).slice(0,6);
+const categories=[
+ {href:'/domaci-sirupy/',art:'recipes',image:'/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png',imageAlt:'Domácí bylinkové sirupy v lahvích',kicker:'Bylinky a ovoce',title:'Domácí sirupy',text:'Bezové, jitrocelové, mátové, ovocné i další sirupy krok za krokem.'},
+ {href:'/tinktury/',art:'pharmacy',image:'/media/imported/prirodni-sila-pro-imunitu-a-obranyschopnost/3obr-07cd0380.png',imageAlt:'Bylinky a lahvičky pro domácí tinktury',kicker:'Výluhy a kapky',title:'Bylinné tinktury',text:'Suroviny, macerace, skladování, omezení a bezpečné používání.'},
+ {href:'/recepty-na-domaci-limonady/',art:'harvest',image:'/media/imported/jak-kombinovat-bylinky/byliny-6083d43d.png',imageAlt:'Čerstvé bylinky a ovoce pro domácí nápoje',kicker:'Letní osvěžení',title:'Domácí limonády',text:'Nápoje ze sirupů, bylinných výluhů, macerace i fermentace.'},
+ {href:'/bylinne-caje/',art:'timing',image:'/media/imported/kontryhel-obecny/kontryhel-obecny-caj-sber-suseni-40c765ff.png',imageAlt:'Kontryhel a další bylinky připravené na čaj',kicker:'Nálevy a směsi',title:'Bylinné čaje',text:'Jednodruhové nálevy, čajové směsi, teploty vody a doby louhování.'},
+ {href:'/bylinne-koupele/',art:'places',image:'/media/imported/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/bylinkovymagazin-58281674.png',imageAlt:'Bylinková zahrada pro domácí koupele a péči',kicker:'Domácí wellness',title:'Bylinné koupele',text:'Celkové koupele, sedací koupele i lázně na ruce a nohy.'},
+ {href:'/bylinne-masti-a-balzamy/',art:'process',image:'/media/original/home/bylinkova-herna-photo.svg',imageAlt:'Bylinky a drobné pomůcky na dřevěném stole',kicker:'Zevní péče',title:'Masti a balzámy',text:'Masti, balzámy, péče o rty a další tukové bylinné výtažky.'},
+ {href:'/bylinne-oleje-a-maceraty/',art:'identify',image:'/media/imported/sklenice-na-sirupy-a-zavarovani/sklenice-na-sirupy-a-zavarovani-4b170c4d.webp',imageAlt:'Lahve a sklenice pro bylinné oleje a maceráty',kicker:'Pomalá macerace',title:'Oleje a maceráty',text:'Bylinné oleje pro pokožku, vlasy a další běžné domácí použití.'},
+ {href:'/bylinne-octy-a-oxymely/',art:'ethics',image:'/media/imported/nejlepsi-susicka-na-bylinky/byliny-300x300-eca005d2.png',imageAlt:'Sušené bylinky pro octy, oxymely a domácí směsi',kicker:'Ocet a med',title:'Octy a oxymely',text:'Ochucené octy, oxymely a bezpečné kuchyňské i zevní varianty.'},
+ {href:'/bylinne-obklady-a-kloktadla/',art:'avoid',image:'/media/imported/jak-kombinovat-bylinky/byliny-6083d43d.png',imageAlt:'Čerstvé bylinky pro obklady, oplachy a kloktadla',kicker:'Krátké zevní použití',title:'Obklady a kloktadla',text:'Studené i teplé obklady, oplachy, bylinná pára a kloktadla.'},
+ {href:'/bylinky-v-kuchyni-recepty/',art:'magazine',image:'/media/imported/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/bylinkovymagazin-58281674.png',imageAlt:'Bylinková zahrada a kuchyňské bylinky',kicker:'Chuť a vůně',title:'Bylinky v kuchyni',text:'Bylinkové soli, cukry, pesta, másla, medy a ledové kostky.'}
 ] as const;
+const syrupBranches=[['/domaci-sirupy/sirupy-na-dychani/','Sirupy na dýchací cesty'],['/domaci-sirupy/imunita-a-vitalita/','Imunita a vitalita'],['/domaci-sirupy/traveni-a-zazivani/','Trávení a zažívání'],['/domaci-sirupy/uklidneni-a-spanek/','Uklidnění a spánek'],['/domaci-sirupy/mocove-cesty-a-ledviny/','Močové cesty a ledviny'],['/domaci-sirupy/pohybovy-aparat-a-kuze/','Pohybový aparát a kůže']] as const;
+const tinctureBranches=[['/tinktury/tinktury-imunita-dychani/','Imunita a dýchání'],['/tinktury/dychaci-cesty-a-nachlazeni/','Nachlazení'],['/tinktury/tinktury-spanek-nervy/','Spánek a nervy'],['/tinktury/tinktury-srdce-krevni-obeh/','Srdce a krevní oběh'],['/tinktury/tinktury-traveni-metabolismus/','Trávení a metabolismus'],['/tinktury/tinktury-mocove-cesty-ledviny/','Močové cesty a ledviny'],['/tinktury/tinktury-klouby-svaly/','Klouby a svaly'],['/tinktury/tinktury-zeny-muzi/','Ženské a mužské zdraví'],['/tinktury/tinktury-detoxikace-ocista/','Játra a očista']] as const;
+const lemonadeBranches=[['/recepty-na-domaci-limonady/limonady-ze-sirupu/','Limonády ze sirupu'],['/recepty-na-domaci-limonady/limonady-z-bylinneho-vyluhu/','Limonády z bylinného výluhu'],['/recepty-na-domaci-limonady/macerovane-limonady/','Macerované limonády'],['/recepty-na-domaci-limonady/fresh-limonady/','Fresh limonády'],['/recepty-na-domaci-limonady/fermentovane-limonady/','Fermentované limonády']] as const;
+const animalBranches=[['/sirupy-a-recepty-pro-zvirata/prirodni-lekarna-pro-zvirata/','Přírodní lékárna pro zvířata'],['/sirupy-a-recepty-pro-zvirata/imunitni-system-zvirat/','Imunita zvířat'],['/sirupy-a-recepty-pro-zvirata/dychaci-ustroji-zvirat/','Dýchací ústrojí'],['/sirupy-a-recepty-pro-zvirata/zazivani-zvirat/','Zažívání zvířat'],['/sirupy-a-recepty-pro-zvirata/klid-a-psychika-zvirat/','Klid a psychika'],['/sirupy-a-recepty-pro-zvirata/pohybovy-aparat-zvirat/','Pohybový aparát'],['/sirupy-a-recepty-pro-zvirata/kuze-a-srst-zvirat/','Kůže a srst']] as const;
+const itemListSchema={'@context':'https://schema.org','@type':'CollectionPage',name:'Osvědčené recepty a domácí bylinná výroba',url:new URL('/osvedcene-recepty/',Astro.site||Astro.url.origin).href,mainEntity:{'@type':'ItemList',numberOfItems:recipes.length+herbalPreparations.length,itemListElement:[...featuredPreparations.map((recipe,index)=>({'@type':'ListItem',position:index+1,name:recipe.title,url:new URL(`/bylinne-pripravky/${recipe.slug}/`,Astro.site||Astro.url.origin).href})),...recipes.map((entry,index)=>({'@type':'ListItem',position:featuredPreparations.length+index+1,name:entry.data.title,url:new URL(entry.data.path,Astro.site||Astro.url.origin).href}))]}};
 ---
-<HeritageHubLayout
-  title="Osvědčené recepty z bylinek – kompletní domácí receptář"
-  description="Jednotný obrazový receptář sirupů, tinktur, čajů, limonád, koupelí, mastí, olejů, octů, obkladů, kuchyňských výrobků a receptů pro zvířata."
-  canonical="/osvedcene-recepty/"
-  eyebrow="Recepty a domácí výroba"
-  heading="Osvědčené recepty z bylinek"
-  intro="Vyberte si způsob zpracování. Každá oblast vede na vlastní rozcestník a odtud ke konkrétním receptům s postupem, skladováním a upozorněním."
-  heroImage="/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png"
-  heroAlt="Domácí bylinné sirupy, tinktury a další výrobky"
-  cards={cards}
-  directoryTitle="Co chcete z bylinek připravit"
-  directoryText="Všechny starší i nově doplněné kategorie jsou sjednocené do jedné obrazové navigace."
-  adTopic="recepty"
-  adHeading="Vybavení a suroviny pro domácí recepty"
-  feedTopic="recepty"
-  feedHeading="Produkty vhodné pro domácí výrobu"
->
-  {featuredPreparations.length > 0 && (
-    <section class="section-wrap featured-new-recipes">
-      <div class="section-heading centered-heading"><span>Doporučený začátek</span><h2>Vybrané nové recepty</h2></div>
-      <div class="recipe-feature-grid">{featuredPreparations.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
-    </section>
-  )}
-
-  <section class="section-wrap section-articles">
-    <div class="section-heading centered-heading"><span>Další recepty</span><h2>Nejnovější sirupy, nápoje a návody</h2></div>
-    <div class="articles-grid">{recipes.map((entry) => <ArticleCard entry={entry} />)}</div>
-  </section>
-</HeritageHubLayout>
-
-<style>
-  .recipe-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
-  @media(max-width:900px){.recipe-feature-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:620px){.recipe-feature-grid{grid-template-columns:1fr}}
-</style>
+<BaseLayout title="Osvědčené recepty z bylinek – sirupy, čaje, masti i koupele" description="Úplný strom receptů na sirupy, tinktury, čaje, limonády, koupele, masti, oleje, octy, obklady a další domácí bylinné výrobky." canonical="/osvedcene-recepty/" image="/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png" structuredData={[itemListSchema]}>
+ <SectionHero eyebrow="Recepty a domácí výroba" title="Osvědčené recepty z bylinek" text="Vracíme kompletní původní strukturu a rozšiřujeme ji o čaje, koupele, masti, oleje, octy, obklady a kuchyňské výrobky." art="recipes" theme="amber" />
+ <section class="section-wrap section-directory restored-hub-section"><div class="section-heading centered-heading"><span>Kompletní receptář</span><h2>Co chcete připravit?</h2><p>Deset stejně zpracovaných hlavních větví vede do konkrétních kategorií a receptů.</p></div><IllustratedDirectory items={categories} class="restored-directory restored-directory--recipes" /></section>
+ <section class="section-wrap restored-subhubs" aria-labelledby="puvodni-vetve-receptu"><div class="section-heading centered-heading"><span>Původní podkategorie</span><h2 id="puvodni-vetve-receptu">Všechny navazující rozcestníky</h2><p>Žádná původní větev už není schovaná nebo odříznutá od hlavního receptáře.</p></div><div class="restored-subhub-grid">
+  <section class="restored-subhub-card"><span>Domácí sirupy</span><h3>Sirupy podle použití</h3><div class="restored-link-cloud">{syrupBranches.map(([href,label])=><a href={href}>{label}<b aria-hidden="true">→</b></a>)}</div><a class="restored-subhub-main" href="/domaci-sirupy/">Všechny domácí sirupy</a></section>
+  <section class="restored-subhub-card"><span>Bylinné tinktury</span><h3>Tinktury podle tématu</h3><div class="restored-link-cloud">{tinctureBranches.map(([href,label])=><a href={href}>{label}<b aria-hidden="true">→</b></a>)}</div><a class="restored-subhub-main" href="/tinktury/">Všechny bylinné tinktury</a></section>
+  <section class="restored-subhub-card"><span>Domácí nápoje</span><h3>Limonády podle přípravy</h3><div class="restored-link-cloud">{lemonadeBranches.map(([href,label])=><a href={href}>{label}<b aria-hidden="true">→</b></a>)}</div><a class="restored-subhub-main" href="/recepty-na-domaci-limonady/">Všechny domácí limonády</a></section>
+  <section class="restored-subhub-card"><span>Veterinární opatrnost</span><h3>Recepty a témata pro zvířata</h3><div class="restored-link-cloud">{animalBranches.map(([href,label])=><a href={href}>{label}<b aria-hidden="true">→</b></a>)}</div><a class="restored-subhub-main" href="/sirupy-a-recepty-pro-zvirata/">Všechny recepty pro zvířata</a></section>
+ </div></section>
+ <ContextAds topic="recepty" heading="Vybavení a suroviny pro domácí recepty" />
+ <section class="section-wrap featured-new-recipes"><div class="section-heading centered-heading"><span>Doplněné recepty</span><h2>Vybrané čaje, koupele, masti a další výrobky</h2></div><div class="preparation-grid">{featuredPreparations.map((recipe)=><PreparationCard recipe={recipe} />)}</div></section>
+ <section class="section-wrap section-articles"><div class="section-heading centered-heading"><span>Další recepty</span><h2>Sirupy, nápoje a praktické návody</h2><p>Nejnovější články z původních i nově doplněných kategorií.</p></div><div class="articles-grid">{recipes.map((entry)=><ArticleCard entry={entry} />)}</div></section>
+ <ProductFeed topic="recepty" heading="Produkty vhodné pro domácí výrobu" />
+</BaseLayout>
+<style>.preparation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}@media(max-width:900px){.preparation-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.preparation-grid{grid-template-columns:1fr}}</style>
