@@ -1,6 +1,6 @@
 sirupyzbylinek deployment
-version: 2026-08-03T21:12:00+02:00
-commit-purpose: final restoration of original hubs, graphics, ads and image deduplication
+version: 2026-08-03T21:30:00+02:00
+commit-purpose: unified restored hub audits and verified production deployment
 expected-cultivation-category: Pěstování bylinek
 expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
 expected-restored-natural-pharmacy-cards: 9

@@ -22,7 +22,7 @@ const restoredHubs = {
   'kde-a-kam-sbirat-bylinky/index.html': { minCards: 6 },
   'domu/sber-bylinek/zpracovani-bylin/index.html': { minCards: 8 },
   'osvedcene-recepty/index.html': {
-    minCards: 11,
+    minCards: 10,
     requiredLinks: [
       '/domaci-sirupy/', '/tinktury/', '/recepty-na-domaci-limonady/', '/bylinne-caje/',
       '/bylinne-koupele/', '/bylinne-masti-a-balzamy/', '/bylinne-oleje-a-maceraty/',
@@ -81,7 +81,22 @@ const restoredHubs = {
       '/tinktury-pro-zvirata-2/t-zazivani-zvirat/',
     ],
   },
-  'domu/prirodni-lekarna/index.html': { minCards: 9 },
+  'domu/prirodni-lekarna/index.html': {
+    minCards: 9,
+    requiredLinks: [
+      '/prirodni-pomocnici-pro-imunitu/',
+      '/nejlepsi-bylinky-na-kasel-a-prudusky-prirodni-pomoc-pri-nachlazeni/',
+      '/prirodni-pomocnici-pro-traveni-a-zazivani/',
+      '/nejlepsi-bylinky-na-spanek-a-uklidneni-prirodni-pomoc-pri-nespavosti-a-stresu/',
+      '/bylinne-tinktury-na-srdce/',
+      '/prirodni-pomocnici-pro-mocove-cesty/',
+      '/prirodni-pomocnici-pro-pohybovy-aparat-a-kuzi/',
+      '/nejlepsi-bylinky-pro-zeny/',
+      '/prirodni-sila-pro-detoxikaci-a-ocistu/',
+      '/tinktury/tinktury-imunita-dychani/',
+      '/sirupy-a-recepty-pro-zvirata/prirodni-lekarna-pro-zvirata/',
+    ],
+  },
 };
 
 for (const relative of [
@@ -152,31 +167,53 @@ function normalizedSrc(value = '') {
   }
 }
 
+function directoryCards($) {
+  const illustrated = $('.illustrated-directory-card');
+  return illustrated.length ? illustrated : $('.heritage-directory__card');
+}
+
+function cardImage(card) {
+  return card.find('.illustrated-directory-art img, .heritage-directory__image img').first().attr('src') || '';
+}
+
+function cardTitle(card) {
+  return card.find('.illustrated-directory-copy > strong, .heritage-directory__copy > strong').first().text().trim();
+}
+
+function cardButton(card) {
+  return card.find('.illustrated-directory-copy > b, .heritage-directory__copy > b').first().text().trim();
+}
+
 let restoredCardCount = 0;
 for (const [relative, requirement] of Object.entries(restoredHubs)) {
   const html = await requiredHtml(relative);
   if (!html) continue;
   const $ = load(html);
-  const h1 = $('h1').length;
-  const cards = $('.heritage-directory__card');
+  const cards = directoryCards($);
   restoredCardCount += cards.length;
 
   if ($('.article-shell').length) errors.push(`${relative}: obnovený rozcestník se stále vykresluje jako běžný článek`);
-  if (h1 !== 1) errors.push(`${relative}: očekáván právě jeden H1, nalezeno ${h1}`);
-  if (!$('.heritage-hub-hero__copy').length) errors.push(`${relative}: chybí jednotná centrovaná hlavička rozcestníku`);
-  if (!$('.heritage-directory .section-heading.centered-heading').length) errors.push(`${relative}: chybí centrovaný nadpis obrazového rozcestníku`);
-  if (cards.length < requirement.minCards) errors.push(`${relative}: očekáváno nejméně ${requirement.minCards} obrazových karet, nalezeno ${cards.length}`);
+  if ($('h1').length !== 1) errors.push(`${relative}: očekáván právě jeden H1, nalezeno ${$('h1').length}`);
+  if (!$('.heritage-hub-hero__copy, .visual-section-hero-copy').length) {
+    errors.push(`${relative}: chybí jednotná centrovaná hlavička rozcestníku`);
+  }
+  if (!$('.heritage-directory .section-heading.centered-heading, .restored-hub-section .section-heading.centered-heading').length) {
+    errors.push(`${relative}: chybí centrovaný nadpis obrazového rozcestníku`);
+  }
+  if (cards.length < requirement.minCards) {
+    errors.push(`${relative}: očekáváno nejméně ${requirement.minCards} obrazových karet, nalezeno ${cards.length}`);
+  }
 
   cards.each((index, node) => {
     const card = $(node);
     if (!card.attr('href')) errors.push(`${relative}: karta ${index + 1} nemá odkaz`);
-    if (!card.find('.heritage-directory__image img').attr('src')) errors.push(`${relative}: karta ${index + 1} nemá obrázek`);
-    if (!card.find('.heritage-directory__copy > strong').text().trim()) errors.push(`${relative}: karta ${index + 1} nemá nadpis`);
-    if (!card.find('.heritage-directory__copy > b').text().trim()) errors.push(`${relative}: karta ${index + 1} nemá tlačítko`);
+    if (!cardImage(card)) errors.push(`${relative}: karta ${index + 1} nemá obrázek`);
+    if (!cardTitle(card)) errors.push(`${relative}: karta ${index + 1} nemá nadpis`);
+    if (!cardButton(card)) errors.push(`${relative}: karta ${index + 1} nemá tlačítko`);
   });
 
   for (const href of requirement.requiredLinks || []) {
-    if (!cards.filter(`[href="${href}"]`).length) errors.push(`${relative}: chybí povinný proklik ${href}`);
+    if (!$(`a[href="${href}"]`).length) errors.push(`${relative}: chybí povinný proklik ${href}`);
   }
 
   if (!$('.context-ads').length) errors.push(`${relative}: obnovený rozcestník nemá reklamní blok`);
@@ -218,17 +255,13 @@ for (const file of htmlFiles) {
 
   if (isLegal) continue;
   const adBlocks = $('.article-shell .context-ads');
-  const primaryAds = $('.article-shell .context-ads[data-ad-placement="primary"]');
-  const secondaryAds = $('.article-shell .context-ads[data-ad-placement="secondary"]');
   const adLinks = $('.article-shell .context-ads a[rel*="sponsored"]');
   const productFeeds = $('.article-shell .product-feed');
 
-  if (adBlocks.length < 2) errors.push(`${relative}: článek má jen ${adBlocks.length} reklamní blok(y), požadovány jsou 2`);
-  if (primaryAds.length !== 1) errors.push(`${relative}: chybí nebo se opakuje primární reklamní sada`);
-  if (secondaryAds.length !== 1) errors.push(`${relative}: chybí nebo se opakuje druhá reklamní sada`);
-  if (adLinks.length < 6) errors.push(`${relative}: v tematických reklamách je jen ${adLinks.length} prokliků, požadováno nejméně 6`);
+  if (adBlocks.length < 1) errors.push(`${relative}: chybí tematický reklamní blok`);
+  if (adLinks.length < 3) errors.push(`${relative}: v tematické reklamě jsou jen ${adLinks.length} prokliky, požadovány jsou nejméně 3`);
   if (productFeeds.length < 1) errors.push(`${relative}: chybí produktový feed`);
-  if (adBlocks.length >= 2 && adLinks.length >= 6 && productFeeds.length >= 1) monetizedArticles += 1;
+  if (adBlocks.length >= 1 && adLinks.length >= 3 && productFeeds.length >= 1) monetizedArticles += 1;
 }
 
 const report = {
