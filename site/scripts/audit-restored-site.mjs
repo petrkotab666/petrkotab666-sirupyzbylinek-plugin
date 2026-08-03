@@ -7,6 +7,7 @@ const DIST = path.join(ROOT, 'dist');
 const errors = [];
 const stats = {
   articlePages: 0,
+  criticalSafetyPages: 0,
   longArticles: 0,
   veryLongArticles: 0,
   inlineAdModules: 0,
@@ -85,14 +86,16 @@ for (const file of allFiles.filter((target) => target.endsWith('.html'))) {
   if ($('.context-ads').length < 1) errors.push(`${relative}: chybí tematický reklamní blok pod úvodem`);
   if ($('.product-feed').length < 1) errors.push(`${relative}: chybí produktový feed na konci článku`);
 
+  const isCriticalSafetyPage = $('.critical-recipe-notice').length > 0;
+  if (isCriticalSafetyPage) stats.criticalSafetyPages += 1;
   const length = Number(article.attr('data-article-text-length') || 0);
   const inlineAds = $('.article-inline-ad').length;
   stats.inlineAdModules += inlineAds;
-  if (length >= 1800) {
+  if (!isCriticalSafetyPage && length >= 1800) {
     stats.longArticles += 1;
     if (inlineAds < 1) errors.push(`${relative}: dlouhý článek nemá reklamu uvnitř obsahu`);
   }
-  if (length >= 7000) {
+  if (!isCriticalSafetyPage && length >= 7000) {
     stats.veryLongArticles += 1;
     if (inlineAds < 2) errors.push(`${relative}: velmi dlouhý článek nemá druhou reklamu v nižší části`);
   }
@@ -114,7 +117,7 @@ for (const file of allFiles.filter((target) => target.endsWith('.html'))) {
   }
 }
 
-console.log(`Restoration audit: health cards=${healthCards}, recipe cards=${recipeCards}, articles=${stats.articlePages}, long=${stats.longArticles}, very long=${stats.veryLongArticles}, inline ads=${stats.inlineAdModules}, duplicate heroes=${stats.duplicateHeroImages}, repeated body images=${stats.repeatedBodyImages}.`);
+console.log(`Restoration audit: health cards=${healthCards}, recipe cards=${recipeCards}, articles=${stats.articlePages}, critical safety pages=${stats.criticalSafetyPages}, long=${stats.longArticles}, very long=${stats.veryLongArticles}, inline ads=${stats.inlineAdModules}, duplicate heroes=${stats.duplicateHeroImages}, repeated body images=${stats.repeatedBodyImages}.`);
 if (errors.length) {
   console.error('Restoration audit failed:');
   errors.slice(0, 160).forEach((error) => console.error(`- ${error}`));
