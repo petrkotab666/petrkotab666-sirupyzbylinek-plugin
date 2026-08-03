@@ -11,12 +11,8 @@ const restoredHubs = {
   'domu/sber-bylinek/index.html': {
     minCards: 6,
     requiredLinks: [
-      '/domu/sber-bylinek/kdy-sbirat-bylinky/',
-      '/domu/co-sbirat/',
-      '/etika-sberu/',
-      '/sber-bylinek/co-nesbirat/',
-      '/kde-a-kam-sbirat-bylinky/',
-      '/domu/sber-bylinek/zpracovani-bylin/',
+      '/domu/sber-bylinek/kdy-sbirat-bylinky/', '/domu/co-sbirat/', '/etika-sberu/',
+      '/sber-bylinek/co-nesbirat/', '/kde-a-kam-sbirat-bylinky/', '/domu/sber-bylinek/zpracovani-bylin/',
     ],
   },
   'domu/sber-bylinek/kdy-sbirat-bylinky/index.html': { minCards: 8 },
@@ -34,12 +30,97 @@ const restoredHubs = {
       '/sirupy-a-recepty-pro-zvirata/',
     ],
   },
-  'domaci-sirupy/index.html': { minCards: 8 },
-  'tinktury/index.html': { minCards: 9 },
-  'recepty-na-domaci-limonady/index.html': { minCards: 8 },
-  'sirupy-a-recepty-pro-zvirata/index.html': { minCards: 8 },
+  'domaci-sirupy/index.html': {
+    minCards: 8,
+    requiredLinks: [
+      '/domaci-sirupy/sirupy-na-dychani/', '/domaci-sirupy/traveni-a-zazivani/',
+      '/domaci-sirupy/imunita-a-vitalita/', '/domaci-sirupy/uklidneni-a-spanek/',
+      '/domaci-sirupy/mocove-cesty-a-ledviny/', '/domaci-sirupy/pohybovy-aparat-a-kuze/',
+    ],
+  },
+  'tinktury/index.html': {
+    minCards: 9,
+    requiredLinks: [
+      '/tinktury/dychaci-cesty-a-nachlazeni/', '/tinktury/tinktury-imunita-dychani/',
+      '/tinktury/tinktury-traveni-metabolismus/', '/tinktury/tinktury-spanek-nervy/',
+      '/tinktury/tinktury-srdce-krevni-obeh/', '/tinktury/tinktury-klouby-svaly/',
+      '/tinktury/tinktury-mocove-cesty-ledviny/', '/tinktury/tinktury-zeny-muzi/',
+      '/tinktury/tinktury-detoxikace-ocista/',
+    ],
+  },
+  'recepty-na-domaci-limonady/index.html': {
+    minCards: 8,
+    requiredLinks: [
+      '/recepty-na-domaci-limonady/limonady-ze-sirupu/',
+      '/recepty-na-domaci-limonady/limonady-z-bylinneho-vyluhu/',
+      '/recepty-na-domaci-limonady/fresh-limonady/',
+      '/recepty-na-domaci-limonady/macerovane-limonady/',
+      '/recepty-na-domaci-limonady/fermentovane-limonady/',
+    ],
+  },
+  'sirupy-a-recepty-pro-zvirata/index.html': {
+    minCards: 8,
+    requiredLinks: [
+      '/sirupy-a-recepty-pro-zvirata/dychaci-ustroji-zvirat/',
+      '/sirupy-a-recepty-pro-zvirata/imunitni-system-zvirat/',
+      '/sirupy-a-recepty-pro-zvirata/klid-a-psychika-zvirat/',
+      '/sirupy-a-recepty-pro-zvirata/kuze-a-srst-zvirat/',
+      '/sirupy-a-recepty-pro-zvirata/pohybovy-aparat-zvirat/',
+      '/sirupy-a-recepty-pro-zvirata/zazivani-zvirat/',
+      '/sirupy-a-recepty-pro-zvirata/prirodni-lekarna-pro-zvirata/',
+    ],
+  },
+  'tinktury-pro-zvirata-2/index.html': {
+    minCards: 6,
+    requiredLinks: [
+      '/tinktury-pro-zvirata-2/t-dychaci-ustroji-zvirat/',
+      '/tinktury-pro-zvirata-2/t-imunitni-system-zvirat/',
+      '/tinktury-pro-zvirata-2/t-klid-a-psychika-zvirat/',
+      '/tinktury-pro-zvirata-2/t-kuze-a-srst-zvirat/',
+      '/tinktury-pro-zvirata-2/t-pohybovy-aparat-zvirat/',
+      '/tinktury-pro-zvirata-2/t-zazivani-zvirat/',
+    ],
+  },
   'domu/prirodni-lekarna/index.html': { minCards: 9 },
 };
+
+for (const relative of [
+  'domaci-sirupy/sirupy-na-dychani/index.html',
+  'domaci-sirupy/traveni-a-zazivani/index.html',
+  'domaci-sirupy/imunita-a-vitalita/index.html',
+  'domaci-sirupy/uklidneni-a-spanek/index.html',
+  'domaci-sirupy/mocove-cesty-a-ledviny/index.html',
+  'domaci-sirupy/pohybovy-aparat-a-kuze/index.html',
+  'tinktury/dychaci-cesty-a-nachlazeni/index.html',
+  'tinktury/tinktury-imunita-dychani/index.html',
+  'tinktury/tinktury-traveni-metabolismus/index.html',
+  'tinktury/tinktury-spanek-nervy/index.html',
+  'tinktury/tinktury-srdce-krevni-obeh/index.html',
+  'tinktury/tinktury-klouby-svaly/index.html',
+  'tinktury/tinktury-mocove-cesty-ledviny/index.html',
+  'tinktury/tinktury-zeny-muzi/index.html',
+  'tinktury/tinktury-detoxikace-ocista/index.html',
+  'recepty-na-domaci-limonady/limonady-ze-sirupu/index.html',
+  'recepty-na-domaci-limonady/limonady-z-bylinneho-vyluhu/index.html',
+  'recepty-na-domaci-limonady/fresh-limonady/index.html',
+  'recepty-na-domaci-limonady/macerovane-limonady/index.html',
+  'recepty-na-domaci-limonady/fermentovane-limonady/index.html',
+  'sirupy-a-recepty-pro-zvirata/dychaci-ustroji-zvirat/index.html',
+  'sirupy-a-recepty-pro-zvirata/imunitni-system-zvirat/index.html',
+  'sirupy-a-recepty-pro-zvirata/klid-a-psychika-zvirat/index.html',
+  'sirupy-a-recepty-pro-zvirata/kuze-a-srst-zvirat/index.html',
+  'sirupy-a-recepty-pro-zvirata/pohybovy-aparat-zvirat/index.html',
+  'sirupy-a-recepty-pro-zvirata/zazivani-zvirat/index.html',
+  'sirupy-a-recepty-pro-zvirata/prirodni-lekarna-pro-zvirata/index.html',
+  'tinktury-pro-zvirata-2/t-dychaci-ustroji-zvirat/index.html',
+  'tinktury-pro-zvirata-2/t-imunitni-system-zvirat/index.html',
+  'tinktury-pro-zvirata-2/t-klid-a-psychika-zvirat/index.html',
+  'tinktury-pro-zvirata-2/t-kuze-a-srst-zvirat/index.html',
+  'tinktury-pro-zvirata-2/t-pohybovy-aparat-zvirat/index.html',
+  'tinktury-pro-zvirata-2/t-zazivani-zvirat/index.html',
+]) {
+  restoredHubs[relative] = { minCards: 1 };
+}
 
 const legalParts = ['ochrana-osobnich-udaju', 'zasady-cookies', 'vylouceni-odpovednosti', 'obchodni-podminky'];
 
@@ -80,6 +161,7 @@ for (const [relative, requirement] of Object.entries(restoredHubs)) {
   const cards = $('.heritage-directory__card');
   restoredCardCount += cards.length;
 
+  if ($('.article-shell').length) errors.push(`${relative}: obnovený rozcestník se stále vykresluje jako běžný článek`);
   if (h1 !== 1) errors.push(`${relative}: očekáván právě jeden H1, nalezeno ${h1}`);
   if (!$('.heritage-hub-hero__copy').length) errors.push(`${relative}: chybí jednotná centrovaná hlavička rozcestníku`);
   if (!$('.heritage-directory .section-heading.centered-heading').length) errors.push(`${relative}: chybí centrovaný nadpis obrazového rozcestníku`);
@@ -177,6 +259,6 @@ await writeFile(path.join(DIST, 'restored-directories-audit.md'), [
 
 console.log(`Restoration audit: ${Object.keys(restoredHubs).length} hub pages, ${restoredCardCount} cards, ${articlePages} articles, ${monetizedArticles} monetized, ${duplicateHeroImages} duplicate hero images, ${errors.length} errors.`);
 if (errors.length) {
-  errors.slice(0, 150).forEach((error) => console.error(`ERROR ${error}`));
+  errors.slice(0, 180).forEach((error) => console.error(`ERROR ${error}`));
   process.exitCode = 1;
 }
