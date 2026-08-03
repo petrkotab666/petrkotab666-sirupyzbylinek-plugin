@@ -1,0 +1,46 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+
+const categories = [
+  { slug: 'dychaci-ustroji-zvirat', title: 'Dýchací ústrojí zvířat', eyebrow: 'Kašel, hrdlo a dýchání', pattern: /kasel|dych|prudus|plic|odhlen|hrdlo/u, image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--dychaci-ustroji-zvirat.svg' },
+  { slug: 'imunitni-system-zvirat', title: 'Imunitní systém zvířat', eyebrow: 'Vitalita a obranyschopnost', pattern: /imunit|vital|obranyschop|posil|regener/u, image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--imunitni-system-zvirat.svg' },
+  { slug: 'klid-a-psychika-zvirat', title: 'Klid a psychika zvířat', eyebrow: 'Stres, neklid a spánek', pattern: /klid|psychik|stres|spanek|uklid|nerv/u, image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--klid-a-psychika-zvirat.svg' },
+  { slug: 'kuze-a-srst-zvirat', title: 'Kůže a srst zvířat', eyebrow: 'Zevní péče', pattern: /kuze|srst|plet|hojen|oliz/u, image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--kuze-a-srst-zvirat.svg' },
+  { slug: 'pohybovy-aparat-zvirat', title: 'Pohybový aparát zvířat', eyebrow: 'Klouby, svaly a pohyb', pattern: /kloub|sval|pohyb|regener|revma/u, image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--pohybovy-aparat-zvirat.svg' },
+  { slug: 'zazivani-zvirat', title: 'Zažívání zvířat', eyebrow: 'Trávení a hydratace', pattern: /traven|zaziv|zalud|stre(v|v)|brisko|nadym/u, image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--zazivani-zvirat.svg' },
+  { slug: 'prirodni-lekarna-pro-zvirata', title: 'Přírodní lékárna pro zvířata', eyebrow: 'Bezpečný hlavní přehled', pattern: /zvirat|pes|psa|psy|kock|slepice|kurat|drubez/u, image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata--prirodni-lekarna-pro-zvirata.svg' },
+] as const;
+
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { category: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez|pece-o-ledviny-psa/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/sirupy-a-recepty-pro-zvirata/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return animalPattern.test(haystack) && category.pattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Bylinky a zvířata');
+---
+<HeritageHubLayout
+  title={`${category.title} – bezpečný přehled`}
+  description={`${category.title}: obrazový rozcestník článků, receptů, omezení a situací, kdy je nutná veterinární péče.`}
+  canonical={`/sirupy-a-recepty-pro-zvirata/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro="Zvířata zpracovávají rostlinné látky jinak než lidé. Domácí postup vždy přizpůsobte druhu, hmotnosti, zdravotnímu stavu a doporučení veterináře."
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Vyberte konkrétní článek nebo recept"
+  directoryText={`V této oblasti je propojeno ${cards.length} bezpečnostních přehledů a domácích témat.`}
+  adTopic="zvirata"
+  adHeading="Knihy a vybavení pro chovatele"
+  feedTopic="zvirata"
+  feedHeading="Produkty související s péčí o zvířata"
+/>
