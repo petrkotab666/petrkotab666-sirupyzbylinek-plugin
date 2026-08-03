@@ -1,0 +1,65 @@
+---
+import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  {
+    href: '/kdy-a-jak-spravne-sbirat-bylinky/',
+    title: 'Čisté louky a meze',
+    text: 'Jak poznat vhodnou lokalitu mimo silnice, postřiky, skládky a intenzivní zemědělství.',
+    image: '/obrazky/clanky/kdy-a-jak-spravne-sbirat-bylinky.svg',
+    kicker: 'Volná příroda',
+  },
+  {
+    href: '/bylinkovy-kout-na-balkone-nebo-terase/',
+    title: 'Vlastní balkon a terasa',
+    text: 'Bezpečný zdroj známých bylin i pro ty, kteří nemají zahradu nebo čistou lokalitu poblíž.',
+    image: '/obrazky/clanky/bylinkovy-kout-na-balkone-nebo-terase.svg',
+    kicker: 'Městské pěstování',
+  },
+  {
+    href: '/jak-zalozit-bylinkovy-zahon/',
+    title: 'Bylinkový záhon',
+    text: 'Vlastní pěstování usnadňuje určování, načasování sklizně i kontrolu nad ošetřením rostlin.',
+    image: '/obrazky/clanky/jak-zalozit-bylinkovy-zahon.svg',
+    kicker: 'Zahrada',
+  },
+  {
+    href: '/ktere-bylinky-sazet-spolu/',
+    title: 'Společné pěstování bylin',
+    text: 'Které druhy mohou růst vedle sebe a jak jim vybrat vhodné stanoviště.',
+    image: '/obrazky/clanky/ktere-bylinky-sazet-spolu.svg',
+    kicker: 'Stanoviště',
+  },
+  {
+    href: '/jak-uchovat-cerstve-bylinky/',
+    title: 'V čem bylinky odnést',
+    text: 'Košík, papír nebo plátno zabrání zapaření lépe než uzavřený igelitový sáček.',
+    image: '/obrazky/clanky/jak-uchovat-cerstve-bylinky.svg',
+    kicker: 'Cesta domů',
+  },
+  {
+    href: '/chyby-pri-sberu-bylinek/',
+    title: 'Místa, kterým se vyhnout',
+    text: 'Silnice, psí výběhy, průmysl, skládky, železnice a chemicky ošetřené plochy.',
+    image: '/obrazky/clanky/chyby-pri-sberu-bylinek.svg',
+    kicker: 'Rizikové lokality',
+  },
+] as const;
+---
+<HeritageHubLayout
+  title="Kde a kam sbírat bylinky – čisté lokality a správná výbava"
+  description="Obnovený rozcestník vhodných míst pro sběr bylinek, rizikových lokalit, domácího pěstování a správných nádob pro přenos."
+  canonical="/kde-a-kam-sbirat-bylinky/"
+  eyebrow="Lokalita a výbava"
+  heading="Kde a kam sbírat"
+  intro="Čistota lokality je stejně důležitá jako správné určení rostliny. Zjistěte, kde hledat bylinky, kterým místům se vyhnout a v čem úrodu bezpečně odnést."
+  heroImage="/media/original/sber/kde-sbirat.webp"
+  heroAlt="Čistá přírodní lokalita vhodná pro sběr léčivých bylinek"
+  cards={cards}
+  directoryTitle="Vyberte vhodné místo a způsob sběru"
+  directoryText="Původní samostatný rozcestník znovu propojuje volnou přírodu, vlastní pěstování a bezpečnou cestu domů."
+  adTopic="sber"
+  adHeading="Košíky, nůžky a výbava do terénu"
+  feedTopic="sber"
+  feedHeading="Vybavení pro sběr na louce i vlastní zahradě"
+/>
