@@ -1,0 +1,93 @@
+---
+import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import { getPublishedArticles } from '../../../lib/articles';
+import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
+
+const categories = [
+  {
+    slug: 'sirupy-na-dychani',
+    title: 'Sirupy na dýchací cesty',
+    description: 'Bylinné sirupy tradičně spojované s hrdlem, průduškami a dýchacími cestami, včetně bezpečnostních omezení.',
+    eyebrow: 'Kašel, hrdlo a průdušky',
+    intro: 'Vyberte konkrétní bylinu nebo recept. U rizikových rostlin je původní domácí návod nahrazen bezpečnostním vysvětlením.',
+    pattern: /kasel|dych|prudus|plic|odhlen|hlasiv|hrdlo|nachlazen/u,
+    image: '/obrazky/clanky/domaci-sirupy--sirupy-na-dychani.svg',
+  },
+  {
+    slug: 'traveni-a-zazivani',
+    title: 'Sirupy pro trávení a zažívání',
+    description: 'Domácí sirupy z aromatických, kořeněných a hořkých bylin tradičně používaných v kuchyni a při zažívacích tématech.',
+    eyebrow: 'Aromatické a hořké byliny',
+    intro: 'Máta, fenykl, kmín, anýz, meduňka a další suroviny jsou rozdělené do samostatných receptů.',
+    pattern: /traven|zaziv|zalud|stre(v|v)|nadym|zluc|brisko|metabol/u,
+    image: '/obrazky/clanky/domaci-sirupy--traveni-a-zazivani.svg',
+  },
+  {
+    slug: 'imunita-a-vitalita',
+    title: 'Sirupy pro imunitu a vitalitu',
+    description: 'Ovocné a bylinné sirupy ze šípků, rakytníku, bezu, aronie, rybízu a dalších tradičních surovin.',
+    eyebrow: 'Plody, květy a výhonky',
+    intro: 'Vyberte si konkrétní recept podle suroviny. Texty nepřisuzují sirupům léčebný účinek a uvádějí důležitá omezení.',
+    pattern: /imunit|vital|vitamin|obranyschop|antioxid|posil|energie/u,
+    image: '/obrazky/clanky/domaci-sirupy--imunita-a-vitalita.svg',
+  },
+  {
+    slug: 'uklidneni-a-spanek',
+    title: 'Sirupy pro uklidnění a spánek',
+    description: 'Aromatické domácí sirupy z meduňky, levandule, chmele a dalších bylin spojovaných s večerní pohodou.',
+    eyebrow: 'Večerní bylinky',
+    intro: 'U silněji působících bylin věnujte pozornost lékům, věku, těhotenství a délce používání.',
+    pattern: /spanek|uklid|nerv|stres|psychik|nespav|klid/u,
+    image: '/obrazky/clanky/domaci-sirupy--uklidneni-a-spanek.svg',
+  },
+  {
+    slug: 'mocove-cesty-a-ledviny',
+    title: 'Sirupy pro močové cesty a ledviny',
+    description: 'Přehled domácích sirupů spojovaných s močovými cestami, ledvinami a vylučováním, včetně zásadních omezení.',
+    eyebrow: 'Močové cesty a vylučování',
+    intro: 'Akutní bolest, krev v moči, horečka nebo dlouhodobé potíže nepatří k domácímu experimentování s bylinkami.',
+    pattern: /ledvin|mocov|odvod|vyluc|otok/u,
+    image: '/obrazky/clanky/domaci-sirupy--mocove-cesty-a-ledviny.svg',
+  },
+  {
+    slug: 'pohybovy-aparat-a-kuze',
+    title: 'Sirupy, pohybový aparát a kůže',
+    description: 'Přehled receptů a bezpečnostních oprav u rostlin tradičně spojovaných s klouby, svaly, kůží a krevním oběhem.',
+    eyebrow: 'Klouby, svaly a zevní péče',
+    intro: 'U arniky, kostivalu, jírovce a dalších rostlin je důležité rozlišit bezpečné zevní použití od nevhodného domácího sirupu.',
+    pattern: /kloub|sval|kuze|plet|revma|pohyb|cev|zily|regener/u,
+    image: '/obrazky/clanky/domaci-sirupy--pohybovy-aparat-a-kuze.svg',
+  },
+] as const;
+
+export function getStaticPaths() {
+  return categories.map((category) => ({ params: { category: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const allArticles = await getPublishedArticles();
+const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
+const entries = allArticles.filter((entry) => {
+  if (entry.data.path === `/domaci-sirupy/${category.slug}/`) return false;
+  const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
+  return /sirup/u.test(haystack) && category.pattern.test(haystack) && !animalPattern.test(haystack);
+});
+const cards = articleHubCards(entries, 'Domácí sirup');
+---
+<HeritageHubLayout
+  title={`${category.title} – recepty a bezpečnost`}
+  description={category.description}
+  canonical={`/domaci-sirupy/${category.slug}/`}
+  eyebrow={category.eyebrow}
+  heading={category.title}
+  intro={category.intro}
+  heroImage={category.image}
+  heroAlt={category.title}
+  cards={cards}
+  directoryTitle="Vyberte konkrétní sirup"
+  directoryText={`V této oblasti je nyní propojeno ${cards.length} samostatných receptů a bezpečnostních přehledů.`}
+  adTopic="recepty"
+  adHeading="Bylinky, lahve a knihy k domácím sirupům"
+  feedTopic="recepty"
+  feedHeading="Suroviny a vybavení pro výrobu sirupů"
+/>
