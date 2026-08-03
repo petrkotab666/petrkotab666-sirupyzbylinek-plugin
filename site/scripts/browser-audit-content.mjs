@@ -71,12 +71,26 @@ async function auditRoute(route, viewport = { width: 1280, height: 900 }) {
     const response = await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
     status = response?.status() || 0;
     await new Promise((resolve) => setTimeout(resolve, 140));
-    metrics = await page.evaluate(() => ({
-      h1: document.querySelectorAll('h1').length,
-      bodyText: document.body.innerText.trim().length,
-      brokenImages: [...document.images].filter((image) => image.complete && image.naturalWidth === 0).map((image) => image.getAttribute('src')),
-      overflow: Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - document.documentElement.clientWidth,
-    }));
+    metrics = await page.evaluate(() => {
+      const hubCards = [...document.querySelectorAll('.heritage-directory__card')];
+      const hubCopies = [...document.querySelectorAll('.heritage-directory__copy')];
+      const hubButtons = [...document.querySelectorAll('.heritage-directory__copy > b')];
+      return {
+        h1: document.querySelectorAll('h1').length,
+        bodyText: document.body.innerText.trim().length,
+        brokenImages: [...document.images].filter((image) => image.complete && image.naturalWidth === 0).map((image) => image.getAttribute('src')),
+        overflow: Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - document.documentElement.clientWidth,
+        hub: hubCards.length ? {
+          cards: hubCards.length,
+          centeredCopies: hubCopies.filter((node) => getComputedStyle(node).textAlign === 'center').length,
+          buttons: hubButtons.length,
+          visibleCards: hubCards.filter((node) => {
+            const rect = node.getBoundingClientRect();
+            return rect.width > 100 && rect.height > 120;
+          }).length,
+        } : null,
+      };
+    });
   } catch (error) {
     pageErrors.push(String(error));
   }
@@ -85,6 +99,11 @@ async function auditRoute(route, viewport = { width: 1280, height: 900 }) {
   if (metrics?.h1 !== 1) errors.push(`${route}: nalezeno ${metrics?.h1 ?? 0} nadpisů H1`);
   if (metrics?.brokenImages.length) errors.push(`${route}: rozbité obrázky ${metrics.brokenImages.join(', ')}`);
   if ((metrics?.overflow || 0) > 4) errors.push(`${route}: vodorovné přetékání ${metrics.overflow}px při šířce ${viewport.width}px`);
+  if (metrics?.hub) {
+    if (metrics.hub.centeredCopies !== metrics.hub.cards) errors.push(`${route}: na střed je zarovnáno jen ${metrics.hub.centeredCopies}/${metrics.hub.cards} karet`);
+    if (metrics.hub.buttons !== metrics.hub.cards) errors.push(`${route}: tlačítko má jen ${metrics.hub.buttons}/${metrics.hub.cards} karet`);
+    if (metrics.hub.visibleCards !== metrics.hub.cards) errors.push(`${route}: viditelných je jen ${metrics.hub.visibleCards}/${metrics.hub.cards} karet`);
+  }
   pageErrors.forEach((error) => errors.push(`${route}: JavaScript ${error}`));
   consoleErrors.filter((error) => !/favicon|ERR_FAILED|blocked/iu.test(error)).forEach((error) => errors.push(`${route}: console.error ${error}`));
   requestFailures.forEach((error) => errors.push(`${route}: lokální požadavek selhal ${error}`));
@@ -105,7 +124,10 @@ async function pool(items, concurrency, worker) {
 await pool(routes, 12, (route) => auditRoute(route));
 
 const mobileRoutes = [
-  '/', '/magazin/', '/osvedcene-recepty/', '/bylinne-pripravky/', '/bylinne-caje/', '/bylinne-koupele/',
+  '/', '/magazin/', '/osvedcene-recepty/', '/domu/sber-bylinek/', '/domu/sber-bylinek/kdy-sbirat-bylinky/',
+  '/domaci-sirupy/', '/domaci-sirupy/sirupy-na-dychani/', '/tinktury/', '/tinktury/tinktury-spanek-nervy/',
+  '/recepty-na-domaci-limonady/', '/sirupy-a-recepty-pro-zvirata/', '/tinktury-pro-zvirata-2/',
+  '/domu/prirodni-lekarna/', '/bylinne-pripravky/', '/bylinne-caje/', '/bylinne-koupele/',
   '/bylinne-masti-a-balzamy/', '/bylinkova-herna/', '/bylinkove-pexeso/', '/poznej-bylinku/', '/bylinkovy-mistr/',
   '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', '/bylinne-pripravky/mesickova-mast/',
 ];
@@ -153,7 +175,15 @@ for (const [name, route, viewport] of [
   ['home-desktop', '/', { width: 1440, height: 1000 }],
   ['magazine-desktop', '/magazin/', { width: 1440, height: 1000 }],
   ['recipes-desktop', '/osvedcene-recepty/', { width: 1440, height: 1000 }],
+  ['collecting-desktop', '/domu/sber-bylinek/', { width: 1440, height: 1100 }],
+  ['collecting-calendar-desktop', '/domu/sber-bylinek/kdy-sbirat-bylinky/', { width: 1440, height: 1100 }],
+  ['syrups-desktop', '/domaci-sirupy/', { width: 1440, height: 1100 }],
+  ['syrup-category-desktop', '/domaci-sirupy/sirupy-na-dychani/', { width: 1440, height: 1100 }],
+  ['tinctures-desktop', '/tinktury/', { width: 1440, height: 1100 }],
+  ['health-desktop', '/domu/prirodni-lekarna/', { width: 1440, height: 1100 }],
   ['preparations-desktop', '/bylinne-pripravky/', { width: 1440, height: 1000 }],
+  ['collecting-mobile', '/domu/sber-bylinek/', { width: 390, height: 844 }],
+  ['syrups-mobile', '/domaci-sirupy/', { width: 390, height: 844 }],
   ['recipe-mobile', '/bylinne-pripravky/mesickova-mast/', { width: 390, height: 844 }],
 ]) {
   const page = await browser.newPage();
@@ -178,6 +208,6 @@ await writeFile(path.join(DIST, 'browser-audit.md'), [
 ].join('\n'), 'utf8');
 console.log(`Browser audit: ${routes.length} content routes, ${redirectPages} redirects statically checked, ${results.length} browser checks, ${errors.length} errors.`);
 if (errors.length) {
-  errors.slice(0, 120).forEach((error) => console.error(`ERROR ${error}`));
+  errors.slice(0, 160).forEach((error) => console.error(`ERROR ${error}`));
   process.exitCode = 1;
 }
