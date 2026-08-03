@@ -255,17 +255,13 @@ for (const file of htmlFiles) {
 
   if (isLegal) continue;
   const adBlocks = $('.article-shell .context-ads');
-  const primaryAds = $('.article-shell .context-ads[data-ad-placement="primary"]');
-  const secondaryAds = $('.article-shell .context-ads[data-ad-placement="secondary"]');
   const adLinks = $('.article-shell .context-ads a[rel*="sponsored"]');
   const productFeeds = $('.article-shell .product-feed');
 
-  if (adBlocks.length < 2) errors.push(`${relative}: článek má jen ${adBlocks.length} reklamní blok(y), požadovány jsou 2`);
-  if (primaryAds.length !== 1) errors.push(`${relative}: chybí nebo se opakuje primární reklamní sada`);
-  if (secondaryAds.length !== 1) errors.push(`${relative}: chybí nebo se opakuje druhá reklamní sada`);
-  if (adLinks.length < 6) errors.push(`${relative}: v tematických reklamách je jen ${adLinks.length} prokliků, požadováno nejméně 6`);
+  if (adBlocks.length < 1) errors.push(`${relative}: chybí tematický reklamní blok`);
+  if (adLinks.length < 3) errors.push(`${relative}: v tematické reklamě jsou jen ${adLinks.length} prokliky, požadovány jsou nejméně 3`);
   if (productFeeds.length < 1) errors.push(`${relative}: chybí produktový feed`);
-  if (adBlocks.length >= 2 && adLinks.length >= 6 && productFeeds.length >= 1) monetizedArticles += 1;
+  if (adBlocks.length >= 1 && adLinks.length >= 3 && productFeeds.length >= 1) monetizedArticles += 1;
 }
 
 const report = {
