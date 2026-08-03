@@ -32,8 +32,8 @@ const articleTextLength = entry.body
   .replace(/<[^>]+>/gu, ' ')
   .replace(/\s+/gu, ' ')
   .trim().length;
-const showMiddleAd = monetizable && !criticalNotice && articleTextLength >= 1800;
-const showLowerAd = monetizable && !criticalNotice && articleTextLength >= 7000;
+const showMiddleAd = monetizable && !criticalNotice && articleTextLength >= 600;
+const showLowerAd = monetizable && !criticalNotice && articleTextLength >= 3500;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -106,9 +106,11 @@ const breadcrumbSchema = {
             <ul>{safetyWarnings.map((warning) => <li>{warning}</li>)}</ul>
           </aside>
         )}
-        <div class="article-content"><slot /></div>
-        {showMiddleAd && <InlineArticleAd entry={entry} placement="middle" />}
-        {showLowerAd && <InlineArticleAd entry={entry} placement="lower" />}
+        <div class="article-content">
+          <slot />
+          {showMiddleAd && <InlineArticleAd entry={entry} placement="middle" />}
+          {showLowerAd && <InlineArticleAd entry={entry} placement="lower" />}
+        </div>
         <script is:inline define:vars={{ image }}>
           (() => {
             const content = document.currentScript?.closest('.article-shell')?.querySelector('.article-content');
@@ -134,26 +136,6 @@ const breadcrumbSchema = {
       <strong>Bezpečnost na prvním místě</strong>
       <p>Bylinky mohou ovlivňovat léky a nejsou vhodné pro každého. Zvláštní opatrnost je nutná u dětí, těhotných a kojících žen, chronicky nemocných a zvířat.</p>
     </aside>
-
-    <script is:inline>
-      (() => {
-        const article = document.currentScript?.closest('.article-shell');
-        const content = article?.querySelector('.article-content');
-        if (!article || !content) return;
-        const ads = [...article.querySelectorAll(':scope > [data-inline-article-ad]')];
-        const headings = [...content.querySelectorAll(':scope > h2')];
-        const paragraphs = [...content.querySelectorAll(':scope > p')];
-        for (const ad of ads) {
-          if (ad.dataset.moved === 'true') continue;
-          const position = ad.dataset.placement === 'lower' ? 5 : 2;
-          const target = headings[position - 1] || paragraphs[Math.min(position + 2, Math.max(0, paragraphs.length - 1))];
-          if (target) {
-            target.insertAdjacentElement('afterend', ad);
-            ad.dataset.moved = 'true';
-          }
-        }
-      })();
-    </script>
   </article>
 </BaseLayout>
 
