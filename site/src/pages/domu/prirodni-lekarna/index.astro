@@ -1,44 +1,34 @@
 ---
-import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ArticleCard from '../../../components/ArticleCard.astro';
+import ContextAds from '../../../components/ContextAds.astro';
+import ProductFeed from '../../../components/ProductFeed.astro';
+import SectionHero from '../../../components/SectionHero.astro';
+import IllustratedDirectory from '../../../components/IllustratedDirectory.astro';
 import { getPublishedArticles, topicKey } from '../../../lib/articles';
 
 const allArticles = await getPublishedArticles();
-const healthArticles = allArticles
-  .filter((entry) => ['zdravi', 'vyziva', 'krasa'].includes(topicKey(entry)))
-  .slice(0, 12);
-
-const cards = [
-  { href: '/prirodni-pomocnici-pro-imunitu/', title: 'Imunita a vitalita', text: 'Bylinky, plody, běžná výživa a bezpečné používání bez přehnaných léčebných slibů.', image: '/obrazky/clanky/prirodni-pomocnici-pro-imunitu.svg', kicker: 'Odolnost organismu' },
-  { href: '/prirodni-pomocnici-pro-traveni-a-zazivani/', title: 'Trávení a zažívání', text: 'Máta, meduňka, fenykl, kmín, hořké byliny a důležitá omezení.', image: '/obrazky/clanky/prirodni-pomocnici-pro-traveni-a-zazivani.svg', kicker: 'Každodenní pohoda' },
-  { href: '/prirodni-sila-pro-dychaci-cesty-a-nachlazeni/', title: 'Dýchací cesty', text: 'Přehled tradičních bylin, domácích forem a varovných příznaků pro návštěvu lékaře.', image: '/obrazky/clanky/prirodni-sila-pro-dychaci-cesty-a-nachlazeni.svg', kicker: 'Hrdlo a průdušky' },
-  { href: '/nejlepsi-bylinky-na-spanek-a-uklidneni-prirodni-pomoc-pri-nespavosti-a-stresu/', title: 'Spánek a zklidnění', text: 'Meduňka, levandule, kozlík, chmel a bezpečnost při kombinaci s léky.', image: '/obrazky/clanky/nejlepsi-bylinky-na-spanek-a-uklidneni-prirodni-pomoc-pri-nespavosti-a-stresu.svg', kicker: 'Večerní režim' },
-  { href: '/nejlepsi-bylinky-na-jatra-a-zlucnik-prirodni-detox-a-regenerace-organismu/', title: 'Játra a žlučník', text: 'Ostropestřec, pampeliška, čekanka a situace, kdy domácí bylinky nestačí.', image: '/obrazky/clanky/nejlepsi-bylinky-na-jatra-a-zlucnik-prirodni-detox-a-regenerace-organismu.svg', kicker: 'Metabolismus' },
-  { href: '/prirodni-pomocnici-pro-mocove-cesty/', title: 'Močové cesty a ledviny', text: 'Zlatobýl, bříza, brusinky a omezení při dlouhodobých nebo akutních potížích.', image: '/obrazky/clanky/prirodni-pomocnici-pro-mocove-cesty.svg', kicker: 'Vylučování' },
-  { href: '/prirodni-pomocnici-pro-pohybovy-aparat-a-kuzi/', title: 'Pohybový aparát a kůže', text: 'Zevní a vnitřní formy, obklady, masti a jasné oddělení rizikových bylin.', image: '/obrazky/clanky/prirodni-pomocnici-pro-pohybovy-aparat-a-kuzi.svg', kicker: 'Klouby a zevní péče' },
-  { href: '/nejlepsi-bylinky-pro-zeny/', title: 'Bylinky pro ženy', text: 'Kontryhel, maliník, drmkovec a další tradiční témata s důrazem na těhotenství a léky.', image: '/obrazky/clanky/nejlepsi-bylinky-pro-zeny.svg', kicker: 'Ženská témata' },
-  { href: '/prirodni-repelenty-proti-komarum-a-klistatum/', title: 'Repelenty a ochrana v přírodě', text: 'Rostlinné repelenty, praktická ochrana a bezpečnost u dětí i zvířat.', image: '/obrazky/clanky/prirodni-repelenty-proti-komarum-a-klistatum.svg', kicker: 'Komáři a klíšťata' },
+const healthArticles = allArticles.filter((entry) => ['zdravi','vyziva','krasa'].includes(topicKey(entry))).slice(0,12);
+const categories = [
+ {href:'/prirodni-pomocnici-pro-imunitu/',art:'pharmacy',image:'/media/imported/prirodni-sila-pro-imunitu-a-obranyschopnost/3obr-07cd0380.png',imageAlt:'Bylinky a domácí přípravky spojované s vitalitou',kicker:'Odolnost organismu',title:'Imunita a vitalita',text:'Bylinky, běžná výživa a praktická prevence bez přehnaných slibů.'},
+ {href:'/nejlepsi-bylinky-na-kasel-a-prudusky-prirodni-pomoc-pri-nachlazeni/',art:'harvest',image:'/media/imported/jak-kombinovat-bylinky/byliny-6083d43d.png',imageAlt:'Čerstvé bylinky pro domácí čaje a nálevy',kicker:'Dýchací cesty',title:'Nachlazení a kašel',text:'Přehled čajových bylin, běžné domácí péče a důležitých omezení.'},
+ {href:'/prirodni-pomocnici-pro-traveni-a-zazivani/',art:'recipes',image:'/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png',imageAlt:'Bylinky a domácí nápoje pro kuchyňské použití',kicker:'Každodenní pohoda',title:'Trávení a metabolismus',text:'Tradičně používané byliny, čaje a pravidla bezpečného domácího použití.'},
+ {href:'/nejlepsi-bylinky-na-spanek-a-uklidneni-prirodni-pomoc-pri-nespavosti-a-stresu/',art:'timing',image:'/media/original/home/bylinkova-herna-photo.svg',imageAlt:'Klidné bylinkové zátiší v podvečerním světle',kicker:'Večerní režim',title:'Spánek, stres a nervy',text:'Jemné byliny, klidový režim a situace, kdy už je vhodná odborná pomoc.'},
+ {href:'/bylinne-tinktury-na-srdce/',art:'pharmacy',image:'/media/imported/sklenice-na-sirupy-a-zavarovani/sklenice-na-sirupy-a-zavarovani-4b170c4d.webp',imageAlt:'Lahvičky a sklenice pro domácí bylinné přípravky',kicker:'Srdce a cévy',title:'Srdce a krevní oběh',text:'Přehled bylin, interakcí s léky a důvodů, kdy domácí experimenty nejsou vhodné.'},
+ {href:'/prirodni-pomocnici-pro-mocove-cesty/',art:'places',image:'/media/imported/nejlepsi-susicka-na-bylinky/byliny-300x300-eca005d2.png',imageAlt:'Usušené bylinky připravené pro domácí nálev',kicker:'Ledviny a močové cesty',title:'Močové cesty a ledviny',text:'Pitný režim, tradiční byliny, omezení a varovné příznaky pro návštěvu lékaře.'},
+ {href:'/prirodni-pomocnici-pro-pohybovy-aparat-a-kuzi/',art:'process',image:'/media/imported/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/bylinkovymagazin-58281674.png',imageAlt:'Bylinková zahrada a péče o rostliny',kicker:'Pohyb a pokožka',title:'Klouby, svaly a kůže',text:'Zevní péče, obklady, koupele, masti a bezpečné zacházení s výraznými bylinami.'},
+ {href:'/nejlepsi-bylinky-pro-zeny/',art:'ethics',image:'/media/imported/kontryhel-obecny/kontryhel-obecny-caj-sber-suseni-40c765ff.png',imageAlt:'Kontryhel obecný na zahradě a připravený ke zpracování',kicker:'Ženské a mužské zdraví',title:'Hormonální pohoda',text:'Byliny tradičně spojované s ženským a mužským zdravím, včetně omezení a interakcí.'},
+ {href:'/prirodni-sila-pro-detoxikaci-a-ocistu/',art:'identify',image:'/media/imported/sklenice-na-sirupy-a-zavarovani/sklenice-na-sirupy-a-zavarovani-4b170c4d.webp',imageAlt:'Domácí bylinkové výrobky ve sklenicích a lahvích',kicker:'Játra a očista',title:'Játra, žlučník a očista',text:'Co je běžná kuchyňská inspirace a kde už mohou být sliby o detoxikaci zavádějící.'},
 ] as const;
+const tinctureBranches=[['/tinktury/tinktury-imunita-dychani/','Imunita a dýchání'],['/tinktury/dychaci-cesty-a-nachlazeni/','Nachlazení a dýchací cesty'],['/tinktury/tinktury-spanek-nervy/','Spánek, stres a nervy'],['/tinktury/tinktury-srdce-krevni-obeh/','Srdce a krevní oběh'],['/tinktury/tinktury-traveni-metabolismus/','Trávení a metabolismus'],['/tinktury/tinktury-mocove-cesty-ledviny/','Močové cesty a ledviny'],['/tinktury/tinktury-klouby-svaly/','Klouby a svaly'],['/tinktury/tinktury-zeny-muzi/','Ženské a mužské zdraví'],['/tinktury/tinktury-detoxikace-ocista/','Játra a očista']] as const;
+const animalBranches=[['/sirupy-a-recepty-pro-zvirata/prirodni-lekarna-pro-zvirata/','Přírodní lékárna pro zvířata'],['/sirupy-a-recepty-pro-zvirata/imunitni-system-zvirat/','Imunita zvířat'],['/sirupy-a-recepty-pro-zvirata/dychaci-ustroji-zvirat/','Dýchací ústrojí zvířat'],['/sirupy-a-recepty-pro-zvirata/zazivani-zvirat/','Zažívání zvířat'],['/sirupy-a-recepty-pro-zvirata/klid-a-psychika-zvirat/','Klid a psychika zvířat'],['/sirupy-a-recepty-pro-zvirata/pohybovy-aparat-zvirat/','Pohybový aparát zvířat'],['/sirupy-a-recepty-pro-zvirata/kuze-a-srst-zvirat/','Kůže a srst zvířat']] as const;
+const itemListSchema={'@context':'https://schema.org','@type':'CollectionPage',name:'Přírodní lékárna – bylinky, bezpečnost a praktické přehledy',url:new URL('/domu/prirodni-lekarna/',Astro.site||Astro.url.origin).href,mainEntity:{'@type':'ItemList',numberOfItems:healthArticles.length,itemListElement:healthArticles.map((entry,index)=>({'@type':'ListItem',position:index+1,name:entry.data.title,url:new URL(entry.data.path,Astro.site||Astro.url.origin).href}))}};
 ---
-<HeritageHubLayout
-  title="Přírodní lékárna – bylinky, tradiční využití a bezpečnost"
-  description="Rozšířený obrazový rozcestník Přírodní lékárny: imunita, trávení, dýchání, spánek, játra, močové cesty, pohyb, kůže a ženská témata."
-  canonical="/domu/prirodni-lekarna/"
-  eyebrow="Přehled bylin a omezení"
-  heading="Přírodní lékárna"
-  intro="Vyberte oblast, která vás zajímá. U každého tématu najdete tradiční využití, praktické formy, důležitá omezení a situace, kdy domácí péče nestačí."
-  heroImage="/media/imported/prirodni-sila-pro-imunitu-a-obranyschopnost/3obr-07cd0380.png"
-  heroAlt="Bylinky, sušené rostliny a domácí přírodní lékárna"
-  cards={cards}
-  directoryTitle="Vyberte si oblast přírodní lékárny"
-  directoryText="Devět tematických cest nahrazuje zkrácený čtyřboxový rozcestník a vrací návaznost obsahu."
-  adTopic="zdravi"
-  adHeading="Knihy, bylinky a doplňky k tématu"
-  feedTopic="zdravi"
-  feedHeading="Produkty související se zdravím a vitalitou"
->
-  <section class="section-wrap section-articles">
-    <div class="section-heading centered-heading"><span>Další přehledy</span><h2>Články o bylinkách a zdraví</h2><p>Texty jsou informativní a nenahrazují lékařskou ani veterinární péči.</p></div>
-    <div class="articles-grid">{healthArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
-  </section>
-</HeritageHubLayout>
+<BaseLayout title="Přírodní lékárna – bylinky, účinky a bezpečnost | Sirupy z bylinek" description="Úplný rozcestník tradičního využití bylin, tinktur a domácích přípravků včetně omezení, interakcí a situací, kdy vyhledat odborníka." canonical="/domu/prirodni-lekarna/" image="/media/imported/prirodni-sila-pro-imunitu-a-obranyschopnost/3obr-07cd0380.png" structuredData={[itemListSchema]}>
+ <SectionHero eyebrow="Přírodní lékárna" title="Bylinky přehledně a bezpečně" text="Vracíme úplnou původní cestu od hlavních zdravotních témat až k podrobným rozcestníkům tinktur a péče o zvířata." art="pharmacy" theme="green" />
+ <section class="section-wrap section-directory restored-hub-section"><div class="section-heading centered-heading"><span>Hlavní témata</span><h2>Najděte oblast, která vás zajímá</h2><p>Devět stejně zpracovaných obrazových karet vede do původních tematických větví.</p></div><IllustratedDirectory items={categories} class="restored-directory restored-directory--health" /></section>
+ <section class="section-wrap restored-subhubs" aria-labelledby="podrobne-rozcestniky"><div class="section-heading centered-heading"><span>Podrobné rozcestníky</span><h2 id="podrobne-rozcestniky">Pokračujte do konkrétní oblasti</h2><p>Vrácené odkazy zpřístupňují původní hlubší strukturu webu bez slepých míst.</p></div><div class="restored-subhub-grid"><section class="restored-subhub-card"><span>Domácí výluhy</span><h3>Bylinné tinktury podle tématu</h3><div class="restored-link-cloud">{tinctureBranches.map(([href,label])=><a href={href}>{label}<b aria-hidden="true">→</b></a>)}</div><a class="restored-subhub-main" href="/tinktury/">Otevřít hlavní rozcestník tinktur</a></section><section class="restored-subhub-card"><span>Bezpečnost zvířat</span><h3>Přírodní témata pro zvířata</h3><div class="restored-link-cloud">{animalBranches.map(([href,label])=><a href={href}>{label}<b aria-hidden="true">→</b></a>)}</div><a class="restored-subhub-main" href="/sirupy-a-recepty-pro-zvirata/">Otevřít recepty a přehledy pro zvířata</a></section></div></section>
+ <ContextAds topic="zdravi" heading="Doporučené knihy, bylinky a pomůcky" />
+ <section class="section-wrap section-articles"><div class="section-heading centered-heading"><span>Nové přehledy</span><h2>Články o bylinkách a zdraví</h2><p>Texty jsou informativní a nenahrazují lékařskou ani veterinární péči.</p></div><div class="articles-grid">{healthArticles.map((entry)=><ArticleCard entry={entry} />)}</div></section>
+ <ProductFeed topic="zdravi" heading="Produkty související se zdravím a vitalitou" />
+</BaseLayout>
