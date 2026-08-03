@@ -1,0 +1,79 @@
+---
+import HeritageHubLayout from '../../../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  {
+    href: '/kdy-a-jak-spravne-sbirat-bylinky/',
+    title: 'Celoroční pravidla sběru',
+    text: 'Denní doba, počasí, fáze růstu a základní pravidla bezpečného sběru.',
+    image: '/obrazky/clanky/kdy-a-jak-spravne-sbirat-bylinky.svg',
+    kicker: 'Začněte zde',
+  },
+  {
+    href: '/velky-pruvodce-breznovym-sberem-od-zlateho-podbelu-po-silu-skrytou-v-korenech/',
+    title: 'Březnový sběr',
+    text: 'První květy, mladé listy, pupeny a poslední vhodná doba pro některé kořeny.',
+    image: '/obrazky/clanky/velky-pruvodce-breznovym-sberem-od-zlateho-podbelu-po-silu-skrytou-v-korenech.svg',
+    kicker: 'Březen',
+  },
+  {
+    href: '/bylinky-v-dubnu-sber-bylin/',
+    title: 'Co sbírat v dubnu',
+    text: 'Medvědí česnek, violky, pampelišky a další časné jarní bylinky.',
+    image: '/obrazky/clanky/bylinky-v-dubnu-sber-bylin.svg',
+    kicker: 'Duben',
+  },
+  {
+    href: '/co-sbirat-v-kvetnu/',
+    title: 'Co sbírat v květnu',
+    text: 'Květy, mladé listy a aromatické natě v hlavní jarní sezoně.',
+    image: '/obrazky/clanky/co-sbirat-v-kvetnu.svg',
+    kicker: 'Květen',
+  },
+  {
+    href: '/co-sbirat-v-cervnu/',
+    title: 'Co sbírat v červnu',
+    text: 'Lípa, heřmánek, bez, měsíček, máta, mateřídouška a další letní druhy.',
+    image: '/obrazky/clanky/co-sbirat-v-cervnu.svg',
+    kicker: 'Červen',
+  },
+  {
+    href: '/co-sbirat-v-cervenci/',
+    title: 'Co sbírat v červenci',
+    text: 'Letní natě, květy, první plody a druhá sklizeň pěstovaných bylinek.',
+    image: '/obrazky/clanky/co-sbirat-v-cervenci.svg',
+    kicker: 'Červenec',
+  },
+  {
+    href: '/gemmoterapie-tinktury-z-pupenu-navod/',
+    title: 'Kdy sbírat pupeny',
+    text: 'Krátké období před rašením, správné určování stromu a šetrný odběr.',
+    image: '/obrazky/clanky/gemmoterapie-tinktury-z-pupenu-navod.svg',
+    kicker: 'Pupeny',
+  },
+  {
+    href: '/jak-spravne-susit-bylinky/',
+    title: 'Kdy sběr ukončit a začít sušit',
+    text: 'Jak poznat vhodnou zralost a proč nesbírat mokré nebo zapařené rostliny.',
+    image: '/obrazky/clanky/jak-spravne-susit-bylinky.svg',
+    kicker: 'Po návratu domů',
+  },
+] as const;
+---
+<HeritageHubLayout
+  title="Kdy sbírat bylinky – kalendář a správný čas sběru"
+  description="Obnovený rozcestník kalendáře sběru bylinek podle měsíců, částí rostlin, počasí a denní doby."
+  canonical="/domu/sber-bylinek/kdy-sbirat-bylinky/"
+  eyebrow="Kalendář sběru"
+  heading="Kdy sbírat bylinky"
+  intro="Správný okamžik závisí na měsíci, počasí, denní době i části rostliny. Vyberte období a pokračujte do podrobného návodu."
+  heroImage="/media/original/sber/kdy-sbirat.webp"
+  heroAlt="Kalendář a správná doba sběru léčivých bylinek"
+  cards={cards}
+  directoryTitle="Kalendář a načasování sběru"
+  directoryText="Původní samostatný rozcestník je znovu dostupný a vede na konkrétní měsíce i způsoby sběru."
+  adTopic="sber"
+  adHeading="Výbava pro bezpečný sběr v pravý čas"
+  feedTopic="sber"
+  feedHeading="Košíky, nůžky, atlasy a pomůcky pro sběr"
+/>
