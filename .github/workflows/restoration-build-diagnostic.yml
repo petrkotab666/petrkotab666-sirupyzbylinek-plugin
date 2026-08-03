@@ -1,0 +1,51 @@
+name: Restoration build diagnostic
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/restoration-build-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install dependencies
+        working-directory: site
+        run: npm install --no-audit --no-fund
+      - name: Capture concise failure
+        working-directory: site
+        shell: bash
+        run: |
+          set +e
+          npm run build > /tmp/restoration-build.log 2>&1
+          status=$?
+          {
+            echo "BUILD_STATUS=$status"
+            echo
+            echo "===== IMPORTANT MATCHES ====="
+            grep -nEi '(^|[^a-z])(error|failed|failure|syntaxerror|typeerror|referenceerror|cannot|expected|unexpected|invalid|duplicate|collision|readonly|not assignable|missing)([^a-z]|$)' /tmp/restoration-build.log | tail -n 320 || true
+            echo
+            echo "===== LAST 450 LINES ====="
+            tail -n 450 /tmp/restoration-build.log
+          } > restoration-build-diagnostic.txt
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: restoration-build-diagnostic
+          path: site/restoration-build-diagnostic.txt
+          if-no-files-found: error
+          retention-days: 3
