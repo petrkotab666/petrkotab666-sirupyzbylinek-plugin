@@ -1,120 +1,62 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import ContextAds from '../../components/ContextAds.astro';
-import ProductFeed from '../../components/ProductFeed.astro';
-import SectionHero from '../../components/SectionHero.astro';
-import IllustratedDirectory from '../../components/IllustratedDirectory.astro';
 import PreparationCard from '../../components/PreparationCard.astro';
 import { getPublishedArticles, topicKey } from '../../lib/articles';
-import {
-  herbalPreparations,
-  preparationCategories,
-  preparationsByCategory,
-  type PreparationCategory,
-} from '../../data/herbal-preparations';
+import { herbalPreparations } from '../../data/herbal-preparations';
 
 const allArticles = await getPublishedArticles();
 const recipes = allArticles
   .filter((entry) => ['recepty', 'napoje', 'zavarovani'].includes(topicKey(entry)))
   .slice(0, 12);
 const featuredPreparations = herbalPreparations.filter((recipe) => recipe.featured).slice(0, 6);
-const newCategories = Object.entries(preparationCategories) as Array<[PreparationCategory, (typeof preparationCategories)[PreparationCategory]]>;
 
-const categories = [
-  { href: '/domaci-sirupy/', art: 'recipes', kicker: 'Bylinky a ovoce', title: 'Domácí sirupy', text: 'Bezové, jitrocelové, mátové, ovocné i další sirupy krok za krokem.' },
-  { href: '/tinktury/', art: 'pharmacy', kicker: 'Výluhy a kapky', title: 'Bylinné tinktury', text: 'Suroviny, postupy, skladování a bezpečné používání domácích výluhů.' },
-  { href: '/recepty-na-domaci-limonady/', art: 'harvest', kicker: 'Letní osvěžení', title: 'Domácí limonády', text: 'Limonády ze sirupů, bylinných výluhů, macerace i fermentace.' },
-  { href: '/bylinne-pripravky/', art: 'process', kicker: '42 nových postupů', title: 'Další bylinné přípravky', text: 'Čaje, koupele, masti, oleje, octy, obklady a kuchyňské výrobky.' },
+const cards = [
+  { href: '/domaci-sirupy/', title: 'Domácí sirupy', text: 'Bylinné, květové a ovocné sirupy rozdělené do tematických podkategorií.', image: '/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png', kicker: 'Květy, byliny a plody' },
+  { href: '/tinktury/', title: 'Bylinné tinktury', text: 'Macerace, filtrace, lahvičky, bezpečnost a přehled receptů podle témat.', image: '/obrazky/clanky/tinktury.svg', kicker: 'Výluhy a kapky' },
+  { href: '/recepty-na-domaci-limonady/', title: 'Domácí limonády', text: 'Ze sirupu, výluhu, čerstvého ovoce, macerace i kontrolované fermentace.', image: '/obrazky/clanky/recepty-na-domaci-limonady.svg', kicker: 'Osvěžení' },
+  { href: '/bylinne-caje/', title: 'Bylinné čaje a nálevy', text: 'Jednodruhové i jemné směsi s přesnou teplotou vody, dobou louhování a omezeními.', image: '/obrazky/recepty/medunkovy-caj-pro-klidny-vecer.svg', kicker: 'Nálevy a odvary' },
+  { href: '/bylinne-koupele/', title: 'Bylinné koupele', text: 'Celkové koupele, lázně na nohy, koupelové sáčky a šetrné kombinace.', image: '/obrazky/recepty/levandulovo-ovesna-koupel.svg', kicker: 'Relaxace a zevní péče' },
+  { href: '/bylinne-masti-a-balzamy/', title: 'Masti a balzámy', text: 'Olejové základy, vosk, čisté kelímky a postupy určené pro zevní použití.', image: '/obrazky/recepty/mesickova-mast.svg', kicker: 'Domácí kosmetika' },
+  { href: '/bylinne-oleje-a-maceraty/', title: 'Oleje a maceráty', text: 'Měsíček, levandule, heřmánek, růže, jitrocel a rozmarýn v olejových základech.', image: '/obrazky/recepty/mesickovy-olejovy-macerat.svg', kicker: 'Olejové výluhy' },
+  { href: '/bylinne-octy-a-oxymely/', title: 'Octy a oxymely', text: 'Bylinkové octy, medovo-octové základy a přesné podmínky skladování.', image: '/obrazky/recepty/tymianovy-oxymel.svg', kicker: 'Ocet a med' },
+  { href: '/bylinne-obklady-a-kloktadla/', title: 'Obklady a kloktadla', text: 'Zevní obklady, oplachy, bylinná pára a krátkodobé domácí použití.', image: '/obrazky/recepty/hermankovy-obklad.svg', kicker: 'Místní použití' },
+  { href: '/bylinky-v-kuchyni-recepty/', title: 'Bylinky v kuchyni', text: 'Bylinkové soli, cukry, másla, pesta, medy a ledové kostky pro běžné vaření.', image: '/obrazky/recepty/univerzalni-bylinkova-sul.svg', kicker: 'Kuchyňské výrobky' },
+  { href: '/sirupy-a-recepty-pro-zvirata/', title: 'Recepty pro zvířata', text: 'Samostatný bezpečnostní rozcestník pro psy, kočky a další zvířata.', image: '/obrazky/clanky/sirupy-a-recepty-pro-zvirata.svg', kicker: 'Veterinární opatrnost' },
 ] as const;
-
-const itemListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Osvědčené recepty a domácí bylinná výroba',
-  url: new URL('/osvedcene-recepty/', Astro.site || Astro.url.origin).href,
-  mainEntity: {
-    '@type': 'ItemList',
-    numberOfItems: recipes.length + herbalPreparations.length,
-    itemListElement: [
-      ...featuredPreparations.map((recipe, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: recipe.title,
-        url: new URL(`/bylinne-pripravky/${recipe.slug}/`, Astro.site || Astro.url.origin).href,
-      })),
-      ...recipes.map((entry, index) => ({
-        '@type': 'ListItem',
-        position: featuredPreparations.length + index + 1,
-        name: entry.data.title,
-        url: new URL(entry.data.path, Astro.site || Astro.url.origin).href,
-      })),
-    ],
-  },
-};
 ---
-<BaseLayout
-  title="Osvědčené recepty z bylinek – sirupy, čaje, masti i koupele"
-  description="Praktické recepty na sirupy, tinktury, čaje, limonády, koupele, masti, oleje, octy, obklady a další domácí bylinné výrobky."
+<HeritageHubLayout
+  title="Osvědčené recepty z bylinek – kompletní domácí receptář"
+  description="Jednotný obrazový receptář sirupů, tinktur, čajů, limonád, koupelí, mastí, olejů, octů, obkladů, kuchyňských výrobků a receptů pro zvířata."
   canonical="/osvedcene-recepty/"
-  image="/obrazky/recepty/mesickova-mast.svg"
-  structuredData={[itemListSchema]}
+  eyebrow="Recepty a domácí výroba"
+  heading="Osvědčené recepty z bylinek"
+  intro="Vyberte si způsob zpracování. Každá oblast vede na vlastní rozcestník a odtud ke konkrétním receptům s postupem, skladováním a upozorněním."
+  heroImage="/media/imported/medunkovy-sirup/sirupyuvod-78eb30cb.png"
+  heroAlt="Domácí bylinné sirupy, tinktury a další výrobky"
+  cards={cards}
+  directoryTitle="Co chcete z bylinek připravit"
+  directoryText="Všechny starší i nově doplněné kategorie jsou sjednocené do jedné obrazové navigace."
+  adTopic="recepty"
+  adHeading="Vybavení a suroviny pro domácí recepty"
+  feedTopic="recepty"
+  feedHeading="Produkty vhodné pro domácí výrobu"
 >
-  <SectionHero
-    eyebrow="Recepty a domácí výroba"
-    title="Osvědčené recepty z bylinek"
-    text="Sirupy, tinktury, čaje, koupele, masti, oleje a další domácí výrobky přehledně, bezpečně a s praktickými postupy."
-    art="recipes"
-    theme="amber"
-  />
-
-  <section class="section-wrap section-directory">
-    <div class="section-heading centered-heading"><span>Hlavní receptáře</span><h2>Co chcete připravit?</h2><p>Začněte velkou oblastí a pokračujte do konkrétních receptů.</p></div>
-    <IllustratedDirectory items={categories} />
-  </section>
-
-  <section class="section-wrap extended-recipe-directory">
-    <div class="section-heading centered-heading"><span>Nové způsoby zpracování</span><h2>Čaje, koupele, masti a další výrobky</h2><p>Každá kategorie obsahuje přesné suroviny, postup, skladování a konkrétní upozornění.</p></div>
-    <div class="extended-recipe-grid">
-      {newCategories.map(([key, meta]) => {
-        const categoryRecipes = preparationsByCategory(key);
-        const first = categoryRecipes[0];
-        return (
-          <a class="extended-recipe-card" href={meta.path}>
-            {first && <img src={`/obrazky/recepty/${first.slug}.svg`} alt="" width="1200" height="675" loading="lazy" />}
-            <div><span>{categoryRecipes.length} receptů</span><h3>{meta.title}</h3><p>{meta.description}</p><b>Otevřít →</b></div>
-          </a>
-        );
-      })}
-    </div>
-  </section>
-
-  <ContextAds topic="recepty" heading="Vybavení a suroviny pro domácí recepty" />
-
-  <section class="section-wrap featured-new-recipes">
-    <div class="section-heading centered-heading"><span>Nově doplněno</span><h2>Vybrané recepty z nových kategorií</h2></div>
-    <div class="preparation-grid">{featuredPreparations.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
-  </section>
+  {featuredPreparations.length > 0 && (
+    <section class="section-wrap featured-new-recipes">
+      <div class="section-heading centered-heading"><span>Doporučený začátek</span><h2>Vybrané nové recepty</h2></div>
+      <div class="recipe-feature-grid">{featuredPreparations.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
+    </section>
+  )}
 
   <section class="section-wrap section-articles">
-    <div class="section-heading centered-heading"><span>Stávající receptář</span><h2>Sirupy, nápoje a další návody</h2><p>Nejnovější články z původních funkčních kategorií.</p></div>
+    <div class="section-heading centered-heading"><span>Další recepty</span><h2>Nejnovější sirupy, nápoje a návody</h2></div>
     <div class="articles-grid">{recipes.map((entry) => <ArticleCard entry={entry} />)}</div>
   </section>
-
-  <ProductFeed topic="recepty" heading="Produkty vhodné pro domácí výrobu" />
-</BaseLayout>
+</HeritageHubLayout>
 
 <style>
-  .extended-recipe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
-  .extended-recipe-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(34,75,41,.15);border-radius:25px;background:#fffdf7;color:inherit;text-decoration:none;box-shadow:0 17px 40px rgba(32,66,37,.09);transition:transform .25s ease,box-shadow .25s ease}
-  .extended-recipe-card:hover{transform:translateY(-5px);box-shadow:0 25px 50px rgba(32,66,37,.15)}
-  .extended-recipe-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
-  .extended-recipe-card>div{display:flex;flex:1;flex-direction:column;align-items:center;padding:1.25rem;text-align:center}
-  .extended-recipe-card span{font-size:.75rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#b46b27}
-  .extended-recipe-card h3{margin:.5rem 0;color:#174c2b;font-size:1.4rem}
-  .extended-recipe-card p{margin:0;color:#637064;line-height:1.55}
-  .extended-recipe-card b{margin-top:auto;padding-top:1rem;color:#2c733d}
-  .preparation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
-  @media(max-width:900px){.extended-recipe-grid,.preparation-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:620px){.extended-recipe-grid,.preparation-grid{grid-template-columns:1fr}}
+  .recipe-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem}
+  @media(max-width:900px){.recipe-feature-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.recipe-feature-grid{grid-template-columns:1fr}}
 </style>
