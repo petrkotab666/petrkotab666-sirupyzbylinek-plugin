@@ -1,0 +1,79 @@
+---
+import HeritageHubLayout from '../../../../layouts/HeritageHubLayout.astro';
+
+const cards = [
+  {
+    href: '/jak-spravne-susit-bylinky/',
+    title: 'Sušení bylinek',
+    text: 'Teplota, stín, proudění vzduchu, správná vrstva a kontrola úplného dosušení.',
+    image: '/obrazky/clanky/jak-spravne-susit-bylinky.svg',
+    kicker: 'Základní metoda',
+  },
+  {
+    href: '/jak-skladovat-susene-bylinky/',
+    title: 'Skladování sušených bylin',
+    text: 'Sklenice, papírové sáčky, etikety, ochrana před světlem, vlhkostí a cizími pachy.',
+    image: '/obrazky/clanky/jak-skladovat-susene-bylinky.svg',
+    kicker: 'Po usušení',
+  },
+  {
+    href: '/jak-uchovat-cerstve-bylinky/',
+    title: 'Uchování čerstvých bylinek',
+    text: 'Krátkodobé chlazení, voda, vlhká utěrka a rychlé zpracování bez zapaření.',
+    image: '/obrazky/clanky/jak-uchovat-cerstve-bylinky.svg',
+    kicker: 'Čerstvá úroda',
+  },
+  {
+    href: '/domaci-sirupy/',
+    title: 'Domácí sirupy',
+    text: 'Teplé i studené postupy, čisté lahve, cukr, skladování a navazující recepty.',
+    image: '/obrazky/clanky/domaci-sirupy.svg',
+    kicker: 'Sladké zpracování',
+  },
+  {
+    href: '/tinktury/',
+    title: 'Bylinné tinktury',
+    text: 'Výběr suroviny, macerace, filtrace, označení a bezpečnost domácích výluhů.',
+    image: '/obrazky/clanky/tinktury.svg',
+    kicker: 'Macerace',
+  },
+  {
+    href: '/bylinne-caje/',
+    title: 'Čaje a nálevy',
+    text: 'Jemné nálevy, odvary, správná teplota vody a bezpečné domácí směsi.',
+    image: '/obrazky/recepty/medunkovy-caj-pro-klidny-vecer.svg',
+    kicker: 'Nejjednodušší použití',
+  },
+  {
+    href: '/bylinne-masti-a-balzamy/',
+    title: 'Masti a balzámy',
+    text: 'Olejové základy, vosk, čisté nádoby a recepty určené k zevnímu použití.',
+    image: '/obrazky/recepty/mesickova-mast.svg',
+    kicker: 'Zevní péče',
+  },
+  {
+    href: '/bylinne-koupele/',
+    title: 'Koupele, obklady a další použití',
+    text: 'Koupelové směsi, obklady, kloktadla, oleje, octy a kuchyňské bylinné výrobky.',
+    image: '/obrazky/recepty/levandulovo-ovesna-koupel.svg',
+    kicker: 'Další možnosti',
+  },
+] as const;
+---
+<HeritageHubLayout
+  title="Zpracování bylin – sušení, skladování, sirupy, čaje a masti"
+  description="Obnovený rozcestník zpracování nasbíraných bylin: sušení, skladování, čerstvé uchování, sirupy, tinktury, čaje, masti a koupele."
+  canonical="/domu/sber-bylinek/zpracovani-bylin/"
+  eyebrow="Od košíku k hotovému výrobku"
+  heading="Zpracování bylin"
+  intro="Nasbírané bylinky je potřeba rychle roztřídit a zvolit vhodnou metodu. Pokračujte k sušení, skladování nebo konkrétním domácím výrobkům."
+  heroImage="/media/original/sber/zpracovani-bylin.webp"
+  heroAlt="Sušení, skladování a domácí zpracování léčivých bylinek"
+  cards={cards}
+  directoryTitle="Jak chcete bylinky zpracovat"
+  directoryText="Původní rozcestník zpracování je znovu dostupný a propojuje všechny hlavní způsoby domácího využití."
+  adTopic="recepty"
+  adHeading="Sklenice, sušené bylinky a pomůcky pro zpracování"
+  feedTopic="recepty"
+  feedHeading="Vybavení pro sušení, maceraci a domácí výrobu"
+/>
