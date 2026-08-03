@@ -70,7 +70,7 @@ async function auditRoute(route, viewport = { width: 1280, height: 900 }) {
   try {
     const response = await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
     status = response?.status() || 0;
-    await new Promise((resolve) => setTimeout(resolve, 140));
+    await new Promise((resolve) => setTimeout(resolve, 160));
     metrics = await page.evaluate(() => ({
       h1: document.querySelectorAll('h1').length,
       bodyText: document.body.innerText.trim().length,
@@ -105,18 +105,20 @@ async function pool(items, concurrency, worker) {
 await pool(routes, 12, (route) => auditRoute(route));
 
 const mobileRoutes = [
-  '/', '/magazin/', '/osvedcene-recepty/', '/bylinne-pripravky/', '/bylinne-caje/', '/bylinne-koupele/',
+  '/', '/magazin/', '/osvedcene-recepty/', '/domu/prirodni-lekarna/', '/bylinne-pripravky/', '/bylinne-caje/', '/bylinne-koupele/',
   '/bylinne-masti-a-balzamy/', '/bylinkova-herna/', '/bylinkove-pexeso/', '/poznej-bylinku/', '/bylinkovy-mistr/',
   '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/', '/bylinne-pripravky/mesickova-mast/',
+  '/nejcastejsi-chyby-pri-pestovani-bylinek/',
 ];
 for (const route of mobileRoutes) await auditRoute(route, { width: 390, height: 844 });
 
-async function interaction(name, route, test) {
+async function interaction(name, route, test, viewport = { width: 390, height: 844 }) {
   const page = await browser.newPage();
-  await page.setViewport({ width: 390, height: 844 });
+  await page.setViewport(viewport);
   await preparePage(page);
   try {
     await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await new Promise((resolve) => setTimeout(resolve, 180));
     await test(page);
   } catch (error) {
     errors.push(`${name}: ${String(error)}`);
@@ -147,20 +149,53 @@ await interaction('Bylinkový mistr', '/bylinkovy-mistr/', async (page) => {
   if (dimensions.width !== 600 || dimensions.height !== 500) throw new Error('plátno nemá rozměr 600 × 500');
 });
 
+await interaction('Úvodní karta Bylinkové herny', '/', async (page) => {
+  const image = await page.$eval('a[href="/bylinkova-herna/"] img', (node) => ({ src: node.getAttribute('src'), width: node.naturalWidth }));
+  if (!image.src?.includes('/media/ui/bylinkova-herna-photo.svg') || image.width < 100) throw new Error(`fotografický obrázek se nenačetl: ${JSON.stringify(image)}`);
+}, { width: 1440, height: 1000 });
+
+async function checkRestoredGrid(name, route, selector, expectedCount, expectedRows) {
+  await interaction(name, route, async (page) => {
+    const geometry = await page.$$eval(selector, (cards) => cards.map((card) => {
+      const rect = card.getBoundingClientRect();
+      return { x: Math.round(rect.x), y: Math.round(rect.y), width: Math.round(rect.width), height: Math.round(rect.height) };
+    }));
+    if (geometry.length !== expectedCount) throw new Error(`očekáváno ${expectedCount} karet, nalezeno ${geometry.length}`);
+    const heights = geometry.map((card) => card.height);
+    if (Math.max(...heights) - Math.min(...heights) > 3) throw new Error(`karty nemají stejnou výšku: ${heights.join(', ')}`);
+    const rows = [...new Set(geometry.map((card) => card.y))].map((y) => geometry.filter((card) => card.y === y).length);
+    if (rows.join(',') !== expectedRows.join(',')) throw new Error(`neočekávané rozložení řádků: ${rows.join(',')}`);
+  }, { width: 1440, height: 1200 });
+}
+await checkRestoredGrid('Zarovnání Přírodní lékárny', '/domu/prirodni-lekarna/', '.restored-directory--health .illustrated-directory-card', 9, [3, 3, 3]);
+await checkRestoredGrid('Zarovnání receptových kategorií', '/osvedcene-recepty/', '.restored-directory--recipes .illustrated-directory-card', 10, [4, 4, 2]);
+
+await interaction('Reklama uvnitř dlouhého článku', '/nejcastejsi-chyby-pri-pestovani-bylinek/', async (page) => {
+  const result = await page.evaluate(() => ({
+    inlineInsideContent: document.querySelectorAll('.article-content .article-inline-ad').length,
+    contextAds: document.querySelectorAll('.context-ads').length,
+    productFeeds: document.querySelectorAll('.product-feed').length,
+  }));
+  if (result.inlineInsideContent < 1 || result.contextAds < 1 || result.productFeeds < 1) throw new Error(`neúplná monetizace: ${JSON.stringify(result)}`);
+}, { width: 1280, height: 1000 });
+
 const screenshotDir = path.join(DIST, 'browser-audit-screenshots');
 await mkdir(screenshotDir, { recursive: true });
 for (const [name, route, viewport] of [
   ['home-desktop', '/', { width: 1440, height: 1000 }],
   ['magazine-desktop', '/magazin/', { width: 1440, height: 1000 }],
-  ['recipes-desktop', '/osvedcene-recepty/', { width: 1440, height: 1000 }],
+  ['recipes-desktop', '/osvedcene-recepty/', { width: 1440, height: 1100 }],
+  ['natural-pharmacy-desktop', '/domu/prirodni-lekarna/', { width: 1440, height: 1100 }],
+  ['long-article-ads-desktop', '/nejcastejsi-chyby-pri-pestovani-bylinek/', { width: 1440, height: 1100 }],
   ['preparations-desktop', '/bylinne-pripravky/', { width: 1440, height: 1000 }],
   ['recipe-mobile', '/bylinne-pripravky/mesickova-mast/', { width: 390, height: 844 }],
+  ['natural-pharmacy-mobile', '/domu/prirodni-lekarna/', { width: 390, height: 844 }],
 ]) {
   const page = await browser.newPage();
   await page.setViewport(viewport);
   await preparePage(page);
   await page.goto(`${BASE_URL}${route}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
-  await new Promise((resolve) => setTimeout(resolve, 140));
+  await new Promise((resolve) => setTimeout(resolve, 180));
   await page.screenshot({ path: path.join(screenshotDir, `${name}.png`), fullPage: false });
   await page.close();
 }
