@@ -40,6 +40,14 @@ def class_token_count(markup: str, token: str) -> int:
     return len(pattern.findall(markup))
 
 
+def image_sources(markup: str) -> list[str]:
+    return re.findall(
+        r"<img\b[^>]*\bsrc=[\"']([^\"']+)[\"'][^>]*>",
+        markup,
+        re.I,
+    )
+
+
 def require(markup: str, marker: str, label: str, errors: list[str]) -> None:
     if marker not in markup:
         errors.append(f"missing {label}: {marker}")
@@ -82,6 +90,8 @@ def main() -> int:
 
     if "expected-restored-natural-pharmacy-cards: 9" not in version:
         errors.append("current restoration deployment marker is missing")
+    if "expected-natural-pharmacy-image-format: webp" not in version:
+        errors.append("natural-pharmacy WebP deployment marker is missing")
     if kicker != "Pěstování bylinek":
         errors.append(f"wrong article kicker: {kicker!r}")
     if "/obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg" not in hero_src:
@@ -109,6 +119,33 @@ def main() -> int:
         errors.append(
             f"natural pharmacy contains {health_cards} restored main cards instead of 9"
         )
+
+    health_generated_images = [
+        source
+        for source in image_sources(health)
+        if "/media/generated/prirodni-lekarna/" in source
+    ]
+    if len(health_generated_images) != 9:
+        errors.append(
+            "natural pharmacy contains "
+            f"{len(health_generated_images)} generated tile images instead of 9"
+        )
+    non_webp_health_images = [
+        source
+        for source in health_generated_images
+        if not source.split("?", 1)[0].lower().endswith(".webp")
+    ]
+    if non_webp_health_images:
+        errors.append(
+            "natural-pharmacy tile images are not all WebP: "
+            + ", ".join(non_webp_health_images)
+        )
+    require(
+        health,
+        "/media/generated/prirodni-lekarna/bylinkova-herna-photo.webp",
+        "sleep-card WebP image",
+        errors,
+    )
     require(health, "Bylinky přehledně a bezpečně", "new natural-pharmacy heading", errors)
     for href in (
         "/prirodni-pomocnici-pro-imunitu/",
@@ -153,7 +190,8 @@ def main() -> int:
     print(
         "Deployment verified successfully: "
         f"hero={hero_src!r}, home={home_cards}, health={health_cards}, "
-        f"recipes={recipe_cards}, contextual_ads={class_token_count(article, 'context-ads')}, "
+        f"health_webp={len(health_generated_images)}, recipes={recipe_cards}, "
+        f"contextual_ads={class_token_count(article, 'context-ads')}, "
         f"inline_ads={class_token_count(article, 'article-inline-ad')}."
     )
     return 0
