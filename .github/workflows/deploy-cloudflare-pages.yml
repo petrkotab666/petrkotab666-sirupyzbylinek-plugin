@@ -78,6 +78,29 @@ jobs:
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/domu/prirodni-lekarna/" -o /tmp/health.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/osvedcene-recepty/" -o /tmp/recipes.html
           curl -fsS --max-time 30 --output /dev/null "${DEPLOYMENT_URL}/media/original/home/bylinkova-herna-photo.svg"
+          rm -f /tmp/uploaded-health-*.webp
+          for IMAGE in \
+            3obr-07cd0380.webp \
+            byliny-6083d43d.webp \
+            sirupyuvod-78eb30cb.webp \
+            bylinkova-herna-photo.webp \
+            sklenice-na-sirupy-a-zavarovani-4b170c4d.webp \
+            byliny-300x300-eca005d2.webp \
+            bylinkovymagazin-58281674.webp \
+            kontryhel-obecny-caj-sber-suseni-40c765ff.webp; do
+            curl -fsS --max-time 30 "${DEPLOYMENT_URL}/media/generated/prirodni-lekarna/${IMAGE}" -o "/tmp/uploaded-health-${IMAGE}"
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          files = sorted(Path('/tmp').glob('uploaded-health-*.webp'))
+          if len(files) != 8:
+              raise SystemExit(f'Expected 8 uploaded WebP assets, found {len(files)}')
+          for file in files:
+              header = file.read_bytes()[:12]
+              if header[:4] != b'RIFF' or header[8:12] != b'WEBP':
+                  raise SystemExit(f'Invalid WebP asset: {file}')
+          print(f'Validated {len(files)} uploaded WebP assets.')
+          PY
           python3 site/scripts/verify-deployed-article.py /tmp/deploy-version.txt /tmp/article.html /tmp/home.html /tmp/health.html /tmp/recipes.html
       - name: Verify public production address
         run: |
@@ -89,9 +112,38 @@ jobs:
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/?v=${CACHE_BUSTER}" -o /tmp/public-home.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/domu/prirodni-lekarna/?v=${CACHE_BUSTER}" -o /tmp/public-health.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/osvedcene-recepty/?v=${CACHE_BUSTER}" -o /tmp/public-recipes.html \
-              && curl -fsS --max-time 30 --output /dev/null "${BASE}/media/original/home/bylinkova-herna-photo.svg?v=${CACHE_BUSTER}" \
-              && python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html; then
-              echo "Production deployment verified successfully."; exit 0
+              && curl -fsS --max-time 30 --output /dev/null "${BASE}/media/original/home/bylinkova-herna-photo.svg?v=${CACHE_BUSTER}"; then
+              rm -f /tmp/public-health-*.webp
+              WEBP_OK=1
+              for IMAGE in \
+                3obr-07cd0380.webp \
+                byliny-6083d43d.webp \
+                sirupyuvod-78eb30cb.webp \
+                bylinkova-herna-photo.webp \
+                sklenice-na-sirupy-a-zavarovani-4b170c4d.webp \
+                byliny-300x300-eca005d2.webp \
+                bylinkovymagazin-58281674.webp \
+                kontryhel-obecny-caj-sber-suseni-40c765ff.webp; do
+                if ! curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/media/generated/prirodni-lekarna/${IMAGE}?v=${CACHE_BUSTER}" -o "/tmp/public-health-${IMAGE}"; then
+                  WEBP_OK=0
+                  break
+                fi
+              done
+              if [ "$WEBP_OK" = 1 ] \
+                && python3 - <<'PY'
+          from pathlib import Path
+          files = sorted(Path('/tmp').glob('public-health-*.webp'))
+          if len(files) != 8:
+              raise SystemExit(1)
+          for file in files:
+              header = file.read_bytes()[:12]
+              if header[:4] != b'RIFF' or header[8:12] != b'WEBP':
+                  raise SystemExit(1)
+          print(f'Validated {len(files)} public WebP assets.')
+          PY
+                && python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html; then
+                echo "Production deployment verified successfully."; exit 0
+              fi
             fi
             echo "Production verification failed (attempt $attempt/12). Waiting 10 seconds..."; sleep 10
           done
