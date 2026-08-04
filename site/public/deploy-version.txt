@@ -1,6 +1,6 @@
 sirupyzbylinek deployment
-version: 2026-08-04T20:09:00+02:00
-commit-purpose: finální nasazení opravených WebP obrázků Přírodní lékárny
+version: 2026-08-04T20:52:00+02:00
+commit-purpose: úplná redakční očista článků, kontrola obrázků, reklam, feedů a prokliků
 expected-cultivation-category: Pěstování bylinek
 expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
 expected-restored-natural-pharmacy-cards: 9
@@ -8,7 +8,12 @@ expected-natural-pharmacy-image-format: webp
 expected-natural-pharmacy-sleep-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp
 expected-restored-recipe-cards: 10
 expected-home-photographic-cards: 6
-expected-herb-game-photo: /media/original/home/bylinkova-herna-photo.svg
+expected-home-herb-game-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp
+expected-editorial-integrity-audit: enabled
+expected-raw-affiliate-links-in-article-content: 0
+expected-broken-local-images: 0
+expected-missing-context-ads-on-content-pages: 0
+expected-missing-product-feeds-on-content-pages: 0
 expected-game-count: 3
 expected-deal-card-count: 12
 expected-herb-master-engine: arcade-canvas-600x500
