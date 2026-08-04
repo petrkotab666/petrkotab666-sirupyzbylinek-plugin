@@ -74,10 +74,12 @@ jobs:
           set -euo pipefail
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/deploy-version.txt" -o /tmp/deploy-version.txt
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" -o /tmp/article.html
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/jak-uchovat-cerstve-bylinky/" -o /tmp/clean-article.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/" -o /tmp/home.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/domu/prirodni-lekarna/" -o /tmp/health.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/osvedcene-recepty/" -o /tmp/recipes.html
-          curl -fsS --max-time 30 --output /dev/null "${DEPLOYMENT_URL}/media/original/home/bylinkova-herna-photo.svg"
+          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/site-audit.json" -o /tmp/site-audit.json
+          jq -e '.errors | length == 0' /tmp/site-audit.json >/dev/null
           rm -f /tmp/uploaded-health-*.webp
           for IMAGE in \
             3obr-07cd0380.webp \
@@ -101,7 +103,7 @@ jobs:
                   raise SystemExit(f'Invalid WebP asset: {file}')
           print(f'Validated {len(files)} uploaded WebP assets.')
           PY
-          python3 site/scripts/verify-deployed-article.py /tmp/deploy-version.txt /tmp/article.html /tmp/home.html /tmp/health.html /tmp/recipes.html
+          python3 site/scripts/verify-deployed-article.py /tmp/deploy-version.txt /tmp/article.html /tmp/home.html /tmp/health.html /tmp/recipes.html /tmp/clean-article.html
       - name: Verify public production address
         run: |
           set -euo pipefail
@@ -109,10 +111,11 @@ jobs:
             CACHE_BUSTER="$(date +%s)-${attempt}"; BASE="https://sirupyzbylinek-astro.pages.dev"
             if curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/deploy-version.txt?v=${CACHE_BUSTER}" -o /tmp/public-version.txt \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" -o /tmp/public-article.html \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/jak-uchovat-cerstve-bylinky/?v=${CACHE_BUSTER}" -o /tmp/public-clean-article.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/?v=${CACHE_BUSTER}" -o /tmp/public-home.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/domu/prirodni-lekarna/?v=${CACHE_BUSTER}" -o /tmp/public-health.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/osvedcene-recepty/?v=${CACHE_BUSTER}" -o /tmp/public-recipes.html \
-              && curl -fsS --max-time 30 --output /dev/null "${BASE}/media/original/home/bylinkova-herna-photo.svg?v=${CACHE_BUSTER}"; then
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/site-audit.json?v=${CACHE_BUSTER}" -o /tmp/public-site-audit.json; then
               rm -f /tmp/public-health-*.webp
               WEBP_OK=1
               for IMAGE in \
@@ -142,7 +145,8 @@ jobs:
           print(f'Validated {len(files)} public WebP assets.')
           PY
                 then
-                  if python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html; then
+                  if jq -e '.errors | length == 0' /tmp/public-site-audit.json >/dev/null \
+                    && python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html /tmp/public-clean-article.html; then
                     echo "Production deployment verified successfully."
                     exit 0
                   fi
