@@ -129,8 +129,8 @@ jobs:
                   break
                 fi
               done
-              if [ "$WEBP_OK" = 1 ] \
-                && python3 - <<'PY'
+              if [ "$WEBP_OK" = 1 ]; then
+                if python3 - <<'PY'
           from pathlib import Path
           files = sorted(Path('/tmp').glob('public-health-*.webp'))
           if len(files) != 8:
@@ -141,10 +141,15 @@ jobs:
                   raise SystemExit(1)
           print(f'Validated {len(files)} public WebP assets.')
           PY
-                && python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html; then
-                echo "Production deployment verified successfully."; exit 0
+                then
+                  if python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html; then
+                    echo "Production deployment verified successfully."
+                    exit 0
+                  fi
+                fi
               fi
             fi
-            echo "Production verification failed (attempt $attempt/12). Waiting 10 seconds..."; sleep 10
+            echo "Production verification failed (attempt $attempt/12). Waiting 10 seconds..."
+            sleep 10
           done
           exit 1
