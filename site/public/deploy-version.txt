@@ -1,6 +1,6 @@
 sirupyzbylinek deployment
-version: 2026-08-04T20:04:00+02:00
-commit-purpose: oprava a sjednocení WebP obrázků Přírodní lékárny
+version: 2026-08-04T20:09:00+02:00
+commit-purpose: finální nasazení opravených WebP obrázků Přírodní lékárny
 expected-cultivation-category: Pěstování bylinek
 expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
 expected-restored-natural-pharmacy-cards: 9
