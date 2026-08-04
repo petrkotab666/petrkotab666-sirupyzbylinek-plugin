@@ -12,6 +12,14 @@ BANNED_VISIBLE_PHRASES = (
     "SEO 90+",
     "produktový XML feed",
     "affiliate doporučení",
+    "Jak z článku vytěžit maximum",
+    "SEO a uživatelská hodnota článku",
+    "Rychlá kontrola před publikací",
+    "související článek z této dávky",
+    "Přehnaná očekávání",
+    "Příliš mnoho kombinací",
+    "Označeno tagem",
+    "Vybavení a suroviny pro další domácí recept",
 )
 
 
@@ -54,9 +62,9 @@ def require(markup: str, marker: str, label: str, errors: list[str]) -> None:
 
 
 def main() -> int:
-    if len(sys.argv) != 6:
+    if len(sys.argv) != 7:
         print(
-            "Usage: verify-deployed-article.py VERSION ARTICLE HOME HEALTH RECIPES",
+            "Usage: verify-deployed-article.py VERSION ARTICLE HOME HEALTH RECIPES CLEAN_ARTICLE",
             file=sys.stderr,
         )
         return 2
@@ -66,6 +74,7 @@ def main() -> int:
     home = Path(sys.argv[3]).read_text(encoding="utf-8")
     health = Path(sys.argv[4]).read_text(encoding="utf-8")
     recipes = Path(sys.argv[5]).read_text(encoding="utf-8")
+    clean_article = Path(sys.argv[6]).read_text(encoding="utf-8")
 
     kicker_match = re.search(
         r'class=["\'][^"\']*article-kicker[^"\']*["\'][^>]*>([\s\S]*?)</div>',
@@ -85,13 +94,16 @@ def main() -> int:
 
     kicker = plain_text(kicker_match.group(1)) if kicker_match else ""
     hero_src = hero_src_match.group(1) if hero_src_match else ""
-    visible = visible_page_text(article)
     errors: list[str] = []
 
     if "expected-restored-natural-pharmacy-cards: 9" not in version:
         errors.append("current restoration deployment marker is missing")
     if "expected-natural-pharmacy-image-format: webp" not in version:
         errors.append("natural-pharmacy WebP deployment marker is missing")
+    if "expected-home-herb-game-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp" not in version:
+        errors.append("home herb-game WebP marker is missing")
+    if "expected-editorial-integrity-audit: enabled" not in version:
+        errors.append("editorial integrity audit marker is missing")
     if kicker != "Pěstování bylinek":
         errors.append(f"wrong article kicker: {kicker!r}")
     if "/obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg" not in hero_src:
@@ -106,10 +118,12 @@ def main() -> int:
 
     require(
         home,
-        "/media/original/home/bylinkova-herna-photo.svg",
-        "photographic herb-game card",
+        "/media/generated/prirodni-lekarna/bylinkova-herna-photo.webp",
+        "WebP herb-game card",
         errors,
     )
+    if "/media/original/home/bylinkova-herna-photo.svg" in home:
+        errors.append("home page still references the obsolete herb-game SVG")
     home_cards = class_token_count(home, "illustrated-directory-card--photo")
     if home_cards < 6:
         errors.append(f"home page contains only {home_cards} photographic main cards")
@@ -176,7 +190,30 @@ def main() -> int:
     ):
         require(recipes, f'href="{href}"', f"recipe link {href}", errors)
 
-    folded = visible.casefold()
+    clean_visible = visible_page_text(clean_article)
+    require(clean_article, "Jak uchovat čerstvé bylinky během horkého léta", "rewritten article title", errors)
+    require(clean_article, "Bazalku nedávejte do příliš chladné lednice", "specific basil section", errors)
+    require(clean_article, "Kdy je lepší bylinky zmrazit", "specific freezing section", errors)
+    if class_token_count(clean_article, "context-ads") < 1:
+        errors.append("rewritten article is missing contextual advertising")
+    if class_token_count(clean_article, "product-feed") < 1:
+        errors.append("rewritten article is missing product feed")
+    article_content_match = re.search(
+        r'class=["\'][^"\']*article-content[^"\']*["\'][^>]*>([\s\S]*?)</div>',
+        clean_article,
+        re.I,
+    )
+    article_content = article_content_match.group(1) if article_content_match else ""
+    if "ehub.cz/system/scripts/click.php" in article_content:
+        errors.append("raw affiliate links remain inside rewritten article content")
+    if re.search(r">\s*\d[\d\s.,]*\s*Kč\s*<", article_content, re.I):
+        errors.append("standalone legacy prices remain inside rewritten article content")
+
+    combined_visible = "\n".join(
+        visible_page_text(markup)
+        for markup in (article, home, health, recipes, clean_article)
+    )
+    folded = combined_visible.casefold()
     for phrase in BANNED_VISIBLE_PHRASES:
         if phrase.casefold() in folded:
             errors.append(f"banned visible phrase {phrase!r}")
@@ -191,6 +228,7 @@ def main() -> int:
         "Deployment verified successfully: "
         f"hero={hero_src!r}, home={home_cards}, health={health_cards}, "
         f"health_webp={len(health_generated_images)}, recipes={recipe_cards}, "
+        f"clean_article_chars={len(clean_visible)}, "
         f"contextual_ads={class_token_count(article, 'context-ads')}, "
         f"inline_ads={class_token_count(article, 'article-inline-ad')}."
     )
