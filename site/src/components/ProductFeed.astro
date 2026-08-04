@@ -70,7 +70,7 @@ const selected = products
               height="315"
               loading="lazy"
               decoding="async"
-              onerror="this.closest('.product-card').classList.add('product-image-missing');this.remove()"
+              onerror="this.onerror=null;this.src='/media/generated/prirodni-lekarna/byliny-6083d43d.webp';this.closest('.product-card')?.classList.add('product-image-fallback')"
             />
           </a>
           <div class="product-card-body">
@@ -83,7 +83,7 @@ const selected = products
     </div>
   ) : (
     <a class="feed-fallback-banner" href="https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=04244f53" target="_blank" rel="nofollow sponsored noopener noreferrer">
-      <img src="https://doc.ehub.cz/b/f709cff7/04244f53.png" alt="BrainMarket.cz – nabídka produktů BrainMax" width="970" height="310" loading="lazy" decoding="async" />
+      <img src="https://doc.ehub.cz/b/f709cff7/04244f53.png" alt="BrainMarket.cz – nabídka produktů BrainMax" width="970" height="310" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/media/generated/prirodni-lekarna/byliny-6083d43d.webp'" />
     </a>
   )}
   <p class="ad-disclosure">Doplňky stravy nejsou náhradou pestré stravy ani odborné zdravotní péče. Dostupnost a cenu ověřte u prodejce.</p>
