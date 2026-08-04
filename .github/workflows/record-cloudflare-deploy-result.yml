@@ -1,0 +1,90 @@
+name: Record SirupyZBylinek deploy result
+
+on:
+  workflow_run:
+    workflows: ["Deploy SirupyZBylinek to Cloudflare Pages"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: record-sirupyzbylinek-cloudflare-result
+  cancel-in-progress: true
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Write deployment report
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_NUMBER: ${{ github.event.workflow_run.run_number }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          STATUS: ${{ github.event.workflow_run.status }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          EVENT: ${{ github.event.workflow_run.event }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          CREATED_AT: ${{ github.event.workflow_run.created_at }}
+          UPDATED_AT: ${{ github.event.workflow_run.updated_at }}
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          report = {
+              "workflow": "Deploy SirupyZBylinek to Cloudflare Pages",
+              "runId": int(os.environ["RUN_ID"]),
+              "runNumber": int(os.environ["RUN_NUMBER"]),
+              "headSha": os.environ["HEAD_SHA"],
+              "headBranch": os.environ["HEAD_BRANCH"],
+              "event": os.environ["EVENT"],
+              "status": os.environ["STATUS"],
+              "conclusion": os.environ["CONCLUSION"],
+              "createdAt": os.environ["CREATED_AT"],
+              "updatedAt": os.environ["UPDATED_AT"],
+              "runUrl": os.environ["RUN_URL"],
+              "webpVerificationRequired": True,
+              "expectedNaturalPharmacyCards": 9,
+              "expectedUniqueWebpAssets": 8,
+          }
+          Path("reports/cloudflare-deploy-latest.json").write_text(
+              json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          Path("reports/cloudflare-deploy-latest.md").write_text(
+              "# Poslední nasazení Sirupy z bylinek\n\n"
+              f"- Výsledek: **{report['conclusion']}**\n"
+              f"- Commit: `{report['headSha']}`\n"
+              f"- Větev: `{report['headBranch']}`\n"
+              f"- Run: {report['runNumber']} (`{report['runId']}`)\n"
+              f"- Dokončeno: {report['updatedAt']}\n"
+              "- Kontrola WebP Přírodní lékárny: povinná součást deploy workflow\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Commit report without triggering another deployment
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/cloudflare-deploy-latest.json reports/cloudflare-deploy-latest.md
+          git commit -m 'Uložit výsledek nasazení Sirupy z bylinek [skip ci]' || exit 0
+          for attempt in 1 2 3 4; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((attempt * 2))
+          done
+          exit 1
