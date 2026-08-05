@@ -14,7 +14,7 @@ interface Props { category: PreparationCategory }
 const { category } = Astro.props;
 const meta = preparationCategories[category];
 const recipes = preparationsByCategory(category);
-const image = recipes[0] ? `/obrazky/recepty/${recipes[0].slug}.svg` : '/obrazky/recepty.svg';
+const image = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : '/obrazky/bylinne-pripravky-hero.svg';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -47,7 +47,7 @@ const schema = {
       <p>{meta.description}</p>
       <span>{recipes.length} podrobných receptů</span>
     </div>
-    {recipes[0] && <img src={`/obrazky/recepty/${recipes[0].slug}.svg`} alt={meta.title} width="1200" height="675" loading="eager" />}
+    <img src={image} alt={`Tematická ilustrace pro kategorii ${meta.title}`} width="1200" height="675" loading="eager" fetchpriority="high" />
   </section>
 
   <section class="category-recipe-section">
@@ -66,7 +66,7 @@ const schema = {
   .preparation-category-hero h1{margin:.65rem 0 .75rem;color:#174c2b;font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.02}
   .preparation-category-hero p{max-width:670px;margin:0 auto;color:#5c695e;font-size:1.08rem;line-height:1.7}
   .preparation-category-hero span{align-self:center;margin-top:1.2rem;padding:.55rem .9rem;border-radius:999px;background:#fff;color:#517046;font-weight:850}
-  .preparation-category-hero img{width:100%;height:100%;min-height:420px;object-fit:cover}
+  .preparation-category-hero img{display:block;width:100%;height:100%;min-height:420px;object-fit:cover;object-position:center}
   .category-recipe-section{width:min(1180px,calc(100% - 2rem));margin:3rem auto}
   .preparation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
   @media(max-width:900px){.preparation-category-hero{grid-template-columns:1fr}.preparation-category-hero img{order:-1;min-height:300px}.preparation-grid{grid-template-columns:1fr 1fr}}
