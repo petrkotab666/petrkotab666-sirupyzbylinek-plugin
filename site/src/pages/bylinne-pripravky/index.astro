@@ -43,10 +43,10 @@ const schema = {
     <div class="preparation-category-grid">
       {categories.map(([key, meta]) => {
         const recipes = preparationsByCategory(key);
-        const image = recipes[0] ? `/obrazky/recepty/${recipes[0].slug}.svg` : '/obrazky/recepty.svg';
+        const image = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : heroImage;
         return (
           <a class="preparation-category-card" href={meta.path}>
-            <img src={image} alt="" width="1200" height="675" loading="lazy" />
+            <img src={image} alt={`Ilustrace kategorie ${meta.title}`} width="1200" height="675" loading="lazy" />
             <div><span>{recipes.length} receptů</span><h2>{meta.title}</h2><p>{meta.description}</p><b>Otevřít rozcestník →</b></div>
           </a>
         );
