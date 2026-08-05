@@ -18,6 +18,7 @@ interface Props { recipe: HerbalPreparation }
 const { recipe } = Astro.props;
 const category = preparationCategories[recipe.category];
 const image = `/obrazky/recepty/${recipe.slug}.svg`;
+const heroImage = `/obrazky/recepty-sceny/${recipe.slug}.svg`;
 const related = herbalPreparations.filter((item) => item.category === recipe.category && item.slug !== recipe.slug).slice(0, 3);
 const totalMinutes = recipe.prepMinutes + (recipe.restMinutes || 0);
 const duration = (minutes: number) => `PT${Math.max(1, minutes)}M`;
@@ -69,7 +70,7 @@ const breadcrumb = {
           <div><dt>Množství</dt><dd>{recipe.yield}</dd></div>
         </dl>
       </div>
-      <img src={image} alt={recipe.title} width="1200" height="675" loading="eager" fetchpriority="high" />
+      <img src={heroImage} alt={`Tematická ilustrace k receptu ${recipe.title}`} width="1200" height="675" loading="eager" fetchpriority="high" />
     </header>
 
     <ContextAds topic="recepty" heading={`Vybavení pro recept: ${recipe.title}`} />
@@ -115,7 +116,7 @@ const breadcrumb = {
   .recipe-category-link{align-self:center;color:#b36824;text-decoration:none;font-size:.8rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
   .recipe-hero h1{margin:.7rem 0 .8rem;color:#174c2b;font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.02}
   .recipe-hero p{max-width:680px;margin:0 auto;color:#59685b;font-size:1.08rem;line-height:1.7}
-  .recipe-hero>img{width:100%;height:100%;min-height:420px;object-fit:cover}
+  .recipe-hero>img{display:block;width:100%;height:100%;min-height:420px;object-fit:cover;object-position:center}
   .recipe-facts{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:1.45rem 0 0}
   .recipe-facts div{min-width:120px;padding:.75rem 1rem;border-radius:16px;background:rgba(255,255,255,.72)}
   .recipe-facts dt{font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#8b6e42}
