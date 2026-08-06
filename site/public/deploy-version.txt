@@ -1,15 +1,18 @@
 sirupyzbylinek deployment
-version: 2026-08-04T20:52:00+02:00
-commit-purpose: úplná redakční očista článků, kontrola obrázků, reklam, feedů a prokliků
+version: 2026-08-06T22:40:00+02:00
+commit-purpose: oprava receptáře, samostatný WebP obrázek Mastí a balzámů a blokující celowebový audit
 expected-cultivation-category: Pěstování bylinek
 expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
 expected-restored-natural-pharmacy-cards: 9
 expected-natural-pharmacy-image-format: webp
 expected-natural-pharmacy-sleep-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp
 expected-restored-recipe-cards: 10
+expected-recipe-card-image-format: webp
+expected-salve-card-image: /media/generated/prirodni-lekarna/masti-a-balzamy-v2.webp
 expected-home-photographic-cards: 6
 expected-home-herb-game-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp
 expected-editorial-integrity-audit: enabled
+expected-directory-card-image-audit: enabled
 expected-raw-affiliate-links-in-article-content: 0
 expected-broken-local-images: 0
 expected-missing-context-ads-on-content-pages: 0
