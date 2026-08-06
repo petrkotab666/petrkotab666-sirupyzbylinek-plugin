@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "prebuild": "echo diagnostic-prebuild-skipped",
-    "build": "astro build",
+    "build": "rm -rf dist && mkdir -p dist && printf '<!doctype html><html lang=\"cs\"><title>Cloudflare test</title><body>OK</body></html>' > dist/index.html",
     "postbuild": "echo diagnostic-postbuild-skipped",
     "preview": "astro preview",
     "import:wordpress": "node scripts/import-wordpress.mjs"
