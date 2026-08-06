@@ -1,0 +1,3 @@
+baseline: main
+requested-at: 2026-08-06T22:53:00+02:00
+purpose: ověřit, zda Cloudflare sestaví nezměněný hlavní web
