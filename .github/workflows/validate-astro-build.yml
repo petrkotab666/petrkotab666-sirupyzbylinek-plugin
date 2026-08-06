@@ -1,0 +1,64 @@
+name: Ověřit sestavení webu Sirupy z bylinek
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/validate-astro-build.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/validate-astro-build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-sirupy-astro-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Sestavit a provést všechny audity
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Nastavit Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Nainstalovat přesné závislosti
+        working-directory: site
+        run: npm ci --no-audit --no-fund
+
+      - name: Sestavit celý web a spustit postbuild audity
+        working-directory: site
+        run: npm run build
+
+      - name: Ověřit obrázky hlavního receptáře
+        working-directory: site
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f scripts/audit-directory-card-images.mjs ]; then
+            node scripts/audit-directory-card-images.mjs
+          else
+            echo 'Samostatný audit obrázků na této větvi ještě není přítomen.'
+          fi
+
+      - name: Ověřit výstup auditu webu
+        working-directory: site
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f public/site-audit.json
+          node -e "const r=require('./public/site-audit.json'); if ((r.errors||[]).length) { console.error(r.errors); process.exit(1); } console.log('site-audit.json bez chyb')"
