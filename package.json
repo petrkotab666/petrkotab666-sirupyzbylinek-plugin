@@ -1,0 +1,8 @@
+{
+  "name": "sirupyzbylinek-cloudflare-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix site install --no-audit --no-fund && npm --prefix site run build && rm -rf dist && cp -R site/dist dist"
+  }
+}
