@@ -1,0 +1,112 @@
+name: Diagnostikovat sestavení Astro webu
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: diagnose-sirupy-astro
+  cancel-in-progress: false
+
+jobs:
+  diagnose:
+    if: github.event.issue.title == '[build] Ověřit Sirupy z bylinek'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Načíst větev k ověření
+        id: input
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          REF="$(printf '%s\n' "$ISSUE_BODY" | sed -n 's/^ref:[[:space:]]*//p' | head -n1)"
+          if ! [[ "$REF" =~ ^[A-Za-z0-9._/-]+$ ]]; then
+            echo "Neplatný nebo chybějící řádek ref: ..." >&2
+            exit 1
+          fi
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout ověřované větve
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.input.outputs.ref }}
+
+      - name: Nastavit Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Nainstalovat závislosti
+        id: install
+        continue-on-error: true
+        working-directory: site
+        shell: bash
+        run: |
+          set -o pipefail
+          npm ci --no-audit --no-fund 2>&1 | tee /tmp/install.log
+
+      - name: Sestavit web a spustit audity
+        id: build
+        if: steps.install.outcome == 'success'
+        continue-on-error: true
+        working-directory: site
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee /tmp/build.log
+
+      - name: Zapsat diagnostiku do issue
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          CHECKED_REF: ${{ steps.input.outputs.ref }}
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const tail = (path, max = 14000) => {
+              try {
+                const value = fs.readFileSync(path, 'utf8');
+                return value.length > max ? value.slice(-max) : value;
+              } catch { return '(log nebyl vytvořen)'; }
+            };
+            const install = tail('/tmp/install.log', 5000);
+            const build = tail('/tmp/build.log', 14000);
+            const body = [
+              `## Diagnostika sestavení`,
+              `- Ref: \`${process.env.CHECKED_REF || 'nezjištěn'}\``,
+              `- Instalace: **${process.env.INSTALL_OUTCOME || 'unknown'}**`,
+              `- Build a audity: **${process.env.BUILD_OUTCOME || 'not-run'}**`,
+              '',
+              '<details><summary>Konec instalačního logu</summary>', '', '```text', install, '```', '</details>',
+              '',
+              '<details open><summary>Konec sestavovacího logu</summary>', '', '```text', build, '```', '</details>',
+              '',
+              `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+      - name: Vyhodnotit výsledek
+        if: always()
+        shell: bash
+        env:
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+        run: |
+          test "$INSTALL_OUTCOME" = success
+          test "$BUILD_OUTCOME" = success
