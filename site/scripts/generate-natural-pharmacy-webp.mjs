@@ -16,6 +16,7 @@ const sources = [
   'public/media/imported/nejlepsi-susicka-na-bylinky/byliny-300x300-eca005d2.png',
   'public/media/imported/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/bylinkovymagazin-58281674.png',
   'public/media/imported/kontryhel-obecny/kontryhel-obecny-caj-sber-suseni-40c765ff.png',
+  'public/media/original/cards/masti-a-balzamy-v2.svg',
 ];
 
 fs.rmSync(outputDir, { recursive: true, force: true });
@@ -61,4 +62,4 @@ for (const filename of expected) {
   }
 }
 
-console.log(`Vygenerováno ${expected.length} obrázků WebP pro Přírodní lékárnu.`);
+console.log(`Vygenerováno ${expected.length} obrázků WebP pro hlavní obrazové rozcestníky.`);
