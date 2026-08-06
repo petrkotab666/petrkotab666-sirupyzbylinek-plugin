@@ -3,6 +3,10 @@ name: Diagnostikovat sestavení Astro webu
 on:
   issues:
     types: [opened]
+  push:
+    branches: [main]
+    paths:
+      - '.github/diagnose-astro-trigger.txt'
 
 permissions:
   contents: read
@@ -14,18 +18,23 @@ concurrency:
 
 jobs:
   diagnose:
-    if: github.event.issue.title == '[build] Ověřit Sirupy z bylinek'
+    if: github.event_name == 'push' || github.event.issue.title == '[build] Ověřit Sirupy z bylinek'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
       - name: Načíst větev k ověření
         id: input
         env:
+          EVENT_NAME: ${{ github.event_name }}
           ISSUE_BODY: ${{ github.event.issue.body }}
         shell: bash
         run: |
           set -euo pipefail
-          REF="$(printf '%s\n' "$ISSUE_BODY" | sed -n 's/^ref:[[:space:]]*//p' | head -n1)"
+          if [ "$EVENT_NAME" = push ]; then
+            REF="$(sed -n 's/^ref:[[:space:]]*//p' .github/diagnose-astro-trigger.txt | head -n1)"
+          else
+            REF="$(printf '%s\n' "$ISSUE_BODY" | sed -n 's/^ref:[[:space:]]*//p' | head -n1)"
+          fi
           if ! [[ "$REF" =~ ^[A-Za-z0-9._/-]+$ ]]; then
             echo "Neplatný nebo chybějící řádek ref: ..." >&2
             exit 1
@@ -70,6 +79,8 @@ jobs:
           CHECKED_REF: ${{ steps.input.outputs.ref }}
           INSTALL_OUTCOME: ${{ steps.install.outcome }}
           BUILD_OUTCOME: ${{ steps.build.outcome }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -82,6 +93,9 @@ jobs:
             };
             const install = tail('/tmp/install.log', 5000);
             const build = tail('/tmp/build.log', 14000);
+            const issueNumber = process.env.EVENT_NAME === 'issues'
+              ? Number(process.env.EVENT_ISSUE_NUMBER)
+              : 32;
             const body = [
               `## Diagnostika sestavení`,
               `- Ref: \`${process.env.CHECKED_REF || 'nezjištěn'}\``,
@@ -97,7 +111,7 @@ jobs:
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
+              issue_number: issueNumber,
               body,
             });
 
