@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/generate-natural-pharmacy-webp.mjs && node scripts/patch-herb-player.mjs && node scripts/sanitize-legacy-markdown.mjs && node scripts/strip-legacy-inline-promotions.mjs && node scripts/remove-duplicate-article-images.mjs && node scripts/remove-editorial-fillers.mjs && node scripts/fetch-affiliate-feed.mjs",
+    "prebuild": "echo diagnostic-prebuild-skipped",
     "build": "astro build",
     "postbuild": "echo diagnostic-postbuild-skipped",
     "preview": "astro preview",
