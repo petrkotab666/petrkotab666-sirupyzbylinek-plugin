@@ -45,9 +45,36 @@ jobs:
       - name: Build Astro site
         working-directory: site
         run: npx astro build
+      - name: Generate legacy redirects
+        working-directory: site
+        run: node scripts/generate-legacy-redirects.mjs
+      - name: Deduplicate built article images
+        working-directory: site
+        run: node scripts/deduplicate-built-article-images.mjs
+      - name: Patch site audit
+        working-directory: site
+        run: node scripts/patch-site-audit.mjs
       - name: Audit built site
         working-directory: site
-        run: npm run postbuild
+        run: node scripts/audit-built-site.mjs
+      - name: Audit Herb Master
+        working-directory: site
+        run: node scripts/audit-herb-master.mjs
+      - name: Audit full site
+        working-directory: site
+        run: node scripts/audit-full-site.mjs
+      - name: Audit restored directories
+        working-directory: site
+        run: node scripts/audit-restored-directories.mjs
+      - name: Audit restored site
+        working-directory: site
+        run: node scripts/audit-restored-site.mjs
+      - name: Audit content integrity
+        working-directory: site
+        run: node scripts/audit-content-integrity.mjs
+      - name: Audit preparation heroes
+        working-directory: site
+        run: node scripts/audit-preparation-heroes.mjs
       - name: Force production branch to main
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
