@@ -89,14 +89,15 @@ jobs:
             sklenice-na-sirupy-a-zavarovani-4b170c4d.webp \
             byliny-300x300-eca005d2.webp \
             bylinkovymagazin-58281674.webp \
-            kontryhel-obecny-caj-sber-suseni-40c765ff.webp; do
+            kontryhel-obecny-caj-sber-suseni-40c765ff.webp \
+            masti-a-balzamy-v2.webp; do
             curl -fsS --max-time 30 "${DEPLOYMENT_URL}/media/generated/prirodni-lekarna/${IMAGE}" -o "/tmp/uploaded-health-${IMAGE}"
           done
           python3 - <<'PY'
           from pathlib import Path
           files = sorted(Path('/tmp').glob('uploaded-health-*.webp'))
-          if len(files) != 8:
-              raise SystemExit(f'Expected 8 uploaded WebP assets, found {len(files)}')
+          if len(files) != 9:
+              raise SystemExit(f'Expected 9 uploaded WebP assets, found {len(files)}')
           for file in files:
               header = file.read_bytes()[:12]
               if header[:4] != b'RIFF' or header[8:12] != b'WEBP':
@@ -126,7 +127,8 @@ jobs:
                 sklenice-na-sirupy-a-zavarovani-4b170c4d.webp \
                 byliny-300x300-eca005d2.webp \
                 bylinkovymagazin-58281674.webp \
-                kontryhel-obecny-caj-sber-suseni-40c765ff.webp; do
+                kontryhel-obecny-caj-sber-suseni-40c765ff.webp \
+                masti-a-balzamy-v2.webp; do
                 if ! curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/media/generated/prirodni-lekarna/${IMAGE}?v=${CACHE_BUSTER}" -o "/tmp/public-health-${IMAGE}"; then
                   WEBP_OK=0
                   break
@@ -136,7 +138,7 @@ jobs:
                 if python3 - <<'PY'
           from pathlib import Path
           files = sorted(Path('/tmp').glob('public-health-*.webp'))
-          if len(files) != 8:
+          if len(files) != 9:
               raise SystemExit(1)
           for file in files:
               header = file.read_bytes()[:12]
