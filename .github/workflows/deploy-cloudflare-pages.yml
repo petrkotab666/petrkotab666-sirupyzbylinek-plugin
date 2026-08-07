@@ -39,9 +39,15 @@ jobs:
       - name: Install dependencies
         working-directory: site
         run: npm install --no-audit --no-fund
-      - name: Build and audit site
+      - name: Prepare generated assets and content
         working-directory: site
-        run: npm run build
+        run: npm run prebuild
+      - name: Build Astro site
+        working-directory: site
+        run: npx astro build
+      - name: Audit built site
+        working-directory: site
+        run: npm run postbuild
       - name: Force production branch to main
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
