@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
+import { hubPhotoAlt, resolveHubImage } from '../lib/hub-photo';
 
 interface HubCard {
   href: string;
@@ -48,6 +49,13 @@ const {
   feedHeading = 'Doporučené pomůcky, knihy a suroviny',
 } = Astro.props;
 
+const resolvedHeroImage = resolveHubImage(heroImage, canonical, heading, 0);
+const resolvedCards = cards.map((card, index) => ({
+  ...card,
+  image: resolveHubImage(card.image, card.href, card.title, index),
+  imageAlt: card.imageAlt || hubPhotoAlt(card.title),
+}));
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -56,8 +64,8 @@ const schema = {
   url: new URL(canonical, Astro.site || Astro.url.origin).href,
   mainEntity: {
     '@type': 'ItemList',
-    numberOfItems: cards.length,
-    itemListElement: cards.map((card, index) => ({
+    numberOfItems: resolvedCards.length,
+    itemListElement: resolvedCards.map((card, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: card.title,
@@ -70,11 +78,11 @@ const schema = {
   title={title}
   description={description}
   canonical={canonical}
-  image={heroImage}
+  image={resolvedHeroImage}
   structuredData={[schema]}
 >
   <header class="heritage-hub-hero">
-    <img src={heroImage} alt={heroAlt} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
+    <img src={resolvedHeroImage} alt={heroAlt || hubPhotoAlt(heading)} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
     <div class="heritage-hub-hero__shade" aria-hidden="true"></div>
     <div class="heritage-hub-hero__copy">
       <span>{eyebrow}</span>
@@ -90,7 +98,7 @@ const schema = {
       <p>{directoryText}</p>
     </div>
     <div class="heritage-directory__grid">
-      {cards.map((card) => (
+      {resolvedCards.map((card) => (
         <a class="heritage-directory__card" href={card.href}>
           <span class="heritage-directory__image">
             <img src={card.image} alt={card.imageAlt || card.title} width="1200" height="675" loading="lazy" decoding="async" />
