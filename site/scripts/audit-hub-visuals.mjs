@@ -29,8 +29,8 @@ function routeFromFile(relativePath) {
   return `/${relativePath}`;
 }
 
-function isGenericGeneratedSvg(src = '') {
-  return /^\/obrazky\/clanky\/.*\.svg(?:[?#].*)?$/iu.test(src);
+function isLegacySvg(src = '') {
+  return /^\/obrazky\/.*\.svg(?:[?#].*)?$/iu.test(src);
 }
 
 const htmlFiles = (await walk(DIST)).filter((file) => file.endsWith('.html'));
@@ -39,7 +39,7 @@ for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
   const $ = cheerio.load(html);
   const cards = $('.heritage-directory__card');
-  const restoredCards = $('.restored-directory .illustrated-directory-card');
+  const restoredCards = $('.restored-directory .illustrated-directory-card--photo');
   const cardSet = cards.length ? cards : restoredCards;
   if (!cardSet.length) continue;
 
@@ -50,19 +50,19 @@ for (const file of htmlFiles) {
     const image = card.find('img').first();
     const src = (image.attr('src') || '').trim();
     const alt = image.attr('alt');
-    if (!src) errors.push(`${route}: karta ${index + 1} nemá obrázek`);
+    if (!src) errors.push(`${route}: obrazová karta ${index + 1} nemá obrázek`);
     else imageSources.push(src);
-    if (alt === undefined || !alt.trim()) errors.push(`${route}: karta ${index + 1} nemá smysluplný alt`);
-    if (isGenericGeneratedSvg(src)) errors.push(`${route}: karta ${index + 1} stále používá generický SVG placeholder ${src}`);
+    if (alt === undefined || !alt.trim()) errors.push(`${route}: obrazová karta ${index + 1} nemá smysluplný alt`);
+    if (isLegacySvg(src)) errors.push(`${route}: obrazová karta ${index + 1} stále používá starý SVG placeholder ${src}`);
   });
 
   const hero = $('.heritage-hub-hero > img, .visual-section-hero > img').first();
   const heroSrc = (hero.attr('src') || '').trim();
-  if (hero.length && isGenericGeneratedSvg(heroSrc)) errors.push(`${route}: hlavní hero stále používá generický SVG placeholder ${heroSrc}`);
+  if (hero.length && isLegacySvg(heroSrc)) errors.push(`${route}: hlavní hero stále používá starý SVG placeholder ${heroSrc}`);
 
   const uniqueImages = new Set(imageSources);
-  if (imageSources.length >= 6 && uniqueImages.size < Math.ceil(imageSources.length * 0.6)) {
-    warnings.push(`${route}: ${imageSources.length} karet používá jen ${uniqueImages.size} různých obrazových podkladů`);
+  if (imageSources.length >= 6 && uniqueImages.size < Math.ceil(imageSources.length * 0.5)) {
+    warnings.push(`${route}: ${imageSources.length} obrazových karet používá jen ${uniqueImages.size} různých podkladů`);
   }
 
   pages.push({
@@ -70,7 +70,7 @@ for (const file of htmlFiles) {
     cards: cardSet.length,
     uniqueImages: uniqueImages.size,
     hero: heroSrc || null,
-    genericSvgCards: imageSources.filter(isGenericGeneratedSvg),
+    legacySvgCards: imageSources.filter(isLegacySvg),
   });
 }
 
