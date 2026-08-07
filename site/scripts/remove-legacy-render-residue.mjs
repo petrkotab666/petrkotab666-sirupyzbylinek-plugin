@@ -7,6 +7,7 @@ const CONTENT_DIR = path.join(ROOT, 'src/content/articles');
 const BANNED_RESIDUE = [
   'oznaceno tagem',
   'vybaveni a suroviny pro dalsi domaci recept',
+  'souvisejici clanek z teto davky',
 ];
 
 async function filesIn(directory) {
