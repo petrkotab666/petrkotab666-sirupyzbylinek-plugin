@@ -1,16 +1,17 @@
 ---
 import HeritageHubLayout from '../../layouts/HeritageHubLayout.astro';
+import { tinctureHubHeroPhoto, tincturePhotoAltBySlug, tincturePhotoBySlug } from '../../data/tincture-photo-cards';
 
 const cards = [
-  { href: '/tinktury/dychaci-cesty-a-nachlazeni/', title: 'Dýchací cesty a nachlazení', text: 'Jitrocel, mateřídouška, tymián, divizna, prvosenka a další tradiční byliny.', image: '/obrazky/clanky/tinktury--dychaci-cesty-a-nachlazeni.svg', kicker: 'Průdušky a hrdlo' },
-  { href: '/tinktury/tinktury-imunita-dychani/', title: 'Imunita a obranyschopnost', text: 'Echinacea, bez, šípky a další rostliny včetně důležitých omezení.', image: '/obrazky/clanky/tinktury--tinktury-imunita-dychani.svg', kicker: 'Odolnost organismu' },
-  { href: '/tinktury/tinktury-traveni-metabolismus/', title: 'Trávení a metabolismus', text: 'Hořké, aromatické a kořeněné byliny pro domácí maceraci.', image: '/obrazky/clanky/tinktury--tinktury-traveni-metabolismus.svg', kicker: 'Žaludek a zažívání' },
-  { href: '/tinktury/tinktury-spanek-nervy/', title: 'Spánek a nervy', text: 'Meduňka, kozlík, chmel, mučenka a další byliny se zvýšenou opatrností.', image: '/obrazky/clanky/tinktury--tinktury-spanek-nervy.svg', kicker: 'Zklidnění' },
-  { href: '/tinktury/tinktury-srdce-krevni-obeh/', title: 'Srdce a krevní oběh', text: 'Hloh a další silněji působící rostliny s upozorněním na lékové interakce.', image: '/obrazky/clanky/tinktury--tinktury-srdce-krevni-obeh.svg', kicker: 'Cévy a oběh' },
-  { href: '/tinktury/tinktury-klouby-svaly/', title: 'Klouby a svaly', text: 'Zevní i vnitřní formy jsou jasně oddělené podle bezpečnosti použité byliny.', image: '/obrazky/clanky/tinktury--tinktury-klouby-svaly.svg', kicker: 'Pohybový aparát' },
-  { href: '/tinktury/tinktury-mocove-cesty-ledviny/', title: 'Močové cesty a ledviny', text: 'Bříza, zlatobýl, vrbovka a další byliny s omezením délky používání.', image: '/obrazky/clanky/tinktury--tinktury-mocove-cesty-ledviny.svg', kicker: 'Vylučování' },
-  { href: '/tinktury/tinktury-zeny-muzi/', title: 'Ženské a mužské zdraví', text: 'Kontryhel, drmkovec, vrbovka a další tradiční témata bez léčebných slibů.', image: '/obrazky/clanky/tinktury--tinktury-zeny-muzi.svg', kicker: 'Specifická témata' },
-  { href: '/tinktury/tinktury-detoxikace-ocista/', title: 'Detoxikace a očista', text: 'Přehled bylin pro játra a látkovou výměnu s důrazem na rizika a interakce.', image: '/obrazky/clanky/tinktury--tinktury-detoxikace-ocista.svg', kicker: 'Játra a metabolismus' },
+  { href: '/tinktury/dychaci-cesty-a-nachlazeni/', title: 'Dýchací cesty a nachlazení', text: 'Jitrocel, mateřídouška, tymián, divizna, prvosenka a další tradiční byliny.', image: tincturePhotoBySlug['dychaci-cesty-a-nachlazeni'], imageAlt: tincturePhotoAltBySlug['dychaci-cesty-a-nachlazeni'], kicker: 'Průdušky a hrdlo' },
+  { href: '/tinktury/tinktury-imunita-dychani/', title: 'Imunita a obranyschopnost', text: 'Echinacea, bez, šípky a další rostliny včetně důležitých omezení.', image: tincturePhotoBySlug['tinktury-imunita-dychani'], imageAlt: tincturePhotoAltBySlug['tinktury-imunita-dychani'], kicker: 'Odolnost organismu' },
+  { href: '/tinktury/tinktury-traveni-metabolismus/', title: 'Trávení a metabolismus', text: 'Hořké, aromatické a kořeněné byliny pro domácí maceraci.', image: tincturePhotoBySlug['tinktury-traveni-metabolismus'], imageAlt: tincturePhotoAltBySlug['tinktury-traveni-metabolismus'], kicker: 'Žaludek a zažívání' },
+  { href: '/tinktury/tinktury-spanek-nervy/', title: 'Spánek a nervy', text: 'Meduňka, kozlík, chmel, mučenka a další byliny se zvýšenou opatrností.', image: tincturePhotoBySlug['tinktury-spanek-nervy'], imageAlt: tincturePhotoAltBySlug['tinktury-spanek-nervy'], kicker: 'Zklidnění' },
+  { href: '/tinktury/tinktury-srdce-krevni-obeh/', title: 'Srdce a krevní oběh', text: 'Hloh a další silněji působící rostliny s upozorněním na lékové interakce.', image: tincturePhotoBySlug['tinktury-srdce-krevni-obeh'], imageAlt: tincturePhotoAltBySlug['tinktury-srdce-krevni-obeh'], kicker: 'Cévy a oběh' },
+  { href: '/tinktury/tinktury-klouby-svaly/', title: 'Klouby a svaly', text: 'Zevní i vnitřní formy jsou jasně oddělené podle bezpečnosti použité byliny.', image: tincturePhotoBySlug['tinktury-klouby-svaly'], imageAlt: tincturePhotoAltBySlug['tinktury-klouby-svaly'], kicker: 'Pohybový aparát' },
+  { href: '/tinktury/tinktury-mocove-cesty-ledviny/', title: 'Močové cesty a ledviny', text: 'Bříza, zlatobýl, vrbovka a další byliny s omezením délky používání.', image: tincturePhotoBySlug['tinktury-mocove-cesty-ledviny'], imageAlt: tincturePhotoAltBySlug['tinktury-mocove-cesty-ledviny'], kicker: 'Vylučování' },
+  { href: '/tinktury/tinktury-zeny-muzi/', title: 'Ženské a mužské zdraví', text: 'Kontryhel, drmkovec, vrbovka a další tradiční témata bez léčebných slibů.', image: tincturePhotoBySlug['tinktury-zeny-muzi'], imageAlt: tincturePhotoAltBySlug['tinktury-zeny-muzi'], kicker: 'Specifická témata' },
+  { href: '/tinktury/tinktury-detoxikace-ocista/', title: 'Detoxikace a očista', text: 'Přehled bylin pro játra a látkovou výměnu s důrazem na rizika a interakce.', image: tincturePhotoBySlug['tinktury-detoxikace-ocista'], imageAlt: tincturePhotoAltBySlug['tinktury-detoxikace-ocista'], kicker: 'Játra a metabolismus' },
 ] as const;
 ---
 <HeritageHubLayout
@@ -20,8 +21,8 @@ const cards = [
   eyebrow="Macerace a bylinné výluhy"
   heading="Bylinné tinktury"
   intro="Vyberte si tematickou oblast. U každého receptu najdete suroviny, postup, skladování a upozornění na omezení, léky a rizikové skupiny."
-  heroImage="/obrazky/clanky/tinktury.svg"
-  heroAlt="Bylinné tinktury a domácí macerace v lahvičkách"
+  heroImage={tinctureHubHeroPhoto}
+  heroAlt="Bylinky a lahvičky pro domácí výrobu bylinných tinktur"
   cards={cards}
   directoryTitle="Vyberte si oblast bylinných tinktur"
   directoryText="Původní podkategorie jsou znovu přehledně dostupné z jednoho obrazového rozcestníku."
