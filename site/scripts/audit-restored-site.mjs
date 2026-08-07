@@ -46,7 +46,7 @@ const health = await required('domu/prirodni-lekarna/index.html');
 const recipes = await required('osvedcene-recepty/index.html');
 const tinctures = await required('tinktury/index.html');
 
-if (!home.includes('/media/original/home/bylinkova-herna-photo.svg')) errors.push('index.html: karta Bylinkové herny nepoužívá fotografický obrázek');
+if (!home.includes('/media/generated/prirodni-lekarna/bylinkova-herna-photo.webp')) errors.push('index.html: karta Bylinkové herny nepoužívá sjednocený WebP obrázek');
 if ((home.match(/illustrated-directory-card--photo/g) || []).length < 6) errors.push('index.html: všech šest hlavních karet nemá obrazovou grafiku');
 
 const healthCards = (health.match(/illustrated-directory-card--photo/g) || []).length;

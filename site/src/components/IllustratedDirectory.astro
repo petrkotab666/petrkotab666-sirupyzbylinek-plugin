@@ -1,5 +1,6 @@
 ---
 import BotanicalArtwork from './BotanicalArtwork.astro';
+import { hubPhotoAlt, resolveHubImage } from '../lib/hub-photo';
 
 interface DirectoryItem {
   href: string;
@@ -17,9 +18,14 @@ interface Props {
 }
 
 const { items, class: className = '' } = Astro.props;
+const resolvedItems = items.map((item, index) => item.image ? ({
+  ...item,
+  image: resolveHubImage(item.image, item.href, item.title, index),
+  imageAlt: item.imageAlt || hubPhotoAlt(item.title),
+}) : item);
 ---
 <div class:list={['illustrated-directory', className]}>
-  {items.map((item) => (
+  {resolvedItems.map((item) => (
     <a class:list={['illustrated-directory-card', item.image && 'illustrated-directory-card--photo']} href={item.href}>
       <span class="illustrated-directory-art" aria-hidden={!item.image ? 'true' : undefined}>
         {item.image ? (
