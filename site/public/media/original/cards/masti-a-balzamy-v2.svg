@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid slice">
+  <title id="title">Měsíčková mast a bylinné balzámy</title>
+  <desc id="desc">Teplá botanická scéna s otevřenou skleničkou měsíčkové masti, kovovým víčkem, květy měsíčku, bylinkami a kousky včelího vosku.</desc>
+  <defs>
+    <linearGradient id="garden" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#f2e8bf"/>
+      <stop offset="0.35" stop-color="#8eaa6b"/>
+      <stop offset="1" stop-color="#1f4f35"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.24" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#fff8d9" stop-opacity="0.95"/>
+      <stop offset="0.42" stop-color="#f5cb72" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#315f3b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a87342"/>
+      <stop offset="0.5" stop-color="#765031"/>
+      <stop offset="1" stop-color="#3d2f25"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf4" stop-opacity="0.96"/>
+      <stop offset="0.4" stop-color="#e8e2cf" stop-opacity="0.86"/>
+      <stop offset="0.72" stop-color="#b8c5b4" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#728b79" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="salve" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fff2a6"/>
+      <stop offset="0.45" stop-color="#f4bd42"/>
+      <stop offset="1" stop-color="#c8751f"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f5ed"/>
+      <stop offset="0.3" stop-color="#aeb5ae"/>
+      <stop offset="0.62" stop-color="#eef0e9"/>
+      <stop offset="1" stop-color="#747e77"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9cc36f"/>
+      <stop offset="0.55" stop-color="#477d49"/>
+      <stop offset="1" stop-color="#1e5336"/>
+    </linearGradient>
+    <radialGradient id="petal" cx="0.45" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#ffd969"/>
+      <stop offset="0.55" stop-color="#f5a321"/>
+      <stop offset="1" stop-color="#d76516"/>
+    </radialGradient>
+    <radialGradient id="center" cx="0.45" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#7b4a1d"/>
+      <stop offset="1" stop-color="#3e2917"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#122b20" flood-opacity="0.48"/></filter>
+    <filter id="smallShadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#172a20" flood-opacity="0.38"/></filter>
+    <g id="flower">
+      <g fill="url(#petal)">
+        <ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(0)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(30)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(60)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(90)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(120)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(150)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(180)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(210)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(240)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(270)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(300)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(330)"/>
+      </g>
+      <g fill="#f49a1b" opacity="0.86" transform="scale(.72)">
+        <ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(15)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(60)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(105)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(150)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(195)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(240)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(285)"/><ellipse cx="0" cy="-54" rx="16" ry="46" transform="rotate(330)"/>
+      </g>
+      <circle r="29" fill="url(#center)"/><circle r="18" fill="#9a641d"/>
+      <g fill="#e9a72c"><circle cx="-8" cy="-7" r="3.5"/><circle cx="7" cy="-9" r="3.5"/><circle cx="10" cy="5" r="3.5"/><circle cx="-5" cy="9" r="3.5"/><circle cx="-12" cy="2" r="3.5"/><circle cx="1" cy="0" r="3.5"/></g>
+    </g>
+    <g id="leafSprig">
+      <path d="M0 145C8 94 18 49 44 0" fill="none" stroke="#245b3b" stroke-width="8" stroke-linecap="round"/>
+      <path d="M31 32C4 35-15 22-21 1C6-8 31 4 42 22Z" fill="url(#leaf)"/><path d="M20 72C-12 81-36 70-50 47C-20 32 14 44 31 65Z" fill="url(#leaf)"/><path d="M10 116C-21 129-47 121-63 99C-35 79 2 88 22 107Z" fill="url(#leaf)"/><path d="M37 55C57 32 82 29 102 41C89 67 62 78 38 69Z" fill="#5d9255"/><path d="M25 96C49 72 78 71 99 88C83 113 53 123 27 111Z" fill="#477c48"/>
+    </g>
+  </defs>
+  <rect width="900" height="1200" fill="url(#garden)"/><rect width="900" height="1200" fill="url(#sun)"/>
+  <g opacity="0.62" filter="url(#soft)"><circle cx="125" cy="110" r="82" fill="#fffbd9"/><circle cx="320" cy="55" r="48" fill="#f7d982"/><circle cx="760" cy="165" r="94" fill="#d8e8b5"/><circle cx="645" cy="350" r="58" fill="#f6d866"/><circle cx="92" cy="425" r="72" fill="#99bf6f"/><circle cx="805" cy="535" r="70" fill="#6f9f59"/></g>
+  <g opacity="0.56"><use href="#leafSprig" transform="translate(40 240) scale(1.8) rotate(-10)"/><use href="#leafSprig" transform="translate(845 190) scale(-1.65 1.65) rotate(-4)"/><use href="#leafSprig" transform="translate(85 610) scale(1.45) rotate(16)"/><use href="#leafSprig" transform="translate(820 610) scale(-1.45 1.45) rotate(8)"/></g>
+  <path d="M0 770C175 730 328 765 455 748C628 725 731 703 900 742V1200H0Z" fill="url(#wood)"/>
+  <g opacity="0.18" stroke="#f0c28b" stroke-width="5" fill="none"><path d="M-20 850C180 808 350 888 570 842C735 807 855 832 940 818"/><path d="M-30 958C175 915 394 1005 590 947C760 897 850 941 940 911"/><path d="M-20 1080C190 1015 366 1120 610 1059C742 1026 842 1045 930 1024"/></g>
+  <g transform="translate(550 315) rotate(13)" filter="url(#shadow)"><ellipse cx="0" cy="0" rx="198" ry="118" fill="url(#metal)" stroke="#6e756f" stroke-width="10"/><ellipse cx="0" cy="0" rx="162" ry="84" fill="#f4f0dc" stroke="#9ca39b" stroke-width="7"/><ellipse cx="-18" cy="-15" rx="102" ry="43" fill="#ffffff" opacity="0.36"/><path d="M-150 22C-65 72 73 65 151 11" fill="none" stroke="#737c75" stroke-width="5" opacity="0.6"/></g>
+  <g transform="translate(218 360)" filter="url(#shadow)"><ellipse cx="232" cy="443" rx="250" ry="68" fill="#17291f" opacity="0.35"/><path d="M31 90C36 37 78 0 133 0H331C386 0 428 37 433 90L408 374C403 433 359 468 305 468H159C105 468 61 433 56 374Z" fill="url(#glass)" stroke="#66786b" stroke-width="10"/><ellipse cx="232" cy="92" rx="202" ry="77" fill="#eef1e7" stroke="#68786c" stroke-width="10"/><ellipse cx="232" cy="94" rx="174" ry="58" fill="url(#salve)" stroke="#b06b22" stroke-width="6"/><path d="M82 112C128 78 202 67 277 70C324 72 355 80 382 101C324 91 276 96 233 111C187 128 129 128 82 112Z" fill="#fff6b8" opacity="0.65"/><path d="M75 175H389L373 364C369 405 339 428 300 428H164C125 428 95 405 91 364Z" fill="#e7e2cc" opacity="0.48"/><path d="M98 255C136 229 188 216 235 216C288 216 339 231 370 255V350C333 373 282 386 233 386C180 386 132 373 98 351Z" fill="#f7f1d8" opacity="0.88"/><g opacity="0.28" fill="#a36a2f"><circle cx="161" cy="303" r="15"/><circle cx="205" cy="278" r="10"/><circle cx="247" cy="321" r="13"/><circle cx="292" cy="286" r="12"/><circle cx="330" cy="327" r="9"/></g><path d="M83 127C86 242 91 322 111 393" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round" opacity="0.38"/><path d="M368 137C359 256 355 314 339 395" fill="none" stroke="#415e4c" stroke-width="13" stroke-linecap="round" opacity="0.18"/></g>
+  <g filter="url(#smallShadow)"><use href="#flower" transform="translate(170 750) scale(1.36) rotate(-12)"/><use href="#flower" transform="translate(734 705) scale(1.18) rotate(10)"/><use href="#flower" transform="translate(95 925) scale(.82) rotate(-22)"/><use href="#flower" transform="translate(790 930) scale(.92) rotate(20)"/><use href="#flower" transform="translate(628 955) scale(.7) rotate(-8)"/></g>
+  <g opacity="0.92"><use href="#leafSprig" transform="translate(130 780) scale(1.18) rotate(-66)"/><use href="#leafSprig" transform="translate(745 750) scale(-1.12 1.12) rotate(-63)"/><use href="#leafSprig" transform="translate(370 940) scale(.92) rotate(76)"/></g>
+  <g transform="translate(320 910)" filter="url(#smallShadow)"><path d="M0 60L89 0L161 56L77 116Z" fill="#efd17a" stroke="#b48a38" stroke-width="6"/><path d="M89 0L172 25L161 56L77 116L75 84Z" fill="#dcb851"/><circle cx="53" cy="59" r="6" fill="#ba8a2d" opacity=".62"/><circle cx="103" cy="57" r="5" fill="#ba8a2d" opacity=".62"/><circle cx="79" cy="82" r="5" fill="#ba8a2d" opacity=".62"/></g>
+  <g transform="translate(500 947) rotate(-8)" filter="url(#smallShadow)"><path d="M0 52L70 0L137 42L72 96Z" fill="#f2d57d" stroke="#b88d39" stroke-width="5"/><path d="M70 0L146 24L137 42L72 96L69 70Z" fill="#d7b44d"/><circle cx="50" cy="48" r="5" fill="#b9892c" opacity=".58"/><circle cx="90" cy="43" r="5" fill="#b9892c" opacity=".58"/></g>
+  <g transform="translate(645 835)" filter="url(#smallShadow)"><ellipse cx="72" cy="106" rx="90" ry="25" fill="#1b2b22" opacity="0.35"/><path d="M0 20H144L132 96C128 119 112 132 89 132H55C32 132 16 119 12 96Z" fill="#f6f1df" stroke="#6f7a72" stroke-width="7"/><ellipse cx="72" cy="20" rx="72" ry="24" fill="#c6cfc6" stroke="#6f7a72" stroke-width="7"/><ellipse cx="72" cy="23" rx="55" ry="14" fill="#e7ab38"/></g>
+  <path d="M0 1060C180 1002 328 1082 470 1056C654 1022 748 1005 900 1042V1200H0Z" fill="#153727" opacity="0.34"/>
+  <rect y="0" width="900" height="1200" fill="none" stroke="#f3d992" stroke-width="9" opacity="0.22"/>
+</svg>
