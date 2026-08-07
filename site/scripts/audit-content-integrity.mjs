@@ -30,6 +30,7 @@ const BANNED_VISIBLE_PATTERNS = [
 ];
 
 const EXEMPT_PATHS = /(?:^|\/)(?:404|admin|kontakt|o-projektu|ochrana-osobnich-udaju|zasady-cookies|vylouceni-odpovednosti|obchodni-podminky)(?:\/|\.html|$)/iu;
+const MONETIZATION_SELECTOR = '.context-ads, .product-feed, [data-inline-article-ad], .article-inline-ad';
 
 async function walk(directory) {
   const result = [];
@@ -87,6 +88,12 @@ function isSubstantivePage($, relativePath) {
   return $('article.article-shell, main .section-wrap, main .heritage-hub-hero, main .visual-section-hero, main [data-game], main .game-launch-card').length > 0;
 }
 
+function withoutMonetization(selection) {
+  const clone = selection.clone();
+  clone.find(MONETIZATION_SELECTOR).remove();
+  return clone;
+}
+
 function verifyMagic(relativePath, bytes) {
   const extension = path.extname(relativePath).toLowerCase();
   if (extension === '.webp') return bytes.subarray(0, 4).toString('ascii') === 'RIFF' && bytes.subarray(8, 12).toString('ascii') === 'WEBP';
@@ -112,14 +119,15 @@ for (const file of htmlFiles) {
   const route = routeFromFile(relativePath);
   const html = await readFile(file, 'utf8');
   const $ = cheerio.load(html);
-  const visible = $('main').text().replace(/\s+/gu, ' ').trim();
+  const editorialMain = withoutMonetization($('main'));
+  const visible = editorialMain.text().replace(/\s+/gu, ' ').trim();
   checkedPages += 1;
 
   for (const pattern of BANNED_VISIBLE_PATTERNS) {
     if (pattern.test(visible)) errors.push(`${relativePath}: viditelný redakční balast ${pattern}`);
   }
 
-  const articleContent = $('.article-content');
+  const articleContent = withoutMonetization($('.article-content'));
   if (articleContent.length) {
     if (articleContent.find('a[href*="ehub.cz"], a[href*="a_box="]').length) {
       errors.push(`${relativePath}: affiliate odkaz je vložen přímo do textu článku místo reklamního modulu`);
