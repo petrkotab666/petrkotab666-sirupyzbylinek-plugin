@@ -1,0 +1,68 @@
+name: Diagnose content integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/diagnose-content-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install dependencies
+        working-directory: site
+        run: npm install --no-audit --no-fund
+      - name: Prepare generated assets and content
+        working-directory: site
+        run: npm run prebuild
+      - name: Build Astro site
+        working-directory: site
+        run: npx astro build
+      - name: Prepare built output for integrity audit
+        working-directory: site
+        run: |
+          node scripts/generate-legacy-redirects.mjs
+          node scripts/deduplicate-built-article-images.mjs
+          node scripts/patch-site-audit.mjs
+      - name: Run content integrity audit and preserve report
+        id: integrity
+        working-directory: site
+        shell: bash
+        run: |
+          set +e
+          node scripts/audit-content-integrity.mjs > content-integrity.log 2>&1
+          status=$?
+          cat content-integrity.log
+          printf '%s\n' "$status" > content-integrity-exit-code.txt
+          exit 0
+      - name: Upload integrity diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-integrity-diagnostics
+          path: |
+            site/content-integrity.log
+            site/content-integrity-exit-code.txt
+            site/dist/site-audit.json
+          if-no-files-found: error
+          retention-days: 1
+      - name: Fail when integrity audit failed
+        working-directory: site
+        shell: bash
+        run: |
+          status="$(cat content-integrity-exit-code.txt)"
+          if [ "$status" != "0" ]; then
+            echo "Content integrity audit failed; diagnostics artifact was uploaded."
+            exit "$status"
+          fi
