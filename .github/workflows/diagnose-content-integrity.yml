@@ -7,7 +7,7 @@ on:
       - '.github/workflows/diagnose-content-integrity.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   diagnose:
     runs-on: ubuntu-latest
@@ -37,32 +37,35 @@ jobs:
           node scripts/deduplicate-built-article-images.mjs
           node scripts/patch-site-audit.mjs
       - name: Run content integrity audit and preserve report
-        id: integrity
         working-directory: site
         shell: bash
         run: |
           set +e
-          node scripts/audit-content-integrity.mjs > content-integrity.log 2>&1
+          node scripts/audit-content-integrity.mjs > /tmp/content-integrity.log 2>&1
           status=$?
-          cat content-integrity.log
-          printf '%s\n' "$status" > content-integrity-exit-code.txt
+          cat /tmp/content-integrity.log
+          printf '%s\n' "$status" > /tmp/content-integrity-exit-code.txt
           exit 0
-      - name: Upload integrity diagnostics
-        uses: actions/upload-artifact@v4
-        with:
-          name: content-integrity-diagnostics
-          path: |
-            site/content-integrity.log
-            site/content-integrity-exit-code.txt
-            site/dist/site-audit.json
-          if-no-files-found: error
-          retention-days: 1
-      - name: Fail when integrity audit failed
-        working-directory: site
+      - name: Persist diagnostics in repository
         shell: bash
         run: |
-          status="$(cat content-integrity-exit-code.txt)"
+          set -euo pipefail
+          git config user.name 'sirupyzbylinek-diagnostic-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git pull --rebase origin main
+          mkdir -p .diagnostics
+          cp /tmp/content-integrity.log .diagnostics/content-integrity.log
+          cp /tmp/content-integrity-exit-code.txt .diagnostics/content-integrity-exit-code.txt
+          git add .diagnostics/content-integrity.log .diagnostics/content-integrity-exit-code.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'Uložit diagnostiku obsahového auditu [skip ci]'
+            git push origin HEAD:main
+          fi
+      - name: Fail when integrity audit failed
+        shell: bash
+        run: |
+          status="$(cat /tmp/content-integrity-exit-code.txt)"
           if [ "$status" != "0" ]; then
-            echo "Content integrity audit failed; diagnostics artifact was uploaded."
+            echo "Content integrity audit failed; diagnostics were persisted in the repository."
             exit "$status"
           fi
