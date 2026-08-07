@@ -1,4 +1,4 @@
-import { readFile, readdir, stat } from 'node:fs/promises';
+import { readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import * as cheerio from 'cheerio';
 
@@ -105,6 +105,17 @@ function verifyMagic(relativePath, bytes) {
   return true;
 }
 
+function errorType(error) {
+  if (error.includes('viditelný redakční balast')) return 'editorial-filler';
+  if (error.includes('affiliate odkaz je vložen')) return 'raw-affiliate';
+  if (error.includes('samostatná cena')) return 'raw-price';
+  if (error.includes('Stejný dlouhý odstavec')) return 'duplicate-copy';
+  if (error.includes('chybí lokální obrázek') || error.includes('obrázek je prázdný') || error.includes('neodpovídá příponě') || error.includes('obrázek bez src')) return 'image';
+  if (error.includes('nemá alt')) return 'image-alt';
+  if (error.includes('reklamní') || error.includes('produktový') || error.includes('plnohodnotný reklamní blok')) return 'monetization';
+  return 'other';
+}
+
 const files = await walk(DIST);
 const generated = new Set(files.map(relative));
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
@@ -202,9 +213,7 @@ for (const relativePath of checkedImages) {
 }
 
 for (const { text, pages } of repeatedParagraphs.values()) {
-  if (pages.size >= 4) {
-    errors.push(`Stejný dlouhý odstavec se opakuje na ${pages.size} článcích: ${JSON.stringify(text.slice(0, 180))}`);
-  }
+  if (pages.size >= 4) errors.push(`Stejný dlouhý odstavec se opakuje na ${pages.size} článcích: ${JSON.stringify(text.slice(0, 180))}`);
 }
 
 const home = cheerio.load(await readFile(path.join(DIST, 'index.html'), 'utf8'));
@@ -214,9 +223,36 @@ if (gameImage !== '/media/generated/prirodni-lekarna/bylinkova-herna-photo.webp'
   errors.push(`Úvodní dlaždice Bylinková herna používá chybný obrázek ${JSON.stringify(gameImage)}`);
 }
 
+const counts = errors.reduce((result, error) => {
+  const type = errorType(error);
+  result[type] = (result[type] || 0) + 1;
+  return result;
+}, {});
+const report = {
+  generatedAt: new Date().toISOString(),
+  checkedPages,
+  imageCount,
+  uniqueLocalImages: checkedImages.size,
+  monetizedPages,
+  errorCount: errors.length,
+  warningCount: warnings.length,
+  errorTypes: counts,
+  errors,
+  warnings,
+};
+await writeFile(path.join(DIST, 'content-integrity-audit.json'), JSON.stringify(report, null, 2), 'utf8');
+
 console.log(`Integrity audit: ${checkedPages} HTML pages, ${imageCount} image uses, ${checkedImages.size} unique local images, ${monetizedPages} monetized substantive pages, ${errors.length} errors, ${warnings.length} warnings.`);
-if (warnings.length) warnings.forEach((warning) => console.warn(`WARN ${warning}`));
+if (Object.keys(counts).length) console.log(`Integrity error types: ${JSON.stringify(counts)}`);
+if (warnings.length) warnings.slice(0, 40).forEach((warning) => console.warn(`WARN ${warning}`));
 if (errors.length) {
-  errors.slice(0, 200).forEach((error) => console.error(`ERROR ${error}`));
+  const printed = new Map();
+  for (const error of errors) {
+    const type = errorType(error);
+    const seen = printed.get(type) || 0;
+    if (seen >= 8) continue;
+    printed.set(type, seen + 1);
+    console.error(`ERROR [${type}] ${error}`);
+  }
   process.exitCode = 1;
 }
