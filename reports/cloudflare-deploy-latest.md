@@ -1,8 +1,8 @@
 # Poslední nasazení Sirupy z bylinek
 
 - Výsledek: **failure**
-- Commit: `029722257e6ee5c48c798b57442e04e27baa2efe`
+- Commit: `c18db3f29475bb17a4e50cf169864c4e6e5d9654`
 - Větev: `main`
-- Run: 190 (`31190130663`)
-- Dokončeno: 2026-08-07T14:57:13Z
+- Run: 191 (`31190268128`)
+- Dokončeno: 2026-08-07T14:58:52Z
 - Kontrola WebP Přírodní lékárny: povinná součást deploy workflow
