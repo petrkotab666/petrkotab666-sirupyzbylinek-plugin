@@ -3,6 +3,7 @@ import HeritageHubLayout from '../../../layouts/HeritageHubLayout.astro';
 import { getPublishedArticles } from '../../../lib/articles';
 import { articleHubCards, normalizeForHub } from '../../../lib/hub-cards';
 import { tinctureHubCategories } from '../../../data/restored-hub-categories';
+import { tincturePhotoAltBySlug, tincturePhotoBySlug, type TincturePhotoSlug } from '../../../data/tincture-photo-cards';
 
 export function getStaticPaths() {
   return tinctureHubCategories.map((category) => ({ params: { category: category.slug }, props: { categorySlug: category.slug } }));
@@ -10,6 +11,9 @@ export function getStaticPaths() {
 
 const category = tinctureHubCategories.find((item) => item.slug === Astro.props.categorySlug);
 if (!category) throw new Error(`Neznámá kategorie tinktur: ${Astro.props.categorySlug}`);
+const photoSlug = category.slug as TincturePhotoSlug;
+const heroImage = tincturePhotoBySlug[photoSlug] || category.image;
+const heroAlt = tincturePhotoAltBySlug[photoSlug] || category.title;
 const allArticles = await getPublishedArticles();
 const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez/u;
 const entries = allArticles.filter((entry) => {
@@ -26,8 +30,8 @@ const cards = articleHubCards(entries, 'Bylinná tinktura');
   eyebrow={category.eyebrow}
   heading={category.title}
   intro="Vyberte konkrétní bylinu nebo recept. Tinktury obsahují alkohol, mohou ovlivňovat léky a nejsou vhodné pro každého."
-  heroImage={category.image}
-  heroAlt={category.title}
+  heroImage={heroImage}
+  heroAlt={heroAlt}
   cards={cards}
   directoryTitle="Vyberte konkrétní tinkturu"
   directoryText={`V této oblasti je propojeno ${cards.length} samostatných receptů a bezpečnostních přehledů.`}
