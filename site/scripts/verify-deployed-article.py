@@ -43,6 +43,40 @@ def image_sources(markup: str) -> list[str]:
     return re.findall(r"<img\b[^>]*\bsrc=[\"']([^\"']+)[\"'][^>]*>", markup, re.I)
 
 
+def classed_anchor_image_sources(markup: str, token: str) -> list[str]:
+    sources: list[str] = []
+    for match in re.finditer(r"<a\b([^>]*)>([\s\S]*?)</a>", markup, re.I):
+        attributes, body = match.groups()
+        class_match = re.search(r"\bclass=[\"']([^\"']*)[\"']", attributes, re.I)
+        if not class_match or token not in class_match.group(1).split():
+            continue
+        source_match = re.search(r"<img\b[^>]*\bsrc=[\"']([^\"']+)[\"'][^>]*>", body, re.I)
+        if source_match:
+            sources.append(source_match.group(1))
+    return sources
+
+
+def div_content_by_class(markup: str, token: str) -> str:
+    opening = None
+    for match in re.finditer(r"<div\b([^>]*)>", markup, re.I):
+        class_match = re.search(r"\bclass=[\"']([^\"']*)[\"']", match.group(1), re.I)
+        if class_match and token in class_match.group(1).split():
+            opening = match
+            break
+    if opening is None:
+        return ""
+
+    depth = 1
+    for tag in re.finditer(r"</?div\b[^>]*>", markup[opening.end():], re.I):
+        if tag.group(0).lstrip().startswith("</"):
+            depth -= 1
+            if depth == 0:
+                return markup[opening.end():opening.end() + tag.start()]
+        else:
+            depth += 1
+    return ""
+
+
 def require(markup: str, marker: str, label: str, errors: list[str]) -> None:
     if marker not in markup:
         errors.append(f"missing {label}: {marker}")
@@ -101,12 +135,15 @@ def main() -> int:
     health_cards = class_count(health, "illustrated-directory-card--photo")
     if health_cards != 9:
         errors.append(f"natural pharmacy contains {health_cards} restored main cards instead of 9")
-    health_images = [src for src in image_sources(health) if "/media/generated/prirodni-lekarna/" in src]
+    health_images = classed_anchor_image_sources(health, "illustrated-directory-card--photo")
     if len(health_images) != 9:
-        errors.append(f"natural pharmacy contains {len(health_images)} generated tile images instead of 9")
-    bad_health = [src for src in health_images if not src.split("?", 1)[0].lower().endswith(".webp")]
-    if bad_health:
-        errors.append("natural-pharmacy tile images are not all WebP: " + ", ".join(bad_health))
+        errors.append(f"natural pharmacy contains {len(health_images)} main-card images instead of 9")
+    bad_health_paths = [src for src in health_images if "/media/generated/prirodni-lekarna/" not in src]
+    if bad_health_paths:
+        errors.append("natural-pharmacy main cards do not all use generated photographic assets: " + ", ".join(bad_health_paths))
+    bad_health_formats = [src for src in health_images if not src.split("?", 1)[0].lower().endswith(".webp")]
+    if bad_health_formats:
+        errors.append("natural-pharmacy main-card images are not all WebP: " + ", ".join(bad_health_formats))
     require(health, "Bylinky přehledně a bezpečně", "new natural-pharmacy heading", errors)
     for href in (
         "/prirodni-pomocnici-pro-imunitu/",
@@ -139,12 +176,13 @@ def main() -> int:
         errors.append("rewritten article is missing contextual advertising")
     if class_count(clean_article, "product-feed") < 1:
         errors.append("rewritten article is missing product feed")
-    content_match = re.search(r'class=["\'][^"\']*article-content[^"\']*["\'][^>]*>([\s\S]*?)</div>', clean_article, re.I)
-    content = content_match.group(1) if content_match else ""
+    content = div_content_by_class(clean_article, "article-editorial-body")
+    if not content:
+        errors.append("rewritten article is missing the editorial-content wrapper")
     if "click.php" in content:
-        errors.append("raw affiliate links remain inside rewritten article content")
+        errors.append("raw affiliate links remain inside rewritten editorial content")
     if re.search(r">\s*\d[\d\s.,]*\s*Kč\s*<", content, re.I):
-        errors.append("standalone legacy prices remain inside rewritten article content")
+        errors.append("standalone legacy prices remain inside rewritten editorial content")
 
     visible = "\n".join(visible_page_text(markup) for markup in (article, home, health, recipes, clean_article)).casefold()
     for phrase in BANNED_VISIBLE_PHRASES:
