@@ -38,10 +38,9 @@ for (const file of htmlFiles) {
   const relativePath = relative(file);
   const html = await readFile(file, 'utf8');
   const $ = cheerio.load(html);
-  const cards = $('.heritage-directory__card');
-  const restoredCards = $('.restored-directory .illustrated-directory-card--photo');
-  const cardSet = cards.length ? cards : restoredCards;
-  if (!cardSet.length) continue;
+  const cardSet = $('.heritage-directory__card, .restored-directory .illustrated-directory-card--photo, .preparation-card, .preparation-category-card');
+  const heroSet = $('.heritage-hub-hero > img, .visual-section-hero > img, .preparation-category-hero > img, .preparations-hero > img');
+  if (!cardSet.length && !heroSet.length) continue;
 
   const route = routeFromFile(relativePath);
   const imageSources = [];
@@ -56,9 +55,12 @@ for (const file of htmlFiles) {
     if (isLegacySvg(src)) errors.push(`${route}: obrazová karta ${index + 1} stále používá starý SVG placeholder ${src}`);
   });
 
-  const hero = $('.heritage-hub-hero > img, .visual-section-hero > img').first();
-  const heroSrc = (hero.attr('src') || '').trim();
-  if (hero.length && isLegacySvg(heroSrc)) errors.push(`${route}: hlavní hero stále používá starý SVG placeholder ${heroSrc}`);
+  const heroSources = [];
+  heroSet.each((index, element) => {
+    const src = ($(element).attr('src') || '').trim();
+    if (src) heroSources.push(src);
+    if (isLegacySvg(src)) errors.push(`${route}: hlavní hero ${index + 1} stále používá starý SVG placeholder ${src}`);
+  });
 
   const uniqueImages = new Set(imageSources);
   if (imageSources.length >= 6 && uniqueImages.size < Math.ceil(imageSources.length * 0.5)) {
@@ -69,8 +71,9 @@ for (const file of htmlFiles) {
     route,
     cards: cardSet.length,
     uniqueImages: uniqueImages.size,
-    hero: heroSrc || null,
+    heroes: heroSources,
     legacySvgCards: imageSources.filter(isLegacySvg),
+    legacySvgHeroes: heroSources.filter(isLegacySvg),
   });
 }
 
@@ -87,7 +90,7 @@ await writeFile(
   [
     '# Audit obrazových rozcestníků',
     '',
-    `- Rozcestníků: ${pages.length}`,
+    `- Rozcestníků a receptových přehledů: ${pages.length}`,
     `- Chyb: ${errors.length}`,
     `- Varování: ${warnings.length}`,
     '',
@@ -100,7 +103,7 @@ await writeFile(
   'utf8',
 );
 
-console.log(`Hub visual audit: ${pages.length} hub pages, ${errors.length} errors, ${warnings.length} warnings.`);
+console.log(`Hub visual audit: ${pages.length} hub/receptových pages, ${errors.length} errors, ${warnings.length} warnings.`);
 if (errors.length) {
   errors.slice(0, 200).forEach((error) => console.error(`ERROR ${error}`));
   process.exitCode = 1;
