@@ -9,12 +9,14 @@ import {
   preparationPath,
   type PreparationCategory,
 } from '../data/herbal-preparations';
+import { hubPhotoAlt, resolveHubImage } from '../lib/hub-photo';
 
 interface Props { category: PreparationCategory }
 const { category } = Astro.props;
 const meta = preparationCategories[category];
 const recipes = preparationsByCategory(category);
-const image = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : '/obrazky/bylinne-pripravky-hero.svg';
+const legacyImage = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : '/obrazky/bylinne-pripravky-hero.svg';
+const image = resolveHubImage(legacyImage, meta.path, meta.title);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -47,7 +49,7 @@ const schema = {
       <p>{meta.description}</p>
       <span>{recipes.length} podrobných receptů</span>
     </div>
-    <img src={image} alt={`Tematická ilustrace pro kategorii ${meta.title}`} width="1200" height="675" loading="eager" fetchpriority="high" />
+    <img src={image} alt={hubPhotoAlt(meta.title)} width="1200" height="675" loading="eager" fetchpriority="high" />
   </section>
 
   <section class="category-recipe-section">
