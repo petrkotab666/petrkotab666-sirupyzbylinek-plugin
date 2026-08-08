@@ -1,21 +1,24 @@
 ---
 import type { HerbalPreparation } from '../data/herbal-preparations';
 import { preparationCategories, preparationPath } from '../data/herbal-preparations';
+import { hubPhotoAlt, resolveHubImage } from '../lib/hub-photo';
 
 interface Props { recipe: HerbalPreparation }
 const { recipe } = Astro.props;
 const meta = preparationCategories[recipe.category];
+const href = preparationPath(recipe);
+const image = resolveHubImage(`/obrazky/recepty/${recipe.slug}.svg`, href, `${meta.title} ${recipe.title}`);
 ---
 <article class="preparation-card">
-  <a class="preparation-card-image" href={preparationPath(recipe)} aria-label={`Otevřít recept ${recipe.title}`}>
-    <img src={`/obrazky/recepty/${recipe.slug}.svg`} alt={recipe.title} width="1200" height="675" loading="lazy" decoding="async" />
+  <a class="preparation-card-image" href={href} aria-label={`Otevřít recept ${recipe.title}`}>
+    <img src={image} alt={hubPhotoAlt(recipe.title)} width="1200" height="675" loading="lazy" decoding="async" />
   </a>
   <div class="preparation-card-body">
     <div class="preparation-card-meta"><span>{meta.shortTitle}</span><span>{recipe.prepMinutes} min</span></div>
-    <h3><a href={preparationPath(recipe)}>{recipe.title}</a></h3>
+    <h3><a href={href}>{recipe.title}</a></h3>
     <p>{recipe.description}</p>
     <div class="preparation-card-tags">{recipe.tags.slice(0, 3).map((tag) => <span>{tag}</span>)}</div>
-    <a class="preparation-card-cta" href={preparationPath(recipe)}>Zobrazit recept <span aria-hidden="true">→</span></a>
+    <a class="preparation-card-cta" href={href}>Zobrazit recept <span aria-hidden="true">→</span></a>
   </div>
 </article>
 
