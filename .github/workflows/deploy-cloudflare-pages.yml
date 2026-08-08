@@ -38,7 +38,7 @@ jobs:
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "Repository secret CLOUDFLARE_API_TOKEN is not configured."; exit 1; fi
       - name: Install dependencies
         working-directory: site
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Prepare generated assets and content
         working-directory: site
         run: npm run prebuild
@@ -51,6 +51,9 @@ jobs:
       - name: Deduplicate built article images
         working-directory: site
         run: node scripts/deduplicate-built-article-images.mjs
+      - name: Strip built editorial residue
+        working-directory: site
+        run: node scripts/strip-built-editorial-residue.mjs
       - name: Patch site audit
         working-directory: site
         run: node scripts/patch-site-audit.mjs
@@ -69,6 +72,9 @@ jobs:
       - name: Audit restored site
         working-directory: site
         run: node scripts/audit-restored-site.mjs
+      - name: Audit hub visuals
+        working-directory: site
+        run: node scripts/audit-hub-visuals.mjs
       - name: Audit content integrity
         working-directory: site
         run: node scripts/audit-content-integrity.mjs
