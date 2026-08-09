@@ -118,7 +118,7 @@ const selectedKeys = placement === 'secondary'
   : (primaryByTopic[topic] || primaryByTopic.bylinky);
 const selected = selectedKeys.map((key) => campaigns[key]);
 ---
-<aside class:list={['context-ads', `context-ads--${placement}`]} data-ad-placement={placement} aria-label="Tematické komerční nabídky">
+<aside class="context-ads" data-ad-placement={placement} aria-label="Tematické komerční nabídky">
   <div class="ad-heading">
     <span>Reklama</span>
     <strong>{heading}</strong>

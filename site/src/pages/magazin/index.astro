@@ -49,7 +49,7 @@ const itemListSchema = {
   </section>
 
   <section class="section-wrap magazine-list">
-    <div class="articles-grid">{pageArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
+    <div class="articles-grid">{pageArticles.map((entry, index) => <ArticleCard entry={entry} position={index} />)}</div>
     <Pagination currentPage={1} totalPages={totalPages} />
   </section>
 

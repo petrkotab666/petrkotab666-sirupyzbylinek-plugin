@@ -1,8 +1,8 @@
 sirupyzbylinek deployment
-version: 2026-08-07T17:23:00+02:00
-commit-purpose: oprava obrazku Masti a balzamy, WebP generovani a uplna produkcni verifikace
+version: 2026-08-09T09:14:00+02:00
+commit-purpose: celowebova fotograficka verze
 expected-cultivation-category: Pěstování bylinek
-expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
+expected-cultivation-image-format: photo-raster
 expected-restored-natural-pharmacy-cards: 9
 expected-natural-pharmacy-image-format: webp
 expected-natural-pharmacy-sleep-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp
@@ -10,6 +10,10 @@ expected-restored-recipe-cards: 10
 expected-recipe-masti-image: /media/generated/prirodni-lekarna/masti-a-balzamy-v2.webp
 expected-home-photographic-cards: 6
 expected-home-herb-game-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp
+expected-generated-photo-variants: 16
+expected-hub-grid-duplicate-images: 0
+expected-hub-card-svg-images: 0
+expected-article-hero-svg-images: 0
 expected-editorial-integrity-audit: enabled
 expected-raw-affiliate-links-in-article-content: 0
 expected-broken-local-images: 0
@@ -19,4 +23,4 @@ expected-game-count: 3
 expected-deal-card-count: 12
 expected-herb-master-engine: arcade-canvas-600x500
 expected-herb-master-levels: 10
-expected-herb-master-boss: Cerny-kotel
+expected-herb-master-boss: final-level

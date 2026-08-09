@@ -10,6 +10,12 @@ const BANNED_RESIDUE = [
   'souvisejici clanek z teto davky',
 ];
 
+const INLINE_RESIDUE_PATTERNS = [
+  /\s*souvisej[ií]c[ií]\s+[cč]l[aá]nek\s+z\s+t[eé]to\s+d[aá]vky\s*/giu,
+  /\s*ozna[cč]eno\s+tagem\s*/giu,
+  /\s*vybaven[ií]\s+a\s+suroviny\s+pro\s+dal[sš][ií]\s+dom[aá]c[ií]\s+recept\s*/giu,
+];
+
 async function filesIn(directory) {
   const result = [];
   for (const name of await readdir(directory)) {
@@ -49,6 +55,12 @@ function stripMarkdown(value = '') {
     .trim();
 }
 
+function removeInlineResidue(value = '') {
+  let output = value;
+  for (const pattern of INLINE_RESIDUE_PATTERNS) output = output.replace(pattern, ' ');
+  return output.replace(/[ \t]{2,}/gu, ' ');
+}
+
 function isRawAffiliate(value = '') {
   return /ehub\.cz\/system\/scripts\/click\.php|[?&]a_box=/iu.test(value);
 }
@@ -64,10 +76,12 @@ function isBannedResidue(value = '') {
 }
 
 function cleanBlock(block) {
-  if (isRawAffiliate(block) || isBannedResidue(block)) return '';
+  const withoutInlineResidue = removeInlineResidue(block);
+  if (isRawAffiliate(withoutInlineResidue) || isBannedResidue(withoutInlineResidue)) return '';
 
-  const cleanedLines = block
+  const cleanedLines = withoutInlineResidue
     .split('\n')
+    .map((line) => removeInlineResidue(line))
     .filter((line) => {
       const plain = normalize(stripMarkdown(line));
       if (!plain) return true;
@@ -81,14 +95,16 @@ function cleanBlock(block) {
 }
 
 function cleanBody(body) {
-  return body
-    .replace(/\r\n/g, '\n')
-    .split(/\n\s*\n/u)
-    .map((block) => cleanBlock(block.trim()))
-    .filter(Boolean)
-    .join('\n\n')
-    .replace(/\n{3,}/gu, '\n\n')
-    .trim();
+  return removeInlineResidue(
+    body
+      .replace(/\r\n/g, '\n')
+      .split(/\n\s*\n/u)
+      .map((block) => cleanBlock(block.trim()))
+      .filter(Boolean)
+      .join('\n\n')
+      .replace(/\n{3,}/gu, '\n\n')
+      .trim(),
+  );
 }
 
 const files = await filesIn(CONTENT_DIR);

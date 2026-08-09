@@ -16,8 +16,8 @@ const cards = [
     href: '/domu/co-sbirat/',
     title: 'Co sbírat',
     text: 'Květy, listy, natě, kořeny, pupeny, plody a semena podle druhu i ročního období.',
-    image: '/media/original/sber/co-sbirat.webp',
-    imageAlt: 'Přehled bylinek a částí rostlin vhodných ke sběru',
+    image: '/media/generated/sber/co-sbirat.webp',
+    imageAlt: 'Botanický přehled květů, listů, plodů, pupenů, semen a kořenů vhodných ke sběru',
     kicker: 'Určování rostlin',
   },
   {
@@ -86,7 +86,7 @@ const collectingArticles = allArticles
       <article><strong>Pravidlo jedné třetiny</strong><p>Vezměte jen malou část porostu a dost rostlin ponechte přírodě, opylovačům a dalšímu růstu.</p></article>
       <article><strong>Suché počasí</strong><p>Sbírejte po oschnutí rosy. Mokré byliny se snadno zapaří a hůře se bezpečně suší.</p></article>
       <article><strong>Košík nebo plátno</strong><p>Neprodyšný igelit podporuje zapaření. Použijte košík, papírový sáček nebo plátěnou tašku.</p></article>
-      <article><strong>Jisté určení</strong><p>Při pochybnostech rostlinu ponechte na místě. Hra ani jediná fotografie nenahrazují kvalitní atlas.</p></article>
+      <article><strong>Jisté určení</strong><p>Při pochybnostech rostlinu ponechte na místě. Hra ani jediná fotografie nenahrazuje kvalitní atlas.</p></article>
       <article><strong>Rychlé zpracování</strong><p>Po návratu bylinky roztřiďte, odstraňte poškozené části a začněte je sušit nebo zpracovávat.</p></article>
     </div>
   </section>
@@ -94,7 +94,7 @@ const collectingArticles = allArticles
   {collectingArticles.length > 0 && (
     <section class="section-wrap section-articles">
       <div class="section-heading centered-heading"><span>Další návody</span><h2>Články o sběru a zpracování</h2></div>
-      <div class="articles-grid">{collectingArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
+      <div class="articles-grid">{collectingArticles.map((entry, index) => <ArticleCard entry={entry} position={index} />)}</div>
     </section>
   )}
 </HeritageHubLayout>

@@ -9,22 +9,25 @@ import {
   preparationsByCategory,
   type PreparationCategory,
 } from '../../data/herbal-preparations';
+import { hubPhotoAlt } from '../../lib/hub-photo';
+import { preparationPhoto } from '../../lib/preparation-photo';
 
 const categories = Object.entries(preparationCategories) as Array<[PreparationCategory, (typeof preparationCategories)[PreparationCategory]]>;
 const featured = herbalPreparations.filter((recipe) => recipe.featured).slice(0, 9);
-const heroImage = '/obrazky/bylinne-pripravky-hero.svg';
+const pagePath = '/bylinne-pripravky/';
+const heroImage = preparationPhoto(`${pagePath}#hero`, 0);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Bylinné přípravky a domácí recepty',
   description: 'Rozcestník čajů, koupelí, mastí, olejů, octů, obkladů a kuchyňských bylinných výrobků.',
-  url: new URL('/bylinne-pripravky/', Astro.site || Astro.url.origin).href,
+  url: new URL(pagePath, Astro.site || Astro.url.origin).href,
 };
 ---
 <BaseLayout
   title="Bylinné přípravky – čaje, koupele, masti, oleje a další recepty"
   description="Kompletní rozcestník domácích bylinných přípravků s přesnými postupy, skladováním a bezpečnostními upozorněními."
-  canonical="/bylinne-pripravky/"
+  canonical={pagePath}
   image={heroImage}
   structuredData={[schema]}
 >
@@ -35,18 +38,18 @@ const schema = {
       <p>Čaje, koupele, masti, balzámy, olejové maceráty, octy, oxymely, obklady i kuchyňské výrobky. Každý recept uvádí přesný postup, skladování a omezení.</p>
       <a href="#kategorie">Vybrat kategorii <b aria-hidden="true">↓</b></a>
     </div>
-    <img src={heroImage} alt="Čaj, mast, lahvička a bylinky jako přehled domácích bylinných přípravků" width="1200" height="900" loading="eager" />
+    <img src={heroImage} alt={hubPhotoAlt('Bylinné přípravky a domácí recepty')} width="1200" height="900" loading="eager" />
   </section>
 
   <section id="kategorie" class="preparation-category-directory">
     <div class="section-heading centered-heading"><span>Hlavní rozcestník</span><h2>Vyberte si způsob zpracování</h2><p>V sedmi oblastech najdete celkem {herbalPreparations.length} nových receptů.</p></div>
     <div class="preparation-category-grid">
-      {categories.map(([key, meta]) => {
+      {categories.map(([key, meta], index) => {
         const recipes = preparationsByCategory(key);
-        const image = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : heroImage;
+        const image = preparationPhoto(`${pagePath}#categories`, index);
         return (
           <a class="preparation-category-card" href={meta.path}>
-            <img src={image} alt={`Ilustrace kategorie ${meta.title}`} width="1200" height="675" loading="lazy" />
+            <img src={image} alt={hubPhotoAlt(meta.title)} width="1200" height="675" loading="lazy" />
             <div><span>{recipes.length} receptů</span><h2>{meta.title}</h2><p>{meta.description}</p><b>Otevřít rozcestník →</b></div>
           </a>
         );
@@ -58,7 +61,7 @@ const schema = {
 
   <section class="featured-preparations">
     <div class="section-heading centered-heading"><span>Doporučený začátek</span><h2>Vybrané recepty napříč kategoriemi</h2></div>
-    <div class="preparation-grid">{featured.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
+    <div class="preparation-grid">{featured.map((recipe, index) => <PreparationCard recipe={recipe} position={index} />)}</div>
   </section>
 
   <ProductFeed topic="recepty" heading="Sklenice, sušené bylinky a další pomůcky" />

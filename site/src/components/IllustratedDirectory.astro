@@ -1,5 +1,5 @@
 ---
-import BotanicalArtwork from './BotanicalArtwork.astro';
+import { hubPhotoAlt, resolveHubImage, uniqueHubPhoto } from '../lib/hub-photo';
 
 interface DirectoryItem {
   href: string;
@@ -17,23 +17,31 @@ interface Props {
 }
 
 const { items, class: className = '' } = Astro.props;
+const group = Astro.url.pathname;
+const usedImages = new Set<string>();
+const resolvedItems = items.map((item, index) => {
+  let image = resolveHubImage(item.image || '', item.href, item.title, index, group);
+  if (usedImages.has(image)) image = uniqueHubPhoto(usedImages, item.href, item.title, index, group);
+  usedImages.add(image);
+  return {
+    ...item,
+    image,
+    imageAlt: item.imageAlt || hubPhotoAlt(item.title),
+  };
+});
 ---
 <div class:list={['illustrated-directory', className]}>
-  {items.map((item) => (
-    <a class:list={['illustrated-directory-card', item.image && 'illustrated-directory-card--photo']} href={item.href}>
-      <span class="illustrated-directory-art" aria-hidden={!item.image ? 'true' : undefined}>
-        {item.image ? (
-          <img
-            src={item.image}
-            alt={item.imageAlt || ''}
-            width="1024"
-            height="576"
-            loading="lazy"
-            decoding="async"
-          />
-        ) : (
-          <BotanicalArtwork variant={item.art} />
-        )}
+  {resolvedItems.map((item) => (
+    <a class="illustrated-directory-card illustrated-directory-card--photo" href={item.href}>
+      <span class="illustrated-directory-art">
+        <img
+          src={item.image}
+          alt={item.imageAlt || hubPhotoAlt(item.title)}
+          width="1024"
+          height="576"
+          loading="lazy"
+          decoding="async"
+        />
       </span>
       <span class="illustrated-directory-shade" aria-hidden="true"></span>
       <span class="illustrated-directory-copy">

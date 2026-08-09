@@ -9,6 +9,8 @@ import {
   preparationPath,
   type HerbalPreparation,
 } from '../../data/herbal-preparations';
+import { hubPhotoAlt } from '../../lib/hub-photo';
+import { preparationPhoto } from '../../lib/preparation-photo';
 
 export function getStaticPaths() {
   return herbalPreparations.map((recipe) => ({ params: { slug: recipe.slug }, props: { recipe } }));
@@ -17,12 +19,12 @@ export function getStaticPaths() {
 interface Props { recipe: HerbalPreparation }
 const { recipe } = Astro.props;
 const category = preparationCategories[recipe.category];
-const image = `/obrazky/recepty/${recipe.slug}.svg`;
-const heroImage = `/obrazky/recepty-sceny/${recipe.slug}.svg`;
+const canonical = preparationPath(recipe);
+const heroImage = preparationPhoto(`${canonical}#hero`, 0);
+const image = heroImage;
 const related = herbalPreparations.filter((item) => item.category === recipe.category && item.slug !== recipe.slug).slice(0, 3);
 const totalMinutes = recipe.prepMinutes + (recipe.restMinutes || 0);
 const duration = (minutes: number) => `PT${Math.max(1, minutes)}M`;
-const canonical = preparationPath(recipe);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Recipe',
@@ -70,7 +72,7 @@ const breadcrumb = {
           <div><dt>Množství</dt><dd>{recipe.yield}</dd></div>
         </dl>
       </div>
-      <img src={heroImage} alt={`Tematická ilustrace k receptu ${recipe.title}`} width="1200" height="675" loading="eager" fetchpriority="high" />
+      <img src={heroImage} alt={hubPhotoAlt(recipe.title)} width="1200" height="675" loading="eager" fetchpriority="high" />
     </header>
 
     <ContextAds topic="recepty" heading={`Vybavení pro recept: ${recipe.title}`} />
@@ -103,7 +105,7 @@ const breadcrumb = {
     {related.length > 0 && (
       <section class="related-preparations">
         <div class="section-heading centered-heading"><span>Pokračujte dál</span><h2>Další recepty ze stejné oblasti</h2></div>
-        <div class="preparation-grid">{related.map((item) => <PreparationCard recipe={item} />)}</div>
+        <div class="preparation-grid">{related.map((item, index) => <PreparationCard recipe={item} position={index} />)}</div>
       </section>
     )}
   </article>

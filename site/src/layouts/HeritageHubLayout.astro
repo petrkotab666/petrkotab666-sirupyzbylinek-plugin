@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
+import { hubPhotoAlt, resolveHubImage, uniqueHubPhoto } from '../lib/hub-photo';
 
 interface HubCard {
   href: string;
@@ -48,6 +49,58 @@ const {
   feedHeading = 'Doporučené pomůcky, knihy a suroviny',
 } = Astro.props;
 
+const imageKey = (src = '') => src.split(/[?#]/u)[0] || '';
+const requestedHeroKey = imageKey(heroImage);
+const resolvedHeroImage = resolveHubImage(heroImage, canonical, heading, 0, `${canonical}#hero`);
+const heroImageKey = imageKey(resolvedHeroImage);
+const heroResolvedFromExplicitRaster = Boolean(requestedHeroKey && requestedHeroKey === heroImageKey);
+const usedImageKeys = new Set<string>([heroImageKey]);
+const resolvedCards = cards.map((card, index) => {
+  let image = resolveHubImage(card.image, card.href, card.title, index, canonical);
+  let key = imageKey(image);
+  const requestedKey = imageKey(card.image);
+  const resolvedFromExplicitRaster = Boolean(requestedKey && requestedKey === key);
+
+  // Tvrdě blokujeme jen skutečnou chybu dat: hero i karta mají výslovně
+  // zadaný stejný rastrový soubor. Pokud hero vzniklo automaticky ze SVG,
+  // necháme existující deduplikační fallback vybrat unikátní kartu.
+  if (heroResolvedFromExplicitRaster && resolvedFromExplicitRaster && key === heroImageKey) {
+    throw new Error(`Rozcestník ${canonical} používá stejný explicitní obrázek pro hero i kartu ${card.title}: ${key}. Zvolte pro kartu vlastní obrázek.`);
+  }
+
+  if (!key || usedImageKeys.has(key)) {
+    const usedForResolver = new Set<string>(usedImageKeys);
+    image = uniqueHubPhoto(usedForResolver, card.href, card.title, index, canonical);
+    key = imageKey(image);
+
+    // uniqueHubPhoto pracuje s plnými cestami; tato pojistka hlídá i případné
+    // query/hash varianty, které se po buildu sjednotí na stejný obrázek.
+    if (usedImageKeys.has(key)) {
+      for (let offset = 1; offset <= 64; offset += 1) {
+        const alternative = uniqueHubPhoto(usedForResolver, card.href, card.title, index + offset, `${canonical}#${offset}`);
+        const alternativeKey = imageKey(alternative);
+        if (!usedImageKeys.has(alternativeKey)) {
+          image = alternative;
+          key = alternativeKey;
+          break;
+        }
+        usedForResolver.add(alternative);
+      }
+    }
+  }
+
+  if (usedImageKeys.has(key)) {
+    throw new Error(`Rozcestník ${canonical} stále opakuje fotografii ${key} u karty ${card.title}.`);
+  }
+
+  usedImageKeys.add(key);
+  return {
+    ...card,
+    image,
+    imageAlt: card.imageAlt || hubPhotoAlt(card.title),
+  };
+});
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -56,8 +109,8 @@ const schema = {
   url: new URL(canonical, Astro.site || Astro.url.origin).href,
   mainEntity: {
     '@type': 'ItemList',
-    numberOfItems: cards.length,
-    itemListElement: cards.map((card, index) => ({
+    numberOfItems: resolvedCards.length,
+    itemListElement: resolvedCards.map((card, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: card.title,
@@ -70,11 +123,11 @@ const schema = {
   title={title}
   description={description}
   canonical={canonical}
-  image={heroImage}
+  image={resolvedHeroImage}
   structuredData={[schema]}
 >
   <header class="heritage-hub-hero">
-    <img src={heroImage} alt={heroAlt} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
+    <img src={resolvedHeroImage} alt={heroAlt || hubPhotoAlt(heading)} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
     <div class="heritage-hub-hero__shade" aria-hidden="true"></div>
     <div class="heritage-hub-hero__copy">
       <span>{eyebrow}</span>
@@ -90,7 +143,7 @@ const schema = {
       <p>{directoryText}</p>
     </div>
     <div class="heritage-directory__grid">
-      {cards.map((card) => (
+      {resolvedCards.map((card) => (
         <a class="heritage-directory__card" href={card.href}>
           <span class="heritage-directory__image">
             <img src={card.image} alt={card.imageAlt || card.title} width="1200" height="675" loading="lazy" decoding="async" />

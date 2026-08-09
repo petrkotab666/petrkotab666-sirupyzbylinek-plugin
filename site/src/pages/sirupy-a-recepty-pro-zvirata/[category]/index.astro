@@ -10,6 +10,7 @@ export function getStaticPaths() {
 
 const category = animalRecipeHubCategories.find((item) => item.slug === Astro.props.categorySlug);
 if (!category) throw new Error(`Neznámá kategorie péče pro zvířata: ${Astro.props.categorySlug}`);
+
 const allArticles = await getPublishedArticles();
 const animalPattern = /zvirat|pro-psy|pro-psa|pro-kock|slepice|kurat|drubez|pece-o-ledviny-psa/u;
 const entries = allArticles.filter((entry) => {
@@ -17,7 +18,44 @@ const entries = allArticles.filter((entry) => {
   const haystack = normalizeForHub(`${entry.data.title} ${entry.data.path} ${entry.data.description || ''}`);
   return animalPattern.test(haystack) && category.pattern.test(haystack);
 });
-const cards = articleHubCards(entries, 'Bylinky a zvířata');
+
+const isMainAnimalPharmacy = category.slug === 'prirodni-lekarna-pro-zvirata';
+const featuredSafetyPaths = [
+  '/co-muze-pes-jist/',
+  '/co-nesmi-pes-jist/',
+  '/nebezpecne-byliny-pro-psy-a-kocky/',
+  '/bylinky-pro-psy/',
+  '/bylinky-pro-psy-behem-horkych-letnich-dnu/',
+  '/lnene-seminko-pro-psy-navod-na-gel/',
+  '/jarni-ocista-u-psu-a-kocek/',
+  '/jarni-linani-u-psa-jak-ho-zvladnout-prirozene-a-bez-stresu/',
+  '/co-mohou-slepice-jist/',
+  '/bylinky-pro-slepice/',
+  '/bylinky-pro-kurata/',
+  '/zdravy-chov-drubeze-lihne-bylinky-pruvodce/',
+] as const;
+
+const mainCategoryCards = animalRecipeHubCategories
+  .filter((item) => item.slug !== 'prirodni-lekarna-pro-zvirata')
+  .map((item) => ({
+    href: `/sirupy-a-recepty-pro-zvirata/${item.slug}/`,
+    title: item.title,
+    text: item.description || `Přejděte na samostatný přehled: ${item.title.toLowerCase()}.`,
+    image: item.image,
+    imageAlt: item.title,
+    kicker: 'Vyberte oblast',
+  }));
+
+const featuredSafetyEntries = featuredSafetyPaths
+  .map((path) => allArticles.find((entry) => entry.data.path === path))
+  .filter((entry): entry is (typeof allArticles)[number] => Boolean(entry));
+
+const cards = isMainAnimalPharmacy
+  ? [
+      ...mainCategoryCards,
+      ...articleHubCards(featuredSafetyEntries, 'Bezpečnost a praktická péče'),
+    ]
+  : articleHubCards(entries, 'Bylinky a zvířata');
 ---
 <HeritageHubLayout
   title={`${category.title} – bezpečný přehled`}
@@ -29,8 +67,10 @@ const cards = articleHubCards(entries, 'Bylinky a zvířata');
   heroImage={category.image}
   heroAlt={category.title}
   cards={cards}
-  directoryTitle="Vyberte konkrétní článek nebo recept"
-  directoryText={`V této oblasti je propojeno ${cards.length} bezpečnostních přehledů a domácích témat.`}
+  directoryTitle={isMainAnimalPharmacy ? 'Nejdřív vyberte oblast, potom konkrétní téma' : 'Vyberte konkrétní článek nebo recept'}
+  directoryText={isMainAnimalPharmacy
+    ? `Hlavní přehled vede do ${mainCategoryCards.length} tematických oblastí a doplňuje je ${featuredSafetyEntries.length} nejdůležitějšími bezpečnostními a praktickými články.`
+    : `V této oblasti je propojeno ${cards.length} bezpečnostních přehledů a domácích témat.`}
   adTopic="zvirata"
   adHeading="Knihy a vybavení pro chovatele"
   feedTopic="zvirata"
