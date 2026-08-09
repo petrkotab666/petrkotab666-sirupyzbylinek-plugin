@@ -7,7 +7,7 @@ export const tincturePhotoBySlug = {
   'tinktury-klouby-svaly': '/media/generated/prirodni-lekarna/masti-a-balzamy-v2.webp',
   'tinktury-mocove-cesty-ledviny': '/media/generated/prirodni-lekarna/byliny-300x300-eca005d2.webp',
   'tinktury-zeny-muzi': '/media/generated/prirodni-lekarna/kontryhel-obecny-caj-sber-suseni-40c765ff.webp',
-  'tinktury-detoxikace-ocista': '/media/generated/prirodni-lekarna/3obr-07cd0380.webp',
+  'tinktury-detoxikace-ocista': '/media/generated/prirodni-lekarna/3obr-07cd0380-mirror.webp',
 } as const;
 
 export const tincturePhotoAltBySlug = {
@@ -16,10 +16,10 @@ export const tincturePhotoAltBySlug = {
   'tinktury-traveni-metabolismus': 'Bylinné suroviny a lahvičky pro domácí maceraci',
   'tinktury-spanek-nervy': 'Bylinková zahrada se surovinami pro večerní bylinné směsi',
   'tinktury-srdce-krevni-obeh': 'Skleněné lahvičky a nádoby pro bylinné výluhy',
-  'tinktury-klouby-svaly': 'Bylinný balzám a rostlinné suroviny pro zevní péči',
+  'tinktury-klouby-svaly': 'Fotografický bylinný motiv pro zevní péči a balzámy',
   'tinktury-mocove-cesty-ledviny': 'Sušené bylinky připravené pro domácí zpracování',
   'tinktury-zeny-muzi': 'Kontryhel a další bylinky pro domácí bylinné zpracování',
-  'tinktury-detoxikace-ocista': 'Bylinky a lahvičky pro domácí maceraci a bylinné výluhy',
+  'tinktury-detoxikace-ocista': 'Odlišný fotografický motiv bylin pro domácí maceraci a výluhy',
 } as const;
 
 export type TincturePhotoSlug = keyof typeof tincturePhotoBySlug;
