@@ -1,8 +1,8 @@
 # Poslední nasazení Sirupy z bylinek
 
 - Výsledek: **cancelled**
-- Commit: `9fa397e011124cf0414da00cbdc061bb30e17b28`
+- Commit: `003eba304f4e21d1aa85a4d4f26017a604c48e3a`
 - Větev: `force-cloudflare-production-deploy-full-site-audit-20260808`
-- Run: 235 (`31294336229`)
-- Dokončeno: 2026-08-09T04:20:50Z
+- Run: 237 (`31294379053`)
+- Dokončeno: 2026-08-09T04:21:29Z
 - Kontrola WebP Přírodní lékárny: povinná součást deploy workflow
