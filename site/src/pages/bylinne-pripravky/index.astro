@@ -9,12 +9,13 @@ import {
   preparationsByCategory,
   type PreparationCategory,
 } from '../../data/herbal-preparations';
-import { hubPhotoAlt, resolveHubImage } from '../../lib/hub-photo';
+import { hubPhotoAlt } from '../../lib/hub-photo';
+import { preparationPhoto } from '../../lib/preparation-photo';
 
 const categories = Object.entries(preparationCategories) as Array<[PreparationCategory, (typeof preparationCategories)[PreparationCategory]]>;
 const featured = herbalPreparations.filter((recipe) => recipe.featured).slice(0, 9);
 const pagePath = '/bylinne-pripravky/';
-const heroImage = resolveHubImage('/obrazky/bylinne-pripravky-hero.svg', pagePath, 'Bylinné přípravky a domácí recepty', 0, `${pagePath}#hero`);
+const heroImage = preparationPhoto(`${pagePath}#hero`, 0);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -45,8 +46,7 @@ const schema = {
     <div class="preparation-category-grid">
       {categories.map(([key, meta], index) => {
         const recipes = preparationsByCategory(key);
-        const legacyImage = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : '/obrazky/bylinne-pripravky-hero.svg';
-        const image = resolveHubImage(legacyImage, meta.path, meta.title, index, `${pagePath}categories`);
+        const image = preparationPhoto(`${pagePath}#categories`, index);
         return (
           <a class="preparation-category-card" href={meta.path}>
             <img src={image} alt={hubPhotoAlt(meta.title)} width="1200" height="675" loading="lazy" />
