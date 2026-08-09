@@ -49,12 +49,39 @@ const {
   feedHeading = 'Doporučené pomůcky, knihy a suroviny',
 } = Astro.props;
 
+const imageKey = (src = '') => src.split(/[?#]/u)[0] || '';
 const resolvedHeroImage = resolveHubImage(heroImage, canonical, heading, 0, `${canonical}#hero`);
-const usedImages = new Set<string>([resolvedHeroImage]);
+const usedImageKeys = new Set<string>([imageKey(resolvedHeroImage)]);
 const resolvedCards = cards.map((card, index) => {
   let image = resolveHubImage(card.image, card.href, card.title, index, canonical);
-  if (usedImages.has(image)) image = uniqueHubPhoto(usedImages, card.href, card.title, index, canonical);
-  usedImages.add(image);
+  let key = imageKey(image);
+
+  if (!key || usedImageKeys.has(key)) {
+    const usedForResolver = new Set<string>(usedImageKeys);
+    image = uniqueHubPhoto(usedForResolver, card.href, card.title, index, canonical);
+    key = imageKey(image);
+
+    // uniqueHubPhoto pracuje s plnými cestami; tato pojistka hlídá i případné
+    // query/hash varianty, které se po buildu sjednotí na stejný obrázek.
+    if (usedImageKeys.has(key)) {
+      for (let offset = 1; offset <= 64; offset += 1) {
+        const alternative = uniqueHubPhoto(usedForResolver, card.href, card.title, index + offset, `${canonical}#${offset}`);
+        const alternativeKey = imageKey(alternative);
+        if (!usedImageKeys.has(alternativeKey)) {
+          image = alternative;
+          key = alternativeKey;
+          break;
+        }
+        usedForResolver.add(alternative);
+      }
+    }
+  }
+
+  if (usedImageKeys.has(key)) {
+    throw new Error(`Rozcestník ${canonical} stále opakuje fotografii ${key} u karty ${card.title}.`);
+  }
+
+  usedImageKeys.add(key);
   return {
     ...card,
     image,
