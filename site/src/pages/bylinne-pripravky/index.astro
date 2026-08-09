@@ -13,19 +13,20 @@ import { hubPhotoAlt, resolveHubImage } from '../../lib/hub-photo';
 
 const categories = Object.entries(preparationCategories) as Array<[PreparationCategory, (typeof preparationCategories)[PreparationCategory]]>;
 const featured = herbalPreparations.filter((recipe) => recipe.featured).slice(0, 9);
-const heroImage = resolveHubImage('/obrazky/bylinne-pripravky-hero.svg', '/bylinne-pripravky/', 'Bylinné přípravky a domácí recepty');
+const pagePath = '/bylinne-pripravky/';
+const heroImage = resolveHubImage('/obrazky/bylinne-pripravky-hero.svg', pagePath, 'Bylinné přípravky a domácí recepty', 0, `${pagePath}#hero`);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Bylinné přípravky a domácí recepty',
   description: 'Rozcestník čajů, koupelí, mastí, olejů, octů, obkladů a kuchyňských bylinných výrobků.',
-  url: new URL('/bylinne-pripravky/', Astro.site || Astro.url.origin).href,
+  url: new URL(pagePath, Astro.site || Astro.url.origin).href,
 };
 ---
 <BaseLayout
   title="Bylinné přípravky – čaje, koupele, masti, oleje a další recepty"
   description="Kompletní rozcestník domácích bylinných přípravků s přesnými postupy, skladováním a bezpečnostními upozorněními."
-  canonical="/bylinne-pripravky/"
+  canonical={pagePath}
   image={heroImage}
   structuredData={[schema]}
 >
@@ -45,7 +46,7 @@ const schema = {
       {categories.map(([key, meta], index) => {
         const recipes = preparationsByCategory(key);
         const legacyImage = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : '/obrazky/bylinne-pripravky-hero.svg';
-        const image = resolveHubImage(legacyImage, meta.path, meta.title, index);
+        const image = resolveHubImage(legacyImage, meta.path, meta.title, index, `${pagePath}categories`);
         return (
           <a class="preparation-category-card" href={meta.path}>
             <img src={image} alt={hubPhotoAlt(meta.title)} width="1200" height="675" loading="lazy" />
@@ -60,7 +61,7 @@ const schema = {
 
   <section class="featured-preparations">
     <div class="section-heading centered-heading"><span>Doporučený začátek</span><h2>Vybrané recepty napříč kategoriemi</h2></div>
-    <div class="preparation-grid">{featured.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
+    <div class="preparation-grid">{featured.map((recipe, index) => <PreparationCard recipe={recipe} position={index} />)}</div>
   </section>
 
   <ProductFeed topic="recepty" heading="Sklenice, sušené bylinky a další pomůcky" />
