@@ -22,6 +22,10 @@ BANNED_VISIBLE_PHRASES = (
     "Vybavení a suroviny pro další domácí recept",
 )
 
+PHOTO_RE = re.compile(r"\.(?:avif|jpe?g|png|webp)(?:[?#].*)?$", re.I)
+SVG_RE = re.compile(r"\.svg(?:[?#].*)?$", re.I)
+GENERIC_RE = re.compile(r"(?:logo|logotyp|brand|kampan|banner|placeholder)", re.I)
+
 
 def plain_text(value: str) -> str:
     return " ".join(unescape(re.sub(r"<[^>]+>", " ", value)).split())
@@ -39,10 +43,6 @@ def class_count(markup: str, token: str) -> int:
     return len(re.findall(rf"\bclass=[\"'][^\"']*(?<![-\w]){re.escape(token)}(?![-\w])[^\"']*[\"']", markup, re.I))
 
 
-def image_sources(markup: str) -> list[str]:
-    return re.findall(r"<img\b[^>]*\bsrc=[\"']([^\"']+)[\"'][^>]*>", markup, re.I)
-
-
 def classed_anchor_image_sources(markup: str, token: str) -> list[str]:
     sources: list[str] = []
     for match in re.finditer(r"<a\b([^>]*)>([\s\S]*?)</a>", markup, re.I):
@@ -54,6 +54,14 @@ def classed_anchor_image_sources(markup: str, token: str) -> list[str]:
         if source_match:
             sources.append(source_match.group(1))
     return sources
+
+
+def hero_source(markup: str) -> str:
+    match = re.search(r'<img\b[^>]*class=["\'][^"\']*hero-image[^"\']*["\'][^>]*>', markup, re.I)
+    if not match:
+        return ""
+    src = re.search(r'\bsrc=["\']([^"\']+)["\']', match.group(0), re.I)
+    return src.group(1) if src else ""
 
 
 def div_content_by_class(markup: str, token: str) -> str:
@@ -87,6 +95,26 @@ def article_length(markup: str) -> int:
     return int(match.group(1)) if match else -1
 
 
+def require_photo(src: str, label: str, errors: list[str]) -> None:
+    if not src:
+        errors.append(f"{label} is missing")
+        return
+    if SVG_RE.search(src):
+        errors.append(f"{label} uses forbidden SVG: {src!r}")
+    if not PHOTO_RE.search(src):
+        errors.append(f"{label} is not a supported raster photo: {src!r}")
+    if GENERIC_RE.search(src):
+        errors.append(f"{label} uses generic/logo/advertising artwork: {src!r}")
+
+
+def require_unique_photos(sources: list[str], label: str, errors: list[str]) -> None:
+    for index, src in enumerate(sources, start=1):
+        require_photo(src, f"{label} image #{index}", errors)
+    duplicates = sorted({src for src in sources if sources.count(src) > 1})
+    if duplicates:
+        errors.append(f"{label} repeats image sources: {', '.join(duplicates)}")
+
+
 def main() -> int:
     if len(sys.argv) != 7:
         print("Usage: verify-deployed-article.py VERSION ARTICLE HOME HEALTH RECIPES CLEAN_ARTICLE", file=sys.stderr)
@@ -102,20 +130,21 @@ def main() -> int:
         "expected-natural-pharmacy-image-format: webp",
         "expected-home-herb-game-image: /media/generated/prirodni-lekarna/bylinkova-herna-photo.webp",
         "expected-editorial-integrity-audit: enabled",
+        "expected-generated-photo-variants: 16",
+        "expected-hub-grid-duplicate-images: 0",
+        "expected-hub-card-svg-images: 0",
+        "expected-article-hero-svg-images: 0",
     ):
         require(version, marker, "deployment marker", errors)
 
     kicker_match = re.search(r'class=["\'][^"\']*article-kicker[^"\']*["\'][^>]*>([\s\S]*?)</div>', article, re.I)
     kicker = plain_text(kicker_match.group(1)) if kicker_match else ""
-    hero_match = re.search(r'<img\b[^>]*class=["\'][^"\']*hero-image[^"\']*["\'][^>]*>', article, re.I)
-    hero_src_match = re.search(r'\bsrc=["\']([^"\']+)["\']', hero_match.group(0), re.I) if hero_match else None
-    hero_src = hero_src_match.group(1) if hero_src_match else ""
+    hero_src = hero_source(article)
     text_length = article_length(article)
 
     if kicker != "Pěstování bylinek":
         errors.append(f"wrong article kicker: {kicker!r}")
-    if "/obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg" not in hero_src:
-        errors.append(f"wrong unique hero image: {hero_src!r}")
+    require_photo(hero_src, "cultivation article hero", errors)
     if text_length < 0:
         errors.append("cultivation article is missing data-article-text-length")
     if class_count(article, "context-ads") < 1:
@@ -131,6 +160,10 @@ def main() -> int:
     home_cards = class_count(home, "illustrated-directory-card--photo")
     if home_cards < 6:
         errors.append(f"home page contains only {home_cards} photographic main cards")
+    home_images = classed_anchor_image_sources(home, "illustrated-directory-card--photo")
+    if len(home_images) < 6:
+        errors.append(f"home page contains only {len(home_images)} main-card images")
+    require_unique_photos(home_images, "home main grid", errors)
 
     health_cards = class_count(health, "illustrated-directory-card--photo")
     if health_cards != 9:
@@ -144,6 +177,7 @@ def main() -> int:
     bad_health_formats = [src for src in health_images if not src.split("?", 1)[0].lower().endswith(".webp")]
     if bad_health_formats:
         errors.append("natural-pharmacy main-card images are not all WebP: " + ", ".join(bad_health_formats))
+    require_unique_photos(health_images, "natural-pharmacy main grid", errors)
     require(health, "Bylinky přehledně a bezpečně", "new natural-pharmacy heading", errors)
     for href in (
         "/prirodni-pomocnici-pro-imunitu/",
@@ -157,6 +191,10 @@ def main() -> int:
     recipe_cards = class_count(recipes, "illustrated-directory-card--photo")
     if recipe_cards != 10:
         errors.append(f"recipes page contains {recipe_cards} restored main categories instead of 10")
+    recipe_images = classed_anchor_image_sources(recipes, "illustrated-directory-card--photo")
+    if len(recipe_images) != recipe_cards:
+        errors.append(f"recipes page contains {len(recipe_images)} main-card images for {recipe_cards} cards")
+    require_unique_photos(recipe_images, "recipes main grid", errors)
     for href in (
         "/domaci-sirupy/", "/tinktury/", "/recepty-na-domaci-limonady/", "/bylinne-caje/",
         "/bylinne-koupele/", "/bylinne-masti-a-balzamy/", "/bylinne-oleje-a-maceraty/",
@@ -172,6 +210,7 @@ def main() -> int:
         ("Kdy je lepší bylinky zmrazit", "specific freezing section"),
     ):
         require(clean_article, marker, label, errors)
+    require_photo(hero_source(clean_article), "rewritten article hero", errors)
     if class_count(clean_article, "context-ads") < 1:
         errors.append("rewritten article is missing contextual advertising")
     if class_count(clean_article, "product-feed") < 1:
@@ -197,9 +236,9 @@ def main() -> int:
 
     print(
         "Deployment verified successfully: "
-        f"article_text_length={text_length}, home={home_cards}, health={health_cards}, "
-        f"health_webp={len(health_images)}, recipes={recipe_cards}, clean_article_chars={len(clean_visible)}, "
-        f"inline_ads={class_count(article, 'article-inline-ad')}."
+        f"article_text_length={text_length}, home={home_cards}/{len(set(home_images))} unique, "
+        f"health={health_cards}/{len(set(health_images))} unique, recipes={recipe_cards}/{len(set(recipe_images))} unique, "
+        f"clean_article_chars={len(clean_visible)}, inline_ads={class_count(article, 'article-inline-ad')}."
     )
     return 0
 
