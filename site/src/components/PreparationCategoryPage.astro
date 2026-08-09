@@ -16,7 +16,7 @@ const { category } = Astro.props;
 const meta = preparationCategories[category];
 const recipes = preparationsByCategory(category);
 const legacyImage = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : '/obrazky/bylinne-pripravky-hero.svg';
-const image = resolveHubImage(legacyImage, meta.path, meta.title);
+const image = resolveHubImage(legacyImage, meta.path, meta.title, 0, `${meta.path}#hero`);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -54,7 +54,7 @@ const schema = {
 
   <section class="category-recipe-section">
     <div class="section-heading centered-heading"><span>Vyberte recept</span><h2>Postupy krok za krokem</h2><p>Každý recept obsahuje přesné suroviny, skladování a konkrétní bezpečnostní upozornění.</p></div>
-    <div class="preparation-grid">{recipes.map((recipe) => <PreparationCard recipe={recipe} />)}</div>
+    <div class="preparation-grid">{recipes.map((recipe, index) => <PreparationCard recipe={recipe} position={index} />)}</div>
   </section>
 
   <ContextAds topic="recepty" heading={`Pomůcky a suroviny: ${meta.title}`} />
