@@ -1,19 +1,6 @@
-const PHOTO_POOL = [
-  '/media/generated/prirodni-lekarna/3obr-07cd0380.webp',
-  '/media/generated/prirodni-lekarna/byliny-6083d43d.webp',
-  '/media/generated/prirodni-lekarna/sirupyuvod-78eb30cb.webp',
-  '/media/generated/prirodni-lekarna/sklenice-na-sirupy-a-zavarovani-4b170c4d.webp',
-  '/media/generated/prirodni-lekarna/byliny-300x300-eca005d2.webp',
-  '/media/generated/prirodni-lekarna/bylinkovymagazin-58281674.webp',
-  '/media/generated/prirodni-lekarna/kontryhel-obecny-caj-sber-suseni-40c765ff.webp',
-  '/media/generated/prirodni-lekarna/3obr-07cd0380-mirror.webp',
-  '/media/generated/prirodni-lekarna/byliny-6083d43d-mirror.webp',
-  '/media/generated/prirodni-lekarna/sirupyuvod-78eb30cb-mirror.webp',
-  '/media/generated/prirodni-lekarna/sklenice-na-sirupy-a-zavarovani-4b170c4d-mirror.webp',
-  '/media/generated/prirodni-lekarna/byliny-300x300-eca005d2-mirror.webp',
-  '/media/generated/prirodni-lekarna/bylinkovymagazin-58281674-mirror.webp',
-  '/media/generated/prirodni-lekarna/kontryhel-obecny-caj-sber-suseni-40c765ff-mirror.webp',
-] as const;
+import { IMPORTED_HUB_PHOTOS } from './hub-photo-pool.generated';
+
+const PHOTO_POOL: readonly string[] = [...IMPORTED_HUB_PHOTOS];
 
 function normalize(value = '') {
   return value
@@ -36,15 +23,21 @@ function parentRoute(href = '') {
   return `/${parts.join('/')}/`;
 }
 
+function assertPool() {
+  if (!PHOTO_POOL.length) throw new Error('Fotografický pool rozcestníků je prázdný. Spusťte prebuild.');
+}
+
 export function isLegacyHubSvg(src = '') {
   return /\.svg(?:[?#].*)?$/iu.test(src);
 }
 
 export function keyedHubPhoto(href = '', title = '') {
+  assertPool();
   return PHOTO_POOL[stableIndex(`${normalize(href)}|${normalize(title)}`)];
 }
 
 export function thematicHubPhoto(href = '', title = '', position = 0, group = '') {
+  assertPool();
   const sharedGroup = normalize(group || parentRoute(href) || title || '/');
   return PHOTO_POOL[(stableIndex(sharedGroup) + Math.max(0, position)) % PHOTO_POOL.length];
 }
@@ -59,11 +52,12 @@ export function resolveHubImage(src = '', href = '', title = '', position = 0, g
 }
 
 export function uniqueHubPhoto(used: Set<string>, href = '', title = '', position = 0, group = '') {
+  assertPool();
   for (let offset = 0; offset < PHOTO_POOL.length; offset += 1) {
     const candidate = thematicHubPhoto(href, title, position + offset, group);
     if (!used.has(candidate)) return candidate;
   }
-  return keyedHubPhoto(`${href}-${position}`, title);
+  throw new Error(`Pro rozcestník ${group || parentRoute(href)} není dost unikátních fotografií (${used.size} již použitých, pool ${PHOTO_POOL.length}).`);
 }
 
 export function hubPhotoAlt(title = '') {
