@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Co sbírat – botanický přehled částí rostlin</title>
+  <desc id="desc">Černo-zlatá botanická ilustrace květů, listů, plodů, pupenů, semen a kořenů.</desc>
+  <rect width="1200" height="675" fill="#171a17"/>
+  <circle cx="600" cy="338" r="292" fill="none" stroke="#b99b5f" stroke-width="4" opacity=".92"/>
+  <circle cx="600" cy="338" r="252" fill="none" stroke="#7d6845" stroke-width="1.5" opacity=".55"/>
+  <path d="M600 605V242" fill="none" stroke="#527646" stroke-width="10" stroke-linecap="round"/>
+  <path d="M600 340C545 300 505 270 470 224M600 390C655 350 700 310 742 258M600 455C540 430 492 416 448 390M600 502C660 476 704 458 754 420" fill="none" stroke="#527646" stroke-width="7" stroke-linecap="round"/>
+  <g fill="none" stroke="#c4a96c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="600" cy="190" r="30"/>
+    <path d="M600 142v-31M600 269v-49M552 190h-31M679 190h-31M566 156l-22-22M656 246l-22-22M634 156l22-22M544 246l22-22"/>
+    <path d="M470 224c-35-48-91-47-122-12 34 35 89 43 122 12Z"/>
+    <path d="M742 258c22-55 76-72 115-43-20 44-67 70-115 43Z"/>
+    <path d="M448 390c-31-45-79-51-114-23 24 43 71 59 114 23Z"/>
+    <path d="M754 420c31-46 82-48 116-15-29 39-74 51-116 15Z"/>
+    <path d="M573 605c-29 23-45 45-50 65M588 604c-8 31-10 51-5 68M612 604c9 30 12 51 7 68M628 605c27 23 42 45 47 65"/>
+  </g>
+  <g fill="#c4a96c">
+    <circle cx="862" cy="318" r="14"/><circle cx="892" cy="342" r="12"/><circle cx="852" cy="352" r="11"/><circle cx="883" cy="378" r="13"/>
+    <circle cx="366" cy="300" r="8"/><circle cx="392" cy="323" r="9"/><circle cx="346" cy="335" r="7"/><circle cx="382" cy="357" r="8"/>
+  </g>
+  <g fill="#6d8b55" stroke="#b99b5f" stroke-width="3">
+    <path d="M840 232c0-26 20-45 45-45 2 24-14 45-45 45Z"/>
+    <path d="M359 430c0-25 18-44 43-45 3 22-11 42-43 45Z"/>
+    <path d="M785 505c16-20 43-25 64-11-13 22-38 31-64 11Z"/>
+  </g>
+  <g stroke="#b99b5f" fill="none" opacity=".75">
+    <path d="M244 145v42M223 166h42M962 150v36M944 168h36M980 515v34M963 532h34M230 520v32M214 536h32"/>
+    <circle cx="278" cy="248" r="4" fill="#b99b5f"/><circle cx="936" cy="264" r="4" fill="#b99b5f"/><circle cx="928" cy="438" r="3" fill="#b99b5f"/><circle cx="270" cy="420" r="3" fill="#b99b5f"/>
+  </g>
+  <path d="M290 570c97-31 191-42 310-42s218 11 310 42" fill="none" stroke="#7d6845" stroke-width="2" opacity=".6"/>
+</svg>
