@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
-import { hubPhotoAlt, resolveHubImage } from '../lib/hub-photo';
+import { hubPhotoAlt, resolveHubImage, uniqueHubPhoto } from '../lib/hub-photo';
 
 interface HubCard {
   href: string;
@@ -49,12 +49,18 @@ const {
   feedHeading = 'Doporučené pomůcky, knihy a suroviny',
 } = Astro.props;
 
-const resolvedHeroImage = resolveHubImage(heroImage, canonical, heading, 0);
-const resolvedCards = cards.map((card, index) => ({
-  ...card,
-  image: resolveHubImage(card.image, card.href, card.title, index),
-  imageAlt: card.imageAlt || hubPhotoAlt(card.title),
-}));
+const resolvedHeroImage = resolveHubImage(heroImage, canonical, heading, 0, `${canonical}#hero`);
+const usedImages = new Set<string>([resolvedHeroImage]);
+const resolvedCards = cards.map((card, index) => {
+  let image = resolveHubImage(card.image, card.href, card.title, index, canonical);
+  if (usedImages.has(image)) image = uniqueHubPhoto(usedImages, card.href, card.title, index, canonical);
+  usedImages.add(image);
+  return {
+    ...card,
+    image,
+    imageAlt: card.imageAlt || hubPhotoAlt(card.title),
+  };
+});
 
 const schema = {
   '@context': 'https://schema.org',
