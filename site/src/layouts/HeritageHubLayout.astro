@@ -50,8 +50,10 @@ const {
 } = Astro.props;
 
 const imageKey = (src = '') => src.split(/[?#]/u)[0] || '';
+const requestedHeroKey = imageKey(heroImage);
 const resolvedHeroImage = resolveHubImage(heroImage, canonical, heading, 0, `${canonical}#hero`);
 const heroImageKey = imageKey(resolvedHeroImage);
+const heroResolvedFromExplicitRaster = Boolean(requestedHeroKey && requestedHeroKey === heroImageKey);
 const usedImageKeys = new Set<string>([heroImageKey]);
 const resolvedCards = cards.map((card, index) => {
   let image = resolveHubImage(card.image, card.href, card.title, index, canonical);
@@ -59,10 +61,10 @@ const resolvedCards = cards.map((card, index) => {
   const requestedKey = imageKey(card.image);
   const resolvedFromExplicitRaster = Boolean(requestedKey && requestedKey === key);
 
-  // Kolize explicitně zadaného obrázku karty s hero je chyba dat, ne důvod
-  // k tichému náhodnému fallbacku. Přesně tento případ dříve vytvořil
-  // vizuálně nesouvisející kartu na rozcestníku Sběr bylinek.
-  if (resolvedFromExplicitRaster && key === heroImageKey) {
+  // Tvrdě blokujeme jen skutečnou chybu dat: hero i karta mají výslovně
+  // zadaný stejný rastrový soubor. Pokud hero vzniklo automaticky ze SVG,
+  // necháme existující deduplikační fallback vybrat unikátní kartu.
+  if (heroResolvedFromExplicitRaster && resolvedFromExplicitRaster && key === heroImageKey) {
     throw new Error(`Rozcestník ${canonical} používá stejný explicitní obrázek pro hero i kartu ${card.title}: ${key}. Zvolte pro kartu vlastní obrázek.`);
   }
 
