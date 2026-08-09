@@ -1,10 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const outputDir = path.join(siteRoot, 'public/media/generated/prirodni-lekarna');
+const publicRoot = path.join(siteRoot, 'public');
+const importedRoot = path.join(publicRoot, 'media/imported');
+const outputDir = path.join(publicRoot, 'media/generated/prirodni-lekarna');
+const generatedPoolFile = path.join(siteRoot, 'src/lib/hub-photo-pool.generated.ts');
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 
 const photoSources = [
@@ -53,6 +57,58 @@ const outputs = [
   },
 ];
 
+function walk(directory) {
+  const files = [];
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...walk(target));
+    else if (entry.isFile()) files.push(target);
+  }
+  return files;
+}
+
+function publicUrl(file) {
+  return `/${path.relative(publicRoot, file).split(path.sep).join('/')}`;
+}
+
+function buildImportedPhotoPool() {
+  if (!fs.existsSync(importedRoot)) throw new Error('Chybí adresář public/media/imported pro fotografický pool.');
+
+  const rasterPattern = /\.(?:avif|jpe?g|png|webp)$/iu;
+  const genericPattern = /(?:logo|logotyp|favicon|avatar|placeholder|brand|banner|reklam|screenshot|screen-shot)|(?:^|[-_])(?:300x250|570x240|728x90|970x250|970x310)(?:[-_.]|$)/iu;
+  const seenHashes = new Set();
+  const photos = [];
+
+  for (const file of walk(importedRoot).sort((a, b) => a.localeCompare(b, 'cs'))) {
+    if (!rasterPattern.test(file)) continue;
+    const name = path.basename(file);
+    if (genericPattern.test(name)) continue;
+    const stats = fs.statSync(file);
+    if (stats.size < 8000) continue;
+
+    const bytes = fs.readFileSync(file);
+    const hash = createHash('sha256').update(bytes).digest('hex');
+    if (seenHashes.has(hash)) continue;
+    seenHashes.add(hash);
+    photos.push(publicUrl(file));
+  }
+
+  if (photos.length < 24) {
+    throw new Error(`Pro fotografické rozcestníky bylo nalezeno jen ${photos.length} unikátních rastrových fotografií; očekáváno alespoň 24.`);
+  }
+
+  const generatedSource = [
+    '// AUTO-GENERATED FILE. Do not edit manually.',
+    '// Vzniká při prebuild z unikátních rastrových fotografií v public/media/imported.',
+    `export const IMPORTED_HUB_PHOTOS = ${JSON.stringify(photos, null, 2)} as const;`,
+    '',
+  ].join('\n');
+  fs.writeFileSync(generatedPoolFile, generatedSource, 'utf8');
+  return photos.length;
+}
+
+const importedPoolSize = buildImportedPhotoPool();
+
 fs.rmSync(outputDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
 
@@ -96,4 +152,5 @@ for (const item of outputs) {
   }
 }
 
-console.log(`Vygenerováno ${outputs.length} čistě fotografických WebP variant pro obrazové karty a rozcestníky.`);
+console.log(`Fotografický pool rozcestníků: ${importedPoolSize} unikátních importovaných fotografií.`);
+console.log(`Vygenerováno ${outputs.length} čistě fotografických WebP variant pro speciální obrazové karty a rozcestníky.`);
