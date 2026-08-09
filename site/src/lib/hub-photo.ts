@@ -2,12 +2,17 @@ const PHOTO_POOL = [
   '/media/generated/prirodni-lekarna/3obr-07cd0380.webp',
   '/media/generated/prirodni-lekarna/byliny-6083d43d.webp',
   '/media/generated/prirodni-lekarna/sirupyuvod-78eb30cb.webp',
-  '/media/generated/prirodni-lekarna/bylinkovymagazin-58281674.webp',
   '/media/generated/prirodni-lekarna/sklenice-na-sirupy-a-zavarovani-4b170c4d.webp',
   '/media/generated/prirodni-lekarna/byliny-300x300-eca005d2.webp',
+  '/media/generated/prirodni-lekarna/bylinkovymagazin-58281674.webp',
   '/media/generated/prirodni-lekarna/kontryhel-obecny-caj-sber-suseni-40c765ff.webp',
-  '/media/generated/prirodni-lekarna/masti-a-balzamy-v2.webp',
-  '/media/generated/prirodni-lekarna/bylinkova-herna-photo.webp',
+  '/media/generated/prirodni-lekarna/3obr-07cd0380-mirror.webp',
+  '/media/generated/prirodni-lekarna/byliny-6083d43d-mirror.webp',
+  '/media/generated/prirodni-lekarna/sirupyuvod-78eb30cb-mirror.webp',
+  '/media/generated/prirodni-lekarna/sklenice-na-sirupy-a-zavarovani-4b170c4d-mirror.webp',
+  '/media/generated/prirodni-lekarna/byliny-300x300-eca005d2-mirror.webp',
+  '/media/generated/prirodni-lekarna/bylinkovymagazin-58281674-mirror.webp',
+  '/media/generated/prirodni-lekarna/kontryhel-obecny-caj-sber-suseni-40c765ff-mirror.webp',
 ] as const;
 
 function normalize(value = '') {
@@ -19,35 +24,50 @@ function normalize(value = '') {
 
 function stableIndex(value = '') {
   let hash = 0;
-  for (const character of value) hash = ((hash * 31) + character.codePointAt(0)) >>> 0;
+  for (const character of value) hash = ((hash * 31) + (character.codePointAt(0) || 0)) >>> 0;
   return hash % PHOTO_POOL.length;
 }
 
+function parentRoute(href = '') {
+  const clean = href.split(/[?#]/u)[0] || '';
+  const parts = clean.split('/').filter(Boolean);
+  if (parts.length <= 1) return '/';
+  parts.pop();
+  return `/${parts.join('/')}/`;
+}
+
 export function isLegacyHubSvg(src = '') {
-  return /^\/obrazky\/.*\.svg(?:[?#].*)?$/iu.test(src);
+  return /\.svg(?:[?#].*)?$/iu.test(src);
 }
 
-export function thematicHubPhoto(href = '', title = '', position = 0) {
-  const value = normalize(`${href} ${title}`);
-
-  if (/mast|balzam|kloub|sval|kuze|plet|pohyb/u.test(value)) return PHOTO_POOL[7];
-  if (/caj|kontryhel|zen|hormon|menstru|plodnost/u.test(value)) return PHOTO_POOL[6];
-  if (/sklen|lahv|olej|macer|tinktur|kapk/u.test(value)) return PHOTO_POOL[4];
-  if (/sirup|med|slad|zavar/u.test(value)) return PHOTO_POOL[2];
-  if (/imunit|obranyschop|detox|ocist|jatra|srdce|cev/u.test(value)) return PHOTO_POOL[0];
-  if (/sus|ledvin|mocov|bylin|trav|zaziv/u.test(value)) return PHOTO_POOL[5];
-  if (/sber|pestov|zahrad|etika|vcely|motyl|prirod/u.test(value)) return PHOTO_POOL[3];
-  if (/limon|napoj|fresh|ferment|ovoce/u.test(value)) return PHOTO_POOL[1];
-  if (/hern|hra|pexeso/u.test(value)) return PHOTO_POOL[8];
-
-  return PHOTO_POOL[(stableIndex(`${href}|${title}`) + position) % PHOTO_POOL.length];
+export function keyedHubPhoto(href = '', title = '') {
+  return PHOTO_POOL[stableIndex(`${normalize(href)}|${normalize(title)}`)];
 }
 
-export function resolveHubImage(src = '', href = '', title = '', position = 0) {
-  if (!src || isLegacyHubSvg(src)) return thematicHubPhoto(href, title, position);
+export function thematicHubPhoto(href = '', title = '', position = 0, group = '') {
+  const sharedGroup = normalize(group || parentRoute(href) || title || '/');
+  return PHOTO_POOL[(stableIndex(sharedGroup) + Math.max(0, position)) % PHOTO_POOL.length];
+}
+
+export function resolveHubImage(src = '', href = '', title = '', position = 0, group = '') {
+  if (!src || isLegacyHubSvg(src)) {
+    return group || position > 0
+      ? thematicHubPhoto(href, title, position, group)
+      : keyedHubPhoto(href, title);
+  }
   return src;
+}
+
+export function uniqueHubPhoto(used: Set<string>, href = '', title = '', position = 0, group = '') {
+  for (let offset = 0; offset < PHOTO_POOL.length; offset += 1) {
+    const candidate = thematicHubPhoto(href, title, position + offset, group);
+    if (!used.has(candidate)) return candidate;
+  }
+  return keyedHubPhoto(`${href}-${position}`, title);
 }
 
 export function hubPhotoAlt(title = '') {
   return title ? `Fotografický motiv k tématu ${title}` : 'Bylinky a domácí bylinné zpracování';
 }
+
+export const hubPhotoPoolSize = PHOTO_POOL.length;
