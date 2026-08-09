@@ -8,6 +8,24 @@ const errors = [];
 const warnings = [];
 const pages = [];
 
+const GRID_SELECTORS = [
+  '.heritage-directory__grid',
+  '.illustrated-directory',
+  '.preparation-grid',
+  '.preparation-category-grid',
+  '.articles-grid',
+];
+const CARD_SELECTOR = '.heritage-directory__card, .illustrated-directory-card, .preparation-card, .preparation-category-card, .article-card';
+const HERO_SELECTOR = [
+  '.heritage-hub-hero > img',
+  '.visual-section-hero .visual-section-hero-art > img',
+  '.preparation-category-hero > img',
+  '.preparations-hero > img',
+  '.recipe-hero > img',
+  '.article-header > .hero-image',
+  '.legacy-home-hero > .home-hero-original-image',
+].join(', ');
+
 async function walk(directory) {
   const output = [];
   for (const name of await readdir(directory)) {
@@ -29,8 +47,12 @@ function routeFromFile(relativePath) {
   return `/${relativePath}`;
 }
 
-function isLegacySvg(src = '') {
-  return /^\/obrazky\/.*\.svg(?:[?#].*)?$/iu.test(src);
+function isSvg(src = '') {
+  return /\.svg(?:[?#].*)?$/iu.test(src);
+}
+
+function cleanSrc(src = '') {
+  return src.split(/[?#]/u)[0] || '';
 }
 
 const htmlFiles = (await walk(DIST)).filter((file) => file.endsWith('.html'));
@@ -38,48 +60,58 @@ for (const file of htmlFiles) {
   const relativePath = relative(file);
   const html = await readFile(file, 'utf8');
   const $ = cheerio.load(html);
-  const cardSet = $('.heritage-directory__card, .restored-directory .illustrated-directory-card--photo, .preparation-card, .preparation-category-card');
-  const heroSet = $('.heritage-hub-hero > img, .visual-section-hero > img, .preparation-category-hero > img, .preparations-hero > img');
-  if (!cardSet.length && !heroSet.length) continue;
-
   const route = routeFromFile(relativePath);
-  const imageSources = [];
-  cardSet.each((index, element) => {
-    const card = $(element);
-    const image = card.find('img').first();
-    const src = (image.attr('src') || '').trim();
-    const alt = image.attr('alt');
-    if (!src) errors.push(`${route}: obrazová karta ${index + 1} nemá obrázek`);
-    else imageSources.push(src);
-    if (alt === undefined || !alt.trim()) errors.push(`${route}: obrazová karta ${index + 1} nemá smysluplný alt`);
-    if (isLegacySvg(src)) errors.push(`${route}: obrazová karta ${index + 1} stále používá starý SVG placeholder ${src}`);
-  });
+  const pageGrids = [];
 
-  const heroSources = [];
-  heroSet.each((index, element) => {
-    const src = ($(element).attr('src') || '').trim();
-    if (src) heroSources.push(src);
-    if (isLegacySvg(src)) errors.push(`${route}: hlavní hero ${index + 1} stále používá starý SVG placeholder ${src}`);
-  });
+  for (const selector of GRID_SELECTORS) {
+    $(selector).each((gridIndex, gridElement) => {
+      const grid = $(gridElement);
+      const cards = grid.find(CARD_SELECTOR);
+      if (!cards.length) return;
 
-  const uniqueImages = new Set(imageSources);
-  if (imageSources.length >= 6 && uniqueImages.size < Math.ceil(imageSources.length * 0.5)) {
-    warnings.push(`${route}: ${imageSources.length} obrazových karet používá jen ${uniqueImages.size} různých podkladů`);
+      const imageSources = [];
+      cards.each((cardIndex, cardElement) => {
+        const card = $(cardElement);
+        const image = card.find('img').first();
+        const src = cleanSrc((image.attr('src') || '').trim());
+        const alt = image.attr('alt');
+        const isArticleCard = card.hasClass('article-card');
+
+        if (!src) errors.push(`${route}: ${selector} #${gridIndex + 1}, karta ${cardIndex + 1} nemá obrázek`);
+        else imageSources.push(src);
+        if (!isArticleCard && (alt === undefined || !alt.trim())) {
+          errors.push(`${route}: ${selector} #${gridIndex + 1}, karta ${cardIndex + 1} nemá smysluplný alt`);
+        }
+        if (isSvg(src)) errors.push(`${route}: ${selector} #${gridIndex + 1}, karta ${cardIndex + 1} používá SVG místo fotografie ${src}`);
+      });
+
+      const uniqueImages = new Set(imageSources);
+      const duplicates = imageSources.filter((src, index) => imageSources.indexOf(src) !== index);
+      if (duplicates.length) {
+        errors.push(`${route}: ${selector} #${gridIndex + 1} opakuje fotografii: ${[...new Set(duplicates)].join(', ')}`);
+      }
+      if (cards.length <= 14 && uniqueImages.size !== imageSources.length) {
+        errors.push(`${route}: ${selector} #${gridIndex + 1} má ${imageSources.length} karet, ale jen ${uniqueImages.size} různých fotografií`);
+      }
+
+      pageGrids.push({ selector, index: gridIndex + 1, cards: cards.length, uniqueImages: uniqueImages.size });
+    });
   }
 
-  pages.push({
-    route,
-    cards: cardSet.length,
-    uniqueImages: uniqueImages.size,
-    heroes: heroSources,
-    legacySvgCards: imageSources.filter(isLegacySvg),
-    legacySvgHeroes: heroSources.filter(isLegacySvg),
+  const heroes = [];
+  $(HERO_SELECTOR).each((index, element) => {
+    const src = cleanSrc(($(element).attr('src') || '').trim());
+    if (!src) errors.push(`${route}: hero ${index + 1} nemá obrázek`);
+    else heroes.push(src);
+    if (isSvg(src)) errors.push(`${route}: hero ${index + 1} používá SVG místo fotografie ${src}`);
   });
+
+  if (pageGrids.length || heroes.length) pages.push({ route, grids: pageGrids, heroes });
 }
 
 const report = {
   generatedAt: new Date().toISOString(),
-  auditedHubPages: pages.length,
+  auditedPages: pages.length,
   errors,
   warnings,
   pages,
@@ -88,9 +120,9 @@ await writeFile(path.join(DIST, 'hub-visual-audit.json'), JSON.stringify(report,
 await writeFile(
   path.join(DIST, 'hub-visual-audit.md'),
   [
-    '# Audit obrazových rozcestníků',
+    '# Audit fotografických karet a rozcestníků',
     '',
-    `- Rozcestníků a receptových přehledů: ${pages.length}`,
+    `- Kontrolovaných stránek: ${pages.length}`,
     `- Chyb: ${errors.length}`,
     `- Varování: ${warnings.length}`,
     '',
@@ -103,8 +135,8 @@ await writeFile(
   'utf8',
 );
 
-console.log(`Hub visual audit: ${pages.length} hub/receptových pages, ${errors.length} errors, ${warnings.length} warnings.`);
+console.log(`Hub visual audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings; SVG na kartách a opakované fotografie v jedné mřížce jsou zakázané.`);
 if (errors.length) {
-  errors.slice(0, 200).forEach((error) => console.error(`ERROR ${error}`));
+  errors.slice(0, 300).forEach((error) => console.error(`ERROR ${error}`));
   process.exitCode = 1;
 }
