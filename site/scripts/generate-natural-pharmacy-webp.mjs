@@ -6,11 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const publicRoot = path.join(siteRoot, 'public');
-const sourcePhotoRoots = [
-  path.join(publicRoot, 'media/imported'),
-  path.join(publicRoot, 'media/original'),
-];
-const outputDir = path.join(publicRoot, 'media/generated/prirodni-lekarna');
+const generatedMediaRoot = path.join(publicRoot, 'media/generated');
+const outputDir = path.join(generatedMediaRoot, 'prirodni-lekarna');
 const generatedPoolFile = path.join(siteRoot, 'src/lib/hub-photo-pool.generated.ts');
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
 
@@ -60,12 +57,20 @@ const outputs = [
   },
 ];
 
+function isGeneratedMediaPath(target) {
+  const absolute = path.resolve(target);
+  return absolute === generatedMediaRoot || absolute.startsWith(`${generatedMediaRoot}${path.sep}`);
+}
+
 function walk(directory) {
   const files = [];
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     const target = path.join(directory, entry.name);
-    if (entry.isDirectory()) files.push(...walk(target));
-    else if (entry.isFile()) files.push(target);
+    if (entry.isDirectory()) {
+      if (!isGeneratedMediaPath(target)) files.push(...walk(target));
+    } else if (entry.isFile()) {
+      files.push(target);
+    }
   }
   return files;
 }
@@ -75,21 +80,19 @@ function publicUrl(file) {
 }
 
 function buildSourcePhotoPool() {
-  for (const root of sourcePhotoRoots) {
-    if (!fs.existsSync(root)) throw new Error(`Chybí zdrojový adresář pro fotografický pool: ${path.relative(siteRoot, root)}`);
-  }
+  if (!fs.existsSync(publicRoot)) throw new Error('Chybí public adresář pro fotografický pool.');
 
   const rasterPattern = /\.(?:avif|jpe?g|png|webp)$/iu;
-  const strongExcludePattern = /(?:logo|logotyp|favicon|avatar|placeholder|brand|banner|reklam|advert|screenshot|screen-shot|qr-code|qrcode)|(?:^|[-_])(?:300x250|570x240|728x90|970x250|970x310)(?:[-_.]|$)/iu;
+  const strongExcludePattern = /(?:logo|logotyp|favicon|avatar|placeholder|brand|banner|reklam|advert|screenshot|screen-shot|qr-code|qrcode|sprite|icon)|(?:^|[-_])(?:300x250|570x240|728x90|970x250|970x310)(?:[-_.]|$)/iu;
   const seenHashes = new Set();
   const photos = [];
 
-  const candidates = sourcePhotoRoots
-    .flatMap((root) => walk(root))
-    .sort((a, b) => a.localeCompare(b, 'cs'));
+  const candidates = walk(publicRoot).sort((a, b) => a.localeCompare(b, 'cs'));
 
   for (const file of candidates) {
     if (!rasterPattern.test(file)) continue;
+    if (isGeneratedMediaPath(file)) continue;
+
     const relative = path.relative(publicRoot, file).split(path.sep).join('/');
     if (strongExcludePattern.test(relative)) continue;
 
@@ -103,13 +106,13 @@ function buildSourcePhotoPool() {
     photos.push(publicUrl(file));
   }
 
-  if (photos.length < 73) {
-    throw new Error(`Pro fotografické rozcestníky bylo nalezeno jen ${photos.length} unikátních zdrojových fotografií; známá největší mřížka potřebuje nejméně 73.`);
+  if (photos.length < 82) {
+    throw new Error(`Pro fotografické rozcestníky bylo nalezeno jen ${photos.length} unikátních skutečných rastrových zdrojů; největší mřížka potřebuje více než 81.`);
   }
 
   const generatedSource = [
     '// AUTO-GENERATED FILE. Do not edit manually.',
-    '// Vzniká při prebuild z unikátních rastrových fotografií v public/media/imported a public/media/original.',
+    '// Vzniká při prebuild z unikátních rastrových souborů v public; media/generated je záměrně vyloučeno.',
     `export const IMPORTED_HUB_PHOTOS = ${JSON.stringify(photos, null, 2)} as const;`,
     '',
   ].join('\n');
@@ -162,5 +165,5 @@ for (const item of outputs) {
   }
 }
 
-console.log(`Fotografický pool rozcestníků: ${sourcePoolSize} unikátních zdrojových fotografií bez zrcadlených kopií.`);
+console.log(`Fotografický pool rozcestníků: ${sourcePoolSize} unikátních skutečných rastrových zdrojů; media/generated je vyloučeno.`);
 console.log(`Vygenerováno ${outputs.length} čistě fotografických WebP variant pro speciální obrazové karty a rozcestníky.`);
