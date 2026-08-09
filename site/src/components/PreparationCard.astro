@@ -1,13 +1,14 @@
 ---
 import type { HerbalPreparation } from '../data/herbal-preparations';
 import { preparationCategories, preparationPath } from '../data/herbal-preparations';
-import { hubPhotoAlt, resolveHubImage } from '../lib/hub-photo';
+import { hubPhotoAlt } from '../lib/hub-photo';
+import { preparationPhoto } from '../lib/preparation-photo';
 
 interface Props { recipe: HerbalPreparation; position?: number }
 const { recipe, position = 0 } = Astro.props;
 const meta = preparationCategories[recipe.category];
 const href = preparationPath(recipe);
-const image = resolveHubImage(`/obrazky/recepty/${recipe.slug}.svg`, href, `${meta.title} ${recipe.title}`, position, Astro.url.pathname);
+const image = preparationPhoto(`${Astro.url.pathname}#preparation-cards`, position);
 ---
 <article class="preparation-card">
   <a class="preparation-card-image" href={href} aria-label={`Otevřít recept ${recipe.title}`}>
