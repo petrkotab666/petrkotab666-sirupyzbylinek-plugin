@@ -94,7 +94,7 @@ const collectingArticles = allArticles
   {collectingArticles.length > 0 && (
     <section class="section-wrap section-articles">
       <div class="section-heading centered-heading"><span>Další návody</span><h2>Články o sběru a zpracování</h2></div>
-      <div class="articles-grid">{collectingArticles.map((entry) => <ArticleCard entry={entry} />)}</div>
+      <div class="articles-grid">{collectingArticles.map((entry, index) => <ArticleCard entry={entry} position={index} />)}</div>
     </section>
   )}
 </HeritageHubLayout>
