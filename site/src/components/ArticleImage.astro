@@ -1,7 +1,7 @@
 ---
 import type { ArticleEntry } from '../lib/articles';
-import { topicImage } from '../lib/articles';
-import { displayArticleImage, emergencyArticleImage } from '../lib/display-image';
+import { displayArticleImage } from '../lib/display-image';
+import { resolveHubImage, thematicHubPhoto } from '../lib/hub-photo';
 
 interface Props {
   entry: ArticleEntry;
@@ -10,6 +10,7 @@ interface Props {
   fetchpriority?: 'high' | 'low' | 'auto';
   decorative?: boolean;
   mode?: 'article' | 'topic';
+  position?: number;
 }
 
 const {
@@ -19,13 +20,17 @@ const {
   fetchpriority = 'auto',
   decorative = false,
   mode = 'article',
+  position = 0,
 } = Astro.props;
 
-const src = mode === 'topic' ? topicImage(entry) : displayArticleImage(entry);
-const fallback = emergencyArticleImage(entry);
+const group = Astro.url.pathname;
+const preferred = mode === 'topic'
+  ? thematicHubPhoto(entry.data.path, entry.data.title, position, group)
+  : displayArticleImage(entry);
+const src = resolveHubImage(preferred, entry.data.path, entry.data.title, position, group);
+const fallback = thematicHubPhoto(entry.data.path, entry.data.title, position + 7, `${group}#fallback`);
 const alt = decorative ? '' : entry.data.title;
-const imageKind = src.endsWith('.svg') ? 'illustration' : 'photo';
-const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)};this.dataset.imageKind='illustration'`;
+const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)};this.dataset.imageKind='photo'`;
 ---
 <img
   class={className}
@@ -36,6 +41,6 @@ const onerror = `this.onerror=null;this.src=${JSON.stringify(fallback)};this.dat
   loading={loading}
   decoding="async"
   fetchpriority={fetchpriority}
-  data-image-kind={imageKind}
+  data-image-kind="photo"
   onerror={onerror}
 />
