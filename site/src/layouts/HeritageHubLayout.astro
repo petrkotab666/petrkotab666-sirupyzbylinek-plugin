@@ -51,17 +51,19 @@ const {
 
 const imageKey = (src = '') => src.split(/[?#]/u)[0] || '';
 const resolvedHeroImage = resolveHubImage(heroImage, canonical, heading, 0, `${canonical}#hero`);
-const usedImageKeys = new Set<string>([imageKey(resolvedHeroImage)]);
+const heroImageKey = imageKey(resolvedHeroImage);
+const usedImageKeys = new Set<string>([heroImageKey]);
 const resolvedCards = cards.map((card, index) => {
   let image = resolveHubImage(card.image, card.href, card.title, index, canonical);
   let key = imageKey(image);
   const requestedKey = imageKey(card.image);
   const resolvedFromExplicitRaster = Boolean(requestedKey && requestedKey === key);
 
-  // Pokud autor karty výslovně zadal rastrový obrázek, nesmí se při kolizi
-  // potichu nahradit náhodným fallbackem. Taková chyba musí být vidět už v buildu.
-  if (resolvedFromExplicitRaster && usedImageKeys.has(key)) {
-    throw new Error(`Rozcestník ${canonical} opakuje explicitní obrázek ${key} u karty ${card.title}; zvolte pro kartu vlastní obrázek.`);
+  // Kolize explicitně zadaného obrázku karty s hero je chyba dat, ne důvod
+  // k tichému náhodnému fallbacku. Přesně tento případ dříve vytvořil
+  // vizuálně nesouvisející kartu na rozcestníku Sběr bylinek.
+  if (resolvedFromExplicitRaster && key === heroImageKey) {
+    throw new Error(`Rozcestník ${canonical} používá stejný explicitní obrázek pro hero i kartu ${card.title}: ${key}. Zvolte pro kartu vlastní obrázek.`);
   }
 
   if (!key || usedImageKeys.has(key)) {
