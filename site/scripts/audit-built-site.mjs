@@ -18,6 +18,9 @@ const BROKEN_FEATURE_MARKERS = [
   /vhodné i pro děti/iu,
 ];
 
+const PHOTO_EXT = /\.(?:avif|jpe?g|png|webp)(?:[?#].*)?$/iu;
+const SVG_EXT = /\.svg(?:[?#].*)?$/iu;
+
 async function filesIn(directory) {
   const result = [];
   for (const name of await readdir(directory)) {
@@ -88,6 +91,23 @@ function htmlPathForHref(href) {
   return `${clean.replace(/^\//u, '').replace(/\/$/u, '')}/index.html`;
 }
 
+function heroSrcFrom(html) {
+  const heroTag = html.match(/<img\b[^>]*class=["'][^"']*hero-image[^"']*["'][^>]*>/iu)?.[0] || '';
+  return heroTag.match(/\bsrc=["']([^"']+)["']/iu)?.[1] || '';
+}
+
+function requirePhotographicHero(label, src) {
+  if (!src) {
+    errors.push(`${label}: missing hero image`);
+    return;
+  }
+  if (SVG_EXT.test(src)) errors.push(`${label}: SVG is forbidden as hero: ${JSON.stringify(src)}`);
+  if (!PHOTO_EXT.test(src)) errors.push(`${label}: hero is not a supported photographic raster image: ${JSON.stringify(src)}`);
+  if (/(?:logo|logotyp|brand|kampan|banner|placeholder)/iu.test(src)) {
+    errors.push(`${label}: generic, logo or advertising image used as hero: ${JSON.stringify(src)}`);
+  }
+}
+
 const allGeneratedFiles = await filesIn(DIST);
 const htmlFiles = allGeneratedFiles.filter((file) => file.endsWith('.html'));
 const allFiles = new Set(allGeneratedFiles.map((file) => path.relative(DIST, file).replaceAll(path.sep, '/')));
@@ -123,6 +143,8 @@ for (const file of htmlFiles) {
     articlePages += 1;
     const heroCount = (html.match(/class="hero-image"/g) || []).length;
     if (heroCount !== 1) errors.push(`${relative}: expected one hero image, found ${heroCount}`);
+    const articleHero = heroSrcFrom(html);
+    if (articleHero) requirePhotographicHero(relative, articleHero);
     if (!html.includes('property="og:image"')) errors.push(`${relative}: missing Open Graph image`);
     if (!html.includes('application/ld+json')) errors.push(`${relative}: missing structured data`);
 
@@ -190,9 +212,12 @@ if (!navMatch) {
   }
 }
 
-const gameLaunchCount = (gamesLanding.match(/class="game-launch-card"/g) || []).length;
-if (gameLaunchCount !== 3) errors.push(`bylinkova-herna/index.html: expected 3 playable games, found ${gameLaunchCount}`);
-for (const route of ['/bylinkove-pexeso/', '/poznej-bylinku/', '/bylinkovy-mistr/']) {
+const gameRoutes = ['/bylinkove-pexeso/', '/poznej-bylinku/', '/bylinkovy-mistr/'];
+const gameLaunchCount = gameRoutes.filter((route) => gamesLanding.includes(`href="${route}"`)).length;
+const directoryCards = (gamesLanding.match(/class="[^"]*illustrated-directory-card[^"]*"/gu) || []).length;
+if (gameLaunchCount !== 3) errors.push(`bylinkova-herna/index.html: expected 3 playable game links, found ${gameLaunchCount}`);
+if (directoryCards !== 3) errors.push(`bylinkova-herna/index.html: expected 3 photographic game cards, found ${directoryCards}`);
+for (const route of gameRoutes) {
   if (!gamesLanding.includes(`href="${route}"`)) errors.push(`bylinkova-herna/index.html: missing game link ${route}`);
 }
 if (!memoryGame.includes('data-game="memory"')) errors.push('bylinkove-pexeso/index.html: memory game interface is missing');
@@ -212,32 +237,23 @@ if (/načítáme další výhodné nabídky/iu.test(dealsText)) errors.push('dea
 
 const cultivation = await readRequired('nejcastejsi-chyby-pri-pestovani-bylinek/index.html');
 const cultivationText = plainText(cultivation);
-const kickerRaw = cultivation.match(/class="article-kicker"[^>]*>([\s\S]*?)<\/div>/i)?.[1] || '';
-const heroTag = cultivation.match(/<img\b[^>]*class="hero-image"[^>]*>/i)?.[0]
-  || cultivation.match(/<img\b[^>]*class=["'][^"']*hero-image[^"']*["'][^>]*>/i)?.[0]
-  || '';
-const heroSrc = heroTag.match(/\bsrc=["']([^"']+)["']/i)?.[1] || '';
+const kickerRaw = cultivation.match(/class="article-kicker"[^>]*>([\s\S]*?)<\/div>/iu)?.[1] || '';
+const cultivationHeroSrc = heroSrcFrom(cultivation);
 const kicker = plainText(kickerRaw);
-
-console.log(`Cultivation render check: kicker=${JSON.stringify(kicker)}; heroSrc=${JSON.stringify(heroSrc)}; contextAds=${hasContextAds(cultivation)}; productFeed=${hasProductFeed(cultivation)}`);
-
+console.log(`Cultivation render check: kicker=${JSON.stringify(kicker)}; heroSrc=${JSON.stringify(cultivationHeroSrc)}; contextAds=${hasContextAds(cultivation)}; productFeed=${hasProductFeed(cultivation)}`);
 if (kicker !== 'Pěstování bylinek') errors.push(`cultivation article: expected category Pěstování bylinek, rendered ${JSON.stringify(kicker)}`);
-if (!heroSrc.includes('/obrazky/pestovani.svg')) errors.push(`cultivation article: expected thematic cultivation image, rendered ${JSON.stringify(heroSrc)}`);
+requirePhotographicHero('cultivation article', cultivationHeroSrc);
 requireMonetization('nejcastejsi-chyby-pri-pestovani-bylinek/index.html', cultivation);
 for (const pattern of banned) {
   if (pattern.test(cultivationText)) errors.push(`cultivation article: contains banned text ${pattern}`);
 }
 
 const repellent = await readRequired('prirodni-repelenty-proti-komarum-a-klistatum/index.html');
-const repellentHeroTag = repellent.match(/<img\b[^>]*class="hero-image"[^>]*>/i)?.[0]
-  || repellent.match(/<img\b[^>]*class=["'][^"']*hero-image[^"']*["'][^>]*>/i)?.[0]
-  || '';
-const repellentHeroSrc = repellentHeroTag.match(/\bsrc=["']([^"']+)["']/i)?.[1] || '';
+const repellentHeroSrc = heroSrcFrom(repellent);
 console.log(`Repellent render check: heroSrc=${JSON.stringify(repellentHeroSrc)}; contextAds=${hasContextAds(repellent)}; productFeed=${hasProductFeed(repellent)}`);
-if (!repellentHeroSrc) errors.push('repellent article: missing hero image');
-if (/(?:logo|logotyp|brand|kampan|banner|placeholder)/iu.test(repellentHeroSrc)) errors.push(`repellent article: generic or advertising image used as hero: ${JSON.stringify(repellentHeroSrc)}`);
-if (!repellentHeroSrc.includes('/obrazky/repelenty.svg') && !repellentHeroSrc.includes('/prirodni-repelenty-proti-komarum-a-klistatum/')) {
-  errors.push(`repellent article: hero is not tied to the article topic: ${JSON.stringify(repellentHeroSrc)}`);
+requirePhotographicHero('repellent article', repellentHeroSrc);
+if (repellentHeroSrc && cultivationHeroSrc && repellentHeroSrc === cultivationHeroSrc) {
+  errors.push(`repellent article: hero duplicates cultivation article hero ${JSON.stringify(repellentHeroSrc)}`);
 }
 requireMonetization('prirodni-repelenty-proti-komarum-a-klistatum/index.html', repellent);
 
