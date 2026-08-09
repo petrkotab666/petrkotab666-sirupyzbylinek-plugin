@@ -9,14 +9,14 @@ import {
   preparationPath,
   type PreparationCategory,
 } from '../data/herbal-preparations';
-import { hubPhotoAlt, resolveHubImage } from '../lib/hub-photo';
+import { hubPhotoAlt } from '../lib/hub-photo';
+import { preparationPhoto } from '../lib/preparation-photo';
 
 interface Props { category: PreparationCategory }
 const { category } = Astro.props;
 const meta = preparationCategories[category];
 const recipes = preparationsByCategory(category);
-const legacyImage = recipes[0] ? `/obrazky/recepty-sceny/${recipes[0].slug}.svg` : '/obrazky/bylinne-pripravky-hero.svg';
-const image = resolveHubImage(legacyImage, meta.path, meta.title, 0, `${meta.path}#hero`);
+const image = preparationPhoto(`${meta.path}#hero`, 0);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
