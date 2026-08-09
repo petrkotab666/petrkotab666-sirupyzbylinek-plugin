@@ -103,8 +103,8 @@ function buildSourcePhotoPool() {
     photos.push(publicUrl(file));
   }
 
-  if (photos.length < 96) {
-    throw new Error(`Pro fotografické rozcestníky bylo nalezeno jen ${photos.length} unikátních zdrojových fotografií; pro velké mřížky je potřeba alespoň 96.`);
+  if (photos.length < 73) {
+    throw new Error(`Pro fotografické rozcestníky bylo nalezeno jen ${photos.length} unikátních zdrojových fotografií; známá největší mřížka potřebuje nejméně 73.`);
   }
 
   const generatedSource = [
