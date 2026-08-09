@@ -59,7 +59,7 @@ const sections = [
     href: '/bylinkova-herna/',
     art: 'games',
     image: '/media/generated/prirodni-lekarna/bylinkova-herna-photo.webp',
-    imageAlt: 'Bylinkové pexeso a herní prvky mezi čerstvými bylinkami',
+    imageAlt: 'Bylinková zahrada jako fotografický motiv pro herní sekci',
     kicker: 'Pro děti i dospělé',
     title: 'Bylinková herna',
     text: 'Pexeso, poznávačky a arkádová hra Bylinkový mistr.',
@@ -114,7 +114,7 @@ const sections = [
   {latest.length > 0 && (
     <section class="section-wrap latest">
       <div class="section-heading centered-heading"><span>Nově na webu</span><h2>Nejnovější články</h2><p>Nové recepty, rady a sezónní inspirace.</p></div>
-      <div class="articles-grid">{latest.map((entry) => <ArticleCard entry={entry} />)}</div>
+      <div class="articles-grid">{latest.map((entry, index) => <ArticleCard entry={entry} position={index} />)}</div>
     </section>
   )}
 
