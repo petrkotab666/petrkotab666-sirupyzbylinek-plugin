@@ -1,0 +1,35 @@
+name: Síťová kontrola Naše Kadaň
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/probe-nasekadan-network-20260811.yml'
+
+permissions: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: DNS, web a SSH
+        shell: bash
+        run: |
+          set -u
+          echo '=== DNS ==='
+          getent ahostsv4 nasekadan.cz || true
+          ip=$(getent ahostsv4 nasekadan.cz 2>/dev/null | awk 'NR==1{print $1}')
+          echo "IP=$ip"
+          echo '=== WEB ==='
+          stamp="${GITHUB_RUN_ID}-$(date +%s)"
+          curl -4 -kfsSL --connect-timeout 8 --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?probe=$stamp" || true
+          echo
+          echo '=== CAFE ==='
+          curl -4 -kfsSL --connect-timeout 8 --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html?probe=$stamp" -o /tmp/kultura.html || true
+          grep -F 'Cafe Lingua Poland v RADCE' /tmp/kultura.html >/dev/null 2>&1 && echo CAFE_LIVE=yes || echo CAFE_LIVE=no
+          echo '=== SLUNCE ==='
+          curl -4 -kfsSL --connect-timeout 8 --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html?probe=$stamp" -o /tmp/slunce.html || true
+          grep -F 'Poslední týden pro Slunce' /tmp/slunce.html >/dev/null 2>&1 && echo SLUNCE_LIVE=yes || echo SLUNCE_LIVE=no
+          echo '=== SSH PORT ==='
+          if [ -n "$ip" ]; then timeout 5 bash -c "</dev/tcp/$ip/22" && echo SSH22=open || echo SSH22=closed; fi
