@@ -1,0 +1,32 @@
+name: Ověřit živou rychlou bránu Naše Kadaň 2233
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-nasekadan-fast-bridge-2233.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ověřit veřejný server zvenčí
+        shell: bash
+        run: |
+          set -euo pipefail
+          for n in $(seq 1 8); do
+            stamp="${GITHUB_RUN_ID}-$n-$(date +%s)"
+            body="$(curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' "https://nasekadan.cz/bridge-health.txt?check=$stamp" || true)"
+            echo "$body"
+            if grep -Fq 'version=20260811-2233' <<<"$body"; then
+              echo 'FAST_BRIDGE_EXTERNAL_OK'
+              exit 0
+            fi
+            sleep 5
+          done
+          exit 1
