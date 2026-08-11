@@ -23,7 +23,8 @@ jobs:
           mkdir -p reports
           url='https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html'
           stamp="${GITHUB_RUN_ID}-$(date +%s)"
-          curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' "$url?probe=$stamp" -o /tmp/kultura.html || true
+          dns="$(getent ahostsv4 nasekadan.cz 2>/dev/null | awk '{print $1}' | sort -u | paste -sd, - || true)"
+          curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' -D /tmp/kultura.headers "$url?probe=$stamp" -o /tmp/kultura.html || true
           curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?probe=$stamp" -o /tmp/health.txt || true
           curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html?probe=$stamp" -o /tmp/slunce.html || true
           cafe=no
@@ -32,8 +33,11 @@ jobs:
           grep -Fq 'Poslední týden pro Slunce' /tmp/slunce.html 2>/dev/null && slunce=yes
           {
             echo "checked_at=$(date -u +%FT%TZ)"
+            echo "dns_ipv4=$dns"
             echo "cafe_lingua_live=$cafe"
             echo "slunce_live=$slunce"
+            echo '--- response-headers ---'
+            sed -n '1,30p' /tmp/kultura.headers 2>/dev/null || true
             echo '--- deployment-health ---'
             cat /tmp/health.txt 2>/dev/null || true
           } > reports/nasekadan-cafe-live.txt
