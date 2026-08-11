@@ -1,0 +1,36 @@
+name: Ověřit živou aktualizaci ZZS Kadaň
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/NASEKADAN_ZZS_VERIFY_TRIGGER.txt
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Načíst veřejný článek a ověřit doplnění
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://nasekadan.cz/clanky/zzs-kadan-garaz-mycka-2026.html'
+          ok=0
+          for n in $(seq 1 25); do
+            q="external-${GITHUB_RUN_ID}-${n}-$(date +%s)"
+            if curl -4 -kfsS -L --max-time 30 "$url?v=$q" -o /tmp/zzs.html; then
+              if grep -Fq 'Během stavby bude zajištěn nepřetržitý provoz z výjezdových základen.' /tmp/zzs.html \
+                && grep -Fq 'Projekty procesně spolu nesouvisí.' /tmp/zzs.html \
+                && grep -Fq 'AKTUALIZOVÁNO 11. SRPNA 2026' /tmp/zzs.html \
+                && grep -Fq 'finanční souvislost obou akcí' /tmp/zzs.html \
+                && grep -Fq 'data-promos data-context="sidebar"' /tmp/zzs.html \
+                && grep -Fq '/reklamy.js?' /tmp/zzs.html \
+                && ! grep -Fq 'Na odpověď záchranky ještě čekáme' /tmp/zzs.html; then
+                ok=1; break
+              fi
+            fi
+            sleep 4
+          done
+          test "$ok" = 1
+          echo LIVE_ZZS_VERIFIED
