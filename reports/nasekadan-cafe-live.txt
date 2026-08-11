@@ -1,6 +1,18 @@
-checked_at=2026-08-11T19:26:45Z
+checked_at=2026-08-11T19:30:53Z
+dns_ipv4=57.129.43.215
 cafe_lingua_live=no
 slunce_live=no
+--- response-headers ---
+HTTP/2 200 
+accept-ranges: bytes
+content-type: text/html; charset=utf-8
+etag: "dklk8puvju15hgk"
+last-modified: Mon, 10 Aug 2026 20:53:03 GMT
+server: Caddy
+vary: Accept-Encoding
+content-length: 22628
+date: Tue, 11 Aug 2026 19:30:52 GMT
+
 --- deployment-health ---
 site=nasekadan.cz
 status=ok
