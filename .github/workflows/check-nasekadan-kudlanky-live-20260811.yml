@@ -14,14 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Načíst živou stránku bez cache
+      - name: Načíst živou stránku a stav produkce bez cache
         id: check
         shell: bash
         run: |
           set -euo pipefail
           url='https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html'
           stamp="${GITHUB_RUN_ID}-$(date +%s)"
-          curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' "$url?livecheck=$stamp" -o /tmp/live.html
+          curl -4 -kfsSL --max-time 30 -D /tmp/headers.txt -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' "$url?livecheck=$stamp" -o /tmp/live.html
+          curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?livecheck=$stamp" -o /tmp/health.txt || true
+          curl -4 -kisS --max-time 30 -X OPTIONS "https://nasekadan.cz/?livecheck=$stamp" -o /tmp/options.txt || true
           python3 - <<'PY'
           from pathlib import Path
           s=Path('/tmp/live.html').read_text(encoding='utf-8',errors='replace')
@@ -31,22 +33,27 @@ jobs:
             'new_text':'prodloužil až do konce srpna' in s,
             'old_title':'Zoopark Chomutov: poslední dny výstavy kudlanek' in s,
           }
-          print(checks)
-          Path('/tmp/result.txt').write_text('\n'.join(f'{k}={str(v).lower()}' for k,v in checks.items())+'\n',encoding='utf-8')
-          raise SystemExit(0 if checks['new_time'] and checks['new_title'] and checks['new_text'] and not checks['old_title'] else 2)
+          health=Path('/tmp/health.txt').read_text(encoding='utf-8',errors='replace')[:1200]
+          opts=Path('/tmp/options.txt').read_text(encoding='utf-8',errors='replace')[:1200]
+          headers=Path('/tmp/headers.txt').read_text(encoding='utf-8',errors='replace')[:1200]
+          ok=checks['new_time'] and checks['new_title'] and checks['new_text'] and not checks['old_title']
+          summary='CHECKS='+repr(checks)+'\nHEALTH:\n'+health+'\nOPTIONS:\n'+opts+'\nHEADERS:\n'+headers
+          print(summary)
+          Path('/tmp/summary.txt').write_text(summary,encoding='utf-8')
+          Path('/tmp/ok.txt').write_text('true' if ok else 'false',encoding='utf-8')
           PY
+          echo "ok=$(cat /tmp/ok.txt)" >> "$GITHUB_OUTPUT"
 
-      - name: Zapsat úspěch
-        if: success()
+      - name: Zapsat výsledek
+        if: always()
         uses: actions/github-script@v7
+        env:
+          OK: ${{ steps.check.outputs.ok }}
         with:
           script: |
-            await github.rest.issues.createComment({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,body:'✅ LIVE_OK: Naše Kadaň veřejně vrací novou kartu Zooparku — výstava kudlanek je uvedena jako prodloužená do konce srpna.'});
-            await github.rest.issues.update({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,state:'closed',state_reason:'completed'});
-
-      - name: Zapsat neúspěch
-        if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.issues.createComment({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,body:'❌ LIVE_OLD_OR_ERROR: Veřejná stránka zatím nepotvrdila novou kartu kudlanek. Kontrola běžela přímo z GitHub-hosted runneru s cache-busting URL.'});
+            const fs=require('fs');
+            let detail=''; try{detail=fs.readFileSync('/tmp/summary.txt','utf8')}catch{}
+            const ok=process.env.OK==='true';
+            const body=(ok?'✅ LIVE_OK':'❌ LIVE_OLD_OR_ERROR')+'\n\n```text\n'+detail.slice(0,5000).replace(/```/g,'---')+'\n```';
+            await github.rest.issues.createComment({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,body});
+            if(ok) await github.rest.issues.update({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,state:'closed',state_reason:'completed'});
