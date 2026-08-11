@@ -1,0 +1,56 @@
+name: Nouzová přímá oprava Naše Kadaň
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/nasekadan-emergency-live-fix-20260811.yml']
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency: {group: nasekadan-emergency-public-runner, cancel-in-progress: false}
+jobs:
+  fix:
+    runs-on: self-hosted
+    timeout-minutes: 10
+    steps:
+      - name: Uvolnit disk a přepsat živý článek
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo -n true
+          df -h /
+          sudo journalctl --vacuum-size=100M || true
+          sudo apt-get clean || true
+          sudo docker builder prune -af || true
+          sudo docker image prune -af || true
+          sudo find /tmp -maxdepth 1 -type d -name 'nasekadan-*' -mmin +20 -exec rm -rf {} + 2>/dev/null || true
+          sudo find /var/www -maxdepth 1 -type d \( -name 'nasekadan.repair-*' -o -name 'nasekadan.previous-*' \) -mmin +20 -exec rm -rf {} + 2>/dev/null || true
+          df -h /
+          sudo python3 - <<'PY'
+          from pathlib import Path
+          old='<div class="event"><time>DO SOBOTY 15. 8. · 9:00–18:00</time><p class="distance">Chomutov · asi 20–25 minut</p><h3>Zoopark Chomutov: poslední dny výstavy kudlanek</h3><p>Pro rodiny je to dobrý výlet hlavně na začátek víkendu. Výstava představuje přes padesát druhů kudlanek a končí právě 15. srpna. Zoopark má v letní sezoně otevřeno denně.</p></div>'
+          new='<div class="event"><time>CELÝ TÝDEN · VÝSTAVA PRODLOUŽENA DO KONCE SRPNA</time><p class="distance">Chomutov · asi 20–25 minut</p><h3>Zoopark Chomutov: výstava kudlanek pokračuje do konce srpna</h3><p><strong>Aktualizace:</strong> Výstava více než padesáti druhů kudlanek měla původně skončit 15. srpna. Kvůli velkému zájmu návštěvníků ji ale Zoopark Chomutov prodloužil až do konce srpna. Zoopark má v letní sezoně otevřeno denně.</p></div>'
+          targets=[Path('/var/www/nasekadan/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html'),Path('/opt/nasekadan/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html')]
+          for p in targets:
+              if not p.exists():
+                  if str(p).startswith('/var/www/'): raise SystemExit(f'Chybí {p}')
+                  continue
+              t=p.read_text(encoding='utf-8')
+              if new in t: print('už aktuální',p); continue
+              if old not in t: raise SystemExit(f'nenalezen starý blok {p}')
+              p.write_text(t.replace(old,new,1),encoding='utf-8',newline='\n')
+              print('opraveno',p)
+          PY
+          f=/var/www/nasekadan/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html
+          sudo chmod 0644 "$f"
+          if sudo docker inspect nasekadan-web >/dev/null 2>&1; then
+            sudo docker exec nasekadan-web mkdir -p /usr/share/nginx/html/clanky
+            sudo docker cp "$f" nasekadan-web:/usr/share/nginx/html/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html
+          fi
+          sudo systemctl reload caddy 2>/dev/null || true
+          if command -v nginx >/dev/null 2>&1; then sudo nginx -t && sudo systemctl reload nginx; fi
+          for n in $(seq 1 15); do
+            curl -4 -kfsSL --max-time 20 "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html?fix=${GITHUB_RUN_ID}-$n-$(date +%s)" >/tmp/nk.html || true
+            if grep -Fq 'Zoopark Chomutov: výstava kudlanek pokračuje do konce srpna' /tmp/nk.html && ! grep -Fq 'Zoopark Chomutov: poslední dny výstavy kudlanek' /tmp/nk.html; then echo LIVE_OK; exit 0; fi
+            sleep 2
+          done
+          echo LIVE_VERIFY_FAILED >&2
+          exit 1
