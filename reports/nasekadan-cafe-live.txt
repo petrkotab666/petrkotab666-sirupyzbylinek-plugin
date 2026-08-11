@@ -1,0 +1,9 @@
+checked_at=2026-08-11T19:26:45Z
+cafe_lingua_live=no
+slunce_live=no
+--- deployment-health ---
+site=nasekadan.cz
+status=ok
+source=c3a1d596503458d23a13bdd5f1f8851811f2adc1
+generated=2026-08-10T20:53:04Z
+mode=monotonic-static-restore
