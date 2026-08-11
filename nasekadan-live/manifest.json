@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "version": "20260811-2226",
+  "files": [
+    {
+      "path": "bridge-health.txt",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/bridge-health.txt",
+      "sha256": "f8d78803409a4e3188f5b7ea9aed1973ec8f13426e9c33b699d7bd1e5206c410"
+    }
+  ],
+  "deletes": []
+}
