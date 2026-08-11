@@ -22,6 +22,12 @@ find /var/www -maxdepth 1 -type d \( -name 'nasekadan.repair-*' -o -name 'naseka
 echo 'Disk po úklidu:'
 df -h /
 
+# Zastavit starou pětiminutovou úplnou obnovu. Právě tato cesta je příliš těžká
+# pro běžné redakční změny; odteď je hlavní cesta rychlý GitHub API sync.
+systemctl disable --now nasekadan-refresh.timer 2>/dev/null || true
+systemctl disable --now nasekadan-content-regression.path 2>/dev/null || true
+systemctl stop nasekadan-refresh.service nasekadan-content-regression.service 2>/dev/null || true
+
 python3 - <<'PY'
 from pathlib import Path
 old='<div class="event"><time>DO SOBOTY 15. 8. · 9:00–18:00</time><p class="distance">Chomutov · asi 20–25 minut</p><h3>Zoopark Chomutov: poslední dny výstavy kudlanek</h3><p>Pro rodiny je to dobrý výlet hlavně na začátek víkendu. Výstava představuje přes padesát druhů kudlanek a končí právě 15. srpna. Zoopark má v letní sezoně otevřeno denně.</p></div>'
@@ -83,8 +89,38 @@ Persistent=true
 [Install]
 WantedBy=timers.target
 EOF
+
+# Lehká zdravotní kontrola – nic nestaví, nic neklonuje a nic nezapisuje do webu.
+cat >/usr/local/sbin/nasekadan-health-check <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+curl -kfsSL --max-time 20 --resolve nasekadan.cz:443:127.0.0.1 https://nasekadan.cz/ >/dev/null
+curl -kfsSL --max-time 20 --resolve nasekadan.cz:443:127.0.0.1 https://nasekadan.cz/clanky/ >/dev/null
+/usr/local/sbin/nasekadan-disk-guard
+EOF
+chmod 0755 /usr/local/sbin/nasekadan-health-check
+cat >/etc/systemd/system/nasekadan-health-check.service <<'EOF'
+[Unit]
+Description=Lehká zdravotní kontrola Naše Kadaň
+After=network-online.target
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/nasekadan-health-check
+EOF
+cat >/etc/systemd/system/nasekadan-health-check.timer <<'EOF'
+[Unit]
+Description=Pravidelná lehká kontrola Naše Kadaň
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=15min
+Persistent=true
+[Install]
+WantedBy=timers.target
+EOF
+
 systemctl daemon-reload
 systemctl enable --now nasekadan-disk-guard.timer
+systemctl enable --now nasekadan-health-check.timer
 
 # Obnovit všechny GitHub runner služby, které jsou na tomto VPS nainstalované.
 mapfile -t runner_services < <(systemctl list-unit-files --type=service --no-legend | awk '$1 ~ /^actions\.runner\./ {print $1}')
@@ -103,5 +139,8 @@ echo
 echo 'LIVE_OK: kulturní přehled je opravený.'
 echo 'Runner služby:'
 for svc in "${runner_services[@]}"; do printf '%s: ' "$svc"; systemctl is-active "$svc" || true; done
+echo 'Nové časovače:'
+systemctl is-active nasekadan-disk-guard.timer || true
+systemctl is-active nasekadan-health-check.timer || true
 echo 'Disk nyní:'
 df -h /
