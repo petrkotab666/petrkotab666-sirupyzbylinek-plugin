@@ -1,0 +1,27 @@
+name: Zkusit přímý přístup k Naše Kadaň
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/try-nasekadan-ssh-noauth-20260811.yml'
+
+permissions: {}
+
+jobs:
+  try:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ověřit přímý SSH přístup
+        shell: bash
+        run: |
+          set -u
+          for user in ubuntu root; do
+            echo "=== $user ==="
+            if timeout 12 ssh -o BatchMode=yes -o PasswordAuthentication=no -o StrictHostKeyChecking=no -o ConnectTimeout=6 "$user@57.129.43.215" 'id; hostname' 2>&1; then
+              echo "SSH_NOAUTH_${user}=yes"
+            else
+              echo "SSH_NOAUTH_${user}=no"
+            fi
+          done
