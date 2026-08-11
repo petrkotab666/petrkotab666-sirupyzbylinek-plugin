@@ -1,2 +1,2 @@
 Naše Kadaň fast bridge active
-version=20260811-2228
+version=20260811-2233
