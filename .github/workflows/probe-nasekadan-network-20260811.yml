@@ -25,9 +25,10 @@ jobs:
           stamp="${GITHUB_RUN_ID}-$(date +%s)"
           curl -4 -kfsSL --connect-timeout 8 --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?probe=$stamp" || true
           echo
-          echo '=== CAFE ==='
+          echo '=== KULTURA ==='
           curl -4 -kfsSL --connect-timeout 8 --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html?probe=$stamp" -o /tmp/kultura.html || true
           grep -F 'Cafe Lingua Poland v RADCE' /tmp/kultura.html >/dev/null 2>&1 && echo CAFE_LIVE=yes || echo CAFE_LIVE=no
+          grep -F 'Zpátky do školy – v kondici: trénink boxu pro děti a rodiče' /tmp/kultura.html >/dev/null 2>&1 && echo BOXING_LIVE=yes || echo BOXING_LIVE=no
           echo '=== SLUNCE ==='
           curl -4 -kfsSL --connect-timeout 8 --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html?probe=$stamp" -o /tmp/slunce.html || true
           grep -F 'Poslední týden pro Slunce' /tmp/slunce.html >/dev/null 2>&1 && echo SLUNCE_LIVE=yes || echo SLUNCE_LIVE=no
