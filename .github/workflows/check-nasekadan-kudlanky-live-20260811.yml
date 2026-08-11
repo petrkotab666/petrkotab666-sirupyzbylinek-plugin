@@ -24,6 +24,8 @@ jobs:
           curl -4 -kfsSL --max-time 30 -D /tmp/headers.txt -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' "$url?livecheck=$stamp" -o /tmp/live.html
           curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?livecheck=$stamp" -o /tmp/health.txt || true
           curl -4 -kisS --max-time 30 -X OPTIONS "https://nasekadan.cz/?livecheck=$stamp" -o /tmp/options.txt || true
+          { timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/22' && echo 'ssh22=open'; } > /tmp/ports.txt 2>&1 || echo 'ssh22=closed_or_unreachable' >> /tmp/ports.txt
+          { timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/443' && echo 'https443=open'; } >> /tmp/ports.txt 2>&1 || echo 'https443=closed_or_unreachable' >> /tmp/ports.txt
           python3 - <<'PY'
           from pathlib import Path
           s=Path('/tmp/live.html').read_text(encoding='utf-8',errors='replace')
@@ -36,8 +38,9 @@ jobs:
           health=Path('/tmp/health.txt').read_text(encoding='utf-8',errors='replace')[:1200]
           opts=Path('/tmp/options.txt').read_text(encoding='utf-8',errors='replace')[:1200]
           headers=Path('/tmp/headers.txt').read_text(encoding='utf-8',errors='replace')[:1200]
+          ports=Path('/tmp/ports.txt').read_text(encoding='utf-8',errors='replace')[:1200]
           ok=checks['new_time'] and checks['new_title'] and checks['new_text'] and not checks['old_title']
-          summary='CHECKS='+repr(checks)+'\nHEALTH:\n'+health+'\nOPTIONS:\n'+opts+'\nHEADERS:\n'+headers
+          summary='CHECKS='+repr(checks)+'\nHEALTH:\n'+health+'\nPORTS:\n'+ports+'\nOPTIONS:\n'+opts+'\nHEADERS:\n'+headers
           print(summary)
           Path('/tmp/summary.txt').write_text(summary,encoding='utf-8')
           Path('/tmp/ok.txt').write_text('true' if ok else 'false',encoding='utf-8')
