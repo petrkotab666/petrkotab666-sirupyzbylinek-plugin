@@ -13,6 +13,12 @@ jobs:
     if: github.actor == 'petrkotab666' && github.event.issue.title == '[live-check] nasekadan kudlanky'
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      HAS_OVH_PRIVATE: ${{ secrets.OVH_SSH_PRIVATE_KEY != '' }}
+      HAS_OVH_KEY: ${{ secrets.OVH_SSH_KEY != '' }}
+      HAS_SSH_PRIVATE: ${{ secrets.SSH_PRIVATE_KEY != '' }}
+      HAS_VPS_KEY: ${{ secrets.VPS_SSH_KEY != '' }}
+      HAS_VPS_PRIVATE: ${{ secrets.VPS_SSH_PRIVATE_KEY != '' }}
     steps:
       - name: Načíst živou stránku a stav produkce bez cache
         id: check
@@ -26,6 +32,7 @@ jobs:
           curl -4 -kisS --max-time 30 -X OPTIONS "https://nasekadan.cz/?livecheck=$stamp" -o /tmp/options.txt || true
           { timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/22' && echo 'ssh22=open'; } > /tmp/ports.txt 2>&1 || echo 'ssh22=closed_or_unreachable' >> /tmp/ports.txt
           { timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/443' && echo 'https443=open'; } >> /tmp/ports.txt 2>&1 || echo 'https443=closed_or_unreachable' >> /tmp/ports.txt
+          printf 'OVH_SSH_PRIVATE_KEY=%s\nOVH_SSH_KEY=%s\nSSH_PRIVATE_KEY=%s\nVPS_SSH_KEY=%s\nVPS_SSH_PRIVATE_KEY=%s\n' "$HAS_OVH_PRIVATE" "$HAS_OVH_KEY" "$HAS_SSH_PRIVATE" "$HAS_VPS_KEY" "$HAS_VPS_PRIVATE" > /tmp/secrets-presence.txt
           python3 - <<'PY'
           from pathlib import Path
           s=Path('/tmp/live.html').read_text(encoding='utf-8',errors='replace')
@@ -39,8 +46,9 @@ jobs:
           opts=Path('/tmp/options.txt').read_text(encoding='utf-8',errors='replace')[:1200]
           headers=Path('/tmp/headers.txt').read_text(encoding='utf-8',errors='replace')[:1200]
           ports=Path('/tmp/ports.txt').read_text(encoding='utf-8',errors='replace')[:1200]
+          secrets=Path('/tmp/secrets-presence.txt').read_text(encoding='utf-8',errors='replace')[:1200]
           ok=checks['new_time'] and checks['new_title'] and checks['new_text'] and not checks['old_title']
-          summary='CHECKS='+repr(checks)+'\nHEALTH:\n'+health+'\nPORTS:\n'+ports+'\nOPTIONS:\n'+opts+'\nHEADERS:\n'+headers
+          summary='CHECKS='+repr(checks)+'\nHEALTH:\n'+health+'\nPORTS:\n'+ports+'\nSECRET_NAMES_PRESENT:\n'+secrets+'\nOPTIONS:\n'+opts+'\nHEADERS:\n'+headers
           print(summary)
           Path('/tmp/summary.txt').write_text(summary,encoding='utf-8')
           Path('/tmp/ok.txt').write_text('true' if ok else 'false',encoding='utf-8')
