@@ -1,4 +1,5 @@
 ---
+import { getCollection, render } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
@@ -47,6 +48,10 @@ const {
   feedTopic = adTopic,
   feedHeading = 'Doporučené pomůcky, knihy a suroviny',
 } = Astro.props;
+
+const sourceEntries = await getCollection('articles', ({ data }) => !data.draft && data.path === canonical);
+const sourceEntry = sourceEntries[0];
+const OriginalContent = sourceEntry ? (await render(sourceEntry)).Content : null;
 
 const schema = {
   '@context': 'https://schema.org',
@@ -108,6 +113,11 @@ const schema = {
   </section>
 
   <ContextAds topic={adTopic} heading={adHeading} />
+  {OriginalContent && (
+    <section class="section-wrap heritage-original-content" data-original-imported-content={canonical}>
+      <div class="article-content"><OriginalContent /></div>
+    </section>
+  )}
   <slot />
   <ProductFeed topic={feedTopic} heading={feedHeading} />
 </BaseLayout>
@@ -135,6 +145,7 @@ const schema = {
   .heritage-directory__copy>span{display:block;max-width:31rem;margin:0 auto;color:#667167;line-height:1.58;text-wrap:pretty}
   .heritage-directory__copy>b{display:inline-flex;align-items:center;gap:.35rem;margin-top:auto;padding:.78rem 1.08rem 0;color:#286f39;font-size:.92rem;font-style:normal}
   .heritage-directory__copy i{font-style:normal}
+  .heritage-original-content{padding-top:2rem;padding-bottom:2rem}
   @media(max-width:900px){.heritage-directory__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(max-width:620px){.heritage-hub-hero{width:min(100% - 1rem,1120px);min-height:430px;border-radius:25px}.heritage-hub-hero__copy{min-height:430px;padding:2rem 1.15rem}.heritage-hub-hero__copy h1{font-size:2.75rem}.heritage-directory{padding-top:3rem}.heritage-directory__grid{grid-template-columns:1fr}.heritage-directory__image{aspect-ratio:16/9}}
 </style>
