@@ -4,38 +4,32 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { isAuxiliaryPage } from '../lib/articles';
 
 export async function getStaticPaths() {
-  const bespokeDirectoryPaths = [
-    '/domu/sber-bylinek/kdy-sbirat-bylinky/',
-    '/domu/co-sbirat/',
-    '/etika-sberu/',
-    '/sber-bylinek/co-nesbirat/',
-    '/kde-a-kam-sbirat-bylinky/',
-    '/domu/sber-bylinek/zpracovani-bylin/',
-    '/osvedcene-recepty/',
-    '/domu/prirodni-lekarna/',
-  ];
-
   const reserved = new Set([
-    '/magazin/',
-    '/rss.xml/',
-    '/404/',
+    '/magazin/', '/rss.xml/', '/404/',
     '/bylinkovy-magazin-rady-tipy-inspirace-bylinkovy-magazin/',
-    '/bylinkovy-magazin/',
-    '/novinky/',
-    ...bespokeDirectoryPaths,
+    '/bylinkovy-magazin/', '/novinky/',
+    '/domu/co-sbirat/', '/etika-sberu/', '/sber-bylinek/co-nesbirat/',
+    '/kde-a-kam-sbirat-bylinky/', '/osvedcene-recepty/', '/domu/prirodni-lekarna/',
     '/aktualni-slevy-a-vyhodne-nabidky-pro-bylinkare/',
-    '/bylinkova-herna/',
-    '/bylinkove-pexeso/',
-    '/poznej-bylinku/',
-    '/bylinkovy-mistr/',
+    '/bylinkova-herna/', '/bylinkove-pexeso/', '/poznej-bylinku/', '/bylinkovy-mistr/',
   ]);
+  const reservedPrefixes = [
+    '/domu/sber-bylinek/',
+    '/domaci-sirupy/',
+    '/tinktury/',
+    '/recepty-na-domaci-limonady/',
+    '/sirupy-a-recepty-pro-zvirata/',
+    '/tinktury-pro-zvirata-2/',
+  ];
+  const isReserved = (value) => reserved.has(value) || reservedPrefixes.some((prefix) => value.startsWith(prefix));
 
   const entries = await getCollection('articles', ({ data }) =>
     !data.draft
     && data.path !== '/'
-    && !reserved.has(data.path)
+    && !isReserved(data.path)
     && !/\/page\/\d+\/$/.test(data.path),
   );
+
   return entries
     .filter((entry) => !isAuxiliaryPage(entry))
     .map((entry) => ({
