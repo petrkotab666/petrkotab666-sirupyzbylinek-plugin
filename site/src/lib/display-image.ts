@@ -19,7 +19,7 @@ export function generatedArticleImage(entry: ArticleEntry) {
 
 export function displayArticleImage(entry: ArticleEntry) {
   const selected = articleImage(entry);
-  if (selected.startsWith('/media/imported/') || /^https?:\/\//iu.test(selected)) return selected;
+  if (selected && !selected.startsWith('/obrazky/')) return selected;
   return generatedArticleImage(entry);
 }
 
