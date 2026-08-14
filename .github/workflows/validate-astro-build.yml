@@ -60,5 +60,5 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -f public/site-audit.json
-          node -e "const r=require('./public/site-audit.json'); if ((r.errors||[]).length) { console.error(r.errors); process.exit(1); } console.log('site-audit.json bez chyb')"
+          test -f dist/site-audit.json
+          node -e "const r=require('./dist/site-audit.json'); if ((r.errors||[]).length) { console.error(r.errors); process.exit(1); } console.log('dist/site-audit.json bez chyb')"
