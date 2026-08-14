@@ -1,6 +1,6 @@
 sirupyzbylinek deployment
-version: 2026-08-07T17:23:00+02:00
-commit-purpose: oprava obrazku Masti a balzamy, WebP generovani a uplna produkcni verifikace
+version: 2026-08-14T21:22:00+02:00
+commit-purpose: nasazeni noveho redakcniho rozcestniku Kde a kam sbirat bylinky a overeni aktualni produkcni pipeline
 expected-cultivation-category: Pěstování bylinek
 expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
 expected-restored-natural-pharmacy-cards: 9
