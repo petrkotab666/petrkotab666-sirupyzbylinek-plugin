@@ -105,7 +105,33 @@ jobs:
           DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment_url }}
         run: |
           set -euo pipefail
-          curl -fsS --max-time 30 "${DEPLOYMENT_URL}/deploy-version.txt" -o /tmp/deploy-version.txt
+          READY=0
+          for attempt in {1..12}; do
+            if curl -fsS --max-time 30 "${DEPLOYMENT_URL}/deploy-version.txt" -o /tmp/deploy-version.txt \
+              && cmp -s site/public/deploy-version.txt /tmp/deploy-version.txt \
+              && curl -fsS --max-time 30 "${DEPLOYMENT_URL}/kde-a-kam-sbirat-bylinky/" -o /tmp/gather-directory.html; then
+              READY=1
+              break
+            fi
+            echo "Immutable deployment is not ready yet (attempt $attempt/12). Waiting 5 seconds..."
+            sleep 5
+          done
+          if [ "$READY" != 1 ]; then
+            echo "Immutable Cloudflare deployment did not become readable with the current deploy marker."
+            exit 1
+          fi
+          grep -Fq 'gather-directory' /tmp/gather-directory.html
+          grep -Fq 'gather-card' /tmp/gather-directory.html
+          grep -Fq 'Volná příroda' /tmp/gather-directory.html
+          grep -Fq 'Balkon a terasa' /tmp/gather-directory.html
+          grep -Fq 'Vlastní záhon' /tmp/gather-directory.html
+          grep -Fq 'Domácí pěstování' /tmp/gather-directory.html
+          grep -Fq 'Etika sběru' /tmp/gather-directory.html
+          grep -Fq 'Čemu se vyhnout' /tmp/gather-directory.html
+          if grep -Fq 'Vyberte vhodné místo a způsob sběru' /tmp/gather-directory.html; then
+            echo "Old gathering directory hero is still present."
+            exit 1
+          fi
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" -o /tmp/article.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/jak-uchovat-cerstve-bylinky/" -o /tmp/clean-article.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/" -o /tmp/home.html
