@@ -36,9 +36,9 @@ jobs:
           cache: npm
           cache-dependency-path: site/package-lock.json
 
-      - name: Nainstalovat přesné závislosti
+      - name: Nainstalovat závislosti stejně jako produkční deploy
         working-directory: site
-        run: npm ci --no-audit --no-fund
+        run: npm install --no-audit --no-fund
 
       - name: Sestavit celý web a spustit postbuild audity
         working-directory: site
