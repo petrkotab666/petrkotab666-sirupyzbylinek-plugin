@@ -2,6 +2,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+await import('./sanitize-built-editorial-residue.mjs');
+
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const target = path.join(HERE, 'audit-built-site.mjs');
 let source = await readFile(target, 'utf8');
