@@ -226,8 +226,8 @@ if (home) {
   const gameCard = $('.illustrated-directory-card[href="/bylinkova-herna/"]');
   const gameImage = gameCard.find('img').attr('src') || '';
   if (!gameCard.length) errors.push('index.html: chybí karta Bylinková herna');
-  if (gameImage !== '/media/original/home/bylinkova-herna-photo.svg') {
-    errors.push(`index.html: Bylinková herna nepoužívá sjednocenou fotografii, nalezeno ${JSON.stringify(gameImage)}`);
+  if (gameImage !== '/media/generated/prirodni-lekarna/bylinkova-herna-photo.webp') {
+    errors.push(`index.html: Bylinková herna nepoužívá sjednocený WebP obrázek, nalezeno ${JSON.stringify(gameImage)}`);
   }
 }
 
