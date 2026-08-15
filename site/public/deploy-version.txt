@@ -1,6 +1,10 @@
 sirupyzbylinek deployment
-version: 2026-08-14T21:22:00+02:00
-commit-purpose: nasazeni noveho redakcniho rozcestniku Kde a kam sbirat bylinky a overeni aktualni produkcni pipeline
+version: 2026-08-15T20:45:00+02:00
+commit-purpose: nasazeni opravy rozcestniku Co sbirat na /domu/co-sbirat/ s cistymi obrazky bez vlozeneho textu
+expected-co-sbirat-page: /domu/co-sbirat/
+expected-co-sbirat-card-count: 8
+expected-co-sbirat-clean-artwork: /media/generated/co-sbirat/zacatecnici.svg
+expected-co-sbirat-no-article-svg-thumbnails: true
 expected-cultivation-category: Pěstování bylinek
 expected-cultivation-image: /obrazky/clanky/nejcastejsi-chyby-pri-pestovani-bylinek.svg
 expected-restored-natural-pharmacy-cards: 9
