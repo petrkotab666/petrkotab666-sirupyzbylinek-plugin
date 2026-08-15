@@ -1,0 +1,125 @@
+---
+interface Props {
+  title?: string;
+  kicker?: string;
+  index?: number;
+  class?: string;
+}
+
+const { title = '', kicker = '', index = 0, class: className = '' } = Astro.props;
+const value = `${title} ${kicker}`.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+let motif = 'leaf';
+if (/sirup|tinktur|olej|macerat|lahv/u.test(value)) motif = 'bottle';
+else if (/caj|napoj|limonad|koktejl/u.test(value)) motif = 'cup';
+else if (/spanek|klid|vecer|nerv/u.test(value)) motif = 'moon';
+else if (/pes|kock|zvir|slep|kurat|drubez/u.test(value)) motif = 'paw';
+else if (/koren|kura|semen|pod zemi/u.test(value)) motif = 'root';
+else if (/kvet|pupen|jaro|kvetouc/u.test(value)) motif = 'flower';
+else if (/plod|bobul|vitamin|imunit/u.test(value)) motif = 'berry';
+else if (/sber|sbirat|kosik|lokalit|etika/u.test(value)) motif = 'basket';
+else if (/pestov|zahon|balkon|terasa|zahrad/u.test(value)) motif = 'pot';
+
+const palettes = [
+  ['#dcebc7', '#a9c78b', '#2c673b', '#18472a'],
+  ['#f2e2b7', '#d7b66d', '#9a632f', '#294d30'],
+  ['#dce8df', '#9fc0ad', '#39715b', '#193f30'],
+  ['#eadced', '#bca7c8', '#76568a', '#294a31'],
+  ['#e7e4bd', '#c9bb70', '#756935', '#234a2c'],
+  ['#f0d9cf', '#d8a28c', '#9c5d48', '#244c30'],
+  ['#dbe8c9', '#96b875', '#4d7c42', '#183f28'],
+  ['#e0e5f0', '#a7b3d0', '#586a9b', '#23472f'],
+] as const;
+const palette = palettes[index % palettes.length];
+const [from, to, accent, dark] = palette;
+const gradientId = `clean-botanical-${index}-${motif}`;
+---
+<svg class:list={['clean-botanical-art', className]} viewBox="0 0 600 420" role="img" aria-label={title || 'Botanická ilustrace'}>
+  <defs>
+    <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color={from} />
+      <stop offset="1" stop-color={to} />
+    </linearGradient>
+    <filter id={`shadow-${gradientId}`} x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color={dark} flood-opacity=".16" />
+    </filter>
+  </defs>
+  <rect width="600" height="420" fill={`url(#${gradientId})`} />
+  <circle cx="520" cy="65" r="95" fill="#fff" opacity=".16" />
+  <circle cx="70" cy="365" r="120" fill="#fff" opacity=".10" />
+  <path d="M0 340 C135 295 215 375 338 332 C448 294 510 322 600 285 V420 H0Z" fill={dark} opacity=".13" />
+  <g filter={`url(#shadow-${gradientId})`} fill="none" stroke={dark} stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    {motif === 'bottle' && <>
+      <rect x="254" y="70" width="92" height="58" rx="16" fill={accent} />
+      <path d="M237 120H363L350 332C348 363 328 380 300 380S252 363 250 332Z" fill="#fff8e6" />
+      <path d="M264 214H336V346H264Z" fill={accent} opacity=".88" stroke="none" />
+      <path d="M270 250H330" opacity=".35" />
+    </>}
+    {motif === 'cup' && <>
+      <path d="M180 135H390L369 310C366 340 345 358 317 358H253C225 358 204 340 201 310Z" fill="#fff8e6" />
+      <path d="M205 205H370L356 306C354 325 342 334 323 334H247C228 334 216 325 214 306Z" fill={accent} opacity=".73" stroke="none" />
+      <path d="M388 190C462 184 470 300 399 316" />
+      <path d="M248 99C238 66 254 43 279 30M318 99C311 68 328 48 353 36" opacity=".65" />
+    </>}
+    {motif === 'moon' && <>
+      <path d="M347 88C280 111 244 174 258 238C274 311 342 356 415 340C348 322 305 257 318 190C328 141 355 107 397 82C380 80 363 82 347 88Z" fill={accent} />
+      <path d="M205 290C241 259 274 258 309 287" opacity=".45" />
+      <circle cx="190" cy="123" r="10" fill={dark} stroke="none" opacity=".6" />
+      <circle cx="415" cy="165" r="8" fill={dark} stroke="none" opacity=".5" />
+    </>}
+    {motif === 'paw' && <>
+      <ellipse cx="300" cy="280" rx="100" ry="78" fill={accent} />
+      <circle cx="205" cy="150" r="40" fill={accent} />
+      <circle cx="275" cy="112" r="43" fill={accent} />
+      <circle cx="350" cy="120" r="43" fill={accent} />
+      <circle cx="410" cy="170" r="38" fill={accent} />
+    </>}
+    {motif === 'root' && <>
+      <path d="M300 72V260" />
+      <path d="M300 135C225 130 190 94 183 50C251 44 294 75 309 122Z" fill={accent} />
+      <path d="M303 180C374 179 415 145 426 98C362 88 318 116 297 164Z" fill={accent} />
+      <path d="M300 258C286 304 256 337 226 368M300 258C314 309 337 342 368 374M299 287L273 372M301 292L325 380" />
+    </>}
+    {motif === 'flower' && <>
+      <path d="M300 180V360" />
+      <circle cx="300" cy="160" r="46" fill="#f0b34d" />
+      <ellipse cx="300" cy="85" rx="42" ry="62" fill="#fff8df" />
+      <ellipse cx="300" cy="235" rx="42" ry="62" fill="#fff8df" />
+      <ellipse cx="225" cy="160" rx="62" ry="42" fill="#fff8df" />
+      <ellipse cx="375" cy="160" rx="62" ry="42" fill="#fff8df" />
+      <path d="M300 290C245 279 215 294 190 330M300 305C350 288 390 302 420 340" stroke={accent} />
+    </>}
+    {motif === 'berry' && <>
+      <path d="M280 72C279 165 296 246 326 337" />
+      <path d="M282 130C220 122 190 90 184 53C244 50 281 77 292 118Z" fill={accent} />
+      <path d="M295 205C359 197 396 165 407 121C348 112 305 140 286 190Z" fill={accent} />
+      <circle cx="334" cy="186" r="38" fill="#b44f55" />
+      <circle cx="385" cy="221" r="38" fill="#c35d55" />
+      <circle cx="329" cy="242" r="38" fill="#9e4552" />
+    </>}
+    {motif === 'basket' && <>
+      <path d="M160 180H440L407 350H193Z" fill="#c98b43" />
+      <path d="M220 180C226 68 374 68 380 180" stroke-width="13" />
+      <path d="M205 235H424M196 292H414" opacity=".32" />
+      <path d="M246 180C235 130 254 94 294 72C310 117 297 154 269 181Z" fill={accent} />
+      <path d="M330 180C336 128 368 103 410 105C403 151 378 176 342 188Z" fill={accent} />
+    </>}
+    {motif === 'pot' && <>
+      <path d="M180 210H420L389 360H211Z" fill="#c98142" />
+      <path d="M300 210V86" />
+      <path d="M299 139C231 137 196 105 188 62C249 55 292 84 309 127Z" fill={accent} />
+      <path d="M302 175C369 174 407 141 417 97C356 89 315 117 295 160Z" fill={accent} />
+    </>}
+    {motif === 'leaf' && <>
+      <path d="M300 350V98" />
+      <path d="M300 180C223 178 178 137 170 78C243 72 292 107 311 165Z" fill={accent} />
+      <path d="M302 254C378 253 425 213 436 153C367 143 315 177 294 237Z" fill={accent} />
+      <path d="M299 306C249 303 217 280 205 246C252 238 287 256 306 292Z" fill={accent} />
+    </>}
+  </g>
+</svg>
+
+<style>
+  .clean-botanical-art{display:block;width:100%;height:100%;overflow:hidden}
+  .clean-botanical-art *{vector-effect:non-scaling-stroke}
+</style>
