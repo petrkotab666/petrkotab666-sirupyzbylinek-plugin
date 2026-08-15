@@ -6,63 +6,71 @@ const cards = [
     href: '/bylinky-pro-zacatecniky/',
     title: 'Bylinky pro začátečníky',
     text: 'Snadněji rozpoznatelné druhy a pravidla, která omezují riziko záměny.',
-    image: '/obrazky/clanky/bylinky-pro-zacatecniky.svg',
+    image: '/media/generated/co-sbirat/zacatecnici.svg',
+    imageAlt: 'Košík s mladými bylinkami',
     kicker: 'První košík',
   },
   {
     href: '/co-sbirat-v-kvetnu/',
     title: 'Květy a mladé listy',
     text: 'Jarní květy, čerstvé listy a natě vhodné pro čaje, sirupy i sušení.',
-    image: '/obrazky/clanky/co-sbirat-v-kvetnu.svg',
+    image: '/media/generated/co-sbirat/jaro.svg',
+    imageAlt: 'Jarní květ a mladé zelené listy',
     kicker: 'Jaro',
   },
   {
     href: '/co-sbirat-v-cervnu/',
     title: 'Kvetoucí natě',
     text: 'Hlavní sezona aromatických natí, lipového květu, heřmánku a měsíčku.',
-    image: '/obrazky/clanky/co-sbirat-v-cervnu.svg',
+    image: '/media/generated/co-sbirat/kvety-nate.svg',
+    imageAlt: 'Kvetoucí letní byliny',
     kicker: 'Začátek léta',
   },
   {
     href: '/co-sbirat-v-cervenci/',
     title: 'Plody a letní byliny',
     text: 'Letní natě, první zralé plody a rostliny určené k rychlému zpracování.',
-    image: '/obrazky/clanky/co-sbirat-v-cervenci.svg',
+    image: '/media/generated/co-sbirat/plody.svg',
+    imageAlt: 'Zralé plody a letní byliny',
     kicker: 'Léto',
   },
   {
     href: '/gemmoterapie-tinktury-z-pupenu-navod/',
     title: 'Pupeny a mladé výhonky',
     text: 'Kdy a jak šetrně odebírat pupeny, aniž byste poškodili strom nebo keř.',
-    image: '/obrazky/clanky/gemmoterapie-tinktury-z-pupenu-navod.svg',
+    image: '/media/generated/co-sbirat/pupeny.svg',
+    imageAlt: 'Větvička s mladými pupeny',
     kicker: 'Gemmoterapie',
   },
   {
     href: '/kdy-a-jak-spravne-sbirat-bylinky/',
     title: 'Kořeny, kůra a semena',
     text: 'Specifické části rostlin vyžadují správné období, šetrný postup a jisté určení druhu.',
-    image: '/obrazky/clanky/kdy-a-jak-spravne-sbirat-bylinky.svg',
+    image: '/media/generated/co-sbirat/koreny.svg',
+    imageAlt: 'Rostlina s kořeny a semeny',
     kicker: 'Pod zemí i na stromech',
   },
   {
     href: '/poznej-bylinku/',
     title: 'Procvičte si poznávání',
     text: 'Interaktivní poznávačka pomůže zapamatovat základní znaky, nenahrazuje však atlas.',
-    image: '/obrazky/clanky/poznej-bylinku.svg',
+    image: '/media/generated/co-sbirat/poznavani.svg',
+    imageAlt: 'Lupa nad zeleným listem',
     kicker: 'Bylinková herna',
   },
   {
     href: '/domaci-sirupy/',
     title: 'Co sbírat pro domácí sirupy',
     text: 'Přehled bylin, květů, výhonků a plodů s návaznými recepty.',
-    image: '/obrazky/clanky/domaci-sirupy.svg',
+    image: '/media/generated/co-sbirat/sirupy.svg',
+    imageAlt: 'Láhev domácího sirupu s bylinkami a plody',
     kicker: 'Navazující zpracování',
   },
 ] as const;
 ---
 <HeritageHubLayout
   title="Co sbírat – bylinky, květy, listy, kořeny a plody"
-  description="Obnovený rozcestník částí rostlin vhodných ke sběru: květy, listy, natě, kořeny, pupeny, plody a semena."
+  description="Přehled částí rostlin vhodných ke sběru: květy, listy, natě, kořeny, pupeny, plody a semena."
   canonical="/domu/co-sbirat/"
   eyebrow="Určování a výběr"
   heading="Co sbírat"
@@ -70,8 +78,8 @@ const cards = [
   heroImage="/media/original/sber/co-sbirat.webp"
   heroAlt="Přehled bylinek a částí rostlin vhodných ke sběru"
   cards={cards}
-  directoryTitle="Vyberte část rostliny nebo období"
-  directoryText="Obnovený rozcestník propojuje určování rostlin, měsíční kalendáře a navazující zpracování."
+  directoryTitle="Vyberte, co chcete sbírat"
+  directoryText="Začněte podle ročního období, části rostliny nebo způsobu dalšího zpracování."
   adTopic="sber"
   adHeading="Atlasy, nůžky a vybavení pro správné určování"
   feedTopic="sber"
