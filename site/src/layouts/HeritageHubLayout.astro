@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import ContextAds from '../components/ContextAds.astro';
 import ProductFeed from '../components/ProductFeed.astro';
+import CleanBotanicalArt from '../components/CleanBotanicalArt.astro';
 
 interface HubCard {
   href: string;
@@ -53,6 +54,8 @@ const sourceEntries = await getCollection('articles', ({ data }) => !data.draft 
 const sourceEntry = sourceEntries[0];
 const OriginalContent = sourceEntry ? (await render(sourceEntry)).Content : null;
 
+const generatedTextArtwork = (source = '') => /^\/obrazky\/.*\.svg(?:[?#].*)?$/iu.test(source);
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -79,7 +82,13 @@ const schema = {
   structuredData={[schema]}
 >
   <header class="heritage-hub-hero">
-    <img src={heroImage} alt={heroAlt} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
+    {generatedTextArtwork(heroImage) ? (
+      <div class="heritage-hub-hero__clean-art" aria-hidden="true">
+        <CleanBotanicalArt title={heading} kicker={eyebrow} index={0} />
+      </div>
+    ) : (
+      <img src={heroImage} alt={heroAlt} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
+    )}
     <div class="heritage-hub-hero__shade" aria-hidden="true"></div>
     <div class="heritage-hub-hero__copy">
       <span>{eyebrow}</span>
@@ -97,8 +106,12 @@ const schema = {
     <div class="heritage-directory__grid">
       {cards.map((card, index) => (
         <a class="heritage-directory__card" href={card.href}>
-          <span class="heritage-directory__image">
-            <img src={card.image} alt={card.imageAlt || card.title} width="1200" height="675" loading="lazy" decoding="async" />
+          <span class:list={['heritage-directory__image', { 'heritage-directory__image--generated': generatedTextArtwork(card.image) }]}>
+            {generatedTextArtwork(card.image) ? (
+              <CleanBotanicalArt title={card.title} kicker={card.kicker} index={index} />
+            ) : (
+              <img src={card.image} alt={card.imageAlt || card.title} width="1200" height="675" loading="lazy" decoding="async" />
+            )}
             <span class="heritage-directory__image-shade" aria-hidden="true"></span>
             <em aria-hidden="true">{String(index + 1).padStart(2, '0')}</em>
           </span>
@@ -127,38 +140,42 @@ const schema = {
   .heritage-hub-hero{
     position:relative;
     width:min(1180px,calc(100% - 2rem));
-    min-height:410px;
-    margin:1.6rem auto 0;
+    min-height:370px;
+    margin:1.35rem auto 0;
     overflow:hidden;
     border:1px solid rgba(28,74,42,.14);
-    border-radius:30px;
+    border-radius:28px;
     background:#173f25;
-    box-shadow:0 24px 62px rgba(26,61,32,.16);
+    box-shadow:0 22px 58px rgba(26,61,32,.15);
   }
-  .heritage-hub-hero>img{
+  .heritage-hub-hero>img,
+  .heritage-hub-hero__clean-art{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
+  }
+  .heritage-hub-hero>img{
     object-fit:cover;
     filter:saturate(.94) contrast(1.03);
   }
+  .heritage-hub-hero__clean-art .clean-botanical-art{width:100%;height:100%}
   .heritage-hub-hero__shade{
     position:absolute;
     inset:0;
     background:
-      linear-gradient(180deg,rgba(8,36,20,.06) 8%,rgba(8,35,20,.30) 47%,rgba(6,29,16,.88) 100%),
-      linear-gradient(90deg,rgba(10,39,22,.18),transparent 45%,rgba(10,39,22,.12));
+      linear-gradient(180deg,rgba(8,36,20,.08) 6%,rgba(8,35,20,.31) 45%,rgba(6,29,16,.88) 100%),
+      linear-gradient(90deg,rgba(10,39,22,.16),transparent 45%,rgba(10,39,22,.10));
   }
   .heritage-hub-hero__copy{
     position:relative;
     z-index:1;
     display:flex;
-    min-height:410px;
+    min-height:370px;
     flex-direction:column;
     align-items:center;
     justify-content:flex-end;
-    padding:clamp(2rem,5vw,3.65rem);
+    padding:clamp(1.8rem,4.6vw,3.25rem);
     text-align:center;
     color:#fff;
   }
@@ -179,10 +196,10 @@ const schema = {
   }
   .heritage-hub-hero__copy h1{
     max-width:900px;
-    margin:.7rem auto .7rem;
+    margin:.68rem auto .65rem;
     color:#fffdf3;
-    font-size:clamp(2.5rem,5.1vw,4.6rem);
-    line-height:1;
+    font-size:clamp(2.25rem,4.4vw,4rem);
+    line-height:1.02;
     letter-spacing:-.025em;
     text-wrap:balance;
     text-shadow:0 2px 20px rgba(0,0,0,.22);
@@ -191,14 +208,15 @@ const schema = {
     max-width:790px;
     margin:0 auto;
     color:#eef4e9;
-    font-size:clamp(.98rem,1.7vw,1.12rem);
-    line-height:1.65;
+    font-size:clamp(.98rem,1.55vw,1.1rem);
+    line-height:1.62;
     text-wrap:pretty;
   }
 
   .heritage-directory{
-    padding-top:3.2rem;
+    padding-top:2.75rem;
     padding-bottom:2.25rem;
+    scroll-margin-top:112px;
   }
   .heritage-directory .heritage-directory__heading,
   .heritage-directory .section-heading.centered-heading{
@@ -209,7 +227,7 @@ const schema = {
   }
   .heritage-directory .heritage-directory__heading>span{
     display:inline-block;
-    margin-bottom:.55rem;
+    margin-bottom:.5rem;
     color:#b96b24;
     font-size:.72rem;
     font-weight:900;
@@ -217,10 +235,10 @@ const schema = {
     text-transform:uppercase;
   }
   .heritage-directory .heritage-directory__heading h2{
-    margin:.1rem auto .8rem;
+    margin:.08rem auto .72rem;
     color:#174528;
-    font-size:clamp(2.15rem,4vw,3.45rem);
-    line-height:1.04;
+    font-size:clamp(1.95rem,3.5vw,3rem);
+    line-height:1.06;
     letter-spacing:-.025em;
     text-wrap:balance;
   }
@@ -228,8 +246,8 @@ const schema = {
     max-width:720px;
     margin:0 auto;
     color:#687269;
-    font-size:1.02rem;
-    line-height:1.65;
+    font-size:1rem;
+    line-height:1.62;
     text-wrap:pretty;
   }
   .heritage-directory__grid{
@@ -237,13 +255,13 @@ const schema = {
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:1.15rem;
     align-items:stretch;
-    margin-top:2.1rem;
+    margin-top:1.9rem;
   }
   .heritage-directory__card{
     display:grid;
     grid-template-columns:minmax(175px,.9fr) minmax(0,1.25fr);
     min-width:0;
-    min-height:270px;
+    min-height:260px;
     overflow:hidden;
     border:1px solid rgba(31,75,39,.12);
     border-radius:24px;
@@ -265,19 +283,24 @@ const schema = {
   .heritage-directory__image{
     position:relative;
     display:block;
-    min-height:270px;
+    min-height:260px;
     overflow:hidden;
     background:#dfe8d4;
   }
-  .heritage-directory__image>img{
+  .heritage-directory__image>img,
+  .heritage-directory__image>.clean-botanical-art{
     width:100%;
     height:100%;
-    object-fit:cover;
     transition:transform .42s ease,filter .42s ease;
+  }
+  .heritage-directory__image>img{object-fit:cover}
+  .heritage-directory__image--generated .heritage-directory__image-shade{
+    background:linear-gradient(180deg,transparent 62%,rgba(9,42,23,.28) 100%);
   }
   .heritage-directory__image-shade{
     position:absolute;
     inset:0;
+    pointer-events:none;
     background:linear-gradient(180deg,transparent 48%,rgba(9,42,23,.44) 100%);
   }
   .heritage-directory__image>em{
@@ -285,15 +308,16 @@ const schema = {
     right:1rem;
     bottom:.85rem;
     z-index:2;
-    color:rgba(255,255,255,.88);
+    color:rgba(255,255,255,.92);
     font:700 1.9rem/1 Georgia,serif;
     font-style:normal;
     letter-spacing:-.04em;
     text-shadow:0 2px 12px rgba(0,0,0,.25);
   }
-  .heritage-directory__card:hover .heritage-directory__image>img{
-    transform:scale(1.045);
-    filter:saturate(1.05) contrast(1.02);
+  .heritage-directory__card:hover .heritage-directory__image>img,
+  .heritage-directory__card:hover .heritage-directory__image>.clean-botanical-art{
+    transform:scale(1.035);
+    filter:saturate(1.04) contrast(1.01);
   }
   .heritage-directory__copy{
     display:flex;
@@ -301,7 +325,7 @@ const schema = {
     flex-direction:column;
     align-items:flex-start;
     justify-content:flex-start;
-    padding:1.7rem 1.65rem 1.55rem;
+    padding:1.62rem 1.58rem 1.48rem;
     text-align:left;
   }
   .heritage-directory__copy small{
@@ -314,9 +338,9 @@ const schema = {
   }
   .heritage-directory__copy>strong{
     display:block;
-    margin:.46rem 0 .65rem;
+    margin:.44rem 0 .62rem;
     color:#174c2b;
-    font:700 clamp(1.45rem,2.1vw,1.82rem)/1.12 Georgia,serif;
+    font:700 clamp(1.42rem,2vw,1.78rem)/1.12 Georgia,serif;
     letter-spacing:-.02em;
     text-wrap:balance;
   }
@@ -326,7 +350,7 @@ const schema = {
     margin:0;
     color:#687169;
     font-size:.95rem;
-    line-height:1.58;
+    line-height:1.56;
     text-wrap:pretty;
   }
   .heritage-directory__copy>b{
@@ -334,7 +358,7 @@ const schema = {
     align-items:center;
     gap:.55rem;
     margin-top:auto;
-    padding-top:1.15rem;
+    padding-top:1.08rem;
     color:#246b37;
     font-size:.89rem;
     font-style:normal;
@@ -362,14 +386,15 @@ const schema = {
     .heritage-directory__card{grid-template-columns:minmax(220px,.82fr) minmax(0,1.18fr)}
   }
   @media(max-width:680px){
-    .heritage-hub-hero{width:min(100% - 1rem,1180px);min-height:390px;margin-top:.8rem;border-radius:22px}
-    .heritage-hub-hero__copy{min-height:390px;padding:1.7rem 1.15rem 2rem}
-    .heritage-hub-hero__copy h1{font-size:2.65rem}
-    .heritage-directory{padding-top:2.6rem}
-    .heritage-directory__grid{gap:1rem;margin-top:1.65rem}
+    .heritage-hub-hero{width:min(100% - 1rem,1180px);min-height:340px;margin-top:.7rem;border-radius:22px}
+    .heritage-hub-hero__copy{min-height:340px;padding:1.55rem 1.1rem 1.8rem}
+    .heritage-hub-hero__copy h1{font-size:clamp(2.05rem,11vw,2.6rem)}
+    .heritage-directory{padding-top:2.25rem}
+    .heritage-directory .heritage-directory__heading h2{font-size:clamp(1.8rem,9vw,2.4rem)}
+    .heritage-directory__grid{gap:1rem;margin-top:1.55rem}
     .heritage-directory__card{grid-template-columns:1fr;min-height:0;border-radius:21px}
     .heritage-directory__image{min-height:0;aspect-ratio:16/9}
-    .heritage-directory__copy{padding:1.35rem 1.25rem 1.3rem}
+    .heritage-directory__copy{padding:1.3rem 1.22rem 1.26rem}
     .heritage-directory__copy>b{padding-top:1rem}
   }
 </style>
