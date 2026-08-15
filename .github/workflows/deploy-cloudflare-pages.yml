@@ -81,7 +81,7 @@ jobs:
         run: |
           set -euo pipefail
           RESPONSE="$(curl --fail --silent --show-error --request PATCH "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}" --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" --header "Content-Type: application/json" --data '{"production_branch":"main"}')"
-          printf '%s' "$RESPONSE" | jq -e '.success == true and .result.production_branch == "main"' >/dev/null
+          printf '%s' "$RESPONSE" | jq -e '.success == true and .result.production_branch == "main" and .result.canonical_deployment.environment == "production"' >/dev/null
       - name: Deploy production with Wrangler
         id: deploy
         working-directory: site
@@ -109,7 +109,7 @@ jobs:
           for attempt in {1..12}; do
             if curl -fsS --max-time 30 "${DEPLOYMENT_URL}/deploy-version.txt" -o /tmp/deploy-version.txt \
               && cmp -s site/public/deploy-version.txt /tmp/deploy-version.txt \
-              && curl -fsS --max-time 30 "${DEPLOYMENT_URL}/kde-a-kam-sbirat-bylinky/" -o /tmp/gather-directory.html; then
+              && curl -fsS --max-time 30 "${DEPLOYMENT_URL}/domu/co-sbirat/" -o /tmp/co-sbirat.html; then
               READY=1
               break
             fi
@@ -120,18 +120,24 @@ jobs:
             echo "Immutable Cloudflare deployment did not become readable with the current deploy marker."
             exit 1
           fi
-          grep -Fq 'gather-directory' /tmp/gather-directory.html
-          grep -Fq 'gather-card' /tmp/gather-directory.html
-          grep -Fq 'Volná příroda' /tmp/gather-directory.html
-          grep -Fq 'Balkon a terasa' /tmp/gather-directory.html
-          grep -Fq 'Vlastní záhon' /tmp/gather-directory.html
-          grep -Fq 'Domácí pěstování' /tmp/gather-directory.html
-          grep -Fq 'Etika sběru' /tmp/gather-directory.html
-          grep -Fq 'Čemu se vyhnout' /tmp/gather-directory.html
-          if grep -Fq 'Vyberte vhodné místo a způsob sběru' /tmp/gather-directory.html; then
-            echo "Old gathering directory hero is still present."
+          grep -Fq 'heritage-directory__grid' /tmp/co-sbirat.html
+          grep -Fq 'Vyberte, co chcete sbírat' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/zacatecnici.svg' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/jaro.svg' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/kvety-nate.svg' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/plody.svg' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/pupeny.svg' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/koreny.svg' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/poznavani.svg' /tmp/co-sbirat.html
+          grep -Fq '/media/generated/co-sbirat/sirupy.svg' /tmp/co-sbirat.html
+          if grep -Fq '/obrazky/clanky/bylinky-pro-zacatecniky.svg' /tmp/co-sbirat.html; then
+            echo "Old article artwork is still used in the Co sbirat directory."
             exit 1
           fi
+          for IMAGE in zacatecnici.svg jaro.svg kvety-nate.svg plody.svg pupeny.svg koreny.svg poznavani.svg sirupy.svg; do
+            curl -fsS --max-time 30 "${DEPLOYMENT_URL}/media/generated/co-sbirat/${IMAGE}" -o "/tmp/co-sbirat-${IMAGE}"
+            grep -Fq '<svg' "/tmp/co-sbirat-${IMAGE}"
+          done
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/nejcastejsi-chyby-pri-pestovani-bylinek/" -o /tmp/article.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/jak-uchovat-cerstve-bylinky/" -o /tmp/clean-article.html
           curl -fsS --max-time 30 "${DEPLOYMENT_URL}/" -o /tmp/home.html
@@ -167,15 +173,30 @@ jobs:
       - name: Verify public production address
         run: |
           set -euo pipefail
+          BASE="https://sirupyzbylinek-astro.pages.dev"
           for attempt in {1..12}; do
-            CACHE_BUSTER="$(date +%s)-${attempt}"; BASE="https://sirupyzbylinek-astro.pages.dev"
+            CACHE_BUSTER="$(date +%s)-${attempt}"
             if curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/deploy-version.txt?v=${CACHE_BUSTER}" -o /tmp/public-version.txt \
+              && cmp -s site/public/deploy-version.txt /tmp/public-version.txt \
+              && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/domu/co-sbirat/?v=${CACHE_BUSTER}" -o /tmp/public-co-sbirat.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/nejcastejsi-chyby-pri-pestovani-bylinek/?v=${CACHE_BUSTER}" -o /tmp/public-article.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/jak-uchovat-cerstve-bylinky/?v=${CACHE_BUSTER}" -o /tmp/public-clean-article.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/?v=${CACHE_BUSTER}" -o /tmp/public-home.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/domu/prirodni-lekarna/?v=${CACHE_BUSTER}" -o /tmp/public-health.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/osvedcene-recepty/?v=${CACHE_BUSTER}" -o /tmp/public-recipes.html \
               && curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/site-audit.json?v=${CACHE_BUSTER}" -o /tmp/public-site-audit.json; then
+              CO_SBIRAT_OK=1
+              grep -Fq 'heritage-directory__grid' /tmp/public-co-sbirat.html || CO_SBIRAT_OK=0
+              grep -Fq 'Vyberte, co chcete sbírat' /tmp/public-co-sbirat.html || CO_SBIRAT_OK=0
+              grep -Fq '/media/generated/co-sbirat/zacatecnici.svg' /tmp/public-co-sbirat.html || CO_SBIRAT_OK=0
+              if grep -Fq '/obrazky/clanky/bylinky-pro-zacatecniky.svg' /tmp/public-co-sbirat.html; then CO_SBIRAT_OK=0; fi
+              for IMAGE in zacatecnici.svg jaro.svg kvety-nate.svg plody.svg pupeny.svg koreny.svg poznavani.svg sirupy.svg; do
+                if ! curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/media/generated/co-sbirat/${IMAGE}?v=${CACHE_BUSTER}" -o "/tmp/public-co-sbirat-${IMAGE}" \
+                  || ! grep -Fq '<svg' "/tmp/public-co-sbirat-${IMAGE}"; then
+                  CO_SBIRAT_OK=0
+                  break
+                fi
+              done
               rm -f /tmp/public-health-*.webp
               WEBP_OK=1
               for IMAGE in \
@@ -193,7 +214,7 @@ jobs:
                   break
                 fi
               done
-              if [ "$WEBP_OK" = 1 ]; then
+              if [ "$CO_SBIRAT_OK" = 1 ] && [ "$WEBP_OK" = 1 ]; then
                 if python3 - <<'PY'
           from pathlib import Path
           files = sorted(Path('/tmp').glob('public-health-*.webp'))
@@ -208,7 +229,7 @@ jobs:
                 then
                   if jq -e '.errors | length == 0' /tmp/public-site-audit.json >/dev/null \
                     && python3 site/scripts/verify-deployed-article.py /tmp/public-version.txt /tmp/public-article.html /tmp/public-home.html /tmp/public-health.html /tmp/public-recipes.html /tmp/public-clean-article.html; then
-                    echo "Production deployment verified successfully."
+                    echo "Production deployment verified successfully, including /domu/co-sbirat/."
                     exit 0
                   fi
                 fi
