@@ -8,12 +8,18 @@ export function getStaticPaths() {
 export function GET({ props }: { props: { recipe: (typeof herbalPreparations)[number] } }) {
   const { recipe } = props;
   const meta = preparationCategories[recipe.category];
-  const svg = renderArticleArtwork({
+  const rawSvg = renderArticleArtwork({
     title: recipe.title,
     key: recipe.slug,
     topic: meta.art,
     subtitle: meta.shortTitle.toUpperCase(),
   });
+
+  // Recipe cards and pages already render the recipe name in HTML. Keep the
+  // accessible SVG <title>/<desc>, but remove visible text baked into artwork
+  // so headings cannot be duplicated, cropped or unreadable at any breakpoint.
+  const svg = rawSvg.replace(/<text\b[^>]*>[\s\S]*?<\/text>/gu, '');
+
   return new Response(svg, {
     headers: {
       'Content-Type': 'image/svg+xml; charset=utf-8',
