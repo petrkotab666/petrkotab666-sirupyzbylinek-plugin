@@ -32,7 +32,19 @@ const palettes = [
 ] as const;
 const palette = palettes[index % palettes.length];
 const [from, to, accent, dark] = palette;
-const gradientId = `clean-botanical-${index}-${motif}`;
+
+// SVG IDs must be unique inside a rendered HTML document.  The previous
+// index+motif key collided between the hub hero (index 0) and the first card.
+// Include a stable slug of the actual artwork content so every rendered
+// illustration gets its own gradient/filter namespace without random IDs.
+const artworkKey = `${title}-${kicker}`
+  .normalize('NFKD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-+|-+$/g, '')
+  .slice(0, 72) || 'art';
+const gradientId = `clean-botanical-${index}-${motif}-${artworkKey}`;
 ---
 <svg class:list={['clean-botanical-art', className]} viewBox="0 0 600 420" role="img" aria-label={title || 'Botanická ilustrace'}>
   <defs>
