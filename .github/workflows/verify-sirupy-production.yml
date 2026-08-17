@@ -1,0 +1,163 @@
+name: Verify SirupyZBylinek public production
+
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-sirupy-production.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Public production smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Verify deployment marker
+        run: |
+          set -euo pipefail
+          BASE='https://sirupyzbylinek-astro.pages.dev'
+          OK=0
+          for attempt in {1..12}; do
+            BUST="$(date +%s)-${attempt}"
+            if curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/deploy-version.txt?v=${BUST}" -o /tmp/version.txt \
+              && cmp -s site/public/deploy-version.txt /tmp/version.txt; then
+              OK=1
+              break
+            fi
+            sleep 10
+          done
+          if [ "$OK" != 1 ]; then
+            echo '::error::Veřejná adresa nemá aktuální deploy-version.txt z mainu.'
+            exit 1
+          fi
+
+      - name: Verify Co sbirat directory markup
+        run: |
+          set -euo pipefail
+          URL="https://sirupyzbylinek-astro.pages.dev/domu/co-sbirat/?v=$(date +%s)"
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "$URL" -o /tmp/co-sbirat.html
+          for MARKER in \
+            'heritage-directory__grid' \
+            'Vyberte, co chcete sbírat' \
+            '/media/generated/co-sbirat/zacatecnici.svg' \
+            '/media/generated/co-sbirat/jaro.svg' \
+            '/media/generated/co-sbirat/kvety-nate.svg' \
+            '/media/generated/co-sbirat/plody.svg' \
+            '/media/generated/co-sbirat/pupeny.svg' \
+            '/media/generated/co-sbirat/koreny.svg' \
+            '/media/generated/co-sbirat/poznavani.svg' \
+            '/media/generated/co-sbirat/sirupy.svg'; do
+            if ! grep -Fq "$MARKER" /tmp/co-sbirat.html; then
+              echo "::error::Na /domu/co-sbirat/ chybí očekávaný marker: $MARKER"
+              exit 1
+            fi
+          done
+          if grep -Fq '/obrazky/clanky/bylinky-pro-zacatecniky.svg' /tmp/co-sbirat.html; then
+            echo '::error::Na /domu/co-sbirat/ zůstal starý obrázek článku.'
+            exit 1
+          fi
+
+      - name: Verify Co sbirat artwork assets
+        run: |
+          set -euo pipefail
+          BASE='https://sirupyzbylinek-astro.pages.dev/media/generated/co-sbirat'
+          for IMAGE in zacatecnici.svg jaro.svg kvety-nate.svg plody.svg pupeny.svg koreny.svg poznavani.svg sirupy.svg; do
+            if ! curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/${IMAGE}?v=$(date +%s)" -o "/tmp/${IMAGE}"; then
+              echo "::error::Nelze stáhnout veřejný obrázek ${IMAGE}."
+              exit 1
+            fi
+            if ! grep -Fq '<svg' "/tmp/${IMAGE}"; then
+              echo "::error::Veřejný soubor ${IMAGE} není SVG."
+              exit 1
+            fi
+          done
+
+      - name: Verify public site audit
+        run: |
+          set -euo pipefail
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/site-audit.json?v=$(date +%s)" -o /tmp/site-audit.json
+          if ! jq -e '.errors | length == 0' /tmp/site-audit.json >/dev/null; then
+            echo '::error::Veřejný site-audit.json obsahuje chyby.'
+            jq '.errors' /tmp/site-audit.json
+            exit 1
+          fi
+
+      - name: Verify natural pharmacy WebP assets
+        run: |
+          set -euo pipefail
+          BASE='https://sirupyzbylinek-astro.pages.dev/media/generated/prirodni-lekarna'
+          rm -f /tmp/health-*.webp
+          for IMAGE in \
+            3obr-07cd0380.webp \
+            byliny-6083d43d.webp \
+            sirupyuvod-78eb30cb.webp \
+            bylinkova-herna-photo.webp \
+            sklenice-na-sirupy-a-zavarovani-4b170c4d.webp \
+            byliny-300x300-eca005d2.webp \
+            bylinkovymagazin-58281674.webp \
+            kontryhel-obecny-caj-sber-suseni-40c765ff.webp \
+            masti-a-balzamy-v2.webp; do
+            if ! curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/${IMAGE}?v=$(date +%s)" -o "/tmp/health-${IMAGE}"; then
+              echo "::error::Nelze stáhnout veřejný WebP ${IMAGE}."
+              exit 1
+            fi
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          files = sorted(Path('/tmp').glob('health-*.webp'))
+          if len(files) != 9:
+              print(f'::error::Očekáváno 9 WebP, nalezeno {len(files)}.')
+              raise SystemExit(1)
+          for file in files:
+              header = file.read_bytes()[:12]
+              if header[:4] != b'RIFF' or header[8:12] != b'WEBP':
+                  print(f'::error::{file.name} není platný WebP.')
+                  raise SystemExit(1)
+          PY
+
+      - name: Verify representative public pages
+        run: |
+          set -euo pipefail
+          BASE='https://sirupyzbylinek-astro.pages.dev'
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/nejcastejsi-chyby-pri-pestovani-bylinek/?v=$(date +%s)" -o /tmp/article.html
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/jak-uchovat-cerstve-bylinky/?v=$(date +%s)" -o /tmp/clean.html
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/?v=$(date +%s)" -o /tmp/home.html
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/domu/prirodni-lekarna/?v=$(date +%s)" -o /tmp/health.html
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "${BASE}/osvedcene-recepty/?v=$(date +%s)" -o /tmp/recipes.html
+          if ! python3 site/scripts/verify-deployed-article.py site/public/deploy-version.txt /tmp/article.html /tmp/home.html /tmp/health.html /tmp/recipes.html /tmp/clean.html; then
+            echo '::error::Reprezentativní veřejné stránky neodpovídají ověřené verzi.'
+            exit 1
+          fi
+
+      - name: Verify restored collection hub
+        run: |
+          set -euo pipefail
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/domu/sber-bylinek/?v=$(date +%s)" -o /tmp/sber.html
+          if ! grep -Fq 'Bezpečný a etický sběr' /tmp/sber.html; then
+            echo '::error::Na /domu/sber-bylinek/ není dohledaný původní blok Bezpečný a etický sběr.'
+            exit 1
+          fi
+
+      - name: Verify originally reported collection page
+        run: |
+          set -euo pipefail
+          curl -fsS --max-time 30 -H 'Cache-Control: no-cache' "https://sirupyzbylinek-astro.pages.dev/kde-a-kam-sbirat-bylinky/?v=$(date +%s)" -o /tmp/kde.html
+          for MARKER in \
+            'Kde a kam sbírat' \
+            '/media/original/sber/kde-sbirat.webp' \
+            '/media/original/sber/co-sbirat.webp' \
+            '/media/original/sber/co-nesbirat.webp'; do
+            if ! grep -Fq "$MARKER" /tmp/kde.html; then
+              echo "::error::Na /kde-a-kam-sbirat-bylinky/ chybí očekávaný marker: $MARKER"
+              exit 1
+            fi
+          done
+
+      - name: Public production verified
+        run: echo 'Veřejná produkce SirupyZBylinek prošla nezávislou kontrolou.'
