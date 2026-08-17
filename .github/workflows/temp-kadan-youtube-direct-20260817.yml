@@ -18,7 +18,7 @@ jobs:
         run: |
           set -Eeuo pipefail
           python -m pip install --quiet --upgrade pip
-          python -m pip install --quiet --upgrade 'yt-dlp[default,curl-cffi]' cryptography
+          python -m pip install --quiet --upgrade 'yt-dlp[default,curl-cffi]' cryptography faster-whisper
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
           yt-dlp --version
@@ -54,32 +54,77 @@ jobs:
           print(f'COOKIE_SESSION_READY rows={rows} bytes={len(raw)}')
           PY
 
-      - name: Ověřit YouTube a archivovat celý zvuk
+      - name: Počkat na zpracování záznamu a stáhnout celý zvuk
         shell: bash
         run: |
           set -Eeuo pipefail
-          trap 'rm -f /tmp/youtube-cookies.txt' EXIT
           URL='https://www.youtube.com/watch?v=gjs2sWM79gc'
-          echo '--- METADATA ---'
-          yt-dlp --cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb' --print 'id=%(id)s|title=%(title)s|channel=%(channel)s|live_status=%(live_status)s|is_live=%(is_live)s|duration=%(duration)s' "$URL" | tee /tmp/meta.txt
+          ARGS=(--cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb')
+          READY=0
+          for N in $(seq 1 120); do
+            set +e
+            yt-dlp "${ARGS[@]}" --print 'id=%(id)s|title=%(title)s|channel=%(channel)s|live_status=%(live_status)s|is_live=%(is_live)s|duration=%(duration)s' "$URL" > /tmp/check.txt 2>&1
+            RC=$?
+            set -e
+            if [ "$RC" -eq 0 ]; then
+              READY=1
+              cp /tmp/check.txt /tmp/meta.txt
+              echo "VOD_READY attempt=$N"
+              cat /tmp/meta.txt
+              break
+            fi
+            echo "VOD_NOT_READY attempt=$N: $(tail -n 1 /tmp/check.txt)"
+            sleep 30
+          done
+          test "$READY" -eq 1
           echo '--- FORMATS ---'
-          yt-dlp --cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb' -F "$URL" | tail -n 120 | tee /tmp/formats.txt
-          echo '--- DOWNLOAD FULL AUDIO FROM START ---'
-          yt-dlp --cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb' --live-from-start --no-part --newline -f 'bestaudio[ext=m4a]/bestaudio/best' -o '/tmp/kadan.%(ext)s' "$URL"
-          F=$(find /tmp -maxdepth 1 -type f -name 'kadan.*' ! -name '*.part' | head -n1)
+          yt-dlp "${ARGS[@]}" -F "$URL" | tail -n 140 | tee /tmp/formats.txt
+          echo '--- DOWNLOAD FULL AUDIO ---'
+          yt-dlp "${ARGS[@]}" --no-part --newline -f 'bestaudio[ext=m4a]/bestaudio/best' -o '/tmp/kadan-audio.%(ext)s' "$URL"
+          F=$(find /tmp -maxdepth 1 -type f -name 'kadan-audio.*' ! -name '*.part' | head -n1)
           test -s "$F"
           echo "$F" > /tmp/audio-path.txt
           ls -lh "$F"
           ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,codec_type,sample_rate,channels -of compact=p=0:nk=0 "$F" | tee /tmp/probe.txt
           ffmpeg -nostdin -hide_banner -i "$F" -af volumedetect -f null - 2>&1 | grep -E 'mean_volume|max_volume' | tee /tmp/levels.txt || true
 
-      - name: Uložit audio jako nezávislou zálohu
+      - name: Udělat kvalitní český přepis
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          F=$(cat /tmp/audio-path.txt)
+          python - <<'PY'
+          import os,json
+          from faster_whisper import WhisperModel
+          src=open('/tmp/audio-path.txt',encoding='utf-8').read().strip()
+          model=WhisperModel('medium',device='cpu',compute_type='int8')
+          segments,info=model.transcribe(src,language='cs',beam_size=5,best_of=5,vad_filter=True,condition_on_previous_text=True,word_timestamps=False)
+          rows=[]
+          with open('/tmp/kadan-transcript.txt','w',encoding='utf-8') as out:
+              for s in segments:
+                  text=s.text.strip()
+                  if not text: continue
+                  def ts(x):
+                      x=int(max(0,x)); return f'{x//3600:02d}:{(x%3600)//60:02d}:{x%60:02d}'
+                  line=f'[{ts(s.start)}–{ts(s.end)}] {text}'
+                  out.write(line+'\n')
+                  rows.append({'start':s.start,'end':s.end,'text':text})
+          with open('/tmp/kadan-transcript.json','w',encoding='utf-8') as f:
+              json.dump({'language':info.language,'language_probability':info.language_probability,'segments':rows},f,ensure_ascii=False)
+          print(f'TRANSCRIPT_READY segments={len(rows)} language={info.language} probability={info.language_probability:.3f}')
+          PY
+          wc -l /tmp/kadan-transcript.txt
+          sed -n '1,12p' /tmp/kadan-transcript.txt
+
+      - name: Uložit zvuk a přepis jako nezávislou zálohu
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: kadan-zm-20260817-audio
+          name: kadan-zm-20260817-audio-transcript
           path: |
-            /tmp/kadan.*
+            /tmp/kadan-audio.*
+            /tmp/kadan-transcript.txt
+            /tmp/kadan-transcript.json
             /tmp/meta.txt
             /tmp/formats.txt
             /tmp/probe.txt
@@ -87,3 +132,32 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
           compression-level: 0
+
+      - name: Archivovat také celé video do 720p
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          URL='https://www.youtube.com/watch?v=gjs2sWM79gc'
+          yt-dlp --cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb' --no-part --newline -f 'bv*[height<=720]+ba/b[height<=720]/best[height<=720]/best' --merge-output-format mkv -o '/tmp/kadan-video.%(ext)s' "$URL"
+          V=$(find /tmp -maxdepth 1 -type f -name 'kadan-video.*' ! -name '*.part' | head -n1)
+          test -s "$V"
+          ls -lh "$V"
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,codec_type,width,height,sample_rate,channels -of compact=p=0:nk=0 "$V" | tee /tmp/video-probe.txt
+
+      - name: Uložit celé video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-zm-20260817-video
+          path: |
+            /tmp/kadan-video.*
+            /tmp/video-probe.txt
+          if-no-files-found: warn
+          retention-days: 7
+          compression-level: 0
+
+      - name: Odstranit dočasnou relaci
+        if: always()
+        shell: bash
+        run: rm -f /tmp/youtube-cookies.txt /tmp/cookie-private.pem /tmp/cookie-public.pem /tmp/oidc.json /tmp/oidc-token /tmp/exchange.json
