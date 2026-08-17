@@ -65,7 +65,7 @@ jobs:
         run: node scripts/audit-full-site.mjs
       - name: Audit restored directories
         working-directory: site
-        run: node scripts/audit-restored-directories.mjs
+        run: node scripts/audit-restored-directories-v2.mjs
       - name: Audit restored site
         working-directory: site
         run: node scripts/audit-restored-site.mjs
