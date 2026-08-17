@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  id-token: write
 jobs:
   archive:
     runs-on: ubuntu-latest
@@ -17,27 +18,63 @@ jobs:
         run: |
           set -Eeuo pipefail
           python -m pip install --quiet --upgrade pip
-          python -m pip install --quiet --upgrade 'yt-dlp[default,curl-cffi]'
+          python -m pip install --quiet --upgrade 'yt-dlp[default,curl-cffi]' cryptography
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
           yt-dlp --version
-      - name: Ověřit a stáhnout veřejný záznam
+
+      - name: Bezpečně převzít YouTube relaci
         shell: bash
         run: |
           set -Eeuo pipefail
+          trap 'rm -f /tmp/cookie-private.pem /tmp/cookie-public.pem /tmp/oidc.json /tmp/oidc-token /tmp/exchange.json' EXIT
+          openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:3072 -out /tmp/cookie-private.pem 2>/dev/null
+          openssl pkey -in /tmp/cookie-private.pem -pubout -out /tmp/cookie-public.pem 2>/dev/null
+          AUD='nasekadan-youtube-cookie-broker-20260817'
+          curl -fsS -H "Authorization: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=${AUD}" > /tmp/oidc.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/oidc.json',encoding='utf-8'))
+          open('/tmp/oidc-token','w',encoding='utf-8').write(d['value'])
+          PY
+          curl -fsS -H "Authorization: Bearer $(cat /tmp/oidc-token)" -H 'Content-Type: application/x-pem-file' --data-binary @/tmp/cookie-public.pem https://nasekadan.cz/live-cookie-broker/exchange > /tmp/exchange.json
+          python - <<'PY'
+          import json,base64,os
+          from cryptography.hazmat.primitives.serialization import load_pem_private_key
+          from cryptography.hazmat.primitives import hashes
+          from cryptography.hazmat.primitives.asymmetric import padding
+          from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+          d=json.load(open('/tmp/exchange.json',encoding='utf-8'))
+          priv=load_pem_private_key(open('/tmp/cookie-private.pem','rb').read(),password=None)
+          key=priv.decrypt(base64.b64decode(d['ek']),padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None))
+          raw=AESGCM(key).decrypt(base64.b64decode(d['nonce']),base64.b64decode(d['ct']),b'nasekadan-youtube-cookies-20260817')
+          open('/tmp/youtube-cookies.txt','wb').write(raw)
+          os.chmod('/tmp/youtube-cookies.txt',0o600)
+          rows=sum(1 for x in raw.splitlines() if x and not x.startswith(b'#'))
+          print(f'COOKIE_SESSION_READY rows={rows} bytes={len(raw)}')
+          PY
+
+      - name: Ověřit YouTube a archivovat celý zvuk
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          trap 'rm -f /tmp/youtube-cookies.txt' EXIT
           URL='https://www.youtube.com/watch?v=gjs2sWM79gc'
           echo '--- METADATA ---'
-          yt-dlp --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb,android_vr' --print 'id=%(id)s|title=%(title)s|live_status=%(live_status)s|is_live=%(is_live)s|duration=%(duration)s' "$URL" | tee /tmp/meta.txt
+          yt-dlp --cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb' --print 'id=%(id)s|title=%(title)s|channel=%(channel)s|live_status=%(live_status)s|is_live=%(is_live)s|duration=%(duration)s' "$URL" | tee /tmp/meta.txt
           echo '--- FORMATS ---'
-          yt-dlp --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb,android_vr' -F "$URL" | tail -n 120 | tee /tmp/formats.txt
-          echo '--- DOWNLOAD AUDIO ---'
-          yt-dlp --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb,android_vr' --live-from-start --no-part --newline -f 'bestaudio[ext=m4a]/bestaudio/best' -o '/tmp/kadan.%(ext)s' "$URL"
+          yt-dlp --cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb' -F "$URL" | tail -n 120 | tee /tmp/formats.txt
+          echo '--- DOWNLOAD FULL AUDIO FROM START ---'
+          yt-dlp --cookies /tmp/youtube-cookies.txt --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb' --live-from-start --no-part --newline -f 'bestaudio[ext=m4a]/bestaudio/best' -o '/tmp/kadan.%(ext)s' "$URL"
           F=$(find /tmp -maxdepth 1 -type f -name 'kadan.*' ! -name '*.part' | head -n1)
           test -s "$F"
           echo "$F" > /tmp/audio-path.txt
           ls -lh "$F"
           ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,codec_type,sample_rate,channels -of compact=p=0:nk=0 "$F" | tee /tmp/probe.txt
-      - name: Uložit audio
+          ffmpeg -nostdin -hide_banner -i "$F" -af volumedetect -f null - 2>&1 | grep -E 'mean_volume|max_volume' | tee /tmp/levels.txt || true
+
+      - name: Uložit audio jako nezávislou zálohu
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kadan-zm-20260817-audio
@@ -46,5 +83,7 @@ jobs:
             /tmp/meta.txt
             /tmp/formats.txt
             /tmp/probe.txt
+            /tmp/levels.txt
+          if-no-files-found: warn
           retention-days: 7
           compression-level: 0
