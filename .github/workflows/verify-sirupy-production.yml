@@ -1,4 +1,5 @@
 name: Verify SirupyZBylinek public production
+# Nezávislý smoke test vždy ověřuje právě publikovanou stabilní adresu.
 
 on:
   push:
