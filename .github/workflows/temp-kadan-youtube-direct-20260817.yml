@@ -1,0 +1,50 @@
+name: TEMP Kadaň YouTube archive 2026-08-17
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-kadan-youtube-direct-20260817.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - name: Připravit nástroje
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python -m pip install --quiet --upgrade pip
+          python -m pip install --quiet --upgrade 'yt-dlp[default,curl-cffi]'
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          yt-dlp --version
+      - name: Ověřit a stáhnout veřejný záznam
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          URL='https://www.youtube.com/watch?v=gjs2sWM79gc'
+          echo '--- METADATA ---'
+          yt-dlp --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb,android_vr' --print 'id=%(id)s|title=%(title)s|live_status=%(live_status)s|is_live=%(is_live)s|duration=%(duration)s' "$URL" | tee /tmp/meta.txt
+          echo '--- FORMATS ---'
+          yt-dlp --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb,android_vr' -F "$URL" | tail -n 120 | tee /tmp/formats.txt
+          echo '--- DOWNLOAD AUDIO ---'
+          yt-dlp --impersonate chrome --extractor-args 'youtube:player_client=web_safari,web,mweb,android_vr' --live-from-start --no-part --newline -f 'bestaudio[ext=m4a]/bestaudio/best' -o '/tmp/kadan.%(ext)s' "$URL"
+          F=$(find /tmp -maxdepth 1 -type f -name 'kadan.*' ! -name '*.part' | head -n1)
+          test -s "$F"
+          echo "$F" > /tmp/audio-path.txt
+          ls -lh "$F"
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,codec_type,sample_rate,channels -of compact=p=0:nk=0 "$F" | tee /tmp/probe.txt
+      - name: Uložit audio
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-zm-20260817-audio
+          path: |
+            /tmp/kadan.*
+            /tmp/meta.txt
+            /tmp/formats.txt
+            /tmp/probe.txt
+          retention-days: 7
+          compression-level: 0
