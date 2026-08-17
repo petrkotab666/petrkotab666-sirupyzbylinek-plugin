@@ -13,12 +13,17 @@ export async function getStaticPaths() {
 export async function GET({ props }: { props: { entry: CollectionEntry<'articles'> } }) {
   const { entry } = props;
   const topic = inferArtworkTopic(`${entry.data.title} ${entry.data.category} ${entry.data.path}`);
-  const svg = renderArticleArtwork({
+  const rawSvg = renderArticleArtwork({
     title: entry.data.title,
     key: entry.data.path,
     topic,
     subtitle: entry.data.category || 'SIRUPY Z BYLINEK',
   });
+
+  // Generated artwork is used behind a real HTML title. Visible text baked into
+  // an image caused duplicated or cropped headings in cards and article heroes.
+  // Keep the accessible <title>/<desc>, remove only visible SVG <text> nodes.
+  const svg = rawSvg.replace(/<text\b[^>]*>[\s\S]*?<\/text>/gu, '');
 
   return new Response(svg, {
     headers: {
