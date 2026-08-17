@@ -55,6 +55,7 @@ def require(markup: str, marker: str, label: str, errors: list[str]) -> None:
 def remove_ad_modules(markup: str) -> str:
     patterns = (
         r"<aside\b[^>]*class=[\"'][^\"']*article-inline-ad[^\"']*[\"'][^>]*>[\s\S]*?</aside>",
+        r"<aside\b[^>]*class=[\"'][^\"']*context-ads[^\"']*[\"'][^>]*>[\s\S]*?</aside>",
         r"<section\b[^>]*class=[\"'][^\"']*context-ads[^\"']*[\"'][^>]*>[\s\S]*?</section>",
         r"<section\b[^>]*class=[\"'][^\"']*product-feed[^\"']*[\"'][^>]*>[\s\S]*?</section>",
     )
