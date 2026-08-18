@@ -1,0 +1,40 @@
+name: Živě ověřit nemocniční článek Naše Kadaň
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/nasekadan-hospital-livecheck-trigger.txt']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    env:
+      SLUG: nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html
+      TITLE: Nemocnice přiznala strukturální deficit i pozdní varování před cash-flow
+    steps:
+      - name: Přímý cache-busting probe veřejné produkce
+        shell: bash
+        run: |
+          set -euo pipefail
+          q="live-${GITHUB_RUN_ID}-$(date +%s)"
+          get(){ code=$(curl -4 -kLsS --max-time 25 -H 'Cache-Control: no-cache' -o "$2" -w '%{http_code}' "https://nasekadan.cz$1?$q" || true); echo "$3=$code"; }
+          get "/clanky/$SLUG" /tmp/article ARTICLE_CODE
+          get / /tmp/home HOME_CODE
+          get /clanky/ /tmp/archive ARCHIVE_CODE
+          get /rss.xml /tmp/rss RSS_CODE
+          get /sitemap.xml /tmp/sitemap SITEMAP_CODE
+          get /deployment-health.txt /tmp/health HEALTH_CODE
+          for spec in 'ARTICLE:/tmp/article' 'HOME:/tmp/home' 'ARCHIVE:/tmp/archive' 'RSS:/tmp/rss' 'SITEMAP:/tmp/sitemap'; do
+            n=${spec%%:*}; f=${spec#*:};
+            if grep -Fq "$SLUG" "$f" 2>/dev/null || { [ "$n" = ARTICLE ] && grep -Fq "$TITLE" "$f" 2>/dev/null; }; then echo "${n}_HAS_ARTICLE=1"; else echo "${n}_HAS_ARTICLE=0"; fi
+          done
+          echo 'HEALTH_BEGIN'
+          head -n 12 /tmp/health 2>/dev/null || true
+          echo 'HEALTH_END'
+          test "$(grep -Fc "$TITLE" /tmp/article 2>/dev/null || true)" -gt 0
+          test "$(grep -Fc "$SLUG" /tmp/home 2>/dev/null || true)" -gt 0
+          test "$(grep -Fc "$SLUG" /tmp/archive 2>/dev/null || true)" -gt 0
+          test "$(grep -Fc "$SLUG" /tmp/rss 2>/dev/null || true)" -gt 0
+          test "$(grep -Fc "$SLUG" /tmp/sitemap 2>/dev/null || true)" -gt 0
+          echo NASEKADAN_HOSPITAL_LIVE_CONFIRMED
