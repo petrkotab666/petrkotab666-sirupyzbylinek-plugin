@@ -19,15 +19,23 @@ jobs:
           if [ -z "${DEPLOY_URL:-}" ]; then echo 'DEPLOY_URL_AVAILABLE=0'; exit 1; fi
           echo 'DEPLOY_URL_AVAILABLE=1'
           python3 - <<'PY'
-          import os,urllib.parse
+          import os,urllib.parse,socket
           u=urllib.parse.urlparse(os.environ['DEPLOY_URL'])
           h=(u.hostname or '').lower()
           if 'cloudflare' in h: kind='cloudflare'
           elif 'netlify' in h: kind='netlify'
           elif 'vercel' in h: kind='vercel'
-          elif h in {'nasekadan.cz','www.nasekadan.cz','57.129.43.215'}: kind='nasekadan-ovh'
-          elif h.endswith('.nasekadan.cz'): kind='nasekadan-ovh'
+          elif h in {'nasekadan.cz','www.nasekadan.cz','57.129.43.215'} or h.endswith('.nasekadan.cz'): kind='nasekadan-ovh'
           else: kind='other'
+          try:
+              ips=sorted({x[4][0] for x in socket.getaddrinfo(h,443,type=socket.SOCK_STREAM)})
+          except Exception:
+              ips=[]
+          path=(u.path or '').lower()
+          path_kind='deploy' if 'deploy' in path else ('webhook' if 'webhook' in path else ('hook' if 'hook' in path else 'other'))
           print('DEPLOY_URL_KIND='+kind)
           print('DEPLOY_URL_SCHEME='+u.scheme)
+          print('DEPLOY_URL_POINTS_TO_OVH='+('1' if '57.129.43.215' in ips else '0'))
+          print('DEPLOY_URL_PATH_KIND='+path_kind)
+          print('DEPLOY_URL_DNS_COUNT='+str(len(ips)))
           PY
