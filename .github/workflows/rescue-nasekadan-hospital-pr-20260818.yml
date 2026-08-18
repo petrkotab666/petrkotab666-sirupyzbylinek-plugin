@@ -1,0 +1,92 @@
+name: PR rescue Nemocnice Kadaň přes veřejný SSH runner
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/nasekadan-hospital-rescue-trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      K1: ${{ secrets.OVH_SSH_PRIVATE_KEY }}
+      K2: ${{ secrets.OVH_SSH_KEY }}
+      K3: ${{ secrets.SSH_PRIVATE_KEY }}
+      K4: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+      K5: ${{ secrets.VPS_SSH_KEY }}
+      SLUG: nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html
+      TITLE: Nemocnice přiznala strukturální deficit i pozdní varování před cash-flow
+    steps:
+      - name: Publikovat přímo na OVH
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          key=''
+          for n in K1 K2 K3 K4 K5; do v="${!n:-}"; if [ -n "$v" ]; then key="$v"; echo "SSH_KEY_AVAILABLE=$n"; break; fi; done
+          test -n "$key"
+          printf '%s\n' "$key" | tr -d '\r' > "$RUNNER_TEMP/key"
+          chmod 600 "$RUNNER_TEMP/key"
+          ssh -i "$RUNNER_TEMP/key" -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 ubuntu@57.129.43.215 "SLUG='$SLUG' TITLE='$TITLE' sudo -E bash -s" <<'REMOTE'
+          set -euo pipefail
+          APP=/opt/nasekadan
+          ROOT=/var/www/nasekadan
+          chown -R ubuntu:ubuntu "$APP"
+          rm -f "$APP/.git/index.lock"
+          sudo -u ubuntu git -C "$APP" fetch --prune origin main
+          sudo -u ubuntu git -C "$APP" reset --hard origin/main
+          cd "$APP"
+          test -s "clanky/$SLUG"
+          grep -Fq "$TITLE" "clanky/$SLUG"
+          python3 scripts/enforce_current_article_order.py
+          python3 scripts/prepare_discovery.py
+          python3 scripts/normalize_search_snippets.py || true
+          grep -Fq "$SLUG" index.html
+          grep -R -Fq "$SLUG" clanky/index.html clanky/strana-*.html
+          grep -Fq "$SLUG" rss.xml
+          grep -Fq "$SLUG" sitemap.xml
+
+          install -d -m0755 "$ROOT" "$ROOT/clanky"
+          install -m0644 "clanky/$SLUG" "$ROOT/clanky/$SLUG"
+          install -m0644 index.html "$ROOT/index.html"
+          install -m0644 clanky/index.html "$ROOT/clanky/index.html"
+          rm -f "$ROOT"/clanky/strana-*.html
+          for f in clanky/strana-*.html; do [ -f "$f" ] && install -m0644 "$f" "$ROOT/clanky/$(basename "$f")"; done
+          for f in rss.xml sitemap.xml news-sitemap.xml llms.txt robots.txt; do [ -f "$f" ] && install -m0644 "$f" "$ROOT/$f"; done
+          printf 'site=nasekadan.cz\nstatus=ok\nsource=%s\ngenerated=%s\nmode=public-pr-ssh-rescue\n' "$(git rev-parse HEAD)" "$(date -u +%FT%TZ)" > "$ROOT/deployment-health.txt"
+          chmod -R a+rX "$ROOT"
+          if docker inspect nasekadan-web >/dev/null 2>&1; then
+            docker exec nasekadan-web mkdir -p /usr/share/nginx/html/clanky
+            docker cp "$ROOT/clanky/." nasekadan-web:/usr/share/nginx/html/clanky/
+            for f in index.html rss.xml sitemap.xml news-sitemap.xml llms.txt robots.txt deployment-health.txt; do [ -f "$ROOT/$f" ] && docker cp "$ROOT/$f" "nasekadan-web:/usr/share/nginx/html/$f"; done
+          fi
+          get(){ curl -kfsSL --max-time 25 --resolve nasekadan.cz:443:127.0.0.1 "https://nasekadan.cz$1?prrescue=$(date +%s%N)"; }
+          grep -Fq "$TITLE" <<<"$(get /clanky/$SLUG)"
+          grep -Fq "$SLUG" <<<"$(get /)"
+          grep -Fq "$SLUG" <<<"$(get /clanky/)"
+          grep -Fq "$SLUG" <<<"$(get /rss.xml)"
+          grep -Fq "$SLUG" <<<"$(get /sitemap.xml)"
+          echo SERVER_LIVE_OK
+          REMOTE
+
+      - name: Ověřit zvenčí
+        shell: bash
+        run: |
+          set -euo pipefail
+          for n in $(seq 1 10); do
+            q="pr-rescue-${GITHUB_RUN_ID}-$n-$(date +%s)"
+            a="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/clanky/$SLUG?$q" || true)"
+            h="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/?$q" || true)"
+            ar="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/clanky/?$q" || true)"
+            r="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/rss.xml?$q" || true)"
+            s="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/sitemap.xml?$q" || true)"
+            if grep -Fq "$TITLE" <<<"$a" && grep -Fq "$SLUG" <<<"$h" && grep -Fq "$SLUG" <<<"$ar" && grep -Fq "$SLUG" <<<"$r" && grep -Fq "$SLUG" <<<"$s"; then echo NASEKADAN_HOSPITAL_PUBLIC_LIVE_OK; exit 0; fi
+            sleep 2
+          done
+          exit 1
