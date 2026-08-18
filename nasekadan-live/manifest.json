@@ -1,12 +1,18 @@
 {
   "schema": 1,
-  "version": "20260811-2238",
-  "files": [],
+  "version": "20260818-1611",
+  "files": [
+    {
+      "path": "clanky/nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html",
+      "sha256": "645fbd2d9c0ab0e963093ccde2823e85c6479337c5202bd3698ab34075dcb9bb"
+    }
+  ],
   "patches": [
     {
       "path": "bridge-health.txt",
-      "old": "version=20260811-2233",
-      "new": "version=20260811-2238",
+      "old": "version=20260811-2238",
+      "new": "version=20260818-1611",
       "count": 1
     }
   ],
