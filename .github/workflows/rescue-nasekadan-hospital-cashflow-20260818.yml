@@ -1,0 +1,136 @@
+name: Záchranně publikovat Nemocnici Kadaň přes veřejný SSH runner
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rescue-nasekadan-hospital-cashflow-20260818.yml'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      K1: ${{ secrets.OVH_SSH_PRIVATE_KEY }}
+      K2: ${{ secrets.OVH_SSH_KEY }}
+      K3: ${{ secrets.SSH_PRIVATE_KEY }}
+      K4: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+      K5: ${{ secrets.VPS_SSH_KEY }}
+      SLUG: nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html
+      TITLE: Nemocnice přiznala strukturální deficit i pozdní varování před cash-flow
+    steps:
+      - name: Připravit dostupný OVH SSH klíč
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          key=''
+          for n in K1 K2 K3 K4 K5; do
+            v="${!n:-}"
+            if [ -n "$v" ]; then key="$v"; echo "SSH_KEY_AVAILABLE=$n"; break; fi
+          done
+          test -n "$key"
+          printf '%s\n' "$key" | tr -d '\r' > "$RUNNER_TEMP/ovh_key"
+          chmod 600 "$RUNNER_TEMP/ovh_key"
+
+      - name: Publikovat aktuální main přímo na vlastním OVH
+        shell: bash
+        run: |
+          set -euo pipefail
+          opts=(-i "$RUNNER_TEMP/ovh_key" -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20)
+          ssh "${opts[@]}" ubuntu@57.129.43.215 "SLUG='$SLUG' TITLE='$TITLE' sudo -E bash -s" <<'REMOTE'
+          set -euo pipefail
+          APP=/opt/nasekadan
+          ROOT=/var/www/nasekadan
+          test -d "$APP/.git"
+          chown -R ubuntu:ubuntu "$APP"
+          rm -f "$APP/.git/index.lock"
+          sudo -u ubuntu git -C "$APP" fetch --prune origin main
+          sudo -u ubuntu git -C "$APP" reset --hard origin/main
+          cd "$APP"
+          test -s "clanky/$SLUG"
+          grep -Fq "$TITLE" "clanky/$SLUG"
+
+          python3 scripts/enforce_current_article_order.py
+          python3 scripts/prepare_discovery.py
+          python3 scripts/normalize_search_snippets.py || true
+
+          grep -Fq "$SLUG" index.html
+          grep -R -Fq "$SLUG" clanky/index.html clanky/strana-*.html
+          grep -Fq "$SLUG" rss.xml
+          grep -Fq "$SLUG" sitemap.xml
+          grep -Fq "$SLUG" news-sitemap.xml || true
+
+          install -d -m0755 "$ROOT" "$ROOT/clanky"
+          install -m0666 /dev/null /var/lock/nasekadan-content.lock
+          exec 9>/var/lock/nasekadan-content.lock
+          flock -x 9
+
+          install -m0644 "clanky/$SLUG" "$ROOT/clanky/$SLUG"
+          install -m0644 index.html "$ROOT/index.html"
+          install -m0644 clanky/index.html "$ROOT/clanky/index.html"
+          rm -f "$ROOT"/clanky/strana-*.html
+          for f in clanky/strana-*.html; do
+            [ -f "$f" ] && install -m0644 "$f" "$ROOT/clanky/$(basename "$f")"
+          done
+          for f in rss.xml sitemap.xml news-sitemap.xml llms.txt robots.txt; do
+            [ -f "$f" ] && install -m0644 "$f" "$ROOT/$f"
+          done
+          printf 'site=nasekadan.cz\nstatus=ok\nsource=%s\ngenerated=%s\nmode=public-repo-ssh-rescue\n' \
+            "$(git rev-parse HEAD)" "$(date -u +%FT%TZ)" > "$ROOT/deployment-health.txt"
+          chmod -R a+rX "$ROOT"
+
+          if docker inspect nasekadan-web >/dev/null 2>&1; then
+            docker exec nasekadan-web mkdir -p /usr/share/nginx/html/clanky
+            docker cp "$ROOT/clanky/$SLUG" "nasekadan-web:/usr/share/nginx/html/clanky/$SLUG"
+            docker cp "$ROOT/index.html" nasekadan-web:/usr/share/nginx/html/index.html
+            docker cp "$ROOT/clanky/." nasekadan-web:/usr/share/nginx/html/clanky/
+            for f in rss.xml sitemap.xml news-sitemap.xml llms.txt robots.txt deployment-health.txt; do
+              [ -f "$ROOT/$f" ] && docker cp "$ROOT/$f" "nasekadan-web:/usr/share/nginx/html/$f"
+            done
+          fi
+
+          # Opravit i odpojené self-hosted runnery po dokončení publikace.
+          mapfile -t services < <(systemctl list-unit-files --type=service --no-legend 'actions.runner*' 2>/dev/null | awk '{print $1}' | grep -E '^actions\.runner\..*\.service$' || true)
+          for service in "${services[@]}"; do
+            systemctl reset-failed "$service" 2>/dev/null || true
+            systemctl restart "$service" 2>/dev/null || true
+          done
+
+          get() { curl -kfsSL --max-time 25 --resolve nasekadan.cz:443:127.0.0.1 "https://nasekadan.cz$1?rescue=$(date +%s%N)"; }
+          article="$(get "/clanky/$SLUG")"
+          home="$(get /)"
+          archive="$(get /clanky/)"
+          rss="$(get /rss.xml)"
+          sitemap="$(get /sitemap.xml)"
+          grep -Fq "$TITLE" <<<"$article"
+          grep -Fq "$SLUG" <<<"$home"
+          grep -Fq "$SLUG" <<<"$archive"
+          grep -Fq "$SLUG" <<<"$rss"
+          grep -Fq "$SLUG" <<<"$sitemap"
+          echo SERVER_NASEKADAN_HOSPITAL_LIVE_OK
+          REMOTE
+
+      - name: Ověřit veřejnou doménu zvenčí
+        shell: bash
+        run: |
+          set -euo pipefail
+          ok=0
+          for i in $(seq 1 12); do
+            q="public-rescue-${GITHUB_RUN_ID}-$i-$(date +%s)"
+            article="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/clanky/$SLUG?$q" || true)"
+            home="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/?$q" || true)"
+            archive="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/clanky/?$q" || true)"
+            rss="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/rss.xml?$q" || true)"
+            sitemap="$(curl -4 -kfsSL --max-time 25 "https://nasekadan.cz/sitemap.xml?$q" || true)"
+            if grep -Fq "$TITLE" <<<"$article" && grep -Fq "$SLUG" <<<"$home" && grep -Fq "$SLUG" <<<"$archive" && grep -Fq "$SLUG" <<<"$rss" && grep -Fq "$SLUG" <<<"$sitemap"; then
+              ok=1
+              break
+            fi
+            sleep 2
+          done
+          test "$ok" = 1
+          echo NASEKADAN_HOSPITAL_PUBLIC_LIVE_OK
