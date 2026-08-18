@@ -1,0 +1,19 @@
+name: Spočítat SHA nemocničního bridge souboru
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/hash-nasekadan-hospital-trigger.txt']
+permissions:
+  contents: read
+jobs:
+  hash:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: SHA256
+        run: |
+          set -euo pipefail
+          sha256sum nasekadan-live/files/clanky/nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html
