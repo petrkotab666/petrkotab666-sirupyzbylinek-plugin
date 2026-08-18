@@ -1,0 +1,33 @@
+name: Zjistit typ existujícího DEPLOY_URL bez zveřejnění secretu
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/deploy-url-probe-trigger.txt']
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
+    steps:
+      - name: Bezpečně klasifikovat deploy endpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${DEPLOY_URL:-}" ]; then echo 'DEPLOY_URL_AVAILABLE=0'; exit 1; fi
+          echo 'DEPLOY_URL_AVAILABLE=1'
+          python3 - <<'PY'
+          import os,urllib.parse
+          u=urllib.parse.urlparse(os.environ['DEPLOY_URL'])
+          h=(u.hostname or '').lower()
+          if 'cloudflare' in h: kind='cloudflare'
+          elif 'netlify' in h: kind='netlify'
+          elif 'vercel' in h: kind='vercel'
+          elif h in {'nasekadan.cz','www.nasekadan.cz','57.129.43.215'}: kind='nasekadan-ovh'
+          elif h.endswith('.nasekadan.cz'): kind='nasekadan-ovh'
+          else: kind='other'
+          print('DEPLOY_URL_KIND='+kind)
+          print('DEPLOY_URL_SCHEME='+u.scheme)
+          PY
