@@ -1,1 +1,1 @@
-2026-08-18T15:55+02:00 classify DEPLOY_URL for Naše Kadaň rescue
+2026-08-18T15:58+02:00 classify DEPLOY_URL DNS/path for Naše Kadaň rescue
