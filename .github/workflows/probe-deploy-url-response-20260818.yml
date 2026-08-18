@@ -1,0 +1,45 @@
+name: Bezpečně ověřit odpověď DEPLOY_URL
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/deploy-url-response-trigger.txt']
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    env:
+      DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
+    steps:
+      - name: Zavolat existující deploy hook a popsat odpověď bez URL
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${DEPLOY_URL:-}"
+          code=$(curl --location --silent --show-error --max-time 60 -D "$RUNNER_TEMP/h" -o "$RUNNER_TEMP/b" -w '%{http_code}' "$DEPLOY_URL" || true)
+          echo "DEPLOY_HTTP_CODE=$code"
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          h=Path(__import__('os').environ['RUNNER_TEMP']+'/h').read_text(errors='replace') if Path(__import__('os').environ['RUNNER_TEMP']+'/h').exists() else ''
+          b=Path(__import__('os').environ['RUNNER_TEMP']+'/b').read_text(errors='replace') if Path(__import__('os').environ['RUNNER_TEMP']+'/b').exists() else ''
+          ct=''
+          server=''
+          for line in h.splitlines():
+              low=line.lower()
+              if low.startswith('content-type:'): ct=line.split(':',1)[1].strip()
+              if low.startswith('server:'): server=line.split(':',1)[1].strip()
+          # Do not print secret URLs/tokens from headers/body.
+          clean=re.sub(r'https?://[^\s"<>]+','[URL REDACTED]',b[:1200],flags=re.I)
+          clean=re.sub(r'(?i)(token|secret|key|signature|sig|auth)[=:][^\s&"<>]+',r'\1=[REDACTED]',clean)
+          kinds=[]
+          low=(h+'\n'+b).lower()
+          for k in ['github','cloudflare','netlify','vercel','coolify','ploi','runcloud','deployhq','render','railway','webhook','deployment','deploy','build','wordpress','cron']:
+              if k in low: kinds.append(k)
+          print('RESPONSE_CONTENT_TYPE='+ct[:120])
+          print('RESPONSE_SERVER='+server[:120])
+          print('RESPONSE_HINTS='+','.join(kinds))
+          print('RESPONSE_BODY_SANITIZED='+clean.replace('\n',' ')[:700])
+          PY
+          test "$code" -ge 200 && test "$code" -lt 400
