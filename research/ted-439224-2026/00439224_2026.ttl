@@ -1,0 +1,346 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://data.europa.eu/a4g/resource/> .
+@prefix ns2:	<http://data.europa.eu/a4g/ontology#> .
+ns1:id_615457-2025_Notice	rdf:type	ns2:Notice .
+@prefix ns3:	<http://www.w3.org/ns/adms#> .
+ns1:id_615457-2025_Notice	ns3:identifier	ns1:id_615457-2025_NoticeIdentifier_QDVw9P5vNjDmtQprjJMs4a .
+ns1:id_615457-2025_NoticeIdentifier_QDVw9P5vNjDmtQprjJMs4a	rdf:type	ns3:Identifier .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+ns1:id_615457-2025_NoticeIdentifier_QDVw9P5vNjDmtQprjJMs4a	skos:notation	"615457-2025" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_AccessTerm_eGdkoq4LkbGrncyCWFKjRt	rdf:type	ns2:AccessTerm ;
+	ns2:definesOfflineAccessProvider	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OfflineAccessProvider_Hob4oLPuH9T8ebBrv7GqC6 ;
+	ns2:definesProcurementProcedureInformationProvider	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementProcedureInformationProvider_Hob4oLPuH9T8ebBrv7GqC6 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_AwardDecision_9XyJKnAMPZf4mi3GVghtU6	rdf:type	ns2:AwardDecision .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_AwardDecision_9XyJKnAMPZf4mi3GVghtU6	ns2:hasAwardDecisionDate	"2025-08-26"^^xsd:date ;
+	ns2:comprisesAwardOutcome	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotAwardOutcome_RES-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Buyer_PbuuQVDAP9jvgtF6eprdW2	rdf:type	ns2:Buyer ;
+	ns2:playedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0001 .
+@prefix ns6:	<http://www.w3.org/ns/locn#> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_5oamSpC3ikwoRMLn49RxG2	rdf:type	ns6:Address .
+@prefix ns7:	<http://publications.europa.eu/resource/authority/country/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_5oamSpC3ikwoRMLn49RxG2	ns2:hasCountryCode	ns7:CZE .
+@prefix ns8:	<http://data.europa.eu/nuts/code/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_5oamSpC3ikwoRMLn49RxG2	ns2:hasNutsCode	ns8:CZ010 ;
+	ns6:fullAddress	"Duhov\u00E1 1444/2, Praha - Michle, 14000, CZE" ;
+	ns6:postCode	"14000" ;
+	ns6:postName	"Praha - Michle" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_5w4jTR6gfdXBvGkZDdofo7	rdf:type	ns6:Address ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ010 ;
+	ns6:fullAddress	"Duhov\u00E1 1444/2, Praha - Michle, 14000, CZE" ;
+	ns6:postCode	"14000" ;
+	ns6:postName	"Praha - Michle" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_QLSEm2DyTzM8ssuHGXE6Hw	rdf:type	ns6:Address ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ064 ;
+	ns6:fullAddress	"t\u0159\u00EDda Kpt. Jaro\u0161e 1926/7, Brno, 60200, CZE" ;
+	ns6:postCode	"60200" ;
+	ns6:postName	"Brno" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_Ru6ZF7VecxyPwFsqDRJu85	rdf:type	ns6:Address ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ080 ;
+	ns6:fullAddress	"D\u011Blnick\u00E1 883/46, Hav\u00ED\u0159ov - Prost\u0159edn\u00ED Such\u00E1, 73564, CZE" ;
+	ns6:postCode	"73564" ;
+	ns6:postName	"Hav\u00ED\u0159ov - Prost\u0159edn\u00ED Such\u00E1" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_amxyHzzWSDM5hALBwwbWuJ	rdf:type	ns6:Address ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ080 ;
+	ns6:fullAddress	"Vratimovsk\u00E1 624/11, Ostrava - Kun\u010Di\u010Dky, 71800, CZE" ;
+	ns6:postCode	"71800" ;
+	ns6:postName	"Ostrava - Kun\u010Di\u010Dky" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_dsV3J5EGaewAFo9YuPgodC	rdf:type	ns6:Address ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ042 ;
+	ns6:fullAddress	"Za V\u00E1lcovnou 465/49, \u00DAst\u00ED nad Labem - P\u0159edlice, 40001, CZE" ;
+	ns6:postCode	"40001" ;
+	ns6:postName	"\u00DAst\u00ED nad Labem - P\u0159edlice" .
+@prefix ns9:	<http://data.europa.eu/m8g/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_6r33Cv99oV38zobB7Hepex	rdf:type	ns9:ContactPoint ;
+	ns2:hasInternetAddress	"https://www.cez.cz/"^^xsd:anyURI ;
+	ns9:email	"anna.husakova01@cez.cz" ;
+	ns9:telephone	"+420 606632896" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_Kt8Anvwo3sjQE2zRaTPDMm	rdf:type	ns9:ContactPoint ;
+	ns9:email	"obchod@homola.as" ;
+	ns9:telephone	"+420 739521475" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_NcbPXevKMmMoUV4ixLLM8J	rdf:type	ns9:ContactPoint ;
+	ns9:email	"obchod@homola.as" ;
+	ns9:telephone	"+420 739521475" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_NsQgV4dy8XNKVeR2M8tt3c	rdf:type	ns9:ContactPoint ;
+	ns9:email	"obchod@homola.cz" ;
+	ns9:telephone	"+420 739521475" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_boyhsCP9AduPpEce9s56fZ	rdf:type	ns9:ContactPoint ;
+	ns2:hasInternetAddress	"https://uohs.gov.cz"^^xsd:anyURI ;
+	ns9:email	"posta@uohs.cz" ;
+	ns9:telephone	"+420 542167111" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_exXX5w4R9epdXpscc9vte8	rdf:type	ns9:ContactPoint ;
+	ns9:email	"anna.husakova01@cez.cz" ;
+	ns9:telephone	"+420 606632896" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractAmendment_QDVw9P5vNjDmtQprjJMs4a	rdf:type	ns2:ContractAmendment ;
+	ns2:amendsContract	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SettledContract_CON-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractDuration_4TghaR9Riayv2Hb6XHyc6D	rdf:type	ns2:SpecificDuration .
+@prefix ns10:	<http://www.w3.org/2006/time#> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractDuration_4TghaR9Riayv2Hb6XHyc6D	ns10:numericDuration	650 ;
+	ns10:unitType	ns10:unitDay .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractLocationAddress_5zVCW3b2MSxAnzMuZRbDZB	rdf:type	ns6:Address ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ042 .
+@prefix dcterms:	<http://purl.org/dc/terms/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractLocation_5zVCW3b2MSxAnzMuZRbDZB	rdf:type	dcterms:Location ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ042 ;
+	ns6:address	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractLocationAddress_5zVCW3b2MSxAnzMuZRbDZB .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractLocation_Ts6NbgWz9wKHX3CqwnxxzK	rdf:type	dcterms:Location ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ042 ;
+	ns6:address	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedurePlacePerformance_Ts6NbgWz9wKHX3CqwnxxzK .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractModificationInformation_QDVw9P5vNjDmtQprjJMs4a	rdf:type	ns2:ContractModificationInformation ;
+	ns2:concernsContractAmendment	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractAmendment_QDVw9P5vNjDmtQprjJMs4a ;
+	ns2:hasModificationDescription	"Zhotovitel v pr\u016Fb\u011Bhu prac\u00ED na D\u00EDle, konkr\u00E9tn\u011B realizaci miln\u00EDku M6 spo\u010D\u00EDvaj\u00EDc\u00ED v instalaci a mont\u00E1\u017Ei trafostanice a \u010Derpadel obdr\u017Eel dne 15. 5. 2026 vyty\u010Dovac\u00ED protokol s\u00EDt\u00ED, ze kter\u00E9ho je zjevn\u00E1 kolize (nesoulad) vyty\u010Den\u00E9 s\u00EDt\u011B, tj. konkr\u00E9tn\u011B podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6kV, s projektovou dokumentac\u00ED pro proveden\u00ED stavby (d\u00E1le jen \u201EPDPS\u201C) na z\u00E1klad\u011B kter\u00E9 m\u011Bl Zhotovitel instalovat trafostanici. Jedn\u00E1 se o to, \u017Ee podzemn\u00ED kabelov\u00E9 veden\u00ED se re\u00E1ln\u011B nach\u00E1z\u00ED o 1,5 metru mimo oproti zakreslen\u00E9 s\u00EDti v generelu z\u00E1vodu a t\u00EDmto re\u00E1ln\u00FDm posunem (tj. nesouladu faktick\u00E9ho stavu se stavem uveden\u00FDm v podkladu) do\u0161lo k tomu, \u017Ee z\u00E1konn\u00E9 ochrann\u00E9 p\u00E1smo uveden\u00E9ho kabelu nov\u011B p\u0159\u00EDmo zasahuje do pl\u00E1novan\u00E9ho um\u00EDst\u011Bn\u00ED trafostanice. Zadavatel mus\u00ED tuto kolizi \u0159e\u0161it, nebo\u0165 dokud nedojde k do\u0159e\u0161en\u00ED t\u00E9to kolize, nem\u016F\u017Ee doj\u00EDt k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovan\u00E1 projek\u010Dn\u00ED spole\u010Dnost (d\u00E1le jen \u201EZpracovatel PDPS\u201C), a kter\u00E1 byla sou\u010D\u00E1st\u00ED zad\u00E1vac\u00ED dokumentace a Zhotovitel z n\u00ED vych\u00E1z\u00ED p\u0159i prov\u00E1d\u011Bn\u00ED D\u00EDla, je podzemn\u00ED kabelov\u00E9 veden\u00ED VN 6kV zakresleno mimo rozsah pl\u00E1novan\u00E9 instalace a mont\u00E1\u017Ee trafostanice. P\u0159ed skute\u010Dn\u00FDm zah\u00E1jen\u00EDm prac\u00ED v souvislosti s um\u00EDst\u011Bn\u00EDm trafostanice je nutn\u00E9 prov\u00E9st vyty\u010Den\u00ED s\u00EDt\u00ED, nebo\u0165 je nutn\u00E9 zn\u00E1t p\u0159esn\u00E9 veden\u00ED s\u00EDt\u00ED i velikost jejich ochrann\u00E9ho p\u00E1sma. Zhotovitel v sou\u010Dinnosti s Objednatelem tedy p\u0159ed zah\u00E1jen\u00EDm prac\u00ED zajistili vyty\u010Den\u00ED s\u00EDt\u011B a bylo zji\u0161t\u011Bno, \u017Ee skute\u010Dn\u00E9 veden\u00ED s\u00EDt\u011B je um\u00EDst\u011Bno v z\u00E1jmov\u00E9 oblasti pro um\u00EDst\u011Bn\u00ED trafostanice. Zhotovitel n\u00E1sledn\u011B realizoval sondy, kter\u00FDmi ov\u011B\u0159il, \u017Ee podzemn\u00ED kabelov\u00E9 veden\u00ED VN 6kV se skute\u010Dn\u011B nach\u00E1z\u00ED mimo pozici, kterou uv\u00E1d\u011Bl generel z\u00E1vodu. Zhotovitel na z\u00E1klad\u011B v\u00FD\u0161e uveden\u00E9ho nem\u016F\u017Ee, do doby proveden\u00ED p\u0159elo\u017Eky VN kabelu, realizovat pln\u011Bn\u00ED miln\u00EDku M6, proto\u017Ee by do\u0161lo k poru\u0161en\u00ED Z\u00E1kona \u010D. 458/2000 Sb., \u00A745, odst. 8, p\u00EDsm. d.), dle kter\u00FDch nen\u00ED mo\u017En\u00E9 prov\u00E1d\u011Bt stavby v ochrann\u00E9m p\u00E1smu veden\u00ED VN kabelu. \nObjednatel si nechal zpracovat PDPS od specializovan\u00E9 projek\u010Dn\u00ED spole\u010Dnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhl\u00E1\u0161ky \u010D. 499/2006 Sb., jedn\u00EDm z podklad\u016F pro tvorbu PDPS byl tak\u00E9 generel z\u00E1vodu zn\u00E1zor\u0148uj\u00EDc\u00ED um\u00EDst\u011Bn\u00ED podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6kV. Objednatel potvrdil, \u017Ee p\u0159i p\u0159evzet\u00ED z jeho strany prob\u011Bhla kontrola a Objednatel neshledal \u017E\u00E1dn\u00E9 zjevn\u00E9 vady v p\u0159edan\u00E9 PDPS. Kabel je um\u00EDst\u011Bn pod zem\u00ED, \u010Dili Objednatel nemohl s p\u0159im\u011B\u0159enou p\u00E9\u010D\u00ED odhalit nesoulad mezi PDPS a skute\u010Dn\u00FDm stavem veden\u00ED podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6kV.  Lze tedy konstatovat, \u017Ee Objednatel jednal s \u0159\u00E1dnou p\u00E9\u010D\u00ED v souladu s \u00A7 222 odst. 6 ZZVZ a nemohl pot\u0159ebu zm\u011Bny smlouvy, v d\u016Fsledku pot\u0159eby proveden\u00ED p\u0159elo\u017Eky VN kabelu p\u0159edv\u00EDdat, a to ani v dob\u011B p\u0159\u00EDpravy zad\u00E1vac\u00ED dokumentace k ve\u0159ejn\u00E9 zak\u00E1zce a ani v pr\u016Fb\u011Bhu zad\u00E1vac\u00EDho \u0159\u00EDzen\u00ED (tj. od zah\u00E1jen\u00ED zad\u00E1vac\u00EDho \u0159\u00EDzen\u00ED do okam\u017Eiku uzav\u0159en\u00ED Smlouvy. \n \nUzav\u0159en\u00FD dodatek nem\u011Bn\u00ED celkovou povahu VZ, jeliko\u017E pln\u011Bn\u00ED Zhotovitele z\u016Fst\u00E1v\u00E1 stejn\u00E9. Doch\u00E1z\u00ED pouze k prodlou\u017Een\u00ED lh\u016Fty pro spln\u011Bn\u00ED d\u00EDl\u010D\u00EDho pln\u011Bn\u00ED Zhotovitele, tak aby toto prodlou\u017Een\u00ED reflektovalo tu skute\u010Dnost, \u017Ee p\u0159ed um\u00EDst\u011Bn\u00EDm trafostanice mus\u00ED prob\u011Bhnout p\u0159elo\u017Eka podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6 kV. Zadavatel uv\u00E1d\u00ED, \u017Ee navrhovan\u00E9 zm\u011Bny Smlouvy pod\u0159azuje pod postup ve smyslu \u00A7 222, odst. 6 ZZVZ.\n\n"@cs .
+@prefix ns12:	<http://publications.europa.eu/resource/authority/modification-justification/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractModificationInformation_QDVw9P5vNjDmtQprjJMs4a	ns2:hasModificationJustification	ns12:mod-cir ;
+	ns2:hasModificationReasonDescription	"Zhotovitel v pr\u016Fb\u011Bhu prac\u00ED na D\u00EDle, konkr\u00E9tn\u011B realizaci miln\u00EDku M6 spo\u010D\u00EDvaj\u00EDc\u00ED v instalaci a mont\u00E1\u017Ei trafostanice a \u010Derpadel obdr\u017Eel dne 15. 5. 2026 vyty\u010Dovac\u00ED protokol s\u00EDt\u00ED, ze kter\u00E9ho je zjevn\u00E1 kolize (nesoulad) vyty\u010Den\u00E9 s\u00EDt\u011B, tj. konkr\u00E9tn\u011B podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6kV, s projektovou dokumentac\u00ED pro proveden\u00ED stavby (d\u00E1le jen \u201EPDPS\u201C) na z\u00E1klad\u011B kter\u00E9 m\u011Bl Zhotovitel instalovat trafostanici. Jedn\u00E1 se o to, \u017Ee podzemn\u00ED kabelov\u00E9 veden\u00ED se re\u00E1ln\u011B nach\u00E1z\u00ED o 1,5 metru mimo oproti zakreslen\u00E9 s\u00EDti v generelu z\u00E1vodu a t\u00EDmto re\u00E1ln\u00FDm posunem (tj. nesouladu faktick\u00E9ho stavu se stavem uveden\u00FDm v podkladu) do\u0161lo k tomu, \u017Ee z\u00E1konn\u00E9 ochrann\u00E9 p\u00E1smo uveden\u00E9ho kabelu nov\u011B p\u0159\u00EDmo zasahuje do pl\u00E1novan\u00E9ho um\u00EDst\u011Bn\u00ED trafostanice. Zadavatel mus\u00ED tuto kolizi \u0159e\u0161it, nebo\u0165 dokud nedojde k do\u0159e\u0161en\u00ED t\u00E9to kolize, nem\u016F\u017Ee doj\u00EDt k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovan\u00E1 projek\u010Dn\u00ED spole\u010Dnost (d\u00E1le jen \u201EZpracovatel PDPS\u201C), a kter\u00E1 byla sou\u010D\u00E1st\u00ED zad\u00E1vac\u00ED dokumentace a Zhotovitel z n\u00ED vych\u00E1z\u00ED p\u0159i prov\u00E1d\u011Bn\u00ED D\u00EDla, je podzemn\u00ED kabelov\u00E9 veden\u00ED VN 6kV zakresleno mimo rozsah pl\u00E1novan\u00E9 instalace a mont\u00E1\u017Ee trafostanice. P\u0159ed skute\u010Dn\u00FDm zah\u00E1jen\u00EDm prac\u00ED v souvislosti s um\u00EDst\u011Bn\u00EDm trafostanice je nutn\u00E9 prov\u00E9st vyty\u010Den\u00ED s\u00EDt\u00ED, nebo\u0165 je nutn\u00E9 zn\u00E1t p\u0159esn\u00E9 veden\u00ED s\u00EDt\u00ED i velikost jejich ochrann\u00E9ho p\u00E1sma. Zhotovitel v sou\u010Dinnosti s Objednatelem tedy p\u0159ed zah\u00E1jen\u00EDm prac\u00ED zajistili vyty\u010Den\u00ED s\u00EDt\u011B a bylo zji\u0161t\u011Bno, \u017Ee skute\u010Dn\u00E9 veden\u00ED s\u00EDt\u011B je um\u00EDst\u011Bno v z\u00E1jmov\u00E9 oblasti pro um\u00EDst\u011Bn\u00ED trafostanice. Zhotovitel n\u00E1sledn\u011B realizoval sondy, kter\u00FDmi ov\u011B\u0159il, \u017Ee podzemn\u00ED kabelov\u00E9 veden\u00ED VN 6kV se skute\u010Dn\u011B nach\u00E1z\u00ED mimo pozici, kterou uv\u00E1d\u011Bl generel z\u00E1vodu. Zhotovitel na z\u00E1klad\u011B v\u00FD\u0161e uveden\u00E9ho nem\u016F\u017Ee, do doby proveden\u00ED p\u0159elo\u017Eky VN kabelu, realizovat pln\u011Bn\u00ED miln\u00EDku M6, proto\u017Ee by do\u0161lo k poru\u0161en\u00ED Z\u00E1kona \u010D. 458/2000 Sb., \u00A745, odst. 8, p\u00EDsm. d.), dle kter\u00FDch nen\u00ED mo\u017En\u00E9 prov\u00E1d\u011Bt stavby v ochrann\u00E9m p\u00E1smu veden\u00ED VN kabelu. \nObjednatel si nechal zpracovat PDPS od specializovan\u00E9 projek\u010Dn\u00ED spole\u010Dnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhl\u00E1\u0161ky \u010D. 499/2006 Sb., jedn\u00EDm z podklad\u016F pro tvorbu PDPS byl tak\u00E9 generel z\u00E1vodu zn\u00E1zor\u0148uj\u00EDc\u00ED um\u00EDst\u011Bn\u00ED podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6kV. Objednatel potvrdil, \u017Ee p\u0159i p\u0159evzet\u00ED z jeho strany prob\u011Bhla kontrola a Objednatel neshledal \u017E\u00E1dn\u00E9 zjevn\u00E9 vady v p\u0159edan\u00E9 PDPS. Kabel je um\u00EDst\u011Bn pod zem\u00ED, \u010Dili Objednatel nemohl s p\u0159im\u011B\u0159enou p\u00E9\u010D\u00ED odhalit nesoulad mezi PDPS a skute\u010Dn\u00FDm stavem veden\u00ED podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6kV.  Lze tedy konstatovat, \u017Ee Objednatel jednal s \u0159\u00E1dnou p\u00E9\u010D\u00ED v souladu s \u00A7 222 odst. 6 ZZVZ a nemohl pot\u0159ebu zm\u011Bny smlouvy, v d\u016Fsledku pot\u0159eby proveden\u00ED p\u0159elo\u017Eky VN kabelu p\u0159edv\u00EDdat, a to ani v dob\u011B p\u0159\u00EDpravy zad\u00E1vac\u00ED dokumentace k ve\u0159ejn\u00E9 zak\u00E1zce a ani v pr\u016Fb\u011Bhu zad\u00E1vac\u00EDho \u0159\u00EDzen\u00ED (tj. od zah\u00E1jen\u00ED zad\u00E1vac\u00EDho \u0159\u00EDzen\u00ED do okam\u017Eiku uzav\u0159en\u00ED Smlouvy. \n \nUzav\u0159en\u00FD dodatek nem\u011Bn\u00ED celkovou povahu VZ, jeliko\u017E pln\u011Bn\u00ED Zhotovitele z\u016Fst\u00E1v\u00E1 stejn\u00E9. Doch\u00E1z\u00ED pouze k prodlou\u017Een\u00ED lh\u016Fty pro spln\u011Bn\u00ED d\u00EDl\u010D\u00EDho pln\u011Bn\u00ED Zhotovitele, tak aby toto prodlou\u017Een\u00ED reflektovalo tu skute\u010Dnost, \u017Ee p\u0159ed um\u00EDst\u011Bn\u00EDm trafostanice mus\u00ED prob\u011Bhnout p\u0159elo\u017Eka podzemn\u00EDho kabelov\u00E9ho veden\u00ED VN 6 kV. Zadavatel uv\u00E1d\u00ED, \u017Ee navrhovan\u00E9 zm\u011Bny Smlouvy pod\u0159azuje pod postup ve smyslu \u00A7 222, odst. 6 ZZVZ.\n \n\n\n"@cs .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractPeriod_4TghaR9Riayv2Hb6XHyc6D	rdf:type	ns2:Period ;
+	ns2:hasBeginning	"2025-09-03"^^xsd:date .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractTerm_jucn4erQJnXcty2wPoNNzB	rdf:type	ns2:ContractTerm ;
+	ns2:definesSpecificPlaceOfPerformance	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractLocation_5zVCW3b2MSxAnzMuZRbDZB .
+@prefix ns13:	<http://publications.europa.eu/resource/authority/contract-nature/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractTerm_jucn4erQJnXcty2wPoNNzB	ns2:hasContractNatureType	ns13:works ;
+	ns2:definesContractDuration	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractDuration_4TghaR9Riayv2Hb6XHyc6D ;
+	ns2:definesContractPeriod	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractPeriod_4TghaR9Riayv2Hb6XHyc6D ;
+	ns2:hasMaximumNumberOfRenewals	0 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_DynamicPurchaseSystemTechnicalUsage_Q4h2gSzyXb646JqueyB5tR	rdf:type	ns2:DynamicPurchaseSystemTechnique .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_FrameworkAgreementTerm_Q4h2gSzyXb646JqueyB5tR	rdf:type	ns2:FrameworkAgreementTerm .
+@prefix ns14:	<http://publications.europa.eu/resource/authority/framework-agreement/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_FrameworkAgreementTerm_Q4h2gSzyXb646JqueyB5tR	ns2:hasFrameworkAgreementType	ns14:none .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_GreenProcurement_MTgbAGK4NBNqSr68FLpC2V	rdf:type	ns2:GreenProcurement .
+@prefix ns15:	<http://publications.europa.eu/resource/authority/environmental-impact/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_GreenProcurement_MTgbAGK4NBNqSr68FLpC2V	ns2:fulfillsRequirement	ns15:pollu-prev .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0001	rdf:type	ns3:Identifier ;
+	skos:notation	"ORG-0001" ;
+	ns2:hasScheme	"organization" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0002	rdf:type	ns3:Identifier ;
+	skos:notation	"ORG-0002" ;
+	ns2:hasScheme	"organization" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0003	rdf:type	ns3:Identifier ;
+	skos:notation	"ORG-0003" ;
+	ns2:hasScheme	"organization" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0004	rdf:type	ns3:Identifier ;
+	skos:notation	"ORG-0004" ;
+	ns2:hasScheme	"organization" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0005	rdf:type	ns3:Identifier ;
+	skos:notation	"ORG-0005" ;
+	ns2:hasScheme	"organization" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0006	rdf:type	ns3:Identifier ;
+	skos:notation	"ORG-0006" ;
+	ns2:hasScheme	"organization" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_InnovativeProcurement_ioPq7bVSmgUZJ6PUVgTYPp	rdf:type	ns2:InnovativeProcurement .
+@prefix ns16:	<http://publications.europa.eu/resource/authority/innovative-acquisition/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_InnovativeProcurement_ioPq7bVSmgUZJ6PUVgTYPp	ns2:fulfillsRequirement	ns16:proc-innov .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotAwardOutcome_RES-0001	rdf:type	ns2:LotAwardOutcome .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotAwardOutcome_RES-0001	rdfs:seeAlso	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewRequestSummary_FmfbzZdeEatT3nzZdqXd3D ;
+	ns2:comprisesTenderAwardOutcome	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_TenderAwardOutcome_TEN-0001 ;
+	ns2:concernsLot	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotIdentifier_jucn4erQJnXcty2wPoNNzB	rdf:type	ns3:Identifier ;
+	skos:notation	"LOT-0001" ;
+	ns2:hasScheme	"Lot" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotInternalIdentifier_4mnqZ7PF3sxbwYtmUHUyS6	rdf:type	ns3:Identifier ;
+	skos:notation	"N006/24/V00019426" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotPurpose_4mnqZ7PF3sxbwYtmUHUyS6	rdf:type	ns2:Purpose ;
+	ns2:hasMainClassification	<http://data.europa.eu/cpv/cpv/45231110> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001	rdf:type	ns2:Lot ;
+	dcterms:title	"CV_HV propoj EPR- Kada\u0148"@cs ;
+	dcterms:description	"P\u0159edm\u011Btem ve\u0159ejn\u00E9 zak\u00E1zky na stavebn\u00ED pr\u00E1ce je navrhnout a vypracovat realiza\u010Dn\u00ED projektovou dokumentaci, v souladu s n\u00ED prov\u00E9st stavebn\u00ED pr\u00E1ce, a d\u00E1le dodat, nainstalovat, vyzkou\u0161et a uv\u00E9st do provozu horkovod mezi lokalitami Prun\u00E9\u0159ov - Kada\u0148, v\u010Detn\u011B prok\u00E1z\u00E1n\u00ED garantovan\u00FDch parametr\u016F a prov\u00E9st dal\u0161\u00ED stavebn\u00ED a jin\u00E9 souvisej\u00EDc\u00ED pr\u00E1ce.  "@cs ;
+	ns2:foreseesContractSpecificTerm	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractTerm_jucn4erQJnXcty2wPoNNzB ;
+	ns2:hasPurpose	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotPurpose_4mnqZ7PF3sxbwYtmUHUyS6 ;
+	ns2:isCoveredByGPA	"true"^^xsd:boolean ;
+	ns2:usesTechnique	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_DynamicPurchaseSystemTechnicalUsage_Q4h2gSzyXb646JqueyB5tR ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotIdentifier_jucn4erQJnXcty2wPoNNzB ;
+	ns2:fulfillsStrategicProcurement	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_InnovativeProcurement_ioPq7bVSmgUZJ6PUVgTYPp ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_StrategicProcurement_4mnqZ7PF3sxbwYtmUHUyS6 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SocialProcurement_FbxiobiJYxNCgQAMtdKfL3 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_GreenProcurement_MTgbAGK4NBNqSr68FLpC2V ;
+	ns2:hasInternalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_LotInternalIdentifier_4mnqZ7PF3sxbwYtmUHUyS6 ;
+	ns2:isSubjectToLotSpecificTerm	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_AccessTerm_eGdkoq4LkbGrncyCWFKjRt ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_FrameworkAgreementTerm_Q4h2gSzyXb646JqueyB5tR ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewTerm_QmkiZENjGqABvzebdMdK43 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewTerm_diKpJmaujx254zQoutkWj5 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_MonetaryValueNoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt	rdf:type	ns2:MonetaryValue ;
+	ns2:hasAmountValue	427756486.26 .
+@prefix ns18:	<http://publications.europa.eu/resource/authority/currency/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_MonetaryValueNoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt	ns2:hasCurrency	ns18:CZK .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Notice	rdf:type	ns2:Notice ,
+		ns2:Notice39 ,
+		ns2:ContractModificationNotice ;
+	ns2:hasPublicationDate	"2026-06-26"^^xsd:date ;
+	ns2:refersToLot	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 ;
+	ns2:refersToPrevious	ns1:id_615457-2025_Notice ;
+	ns2:refersToProcedure	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Procedure_6dcsBnuV4FTNoRpTZHckqN ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_NoticeIdentifier_aHt4iskyRUJYALjw7mSMu2 ;
+	ns2:hasESenderDispatchDate	"2026-06-25T13:04:37+02:00"^^xsd:dateTime .
+@prefix ns19:	<http://publications.europa.eu/resource/authority/form-type/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Notice	ns2:hasFormType	ns19:cont-modif ;
+	ns2:hasNoticePublicationNumber	"00439224-2026" .
+@prefix ns20:	<http://publications.europa.eu/resource/authority/notice-type/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Notice	ns2:hasNoticeType	ns20:can-modif ;
+	ns2:hasOJSIssueNumber	"121/2026" .
+@prefix ns21:	<http://publications.europa.eu/resource/authority/language/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Notice	ns2:hasOfficialLanguage	ns21:CES ;
+	ns2:hasVersion	"01" ;
+	ns2:refersToRole	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Buyer_PbuuQVDAP9jvgtF6eprdW2 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OfflineAccessProvider_Hob4oLPuH9T8ebBrv7GqC6 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementProcedureInformationProvider_Hob4oLPuH9T8ebBrv7GqC6 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Reviewer_3qDoBaQsAXVe5Ci2dDBD6C ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementServiceProvider_AxEoDZth6eN89p7o8GWdBS ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewProcedureInformationProvider_Vy64yERj6Fjzdbdi8yhfHE ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Tenderer_TPA-0001 ;
+	ns2:announcesContractAmendment	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractAmendment_QDVw9P5vNjDmtQprjJMs4a ;
+	ns2:refersToAwardDecision	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_AwardDecision_9XyJKnAMPZf4mi3GVghtU6 ;
+	ns2:refersToContractToBeModified	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SettledContract_CON-0001 ;
+	ns2:refersToNoticeAwardInformation	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt	rdf:type	ns2:NoticeAwardInformation ;
+	ns2:hasTotalAwardedValue	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_MonetaryValueNoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_NoticeIdentifier_aHt4iskyRUJYALjw7mSMu2	rdf:type	ns3:Identifier ;
+	skos:notation	"64d11ab6-6031-4b2b-b7a0-6abbee7f6c68" ;
+	ns2:hasScheme	"notice-id" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OfflineAccessProvider_Hob4oLPuH9T8ebBrv7GqC6	rdf:type	ns2:OfflineAccessProvider ;
+	ns2:playedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0006 ;
+	ns2:contextualisedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK	rdf:type	ns2:OrganisationGroup ;
+	ns2:hasMember	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0003 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0004 ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0005 ;
+	ns2:leadBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0003 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_4NU5AxJwe7aGai3Cgq8HpC	rdf:type	ns3:Identifier ;
+	skos:notation	"27309941" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_TiVUHwGQDsX9opwP5GzxJN	rdf:type	ns3:Identifier ;
+	skos:notation	"46708111" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_f6UHyxGr4DCJEdQFhCy5Eh	rdf:type	ns3:Identifier ;
+	skos:notation	"45274649" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_kBS6hfuKcfLdhcriXMzYSR	rdf:type	ns3:Identifier ;
+	skos:notation	"65349423" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_n9YzuN82p7GUZfitU2RSTE	rdf:type	ns3:Identifier ;
+	skos:notation	"26792770" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_o3DmeDpoFTnKShZ62aR55v	rdf:type	ns3:Identifier ;
+	skos:notation	"46578021" .
+@prefix ns22:	<http://www.w3.org/ns/org#> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0001	rdf:type	ns22:Organization .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0001	owl:sameAs	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0001 ;
+	ns2:hasLegalName	"\u010CEZ Tepl\u00E1rensk\u00E1, a.s."@cs ;
+	ns2:hasPrimaryContactPoint	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_6r33Cv99oV38zobB7Hepex ;
+	ns9:registeredAddress	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_5w4jTR6gfdXBvGkZDdofo7 ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0001 ;
+	ns2:hasLegalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_4NU5AxJwe7aGai3Cgq8HpC .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0002	rdf:type	ns22:Organization ;
+	owl:sameAs	ns1:id_619cc4df-bf37-465d-a773-4aa0ec0c3b7d_Organization_ORG-0002 ;
+	ns2:hasLegalName	"\u00DA\u0159ad pro ochranu hospod\u00E1\u0159sk\u00E9 sout\u011B\u017Ee"@cs ;
+	ns2:hasPrimaryContactPoint	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_boyhsCP9AduPpEce9s56fZ ;
+	ns9:registeredAddress	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_QLSEm2DyTzM8ssuHGXE6Hw ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0002 ;
+	ns2:hasLegalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_kBS6hfuKcfLdhcriXMzYSR .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0003	rdf:type	ns22:Organization ;
+	owl:sameAs	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0003 ;
+	ns2:hasLegalName	"HOMOLA a.s."@cs ;
+	ns2:hasPrimaryContactPoint	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_NsQgV4dy8XNKVeR2M8tt3c ;
+	ns9:registeredAddress	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_amxyHzzWSDM5hALBwwbWuJ ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0003 ;
+	ns2:hasLegalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_n9YzuN82p7GUZfitU2RSTE .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0004	rdf:type	ns22:Organization ;
+	owl:sameAs	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0004 ;
+	ns2:hasLegalName	"ELTE Holding a.s."@cs ;
+	ns2:hasPrimaryContactPoint	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_NcbPXevKMmMoUV4ixLLM8J ;
+	ns9:registeredAddress	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_dsV3J5EGaewAFo9YuPgodC ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0004 ;
+	ns2:hasLegalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_TiVUHwGQDsX9opwP5GzxJN .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0005	rdf:type	ns22:Organization ;
+	owl:sameAs	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0005 ;
+	ns2:hasLegalName	"GASCONTROL, spole\u010Dnost s r.o."@cs ;
+	ns2:hasPrimaryContactPoint	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_Kt8Anvwo3sjQE2zRaTPDMm ;
+	ns9:registeredAddress	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_Ru6ZF7VecxyPwFsqDRJu85 ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0005 ;
+	ns2:hasLegalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_o3DmeDpoFTnKShZ62aR55v .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0006	rdf:type	ns22:Organization ;
+	owl:sameAs	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0006 ;
+	ns2:hasLegalName	"\u010CEZ, a. s."@cs ;
+	ns2:hasPrimaryContactPoint	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyContactPoint_exXX5w4R9epdXpscc9vte8 ;
+	ns9:registeredAddress	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_CompanyAddress_5oamSpC3ikwoRMLn49RxG2 ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Identifier_ORG-0006 ;
+	ns2:hasLegalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationIdentifier_f6UHyxGr4DCJEdQFhCy5Eh .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN	rdf:type	ns3:Identifier ;
+	skos:notation	"016c74a6-ac6c-450b-aeb2-577a856bdb6f" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedureIdentifier_Hu2nD8nFQkA5CPSQ43KMRD	rdf:type	ns3:Identifier ;
+	skos:notation	"N006/24/V00019426" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedurePlacePerformance_Ts6NbgWz9wKHX3CqwnxxzK	rdf:type	ns6:Address ;
+	ns2:hasCountryCode	ns7:CZE ;
+	ns2:hasNutsCode	ns8:CZ042 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedurePurpose_Hu2nD8nFQkA5CPSQ43KMRD	rdf:type	ns2:Purpose ;
+	ns2:hasMainClassification	<http://data.europa.eu/cpv/cpv/45231110> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Procedure_6dcsBnuV4FTNoRpTZHckqN	rdf:type	ns2:Procedure ;
+	dcterms:title	"CV_HV propoj EPR- Kada\u0148"@cs ;
+	dcterms:description	"P\u0159edm\u011Btem ve\u0159ejn\u00E9 zak\u00E1zky na stavebn\u00ED pr\u00E1ce je navrhnout a vypracovat realiza\u010Dn\u00ED projektovou dokumentaci, v souladu s n\u00ED prov\u00E9st stavebn\u00ED pr\u00E1ce, a d\u00E1le dodat, nainstalovat, vyzkou\u0161et a uv\u00E9st do provozu horkovod mezi lokalitami Prun\u00E9\u0159ov - Kada\u0148, v\u010Detn\u011B prok\u00E1z\u00E1n\u00ED garantovan\u00FDch parametr\u016F a prov\u00E9st dal\u0161\u00ED stavebn\u00ED a jin\u00E9 souvisej\u00EDc\u00ED pr\u00E1ce.  "@cs ;
+	ns2:foreseesContractSpecificTerm	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementProjectContractTerm_Hu2nD8nFQkA5CPSQ43KMRD ,
+		ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementProjectContractTerm_BAFiQAm5eaBz7sDFPbYXor ;
+	ns2:hasLegalBasis	<http://publications.europa.eu/resource/authority/legal-basis/32014L0025> ;
+	ns2:hasProcurementScopeDividedIntoLot	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 ;
+	ns2:hasPurpose	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedurePurpose_Hu2nD8nFQkA5CPSQ43KMRD ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN ;
+	ns2:hasInternalIdentifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcedureIdentifier_Hu2nD8nFQkA5CPSQ43KMRD ;
+	ns2:hasLegalBasisDescription	"134/2016 Sb. / Z\u00E1kon o zad\u00E1v\u00E1n\u00ED ve\u0159ejn\u00FDch zak\u00E1zek"@cs .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementProcedureInformationProvider_Hob4oLPuH9T8ebBrv7GqC6	rdf:type	ns2:ProcurementProcedureInformationProvider ;
+	ns2:playedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0006 ;
+	ns2:contextualisedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementProjectContractTerm_BAFiQAm5eaBz7sDFPbYXor	rdf:type	ns2:ContractTerm ;
+	ns2:definesSpecificPlaceOfPerformance	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ContractLocation_Ts6NbgWz9wKHX3CqwnxxzK .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementProjectContractTerm_Hu2nD8nFQkA5CPSQ43KMRD	rdf:type	ns2:ContractTerm ;
+	ns2:hasContractNatureType	ns13:works .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ProcurementServiceProvider_AxEoDZth6eN89p7o8GWdBS	rdf:type	ns2:ProcurementServiceProvider ;
+	ns2:playedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0006 ;
+	ns2:actsOnBehalfOf	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Buyer_PbuuQVDAP9jvgtF6eprdW2 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewProcedureInformationProvider_Vy64yERj6Fjzdbdi8yhfHE	rdf:type	ns2:ReviewProcedureInformationProvider ;
+	ns2:playedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0002 ;
+	ns2:contextualisedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewRequestSummary_FmfbzZdeEatT3nzZdqXd3D	rdf:type	ns2:ReviewRequestSummary ;
+	ns2:concernsReviewSummaryForLot	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 ;
+	ns2:hasTotalNumberOfComplainants	2 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewTerm_QmkiZENjGqABvzebdMdK43	rdf:type	ns2:ReviewTerm ;
+	ns2:definesReviewProcedureInformationProvider	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewProcedureInformationProvider_Vy64yERj6Fjzdbdi8yhfHE ;
+	ns2:definesReviewer	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Reviewer_3qDoBaQsAXVe5Ci2dDBD6C .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_ReviewTerm_diKpJmaujx254zQoutkWj5	rdf:type	ns2:ReviewTerm ;
+	ns2:hasReviewDeadlineInformation	"Podm\u00EDnkou pro pod\u00E1n\u00ED n\u00E1vrhu k \u00DAOHS je pod\u00E1n\u00ED n\u00E1mitek k Zadavateli, kter\u00E9 je nutn\u00E9 doru\u010Dit do 15 dn\u016F ode dne, kdy se st\u011B\u017Eovatel dozv\u011Bd\u011Bl o domn\u011Bl\u00E9m poru\u0161en\u00ED z\u00E1kona Zadavatelem, nejpozd\u011Bji v\u0161ak do uzav\u0159en\u00ED smlouvy nebo do chv\u00EDle, kdy se sout\u011B\u017E o n\u00E1vrh pova\u017Euje po v\u00FDb\u011Bru n\u00E1vrhu za ukon\u010Denou.\n\nN\u00E1mitky proti \u00FAkon\u016Fm oznamovan\u00FDm v dokumentech, kter\u00E9 je Zadavatel povinen podle z\u00E1kona uve\u0159ejnit \u010Di odeslat st\u011B\u017Eovateli, mus\u00ED b\u00FDt doru\u010Deny Zadavateli do 15 dn\u016F od jejich uve\u0159ejn\u011Bn\u00ED \u010Di doru\u010Den\u00ED st\u011B\u017Eovateli.\nPokud je v zad\u00E1vac\u00EDm \u0159\u00EDzen\u00ED stanovena lh\u016Fta pro pod\u00E1n\u00ED \u017E\u00E1dost\u00ED o \u00FA\u010Dast, mus\u00ED b\u00FDt n\u00E1mitky proti podm\u00EDnk\u00E1m vztahuj\u00EDc\u00EDm se ke kvalifikaci dodavatele doru\u010Deny Zadavateli nejpozd\u011Bji do skon\u010Den\u00ED t\u00E9to lh\u016Fty.\nPokud je v zad\u00E1vac\u00EDm \u0159\u00EDzen\u00ED stanovena lh\u016Fta pro pod\u00E1n\u00ED nab\u00EDdek, mus\u00ED b\u00FDt n\u00E1mitky proti zad\u00E1vac\u00EDm podm\u00EDnk\u00E1m doru\u010Deny Zadavateli nejpozd\u011Bji do skon\u010Den\u00ED t\u00E9to lh\u016Fty. N\u00E1mitky proti obsahu v\u00FDzvy k pod\u00E1n\u00ED nab\u00EDdek v dynamick\u00E9m n\u00E1kupn\u00EDm syst\u00E9mu nebo p\u0159i zad\u00E1v\u00E1n\u00ED ve\u0159ejn\u00E9 zak\u00E1zky na z\u00E1klad\u011B r\u00E1mcov\u00E9 dohody mus\u00ED b\u00FDt zadavateli doru\u010Deny nejpozd\u011Bji do konce lh\u016Fty pro pod\u00E1n\u00ED nab\u00EDdek. V sout\u011B\u017Ei o n\u00E1vrh mus\u00ED b\u00FDt n\u00E1mitky proti sout\u011B\u017En\u00EDm podm\u00EDnk\u00E1m doru\u010Deny nejpozd\u011Bji do konce lh\u016Fty pro pod\u00E1n\u00ED n\u00E1vrh\u016F. Zadavatel m\u016F\u017Ee v zad\u00E1vac\u00ED dokumentaci nebo sout\u011B\u017En\u00EDch podm\u00EDnk\u00E1ch stanovit, \u017Ee n\u00E1mitky podle \u00A7 242 odst. 3 nebo 4 z\u00E1kona lze podat nejpozd\u011Bji 72 hodin p\u0159ed skon\u010Den\u00EDm lh\u016Ft podle \u00A7 242 odst. 3 nebo 4 z\u00E1kona.\n\nN\u00E1mitky proti dobrovoln\u00E9mu ozn\u00E1men\u00ED o z\u00E1m\u011Bru uzav\u0159\u00EDt smlouvu podle \u00A7 212 odst. 2 z\u00E1kona mus\u00ED b\u00FDt doru\u010Deny Zadavateli do 30 dn\u016F od uve\u0159ejn\u011Bn\u00ED tohoto ozn\u00E1men\u00ED.\n\nZadavatel je povinen n\u00E1mitky vy\u0159\u00EDdit do 15 dn\u016F. N\u00E1vrh je nutn\u00E9 doru\u010Dit \u00DAOHS i Zadavateli do 10 dn\u016F ode dne, v n\u011Bm\u017E st\u011B\u017Eovatel obdr\u017Eel rozhodnut\u00ED, kter\u00FDm Zadavatel n\u00E1mitky odm\u00EDtnul nebo do 25 dn\u016F od odesl\u00E1n\u00ED n\u00E1mitek, pokud Zadavatel o n\u00E1mitk\u00E1ch nerozhodl.\n\nPo uzav\u0159en\u00ED smlouvy na ve\u0159ejnou zak\u00E1zku \u010Di r\u00E1mcov\u00E9 dohody lze podat pouze n\u00E1vrh na ulo\u017Een\u00ED z\u00E1kazu pln\u011Bn\u00ED smlouvy, a to i bez p\u0159edchoz\u00EDho pod\u00E1n\u00ED n\u00E1mitek. N\u00E1vrh na ulo\u017Een\u00ED z\u00E1kazu pln\u011Bn\u00ED smlouvy doru\u010D\u00ED navrhovatel \u00DAOHS a ve stejnopisu Zadavateli do 30 dn\u016F ode dne, kdy Zadavatel uve\u0159ejnil ozn\u00E1men\u00ED o uzav\u0159en\u00ED smlouvy zp\u016Fsobem podle \u00A7 212 odst. 2 z\u00E1kona s uveden\u00EDm d\u016Fvodu pro zad\u00E1n\u00ED ve\u0159ejn\u00E9 zak\u00E1zky bez uve\u0159ejn\u011Bn\u00ED ozn\u00E1men\u00ED o zah\u00E1jen\u00ED zad\u00E1vac\u00EDho \u0159\u00EDzen\u00ED, p\u0159edb\u011B\u017En\u00E9ho ozn\u00E1men\u00ED nebo v\u00FDzvy k pod\u00E1n\u00ED nab\u00EDdek ve zjednodu\u0161en\u00E9m podlimitn\u00EDm \u0159\u00EDzen\u00ED, nejpozd\u011Bji v\u0161ak do 6 m\u011Bs\u00EDc\u016F od uzav\u0159en\u00ED t\u00E9to smlouvy. N\u00E1vrh na ulo\u017Een\u00ED z\u00E1kazu pln\u011Bn\u00ED smlouvy podle \u00A7 254 odstavce 1 p\u00EDsm. d) z\u00E1kona doru\u010D\u00ED navrhovatel \u00DAOHS a ve stejnopisu Zadavateli do 30 dn\u016F ode dne, kdy Zadavatel uve\u0159ejnil ozn\u00E1men\u00ED o uzav\u0159en\u00ED smlouvy na z\u00E1klad\u011B r\u00E1mcov\u00E9 dohody podle \u00A7 137 z\u00E1kona nebo ozn\u00E1men\u00ED o uzav\u0159en\u00ED smlouvy v dynamick\u00E9m n\u00E1kupn\u00EDm syst\u00E9mu podle \u00A7 142 z\u00E1kona, nejpozd\u011Bji v\u0161ak do 6 m\u011Bs\u00EDc\u016F od uzav\u0159en\u00ED t\u00E9to smlouvy.\n\nVe lh\u016Ft\u011B pro doru\u010Den\u00ED n\u00E1vrhu je navrhovatel povinen slo\u017Eit na \u00FA\u010Det \u00DAOHS kauci ve v\u00FD\u0161i 1 % z nab\u00EDdkov\u00E9 ceny navrhovatele za celou dobu pln\u011Bn\u00ED ve\u0159ejn\u00E9 zak\u00E1zky nebo za dobu prvn\u00EDch \u010Dty\u0159 let pln\u011Bn\u00ED v p\u0159\u00EDpad\u011B smluv na dobu neur\u010Ditou, nejm\u00E9n\u011B v\u0161ak ve v\u00FD\u0161i 50 000 K\u010D, nejv\u00FD\u0161e ve v\u00FD\u0161i 10 000 000 K\u010D. V p\u0159\u00EDpad\u011B, \u017Ee navrhovatel nem\u016F\u017Ee stanovit celkovou nab\u00EDdkovou cenu, je povinen slo\u017Eit kauci ve v\u00FD\u0161i 100 000 K\u010D. V p\u0159\u00EDpad\u011B n\u00E1vrhu na ulo\u017Een\u00ED z\u00E1kazu pln\u011Bn\u00ED smlouvy je navrhovatel povinen slo\u017Eit kauci ve v\u00FD\u0161i 200 000 K\u010D. Jde-li o \u0159\u00EDzen\u00ED o p\u0159ezkoum\u00E1n\u00ED postupu pro zad\u00E1v\u00E1n\u00ED konces\u00ED, je navrhovatel povinen ve lh\u016Ft\u011B pro doru\u010Den\u00ED n\u00E1vrhu slo\u017Eit na \u00FA\u010Det \u00DAOHS kauci ve v\u00FD\u0161i 1 % z p\u0159edpokl\u00E1dan\u00E9 hodnoty koncese uve\u0159ejn\u011Bn\u00E9 ve V\u011Bstn\u00EDku ve\u0159ejn\u00FDch zak\u00E1zek nebo na profilu Zadavatele, nejm\u00E9n\u011B v\u0161ak ve v\u00FD\u0161i 50 000 K\u010D, nejv\u00FD\u0161e ve v\u00FD\u0161i 10 000 000 K\u010D. V p\u0159\u00EDpad\u011B, \u017Ee Zadavatel neuve\u0159ejn\u00ED ve V\u011Bstn\u00EDku ve\u0159ejn\u00FDch zak\u00E1zek nebo na profilu Zadavatele p\u0159edpokl\u00E1danou hodnotu koncese, je navrhovatel povinen slo\u017Eit kauci ve v\u00FD\u0161i 100 000 K\u010D. V p\u0159\u00EDpad\u011B n\u00E1vrhu na ulo\u017Een\u00ED z\u00E1kazu pln\u011Bn\u00ED koncesn\u00ED smlouvy je navrhovatel povinen slo\u017Eit kauci ve v\u00FD\u0161i 200 000 K\u010D."@cs .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Reviewer_3qDoBaQsAXVe5Ci2dDBD6C	rdf:type	ns2:Reviewer ;
+	ns2:playedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Organization_ORG-0002 ;
+	ns2:contextualisedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ	rdf:type	ns3:Identifier ;
+	skos:notation	"4570081576" .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SettledContract_CON-0001	rdf:type	ns2:Contract ;
+	ns2:hasContractConclusionDate	"2025-09-03"^^xsd:date ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ ;
+	ns2:hasLotReference	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 ;
+	ns2:includesTender	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Tender_TEN-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SocialProcurement_FbxiobiJYxNCgQAMtdKfL3	rdf:type	ns2:SocialProcurement .
+@prefix ns24:	<http://publications.europa.eu/resource/authority/social-objective/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_SocialProcurement_FbxiobiJYxNCgQAMtdKfL3	ns2:fulfillsRequirement	ns24:opp .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_StrategicProcurement_4mnqZ7PF3sxbwYtmUHUyS6	rdf:type	ns2:GreenProcurement ,
+		ns2:InnovativeProcurement ,
+		ns2:StrategicProcurement ,
+		ns2:SocialProcurement ;
+	ns2:hasStrategicProcurementDescription	"Bl\u00ED\u017Ee specifikov\u00E1no v zad\u00E1vac\u00ED dokumentaci"@cs .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_TenderAwardOutcome_TEN-0001	rdf:type	ns2:TenderAwardOutcome ;
+	ns2:concernsTender	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Tender_TEN-0001 ;
+	ns2:hasAwardRank	1 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D	rdf:type	ns3:Identifier ;
+	skos:notation	"HOMOLA a.s." .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_TenderMonetaryValue_8tLJD9wyvjSHWYvDWGiX5D	rdf:type	ns2:MonetaryValue ;
+	ns2:hasAmountValue	427756486.26 ;
+	ns2:hasCurrency	ns18:CZK .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Tender_TEN-0001	rdf:type	ns2:Tender ;
+	ns2:isSubmittedForLot	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Lot_LOT-0001 ;
+	ns3:identifier	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D ;
+	ns2:hasFinancialOfferValue	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_TenderMonetaryValue_8tLJD9wyvjSHWYvDWGiX5D .
+@prefix ns25:	<http://publications.europa.eu/resource/authority/applicability/> .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Tender_TEN-0001	ns2:hasSubcontracting	ns25:no ;
+	ns2:isSubmitedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Tenderer_TPA-0001 .
+ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_Tenderer_TPA-0001	rdf:type	ns2:Tenderer ;
+	ns2:playedBy	ns1:id_64d11ab6-6031-4b2b-b7a0-6abbee7f6c68_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK .

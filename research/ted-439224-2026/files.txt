@@ -1,0 +1,11 @@
+00439224_2026.sha256 84 bytes
+00439224_2026.ttl 44927 bytes
+00439224_2026.xml 28955 bytes
+extraction-summary.json 517 bytes
+files.txt 0 bytes
+keyword-contexts.txt 153445 bytes
+official-xml-url.txt 48 bytes
+ted-search-00439224-2026.json 4721 bytes
+ted-search-target.json 5350 bytes
+xml-long-text-fields.tsv 12639 bytes
+xml-text-nodes.tsv 26304 bytes
