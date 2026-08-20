@@ -1,0 +1,217 @@
+name: Research extract TED 439224-2026
+
+on:
+  push:
+    branches:
+      - research/ted-439224-open-data
+    paths:
+      - .github/workflows/research-extract-ted-439224.yml
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out isolated research branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/ted-439224-open-data
+          fetch-depth: 0
+
+      - name: Download official TED metadata, RDF and XML
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT='research/ted-439224-2026'
+          mkdir -p "$OUT"
+
+          cat > /tmp/notice-query.rq <<'SPARQL'
+          PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+          CONSTRUCT { ?s ?p ?o }
+          WHERE {
+            GRAPH ?g {
+              ?s ?p ?o .
+              ?notice epo:hasNoticePublicationNumber "00439224-2026"
+            }
+          }
+          SPARQL
+
+          curl --fail --silent --show-error --location \
+            --retry 4 --retry-all-errors --retry-delay 2 \
+            -X POST \
+            -H 'Content-Type: application/x-www-form-urlencoded' \
+            -H 'Accept: text/turtle' \
+            --data-urlencode 'query@/tmp/notice-query.rq' \
+            --data-urlencode 'format=text/turtle' \
+            'https://publications.europa.eu/webapi/rdf/sparql' \
+            -o "$OUT/00439224_2026.ttl"
+
+          cat > /tmp/ted-search.json <<'JSON'
+          {
+            "query": "publication-number=\"00439224-2026\"",
+            "scope": "ALL",
+            "fields": [
+              "publication-number",
+              "publication-date",
+              "buyer-country",
+              "customization-id",
+              "procedure-identifier",
+              "official-language",
+              "notice-type",
+              "form-type",
+              "notice-version",
+              "links"
+            ],
+            "limit": 10
+          }
+          JSON
+
+          curl --fail --silent --show-error --location \
+            --retry 4 --retry-all-errors --retry-delay 2 \
+            -X POST \
+            -H 'Content-Type: application/json' \
+            -H 'Accept: application/json' \
+            --data-binary @/tmp/ted-search.json \
+            'https://api.ted.europa.eu/v3/notices/search' \
+            -o "$OUT/ted-search-00439224-2026.json"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import re
+          import subprocess
+          import sys
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          out = Path('research/ted-439224-2026')
+          search_path = out / 'ted-search-00439224-2026.json'
+          data = json.loads(search_path.read_text(encoding='utf-8'))
+          notices = data.get('notices') or []
+          if not notices:
+              raise SystemExit('TED Search API returned no notices for 00439224-2026')
+
+          target = None
+          for notice in notices:
+              number = str(notice.get('publication-number', ''))
+              digits = re.sub(r'^(?:0+)', '', number.split('-')[0]) or '0'
+              if digits == '439224' and number.endswith('-2026'):
+                  target = notice
+                  break
+          if target is None:
+              target = notices[0]
+
+          (out / 'ted-search-target.json').write_text(
+              json.dumps(target, ensure_ascii=False, indent=2), encoding='utf-8'
+          )
+
+          links = target.get('links') or {}
+          xml_links = links.get('xml') or {}
+          xml_url = xml_links.get('MUL') if isinstance(xml_links, dict) else None
+          if not xml_url and isinstance(xml_links, dict) and xml_links:
+              xml_url = next(iter(xml_links.values()))
+          if not xml_url:
+              raise SystemExit(f'No XML URL in TED API target links: {links!r}')
+
+          (out / 'official-xml-url.txt').write_text(str(xml_url) + '\n', encoding='utf-8')
+          request = urllib.request.Request(
+              str(xml_url),
+              headers={
+                  'Accept': 'application/xml,text/xml,application/octet-stream;q=0.9,*/*;q=0.1',
+                  'User-Agent': 'Mozilla/5.0 (compatible; public-procurement-research/1.0)',
+              },
+          )
+          with urllib.request.urlopen(request, timeout=90) as response:
+              raw_xml = response.read()
+          xml_path = out / '00439224_2026.xml'
+          xml_path.write_bytes(raw_xml)
+
+          if b'<html' in raw_xml[:1000].lower() or b'just a moment' in raw_xml[:2000].lower():
+              raise SystemExit('Official XML link returned an HTML blocking page')
+
+          sha = hashlib.sha256(raw_xml).hexdigest()
+          (out / '00439224_2026.sha256').write_text(
+              f'{sha}  00439224_2026.xml\n', encoding='utf-8'
+          )
+
+          # Parse every text node from the primary XML.
+          root = ET.fromstring(raw_xml)
+          text_nodes = []
+          for elem in root.iter():
+              text = re.sub(r'\s+', ' ', elem.text or '').strip()
+              if text:
+                  text_nodes.append((elem.tag, text))
+          (out / 'xml-text-nodes.tsv').write_text(
+              '\n'.join(f'{tag}\t{text}' for tag, text in text_nodes), encoding='utf-8'
+          )
+
+          # Produce a readable field/context report from both XML and RDF.
+          xml_text = '\n'.join(text for _, text in text_nodes)
+          ttl_path = out / '00439224_2026.ttl'
+          ttl_text = ttl_path.read_text(encoding='utf-8', errors='replace')
+          combined_sources = [('XML', xml_text), ('RDF/Turtle', ttl_text)]
+          terms = [
+              'voda', 'podzem', 'spodní', 'geolog', 'hydrogeolog',
+              'překáž', 'nepředvíd', 'předvíd', 'okolnost', 'změn',
+              'výkop', 'podloží', 'zemin', 'drenáž', 'čerpání',
+              'groundwater', 'water', 'geolog', 'hydrogeolog', 'obstacle',
+              'unforeseen', 'unpredict', 'site condition', 'modification',
+              'Article 43', '§ 222', '222',
+          ]
+          report = []
+          for source_name, source in combined_sources:
+              report.append(f'# {source_name}')
+              for term in terms:
+                  hits = list(re.finditer(re.escape(term), source, flags=re.IGNORECASE))
+                  report.append(f'## {term}: {len(hits)} hit(s)')
+                  for index, hit in enumerate(hits[:50], 1):
+                      start = max(0, hit.start() - 900)
+                      end = min(len(source), hit.end() + 1800)
+                      context = re.sub(r'\s+', ' ', source[start:end]).strip()
+                      report.append(f'[{index}] {context}')
+                  report.append('')
+          (out / 'keyword-contexts.txt').write_text('\n'.join(report), encoding='utf-8')
+
+          # List all long XML text fields, which often contains the modification rationale.
+          long_nodes = [(tag, text) for tag, text in text_nodes if len(text) >= 80]
+          (out / 'xml-long-text-fields.tsv').write_text(
+              '\n'.join(f'{tag}\t{text}' for tag, text in long_nodes), encoding='utf-8'
+          )
+
+          summary = {
+              'publication_number': target.get('publication-number'),
+              'publication_date': target.get('publication-date'),
+              'notice_type': target.get('notice-type'),
+              'form_type': target.get('form-type'),
+              'procedure_identifier': target.get('procedure-identifier'),
+              'official_language': target.get('official-language'),
+              'notice_version': target.get('notice-version'),
+              'xml_url': xml_url,
+              'xml_bytes': len(raw_xml),
+              'xml_sha256': sha,
+              'rdf_bytes': ttl_path.stat().st_size,
+              'xml_text_nodes': len(text_nodes),
+              'xml_long_text_fields': len(long_nodes),
+          }
+          (out / 'extraction-summary.json').write_text(
+              json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8'
+          )
+          print(json.dumps(summary, ensure_ascii=False, indent=2))
+          PY
+
+          find "$OUT" -maxdepth 1 -type f -printf '%f %s bytes\n' | sort > "$OUT/files.txt"
+          cat "$OUT/files.txt"
+
+      - name: Commit primary evidence to the isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'OpenAI procurement research'
+          git config user.email 'actions@users.noreply.github.com'
+          git add research/ted-439224-2026
+          git commit -m 'Extract official TED notice 439224-2026 evidence'
+          git push origin HEAD:research/ted-439224-open-data
