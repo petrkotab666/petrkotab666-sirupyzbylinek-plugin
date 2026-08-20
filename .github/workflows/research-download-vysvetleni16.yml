@@ -1,0 +1,98 @@
+name: Research download Vysvetleni 16
+
+on:
+  push:
+    branches:
+      - research/ted-439224-open-data
+    paths:
+      - .github/workflows/research-download-vysvetleni16.yml
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out isolated research branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/ted-439224-open-data
+          fetch-depth: 0
+
+      - name: Download and extract official NEN PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT='research/vysvetleni-16'
+          mkdir -p "$OUT"
+
+          URL='https://nen.nipez.cz/file?id=2581846942'
+          PDF="$OUT/Vysvetleni_c_16.pdf"
+          curl --fail --silent --show-error --location \
+            --retry 5 --retry-all-errors --retry-delay 3 \
+            -A 'Mozilla/5.0 (compatible; public-procurement-research/1.0)' \
+            "$URL" -o "$PDF"
+
+          file "$PDF" | tee "$OUT/file-type.txt"
+          test "$(head -c 4 "$PDF")" = '%PDF'
+          sha256sum "$PDF" > "$OUT/Vysvetleni_c_16.sha256"
+          pdfinfo "$PDF" > "$OUT/pdfinfo.txt"
+          pdftotext -layout "$PDF" "$OUT/Vysvetleni_c_16.txt"
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re
+
+          out = Path('research/vysvetleni-16')
+          text = (out / 'Vysvetleni_c_16.txt').read_text(encoding='utf-8', errors='replace')
+          pages = text.split('\f')
+          for i, page in enumerate(pages, 1):
+              if page.strip():
+                  (out / f'page-{i:02d}.txt').write_text(page, encoding='utf-8')
+
+          terms = ['voda', 'podzem', 'spodní', 'geolog', 'hydrogeolog',
+                   'skryté překážky', 'náležité péči', 'změny okolností',
+                   '§ 2620', '§ 2627', 'čl. 23']
+          report = []
+          counts = {}
+          for term in terms:
+              hits = list(re.finditer(re.escape(term), text, flags=re.I))
+              counts[term] = len(hits)
+              report.append(f'## {term}: {len(hits)} hit(s)')
+              for n, hit in enumerate(hits, 1):
+                  page_no = text[:hit.start()].count('\f') + 1
+                  a = max(0, hit.start() - 700)
+                  b = min(len(text), hit.end() + 1400)
+                  context = re.sub(r'\s+', ' ', text[a:b]).strip()
+                  report.append(f'[{n}] page {page_no}: {context}')
+              report.append('')
+          (out / 'keyword-contexts.txt').write_text('\n'.join(report), encoding='utf-8')
+          (out / 'keyword-counts.json').write_text(
+              json.dumps(counts, ensure_ascii=False, indent=2), encoding='utf-8')
+
+          selected = []
+          for q in ('46.', '49.'):
+              for i, page in enumerate(pages, 1):
+                  if q in page:
+                      selected.append(f'===== PAGE {i} / marker {q} =====\n{page.strip()}\n')
+          (out / 'questions-46-49.txt').write_text('\n'.join(selected), encoding='utf-8')
+          PY
+
+          find "$OUT" -maxdepth 1 -type f -printf '%f %s bytes\n' | sort > "$OUT/files.txt"
+          cat "$OUT/files.txt"
+
+      - name: Commit PDF and extracted text to isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'OpenAI procurement research'
+          git config user.email 'actions@users.noreply.github.com'
+          git add research/vysvetleni-16
+          if git diff --cached --quiet; then
+            echo 'No new evidence.'
+            exit 0
+          fi
+          git commit -m 'Archive and extract Vysvetleni c. 16'
+          git push origin HEAD:research/ted-439224-open-data
