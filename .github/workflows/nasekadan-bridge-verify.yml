@@ -59,11 +59,13 @@ jobs:
                   sep='&' if '?' in base else '?'
                   url=base+sep+'nkbridgeverify='+urllib.parse.quote(safe)+'-'+str(int(time.time()))
                   try:
-                      req=urllib.request.Request(url,headers={'User-Agent':'NaseKadanBridgeVerifier/1.1','Cache-Control':'no-cache'})
+                      req=urllib.request.Request(url,headers={'User-Agent':'NaseKadanBridgeVerifier/1.2','Cache-Control':'no-cache'})
                       with urllib.request.urlopen(req,timeout=25) as r:
                           status=getattr(r,'status',None) or r.getcode()
                           body=r.read().decode('utf-8','replace')
                           final=r.geturl()
+                      figures=re.findall(r'<figure\b[^>]*>.*?</figure>',body,re.I|re.S)
+                      imgs=re.findall(r'<img\b[^>]*>',body,re.I|re.S)
                       item={
                           'status':status,
                           'final_url':final,
@@ -73,6 +75,9 @@ jobs:
                               'special_box':snippet(body,'data-homepage-update="train-outage-20260821"'),
                               'article_list':snippet(body,'<div class="article-list">',0,4200),
                               'ticker':snippet(body,'<div class="ticker">',0,1800),
+                              'article_shell':snippet(body,'<main class="wrap article-shell"',0,7000),
+                              'figures':figures[:8],
+                              'images':imgs[:12],
                           }
                       }
                       item['ok']=status==200 and all(item['present'].values()) and all(item['absent'].values())
