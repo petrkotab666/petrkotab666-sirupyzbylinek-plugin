@@ -1,18 +1,18 @@
 {
   "schema": 1,
-  "version": "20260821-2229-train-home-card-fix2",
+  "version": "20260821-2234-train-ticker-js-fix",
   "files": [],
   "patches": [
     {
-      "path": "index.html",
-      "old": "<div class=\"wrap\" data-homepage-update=\"train-outage-20260821\" style=\"padding-top:18px\">\n  <article style=\"background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow);display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap\">\n    <div style=\"max-width:820px\"><p class=\"tag\" style=\"margin:0 0 7px\">AKTUALIZOVÁNO · DOPRAVA</p><h2 style=\"margin:0 0 8px;font:800 30px/1.12 Georgia,serif\">Noční výluky vlaků: poslední srpnový blok začne 24. srpna</h2><p style=\"margin:0;color:#58666e\">Aktuální výlukový jízdní řád počítá s omezením v nocích 24./25. až 30./31. srpna, vždy od 21:15 do 4:45. Většinu dotčených vlaků nahradí autobusy.</p></div>\n    <a class=\"btn\" href=\"/clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html\">Aktuální přehled výluk →</a>\n  </article>\n</div>",
-      "new": "",
-      "count": 2
+      "path": "app.js",
+      "old": "(function updateTrainOutageTicker(){\n const ticker=document.querySelector('.ticker .wrap');\n const href='/clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html';\n if(!ticker)return;\n ticker.innerHTML=`<a href=\"${href}\" style=\"display:block;color:inherit;text-decoration:none\"><b>DOPRAVNÍ UPOZORNĚNÍ:</b> Další noční výluky vlaků mezi Kadaní, Kláštercem a Chomutovem začnou v úterý 11. srpna ve 21:15. V dotčených úsecích nahradí většinu vlaků autobusy. <strong style=\"text-decoration:underline\">Podrobnosti →</strong></a>`;\n})();",
+      "new": "// Dopravní ticker je renderován na serveru. JavaScript jej nesmí přepisovat historickým termínem.",
+      "count": 1
     },
     {
       "path": "index.html",
-      "old": "</article>\n<article class=\"article-card hospital\" data-auto-article=\"kadan-vyhrala-kralupy-5-4-priprava-2026\">",
-      "new": "</article>\n<article class=\"article-card transport\" data-auto-article=\"nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026\" data-updated-home-card=\"train-outage-20260821\">\n  <div class=\"visual\" role=\"img\" aria-label=\"Noční výluky vlaků zasáhnou Kadaň, Klášterec i Chomutov\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026-26c641c535.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n  <div class=\"article-body\"><span class=\"meta\">AKTUALIZOVÁNO 20. 8. 2026 · 22:40 · PRAKTICKÉ INFORMACE · DOPRAVA</span><h3>Noční výluky vlaků zasáhnou Kadaň, Klášterec i Chomutov</h3><p>Druhá srpnová série skončila. Poslední blok začne 24. srpna ve 21:15 a potrvá v nocích 24./25. až 30./31. srpna, vždy do 4:45.</p><a class=\"read-more\" href=\"/clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html\">Přečíst aktualizovaný článek →</a></div>\n</article>\n<article class=\"article-card hospital\" data-auto-article=\"kadan-vyhrala-kralupy-5-4-priprava-2026\">",
+      "old": "<script src=\"/app.js\"></script>",
+      "new": "<script src=\"/app.js?v=20260821-2234-train-ticker-fix\"></script>",
       "count": 1
     }
   ],
@@ -22,11 +22,11 @@
     "https://www.nasekadan.cz/"
   ],
   "verify_present": [
-    "data-updated-home-card=\"train-outage-20260821\"",
-    "AKTUALIZOVÁNO 20. 8. 2026 · 22:40",
-    "Přečíst aktualizovaný článek →"
+    "Poslední srpnový blok nočních výluk vlaků",
+    "24./25. až 30./31. srpna",
+    "/app.js?v=20260821-2234-train-ticker-fix"
   ],
   "verify_absent": [
-    "data-homepage-update=\"train-outage-20260821\""
+    "11. srpna ve 21:15"
   ]
 }
