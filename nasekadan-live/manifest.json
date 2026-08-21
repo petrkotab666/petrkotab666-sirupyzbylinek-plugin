@@ -1,25 +1,24 @@
 {
   "schema": 1,
-  "version": "20260821-2241-train-appjs-only-fix",
+  "version": "20260821-2245-train-ticker-inline-final",
   "files": [],
   "patches": [
     {
-      "path": "app.js",
-      "old": "(function updateTrainOutageTicker(){\n const ticker=document.querySelector('.ticker .wrap');\n const href='/clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html';\n if(!ticker)return;\n ticker.innerHTML=`<a href=\"${href}\" style=\"display:block;color:inherit;text-decoration:none\"><b>DOPRAVNÍ UPOZORNĚNÍ:</b> Další noční výluky vlaků mezi Kadaní, Kláštercem a Chomutovem začnou v úterý 11. srpna ve 21:15. V dotčených úsecích nahradí většinu vlaků autobusy. <strong style=\"text-decoration:underline\">Podrobnosti →</strong></a>`;\n})();",
-      "new": "// Dopravní ticker je renderován na serveru. JavaScript jej nesmí přepisovat historickým termínem.",
+      "path": "index.html",
+      "old": "</body>",
+      "new": "<script data-nk-train-ticker-final=\"20260821-2245\">(function(){var t=document.querySelector('.ticker .wrap');if(!t)return;var h='/clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html';t.innerHTML='<a href=\"'+h+'\" style=\"display:block;color:inherit;text-decoration:none\"><b>DOPRAVNÍ UPOZORNĚNÍ:</b> Poslední srpnový blok nočních výluk vlaků mezi Kadaní, Kláštercem a Chomutovem začne v pondělí 24. srpna ve 21:15. Výlukový jízdní řád platí v nocích 24./25. až 30./31. srpna, vždy do 4:45. <strong style=\"text-decoration:underline\">Podrobnosti →</strong></a>';})();</script>\n</body>",
       "count": 1
     }
   ],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/app.js",
-    "https://www.nasekadan.cz/app.js"
+    "https://nasekadan.cz/",
+    "https://www.nasekadan.cz/"
   ],
   "verify_present": [
-    "Dopravní ticker je renderován na serveru"
+    "data-nk-train-ticker-final=\"20260821-2245\"",
+    "Poslední srpnový blok nočních výluk vlaků",
+    "24./25. až 30./31. srpna"
   ],
-  "verify_absent": [
-    "11. srpna ve 21:15",
-    "updateTrainOutageTicker"
-  ]
+  "verify_absent": []
 }
