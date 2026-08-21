@@ -1,0 +1,100 @@
+name: Naše Kadaň – ověřit rychlou bridge na veřejném webu
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nasekadan-live/manifest.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nasekadan-bridge-public-verify
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Počkat na OVH bridge a ověřit skutečný veřejný web
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 - <<'PY'
+          import datetime as dt
+          import json
+          import re
+          import time
+          import urllib.parse
+          import urllib.request
+          from pathlib import Path
+
+          manifest=Path('nasekadan-live/manifest.json')
+          data=json.loads(manifest.read_text(encoding='utf-8'))
+          version=str(data.get('version','unknown'))
+          safe=re.sub(r'[^A-Za-z0-9._-]+','-',version).strip('-') or 'unknown'
+          urls=data.get('verify_urls') or ['https://www.nasekadan.cz/']
+          present=data.get('verify_present') or []
+          absent=data.get('verify_absent') or []
+          result={'version':version,'status':'VERIFYING','checks':{}}
+
+          last_error=None
+          for attempt in range(1,13):
+              all_ok=True
+              checks={}
+              for base in urls:
+                  sep='&' if '?' in base else '?'
+                  url=base+sep+'nkbridgeverify='+urllib.parse.quote(safe)+'-'+str(int(time.time()))
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'NaseKadanBridgeVerifier/1.0','Cache-Control':'no-cache'})
+                      with urllib.request.urlopen(req,timeout=25) as r:
+                          status=getattr(r,'status',None) or r.getcode()
+                          body=r.read().decode('utf-8','replace')
+                          final=r.geturl()
+                      item={
+                          'status':status,
+                          'final_url':final,
+                          'present':{m:(m in body) for m in present},
+                          'absent':{m:(m not in body) for m in absent},
+                      }
+                      item['ok']=status==200 and all(item['present'].values()) and all(item['absent'].values())
+                  except Exception as exc:
+                      item={'ok':False,'error':repr(exc)}
+                  checks[base]=item
+                  all_ok=all_ok and item['ok']
+              if all_ok:
+                  result={'version':version,'status':'WEB_OK','verified_at':dt.datetime.now(dt.timezone.utc).isoformat(),'attempt':attempt,'checks':checks}
+                  break
+              last_error=checks
+              time.sleep(5)
+          else:
+              result={'version':version,'status':'VERIFICATION_FAILED','verified_at':dt.datetime.now(dt.timezone.utc).isoformat(),'checks':last_error}
+
+          outdir=Path('nasekadan-live/verification')
+          outdir.mkdir(parents=True,exist_ok=True)
+          out=outdir/(safe+'.json')
+          out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(result,ensure_ascii=False,indent=2))
+          if result['status']!='WEB_OK':
+              raise SystemExit(1)
+          PY
+
+      - name: Uložit veřejný ověřovací report
+        if: always()
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add nasekadan-live/verification/
+          git diff --cached --quiet && exit 0
+          git commit -m 'Zapsat veřejné ověření Naše Kadaň bridge'
+          git pull --rebase origin main
+          git push origin HEAD:main
