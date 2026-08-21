@@ -1,15 +1,8 @@
 {
   "schema": 1,
-  "version": "20260821-2251-klasterec-broken-image-fix",
+  "version": "20260821-2253-klasterec-broken-image-verify",
   "files": [],
-  "patches": [
-    {
-      "path": "clanky/klasterec-hasici-novy-dopravni-automobil-2026.html",
-      "old": "<figure class=\"article-figure\"><img src=\"/social/klasterec-hasici-novy-dopravni-automobil-2026.png\" width=\"1200\" height=\"630\" alt=\"Klášterečtí dobrovolní hasiči mají nový dopravní automobil\"><figcaption>Nový dopravní automobil posiluje vybavení jednotky dobrovolných hasičů v Klášterci nad Ohří.</figcaption></figure>",
-      "new": "",
-      "count": 1
-    }
-  ],
+  "patches": [],
   "deletes": [],
   "verify_urls": [
     "https://nasekadan.cz/clanky/klasterec-hasici-novy-dopravni-automobil-2026.html",
