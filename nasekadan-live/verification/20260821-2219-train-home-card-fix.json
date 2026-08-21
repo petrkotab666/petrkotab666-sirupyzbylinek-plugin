@@ -1,0 +1,33 @@
+{
+  "version": "20260821-2219-train-home-card-fix",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-08-21T20:23:34.328355+00:00",
+  "checks": {
+    "https://nasekadan.cz/": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/?nkbridgeverify=20260821-2219-train-home-card-fix-1787343807",
+      "present": {
+        "data-updated-home-card=\"train-outage-20260821\"": false,
+        "Přečíst aktualizovaný článek →": false,
+        "Noční výluky vlaků zasáhnou Kadaň, Klášterec i Chomutov": false
+      },
+      "absent": {
+        "data-homepage-update=\"train-outage-20260821\"": false
+      },
+      "ok": false
+    },
+    "https://www.nasekadan.cz/": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/?nkbridgeverify=20260821-2219-train-home-card-fix-1787343808",
+      "present": {
+        "data-updated-home-card=\"train-outage-20260821\"": false,
+        "Přečíst aktualizovaný článek →": false,
+        "Noční výluky vlaků zasáhnou Kadaň, Klášterec i Chomutov": false
+      },
+      "absent": {
+        "data-homepage-update=\"train-outage-20260821\"": false
+      },
+      "ok": false
+    }
+  }
+}
