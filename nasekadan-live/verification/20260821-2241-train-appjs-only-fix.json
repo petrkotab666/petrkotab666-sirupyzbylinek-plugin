@@ -1,0 +1,41 @@
+{
+  "version": "20260821-2241-train-appjs-only-fix",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-08-21T20:44:29.505313+00:00",
+  "checks": {
+    "https://nasekadan.cz/app.js": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/app.js?nkbridgeverify=20260821-2241-train-appjs-only-fix-1787345063",
+      "present": {
+        "Dopravní ticker je renderován na serveru": false
+      },
+      "absent": {
+        "11. srpna ve 21:15": false,
+        "updateTrainOutageTicker": false
+      },
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null
+      },
+      "ok": false
+    },
+    "https://www.nasekadan.cz/app.js": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/app.js?nkbridgeverify=20260821-2241-train-appjs-only-fix-1787345064",
+      "present": {
+        "Dopravní ticker je renderován na serveru": false
+      },
+      "absent": {
+        "11. srpna ve 21:15": false,
+        "updateTrainOutageTicker": false
+      },
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null
+      },
+      "ok": false
+    }
+  }
+}
