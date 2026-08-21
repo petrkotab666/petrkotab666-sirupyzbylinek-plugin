@@ -28,5 +28,6 @@
   ],
   "verify_absent": [
     "data-homepage-update=\"train-outage-20260821\""
-  ]
+  ],
+  "verify_nonce": "diagnostic-20260821-2225"
 }
