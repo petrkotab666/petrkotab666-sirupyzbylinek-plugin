@@ -16,5 +16,17 @@
       "count": 1
     }
   ],
-  "deletes": []
+  "deletes": [],
+  "verify_urls": [
+    "https://nasekadan.cz/",
+    "https://www.nasekadan.cz/"
+  ],
+  "verify_present": [
+    "data-updated-home-card=\"train-outage-20260821\"",
+    "Přečíst aktualizovaný článek →",
+    "Noční výluky vlaků zasáhnou Kadaň, Klášterec i Chomutov"
+  ],
+  "verify_absent": [
+    "data-homepage-update=\"train-outage-20260821\""
+  ]
 }
