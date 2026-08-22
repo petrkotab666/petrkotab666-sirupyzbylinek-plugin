@@ -1,0 +1,29 @@
+name: TEMP Kadaň existing sheets upload
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  upload-existing:
+    if: github.event.pull_request.title == 'RUN KADAN EXISTING SHEETS UPLOAD'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          fetch-depth: 1
+      - name: Upload existing contact sheets
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2023-existing-contact-sheets
+          path: |
+            research-output/kadan-votes-2023/contact_*.jpg
+            research-output/kadan-votes-2023/metadata.json
+            research-output/kadan-votes-2023/status.txt
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error
