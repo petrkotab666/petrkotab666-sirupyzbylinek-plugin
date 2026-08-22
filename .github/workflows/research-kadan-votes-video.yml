@@ -9,13 +9,19 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   inspect-public-recording:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
+      - name: Check out isolated research branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          fetch-depth: 1
+
       - name: Install media and transcription tools
         run: |
           sudo apt-get update
@@ -26,8 +32,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p out
+          rm -rf out research-output/kadan-votes-2023
+          mkdir -p out research-output/kadan-votes-2023
           URL='https://tv.pirati.cz/w/98mdJ8nsSL8hnM1UuuLAE9'
+          printf 'source=%s\nstarted=%s\n' "$URL" "$(date -u +%FT%TZ)" > research-output/kadan-votes-2023/status.txt
           yt-dlp --dump-single-json "$URL" > out/metadata.json
           yt-dlp \
             -f 'worst[ext=mp4]/worst' \
@@ -46,8 +54,23 @@ jobs:
           # 30 frames per image, one frame every 10 seconds = five minutes per sheet.
           ffmpeg -hide_banner -loglevel error -i "$VIDEO" \
             -vf "fps=1/10,scale=480:-2,drawtext=text='%{pts\\:hms}':x=8:y=h-th-8:fontsize=20:fontcolor=white:box=1:boxcolor=black@0.70,tile=5x6:padding=4:margin=4" \
-            -q:v 3 -vsync vfr 'out/contact_%03d.jpg'
+            -q:v 4 -vsync vfr 'out/contact_%03d.jpg'
           ffmpeg -hide_banner -loglevel error -i "$VIDEO" -vn -ac 1 -ar 16000 -b:a 32k out/kadan_2023_audio.mp3
+          cp out/metadata.json out/ffprobe.json out/contact_*.jpg research-output/kadan-votes-2023/
+          printf 'overview_complete=%s\ncontact_sheets=%s\n' \
+            "$(date -u +%FT%TZ)" \
+            "$(find out -maxdepth 1 -name 'contact_*.jpg' | wc -l)" \
+            >> research-output/kadan-votes-2023/status.txt
+
+      - name: Commit overview evidence to the isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'kadan-vote-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add research-output/kadan-votes-2023
+          git commit -m 'research: add 2023 council video overview [skip ci]'
+          git push origin HEAD:research/kadan-votes-video-2023
 
       - name: Make a timestamped Czech transcript
         continue-on-error: true
@@ -91,20 +114,33 @@ jobs:
           )
           PY
 
-      - name: List generated evidence files
-        run: find out -maxdepth 1 -type f -printf '%f\t%s bytes\n' | sort
+      - name: Commit transcript when available
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(out/transcript.* out/transcript_info.txt)
+          if [ ${#files[@]} -gt 0 ]; then
+            cp "${files[@]}" research-output/kadan-votes-2023/
+            printf 'transcript_complete=%s\n' "$(date -u +%FT%TZ)" >> research-output/kadan-votes-2023/status.txt
+          else
+            printf 'transcript_complete=false\n' >> research-output/kadan-votes-2023/status.txt
+          fi
+          git add research-output/kadan-votes-2023
+          if ! git diff --cached --quiet; then
+            git commit -m 'research: add timestamped 2023 transcript [skip ci]'
+            git push origin HEAD:research/kadan-votes-video-2023
+          fi
 
       - name: Upload research artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kadan-vote-video-2023
           path: |
-            out/metadata.json
-            out/ffprobe.json
-            out/contact_*.jpg
+            research-output/kadan-votes-2023/
             out/kadan_2023_audio.mp3
-            out/transcript.*
-            out/transcript_info.txt
           compression-level: 0
           retention-days: 3
-          if-no-files-found: error
+          if-no-files-found: warn
