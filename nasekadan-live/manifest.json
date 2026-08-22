@@ -1,24 +1,12 @@
 {
   "schema": 1,
-  "version": "20260822-2132-akce-domino-layout-guard",
+  "version": "20260822-2136-akce-domino-runtime-guard",
   "files": [],
   "patches": [
     {
       "path": "clanky/kadansky-klaster-akce-domino-1981.html",
-      "old": "main{max-width:var(--max);margin:40px auto 0;display:grid;grid-template-columns:minmax(0,790px) 280px;grid-template-areas:\"content sidebar\";gap:28px;align-items:start;background:transparent;padding:0 24px}/* AKCE-DOMINO-LAYOUT-FIX-20260822 */main.article-shell>.article{grid-area:content}main.article-shell>.sticky{grid-area:sidebar}main.article-shell>:not(.article):not(.sticky){grid-column:1/-1}",
-      "new": "main{max-width:var(--max);margin:40px auto 0;display:grid;grid-template-columns:minmax(0,790px) 280px;grid-template-areas:\"content sidebar\";gap:28px;align-items:start;background:transparent;padding:0 24px}/* AKCE-DOMINO-LAYOUT-GUARD-20260822 */main.article-shell>.article{grid-area:content!important;grid-column:1!important;grid-row:1!important;width:100%!important;max-width:790px!important}main.article-shell>.sticky{grid-area:sidebar!important;grid-column:2!important;grid-row:1!important}main.article-shell>:not(.article):not(.sticky){display:none!important}",
-      "count": 1
-    },
-    {
-      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
-      "old": "@media(max-width:900px){main{grid-template-columns:1fr;grid-template-areas:\"content\" \"sidebar\"}.sticky{position:static}}",
-      "new": "@media(max-width:900px){main.article-shell{display:block!important;grid-template-columns:1fr!important}.article{max-width:none!important;width:100%!important}.sticky{position:static!important;margin-top:24px}}",
-      "count": 1
-    },
-    {
-      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
       "old": "</body>",
-      "new": "<script data-nk-layout-guard=\"akce-domino-20260822\">(function(){function clean(){var m=document.querySelector('main.article-shell');if(!m)return;Array.from(m.children).forEach(function(n){if(!n.classList.contains('article')&&!n.classList.contains('sticky'))n.remove();});}clean();document.addEventListener('DOMContentLoaded',clean);setTimeout(clean,0);setTimeout(clean,250);setTimeout(clean,1000);var m=document.querySelector('main.article-shell');if(m&&window.MutationObserver){new MutationObserver(clean).observe(m,{childList:true});}})();</script>\n</body>",
+      "new": "<style data-nk-layout-guard-style=\"akce-domino-20260822\">main.article-shell{display:grid!important;grid-template-columns:minmax(0,790px) 280px!important;grid-template-areas:\"content sidebar\"!important;gap:28px!important;align-items:start!important}main.article-shell>.article{grid-area:content!important;grid-column:1!important;grid-row:1!important;width:100%!important;max-width:790px!important;display:block!important}main.article-shell>.sticky{grid-area:sidebar!important;grid-column:2!important;grid-row:1!important;display:block!important}main.article-shell>:not(.article):not(.sticky){display:none!important}@media(max-width:900px){main.article-shell{display:block!important}.article{max-width:none!important;width:100%!important}.sticky{position:static!important;margin-top:24px!important}}</style><script data-nk-layout-guard=\"akce-domino-20260822\">(function(){function clean(){var m=document.querySelector('main.article-shell');if(!m)return;Array.from(m.children).forEach(function(n){if(!n.classList.contains('article')&&!n.classList.contains('sticky'))n.remove();});}clean();document.addEventListener('DOMContentLoaded',clean);setTimeout(clean,0);setTimeout(clean,100);setTimeout(clean,500);setTimeout(clean,1500);var m=document.querySelector('main.article-shell');if(m&&window.MutationObserver){new MutationObserver(clean).observe(m,{childList:true});}})();</script>\n</body>",
       "count": 1
     }
   ],
@@ -28,7 +16,7 @@
     "https://www.nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html"
   ],
   "verify_present": [
-    "AKCE-DOMINO-LAYOUT-GUARD-20260822",
+    "data-nk-layout-guard-style=\"akce-domino-20260822\"",
     "main.article-shell>:not(.article):not(.sticky){display:none!important}",
     "data-nk-layout-guard=\"akce-domino-20260822\"",
     "MutationObserver(clean)"
