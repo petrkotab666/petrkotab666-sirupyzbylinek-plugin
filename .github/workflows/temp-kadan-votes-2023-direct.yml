@@ -1,0 +1,166 @@
+name: TEMP Kadaň named votes 2023 direct
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-kadan-votes-2023-direct.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg tesseract-ocr tesseract-ocr-ces tesseract-ocr-eng
+          python -m pip install --quiet --upgrade pillow faster-whisper
+
+      - name: Extract and OCR frames every ten seconds
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          ROOT='/tmp/kadan-votes-2023'
+          OUT='tmp/kadan-votes-2023'
+          rm -rf "$ROOT" "$OUT"
+          mkdir -p "$ROOT/frames" "$OUT/candidate-base64" "$OUT/overview-base64"
+          ffmpeg -hide_banner -loglevel error -i "$URL" \
+            -vf 'fps=1/10,scale=1280:720' -q:v 2 "$ROOT/frames/frame_%05d.jpg"
+          python - <<'PY'
+          import base64, concurrent.futures, re, subprocess
+          from pathlib import Path
+          from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+
+          root = Path('/tmp/kadan-votes-2023')
+          out = Path('tmp/kadan-votes-2023')
+          frames = sorted((root/'frames').glob('frame_*.jpg'))
+          keys = re.compile(
+              r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|starost|m[ií]stostar|'
+              r'27\s*mil|27\s*000|wendl|z[aá]rybn|demjan|lazar[cč]|novotn|straka|'
+              r'[sš]vec|zalab[aá]k|j[aá]ra|zach', re.I)
+          strong = re.compile(r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|27\s*mil|27\s*000', re.I)
+
+          def stamp(sec):
+              h, rem = divmod(sec, 3600); m, s = divmod(rem, 60)
+              return f'{h:02d}:{m:02d}:{s:02d}'
+
+          def ocr(fp):
+              idx = int(fp.stem.split('_')[-1])
+              sec = (idx - 1) * 10
+              im = Image.open(fp).convert('L')
+              im = ImageOps.autocontrast(im)
+              im = ImageEnhance.Contrast(im).enhance(1.8)
+              im = im.resize((2560, 1440)).filter(ImageFilter.SHARPEN)
+              prep = root / f'prep_{idx:05d}.png'
+              im.save(prep)
+              cp = subprocess.run(['tesseract', str(prep), 'stdout', '-l', 'ces+eng', '--psm', '11'],
+                                  text=True, capture_output=True, timeout=40)
+              prep.unlink(missing_ok=True)
+              return sec, fp, ' '.join(cp.stdout.split())
+
+          rows=[]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+              for item in ex.map(ocr, frames): rows.append(item)
+          rows.sort()
+          hits=[r for r in rows if keys.search(r[2])]
+          (out/'ocr_all.tsv').write_text('seconds\ttime\tframe\ttext\n'+'\n'.join(
+              f'{sec}\t{stamp(sec)}\t{fp.name}\t{text}' for sec,fp,text in rows),encoding='utf-8')
+          (out/'ocr_hits.tsv').write_text('seconds\ttime\tframe\ttext\n'+'\n'.join(
+              f'{sec}\t{stamp(sec)}\t{fp.name}\t{text}' for sec,fp,text in hits),encoding='utf-8')
+
+          scored=[]
+          for sec,fp,text in hits:
+              score=10*len(strong.findall(text))+len(keys.findall(text))
+              scored.append((score,sec,fp,text))
+          selected=sorted(scored,reverse=True)[:50]
+          manifest=[]
+          for rank,(score,sec,fp,text) in enumerate(sorted(selected,key=lambda x:x[1]),1):
+              name=f'{rank:02d}_{sec:05d}_{stamp(sec).replace(":","-")}.jpg'
+              encoded=base64.b64encode(fp.read_bytes()).decode('ascii')
+              d=out/'candidate-base64'/name; d.mkdir(parents=True,exist_ok=True)
+              for pos in range(0,len(encoded),60000):
+                  (d/f'part_{pos//60000:03d}.txt').write_text(encoded[pos:pos+60000],encoding='ascii')
+              manifest.append(f'{name}\t{sec}\t{stamp(sec)}\tscore={score}\t{text}')
+          (out/'candidate_manifest.tsv').write_text('image\tseconds\ttime\tscore\tocr\n'+'\n'.join(manifest),encoding='utf-8')
+          (out/'ocr_summary.txt').write_text(f'sampled={len(rows)}\nhits={len(hits)}\ncandidates={len(selected)}\n',encoding='utf-8')
+
+          # Four broad visual sheets, one frame every 30 seconds, 49 frames per page.
+          sample=frames[::3]
+          cols=7; per=49; cw,ch=320,180
+          for page,start in enumerate(range(0,len(sample),per),1):
+              subset=sample[start:start+per]
+              rowsn=(len(subset)+cols-1)//cols
+              canvas=Image.new('RGB',(cols*cw,rowsn*ch),'black')
+              for i,fp in enumerate(subset):
+                  im=ImageOps.fit(Image.open(fp).convert('RGB'),(cw,ch))
+                  sec=(int(fp.stem.split('_')[-1])-1)*10
+                  from PIL import ImageDraw
+                  draw=ImageDraw.Draw(im); draw.rectangle((0,ch-22,100,ch),fill='black'); draw.text((4,ch-19),stamp(sec),fill='white')
+                  canvas.paste(im,((i%cols)*cw,(i//cols)*ch))
+              img=out/f'overview_{page:02d}.jpg'; canvas.save(img,quality=72,optimize=True)
+              encoded=base64.b64encode(img.read_bytes()).decode('ascii')
+              d=out/'overview-base64'/img.stem; d.mkdir(parents=True,exist_ok=True)
+              for pos in range(0,len(encoded),60000):
+                  (d/f'part_{pos//60000:03d}.txt').write_text(encoded[pos:pos+60000],encoding='ascii')
+          (out/'overview_index.txt').write_text(f'interval=30\nframes={len(sample)}\npages={(len(sample)+per-1)//per}\n',encoding='utf-8')
+          PY
+
+      - name: Commit OCR and visual overview immediately
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name 'research-bot'
+          git config user.email 'research-bot@users.noreply.github.com'
+          git add tmp/kadan-votes-2023
+          git commit -m 'temp: add OCR and visual evidence for Kadaň 2023 [skip ci]'
+          git push origin HEAD:main
+
+      - name: Transcribe early and late priority sections
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          ROOT='/tmp/kadan-votes-2023'
+          ffmpeg -hide_banner -loglevel error -ss 0 -t 2700 -i "$URL" -vn -ac 1 -ar 16000 "$ROOT/early.wav"
+          ffmpeg -hide_banner -loglevel error -ss 3600 -t 2197 -i "$URL" -vn -ac 1 -ar 16000 "$ROOT/late.wav"
+          python - <<'PY'
+          from faster_whisper import WhisperModel
+          from pathlib import Path
+          model=WhisperModel('base',device='cpu',compute_type='int8')
+          sections=[('early','/tmp/kadan-votes-2023/early.wav',0),('late','/tmp/kadan-votes-2023/late.wav',3600)]
+          rows=[]
+          for label,audio,offset in sections:
+              segments,info=model.transcribe(audio,language='cs',beam_size=1,vad_filter=True,condition_on_previous_text=False)
+              for s in segments: rows.append((offset+s.start,offset+s.end,label,s.text.strip()))
+          rows.sort()
+          def ts(x):
+              x=int(x); return f'{x//3600:02d}:{(x%3600)//60:02d}:{x%60:02d}'
+          out=Path('tmp/kadan-votes-2023')
+          out.joinpath('transcript.tsv').write_text('start\tend\tstart_time\tend_time\tsection\ttext\n'+'\n'.join(
+              f'{s:.3f}\t{e:.3f}\t{ts(s)}\t{ts(e)}\t{label}\t{text}' for s,e,label,text in rows),encoding='utf-8')
+          keys=('nemoc','dotac','milion','odměn','odmen','starost','místostar','mistostar','hlasov','schválen','proti','zdrž','losen','vaic')
+          hits=[r for r in rows if any(k in r[3].lower() for k in keys)]
+          out.joinpath('transcript_hits.tsv').write_text('start\tend\tstart_time\tend_time\tsection\ttext\n'+'\n'.join(
+              f'{s:.3f}\t{e:.3f}\t{ts(s)}\t{ts(e)}\t{label}\t{text}' for s,e,label,text in hits),encoding='utf-8')
+          out.joinpath('transcript_summary.txt').write_text(f'segments={len(rows)}\nhits={len(hits)}\n',encoding='utf-8')
+          PY
+
+      - name: Commit transcript
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git pull --rebase origin main
+          git add tmp/kadan-votes-2023/transcript*.tsv tmp/kadan-votes-2023/transcript_summary.txt
+          git commit -m 'temp: add transcript evidence for Kadaň 2023 [skip ci]'
+          git push origin HEAD:main
