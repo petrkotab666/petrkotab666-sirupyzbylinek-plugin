@@ -6,6 +6,11 @@ on:
       - research/kadan-votes-video-2023
     paths:
       - .github/workflows/research-kadan-votes-video.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/research-kadan-votes-video.yml
   workflow_dispatch:
 
 permissions:
@@ -51,7 +56,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # 30 frames per image, one frame every 10 seconds = five minutes per sheet.
           ffmpeg -hide_banner -loglevel error -i "$VIDEO" \
             -vf "fps=1/10,scale=480:-2,drawtext=text='%{pts\\:hms}':x=8:y=h-th-8:fontsize=20:fontcolor=white:box=1:boxcolor=black@0.70,tile=5x6:padding=4:margin=4" \
             -q:v 4 -vsync vfr 'out/contact_%03d.jpg'
@@ -63,6 +67,7 @@ jobs:
             >> research-output/kadan-votes-2023/status.txt
 
       - name: Commit overview evidence to the isolated branch
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           set -euo pipefail
@@ -80,42 +85,32 @@ jobs:
           from faster_whisper import WhisperModel
           from pathlib import Path
 
-          audio = 'out/kadan_2023_audio.mp3'
           model = WhisperModel('base', device='cpu', compute_type='int8')
           segments, info = model.transcribe(
-              audio,
-              language='cs',
-              beam_size=1,
-              vad_filter=True,
-              condition_on_previous_text=False,
+              'out/kadan_2023_audio.mp3', language='cs', beam_size=1,
+              vad_filter=True, condition_on_previous_text=False,
           )
-
-          rows = []
-          srt = []
-          full = []
+          rows, srt, full = [], [], []
+          def stamp(sec):
+              ms = int(round((sec - int(sec)) * 1000))
+              whole = int(sec)
+              h, rem = divmod(whole, 3600)
+              m, s = divmod(rem, 60)
+              return f'{h:02d}:{m:02d}:{s:02d},{ms:03d}'
           for idx, seg in enumerate(segments, 1):
               text = seg.text.strip()
               rows.append(f'{seg.start:.3f}\t{seg.end:.3f}\t{text}')
               full.append(text)
-              def stamp(sec):
-                  ms = int(round((sec - int(sec)) * 1000))
-                  whole = int(sec)
-                  h, rem = divmod(whole, 3600)
-                  m, s = divmod(rem, 60)
-                  return f'{h:02d}:{m:02d}:{s:02d},{ms:03d}'
               srt.extend([str(idx), f'{stamp(seg.start)} --> {stamp(seg.end)}', text, ''])
-
           Path('out/transcript.tsv').write_text('start\tend\ttext\n' + '\n'.join(rows), encoding='utf-8')
           Path('out/transcript.srt').write_text('\n'.join(srt), encoding='utf-8')
           Path('out/transcript.txt').write_text('\n'.join(full), encoding='utf-8')
           Path('out/transcript_info.txt').write_text(
-              f'language={info.language}\nprobability={info.language_probability}\n',
-              encoding='utf-8',
-          )
+              f'language={info.language}\nprobability={info.language_probability}\n', encoding='utf-8')
           PY
 
       - name: Commit transcript when available
-        if: always()
+        if: always() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         shell: bash
         run: |
           set -euo pipefail
