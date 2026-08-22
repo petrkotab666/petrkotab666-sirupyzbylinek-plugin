@@ -1,19 +1,31 @@
 {
   "schema": 1,
-  "version": "20260821-2255-klasterec-broken-image-final-verify",
+  "version": "20260822-1334-akce-domino-layout-fix",
   "files": [],
-  "patches": [],
+  "patches": [
+    {
+      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
+      "old": "main{max-width:var(--max);margin:40px auto 0;display:grid;grid-template-columns:minmax(0,790px) 280px;gap:28px;align-items:start;background:transparent;padding:0 24px}",
+      "new": "main{max-width:var(--max);margin:40px auto 0;display:grid;grid-template-columns:minmax(0,790px) 280px;grid-template-areas:\"content sidebar\";gap:28px;align-items:start;background:transparent;padding:0 24px}/* AKCE-DOMINO-LAYOUT-FIX-20260822 */main.article-shell>.article{grid-area:content}main.article-shell>.sticky{grid-area:sidebar}main.article-shell>:not(.article):not(.sticky){grid-column:1/-1}",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
+      "old": "@media(max-width:900px){main{grid-template-columns:1fr}.sticky{position:static}}",
+      "new": "@media(max-width:900px){main{grid-template-columns:1fr;grid-template-areas:\"content\" \"sidebar\"}.sticky{position:static}}",
+      "count": 1
+    }
+  ],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/klasterec-hasici-novy-dopravni-automobil-2026.html",
-    "https://www.nasekadan.cz/clanky/klasterec-hasici-novy-dopravni-automobil-2026.html"
+    "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
+    "https://www.nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html"
   ],
   "verify_present": [
-    "<img class=\"article-photo\" src=\"/social/klasterec-hasici-novy-dopravni-automobil-2026-10f8b7f8da.png\"",
-    "Redakční grafika Naše Kadaň."
+    "AKCE-DOMINO-LAYOUT-FIX-20260822",
+    "grid-template-areas:\"content sidebar\"",
+    "main.article-shell>.article{grid-area:content}",
+    "main.article-shell>.sticky{grid-area:sidebar}"
   ],
-  "verify_absent": [
-    "<img src=\"/social/klasterec-hasici-novy-dopravni-automobil-2026.png\"",
-    "Nový dopravní automobil posiluje vybavení jednotky dobrovolných hasičů v Klášterci nad Ohří."
-  ]
+  "verify_absent": []
 }
