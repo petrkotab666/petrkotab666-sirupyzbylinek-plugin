@@ -1,0 +1,99 @@
+name: Research Kadaň targeted transcript
+
+on:
+  push:
+    branches:
+      - research/kadan-votes-video-2023
+    paths:
+      - .github/workflows/research-kadan-target-transcript.yml
+
+permissions:
+  contents: write
+
+jobs:
+  transcribe-priority-sections:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade faster-whisper
+
+      - name: Extract and transcribe priority sections
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          rm -rf /tmp/kadan-transcript
+          mkdir -p /tmp/kadan-transcript
+          ffmpeg -hide_banner -loglevel error -ss 0 -t 2400 -i "$URL" -vn -ac 1 -ar 16000 /tmp/kadan-transcript/early.wav
+          ffmpeg -hide_banner -loglevel error -ss 3900 -t 1897 -i "$URL" -vn -ac 1 -ar 16000 /tmp/kadan-transcript/late.wav
+          OUT='research-output/kadan-votes-2023/target-transcript'
+          rm -rf "$OUT"
+          mkdir -p "$OUT"
+          python - <<'PY'
+          from faster_whisper import WhisperModel
+          from pathlib import Path
+
+          model = WhisperModel('base', device='cpu', compute_type='int8')
+          sections = [
+              ('early', '/tmp/kadan-transcript/early.wav', 0),
+              ('late', '/tmp/kadan-transcript/late.wav', 3900),
+          ]
+          rows = []
+          for label, audio, offset in sections:
+              segments, info = model.transcribe(
+                  audio, language='cs', beam_size=1, vad_filter=True,
+                  condition_on_previous_text=False,
+              )
+              for seg in segments:
+                  start = offset + seg.start
+                  end = offset + seg.end
+                  text = seg.text.strip()
+                  rows.append((start, end, label, text))
+
+          rows.sort()
+          def stamp(sec):
+              whole = int(sec)
+              h, rem = divmod(whole, 3600)
+              m, s = divmod(rem, 60)
+              return f'{h:02d}:{m:02d}:{s:02d}'
+
+          out = Path('research-output/kadan-votes-2023/target-transcript')
+          out.joinpath('transcript.tsv').write_text(
+              'start_seconds\tend_seconds\tstart\tend\tsection\ttext\n' + '\n'.join(
+                  f'{s:.3f}\t{e:.3f}\t{stamp(s)}\t{stamp(e)}\t{label}\t{text}'
+                  for s, e, label, text in rows
+              ), encoding='utf-8'
+          )
+          keys = ('nemoc', 'dotac', 'milion', 'odměn', 'odmen', 'starost', 'místostar', 'mistostar',
+                  'hlasov', 'schválen', 'proti', 'zdrž', 'losen', 'vaic')
+          hits = [r for r in rows if any(k in r[3].lower() for k in keys)]
+          out.joinpath('keyword_hits.tsv').write_text(
+              'start_seconds\tend_seconds\tstart\tend\tsection\ttext\n' + '\n'.join(
+                  f'{s:.3f}\t{e:.3f}\t{stamp(s)}\t{stamp(e)}\t{label}\t{text}'
+                  for s, e, label, text in hits
+              ), encoding='utf-8'
+          )
+          out.joinpath('summary.txt').write_text(
+              f'segments={len(rows)}\nkeyword_hits={len(hits)}\n', encoding='utf-8'
+          )
+          PY
+
+      - name: Commit targeted transcript
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'research-bot'
+          git config user.email 'research-bot@users.noreply.github.com'
+          git pull --rebase origin research/kadan-votes-video-2023
+          git add research-output/kadan-votes-2023/target-transcript
+          git commit -m 'research: add targeted transcript for 2023 council meeting [skip ci]'
+          git push origin HEAD:research/kadan-votes-video-2023
