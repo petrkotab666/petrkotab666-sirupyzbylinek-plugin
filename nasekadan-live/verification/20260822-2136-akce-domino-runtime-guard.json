@@ -1,0 +1,56 @@
+{
+  "version": "20260822-2136-akce-domino-runtime-guard",
+  "status": "WEB_OK",
+  "verified_at": "2026-08-22T19:34:43.084302+00:00",
+  "attempt": 2,
+  "checks": {
+    "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html?nkbridgeverify=20260822-2136-akce-domino-runtime-guard-1787427281",
+      "present": {
+        "data-nk-layout-guard-style=\"akce-domino-20260822\"": true,
+        "main.article-shell>:not(.article):not(.sticky){display:none!important}": true,
+        "data-nk-layout-guard=\"akce-domino-20260822\"": true,
+        "MutationObserver(clean)": true
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "figures": [
+          "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/kadansky-klaster-akce-domino-1981-3ac0e5b8c5.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        ],
+        "images": [
+          "<img class=\"article-photo\" src=\"/social/kadansky-klaster-akce-domino-1981-3ac0e5b8c5.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\">"
+        ]
+      },
+      "ok": true
+    },
+    "https://www.nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html?nkbridgeverify=20260822-2136-akce-domino-runtime-guard-1787427282",
+      "present": {
+        "data-nk-layout-guard-style=\"akce-domino-20260822\"": true,
+        "main.article-shell>:not(.article):not(.sticky){display:none!important}": true,
+        "data-nk-layout-guard=\"akce-domino-20260822\"": true,
+        "MutationObserver(clean)": true
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "figures": [
+          "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/kadansky-klaster-akce-domino-1981-3ac0e5b8c5.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        ],
+        "images": [
+          "<img class=\"article-photo\" src=\"/social/kadansky-klaster-akce-domino-1981-3ac0e5b8c5.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\">"
+        ]
+      },
+      "ok": true
+    }
+  }
+}
