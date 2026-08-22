@@ -1,0 +1,65 @@
+name: TEMP Kadaň fast visual evidence
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  fast-visual:
+    if: github.event.pull_request.title == 'RUN KADAN VOTES 2023 FAST VISUAL'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Install media tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install --quiet --upgrade pillow
+
+      - name: Build 5-second contact sheets
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          mkdir -p out/frames out/contact
+          ffmpeg -hide_banner -loglevel error -i "$URL" \
+            -vf 'fps=1/5,scale=960:540' -q:v 3 out/frames/frame_%05d.jpg
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageOps
+          frames=sorted(Path('out/frames').glob('frame_*.jpg'))
+          out=Path('out/contact')
+          cols,rows,cw,ch=4,5,640,360
+          per=cols*rows
+          def stamp(sec):
+              h,rem=divmod(sec,3600);m,s=divmod(rem,60);return f'{h:02d}:{m:02d}:{s:02d}'
+          index=[]
+          for page,start in enumerate(range(0,len(frames),per),1):
+              subset=frames[start:start+per]
+              rowsn=(len(subset)+cols-1)//cols
+              canvas=Image.new('RGB',(cols*cw,rowsn*ch),'black')
+              page_times=[]
+              for i,fp in enumerate(subset):
+                  idx=int(fp.stem.split('_')[-1]);sec=(idx-1)*5
+                  im=ImageOps.fit(Image.open(fp).convert('RGB'),(cw,ch))
+                  d=ImageDraw.Draw(im);d.rectangle((0,ch-34,155,ch),fill='black');d.text((7,ch-29),stamp(sec),fill='white')
+                  canvas.paste(im,((i%cols)*cw,(i//cols)*ch));page_times.append(stamp(sec))
+              name=f'contact_{page:03d}.jpg'
+              canvas.save(out/name,quality=82,optimize=True)
+              index.append(f'{name}\t{page_times[0]}\t{page_times[-1]}')
+          Path('out/index.tsv').write_text('file\tfirst_time\tlast_time\n'+'\n'.join(index),encoding='utf-8')
+          Path('out/summary.txt').write_text(f'frames={len(frames)}\ncontact_sheets={len(index)}\ninterval_seconds=5\n',encoding='utf-8')
+          PY
+          rm -rf out/frames
+
+      - name: Upload fast visual artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2023-fast-visual
+          path: out/
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error
