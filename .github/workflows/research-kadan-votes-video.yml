@@ -1,0 +1,110 @@
+name: Research Kadaň vote video 2023
+
+on:
+  push:
+    branches:
+      - research/kadan-votes-video-2023
+    paths:
+      - .github/workflows/research-kadan-votes-video.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-public-recording:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Install media and transcription tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg jq
+          python -m pip install --upgrade yt-dlp faster-whisper
+
+      - name: Download the public PeerTube recording
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          URL='https://tv.pirati.cz/w/98mdJ8nsSL8hnM1UuuLAE9'
+          yt-dlp --dump-single-json "$URL" > out/metadata.json
+          yt-dlp \
+            -f 'worst[ext=mp4]/worst' \
+            --merge-output-format mp4 \
+            -o 'out/kadan_2023.%(ext)s' \
+            "$URL"
+          VIDEO="$(find out -maxdepth 1 -type f -name 'kadan_2023.*' ! -name '*.part' | head -n 1)"
+          test -n "$VIDEO"
+          echo "VIDEO=$VIDEO" >> "$GITHUB_ENV"
+          ffprobe -v error -show_format -show_streams -of json "$VIDEO" > out/ffprobe.json
+
+      - name: Build timestamped overview contact sheets
+        shell: bash
+        run: |
+          set -euo pipefail
+          # 30 frames per image, one frame every 10 seconds = five minutes per sheet.
+          ffmpeg -hide_banner -loglevel error -i "$VIDEO" \
+            -vf "fps=1/10,scale=480:-2,drawtext=text='%{pts\\:hms}':x=8:y=h-th-8:fontsize=20:fontcolor=white:box=1:boxcolor=black@0.70,tile=5x6:padding=4:margin=4" \
+            -q:v 3 -vsync vfr 'out/contact_%03d.jpg'
+          ffmpeg -hide_banner -loglevel error -i "$VIDEO" -vn -ac 1 -ar 16000 -b:a 32k out/kadan_2023_audio.mp3
+
+      - name: Make a timestamped Czech transcript
+        continue-on-error: true
+        shell: bash
+        run: |
+          python - <<'PY'
+          from faster_whisper import WhisperModel
+          from pathlib import Path
+
+          audio = 'out/kadan_2023_audio.mp3'
+          model = WhisperModel('base', device='cpu', compute_type='int8')
+          segments, info = model.transcribe(
+              audio,
+              language='cs',
+              beam_size=1,
+              vad_filter=True,
+              condition_on_previous_text=False,
+          )
+
+          rows = []
+          srt = []
+          full = []
+          for idx, seg in enumerate(segments, 1):
+              text = seg.text.strip()
+              rows.append(f'{seg.start:.3f}\t{seg.end:.3f}\t{text}')
+              full.append(text)
+              def stamp(sec):
+                  ms = int(round((sec - int(sec)) * 1000))
+                  whole = int(sec)
+                  h, rem = divmod(whole, 3600)
+                  m, s = divmod(rem, 60)
+                  return f'{h:02d}:{m:02d}:{s:02d},{ms:03d}'
+              srt.extend([str(idx), f'{stamp(seg.start)} --> {stamp(seg.end)}', text, ''])
+
+          Path('out/transcript.tsv').write_text('start\tend\ttext\n' + '\n'.join(rows), encoding='utf-8')
+          Path('out/transcript.srt').write_text('\n'.join(srt), encoding='utf-8')
+          Path('out/transcript.txt').write_text('\n'.join(full), encoding='utf-8')
+          Path('out/transcript_info.txt').write_text(
+              f'language={info.language}\nprobability={info.language_probability}\n',
+              encoding='utf-8',
+          )
+          PY
+
+      - name: List generated evidence files
+        run: find out -maxdepth 1 -type f -printf '%f\t%s bytes\n' | sort
+
+      - name: Upload research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-vote-video-2023
+          path: |
+            out/metadata.json
+            out/ffprobe.json
+            out/contact_*.jpg
+            out/kadan_2023_audio.mp3
+            out/transcript.*
+            out/transcript_info.txt
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error
