@@ -1,0 +1,77 @@
+name: TEMP Package Kadaň vote evidence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-package-kadan-vote-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out 2023 evidence branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          path: y2023
+          fetch-depth: 1
+
+      - name: Check out 2024 evidence branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2024-03-14
+          path: y2024
+          fetch-depth: 1
+
+      - name: Upload 2023 evidence
+        id: upload23
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2023-contact-sheets
+          path: y2023/research-output/kadan-votes-2023/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Upload 2024 evidence
+        id: upload24
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2024-03-14-contact-sheets
+          path: y2024/research-output/kadan-votes-2024-03-14/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Publish artifact identifiers to evidence branches
+        shell: bash
+        env:
+          ART23: ${{ steps.upload23.outputs.artifact-id }}
+          ART24: ${{ steps.upload24.outputs.artifact-id }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          for year in y2023 y2024; do
+            git -C "$year" config user.name 'kadan-vote-research-bot'
+            git -C "$year" config user.email 'actions@users.noreply.github.com'
+          done
+
+          printf 'run_id=%s\nartifact_id=%s\ncreated=%s\n' \
+            "$RUN_ID" "$ART23" "$(date -u +%FT%TZ)" \
+            > y2023/research-output/kadan-votes-2023/artifact-info.txt
+          git -C y2023 add research-output/kadan-votes-2023/artifact-info.txt
+          git -C y2023 commit -m 'research: record 2023 evidence artifact [skip ci]'
+          git -C y2023 push origin HEAD:research/kadan-votes-video-2023
+
+          printf 'run_id=%s\nartifact_id=%s\ncreated=%s\n' \
+            "$RUN_ID" "$ART24" "$(date -u +%FT%TZ)" \
+            > y2024/research-output/kadan-votes-2024-03-14/artifact-info.txt
+          git -C y2024 add research-output/kadan-votes-2024-03-14/artifact-info.txt
+          git -C y2024 commit -m 'research: record 2024 evidence artifact [skip ci]'
+          git -C y2024 push origin HEAD:research/kadan-votes-video-2024-03-14
