@@ -1,0 +1,103 @@
+name: TEMP Kadaň existing contact sheets OCR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-existing-sheets:
+    if: github.event.pull_request.title == 'RUN KADAN EXISTING SHEETS OCR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          fetch-depth: 1
+
+      - name: Install OCR tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-ces tesseract-ocr-eng
+          python -m pip install --quiet --upgrade pillow
+
+      - name: Split and OCR existing ten-second frames
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          SRC='research-output/kadan-votes-2023'
+          OUT='out'
+          mkdir -p "$OUT/contacts" "$OUT/candidates" "$OUT/priority"
+          cp "$SRC"/contact_*.jpg "$OUT/contacts/"
+          cp "$SRC"/metadata.json "$SRC"/status.txt "$OUT/"
+          python - <<'PY'
+          import concurrent.futures, re, shutil, subprocess
+          from pathlib import Path
+          from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+
+          src=Path('research-output/kadan-votes-2023')
+          out=Path('out')
+          jobs=[]
+          for sheet_path in sorted(src.glob('contact_*.jpg')):
+              sheet_no=int(sheet_path.stem.split('_')[-1])
+              im=Image.open(sheet_path).convert('RGB')
+              w,h=im.size
+              # The original ffmpeg tile is 5x6, with margin=4 and padding=4.
+              cols,rows=5,6
+              margin,pad=4,4
+              cw=(w-2*margin-(cols-1)*pad)//cols
+              ch=(h-2*margin-(rows-1)*pad)//rows
+              for i in range(cols*rows):
+                  col=i%cols; row=i//cols
+                  x=margin+col*(cw+pad); y=margin+row*(ch+pad)
+                  crop=im.crop((x,y,x+cw,y+ch))
+                  sec=((sheet_no-1)*30+i)*10
+                  fp=Path('/tmp')/f'frame_{sec:05d}.jpg'
+                  crop.save(fp,quality=95)
+                  jobs.append((sec,fp))
+
+          keys=re.compile(r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|starost|m[ií]stostar|27\s*mil|27\s*000|wendl|z[aá]rybn|demjan|lazar[cč]|novotn|straka|[sš]vec|zalab[aá]k|j[aá]ra|zach',re.I)
+          strong=re.compile(r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|27\s*mil|27\s*000',re.I)
+          def stamp(sec):
+              h,rem=divmod(sec,3600);m,s=divmod(rem,60);return f'{h:02d}:{m:02d}:{s:02d}'
+          def ocr(item):
+              sec,fp=item
+              im=Image.open(fp).convert('L')
+              im=ImageOps.autocontrast(im)
+              im=ImageEnhance.Contrast(im).enhance(2.0).resize((1920,1080)).filter(ImageFilter.SHARPEN)
+              prep=Path('/tmp')/f'prep_{sec:05d}.png';im.save(prep)
+              cp=subprocess.run(['tesseract',str(prep),'stdout','-l','ces+eng','--psm','11'],text=True,capture_output=True,timeout=35)
+              prep.unlink(missing_ok=True)
+              return sec,fp,' '.join(cp.stdout.split())
+          rows=[]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+              for item in ex.map(ocr,jobs): rows.append(item)
+          rows.sort();hits=[r for r in rows if keys.search(r[2])]
+          (out/'ocr_all.tsv').write_text('seconds\ttime\tframe\ttext\n'+'\n'.join(f'{s}\t{stamp(s)}\t{f.name}\t{t}' for s,f,t in rows),encoding='utf-8')
+          (out/'ocr_hits.tsv').write_text('seconds\ttime\tframe\ttext\n'+'\n'.join(f'{s}\t{stamp(s)}\t{f.name}\t{t}' for s,f,t in hits),encoding='utf-8')
+          scored=[]
+          for s,f,t in hits: scored.append((10*len(strong.findall(t))+len(keys.findall(t)),s,f,t))
+          selected=sorted(scored,reverse=True)[:100]
+          manifest=[]
+          for rank,(score,s,f,t) in enumerate(sorted(selected,key=lambda x:x[1]),1):
+              name=f'{rank:03d}_{s:05d}_{stamp(s).replace(":","-")}.jpg';shutil.copy2(f,out/'candidates'/name)
+              manifest.append(f'{name}\t{s}\t{stamp(s)}\t{score}\t{t}')
+          (out/'candidate_manifest.tsv').write_text('image\tseconds\ttime\tscore\tocr\n'+'\n'.join(manifest),encoding='utf-8')
+          # Preserve likely early hospital and late remuneration windows in full, regardless of OCR.
+          for s,f,t in rows:
+              if s <= 2400 or s >= 3900:
+                  shutil.copy2(f,out/'priority'/f'{s:05d}_{stamp(s).replace(":","-")}.jpg')
+          (out/'summary.txt').write_text(f'frames={len(rows)}\nhits={len(hits)}\ncandidates={len(selected)}\ncontacts={len(list(src.glob("contact_*.jpg")))}\n',encoding='utf-8')
+          PY
+
+      - name: Upload existing-sheet evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2023-existing-sheets
+          path: out/
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error
