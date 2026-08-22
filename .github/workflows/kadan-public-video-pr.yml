@@ -14,10 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install
-        run: python -m pip install -q --upgrade yt-dlp requests
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install -q --upgrade yt-dlp requests
 
-      - name: Fetch metadata and lowest rendition
+      - name: Download public recordings and metadata
         shell: bash
         run: |
           set -u
@@ -54,7 +57,7 @@ jobs:
                   'embed': f'https://tv.pirati.cz/videos/embed/{ident}',
               }.items():
                   try:
-                      r = s.get(url, timeout=90, allow_redirects=True)
+                      r = s.get(url, timeout=60, allow_redirects=True)
                       save(f'{year}_{label}_status.txt', f'{r.status_code}\n{r.url}\n{dict(r.headers)}')
                       save(f'{year}_{label}.bin', r.content)
                       try: save(f'{year}_{label}.json', r.json())
@@ -63,36 +66,60 @@ jobs:
               for label, query in [('uuid', ident), ('date', f'zastupitelstvo Kadaň {meeting_date}')]:
                   try:
                       url = 'https://search.joinpeertube.org/api/v1/search/videos?' + urllib.parse.urlencode({'search': query, 'start': 0, 'count': 100})
-                      r = s.get(url, timeout=90)
+                      r = s.get(url, timeout=60)
                       save(f'{year}_sepia_{label}_status.txt', f'{r.status_code}\n{r.url}')
                       try: save(f'{year}_sepia_{label}.json', r.json())
                       except Exception: save(f'{year}_sepia_{label}.bin', r.content)
                   except Exception: save(f'{year}_sepia_{label}_error.txt', traceback.format_exc())
           PY
 
-          find out -type f -printf '%p\t%s bytes\n' | sort > out/inventory.txt
-          cat out/inventory.txt
-
-      - name: Contact sheets and audio
+      - name: Build ten-second contact sheets and audio
         shell: bash
         run: |
           for year in 2023 2024; do
             file="$(find out -maxdepth 1 -type f -name "${year}_video.*" | head -n1)"
             if [ -n "$file" ] && [ -s "$file" ]; then
-              ffprobe -v error -show_format -show_streams -of json "$file" > "out/${year}_ffprobe.json" || true
+              ffprobe -v error -show_format -show_streams -of json "$file" > "out/${year}_ffprobe.json"
               mkdir -p "out/${year}_contacts"
-              ffmpeg -hide_banner -loglevel warning -i "$file" -vf 'fps=1/60,scale=480:-2,tile=4x4:padding=4:margin=4' -q:v 5 "out/${year}_contacts/contact_%03d.jpg" || true
-              ffmpeg -hide_banner -loglevel warning -i "$file" -vn -ac 1 -ar 16000 -b:a 32k "out/${year}_audio.mp3" || true
+              ffmpeg -hide_banner -loglevel warning -i "$file" \
+                -vf 'fps=1/10,scale=640:-2,tile=4x4:padding=4:margin=4' -q:v 4 \
+                "out/${year}_contacts/contact_%03d.jpg"
+              ffmpeg -hide_banner -loglevel warning -i "$file" -vn -ac 1 -ar 16000 -b:a 24k \
+                "out/${year}_audio.mp3"
             fi
           done
           find out -type f -printf '%p\t%s bytes\n' | sort > out/inventory.txt
+          cat out/inventory.txt
 
-      - name: Upload artifact
+      - name: Upload analytical package
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: kadan-public-video-research
-          path: out/
+          name: kadan-analysis-metadata
+          path: |
+            out/**
+            !out/2023_video.*
+            !out/2024_video.*
           retention-days: 3
-          compression-level: 3
+          compression-level: 6
+          if-no-files-found: warn
+
+      - name: Upload 2023 video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-video-2023
+          path: out/2023_video.*
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: warn
+
+      - name: Upload 2024 video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-video-2024
+          path: out/2024_video.*
+          retention-days: 3
+          compression-level: 0
           if-no-files-found: warn
