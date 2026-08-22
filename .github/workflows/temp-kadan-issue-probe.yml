@@ -1,0 +1,25 @@
+name: TEMP Kadaň issue runner probe
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+jobs:
+  probe:
+    if: github.event.issue.title == 'RUN KADAN VOTES PROBE'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Commit marker
+        run: |
+          set -Eeuo pipefail
+          mkdir -p tmp/kadan-votes-2023
+          printf 'issue_runner_started=%s\nissue=%s\n' "$(date -u +%FT%TZ)" "${{ github.event.issue.number }}" > tmp/kadan-votes-2023/issue-probe.txt
+          git config user.name research-bot
+          git config user.email research-bot@users.noreply.github.com
+          git add tmp/kadan-votes-2023/issue-probe.txt
+          git commit -m 'temp: issue runner marker [skip ci]'
+          git push origin HEAD:main
