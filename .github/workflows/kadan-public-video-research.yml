@@ -1,0 +1,188 @@
+name: Kadan public video research
+
+on:
+  push:
+    branches:
+      - research/kadan-video-fetch
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg dnsutils
+          python -m pip install -q --upgrade requests yt-dlp
+
+      - name: Fetch public PeerTube records
+        shell: bash
+        run: |
+          set -u
+          mkdir -p out
+          date -u > out/run_utc.txt
+          {
+            echo '=== DNS ==='
+            dig tv.pirati.cz A +noall +answer || true
+            dig tv.pirati.cz AAAA +noall +answer || true
+            echo '=== HTTPS ==='
+            curl -IL --connect-timeout 20 --max-time 60 https://tv.pirati.cz/ || true
+          } > out/network.txt 2>&1
+
+          python <<'PY'
+          import json, pathlib, requests, traceback, urllib.parse
+
+          out = pathlib.Path('out')
+          session = requests.Session()
+          session.headers['User-Agent'] = 'Mozilla/5.0 public-records-research/1.0'
+          targets = {
+              '2023': ('98mdJ8nsSL8hnM1UuuLAE9', '13.9.2023'),
+              '2024': ('6fcaaab7-aeb8-465f-848c-b857895e3e5e', '14.3.2024'),
+          }
+
+          def save(path, value):
+              path = out / path
+              if isinstance(value, bytes):
+                  path.write_bytes(value)
+              elif isinstance(value, (dict, list)):
+                  path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8')
+              else:
+                  path.write_text(str(value), encoding='utf-8')
+
+          for year, (ident, meeting_date) in targets.items():
+              endpoints = {
+                  'api': f'https://tv.pirati.cz/api/v1/videos/{ident}',
+                  'captions': f'https://tv.pirati.cz/api/v1/videos/{ident}/captions',
+                  'watch': f'https://tv.pirati.cz/w/{ident}',
+                  'embed': f'https://tv.pirati.cz/videos/embed/{ident}',
+              }
+              for label, url in endpoints.items():
+                  try:
+                      response = session.get(url, timeout=90, allow_redirects=True)
+                      save(f'{year}_{label}_status.txt', f'{response.status_code}\n{response.url}\n{dict(response.headers)}')
+                      save(f'{year}_{label}.bin', response.content)
+                      try:
+                          save(f'{year}_{label}.json', response.json())
+                      except Exception:
+                          pass
+                  except Exception:
+                      save(f'{year}_{label}_error.txt', traceback.format_exc())
+
+              for label, query in [('uuid', ident), ('date', f'zastupitelstvo Kadaň {meeting_date}')]:
+                  try:
+                      search_url = 'https://search.joinpeertube.org/api/v1/search/videos?' + urllib.parse.urlencode({
+                          'search': query, 'start': 0, 'count': 100, 'sort': '-match'
+                      })
+                      response = session.get(search_url, timeout=90)
+                      save(f'{year}_sepia_{label}_status.txt', f'{response.status_code}\n{response.url}')
+                      try:
+                          save(f'{year}_sepia_{label}.json', response.json())
+                      except Exception:
+                          save(f'{year}_sepia_{label}.bin', response.content)
+                  except Exception:
+                      save(f'{year}_sepia_{label}_error.txt', traceback.format_exc())
+
+              try:
+                  cdx_url = 'https://web.archive.org/cdx/search/cdx?' + urllib.parse.urlencode({
+                      'url': f'tv.pirati.cz/*{ident}*',
+                      'output': 'json',
+                      'filter': 'statuscode:200',
+                      'fl': 'timestamp,original,mimetype,statuscode,digest,length',
+                      'collapse': 'digest',
+                  })
+                  response = session.get(cdx_url, timeout=120)
+                  save(f'{year}_wayback_status.txt', f'{response.status_code}\n{response.url}')
+                  try:
+                      save(f'{year}_wayback.json', response.json())
+                  except Exception:
+                      save(f'{year}_wayback.bin', response.content)
+              except Exception:
+                  save(f'{year}_wayback_error.txt', traceback.format_exc())
+          PY
+
+          yt-dlp --no-warnings --dump-single-json --skip-download 'https://tv.pirati.cz/w/98mdJ8nsSL8hnM1UuuLAE9' > out/2023_ytdlp.json 2> out/2023_ytdlp_error.txt || true
+          yt-dlp --no-warnings --dump-single-json --skip-download 'https://tv.pirati.cz/videos/embed/6fcaaab7-aeb8-465f-848c-b857895e3e5e' > out/2024_ytdlp.json 2> out/2024_ytdlp_error.txt || true
+
+      - name: Resolve and download smallest rendition
+        shell: bash
+        run: |
+          python <<'PY'
+          import json, pathlib
+          out = pathlib.Path('out')
+          for year in ('2023', '2024'):
+              candidates = []
+              api = out / f'{year}_api.json'
+              if api.exists():
+                  try:
+                      data = json.loads(api.read_text(encoding='utf-8'))
+                      files = list(data.get('files') or [])
+                      for playlist in data.get('streamingPlaylists') or []:
+                          files.extend(playlist.get('files') or [])
+                      for item in files:
+                          url = item.get('fileUrl') or item.get('fileDownloadUrl')
+                          if url:
+                              size = item.get('size') or 10**18
+                              height = (item.get('resolution') or {}).get('id') or 99999
+                              candidates.append((size, height, url, 'api'))
+                  except Exception:
+                      pass
+              meta = out / f'{year}_ytdlp.json'
+              if meta.exists():
+                  try:
+                      data = json.loads(meta.read_text(encoding='utf-8'))
+                      for item in data.get('formats') or []:
+                          url = item.get('url')
+                          if url and item.get('vcodec') != 'none':
+                              size = item.get('filesize') or item.get('filesize_approx') or 10**18
+                              height = item.get('height') or 99999
+                              candidates.append((size, height, url, 'yt-dlp'))
+                  except Exception:
+                      pass
+              candidates.sort(key=lambda row: (row[0], row[1]))
+              (out / f'{year}_direct_urls.txt').write_text(
+                  '\n'.join(f'{size}\t{height}\t{source}\t{url}' for size, height, url, source in candidates),
+                  encoding='utf-8'
+              )
+              if candidates:
+                  size, height, url, source = candidates[0]
+                  (out / f'{year}_selected_url.txt').write_text(url, encoding='utf-8')
+                  (out / f'{year}_selected_info.txt').write_text(
+                      f'size={size}\nheight={height}\nsource={source}\n', encoding='utf-8'
+                  )
+          PY
+
+          for year in 2023 2024; do
+            if [ -s "out/${year}_selected_url.txt" ]; then
+              url="$(cat "out/${year}_selected_url.txt")"
+              curl -L --fail --retry 3 --connect-timeout 30 --max-time 2700 "$url" -o "out/${year}_low.mp4" > "out/${year}_download.log" 2>&1 || true
+              if [ -s "out/${year}_low.mp4" ]; then
+                ffprobe -v error -show_format -show_streams -of json "out/${year}_low.mp4" > "out/${year}_ffprobe.json" || true
+                mkdir -p "out/${year}_contacts"
+                ffmpeg -hide_banner -loglevel warning -i "out/${year}_low.mp4" \
+                  -vf "fps=1/60,scale=480:-2,tile=4x4:padding=4:margin=4" -q:v 5 \
+                  "out/${year}_contacts/contact_%03d.jpg" || true
+                ffmpeg -hide_banner -loglevel warning -i "out/${year}_low.mp4" -vn -ac 1 -ar 16000 -b:a 32k \
+                  "out/${year}_audio.mp3" || true
+              fi
+            fi
+          done
+
+          find out -type f -printf '%p\t%s bytes\n' | sort > out/inventory.txt
+          cat out/inventory.txt
+
+      - name: Upload research artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-public-video-research
+          path: out/
+          retention-days: 3
+          compression-level: 3
+          if-no-files-found: warn
