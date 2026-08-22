@@ -1,0 +1,155 @@
+name: TEMP Extract Kadaň votes 2023
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-kadan-votes-2023-extract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out isolated research branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          fetch-depth: 0
+
+      - name: Mark workflow as started
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'kadan-vote-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          mkdir -p research-output/kadan-votes-2023
+          printf 'source=https://tv.pirati.cz/w/98mdJ8nsSL8hnM1UuuLAE9\nworkflow_started=%s\n' "$(date -u +%FT%TZ)" > research-output/kadan-votes-2023/status.txt
+          git add research-output/kadan-votes-2023/status.txt
+          git commit -m 'research: start 2023 council video extraction [skip ci]'
+          git push origin HEAD:research/kadan-votes-video-2023
+
+      - name: Install media tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg jq
+          python -m pip install --quiet --upgrade 'yt-dlp[default,curl-cffi]' faster-whisper
+          yt-dlp --version
+
+      - name: Download public PeerTube recording
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/kadan-votes-2023
+          mkdir -p /tmp/kadan-votes-2023
+          cd /tmp/kadan-votes-2023
+          URL='https://tv.pirati.cz/w/98mdJ8nsSL8hnM1UuuLAE9'
+          yt-dlp --dump-single-json "$URL" > metadata.json
+          yt-dlp --newline -f 'worst[ext=mp4]/worst' --merge-output-format mp4 -o 'meeting.%(ext)s' "$URL"
+          VIDEO="$(find . -maxdepth 1 -type f -name 'meeting.*' ! -name '*.part' | head -n1)"
+          test -s "$VIDEO"
+          printf '%s' "$(realpath "$VIDEO")" > video-path.txt
+          ffprobe -v error -show_format -show_streams -of json "$VIDEO" > ffprobe.json
+          ls -lh "$VIDEO"
+
+      - name: Create timestamped overview and audio
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/kadan-votes-2023
+          VIDEO="$(cat video-path.txt)"
+          ffmpeg -nostdin -hide_banner -loglevel error -i "$VIDEO" \
+            -vf "fps=1/10,scale=480:-2,drawtext=text='%{pts\\:hms}':x=8:y=h-th-8:fontsize=20:fontcolor=white:box=1:boxcolor=black@0.70,tile=5x6:padding=4:margin=4" \
+            -q:v 4 -vsync vfr 'contact_%03d.jpg'
+          ffmpeg -nostdin -hide_banner -loglevel error -i "$VIDEO" -vn -ac 1 -ar 16000 -b:a 32k audio.mp3
+          find . -maxdepth 1 -name 'contact_*.jpg' -printf '%f %s\n' | sort > contact-files.txt
+
+      - name: Publish overview to isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p research-output/kadan-votes-2023
+          cp /tmp/kadan-votes-2023/metadata.json /tmp/kadan-votes-2023/ffprobe.json /tmp/kadan-votes-2023/contact-files.txt research-output/kadan-votes-2023/
+          cp /tmp/kadan-votes-2023/contact_*.jpg research-output/kadan-votes-2023/
+          printf 'overview_complete=%s\ncontact_sheets=%s\n' \
+            "$(date -u +%FT%TZ)" \
+            "$(find /tmp/kadan-votes-2023 -maxdepth 1 -name 'contact_*.jpg' | wc -l)" \
+            >> research-output/kadan-votes-2023/status.txt
+          git add research-output/kadan-votes-2023
+          git commit -m 'research: publish 2023 council video overview [skip ci]'
+          git push origin HEAD:research/kadan-votes-video-2023
+
+      - name: Create timestamped Czech transcript
+        continue-on-error: true
+        shell: bash
+        run: |
+          python - <<'PY'
+          from faster_whisper import WhisperModel
+          from pathlib import Path
+
+          model = WhisperModel('base', device='cpu', compute_type='int8')
+          segments, info = model.transcribe(
+              '/tmp/kadan-votes-2023/audio.mp3',
+              language='cs', beam_size=1, vad_filter=True,
+              condition_on_previous_text=False,
+          )
+          rows, srt, text_rows = [], [], []
+          def stamp(sec):
+              whole = int(max(0, sec))
+              ms = int(round((sec - int(sec)) * 1000))
+              h, rem = divmod(whole, 3600)
+              m, s = divmod(rem, 60)
+              return f'{h:02d}:{m:02d}:{s:02d},{ms:03d}'
+          for i, seg in enumerate(segments, 1):
+              text = seg.text.strip()
+              if not text:
+                  continue
+              rows.append(f'{seg.start:.3f}\t{seg.end:.3f}\t{text}')
+              text_rows.append(f'[{stamp(seg.start)[:-4]}–{stamp(seg.end)[:-4]}] {text}')
+              srt.extend([str(i), f'{stamp(seg.start)} --> {stamp(seg.end)}', text, ''])
+          out = Path('/tmp/kadan-votes-2023')
+          (out / 'transcript.tsv').write_text('start\tend\ttext\n' + '\n'.join(rows), encoding='utf-8')
+          (out / 'transcript.srt').write_text('\n'.join(srt), encoding='utf-8')
+          (out / 'transcript.txt').write_text('\n'.join(text_rows), encoding='utf-8')
+          (out / 'transcript-info.txt').write_text(
+              f'language={info.language}\nprobability={info.language_probability}\nsegments={len(rows)}\n', encoding='utf-8')
+          PY
+
+      - name: Publish transcript to isolated branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(/tmp/kadan-votes-2023/transcript.* /tmp/kadan-votes-2023/transcript-info.txt)
+          if [ ${#files[@]} -gt 0 ]; then
+            cp "${files[@]}" research-output/kadan-votes-2023/
+            printf 'transcript_complete=%s\n' "$(date -u +%FT%TZ)" >> research-output/kadan-votes-2023/status.txt
+          else
+            printf 'transcript_complete=false\n' >> research-output/kadan-votes-2023/status.txt
+          fi
+          git add research-output/kadan-votes-2023
+          if ! git diff --cached --quiet; then
+            git commit -m 'research: publish 2023 council transcript [skip ci]'
+            git push origin HEAD:research/kadan-votes-video-2023
+          fi
+
+      - name: Keep temporary artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2023-evidence
+          path: |
+            /tmp/kadan-votes-2023/audio.mp3
+            /tmp/kadan-votes-2023/metadata.json
+            /tmp/kadan-votes-2023/ffprobe.json
+            /tmp/kadan-votes-2023/contact_*.jpg
+            /tmp/kadan-votes-2023/transcript.*
+            /tmp/kadan-votes-2023/transcript-info.txt
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: warn
