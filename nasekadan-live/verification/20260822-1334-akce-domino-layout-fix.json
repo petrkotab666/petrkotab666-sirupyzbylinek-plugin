@@ -1,0 +1,60 @@
+{
+  "version": "20260822-1334-akce-domino-layout-fix",
+  "status": "WEB_OK",
+  "verified_at": "2026-08-22T11:34:56.934409+00:00",
+  "attempt": 1,
+  "checks": {
+    "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html?nkbridgeverify=20260822-1334-akce-domino-layout-fix-1787398494",
+      "present": {
+        "AKCE-DOMINO-LAYOUT-FIX-20260822": true,
+        "grid-template-areas:\"content sidebar\"": true,
+        "main.article-shell>.article{grid-area:content}": true,
+        "main.article-shell>.sticky{grid-area:sidebar}": true
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "figures": [
+          "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>",
+          "<figure class=\"article-figure\"><img src=\"https://nasekadan.cz/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Kadaňský klášter – historická série Naše Kadaň\"><figcaption>Ilustrační karta k historické sérii o kadaňském klášteře.</figcaption></figure>"
+        ],
+        "images": [
+          "<img class=\"article-photo\" src=\"/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\">",
+          "<img src=\"https://nasekadan.cz/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Kadaňský klášter – historická série Naše Kadaň\">"
+        ]
+      },
+      "ok": true
+    },
+    "https://www.nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html?nkbridgeverify=20260822-1334-akce-domino-layout-fix-1787398495",
+      "present": {
+        "AKCE-DOMINO-LAYOUT-FIX-20260822": true,
+        "grid-template-areas:\"content sidebar\"": true,
+        "main.article-shell>.article{grid-area:content}": true,
+        "main.article-shell>.sticky{grid-area:sidebar}": true
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "figures": [
+          "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>",
+          "<figure class=\"article-figure\"><img src=\"https://nasekadan.cz/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Kadaňský klášter – historická série Naše Kadaň\"><figcaption>Ilustrační karta k historické sérii o kadaňském klášteře.</figcaption></figure>"
+        ],
+        "images": [
+          "<img class=\"article-photo\" src=\"/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku 43 příslušníků, psi a otevřená krypta\" fetchpriority=\"high\" decoding=\"async\">",
+          "<img src=\"https://nasekadan.cz/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Kadaňský klášter – historická série Naše Kadaň\">"
+        ]
+      },
+      "ok": true
+    }
+  }
+}
