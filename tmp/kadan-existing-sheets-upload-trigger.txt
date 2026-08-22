@@ -1,0 +1,1 @@
+Trigger for direct artifact export of existing Kadaň contact sheets.
