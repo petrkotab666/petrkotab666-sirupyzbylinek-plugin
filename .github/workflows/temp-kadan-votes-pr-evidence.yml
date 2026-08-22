@@ -1,0 +1,128 @@
+name: TEMP Kadaň vote evidence via PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  visual-evidence:
+    if: github.event.pull_request.title == 'RUN KADAN VOTES 2023 EVIDENCE'
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - name: Install visual tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg tesseract-ocr tesseract-ocr-ces tesseract-ocr-eng
+          python -m pip install --quiet --upgrade pillow
+
+      - name: Generate visual timeline and OCR
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          mkdir -p out/frames out/candidates out/contact
+          ffmpeg -hide_banner -loglevel error -i "$URL" \
+            -vf 'fps=1/5,scale=1280:720' -q:v 2 out/frames/frame_%05d.jpg
+          python - <<'PY'
+          import concurrent.futures, re, shutil, subprocess
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
+
+          out=Path('out'); frames=sorted((out/'frames').glob('frame_*.jpg'))
+          keys=re.compile(r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|starost|m[ií]stostar|27\s*mil|27\s*000|wendl|z[aá]rybn|demjan|lazar[cč]|novotn|straka|[sš]vec|zalab[aá]k|j[aá]ra|zach',re.I)
+          strong=re.compile(r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|27\s*mil|27\s*000',re.I)
+          def stamp(sec):
+              h,rem=divmod(sec,3600);m,s=divmod(rem,60);return f'{h:02d}:{m:02d}:{s:02d}'
+          def ocr(fp):
+              idx=int(fp.stem.split('_')[-1]); sec=(idx-1)*5
+              im=Image.open(fp).convert('L'); im=ImageOps.autocontrast(im)
+              im=ImageEnhance.Contrast(im).enhance(1.8).resize((2560,1440)).filter(ImageFilter.SHARPEN)
+              prep=Path('/tmp')/f'prep_{idx:05d}.png'; im.save(prep)
+              cp=subprocess.run(['tesseract',str(prep),'stdout','-l','ces+eng','--psm','11'],text=True,capture_output=True,timeout=45)
+              prep.unlink(missing_ok=True)
+              return sec,fp,' '.join(cp.stdout.split())
+          rows=[]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+              for item in ex.map(ocr,frames): rows.append(item)
+          rows.sort(); hits=[r for r in rows if keys.search(r[2])]
+          (out/'ocr_all.tsv').write_text('seconds\ttime\tframe\ttext\n'+'\n'.join(f'{s}\t{stamp(s)}\t{f.name}\t{t}' for s,f,t in rows),encoding='utf-8')
+          (out/'ocr_hits.tsv').write_text('seconds\ttime\tframe\ttext\n'+'\n'.join(f'{s}\t{stamp(s)}\t{f.name}\t{t}' for s,f,t in hits),encoding='utf-8')
+          scored=[]
+          for s,f,t in hits: scored.append((10*len(strong.findall(t))+len(keys.findall(t)),s,f,t))
+          selected=sorted(scored,reverse=True)[:100]
+          manifest=[]
+          for rank,(score,s,f,t) in enumerate(sorted(selected,key=lambda x:x[1]),1):
+              name=f'{rank:03d}_{s:05d}_{stamp(s).replace(":","-")}.jpg'
+              shutil.copy2(f,out/'candidates'/name); manifest.append(f'{name}\t{s}\t{stamp(s)}\t{score}\t{t}')
+          (out/'candidate_manifest.tsv').write_text('image\tseconds\ttime\tscore\tocr\n'+'\n'.join(manifest),encoding='utf-8')
+          # 30-frame contact sheet = 150 seconds at 5-second sampling.
+          cols,per,cw,ch=5,30,480,270
+          for page,start in enumerate(range(0,len(frames),per),1):
+              subset=frames[start:start+per]; rowsn=(len(subset)+cols-1)//cols
+              canvas=Image.new('RGB',(cols*cw,rowsn*ch),'black')
+              for i,f in enumerate(subset):
+                  im=ImageOps.fit(Image.open(f).convert('RGB'),(cw,ch))
+                  sec=(int(f.stem.split('_')[-1])-1)*5
+                  d=ImageDraw.Draw(im); d.rectangle((0,ch-25,120,ch),fill='black'); d.text((5,ch-21),stamp(sec),fill='white')
+                  canvas.paste(im,((i%cols)*cw,(i//cols)*ch))
+              canvas.save(out/'contact'/f'contact_{page:03d}.jpg',quality=78,optimize=True)
+          (out/'summary.txt').write_text(f'frames={len(rows)}\nhits={len(hits)}\ncandidates={len(selected)}\ncontact_sheets={(len(frames)+per-1)//per}\n',encoding='utf-8')
+          PY
+          rm -rf out/frames
+
+      - name: Upload visual evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2023-visual
+          path: out/
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error
+
+  audio-evidence:
+    if: github.event.pull_request.title == 'RUN KADAN VOTES 2023 EVIDENCE'
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - name: Install transcript tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install --quiet --upgrade faster-whisper
+
+      - name: Transcribe full meeting in Czech
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          mkdir -p transcript
+          ffmpeg -hide_banner -loglevel error -i "$URL" -vn -ac 1 -ar 16000 -b:a 32k transcript/audio.mp3
+          python - <<'PY'
+          from faster_whisper import WhisperModel
+          from pathlib import Path
+          model=WhisperModel('base',device='cpu',compute_type='int8')
+          segments,info=model.transcribe('transcript/audio.mp3',language='cs',beam_size=1,vad_filter=True,condition_on_previous_text=False)
+          rows=[]
+          for s in segments: rows.append((s.start,s.end,s.text.strip()))
+          def ts(x):
+              x=int(x);return f'{x//3600:02d}:{(x%3600)//60:02d}:{x%60:02d}'
+          out=Path('transcript')
+          out.joinpath('transcript.tsv').write_text('start\tend\tstart_time\tend_time\ttext\n'+'\n'.join(f'{s:.3f}\t{e:.3f}\t{ts(s)}\t{ts(e)}\t{t}' for s,e,t in rows),encoding='utf-8')
+          keys=('nemoc','dotac','milion','odměn','odmen','starost','místostar','mistostar','hlasov','schválen','proti','zdrž','losen','vaic')
+          hits=[r for r in rows if any(k in r[2].lower() for k in keys)]
+          out.joinpath('keyword_hits.tsv').write_text('start\tend\tstart_time\tend_time\ttext\n'+'\n'.join(f'{s:.3f}\t{e:.3f}\t{ts(s)}\t{ts(e)}\t{t}' for s,e,t in hits),encoding='utf-8')
+          out.joinpath('summary.txt').write_text(f'segments={len(rows)}\nhits={len(hits)}\nlanguage={info.language}\nprobability={info.language_probability}\n',encoding='utf-8')
+          PY
+
+      - name: Upload transcript evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2023-transcript
+          path: transcript/
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error
