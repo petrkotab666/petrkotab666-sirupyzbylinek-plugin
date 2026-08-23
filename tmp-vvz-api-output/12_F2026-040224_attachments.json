@@ -1,0 +1,6 @@
+{
+  "url": "https://api.vvz.nipez.cz/api/submission_attachments?submissionVersion=b02f4507-eeda-4bbb-97e7-ddb60dc57941",
+  "status": 400,
+  "error": "<HTTPError 400: 'Bad Request'>",
+  "error_body": "{\"type\":\"https:\\/\\/tools.ietf.org\\/html\\/rfc2616#section-10\",\"title\":\"An error occurred\",\"detail\":\"Invalid filter \\u0022App\\\\Entity\\\\SubmissionVersion\\u0022 value: Item not found for identifier \\u0022b02f4507-eeda-4bbb-97e7-ddb60dc57941\\u0022.\",\"code\":\"FILTER_CONSTRAINT_VIOLATION\"}"
+}

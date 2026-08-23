@@ -1,6 +1,0 @@
-{
-  "url": "https://api.vvz.nipez.cz/api/submission_attachments?submission=64d11ab6-6031-4b2b-b7a0-6abbee7f6c68",
-  "status": 400,
-  "error": "<HTTPError 400: 'Bad Request'>",
-  "error_body": "{\"type\":\"https:\\/\\/tools.ietf.org\\/html\\/rfc2616#section-10\",\"title\":\"An error occurred\",\"detail\":\"Query parameter \\u0022submissionVersion\\u0022 is required\",\"code\":\"FILTER_CONSTRAINT_VIOLATION\"}"
-}
