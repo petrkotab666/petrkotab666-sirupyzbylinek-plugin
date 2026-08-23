@@ -7,20 +7,24 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   fetch-vvz:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+
       - name: Fetch public VVZ records
         shell: bash
         run: |
-          mkdir -p out
+          rm -rf tmp-vvz-api-output
+          mkdir -p tmp-vvz-api-output
           python3 - <<'PY'
-          import json, os, re, urllib.parse, urllib.request, urllib.error
+          import json, os, re, urllib.parse, urllib.request
 
+          OUT = "tmp-vvz-api-output"
           BASE = "https://api.vvz.nipez.cz"
           HEADERS = {
               "Accept": "application/json, text/plain, */*",
@@ -47,11 +51,11 @@ jobs:
                           record["body_text"] = raw.decode("utf-8", errors="replace")
               except Exception as e:
                   record["error"] = repr(e)
-              with open(os.path.join("out", name + ".json"), "w", encoding="utf-8") as f:
+              with open(os.path.join(OUT, name + ".json"), "w", encoding="utf-8") as f:
                   json.dump(record, f, ensure_ascii=False, indent=2)
               return record.get("body")
 
-          params = {
+          search = fetch("00_search_Z2024-029445", "/api/submissions/search", {
               "page": 1,
               "limit": 200,
               "form": "vz",
@@ -59,8 +63,7 @@ jobs:
               "data.evCisloZakazkyVvz": "Z2024-029445",
               "order[data.datumUverejneniVvz]": "DESC",
               "order[createdAt]": "DESC",
-          }
-          search = fetch("00_search_Z2024-029445", "/api/submissions/search", params)
+          })
 
           if isinstance(search, list):
               items = search
@@ -76,19 +79,18 @@ jobs:
               if not isinstance(item, dict):
                   continue
               text = json.dumps(item, ensure_ascii=False)
-              form_hits = re.findall(r"F2026-(?:018644|033864|040224)", text)
+              form_hits = sorted(set(re.findall(r"F2026-(?:018644|033864|040224)", text)))
               sid = item.get("id") or item.get("submissionId") or item.get("uuid")
-              summary.append({"index": idx, "id": sid, "form_hits": sorted(set(form_hits)), "item": item})
+              summary.append({"index": idx, "id": sid, "form_hits": form_hits, "item": item})
               if sid:
                   safe = re.sub(r"[^A-Za-z0-9_-]", "_", str(sid))
                   fetch(f"10_{idx:03d}_{safe}_submission", f"/api/submissions/{urllib.parse.quote(str(sid))}")
                   fetch(f"11_{idx:03d}_{safe}_children", "/api/submissions/children/search", {"submission": sid})
                   fetch(f"12_{idx:03d}_{safe}_attachments", "/api/submission_attachments", {"submission": sid})
 
-          with open("out/01_summary.json", "w", encoding="utf-8") as f:
+          with open(os.path.join(OUT, "01_summary.json"), "w", encoding="utf-8") as f:
               json.dump(summary, f, ensure_ascii=False, indent=2)
 
-          # Direct searches by form number as a fallback.
           for form_no in ["F2026-018644", "F2026-033864", "F2026-040224"]:
               fetch("20_" + form_no, "/api/submissions/search", {
                   "page": 1,
@@ -99,13 +101,16 @@ jobs:
                   "order[createdAt]": "DESC",
               })
 
+          with open(os.path.join(OUT, "README.txt"), "w", encoding="utf-8") as f:
+              f.write(f"Fetched {len(items)} submissions for Z2024-029445.\n")
           print(json.dumps({"items": len(items), "ids": [x.get("id") for x in summary], "hits": [x.get("form_hits") for x in summary]}, ensure_ascii=False, indent=2))
           PY
 
-      - name: Upload API dump
-        uses: actions/upload-artifact@v4
-        with:
-          name: vvz-api-dump
-          path: out
-          retention-days: 1
-          if-no-files-found: error
+      - name: Commit temporary API dump
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp-vvz-api-output
+          git commit -m "chore: temporary VVZ API dump" || exit 0
+          git push
