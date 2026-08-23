@@ -1,0 +1,31 @@
+# Temporary primary-source links for CEZ EPR-Kadan research
+
+- [TED detail](https://ted.europa.eu/en/notice/-/detail/439224-2026)
+- [TED XML](https://ted.europa.eu/en/notice/439224-2026/xml)
+- [TED HTML](https://ted.europa.eu/en/notice/439224-2026/html)
+- [TED PDF](https://ted.europa.eu/en/notice/439224-2026/pdf)
+- [Jina TED detail](https://r.jina.ai/https://ted.europa.eu/en/notice/-/detail/439224-2026)
+- [Jina TED XML](https://r.jina.ai/https://ted.europa.eu/en/notice/439224-2026/xml)
+- [Jina TED HTML](https://r.jina.ai/https://ted.europa.eu/en/notice/439224-2026/html)
+- [Jina TED PDF](https://r.jina.ai/https://ted.europa.eu/en/notice/439224-2026/pdf)
+- [TED daily package candidate 1](https://ted.europa.eu/packages/daily/202600121)
+- [TED daily package candidate 2](https://ted.europa.eu/packages/notice/daily/202600121)
+
+- [VVZ search by contract](https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=200&form=vz&data.evCisloZakazkyVvz=Z2024-029445&order[data.datumUverejneniVvz]=DESC&order[createdAt]=DESC)
+- [Jina VVZ search by contract](https://r.jina.ai/https://api.vvz.nipez.cz/api/submissions/search?page=1%26limit=200%26form=vz%26data.evCisloZakazkyVvz=Z2024-029445%26order%5Bdata.datumUverejneniVvz%5D=DESC%26order%5BcreatedAt%5D=DESC)
+- [VVZ exact F2026-018644](https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=50&form=vz&data.evCisloFormulareVvz=F2026-018644)
+- [VVZ exact F2026-033864](https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=50&form=vz&data.evCisloFormulareVvz=F2026-033864)
+- [VVZ exact F2026-040224](https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=50&form=vz&data.evCisloFormulareVvz=F2026-040224)
+- [Jina VVZ exact F2026-018644](https://r.jina.ai/https://api.vvz.nipez.cz/api/submissions/search?page=1%26limit=50%26form=vz%26data.evCisloFormulareVvz=F2026-018644)
+- [Jina VVZ exact F2026-033864](https://r.jina.ai/https://api.vvz.nipez.cz/api/submissions/search?page=1%26limit=50%26form=vz%26data.evCisloFormulareVvz=F2026-033864)
+- [Jina VVZ exact F2026-040224](https://r.jina.ai/https://api.vvz.nipez.cz/api/submissions/search?page=1%26limit=50%26form=vz%26data.evCisloFormulareVvz=F2026-040224)
+
+- [NEN Vysvetleni 16 PDF](https://nen.nipez.cz/file?id=2581846942)
+- [NEN Vysvetleni 20 PDF](https://nen.nipez.cz/file?id=2628806615)
+- [Jina NEN Vysvetleni 16](https://r.jina.ai/https://nen.nipez.cz/file?id=2581846942)
+- [Jina NEN Vysvetleni 20](https://r.jina.ai/https://nen.nipez.cz/file?id=2628806615)
+- [NEN detail 2025-01-29 A](https://nen.nipez.cz/vestnik/detail-info/2628810126)
+- [NEN detail 2025-01-29 B](https://nen.nipez.cz/vestnik/detail-info/2628806598)
+
+- [TED API candidate detail](https://api.ted.europa.eu/v3/notices/439224-2026)
+- [Jina TED API candidate detail](https://r.jina.ai/https://api.ted.europa.eu/v3/notices/439224-2026)
