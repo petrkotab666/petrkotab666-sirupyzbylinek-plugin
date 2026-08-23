@@ -1,0 +1,379 @@
+[
+  {
+    "page": "main",
+    "key": "detail-verejne-zakazky-polozky-predmetu",
+    "count": 0,
+    "onPage": 10,
+    "filterParamName": "polp",
+    "routeParamName": "vzFilter",
+    "items": []
+  },
+  {
+    "page": "main",
+    "key": "detail-verejne-zakazky-misto",
+    "count": 1,
+    "onPage": 10,
+    "filterParamName": "mis",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 2636529884,
+        "nutsKod": "CZ042",
+        "nutsNazev": "Ústecký kraj"
+      }
+    ]
+  },
+  {
+    "page": "main",
+    "key": "detail-verejne-zakazky-evidence-uver",
+    "count": 35,
+    "onPage": 10,
+    "filterParamName": "peu",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 3287467525,
+        "datumUverejneni": "2025-09-18T13:48:06",
+        "text": "Uveřejnění písemné zprávy",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 3287462484,
+        "datumUverejneni": "2025-09-18T13:46:11",
+        "text": "Uveřejnění účastníků",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 3287462405,
+        "datumUverejneni": "2025-09-18T13:46:09",
+        "text": "Uveřejnění výsledku",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 2636529869,
+        "datumUverejneni": "2025-02-03T20:29:49",
+        "text": "Změna nebo doplnění zadávací dokumentace",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 2628810126,
+        "datumUverejneni": "2025-01-29T19:32:33",
+        "text": "Uveřejnění vysvětlení zadávací dokumentace",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 2628806598,
+        "datumUverejneni": "2025-01-29T19:30:44",
+        "text": "Uveřejnění vysvětlení zadávací dokumentace",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 2610034812,
+        "datumUverejneni": "2025-01-17T19:28:39",
+        "text": "Změna nebo doplnění zadávací dokumentace",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 2609109522,
+        "datumUverejneni": "2025-01-17T07:30:01",
+        "text": "Uveřejnění vysvětlení zadávací dokumentace",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 2604062754,
+        "datumUverejneni": "2025-01-14T09:14:20",
+        "text": "Uveřejnění vysvětlení zadávací dokumentace",
+        "datumOduver": null,
+        "oduverejnil": null
+      },
+      {
+        "id": 2596879809,
+        "datumUverejneni": "2025-01-09T14:42:29",
+        "text": "Uveřejnění vysvětlení zadávací dokumentace",
+        "datumOduver": null,
+        "oduverejnil": null
+      }
+    ]
+  },
+  {
+    "page": "main",
+    "key": "detail-verejne-zakazky-evidence-vvz",
+    "count": 9,
+    "onPage": 10,
+    "filterParamName": "pvvz",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 4566297342,
+        "datumPotvrzeni": "2026-07-24T08:23:00",
+        "datumUverejneni": "2026-07-27T02:03:00",
+        "evidCisloForm": "F2026-040224",
+        "druhForm": "Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka"
+      },
+      {
+        "id": 4530620753,
+        "datumPotvrzeni": "2026-06-25T13:05:00",
+        "datumUverejneni": "2026-06-26T08:02:00",
+        "evidCisloForm": "F2026-033864",
+        "druhForm": "Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka"
+      },
+      {
+        "id": 4313953565,
+        "datumPotvrzeni": "2026-04-13T08:05:00",
+        "datumUverejneni": "2026-04-14T08:04:00",
+        "evidCisloForm": "F2026-018644",
+        "druhForm": "Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka"
+      },
+      {
+        "id": 3790963480,
+        "datumPotvrzeni": "2025-09-18T14:06:00",
+        "datumUverejneni": "2025-09-19T14:03:00",
+        "evidCisloForm": "F2025-051795",
+        "druhForm": "Oznámení o výsledku zadávacího řízení – sektorová veřejná zakázka"
+      },
+      {
+        "id": 2376821558,
+        "datumPotvrzeni": "2024-08-30T12:34:00",
+        "datumUverejneni": "2024-09-02T02:11:00",
+        "evidCisloForm": "F2024-042303",
+        "druhForm": "Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka"
+      },
+      {
+        "id": 2373541364,
+        "datumPotvrzeni": "2024-08-23T17:30:00",
+        "datumUverejneni": "2024-08-26T14:01:00",
+        "evidCisloForm": "F2024-041188",
+        "druhForm": "Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka"
+      },
+      {
+        "id": 2350947519,
+        "datumPotvrzeni": "2024-08-14T08:36:00",
+        "datumUverejneni": "2024-08-16T14:00:00",
+        "evidCisloForm": "F2024-039387",
+        "druhForm": "Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka"
+      },
+      {
+        "id": 2350946170,
+        "datumPotvrzeni": "2024-07-17T19:48:00",
+        "datumUverejneni": "2024-07-19T14:02:00",
+        "evidCisloForm": "F2024-033816",
+        "druhForm": "Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka"
+      },
+      {
+        "id": 2257855296,
+        "datumPotvrzeni": "2024-06-26T20:43:00",
+        "datumUverejneni": "2024-06-28T14:03:00",
+        "evidCisloForm": "F2024-029445",
+        "druhForm": "Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka"
+      }
+    ]
+  },
+  {
+    "page": "documents",
+    "key": "detail-verejne-zakazky-zadavaci-dokum",
+    "count": 28,
+    "onPage": 10,
+    "filterParamName": "pzd",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 2257855375,
+        "soubor": "{84F1ACCD-4A3A-409B-AC99-B6852E735384}::NEN_2024_veřejný klíč.cer",
+        "nazev": "NEN_2024_veřejný klíč.cer",
+        "podepsan": false,
+        "typDokument": "Certifikát",
+        "datumUver": "2024-06-28T14:25:03",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2273650417,
+        "soubor": "{83892E64-29B0-4C40-A792-CAA338A67C91}::Vysvětlení č. 1.pdf",
+        "nazev": "Vysvětlení č. 1.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-07-08T12:22:49",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2358567857,
+        "soubor": "{BC120FA3-29B6-4FC5-BEB5-88DCD1A768BC}::Vysvětlení č. 10.pdf",
+        "nazev": "Vysvětlení č. 10.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-08-21T17:41:28",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2373517354,
+        "soubor": "{E178A75F-9BE1-4484-B972-67150F9589A8}::Vysvětlení č. 11.pdf",
+        "nazev": "Vysvětlení č. 11.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-08-30T12:25:03",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2373519675,
+        "soubor": "{2AA6F897-7220-4823-8510-6E08AA3A8D23}::Vysvětlení č. 12.pdf",
+        "nazev": "Vysvětlení č. 12.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-08-30T12:26:56",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2420344006,
+        "soubor": "{8221BBD2-6F7A-4B54-BCC2-B961C89AAD57}::Vysvětlení č. 13.pdf",
+        "nazev": "Vysvětlení č. 13.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-09-26T10:52:30",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2557477618,
+        "soubor": "{6FA54968-54BE-4517-8476-14E661E41EFB}::Vysvětlení č. 14.pdf",
+        "nazev": "Vysvětlení č. 14.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-12-12T13:20:57",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2570191697,
+        "soubor": "{03D410DE-C8DE-4C3F-8749-29393C5966EB}::Vysvětlení č. 15.pdf",
+        "nazev": "Vysvětlení č. 15.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-12-20T11:38:07",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2581846942,
+        "soubor": "{8CB987AC-B9AF-4E12-A4ED-FF5DF4228B53}::Vysvětlení č. 16.pdf",
+        "nazev": "Vysvětlení č. 16.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2024-12-30T12:46:28",
+        "antivir": "Dokument není zavirovaný"
+      },
+      {
+        "id": 2596879838,
+        "soubor": "{041613DD-0E10-4910-A5EC-70C634EDE710}::Vysvětlení č. 17.pdf",
+        "nazev": "Vysvětlení č. 17.pdf",
+        "podepsan": false,
+        "typDokument": "Vysvětlení zadávací dokumentace",
+        "datumUver": "2025-01-09T14:42:29",
+        "antivir": "Dokument není zavirovaný"
+      }
+    ]
+  },
+  {
+    "page": "documents",
+    "key": "detail-verejne-zakazky-ostatni-dokum",
+    "count": 1,
+    "onPage": 10,
+    "filterParamName": "ost",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 3287469562,
+        "soubor": "{6577869B-F87B-4272-8684-A613A118EE3C}::Písemná zpráva_CV_HV propoj.pdf",
+        "nazev": "Písemná zpráva_CV_HV propoj.pdf",
+        "podepsan": false,
+        "typDokument": "Písemná zpráva zadavatele",
+        "datumUver": "2025-09-18T13:48:06",
+        "antivir": "Dokument není zavirovaný"
+      }
+    ]
+  },
+  {
+    "page": "result",
+    "key": "detail-verejne-zakazky-vysledek",
+    "count": 1,
+    "onPage": 10,
+    "filterParamName": "vys",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 3287463593,
+        "cisloSmlouva": "4570081576",
+        "datumUzavreni": "2025-09-03T00:00:00",
+        "uredniNazev": "HOMOLA a.s.",
+        "smluvniCenaS": 517546720.84,
+        "smluvniCenaBez": 427724562.68,
+        "smluvniCenaSAkt": 517546720.84,
+        "smluvniCenaBezAkt": 427724562.68,
+        "menaUverKod": "CZK"
+      }
+    ]
+  },
+  {
+    "page": "result",
+    "key": "detail-verejne-zakazky-vysledek-dokum",
+    "count": 1,
+    "onPage": 10,
+    "filterParamName": "vysdok",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 3287469562,
+        "cisloSmlouva": null,
+        "soubor": "{6577869B-F87B-4272-8684-A613A118EE3C}::Písemná zpráva_CV_HV propoj.pdf",
+        "nazev": "Písemná zpráva_CV_HV propoj.pdf",
+        "podepsan": false,
+        "typDokument": "Písemná zpráva zadavatele",
+        "datumUver": "2025-09-18T13:48:06",
+        "antivir": "Dokument není zavirovaný"
+      }
+    ]
+  },
+  {
+    "page": "result",
+    "key": "detail-verejne-zakazky-ucast",
+    "count": 3,
+    "onPage": 10,
+    "filterParamName": "uca",
+    "routeParamName": "vzFilter",
+    "items": [
+      {
+        "id": 3287463567,
+        "uredniNazev": "ENESA a.s.",
+        "obec": "Praha",
+        "nabCenaS": null,
+        "nabCenaBez": null,
+        "menaUverKod": null,
+        "vybrany": false,
+        "uzavrenaSmlouva": false
+      },
+      {
+        "id": 3287463559,
+        "uredniNazev": "Odštěpný závod GreMi KLIMA, s.r.o.",
+        "obec": "Milevsko",
+        "nabCenaS": null,
+        "nabCenaBez": null,
+        "menaUverKod": null,
+        "vybrany": false,
+        "uzavrenaSmlouva": false
+      },
+      {
+        "id": 3287463545,
+        "uredniNazev": "HOMOLA a.s.",
+        "obec": "Ostrava",
+        "nabCenaS": null,
+        "nabCenaBez": null,
+        "menaUverKod": null,
+        "vybrany": true,
+        "uzavrenaSmlouva": true
+      }
+    ]
+  }
+]

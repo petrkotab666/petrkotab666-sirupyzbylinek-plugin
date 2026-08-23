@@ -1,0 +1,203 @@
+{
+  "3287467525": [
+    "known",
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[0]:id"
+  ],
+  "3287462484": [
+    "known",
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[1]:id"
+  ],
+  "3287462405": [
+    "known",
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[2]:id"
+  ],
+  "2636529869": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[3]:id"
+  ],
+  "2628810126": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[4]:id"
+  ],
+  "2628806598": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[5]:id"
+  ],
+  "2610034812": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[6]:id"
+  ],
+  "2609109522": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[7]:id"
+  ],
+  "2604062754": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[8]:id"
+  ],
+  "2596879809": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[9]:id"
+  ],
+  "4566297342": [
+    "known",
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[0]:id"
+  ],
+  "4530620753": [
+    "known",
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[1]:id"
+  ],
+  "4313953565": [
+    "known",
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[2]:id"
+  ],
+  "3790963480": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[3]:id"
+  ],
+  "2376821558": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[4]:id"
+  ],
+  "2373541364": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[5]:id"
+  ],
+  "2350947519": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[6]:id"
+  ],
+  "2350946170": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[7]:id"
+  ],
+  "2257855296": [
+    "main:$.collectionStore.collections.detail-verejne-zakazky-evidence-vvz.collection[8]:id"
+  ],
+  "3287469539": [
+    "documents:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426.object:id",
+    "documents:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426:id",
+    "main:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426.object:id",
+    "main:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426:id",
+    "result:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426:id"
+  ],
+  "19663574": [
+    "main:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426.object:zadavatelID"
+  ],
+  "2254906389": [
+    "documents:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426.object:histId",
+    "main:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426.object:histId"
+  ],
+  "19659214": [
+    "main:$.detailObjectStore.objects.detail-verejne-zakazky-N006/24/V00019426.object:profId"
+  ],
+  "2257855375": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[0]:id"
+  ],
+  "2273650417": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[1]:id"
+  ],
+  "2358567857": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[2]:id"
+  ],
+  "2373517354": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[3]:id"
+  ],
+  "2373519675": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[4]:id"
+  ],
+  "2420344006": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[5]:id"
+  ],
+  "2557477618": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[6]:id"
+  ],
+  "2570191697": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[7]:id"
+  ],
+  "2581846942": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[8]:id"
+  ],
+  "2596879838": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-zadavaci-dokum.collection[9]:id"
+  ],
+  "3287469562": [
+    "documents:$.collectionStore.collections.detail-verejne-zakazky-ostatni-dokum.collection[0]:id",
+    "result:$.collectionStore.collections.detail-verejne-zakazky-vysledek-dokum.collection[0]:id"
+  ],
+  "3287463593": [
+    "result:$.collectionStore.collections.detail-verejne-zakazky-vysledek.collection[0]:id"
+  ],
+  "3287463567": [
+    "result:$.collectionStore.collections.detail-verejne-zakazky-ucast.collection[0]:id"
+  ],
+  "3287463559": [
+    "result:$.collectionStore.collections.detail-verejne-zakazky-ucast.collection[1]:id"
+  ],
+  "3287463545": [
+    "result:$.collectionStore.collections.detail-verejne-zakazky-ucast.collection[2]:id"
+  ],
+  "2581846923": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[0]:id"
+  ],
+  "2570191672": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[1]:id"
+  ],
+  "2557480120": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[2]:id"
+  ],
+  "2557477593": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[3]:id"
+  ],
+  "2545303318": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[4]:id"
+  ],
+  "2420342876": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[5]:id"
+  ],
+  "2373525310": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[6]:id"
+  ],
+  "2373519661": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[7]:id"
+  ],
+  "2373517274": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[8]:id"
+  ],
+  "2368000404": [
+    "detail-verejne-zakazky-evidence-uver_page_2:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[9]:id"
+  ],
+  "2362223518": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[0]:id"
+  ],
+  "2358567839": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[1]:id"
+  ],
+  "2358567978": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[2]:id"
+  ],
+  "2350992622": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[3]:id"
+  ],
+  "2350938081": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[4]:id"
+  ],
+  "2345735352": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[5]:id"
+  ],
+  "2342030428": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[6]:id"
+  ],
+  "2331760006": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[7]:id"
+  ],
+  "2331757463": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[8]:id"
+  ],
+  "2326668052": [
+    "detail-verejne-zakazky-evidence-uver_page_3:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[9]:id"
+  ],
+  "2317494644": [
+    "detail-verejne-zakazky-evidence-uver_page_4:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[0]:id"
+  ],
+  "2291717164": [
+    "detail-verejne-zakazky-evidence-uver_page_4:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[1]:id"
+  ],
+  "2291715798": [
+    "detail-verejne-zakazky-evidence-uver_page_4:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[2]:id"
+  ],
+  "2273650381": [
+    "detail-verejne-zakazky-evidence-uver_page_4:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[3]:id"
+  ],
+  "2257855307": [
+    "detail-verejne-zakazky-evidence-uver_page_4:$.collectionStore.collections.detail-verejne-zakazky-evidence-uver.collection[4]:id"
+  ]
+}
