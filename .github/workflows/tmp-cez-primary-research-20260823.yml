@@ -1,0 +1,195 @@
+name: Temporary CEZ primary-data retrieval
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  retrieve:
+    if: startsWith(github.event.issue.title, '[CEZ-RESEARCH]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install parsers
+        run: python3 -m pip install --quiet requests pypdf
+
+      - name: Retrieve and parse primary records
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf tmp_cez_primary_research_20260823
+          mkdir -p tmp_cez_primary_research_20260823/raw tmp_cez_primary_research_20260823/extracted
+          python3 - <<'PY'
+          from __future__ import annotations
+          import io, json, re, traceback, zipfile
+          from pathlib import Path
+          import requests
+          from pypdf import PdfReader
+
+          OUT=Path('tmp_cez_primary_research_20260823')
+          RAW=OUT/'raw'; EXT=OUT/'extracted'
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 CEZ-primary-research','Accept':'*/*','Accept-Language':'cs-CZ,cs;q=0.9,en;q=0.8'})
+          log=[]; objects=[]
+          def fn(x): return re.sub(r'[^A-Za-z0-9._-]+','_',x).strip('_')
+          def save(name,data,folder=RAW):
+              p=folder/fn(name); p.write_bytes(data) if isinstance(data,bytes) else p.write_text(data,encoding='utf-8',errors='replace'); return p
+          def get(name,url,headers=None,timeout=150):
+              try:
+                  r=s.get(url,headers=headers,timeout=timeout,allow_redirects=True)
+                  ct=(r.headers.get('content-type') or '').lower(); ext='bin'
+                  if 'json' in ct: ext='json'
+                  elif 'xml' in ct: ext='xml'
+                  elif 'pdf' in ct or r.content.startswith(b'%PDF'): ext='pdf'
+                  elif 'html' in ct: ext='html'
+                  elif r.content.startswith(b'PK'): ext='zip'
+                  p=save(f'{name}.{ext}',r.content)
+                  log.append({'name':name,'method':'GET','url':url,'final':r.url,'status':r.status_code,'type':ct,'bytes':len(r.content),'path':str(p)})
+                  try:
+                      o=r.json(); objects.append((name,o)); save(f'{name}.pretty.json',json.dumps(o,ensure_ascii=False,indent=2),EXT)
+                  except Exception: pass
+                  return r
+              except Exception as e:
+                  log.append({'name':name,'method':'GET','url':url,'error':repr(e)}); return None
+          def post(name,url,payload):
+              try:
+                  r=s.post(url,json=payload,timeout=150,allow_redirects=True); p=save(f'{name}.json',r.content)
+                  log.append({'name':name,'method':'POST','url':url,'final':r.url,'status':r.status_code,'type':r.headers.get('content-type'),'bytes':len(r.content),'path':str(p),'payload':payload})
+                  try:
+                      o=r.json(); objects.append((name,o)); save(f'{name}.pretty.json',json.dumps(o,ensure_ascii=False,indent=2),EXT)
+                  except Exception: pass
+                  return r
+              except Exception as e:
+                  log.append({'name':name,'method':'POST','url':url,'error':repr(e),'payload':payload}); return None
+
+          vvzh={'Origin':'https://vvz.nipez.cz','Referer':'https://vvz.nipez.cz/','Accept':'application/json, text/plain, */*'}
+          base='https://api.vvz.nipez.cz/api/submissions/search'
+          params={'page':'1','limit':'200','form':'vz','data.evCisloZakazkyVvz':'Z2024-029445','order[data.datumUverejneniVvz]':'DESC','order[createdAt]':'DESC'}
+          r=s.get(base,params=params,headers=vvzh,timeout=150); save('vvz_contract_Z2024-029445.json',r.content); log.append({'name':'vvz_contract','method':'GET','url':r.request.url,'final':r.url,'status':r.status_code,'type':r.headers.get('content-type'),'bytes':len(r.content)})
+          try: co=r.json(); objects.append(('vvz_contract',co)); save('vvz_contract.pretty.json',json.dumps(co,ensure_ascii=False,indent=2),EXT)
+          except Exception: co=None
+
+          forms=['F2026-018644','F2026-033864','F2026-040224']; matches={f:[] for f in forms}
+          for form in forms:
+              for i,field in enumerate(['data.evCisloFormulareVvz','data.evCisloFormulareVvz[eq]','data.evCisloFormulareVvz[like]']):
+                  rr=s.get(base,params={'page':'1','limit':'100','form':'vz',field:form},headers=vvzh,timeout=150)
+                  save(f'vvz_{form}_{i}.json',rr.content); log.append({'name':f'vvz_{form}_{i}','method':'GET','url':rr.request.url,'final':rr.url,'status':rr.status_code,'type':rr.headers.get('content-type'),'bytes':len(rr.content)})
+                  try:
+                      oo=rr.json(); objects.append((f'vvz_{form}_{i}',oo)); save(f'vvz_{form}_{i}.pretty.json',json.dumps(oo,ensure_ascii=False,indent=2),EXT)
+                  except Exception: continue
+                  stack=[oo]
+                  while stack:
+                      x=stack.pop()
+                      if isinstance(x,dict):
+                          if form in json.dumps(x,ensure_ascii=False): matches[form].append(x)
+                          stack.extend(x.values())
+                      elif isinstance(x,list): stack.extend(x)
+          if co is not None:
+              stack=[co]
+              while stack:
+                  x=stack.pop()
+                  if isinstance(x,dict):
+                      blob=json.dumps(x,ensure_ascii=False)
+                      for f in forms:
+                          if f in blob: matches[f].append(x)
+                      stack.extend(x.values())
+                  elif isinstance(x,list): stack.extend(x)
+
+          for form in forms:
+              uniq=[]; seen=set()
+              for x in matches[form]:
+                  k=str(x.get('id') or x.get('uuid') or x.get('submission') or json.dumps(x,sort_keys=True,ensure_ascii=False))
+                  if k not in seen: seen.add(k); uniq.append(x)
+              matches[form]=uniq; save(f'matched_{form}.json',json.dumps(uniq,ensure_ascii=False,indent=2),EXT)
+              for j,x in enumerate(uniq[:20]):
+                  for key in ['id','uuid','submission','submissionId']:
+                      cid=x.get(key)
+                      if not isinstance(cid,str) or not cid: continue
+                      get(f'vvz_{form}_{j}_{cid}_children','https://api.vvz.nipez.cz/api/submissions/children/search?submission='+cid,vvzh)
+                      get(f'vvz_{form}_{j}_{cid}_detail','https://api.vvz.nipez.cz/api/submissions/'+cid,vvzh)
+
+          for name,url in {
+              'ted_439224_detail':'https://ted.europa.eu/en/notice/-/detail/439224-2026',
+              'ted_439224_xml':'https://ted.europa.eu/en/notice/439224-2026/xml',
+              'ted_439224_html':'https://ted.europa.eu/en/notice/439224-2026/html',
+              'ted_439224_pdf':'https://ted.europa.eu/en/notice/439224-2026/pdf',
+              'nen_vysvetleni_16':'https://nen.nipez.cz/file?id=2581846942',
+              'nen_vysvetleni_20':'https://nen.nipez.cz/file?id=2628806615',
+              'datlab_vysvetleni_20':'https://bpapi.datlab.eu/document/afc0bd6d74b27651811131edef827b0f392dcf82b7b12daaf0bd6e13ce3df4fb',
+              'nen_main':'https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426',
+              'nen_documents':'https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/zadavaci-dokumentace',
+              'nen_tds':'https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-25-V00041260',
+              'nen_tds_result':'https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-25-V00041260/vysledek',
+          }.items(): get(name,url)
+
+          api='https://api.ted.europa.eu/v3/notices/search'
+          for i,payload in enumerate([
+              {'query':'publication-number = 439224-2026','fields':['publication-number'],'page':1,'limit':10,'scope':'ALL','checkQuerySyntax':False},
+              {'query':'publication-number = 439224-2026','fields':['publication-number','notice-title','procedure-identifier','publication-date'],'page':1,'limit':10},
+              {'query':'FT = "Z2024-029445"','fields':['publication-number'],'page':1,'limit':50,'scope':'ALL'},
+          ]): post(f'ted_search_{i}',api,payload)
+
+          for i,u in enumerate(['https://ted.europa.eu/packages/daily/202600121','https://ted.europa.eu/packages/notice/daily/202600121']):
+              try:
+                  rr=s.get(u,timeout=240,allow_redirects=True); log.append({'name':f'ted_package_{i}','method':'GET','url':u,'final':rr.url,'status':rr.status_code,'type':rr.headers.get('content-type'),'bytes':len(rr.content)})
+                  if zipfile.is_zipfile(io.BytesIO(rr.content)):
+                      z=zipfile.ZipFile(io.BytesIO(rr.content)); save(f'ted_package_{i}_listing.txt','\n'.join(z.namelist()),EXT)
+                      for m in z.namelist():
+                          if '439224' in m.lower(): save('package_'+Path(m).name,z.read(m))
+                          elif m.lower().endswith(('.xml','.txt','.json')):
+                              b=z.read(m)
+                              if b'439224-2026' in b or b'F2026-033864' in b or b'Z2024-029445' in b: save('package_'+Path(m).name,b)
+              except Exception as e: log.append({'name':f'ted_package_{i}','url':u,'error':repr(e)})
+
+          for p in list(RAW.iterdir()):
+              b=p.read_bytes()
+              if b.startswith(b'%PDF'):
+                  try:
+                      rd=PdfReader(io.BytesIO(b)); text=''.join(f'\n\n===== PAGE {i+1} =====\n'+(pg.extract_text() or '') for i,pg in enumerate(rd.pages)); save(p.name+'.txt',text,EXT)
+                  except Exception: save(p.name+'.pdf_error.txt',traceback.format_exc(),EXT)
+              elif b.lstrip().startswith(b'<'):
+                  t=b.decode('utf-8','replace'); save(p.name+'.text.txt',re.sub(r'\n{3,}','\n\n',re.sub(r'<[^>]+>','\n',t)),EXT)
+
+          terms=['F2026-018644','F2026-033864','F2026-040224','439224-2026','voda','water','geolog','hydrogeolog','podzem','groundwater','čerp','pumping','nepředvíd','unforeseen','circumstances','modification','změn','Article 23','článku 23','§ 222','additional works','price','value','duration','deadline','BT-201','BT-202','BT-203','BT-204','BT-1501']
+          pat=re.compile('|'.join(re.escape(x) for x in terms),re.I); hits=[]
+          for p in sorted(EXT.iterdir()):
+              try: lines=p.read_text('utf-8','replace').splitlines()
+              except Exception: continue
+              for n,line in enumerate(lines):
+                  if pat.search(line): hits.append(f'\n### {p.name} line {n+1}\n'+'\n'.join(f'{q+1}: {lines[q]}' for q in range(max(0,n-2),min(len(lines),n+3))))
+          save('keyword_hits.txt','\n'.join(hits[:6000]),EXT)
+
+          ipat=re.compile(r'(F2026-|439224|change|modif|reason|justif|description|value|price|amount|duration|deadline|date|BT-20|BT-15|water|voda|geolog|hydro|circumstance|additional)',re.I); paths=[]
+          def flat(x,p='$'):
+              if isinstance(x,dict):
+                  for k,v in x.items(): flat(v,p+'.'+k)
+              elif isinstance(x,list):
+                  for i,v in enumerate(x): flat(v,f'{p}[{i}]')
+              elif ipat.search(p) or ipat.search(str(x)): paths.append(p+' = '+str(x))
+          for name,o in objects: paths.append('\n===== '+name+' ====='); flat(o)
+          save('interesting_json_paths.txt','\n'.join(paths),EXT)
+
+          lines=['# CEZ primary-data retrieval','','|Name|Method|Status|Type|Bytes|Final URL|','|---|---|---:|---|---:|---|']
+          for x in log:
+              lines.append(f"|{x.get('name')}|{x.get('method','')}|{x.get('status','ERROR')}|{x.get('type','')}|{x.get('bytes','')}|{x.get('final',x.get('url',''))} {x.get('error','')}|")
+          lines+=['','## Exact-form matches']+[f'- **{f}:** {len(matches[f])}' for f in forms]
+          (OUT/'SUMMARY.md').write_text('\n'.join(lines),encoding='utf-8')
+          (OUT/'request_log.json').write_text(json.dumps(log,ensure_ascii=False,indent=2),encoding='utf-8')
+          PY
+
+      - name: Commit output
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp_cez_primary_research_20260823
+          git commit -m "Store temporary CEZ primary-source retrieval output" || exit 0
+          git push origin HEAD:main
