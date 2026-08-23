@@ -1,0 +1,313 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+
+ČÁST 5
+
+
+
+Neveřejná část Zadávací dokumentace
+
+
+
+
+
+
+
+
+
+
+
+
+Seznam příloh 
+Neveřejné části Zadávací dokumentace
+1. Přílohy k příloze 1 Smlouvy – Technická specifikace Díla
+
+ P1_9.0_PŘÍLOHY ELEKTRO:
+9.01
+Ideové schéma vyvedení výkonu a napájení vlastní spotřeby 
+9.02
+Přehled hlavních vývodů z el. stanice TAS
+
+ P1_10.0_PŘÍLOHY ASŘTP:
+10.01
+Příloha_10.1_Ideové schéma konfigurace ŘS
+10.02
+Síťová architektura KyBe.docx
+
+ P1_11.0_PŘÍLOHY STROJE A POTRUBÍ:
+11.01
+TEP0314_PID_D2-5-DPS-P&ID_02_R00
+
+
+
+ P1_50.0_PŘÍLOHY ŘÍDÍCÍ DOKUMENTACE OBJEDNATELE:
+50.01
+TAS_ME_0009
+Bezpečnost při práci na elektrických a strojně technologických zařízeních a při provádění požárně nebezpečných činností
+
+50.02
+SKC_TST_ 0033
+Základní požadavky kladené na provedení kabeláže v KE
+
+50.03
+SKC_ME_0239
+Metrologický řád KE
+včetně příloh
+50.04
+SKC_ME_0245
+Vibrační diagnostika rotačních zařízení
+
+50.05
+CEZ_SD_0049
+Svařování – Požadavky na dodavatele svářečských prací v klasických elektrárnách
+včetně příloh
+
+50.06
+SKČ_ME_0231
+Síťová bezpečnost
+
+50.07
+ČEZ_TST_0030
+Systém jednotného značení elektráren ČEZ, a. s., kódem KKS pro uhelné, plynové a vodní zdroje
+včetně příloh
+
+
+50.08
+SKČ_ME_0116
+Plán kvality a plán kontrol a zkoušek dodávek technických zařízení DOKE
+včetně příloh
+50.09
+SKČ_TST_0004
+Monitoring technického stavu ocelových konstrukcí
+
+50.10
+ČEZ_TST_0029
+Základní mapa závodu
+včetně příloh
+50.11
+ČEZ_FO_0970
+Formulář pro evidenci měřidel v LTO Suite
+
+50.12
+ČEZ_FO_0578
+Dodavatelský předpis údržby
+
+50.13
+ČEZ_FO_0577
+Dodavatelský provozní předpis
+
+50.14
+SKČ_TST_0025
+Práce ve výškách v KE
+včetně příloh
+50.15
+SKČ_ST_0027
+Standard informační a kybernetické bezpečnosti
+včetně příloh
+50.16
+SKČ_ME_0302
+Revizní řád vyhrazených elektrických zařízení a hromosvodů DOKE
+
+50.17
+TAS_ME_0056
+Požární ochrana v TAS
+
+50.18
+SKČ_ME_0306
+Nakládání s odpady
+včetně příloh
+
+50.19
+ČEZ_FO_0648
+Dotazník BOZP k zákonu č.309/2006 Sb.
+
+50.20
+SKČ_ME_0209
+Bezpečnost při práci na elektrických a strojně technologických zařízení a při provádění požárně nebezpečných činností v KE
+
+50.21
+SKČ_TST_0008
+Bezpečnostní značení v KE
+
+50.22
+SKČ_TST_0015
+Monitoring technického stavu tlakových potrubí
+
+50.23
+Pomůcka k aplikaci ustanovení katastrální vyhlášky vztahujících se k souřadnicím podrobných bodů
+
+50.24
+SKČ_TST_0041
+Řešení zařízení vyvedení výkonu a vlastní spotřeby elektrotechnické části OZE a KE
+
+50.25
+ČEZ_ME_0907
+Zásady realizačních činností v KE
+
+
+ P1_51.0_OSTATNÍ DOKUMENTACE:
+51.01
+DUR HV Propoj
+
+51.02
+PDPS SITEZ
+
+51.03
+Územní rozhodnutí
+
+51.04
+Dokladová část  - podklad k územnímu rozhodnutí
+
+51.05
+Záborový elaborát
+
+51.06
+Most přes železniční trať
+
+51.07
+Vnější vlivy SO 550
+
+51.08
+PD pro územní souhlas (pro trafostanici)
+
+51.09
+Plán BOZP
+
+51.10
+Koordinační situace – Nový zdroj TAS
+
+51.11
+Koordinační situace – Přípojka ZP
+
+51.12
+Napojovací body
+
+
+
+2. Přílohy k příloze 4 Smlouvy – Požadavky na dokumentaci
+
+ P4_52.0_PŘÍLOHY ŘÍDÍCÍ DOKUMENTACE OBJEDNATELE:
+52.01
+ČEZ_TST_0049
+Požadavky na dokumentaci a data o zařízení stávajících zdrojů KE a VE
+
+52.02
+ČEZ_FO_0971
+Formulář pro evidenci namontovaných stanovených měřidel
+
+52.03
+SKČ_TST_0032
+Požadavky na výrobu a montáž kotlů a parovodů a metodikou
+
+
+ P4_53.0
+53.01
+Šablona seznamu dokumentace.xls
+
+53.02
+Základní adresářová struktura DOKUMENTACE.txt
+
+53.03
+Návod na evidenci dokumentace na KE
+
+53.04
+Předpis pro tvorbu čísla dokumentu a názvu souboru
+
+ P4_54.0
+54.01
+SKČ_ME_0116 - volná příloha D – Seznamy VZT
+
+54.02
+Podklady pro profesi ASŘTP info.xls
+
+54.03
+Seznam armatur.xls
+
+54.04
+Seznam elektrospotřebičů.xls
+
+54.05
+Seznam kabelů.xls
+
+54.06
+Seznam měření.xls
+
+54.07
+Seznam potrubních tras.xls
+
+54.08
+Seznam připojovacích míst.xls
+
+54.09
+Seznam regulačních okruhů.xls
+
+54.10
+Seznam strojů a zařizeni.xls
+
+54.11
+Seznam rozvaděčů.xlsx
+
+54.12
+Seznam místností.xlsx
+
+54.13
+Seznam_protipozarnich_prepazek.xlsx
+
+54.14
+Seznam_protipozarnich_dveri.xlsx
+
+ P4_55.0
+55.01
+KV_šablona.doc
+
+55.02
+KZ_šablona.doc
+
+55.03
+PKV_šablona.doc
+
+55.04
+POV_šablona.doc
+
+55.05
+Pravidla_texty.doc
+
+P4_56.0
+56.01
+Bloky_do_vykresu.zip
+
+56.02
+Menu, typy car pro Acad.zip
+
+56.03
+Prototypove_vykresy.zip
+
+56.04
+Ramecky_pro_výkresy.zip
+
+56.05
+Tabulky pro importy.zip
+
+
+

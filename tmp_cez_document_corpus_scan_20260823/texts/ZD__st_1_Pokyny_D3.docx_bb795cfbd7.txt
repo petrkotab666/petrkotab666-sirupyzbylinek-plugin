@@ -1,0 +1,516 @@
+
+
+2605345381000
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+ 
+„CV_HV propoj EPR-Kadaň“ 
+
+
+
+
+
+ČÁST 1
+
+
+Pokyny pro DODAVATELE,
+průběh zadávacího řízení
+
+
+
+
+
+
+
+
+
+
+OBSAH
+ TOC \o "1-1" \u 1.definice A výklad pojmů PAGEREF _Toc170282056 \h 4
+2.Zásady etického jednání v jednacím řízení s uveřejněním PAGEREF _Toc170282057 \h 8
+3.Zadavatel Veřejné zakázky PAGEREF _Toc170282058 \h 9
+4.Předmět Veřejné zakázky PAGEREF _Toc170282059 \h 9
+5.termín a místo plnění předmětu veřejné zakázky PAGEREF _Toc170282060 \h 10
+6.NÁKLADY na ÚČAST V jednacím řízení s uveřejněním PAGEREF _Toc170282061 \h 11
+7.Pouze jedna ŽÁDOST O ÚčaST/předběžná Nabídka/upravená PŘEDBĚŽNÁ NABÍDKA/Nabídka PAGEREF _Toc170282062 \h 11
+8.komunikace v zadávacím řízení, jednací JAZYK a doklady dle jiného právního řádu PAGEREF _Toc170282063 \h 11
+9.vyhrazená práva Zadavatele PAGEREF _Toc170282064 \h 13
+10.ZADÁVACÍ DOKUMENTACE PAGEREF _Toc170282065 \h 15
+11.Vysvětlení zadávací dokumentace PAGEREF _Toc170282066 \h 18
+12.Změny zadávací dokumentace PAGEREF _Toc170282067 \h 19
+13.PODÁNÍ ŽÁDOSTÍ O ÚČAST A PROKÁZÁNÍ KVALIFIKACE PAGEREF _Toc170282068 \h 19
+14.Prohlídka místa plnění PAGEREF _Toc170282069 \h 20
+15.dokumenty tvořící pŘEDBĚŽNOU NABÍDKU/Nabídku PAGEREF _Toc170282070 \h 21
+16.Nabídková cena PAGEREF _Toc170282071 \h 30
+17.Zadávací lhůta PAGEREF _Toc170282072 \h 31
+18.forma a náležitosti Předběžné nabídky/Upravené předběžné nabídky/Nabídky PAGEREF _Toc170282073 \h 31
+19.Podpis Předběžné nabídky/UPravené předběžné nabídky/Nabídky PAGEREF _Toc170282074 \h 31
+20.Způsob a lhůta pro podání Předběžných nabídek/upravených předběžných nabídek/Nabídek PAGEREF _Toc170282075 \h 32
+21.Otevírání Předběžných nabídek/Nabídek PAGEREF _Toc170282076 \h 32
+22.Jednání o Předběžných Nabídkách PAGEREF _Toc170282077 \h 33
+23.posouzení PŘEDBĚŽNÝCH NABÍDek/UPRAVENÝCH PŘEDBĚŽNÝCH NABÍDek/NABÍDek PAGEREF _Toc170282078 \h 34
+24.Objasnění/doplnění předběžných NABÍDEK/UPravených předběžných nabídek/nabídek PAGEREF _Toc170282079 \h 35
+25.způsob hodnocení PŘEDBĚŽNÝCH NABÍDEK/upravených předběžných nabídek/Nabídek PAGEREF _Toc170282080 \h 36
+26.výběr dodavatele, posouzení mimořádně nízké nabídkové ceny, uzavření Smlouvy PAGEREF _Toc170282081 \h 36
+27.NAHRAZENÍ DODAVATELE v PRŮBĚHU TRVÁNÍ SMLOUVY JINÝM DODAVATELEM PAGEREF _Toc170282082 \h 38
+
+definice A výklad pojmů
+Výrazy, použité v této Zadávací dokumentaci s počátečním velkým písmenem, mají následující význam, nevyplývá-li z jejich kontextu jinak:
+„Dodavatel“ je osoba, která nabízí poskytnutí dodávek, služeb nebo stavebních prací, nebo více těchto osob společně ve smyslu § 5 ZZVZ. Za Dodavatele se považuje i pobočka závodu. Pokud je Dodavatelem více osob společně, stávají se tyto osoby společně i právě jedním Účastníkem ve smyslu této ZD a § 47 odst. 1 ZZVZ. Za Dodavatele se považuje i pobočka závodu. 
+“Dílo” je Předmět veřejné zakázky, který zahrnuje veškeré činnosti, dodávky a služby, které je třeba provést, aby Předmět veřejné zakázky plnil svůj hospodářský účel. 
+„EPR“ je elektrárna Prunéřov 375, 432 01 Kadaň, Česká republika.
+„Interní mailbox NEN“ nebo také jen „Mailbox NEN“ je datový prostor, který umožňuje vytvoření, odeslání, příjem, uložení a zobrazení datových zpráv odesílaných a přijímaných prostřednictvím NEN. Interní mailbox NEN patří k hlavnímu způsobu komunikace, umožňuje kategorizaci zpráv zasílaných v NEN dle předdefinovaných typů zpráv a vazby na veřejnou zakázku, které se týkají. 
+„Jednací řízení s uveřejněním“ je zadávací řízení dle ZZVZ vedoucí k zadání Veřejné zakázky, které bylo zahájeno odesláním Oznámení o zahájení zadávacího řízení k uveřejnění v souladu se ZZVZ. 
+„Komise“ znamená komisi, která dle § 42 odst. 2 ZZVZ, provede hodnocení Předběžných nabídek a Upravených předběžných nabídek a Nabídek podaných do zadávacího řízení Veřejné zakázky.
+„Kvalifikační dokumentace“ (dále také jen „KD“) tvoří část 2 Zadávací dokumentace a obsahuje podrobné požadavky Zadavatele na kvalifikaci Dodavatele, způsob jejího prokázání a podání Žádosti o účast. 
+„Lhůta pro podání Předběžných nabídek“ je lhůta, ve které mohou Účastníci v Jednacím řízení s uveřejněním podávat Předběžné nabídky.
+„Lhůta pro podání Nabídek“ je lhůta, ve které mohou Účastníci v Jednacím řízení s uveřejněním podávat Nabídky.
+„Lhůta pro podání Žádosti o účast“ je lhůta, ve které mohou Dodavatelé v Jednacím řízení s uveřejněním podávat Žádosti o účast. 
+„Nabídka“ jsou údaje nebo doklady předložené Účastníkem na základě výzvy k podání Nabídek v Jednacím řízení s uveřejněním.
+„Nabídková cena“ je cena, za kterou Účastník nabízí Zadavateli provést Předmět veřejné zakázky (viz část 4 ZD).
+„NEN“ je Národní elektronický nástroj sloužící k písemné komunikaci mezi Zadavatelem a Dodavatelem/Účastníkem v rámci Jednacího řízení s uveřejněním. Podrobnější pravidla pro komunikaci jsou uvedena v čl. 8 této části Zadávací dokumentace. 
+„Oznámení o zahájení zadávacího řízení“ je formulář uveřejněný ve Věstníku veřejných zakázek ve smyslu § 212 ZZVZ, který Zadavatel použil pro oznámení Jednacího řízení s uveřejněním. Oznámení o zahájení zadávacího řízení bylo uveřejněno rovněž v Úředním věstníku Evropské unie. 
+„Profil zadavatele“ je elektronický nástroj umožňující neomezený dálkový přístup, na kterém Zadavatel uveřejňuje informace a dokumenty týkající se této Veřejné zakázky v souladu se ZZVZ a jenž je dostupný na webové adrese https://nen.nipez.cz/profil/TAS.
+“Prohlášení o zachování mlčenlivosti” je jednostranný právní úkon, jehož učinění je podmínkou předání Neveřejné části Zadávací dokumentace dle čl. 10 části 1 Zadávací dokumentace. Vzor Prohlášení o zachování mlčenlivosti je uveden v Příloze č. 2 části 3 Zadávací dokumentace.
+„Předběžná nabídka“ jsou doklady nebo údaje předložené Účastníkem na základě výzvy Zadavatele k podání Předběžných nabídek v Jednacím řízení s uveřejněním. V Zadávací dokumentaci je dále uveden pojem Upravená předběžná nabídka, který označuje podání Účastníka učiněné na výzvu Zadavatele po jednání o Předběžné nabídce na základě změny Zadávacích podmínek provedených Zadavatelem v souladu s § 61 odst. 11 ZZVZ. Na podání Upravené předběžné nabídky se neuplatní podmínky stanovené v odst. 8.2 této části Zadávací dokumentace, viz dále definice Upravená předběžná nabídka.
+„Předmět veřejné zakázky“ je předmět plnění, specifikovaný v čl. 4 této části Zadávací dokumentace a v části 4 Zadávací dokumentace.
+“Poddodavatel” je jiná osoba dle § 83 ZZVZ, pomocí které může Dodavatel prokázat splnění kvalifikace pro určitou část Veřejné zakázky nebo která má poskytnout Dodavateli k plnění Veřejné zakázky určité věci či práva.
+“Skupina ČEZ” jsou obchodní společnosti, včetně Zadavatele, podrobené jednotnému řízení obchodní společnosti ČEZ, a. s., IČO: 45274649, spisová značka: B 1581 vedená u Městského soudu v Praze, se sídlem: Praha 4, Duhová 2/1444, PSČ 140 53 ve smyslu § 79 zákona č. 90/2012 Sb. 
+„Smlouva“ je smlouva o dílo, kterou se Vybraný dodavatel zaváže k provedení Předmětu veřejné zakázky a Zadavatel se zaváže k zaplacení odměny za řádné provedení Předmětu veřejné zakázky. Návrh Smlouvy je uveden v části 4 Zadávací dokumentace.
+„Účastník“ je Dodavatel, který podal Žádost o účast v Jednacím řízení s uveřejněním. Účastník, jehož Nabídka bude Zadavatelem, v souladu se ZZVZ a ZD, vyhodnocena jako pro Zadavatele nejvýhodnější, je v ZD označován v souladu se ZZVZ jako „Vybraný dodavatel“. 
+„Upravená předběžná nabídka“ je podání Účastníka učiněné na výzvu Zadavatele po jednání o Předběžné nabídce v důsledku změn Zadávacích podmínek provedených Zadavatelem v souladu s § 61 odst. 11 ZZVZ, které musí v takovém případě Upravená předběžná nabídka zohledňovat. Na podání Upravené předběžné nabídky se neuplatní podmínky stanovené v odst. 8.2 této části Zadávací dokumentace. Upravená předběžná nabídka taktéž nemusí obsahovat veškeré náležitosti, které jsou touto ZD stanovené pro Předběžnou nabídku, uvede-li Zadavatel ve výzvě k podání Upravené předběžné nabídky, že požaduje předložit pouze její část, k níž se na jednání o Předběžných nabídkách změněná část zadávací dokumentace vztahuje. Náležitosti Upravené předběžné nabídky vždy určí Zadavatel ve výzvě k jejímu podání. 
+„Veřejná zakázka “(nebo také sektorová Veřejná zakázka) je zakázka s názvem „CV_HV propoj EPR - Kadaň“, která bude realizovaná na základě Smlouvy uzavřené mezi Zadavatelem a Vybraným dodavatelem (v souladu s § 5 ZZVZ může Vybraného dodavatele tvořit i více osob společně), z níž bude vyplývat povinnost Vybraného dodavatele provést pro Zadavatele na svůj náklad a odpovědnost Předmět veřejné zakázky.  
+„Zadání“ je uzavření Smlouvy s Vybraným Dodavatelem, uskutečněné v Jednacím řízení s uveřejněním.
+„Zadávací dokumentace“ (dále také jen „ZD“) jsou veškeré písemné dokumenty, včetně formulářů dle § 212 ZZVZ a výzev uvedených v příloze č. 6 ZZVZ, obsahující Zadávací podmínky sdělované nebo zpřístupňované Účastníkům zadávacího řízení. Zadávací dokumentace má veřejnou a neveřejnou část. Neveřejná část Zadávací dokumentace je vymezena a podmínky pro její předání jsou uvedeny v čl. 10 této části Zadávací dokumentace. 
+Zadávací dokumentace se skládá z následujících 5 částí: 
+Část 1 - Pokyny pro Dodavatele, průběh zadávacího řízení
+Část 2 - Kvalifikační dokumentace, včetně následujících příloh:
+Příloha č. 1 A - Identifikační list Dodavatele,
+Příloha č. 1 B - Identifikační list Dodavatele - pro více subjektů podávajících společnou Žádost o účast,
+Příloha č. 2 - Vzor čestného prohlášení Dodavatele k prokázání základní kvalifikace,
+ Příloha č. 3 - Dotazník pro hodnocení přístupu Dodavatele k ŽP a BOZP,
+Příloha č. 4 - Vzor formuláře „Seznam stavebních prací, významných dodávek nebo služeb“,
+Příloha č. 5 - Tabulka výkazu obratu Dodavatele, 
+Příloha č. 6 - Vzor čestného prohlášení Dodavatele ohledně skutečnosti nevydávání Zadavatelem požadovaného dokladu týkající se kvalifikace. 
+Část 3 - Formuláře pro zpracování Předběžné nabídky/Upravené předběžné nabídky/Nabídky (dále také jen „Formuláře“), včetně následujících příloh:
+Příloha č. 1 A - Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky,
+Příloha č. 1 B - Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky (Pro společnou Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku společníků),
+Příloha č. 2 - Vzor Prohlášení o zachování mlčenlivosti,
+Příloha č. 3 - Vzor čestného prohlášení Dodavatele se sídlem v zahraničí, 
+Příloha č. 4 - Vzor písemné žádosti o poskytnutí Neveřejné části Zadávací dokumentace,
+Příloha č. 5 - Čestné prohlášení k mezinárodním sankcím vůči Rusku a Bělorusku.
+Část 4 - Návrh Smlouvy, včetně následujících příloh:
+Příloha 1 - Technická specifikace Díla Objednatele,
+část této přílohy 1 Smlouvy tvoří Neveřejnou část Zadávací dokumentace (viz odst. 10.3 a násl. této části Zadávací dokumentace)
+Příloha 2 - Detailní popis Díla Zhotovitele,
+Příloha 3 - Garantované parametry a minimální technické podmínky,
+Příloha 4 - Požadavky na dokumentaci,
+část této přílohy 4 Smlouvy tvoří Neveřejnou část Zadávací dokumentace (viz odst. 10.3 a násl. této části Zadávací dokumentace)
+Příloha 5 - Podrobný časový harmonogram provedení Díla,
+Příloha 6 - Součinnost Objednatele,
+Příloha 7 - Náhradní díly,
+Příloha 8 - Plán kvality a plán kontrol a zkoušek,
+Příloha 9 - Seznam poddodavatelů a výrobců klíčových komponent Díla,
+Příloha 10A - Vzor bankovní záruky za zálohu,
+Příloha 10B – Vzor záruky pojišťovny za zálohu,
+Příloha 11A - Vzor bankovní záruky za provedení Díla, 
+Příloha 11B – Vzor záruky pojišťovny za provedení Díla,
+Příloha 12A - Vzor bankovní záruky za odstranění vad,
+Příloha 12B – Vzor záruky pojišťovny za odstranění vad,
+Příloha 13 - Cenová specifikace Díla,
+Příloha 14 - Platební harmonogram,
+Příloha 15 - Školení,
+Příloha 16 A - Návrh Podnájemní smlouvy pro Zařízení staveniště,
+Příloha 16 B - Návrh smlouvy na dodávku elektřiny,
+Příloha 17 - Administrativní řád, 
+Příloha 18 - Pojištění,
+Příloha 19 - Seznam zkratek,
+Příloha 20 - Seznam Neveřejné části Zadávací dokumentace,
+Příloha 21 - Bezpečnostní požadavky pro dodávky standardních systémů a technologií, 
+Příloha 22 - Dohoda o společné a nerozdílné odpovědnosti za plnění Veřejné zakázky.
+Část 5 - Neveřejná část Zadávací dokumentace 
+„Zadávací lhůta“ je lhůta, po kterou Účastníci zadávacího řízení nesmí ze zadávacího řízení odstoupit. 
+„Zadávací podmínky“ jsou veškeré Zadavatelem stanovené podmínky průběhu zadávacího řízení, podmínky účasti v zadávacím řízení, pravidla pro hodnocení Nabídek a další podmínky pro uzavření Smlouvy. 
+„Zadavatel“ je obchodní společnost ČEZ Teplárenská, a.s., se sídlem Duhová 1444/2, Michle, 140 00 Praha 4, IČO: 27309941, zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl B, vložka 17910.
+„Zástupce“ je obchodní společnost ČEZ, a. s., se sídlem Duhová 2/1444, Praha 4, PSČ 140 53, IČO: 45274649, zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl B, vložka 1581.
+„ZZVZ“ je zákon č. 134/2016 Sb., o zadávání veřejných zakázek, ve znění účinném ke dni zahájení Jednacího řízení s uveřejněním.
+„Žádost o účast" jsou údaje nebo doklady prokazující kvalifikaci Dodavatele, které Dodavatel podal písemně Zadavateli na základě Zadávací dokumentace.
+Pojmy nebo zkratky, které nejsou definovány výše, mají význam, který je jim připisován v dalších částech Zadávací dokumentace, zejména pak v příloze 19 Smlouvy – Seznam zkratek.
+Zásady etického jednání v jednacím řízení s uveřejněním 
+Účastník se podáním Žádosti o účast zavazuje, že bude v průběhu zadávacího řízení dodržovat etické principy, zákony, pravidla a způsoby chování, které plně odpovídají Etickému kodexu Skupiny ČEZ a její politice dodržování právních a etických zásad v podnikání. Účastník podáním Žádosti o účast potvrzuje, že se seznámil se Závazkem etického chování, který je dostupný na internetových stránkách Zadavatele: https://www.cez.cz/cs/pro-dodavatele/zavazek-etickeho-chovani. 
+Zadavatel zároveň upozorňuje Účastníky na příslušná ustanovení v závazném textu Smlouvy, kterými na sebe Vybraný dodavatel převezme závazek dodržování etických principů.
+Zadavatel se rozhodl při pořizování Předmětu veřejné zakázky zohlednit společenské hodnoty v podobě etického nakupování, získávání praxe studentů technických oborů, umožnění zaměstnání osob znevýhodněných na trhu práce a umožnění sociálním podnikům se podílet na realizaci Předmětu veřejné zakázky a do Zadávacích podmínek začlenil podmínky, jejichž dodržením hodlá za Nabídkovou cenu získat maximální hodnotu jak pro sebe, tak pro společnost. 
+Etické nakupování prosazuje Zadavatel prostřednictvím odst. 8.7 části 4 Zadávací dokumentace (Návrh Smlouvy), ve kterém si vyhradil právo za transparentně vymezených podmínek hradit cenu přímo Poddodavatelům Vybraného dodavatele.
+Získávání praxe studentů technických oborů hodlá Zadavatel podpořit stanovením povinnosti Vybranému dodavateli umožnit alespoň tři (3) exkurze středním školám v průběhu realizace Předmětu veřejné zakázky, účastníkům exkurzí poskytnout kvalifikovaný popis Předmětu veřejné zakázky. Zaměstnat při výrobě, či zkouškách Předmětu veřejné zakázky osoby znevýhodněné na trhu práce a umožnit výrobu Předmětu veřejné zakázky nebo její části sociálním podnikům, pokud je to s ohledem na charakter prací možné.
+Zadavatel Veřejné zakázky
+Zadavatelem sektorové Veřejné zakázky je obchodní společnost ČEZ Teplárenská, a.s., se sídlem Duhová 1444/2, Michle, 140 00 Praha 4, IČO: 27309941, zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl B, vložka 17910.
+Zadavatel je ve smyslu § 43 ZZVZ zastoupen Zástupcem, společností ČEZ, a. s., se sídlem Duhová 2/1444, Praha 4, PSČ 140 53, IČO: 45274649, zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl B, vložka 1581.
+Kontaktní adresa a osoby Zástupce ve věci Veřejné zakázky:
+Kontaktní osoba:
+Jméno, příjmení:Anna Husáková DiS., MBA
+E-mail:anna.husakova01@cez.cz
+Telefon: +420 606 632 896
+Kontaktní adresa: ČEZ, a. s., Elektrárna Ledvice, Bílina č.p. 141, 418 48 Bílina.
+Zástupce č. 1 kontaktní osoby:
+Jméno, příjmení: Ing. Romana Vašková
+E-mail:romana.vaskova@cez.cz
+Telefon: +420 724 412 731
+Kontaktní adresa: ČEZ, a. s., prof. Vl. Lista 329, 252 07 Štěchovice.
+Kontaktní osoby Zástupce, uvedené výše, zprostředkovávají pro toto zadávací řízení kontakt mezi Dodavateli/Účastníky a Zadavatelem. Kontakt s jinými osobami Zadavatele ohledně tohoto zadávacího řízení, s výjimkami uvedenými v odst. 8.1 této části Zadávací dokumentace, není v průběhu Jednacího řízení s uveřejněním přípustný. Zadavatel současně upozorňuje na ustanovení čl. 8 této části Zadávací dokumentace o elektronické formě komunikace.
+Předmět Veřejné zakázky
+Předmětem veřejné zakázky je závazek Účastníka/vybraného Dodavatele, svým jménem a na svou odpovědnost pro Zadavatele provést Dílo, a to zejména navrhnout a vypracovat realizační projektovou dokumentaci, v souladu s ní provést stavební práce, a dále dodat, nainstalovat, vyzkoušet a uvést do provozu horkovod mezi lokalitami Prunéřov - Kadaň, včetně prokázání garantovaných parametrů a provést další stavební a jiné související práce.  
+Přesné vymezení Předmětu veřejné zakázky a ostatní požadavky na jeho provedení, včetně informací, podmínek, specifikací a ostatních údajů nezbytně nutných k provedení Předmětu veřejné zakázky, jsou detailně specifikovány v části 4 Zadávací dokumentace (Návrh Smlouvy). 
+Minimální technické podmínky ve smyslu § 61 odst. 4 ZZVZ jsou uvedeny v příloze 3 části 4 Zadávací dokumentace (Návrh Smlouvy).
+termín a místo plnění předmětu veřejné zakázky
+Předpokládaný termín zahájení realizace Předmětu veřejné zakázky v místě plnění je stanoven na období v průběhu II. čtvrtletí roku 2025. Zadavatel si vyhrazuje právo změnit předpokládaný termín zahájení realizace Předmětu Veřejné zakázky s ohledem na případné prodloužení zadávacího řízení, jak je uvedeno níže v čl. 5.2 této části ZD.  
+Zadavatel si v části 4 Zadávací dokumentace (Návrh Smlouvy), v souladu s § 100 odst. 1 ZZVZ, vyhrazuje právo, 
+v případě, že po uzavření Smlouvy nastanou skutečnosti (např. nevhodné klimatické podmínky), které nemohl v okamžiku uzavření Smlouvy s Vybraným dodavatelem, ani přes jednání s náležitou péčí, předvídat, a které budou mít vliv na plnění Předmětu veřejné zakázky, změnit přiměřeně termín plnění Veřejné zakázky, a to na základě dodatku ke Smlouvě na plnění Veřejné zakázky, 
+posunout termíny plnění Předmětu veřejné zakázky právě o shodný počet dnů, který uplyne mezi předpokládaným a skutečným termínem plnění Předmětu veřejné zakázky v souladu s podmínkami uvedenými v části 4 ZD (Návrh Smlouvy).
+Podmínky případných změn Smlouvy a jejich obsah Zadavatel, taktéž ve smyslu § 100 odst. 1 ZZVZ, vymezil právě v části 4 Zadávací dokumentace (Návrh Smlouvy). 
+Místem plnění Předmětu Veřejné zakázky bude trasa nového horkovodu vyvedeného ze stávající stanice teplárenství EPR2 umístěné v areálu elektrárny EPR2, vedená v obrysu území EPR určeného pro soustavu nových teplárenských zdrojů, přes most přes železniční trať Chomutov-Cheb. Dále horkovod bude pokračovat po okraji ochranného pásma v koridoru stávajícího nadzemního VVN 110kV až ke stávající komunikaci Prunéřov – Kadaň, kde bude horkovod veden podél stávající komunikace v ochranném pásmu stávajícího nadzemního vedení VN 35kV. Následně bude horkovod procházet podjezdem pod železnicí ulicí Chomutovská až do křížení s ulicí Prunéřovská. Horkovod bude procházet ulicí Prunéřovská až k zahrádkářské osadě, kde dojde k překopu Kadaňského potoka. Horkovod bude dále veden podél zahrádkářské osady a garáží až ke stávajícímu horkovodu Tušimice – Kadaň. Celková délka potrubní trasy bude přibližně 5,94km.
+NÁKLADY na ÚČAST V jednacím řízení s uveřejněním
+Nestanoví-li ZZVZ výslovně jinak, každý Dodavatel/Účastník ponese veškeré náklady související s jeho účastí v Jednacím řízení s uveřejněním, včetně přípravy a předložení své Žádosti o účast/Předběžné nabídky/Upravené předběžné nabídky/Nabídky, a Zadavatel nebude vázán jakoukoliv odpovědností za tyto náklady, a to bez ohledu na průběh nebo výsledek Jednacího řízení s uveřejněním.
+Pouze jedna ŽÁDOST O ÚčaST/předběžná Nabídka/upravená PŘEDBĚŽNÁ NABÍDKA/Nabídka
+Každý Dodavatel/Účastník může v rámci Jednacího řízení s uveřejněním předložit na výzvu Zadavatele pouze jednu Žádost o účast/Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku. Uvedená podmínka platí i pro Dodavatele/Účastníka, který, ve smyslu § 5 a § 47 ZZVZ, je tvořen více subjekty.
+Zadavatel proto vyloučí z Jednacího řízení s uveřejněním Účastníka:
+který předložil více Žádostí o účast/Předběžných nabídek/Upravených předběžných nabídek na jednu výzvu Zadavatele/Nabídek samostatně nebo společně s dalším Účastníkem,
+který podal Žádost o účast/Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku a současně je osobou, jejímž prostřednictvím jiný Účastník v daném Jednacím řízení s uveřejněním prokazuje splnění kvalifikačních požadavků,
+který podal Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku společně s jiným Účastníkem, který byl samostatně vyzván k podání Předběžné nabídky/Upravené předběžné nabídky/Nabídky.
+Podání variantních Předběžných nabídek/Upravených předběžných nabídek /Nabídek není v Jednacím řízení s uveřejněním přípustné. Zadavatel vyloučí z Jednacího řízení Účastníka, který předložil variantní Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku. 
+komunikace v zadávacím řízení, jednací JAZYK a doklady dle jiného právního řádu 
+Veškerá komunikace mezi Zadavatelem a Dodavatelem nebo Účastníkem bude, s výjimkou: 
+jednání o Předběžných nabídkách dle čl. 22 této části Zadávací dokumentace (pokud se toto ustanovení uplatní), 
+případu, kdy je elektronická komunikace prostřednictvím NEN z podstaty vyloučena, viz dále ustanovení této části Zadávací dokumentace, 
+ústního objasnění Předběžné nabídky dle odst. 24.2 této části Zadávací dokumentace a 
+prohlídky místa plnění 
+probíhat písemně prostřednictvím NEN na webové adrese: https://nen.nipez.cz elektronicky. 
+Žádosti o účast, Předběžné nabídky a Nabídky musí být podány vždy v šifrované podobě veřejným klíčem uveřejněným na Profilu zadavatele společně se Zadávací dokumentací Veřejné zakázky (certifikát pro šifrování, který je platný po celou dobu trvání zadávacího řízení, je volně ke stažení u této Veřejné zakázky na Profilu zadavatele v sekci „Zadávací dokumentace“). 
+Ze zadávací podmínky uvedené v odst. 8.2 výše plyne, že Žádost o účast, Předběžná nabídka ani Nabídka nesmí být Zadavateli podána prostřednictvím Interního mailboxu NEN, nesmí být podána v nešifrované podobě, nesmí být šifrována jiným veřejným klíčem než tím, který je uveden na Profilu zadavatele u Zadávací dokumentace, a nesmí být podána jinak než právě prostřednictvím elektronického nástroje NEN. 
+K Žádostem o účast, Předběžným nabídkám a Nabídkám podaným jiným způsobem než uvedeným v odst. 8.2 této části Zadávací dokumentace nebude, v souladu s § 28 odst. 2 ZZVZ, Zadavatel přihlížet. O uvedené skutečnosti Zadavatel Dodavatele/Účastníka vždy vyrozumí. 
+Kromě těchto, výše specifikovaných, případů a dokumentů bude ostatní písemná komunikace v rámci Jednacího řízení s uveřejněním mezi Zadavatelem a Dodavatelem/ Účastníkem, probíhat výhradně prostřednictvím NEN, a to Interním mailboxem NEN v nešifrované podobě. Uvedené se týká i objasnění a doplnění Žádostí o účast, Předběžných nabídek a Nabídek, které Účastník předkládá na základě výzvy Zadavatele dle § 46 ZZVZ, jakož i Upravených předběžných nabídek, které budou případně Účastníci Zadavateli podávat po změně či doplnění Zadávacích podmínek provedené Zadavatelem dle § 61 odst. 11 ZZVZ, tzn. po jednání o Předběžných nabídkách, nebo na základě výzvy dle § 46 ZZVZ.  
+Dodavatel je povinen provést svoji registraci v NEN. Podrobné instrukce k registraci Dodavatele a používání NEN jsou taktéž dostupné na webové adrese: https://nen.nipez.cz. Účastník je srozuměn s tím, že Zadavatel není provozovatelem NEN, proto podmínky fungování NEN nejsou součástí Zadávacích podmínek ve smyslu § 28 odst. 1 písm. a) ZZVZ, a tudíž Zadavatel nemůže podmínky a způsob fungování NEN vysvětlovat způsobem dle § 98 ZZVZ.  
+Systémové požadavky na PC pro činění úkonů v NEN jsou uvedeny na adrese https://nen.nipez.cz. Zadavatel doporučuje doposud v NEN neregistrovaným Dodavatelům, aby ověření kompatibility a registraci provedli s dostatečným předstihem před podáním Žádostí o účast a případně využili i referenčního (testovacího) prostředí v NEN.  
+Zadavatel upozorňuje, že na jakoukoli jinou formu písemné komunikace mezi Zadavatelem a Dodavatelem/Účastníkem nebude brán zřetel.
+Jednacím jazykem v Jednacím řízení s uveřejněním je výlučně český jazyk. V tomto jazyce bude také vedena veškerá korespondence mezi Dodavatelem/Účastníkem a Zadavatelem, týkající se Žádostí o účast/Předběžné nabídky/Upravené předběžné nabídky/Nabídky a účasti Dodavatele/Účastníka v Jednacím řízení s uveřejněním, jakož i vypracovaná Žádost o účast/Předběžná nabídka/Upravená předběžná nabídka/Nabídka, která bude připravená a podaná Účastníkem podle Zadávacích podmínek. Zadavatel připouští v příloze 2, v části 4 Zadávací dokumentace (Návrh Smlouvy), (Detailní popis Díla Zhotovitele) použití pojmů převzatých z anglického jazyka, které se v daných odborných kruzích běžně používají a jsou srozumitelné v rámci komunikace v českém jazyce, tak jako by byly použity pojmy v jazyce českém. 
+Zadavatel při ústním jednání o Předběžných nabídkách, jakož i při ústním objasňování Předběžné nabídky dle odst. 24.2 této části Zadávací dokumentace připouští, aby Účastník se Zadavatelem komunikoval vedle češtiny i ve slovenštině bez použití tlumočníka. 
+Pokud je Zadavatelem nebo ZZVZ vyžadováno předložení dokladu podle právního řádu České republiky, může Dodavatel předložit obdobný doklad podle právního řádu státu, ve kterém se tento doklad vydává. Doklad, který je vyhotoven v jiném jazyce, než který Zadavatel určil pro podání Žádosti o účast, Předběžné nabídky / Upravené předběžné nabídky / Nabídky se předkládá (není-li dále stanoveno jinak) s překladem do českého jazyka. Má-li Zadavatel pochybnosti o správnosti překladu, může si vyžádat předložení úředně ověřeného překladu dokladu do českého jazyka tlumočníkem zapsaným do seznamu tlumočníků a překladatelů dle zákona č. 354/2019 Sb., o soudních tlumočnících a soudních překladatelích ve znění pozdějších předpisů. Doklad v českém nebo slovenském jazyce a doklad o vzdělání v latinském jazyce se předkládají bez překladu. Zadavatel může povinnost předložit překlad prominout i u jiných dokladů. Pokud se podle příslušného právního řádu požadovaný doklad nevydává, může být nahrazen písemným čestným prohlášením, ve kterém však musí Účastník uvést i skutečnost, že se daný doklad, požadovaný Zadavatelem nebo ZZVZ, dle daného právního řádu nevydává. 
+vyhrazená práva Zadavatele
+Zadavatel si tímto vyhrazuje právo, aniž by tím vyvolal jakoukoliv odpovědnost vůči kterémukoli Dodavateli/Účastníkovi a jakýkoliv závazek informovat kteréhokoli Dodavatele/Účastníka o příčinách svého jednání (nad rámec odůvodnění takového postupu uvedeného v oznámení o zrušení zadávacího řízení v případě zrušení zadávacího řízení postupem dle § 127 ZZVZ):
+kdykoliv Jednací řízení s uveřejněním zrušit ve smyslu § 170 ZZVZ (tj. i bez naplnění důvodů stanovených v § 127 ZZVZ), nejpozději však do uzavření smlouvy o dílo. Dodavatelé berou na vědomí, že uzavření smlouvy o dílo s Vybraným dodavatelem je za Zadavatele podmíněno souhlasem kontrolního orgánu;
+změnit nebo doplnit dodatkem k Zadávací dokumentaci Zadávací podmínky dle § 99 či § 61 odst. 11 ZZVZ;
+nejednat o Předběžných nabídkách a zadat Veřejnou zakázku na základě Předběžné nabídky;
+provést posouzení Nabídek, zda tyto splňují podmínky účasti v zadávacím řízení, až po hodnocení Nabídek, s tím, že u Vybraného dodavatele, v souladu s § 39 odst. 4 ZZVZ, provede Zadavatel vždy posouzení i hodnocení Nabídek;
+úpravy textu ZD, části 4 Zadávací dokumentace (Návrh Smlouvy), v čl. 9 PLATEBNÍ PODMÍNKY A FAKTURACE, a to výhradně v rozsahu, týkajících se úpravy daňového domicilu, náležitostí daňových dokladů či zálohových faktur vyplývajících z uzavření Smlouvy s vybraným Účastníkem se sídlem podnikání mimo Českou republiku, a to pro zajištění souladu s příslušnými daňovými předpisy.
+Zadavatel v tomto Jednacím řízení s uveřejněním:
+omezuje účast v zadávacím řízení pouze na Dodavatele, kteří mají sídlo v členském státě Evropské unie, Evropského hospodářského prostoru nebo ve Švýcarské konfederaci, nebo v jiném státě, který má s Českou republikou nebo s Evropskou unií uzavřenu mezinárodní smlouvu zaručující přístup Dodavatelům z těchto států k zadávané Veřejné zakázce; 
+nevrací podané Žádosti o účast/Předběžné nabídky/Upravené předběžné nabídky/Nabídky.
+Zadavatel si vyhrazuje právo v rámci této Veřejné zakázky písemně komunikovat: 
+s Dodavatelem/Účastníkem, který do Jednacího řízení s uveřejněním podal Žádost o účast samostatně, výhradně prostřednictvím NEN. Za kontaktní osobu Dodavatele/Účastníka bude Zadavatel v takovém případě považovat právě fyzickou osobu nebo fyzické osoby komunikující za Dodavatele/Účastníka prostřednictvím NEN, aniž by předem prověřoval, zda je/jsou tato/tyto fyzická osoba/fyzické osoby k tomu Dodavatelem/Účastníkem pověřena/pověřeny a dále pak prostřednictvím kontaktní osoby uvedené na identifikačním listu Účastníka,
+s Účastníkem, kterým je více osob společně, a tyto do Jednacího řízení s uveřejněním podaly společnou Žádost o účast, výhradně prostřednictvím NEN. Za kontaktní osobu Účastníka bude Zadavatel v takovém případě považovat právě fyzickou osobu nebo fyzické osoby komunikující prostřednictvím NEN za osobu, kterou Účastník určil na identifikačním listu Účastníka podávajícího společnou Žádost o účast za osobu jednající za Účastníka. Zadavatel bude takovou osobu za shora uvedených podmínek považovat za ke komunikaci za Účastníka způsobilou a nebude, jakkoliv prověřovat, zda je/jsou tato/tyto fyzická osoba/fyzické osoby k tomu Účastníkem pověřena/pověřeny a dále pak prostřednictvím kontaktní osoby uvedené na identifikačním listu Účastníka.
+Zadavatel využívá svého práva dle § 36 odst. 8 ZZVZ a požaduje, aby Dodavatel přijal přiměřená opatření k ochraně důvěrných informací, které Zadavatel Dodavateli zpřístupní za podmínek uvedených dále v čl. 10 této části 1 Zadávací dokumentace.
+Zadavatel požaduje, aby Dodavatel a jiná osoba, jejímž prostřednictvím Dodavatel prokazuje ekonomickou kvalifikaci dle § 78 ZZVZ, nesli společnou a nerozdílnou odpovědnost za plnění Veřejné zakázky (k tomu viz zejm. odst. 15.7 bod 1.18 této části 1 Zadávací dokumentace a odst. 3.16 části 2 Zadávací dokumentace).
+V průběhu zadávacího řízení Zadavatel vychází z údajů, dokladů, vzorků nebo modelů poskytnutých Účastníkem zadávacího řízení. Zadavatel může ověřovat věrohodnost poskytnutých údajů, dokladů, vzorků nebo modelů. Zadavatel si může údaje, doklady, vzorky nebo modely opatřovat také sám, pokud nejde o údaje, doklady, vzorky nebo modely, které budou hodnoceny podle kritérií hodnocení.  
+Zadavatel v souladu s ustanovením § 242 odst. 5 ZZVZ stanoví, že námitky proti podmínkám vztahujícím se ke kvalifikaci Dodavatele lze podat nejpozději 72 hodin před skončením Lhůty pro podání Žádosti o účast.
+Zadavatel v souladu s ustanovením § 242 odst. 5 ZZVZ stanoví, že námitky proti zadávacím podmínkám (vyjma podmínek vztahujících se ke kvalifikaci, pro které platí předchozí odstavec) lze podat nejpozději 72 hodin před skončením Lhůty pro podání Nabídek.
+ZADÁVACÍ DOKUMENTACE
+Zadavatel nenese žádnou odpovědnost za chyby, opomenutí nebo nesrovnalosti v Žádosti o účast/Předběžné nabídce/Upravené předběžné nabídce/Nabídce Účastníka, které vznikly z důvodu Účastníkovy nesprávné interpretace údajů uvedených v Zadávací dokumentaci. 
+Zadávací dokumentace k této Veřejné zakázce, vyjma její neveřejné části, je uveřejněna na Profilu zadavatele.
+Neveřejná část Zadávací dokumentace se sestává z dokumentů týkajících se podmínek připojení a výstavby předmětného nového horkovodu, seznamu řídící dokumentace Zadavatele a ostatních dokumentů v následujícím členění uvedeném v příloze 20 – Seznam Neveřejné části Zadávací dokumentace, část 4 Zadávací dokumentace (Návrh Smlouvy) (dále jen „Neveřejná část Zadávací dokumentace“). Konkrétní výčet jednotlivých dokumentů tvořících Neveřejnou část Zadávací dokumentace je obsažen v příloze Prohlášení o zachování mlčenlivosti, jehož vzor tvoří Přílohu č. 2 části 3 Zadávací dokumentace – Formuláře pro zpracování Předběžné nabídky/Nabídky (dále jen „Prohlášení o zachování mlčenlivosti“). 
+Neveřejná část Zadávací dokumentace bude Dodavateli/Účastníku, registrovanému v NEN dle odst. 8.6 této části ZD, Zadavatelem předána v elektronické formě prostřednictvím NEN, Interním Mailboxem NEN, a to po splnění veškerých níže uvedených podmínek: 
+Dodavatel/Účastník doručí Zadavateli prostřednictvím Interního mailboxu NEN řádně podepsanou, tedy v souladu s čl. 19 této části Zadávací dokumentace, písemnou žádost o poskytnutí Neveřejné části Zadávací dokumentace. Formulář žádosti je uveden v Příloze č. 4 části 3 Zadávací dokumentace – Formuláře pro zpracování Předběžné nabídky/ Nabídky. 
+V žádosti o poskytnutí Neveřejné části Zadávací dokumentace musí Dodavatel/Účastník uvést:
+identifikační údaje Dodavatele/Účastníka v souladu s § 28 odst. 1 písm. g) ZZVZ;
+Prohlášení o zachování mlčenlivosti, ve znění odpovídajícím návrhu uvedenému v Příloze č. 2 části 3 Zadávací dokumentace. Prohlášení o zachování mlčenlivosti musí být Dodavatelem/Účastníkem podepsáno v souladu s článkem  REF _Ref193256852 \r \h  \* MERGEFORMAT 19 této části Zadávací dokumentace a doplněno v požadovaných místech.
+V případě, že na straně Dodavatele/Účastníka bude vystupovat více osob společně (ve smyslu § 5 ZZVZ), Zadavatel požaduje, aby každá z těchto osob Zadavateli doručila Prohlášení o zachování mlčenlivosti. Nedoručí-li některý subjekt Zadavateli Prohlášení o zachování mlčenlivosti, bude Zadavatel vymáhat škodu případně způsobenou danou osobou po kterékoliv osobě s ní společně a nerozdílně Zadavateli odpovídající. Tímto není dotčena možnost Dodavatelů/Účastníků, kteří o poskytnutí Neveřejné části Zadávací dokumentace požádali samostatně, se následně spojit a podat společnou Žádost o účast/Předběžnou nabídku/Nabídku jakožto jeden Dodavatel/Účastník.    
+Nebude-li žádost o poskytnutí Neveřejné části Zadávací dokumentace splňovat všechny náležitosti uvedené v odst.  REF _Ref493595916 \r \h  \* MERGEFORMAT 10.4 výše, nebude Dodavateli/Účastníku zpřístupněna Neveřejná část Zadávací dokumentace. O této skutečnosti bude Zadavatel Dodavatele/Účastníka informovat bez zbytečného odkladu. Žádost o zpřístupnění Neveřejné části zadávací dokumentace může být podána opakovaně.
+Neveřejná část Zadávací dokumentace bude, po splnění shora uvedených podmínek, Dodavatelům/Účastníkům odeslána prostřednictvím NEN ve lhůtě tří (3) pracovních dnů ode dne doručení řádné žádosti o poskytnutí Neveřejné části Zadávací dokumentace. 
+Zadavatel upozorňuje, že Dodavatel/Účastník podpisem Prohlášení o zachování mlčenlivosti na sebe převezme odpovědnost za dodržování v Prohlášení o zachování mlčenlivosti uvedených povinností i za své Poddodavatele, a případně i dodavatele, kteří podají/podali společně s Dodavatelem společnou Žádost o účast a nedoručili Zadavateli podepsané Prohlášení o zachování mlčenlivosti, kterým Neveřejnou část zadávací dokumentace, za podmínek stanovených v Prohlášení o zachování mlčenlivosti, poskytne. Podpisem Prohlášení o zachování mlčenlivosti se Dodavatel/Účastník zároveň Zadavateli zaváže zavázat Poddodavatele, kterému/kterým Neveřejnou část Zadávací dokumentace poskytl, k zachování mlčenlivosti o informacích, které tvoří Neveřejnou část Zadávací dokumentace alespoň v rozsahu uvedeném v Prohlášení o zachování mlčenlivosti. 
+V souladu s ustanovením § 36 odst. 4 ZZVZ Zadavatel identifikuje části Zadávací dokumentace, které vypracovala osoba odlišná od Zadavatele, která zároveň není advokátem nebo daňovým poradcem, včetně identifikace osob, které specifikovanou část Zadávací dokumentace vypracovaly:
+Obchodní společnost SITEZ s.r.o. se sídlem Novoveská 3370, 415 01 Teplice, IČO 28662814, zapsaná v obchodním rejstříku vedeném Krajským soudem v Ústí nad Labem, oddíl C, vložka 25932 Pro Zadavatele tato společnost vypracovala:
+Projektovou dokumentaci pro územní rozhodnutí uvedenou v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.01 k příloze 1 – Technická specifikace Díla Objednatele.
+Projektovou dokumentaci pro provedení stavby uvedenou v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.02 k příloze 1 – Technická specifikace Díla Objednatele.
+Projektovou dokumentaci pro územní souhlas uvedenou v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.08 k příloze 1 – Technická specifikace Díla Objednatele.
+ Výkresovou dokumentaci „TEP0314_PID_D2-5-DPS-P&D_02_R00“ uvedenou v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 11.01 k příloze 1 – Technická specifikace Díla Objednatele.
+Dokumentaci „TEP 0314 - Statické posouzení mostu přes železnice r0“ uvedenou v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), v příloze č. 51.06 k příloze 1 – Technická specifikace Díla Objednatele. 
+Obchodní společnost IVITAS, a.s., se sídlem Ruská 83/24, Vítkovice, 703 00 Ostrava, IČO 25357255, zapsaná v obchodním rejstříku vedeném Krajským soudem v Ostravě, oddíl B, vložka 1453. Pro Zadavatele tato společnost vypracovala:
+Výkresovou dokumentaci "Koordinační situační výkres, Nový zdroj TAS lokalita Prunéřov" uvedenou v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.10 k příloze 1 – Technická specifikace Díla Objednatele.
+Výkresovou dokumentaci "Koordinační situační výkres, Přípojka ZP v Elektrárně Prunéřov" uvedenou v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.11 k příloze 1 – Technická specifikace Díla Objednatele.
+ Obchodní společnost ELEKTROPLAN s.r.o. se sídlem Loketská 344/12, Dvory, 360 06 Karlovy Vary, IČO 26394475, zapsaná v obchodním rejstříku vedeném Krajským soudem v Plzni, oddíl C, vložka 17549. Pro Zadavatele tato společnost vypracovala:
+1. V projektové dokumentaci pro územní souhlas, uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.08 k příloze 1 – Technická specifikace Díla Objednatele, část: Elektro.
+2. V projektové dokumentaci pro provedení stavby uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.02 D2 k příloze 1 – Technická specifikace Díla Objednatele, část: InO 02, InO 03 a PS 02
+Ing. Šárka Čapková, se sídlem Hrdlovská 650, 417 05, Osek, IČO 03826848, zapsaná v Živnostenském rejstříku vedeném Magistrátem města Teplice. Pro Zadavatele tato osoba vypracovala:
+V projektové dokumentaci pro územní souhlas, uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.08 k příloze 1 – Technická specifikace Díla Objednatele, část: Požárně bezpečnostní řešení.
+V projektové dokumentaci pro provedení stavby, uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.02 k příloze 1 – Technická specifikace Díla Objednatele, část: Požárně bezpečnostní řešení.
+
+Ing. Jan Kuncl, se sídlem Tržní náměstí 1463/9, 415 01, Teplice, IČO 10451218, zapsaný v Živnostenském rejstříku vedeném Magistrátem města Teplice. Pro Zadavatele tato osoba vypracovala:
+V projektové dokumentaci pro provedení stavby uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.02 k příloze 1 – Technická specifikace Díla Objednatele, část: Statické posouzení.
+V projektové dokumentaci pro provedení stavby uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.06 k příloze 1 – Technická specifikace Díla Objednatele, část: Statické posouzení.
+Ing. Michael Pekárek, se sídlem Habrová 3100/21, 415 01, Teplice – Nová Ves, IČO 46067442, zapsaný v Živnostenském rejstříku vedeném Magistrátem města Teplice. Pro Zadavatele tato osoba vypracovala v projektové dokumentaci pro provedení stavby uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.02 k příloze 1 – Technická specifikace Díla Objednatele, část: PS 03.
+Daniel Jech, se sídlem Palachova 649/58, 412 01, Litoměřice - Předměstí, IČO 12789895, zapsaný v Živnostenském rejstříku vedeném Městským úřadem Litoměřice. Pro Zadavatele tato osoba vypracovala:
+V projektové dokumentaci pro územní souhlas, uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.08 k příloze 1 – Technická specifikace Díla Objednatele, část: Požárně bezpečnostní řešení, Trafostanice typ UF 3066 bez přímého určení místa stavby.
+V projektové dokumentaci pro provedení stavby, uvedené v části 5 Zadávací dokumentace (Neveřejné části Zadávací dokumentace), jako příloha č. 51.02 k příloze 1 – Technická specifikace Díla Objednatele, část: Požárně bezpečnostní řešení, Trafostanice typ UF 3066 bez přímého určení místa stavby.
+
+Obchodní společnost ŠKODA PRAHA Invest s.r.o. se sídlem Tylova 1581/46, Jižní Předměstí, 30100 Plzeň, IČO: 16734084, zapsaná v obchodním rejstříku vedeném Krajským soudem v Plzni, oddíl L, vložka 8664. Pro Zadavatele tato společnost vypracovala přílohu č. 51.07 k příloze 1 – Technická specifikace Díla Objednatele.
+Obchodní společnost ENERGOPROJEKT PRAHA se sídlem Na Žertvách 2247/29, 180 00 Praha 8 pro Zadavatele vypracovala dokumentaci uvedenou jako příloha ENERGOPROJEKT PRAHA v příloze č. 51.06 k příloze 1 – Technická specifikace Díla Objednatele.
+Obchodní společnost SUDOP PRAHA a.s. se sídlem Olšanská 2643/1a, Žižkov, 13000 Praha 3 pro Zadavatele vypracovala dokumentaci uvedenou jako příloha STÁTNÍ ÚSTAV DOPRAVNÍHO PROJEKTOVÁNÍ v příloze č. 51.06 k příloze 1 – Technická specifikace Díla Objednatele
+Obchodní společnost ČEZ, a. s., se sídlem Duhová 2/1444, Praha 4, PSČ 140 53, IČO: 45274649, zapsána v obchodním rejstříku vedeném Městským soudem v Praze, oddíl B, vložka 1581, člen Skupiny ČEZ. Pro Zadavatele tato společnost vypracovala část 1 až 5 Zadávací dokumentace.
+
+
+Vysvětlení zadávací dokumentace
+Vysvětlení Zadávací dokumentace poskytne Zadavatel v souladu s § 98 ZZVZ:
+V souvislosti s vypracováním Žádosti o účast/Předběžných nabídek/Nabídek může Dodavatel/Účastník požadovat po Zadavateli vysvětlení k Zadávací dokumentaci. Písemná žádost o vysvětlení k Zadávací dokumentaci musí být, prostřednictvím NEN (Interní mailbox NEN) vznesena nejpozději osm (8) pracovních dnů před uplynutím Lhůty pro podání Předběžných nabídek, resp. 8 pracovních dní před koncem lhůty pro podání námitek stanovené v odst. 9.9 této části Zadávací dokumentace. Ve vztahu k podmínkám vztahujících se ke kvalifikaci musí být písemná žádost o vysvětlení doručena způsobem dle předchozí věty nejpozději ve lhůtě 8 pracovních dnů před koncem lhůty pro podání námitek stanovené v odst. 9.8 této části Zadávací dokumentace. Dodavatel/Účastník bere na vědomí, že na později doručené žádosti o vysvětlení není Zadavatel, dle § 98 odst. 3 ZZVZ, povinen reagovat. Zadavatel preferuje, pro snadnější vypracování vysvětlení Zadávací dokumentace, v žádosti o vysvětlení uvést jak identifikaci části Zadávací dokumentace, ke které se žádost vztahuje, a to ideálně do podrobnosti článku/odstavce příslušné přílohy a části ZD, případně konkrétní technické přílohy/výkresu, tak doručení žádosti o vysvětlení ve formátu, který bude umožňovat překopírování Účastníkovy žádosti o vysvětlení do vysvětlení následně Zadavatelem uveřejňovaného.
+Zadavatel vysvětlení uveřejní na Profilu zadavatele včetně přesného znění žádosti, bez identifikace Dodavatele podávajícího žádost o vysvětlení. Z uvedeného důvodu Zadavatel Dodavatele/Účastníky žádá, aby v žádostech o vysvětlení Zadávací dokumentace neuváděli ve vlastním zájmu informace, které by je mohly identifikovat, a to přímo i nepřímo. 
+Pokud se žádost o vysvětlení týká Neveřejné části Zadávací dokumentace ve smyslu ustanovení čl. 10 výše, Zadavatel odešle či předá vysvětlení pouze těm Dodavatelům/Účastníkům, kteří splnili podmínky uvedené v odst. 10.4 této části Zadávací dokumentace, včetně přesného znění žádosti, bez identifikace Dodavatele/Účastníka podávajícího žádost o vysvětlení (Zadavatel v tomto případě nebude vysvětlení ani znění žádosti uveřejňovat na Profilu zadavatele). Z uvedeného důvodu Zadavatel Dodavatele/Účastníky žádá, aby v žádostech o vysvětlení Zadávací dokumentace neuváděli ve vlastním zájmu informace, které by je mohly identifikovat, a to přímo i nepřímo.
+Zadavatel může poskytnout Dodavatelům/Účastníkům vysvětlení k Zadávací dokumentaci i bez obdržení předchozí žádosti Dodavatele/Účastníka.
+Změny zadávací dokumentace
+Případné změny nebo doplnění Zadávacích podmínek, uvedených v Zadávací dokumentaci, budou provedeny Zadavatelem formou dodatku k Zadávací dokumentaci, který bude, v souladu s § 99 ZZVZ, uveřejněn na Profilu zadavatele. Zadávací dokumentace je vykládána ve znění následně vydaných dodatků a Dodavatelé/Účastníci jsou povinni se takovýmito dodatky řídit. V případě rozporu mezi jednotlivými dodatky má prioritu dodatek s vyšším pořadovým číslem.
+Pokud Zadavatel změní nebo doplní Zadávací podmínky v průběhu jednání o Předběžných nabídkách, poskytne Účastníkům přiměřenou lhůtu pro úpravu jejich Předběžných nabídek a předložení Upravených předběžných nabídek.
+Pokud Zadavatel změní nebo doplní Neveřejnou část Zadávací dokumentace, bude v takovém případě postupovat obdobně způsobem dle odst. 11.1 písm. (c) výše. 
+ PODÁNÍ ŽÁDOSTÍ O ÚČAST A PROKÁZÁNÍ KVALIFIKACE
+Zadavatel vyzve k podání Předběžné nabídky výhradně Účastníky, kteří podali Žádost o účast a prokázali Zadavateli splnění kvalifikace. 
+Požadavky na prokázání kvalifikace/způsobilosti, způsob prokázání kvalifikace/způsobilosti, jakož i náležitosti a způsob podání Žádosti o účast jsou uvedeny v Kvalifikační dokumentaci, která tvoří část 2 Zadávací dokumentace. 
+Prohlídka místa plnění
+Účastníkům, kteří byli vyzváni k podání Předběžné nabídky, bude umožněna prohlídka místa plnění včetně jeho okolí tak, aby mohli pro sebe získat na svou vlastní odpovědnost a náklady veškeré informace, které mohou být nezbytné pro přípravu Předběžných nabídek/Upravených předběžných nabídek/Nabídek a případné uzavření Smlouvy. Prohlídka místa plnění není pro Účastníky povinná. 
+Prohlídka místa plnění se uskuteční v termínech stanovených Zadavatelem ve výzvě k podání Předběžných nabídek. Zadavatel zamýšlí uskutečnit alespoň dvě (2) prohlídky místa plnění. 
+Zadavatel odešle, prostřednictvím Mailboxu NEN, Účastníkům výzvu k účasti na prohlídce místa plnění vždy alespoň osm (8) dnů před jejím konáním.
+Účastníci, kteří mají zájem se prohlídky místa plnění zúčastnit, jsou povinni nejpozději tři (3) dny před konáním prohlídky potvrdit Zadavateli svou účast na prohlídce místa plnění. Spolu s potvrzením účasti Účastníci zašlou Zadavateli jmenný seznam osob, které se prohlídky místa plnění budou účastnit. Zadavatel upozorňuje, že účast osob na prohlídce místa plnění bude podmíněna poskytnutím jejich souhlasu se zpracováním osobních údajů v souvislosti s účastí na prohlídce místa plnění a podepsáním závazku zachování důvěrnosti ze strany těchto osob ohledně skutečnosti, že informace získané na prohlídce místa plnění účastníci prohlídky místa plnění využijí výhradně v souvislosti s tímto Jednacím řízením s uveřejněním, zejména pro přípravu Předběžné nabídky/Upravené předběžné nabídky/Nabídky. Zadavatel si vyhrazuje právo nepřipustit účast na prohlídce místa plnění Účastníkovi, jehož účast nebude mít Zadavatel předem potvrzenou nebo fyzické osoby, zástupce Účastníka, které Účastník Zadavateli neuvedl na jmenném seznamu. 
+Sraz Účastníků bude vždy na hlavní vrátnici EPR. Za každého Účastníka se může prohlídky místa plnění, z kapacitních důvodů, zúčastnit nejvýše šest (6) osob.
+Každá takováto osoba ponese veškerá rizika z účasti na prohlídce místa plnění plynoucí, ztráty nebo škody na majetku a všechny jiné ztráty, škody, náklady a výdaje, jakkoliv způsobené, které by, bez účasti na prohlídce místa plnění, nemohly vzniknout.
+Pravidla prohlídky místa plnění: 
+Všechny osoby účastnící se prohlídky místa plnění jsou povinny být vybaveny následujícími ochrannými prostředky: 
+průmyslovou ochrannou přilbou chránící osobu při nárazu do překážky i před padajícím předmětem, 
+pevnou uzavřenou pracovní obuví s ochrannou špičkou na ochranu před nárazem a stlačením a 
+reflexní vestou zajišťující viditelnost osoby. 
+Zadavatel nebude účastníkům prohlídky místa plnění poskytovat žádné z výše uvedených ochranných prostředků. Účastníci prohlídky místa plnění jsou povinni si ochranné prostředky uvedené pod písm. a) výše zajistit na vlastní náklady a odpovědnost.
+Zadavatel neumožní účast na prohlídce osobám nad rámec maximálního přípustného počtu osob ve vztahu k jednomu Účastníkovi a dále osobám, které nebudou vybaveny ochrannými prostředky uvedenými v písm. a). Zadavatel si tímto vyhrazuje právo zkontrolovat kvalitu ochranných prostředků účastníků prohlídky místa plnění, tedy zejména, zda tyto odpovídají technickým normám definujícím parametry daného druhu ochranného prostředku. O vyloučení osoby z prohlídky místa plnění, jakož i o důvodech vyloučení, vyhotoví Zadavatel záznam.
+ V rámci prohlídky místa plnění mohou zástupci Účastníků vznášet dotazy, ovšem odpovědi na ně poskytnuté v ústní podobě mají pouze informativní charakter a není možné dovolávat se jejich závaznosti. Taktéž tyto informace nejsou vysvětlením Zadávací dokumentace. V případě, že bude mít některý z Účastníků na základě uskutečněné prohlídky dotaz k Zadávacím podmínkám, resp. podmínkám plnění Veřejné zakázky, vznese tento dotaz v souladu s postupem stanoveným v Zadávací dokumentaci, tj. postupem platným pro žádost o vysvětlení Zadávací dokumentace dle ustanovení čl. 11 této části Zadávací dokumentace. Za chybnou interpretaci ústních informací poskytnutých při prohlídce místa plnění Účastníkovi neponese Zadavatel odpovědnost. Z průběhu prohlídky nebude Zadavatel pořizovat písemný ani jiný obdobný záznam. 
+Zadavatel nebude pro účastníky prohlídky místa plnění zajišťovat dopravu na a z místa určení, ani nebude zařizovat jakékoli ubytování pro zástupce Účastníků. 
+dokumenty tvořící pŘEDBĚŽNOU NABÍDKU/Nabídku
+Nestanoví-li Zadavatel v konkrétním případě jinak, platí všechny požadavky stanovené pro přípravu Nabídky i na Předběžnou nabídku, a to z důvodů vyhrazeného práva Zadavatele dle odst. 9.1 písm. c) této části Zadávací dokumentace.
+Neobsazeno. 
+Předběžná nabídka
+obsahující SVAZEK 1 Předběžné nabídky, o obsahu dle odst. 15.7 níže, SVAZEK 2 Předběžné nabídky, o obsahu dle odst. 15.8 níže, bude Zadavateli předložena elektronicky prostřednictvím NEN v souladu s čl. 8 této části ZD. Zadavatel opakovaně upozorňuje, že Předběžná nabídka musí být Účastníkem šifrována pomocí veřejného klíče Zadavatele (certifikát pro šifrování), který je ke stažení v sekci „Zadávací dokumentace“ k této Veřejné zakázce na Profilu zadavatele. 
+nabídka
+zahrnující SVAZEK 1 Nabídky, o obsahu dle odst. 15.7, SVAZEK 2 Nabídky, o obsahu dle odst. 15.8, bude Zadavateli předložena elektronicky prostřednictvím NEN v souladu s čl. 8 této části ZD. Zadavatel opakovaně upozorňuje, že Nabídka musí být Účastníkem šifrována pomocí veřejného klíče Zadavatele (certifikát pro šifrování), který je ke stažení v sekci „Zadávací dokumentace“ k této Veřejné zakázce na Profilu zadavatele. 
+Předběžné nabídky/Nabídky budou podány ve formátu *.pdf a současně v nativních formátech souborů v souladu s níže uvedeným odstavcem ve finální podobě bez použití revizního módu. Požadavek na editovatelný formát se nevztahuje na různé firemní katalogy, prospekty, prezentace apod. 
+Nativními formáty souborů se rozumí: (i) soubory textových dokumentů ve formátech aplikace MS Word (*.doc, *.docx, *.docm, *.rtf), (ii) soubory výkresové dokumentace ve formátech aplikace AutoCAD (*.dwg, *.dxf), (iii) soubory databází a cenové specifikace prací ve formátech aplikace MS Excel (*.xls, *.xlsx, *.xlsm), (iv) harmonogramy ve formátech kompatibilních se SW prostředky MS Project 2010, (v) grafické soubory (případná fotografická dokumentace, přiložená jako doplňky) ve formátu *.jpg, (vi) skenované dokumenty ve formátu *.pdf.
+Veškeré doklady a dokumenty k příloze 2 a 3 Smlouvy požadované Zadavatelem dle odst. 15.8 bod 1.2 a 1.3 níže, které podá Účastník prostřednictvím NEN, budou ve formátech:
+- Textové dokumenty budou předloženy ve formátu „*.PDF pro Adobe Acrobat, tzv. tagované PDF/A“
+- Výkresy budou předloženy ve formátu *.PDF – rastrové, či vektorové PDF.
+- Ostatní dokumenty *.PDF – rastrové, či vektorové PDF.
+
+Minimální technické parametry u konvertovaných, nebo skenovaných dokumentů: 
+• rozlišení 300 x 300 dpi,
+• barevná hloubka 24 bitů nebo 256 stupňů šedi,
+• velikost formátu snímané plochy nejméně A4.
+
+Zadavatel připouští předložení i v tzv. „živých“ formátech:
+- *.DOCX pro Microsoft WORD verze 2010 nebo kompatibilní verze z řady MS Office,
+- *.XLSX pro Microsoft EXCEL verze 2010 nebo kompatibilní verze z řady MS Office,
+- *.DWG, 
+- *.JPG, JPEG,
+- *.TIFF.
+Zadavatel doporučuje řazení dokumentů Předběžné nabídky/Nabídky v níže uvedené struktuře, s tím, že každá níže uvedená číselně označená položka bude odpovídat jednomu souboru, vyjma případů, kdy vložení souboru bude omezeno technickými omezeními NEN. V takovém případě Zadavatel akceptuje vložení více souborů (s patřičnou, přehlednou strukturou) k jedné číselně označené položce níže. 
+Svazek 1
+Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky, který musí být zpracován Účastníkem podávajícím Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku samostatně podle formuláře průvodního listu Předběžné nabídky/Upravené předběžné nabídky/Nabídky uvedeného v části 3 Zadávací dokumentace (Formuláře) Příloha 1 A, a podepsán v souladu s čl. 19 této části Zadávací dokumentace. 
+nebo 
+Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky (Pro společnou Předběžnou nabídku/Upravenou předběžnou nabídku /Nabídku společníků), který musí být zpracován Účastníkem podávajícím Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku, kterým je společně více subjektů. Průvodní list musí být podepsán v souladu s čl. 19 této části Zadávací dokumentace. Formulář je uveden v části 3 Zadávací dokumentace (Formuláře) Příloha 1 B.
+Svazek 2
+Návrh Smlouvy uvedený v části 4 Zadávací dokumentace, který musí být Účastníkem doplněn o příslušné, Zadavatelem požadované, údaje, přičemž Účastník není oprávněn činit žádné další změny či doplnění Návrhu Smlouvy, s výjimkou údajů, které jsou výslovně vyhrazeny pro doplnění ze strany Účastníka. Účastník je povinen upravit Návrh Smlouvy v části identifikující smluvní strany na straně Účastníka, a to v souladu se skutečným stavem, aby bylo vymezení dostatečně určité. Účastník dále doplní údaje do vyznačených částí Návrhu Smlouvy. Ostatní ustanovení nesmí být Účastníkem měněna. Návrh Smlouvy musí být podepsán Účastníkem způsobem dle čl. 19 této části Zadávací dokumentace. 
+Přílohy k návrhu Smlouvy: 
+Příloha 1 Smlouvy – Technická specifikace Díla Objednatele. Účastník tuto přílohu převezme, ze vzoru přílohy 1 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace, a zpracuje ji dle instrukcí v ní uvedených. 
+Příloha 2 Smlouvy – Detailní popis Díla Zhotovitele. Účastník tuto přílohu převezme ze vzoru přílohy 2 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace, a doplní ji dle instrukcí v ní uvedených níže tak aby do Zadavatelem vymezeného prostoru pro vyplnění informací Účastníka byly vždy Účastníkem doplněny všechny požadované údaje, a k této příloze 2 Smlouvy připojí veškeré doklady a dokumenty požadované Zadavatelem ve formátu dle odst. 15.5 výše. Tato příloha nesmí obsahovat žádné požadavky Účastníka na součinnost Zadavatele. Účastník musí respektovat požadavky uvedené Zadavatelem v příloze 1 Smlouvy (Technická specifikace Díla Objednatele) a ve svém nabízeném řešení, v příloze 2 Smlouvy, je zohlednit. Změna technické specifikace Objednatele ze strany Účastníka není povolena, tak jak je již uvedeno výše.
+Příloha 2 Smlouvy obsahuje čtyři (4) články, které je Účastník povinen doplnit takto:  
+Článek 1 Detailní popis Díla Zhotovitele 
+Do tabulky 1.1 „Popis Díla jako celku“, požaduje Zadavatel doplnit popis Díla v členění a dle požadavků uvedených v jednotlivých bodech tabulky, a to v takovém detailu, aby bylo zcela zřejmé, že Dílo jako celek vyhovuje podmínkám vymezeným Zadavatelem v příloze 1 Smlouvy. Do tabulky 1.2 „Dokumenty k prokázání splnění požadavků Objednatele“ požaduje Zadavatel uvést číslo dokumentu, které Účastník zároveň přiloží jako přílohu přílohy 2 Smlouvy a kterým Účastník prokazuje splnění požadavků Zadávací dokumentace vztahujících se k dané části Díla.
+Článek 2 Popis jednotlivých provozních a stavebních částí Díla Zhotovitele 
+Do tabulky „Popis“ požaduje Zadavatel u každé jedné konkrétní části Díla uvést požadované popisy navržených zařízení a jejich částí, a to v takovém detailu, aby bylo zcela zřejmé, že navržené řešení Účastníka vyhovuje podmínkám vymezeným Zadavatelem v příloze 1 Smlouvy právě u každé takové části Díla a do tabulky „Požadované dokumenty k prokázání vlastností“ uvést čísla dokumentů, které Účastník zároveň přiloží jako přílohu přílohy 2 Smlouvy a kterými Účastník prokazuje splnění požadavků Zadávací dokumentace vztahujících se k dané části Díla. Náležitosti, které takové dokumenty musí vykazovat, Zadavatel definuje níže v tomto odst. 15.8 bod 1.2 pod písm. a) až s).
+Účastník je povinen předložit Zadavateli veškeré údaje a doklady, uvedené v příloze 2 Smlouvy, na základě, kterých bude Zadavatel, postupem v souladu s čl. 23 této části 1 Zadávací dokumentace, schopen kvalifikovaně posoudit, zda Předběžná nabídka/ Upravená předběžná nabídka/ Nabídka Účastníka odpovídá Zadávacím podmínkám. 
+Údaje a doklady přiložené k příloze 2 Smlouvy je Účastník vždy povinen řádně označit a očíslovat tak, aby byly Zadavatelem v Předběžné nabídce/Nabídce Účastníka jednoznačně identifikovány. 
+Údaji a doklady, které požaduje Zadavatel k posouzení souladu nabízeného řešení se Zadávacími podmínkami od Účastníka předložit, jsou zejména:
+popisy architektonicko-stavebního řešení SO,
+výkresy SO,
+technické popisy řešení PS,
+výkresy PS,
+popisy,
+výkresy,
+bilanční schémata,
+tepelná schémata,
+jednopólová schémata elektro,
+přehledová schémata, diagramy,
+pracovní charakteristika,
+výpočty,
+korekční křivky, 
+zákresy, 
+datasheety, 
+P&D schémata, 
+typové výkresy, 
+křivky,
+generel
+s tím, že
+ Popisem architektonicko-stavebního řešení SO (IO) se rozumí popis architektonického, stavebně technického a dispozičního řešení, vlastností stavebního nebo inženýrského objektu a jeho hlavních konstrukčních prvků, způsobu založení stavebního objektu a popisu zajištění pracovních a hygienických podmínek provozního personálu. Obsah a rozsah popisu bude Účastníkem přizpůsoben charakteru a technické složitosti předmětného stavebního nebo inženýrského objektu. Popis musí být jasný, srozumitelný a určitý a v takovém detailu, aby bylo zcela zřejmé, že navržené řešení Účastníka vyhovuje podmínkám vymezeným Zadavatelem v příloze 1 Smlouvy.
+Výkresy SO (IO) se rozumí výkresy půdorysů jednotlivých podlaží a střech s celkovými rozměry hmoty stavby; charakteristické řezy se základním konstrukčním řešením, včetně řezů dokumentujících návaznost na navazující stavební objekty, resp. stávající areál TAS EPR2, zejména s ohledem na hloubku založení navrhované stavby, s výškovými kótami vztaženými ke stávajícímu terénu. Pohledy s vyznačením základního výškového řešení, barevností a charakteristikou materiálů povrchů. Obsah a rozsah výkresové dokumentace bude Účastníkem přizpůsoben charakteru a technické složitosti předmětného stavebního objektu.
+Technickým popisem řešení PS se rozumí popis základní skladby technologického zařízení a technologického procesu a jeho umístění ve stavebním objektu, popis základních technických a výkonových parametrů, popis dopravy vstupních a výstupních surovin a médií a jejich spotřeb, včetně míst napojení. Obsah a rozsah popisu bude Účastníkem přizpůsoben charakteru a technické složitosti předmětného provozního souboru. Popis musí být jasný, srozumitelný a určitý a v takovém detailu, aby bylo zcela zřejmé, že navržené řešení Účastníka vyhovuje podmínkám vymezeným Zadavatelem v příloze 1 Smlouvy.
+Výkresy PS se rozumí výkresy umístění a uspořádání rozhodujících zařízení a strojů ve stavebním objektu – půdorysy, řezy. Obsah a rozsah výkresové dokumentace bude Účastníkem přizpůsoben charakteru a technické složitosti předmětného provozního souboru.
+Popisem se rozumí slovní popis řešení Díla nebo daného SO, IO nebo PS či jejich částí (dle určení Zadavatele). Popis musí být jasný, srozumitelný a určitý a v takovém detailu, aby bylo zcela zřejmé, že navržené řešení Účastníka vyhovuje podmínkám vymezeným Zadavatelem v příloze 1 Smlouvy.
+Výkresem se rozumí grafické znázornění technického řešení stavebního, inženýrského objektu nebo provozního souboru nebo strojů a zařízení ve vhodném měřítku pro jeho dobrou čitelnost, s vyznačením základních rozměrových kót, legendou a rohovým razítkem.     
+Bilančním schématem se rozumí grafické znázornění okruhu(ů), obsahující zejména množství, průtoky, tlaky, teploty a entalpie pracovní látky na vstupech a výstupech jednotlivých strojů a zařízení okruhu. Bilanční schéma je zpracováno pro požadované provozní režimy a dále též pro mezní provozní stavy ohraničující požadovanou oblast provozních režimů. 
+Tepelným schématem se rozumí grafické znázornění zejména průtoků a teplot pracovní látky na vstupech a výstupech jednotlivých strojů a zařízení tepelného okruhu. Tepelné schéma je zpracováno pro požadované provozní režimy a dále též pro mezní provozní stavy ohraničující požadovanou oblast provozních režimů.
+Přehledovým schématem zapojení se rozumí grafické znázornění (elektrického apod.) spojení mezi stroji, zařízeními nebo jinými částmi Díla.
+Diagramem (provozním, najížděcím apod.) se rozumí grafické znázornění vzájemné závislosti dvou nebo více veličin pro požadovanou oblast provozních nebo jiných režimů s dostatečně zřetelným rastrem pro grafické odečítání. V každém diagramu musí být vyznačeny veškeré omezující čáry s podrobným komentářem.
+Pracovní charakteristikou se rozumí grafické znázornění pracovní oblasti stroje nebo zařízení pomocí závislosti dvou nebo více veličin při provozu zařízení.
+Výpočtem se rozumí zejména specifikace způsobu výpočtu a jeho výsledků, použitých pro návrhové a konstrukční řešení. 
+Korekční křivkou se rozumí grafické vyjádření opravného koeficientu pro hodnoty měřených veličin v požadovaném rozsahu.
+Zákresem se rozumí vyznačení půdorysné stopy Díla do generelu areálu TAS EPR2.
+Datasheetem se rozumí dokument specifikující technické parametry a charakteristiky a popis provozního souboru nebo strojů a zařízení.
+P&D schématem se rozumí grafické znázornění potrubí a parametrů médií pro zařízení, provozní soubory, dílčí provozní soubory.
+Typovým výkresem se rozumí výkres zpracovaný dle zpracovatelem předem zvolených atributů grafického znázornění technického řešení stavebního objektu nebo provozního souboru nebo strojů a zařízení ve vhodném měřítku pro jeho dobrou čitelnost s vyznačením základních rozměrových kót, legendou a rohovým razítkem.  
+Křivkou se rozumí grafické vyjádření hodnot měřených veličin v požadovaném rozsahu.
+Generelem se rozumí grafické vyjádření uceleného schéma vybrané funkční složky území (objektů, komunikací, inženýrských sítí apod.) v požadovaném rozsahu, s legendou a rohovým razítkem.
+Článek 3 Vedlejší rozpočtové náklady
+Účastník tuto přílohu převezme ze vzoru přílohy 2 Smlouvy, obsaženého v části 4 ZD (Návrh Smlouvy), ve znění všech dodatků ZD, a doplní ji dle instrukcí v ní uvedených níže tak aby do Zadavatelem vymezeného prostoru pro vyplnění informací Účastníka byly vždy Účastníkem doplněny všechny požadované údaje, a k této příloze 2 Smlouvy připojí veškeré doklady a dokumenty požadované Zadavatelem ve formátu dle odst. 15.5 výše. Tato příloha nesmí obsahovat žádné požadavky Účastníka na součinnost Zadavatele
+Článek 4 Ostatní
+Účastník doplní další potřebné údaje, které uzná za vhodné.
+
+Náležitosti, které musí řádně provedený Předmět veřejné zakázky vykazovat, aby bylo Dílo Zadavatelem převzato, jsou vymezeny v příloze 1 Smlouvy, se kterou musí být údaje uvedené Účastníkem v příloze 2 Smlouvy vždy v souladu.
+Příloha 3 Smlouvy – Garantované parametry a minimální technické podmínky. Účastník tuto přílohu převezme, bez jakýchkoli úprav, ze vzoru přílohy 3 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 4 Smlouvy – Požadavky na dokumentaci. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 4 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 5 Smlouvy – Podrobný časový harmonogram provedení Díla. Účastník tuto přílohu převezme ze vzoru přílohy 5 Smlouvy, bez provedení jakýchkoli změn či úprav, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků ZD, a doplní ji o indikativní harmonogram realizace Předmětu veřejné zakázky, který musí být zpracován Účastníkem na základě veškerých stěžejních milníků určených Objednatelem v odst. 7.2 Smlouvy, a to do podrobností, jaké je Účastník dle svých znalostí schopen zpracovat. Povinnosti Účastníka (Zhotovitele) týkající se zpracování a aktualizace podrobného harmonogramu provedení Díla v termínech a za podmínek stanovených v části 4 Zadávací dokumentace (Návrh Smlouvy), včetně požadavku na schválení Účastníkem/Zhotovitelem zpracovaného návrhu podrobného časového harmonogramu provedení Díla a jeho aktualizací ze strany Zadavatele/Objednatele, nejsou nijak dotčeny tím, že příloha 5 Smlouvy bude obsahovat indikativní harmonogram realizace Předmětu veřejné zakázky.
+Příloha 6 Smlouvy – Součinnost Objednatele. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 6 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 7 Smlouvy – Náhradní díly. Účastník tuto přílohu převezme ze vzoru přílohy 7 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace, a zpracuje ji dle níže uvedených pokynů.
+Do tabulek č. 1, 2, 3, 4 Účastník doplní Zadavatelem požadované seznamy náhradních dílů s tím, že: 
+do sloupce „Název dílu“ uvede Účastník název náhradního dílu,
+do sloupce „Jednotka“ uvede Účastník označení měrné jednotky,
+do sloupce „Počet“ uvede Účastník potřebný počet dílů,
+do sloupce „SO“ uvede Účastník označení stavebního objektu, ve kterém je zařízení s příslušným dílem umístěno, 
+do sloupce „PS“ uvede Účastník označení provozního souboru, jehož je zařízení s příslušným dílem součástí, 
+do sloupce „Výrobce“ uvede Účastník nejméně jednoho výrobce, který díl vyrábí,
+do sloupce „Četnost výměny“ uvede Účastník předpokládanou periodu výměny náhradního dílu, 
+do sloupce „Lhůta dodání“ uvede Účastník obvyklou dobu, za kterou je výrobce schopen díl dodat,
+do sloupce „Cena za 1 jednotku [Kč bez DPH]“ uvede Účastník obvyklou cenu v Kč bez DPH.
+Do tabulky č. 5 Účastník doplní Zadavatelem požadované seznamy spotřebního materiálu s tím, že: 
+do sloupce „Název materiálu“ uvede Účastník název spotřebního materiálu,
+do sloupce „Jednotka“ uvede Účastník označení měrné jednotky,
+do sloupce „Počet“ uvede Účastník potřebný počet materiálu,
+do sloupce „SO“ uvede Účastník označení stavebního objektu, ve kterém je materiál spotřebováván, lze uvést několik SO, 
+do sloupce „PS“ uvede Účastník označení provozního souboru, ve kterém je materiál spotřebováván, lze uvést několik PS, 
+do sloupce „Výrobce“ uvede Účastník nejméně jednoho výrobce, který materiál vyrábí,
+do sloupce „Spotřeba materiálu“ uvede Účastník výši spotřeby materiálu, 
+do sloupce „Lhůta dodání“ uvede Účastník obvyklou dobu, za kterou je výrobce schopen materiál dodat,
+do sloupce „Cena za 1 jednotku [Kč bez DPH]“ uvede Účastník obvyklou cenu v Kč bez DPH.
+Příloha 8 Smlouvy – Plán kvality a plán kontrol a zkoušek. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 8 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 9 Smlouvy – Seznam poddodavatelů a výrobců klíčových komponent Díla. Účastník tuto přílohu převezme ze vzoru přílohy 9 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace a zpracuje ji dle instrukcí obsažených v úvodu vzoru přílohy 9 Smlouvy, a to ve vztahu k těm Poddodavatelům, kteří budou Účastníkovi známi v době podání Předběžné nabídky/ Nabídky. Účastník je povinen vyplnit všechny kolonky přílohy 9 Smlouvy. 
+Příloha 10A Smlouvy – Vzor bankovní záruky za zálohu. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 10A Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 10B Smlouvy – Vzor záruky pojišťovny za zálohu. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 10B Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 11A Smlouvy – Vzor bankovní záruky za provedení Díla. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 11A Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 11B Smlouvy – Vzor záruky pojišťovny za provedení Díla. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 11B Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 12A Smlouvy – Vzor bankovní záruky za odstranění vad. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 12A Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 12B Smlouvy – Vzor záruky pojišťovny za odstranění vad. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 12B Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 13 Smlouvy – Cenová specifikace Díla. Účastník tuto přílohu převezme ze vzoru přílohy 13 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace, a zpracuje ji dle instrukcí uvedených níže. Jiná doplnění a změny, včetně úprav tabulek jako takových (např. slučování buněk a řádků atd.), nesmí Účastník provádět, pokud není stanoveno jinak. Pro přehlednost jsou buňky, které bude Účastník vyplňovat, podbarveny šedě. Zadavatel požaduje, aby Účastník uváděl položky v takovém detailu, aby byly minimalizovány měrné jednotky typu komplet, set apod., a též agregované položky, pokud Zadavatel nestanovil jinak.  Při vyplňování hodnot bude Účastník postupovat dle podrobných pokynů uvedených na listu s názvem „Pokyny Kč“.
+Příloha 14 Smlouvy – Platební harmonogram. Účastník tuto přílohu převezme ze vzoru přílohy 14 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace, a zpracuje ji dle instrukcí v ní uvedených (tyto pokyny budou před finalizací přílohy Účastníkem odstraněny). Účastník je povinen vyplnit všechny kolonky platebního harmonogramu.
+Příloha 15 Smlouvy – Školení. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 15 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 16 A Smlouvy – Návrh Podnájemní smlouvy pro Zařízení staveniště. Účastník tuto přílohu převezme, bez provedení jakýchkoli změn či úprav, ze vzoru přílohy 16 A Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace. 
+Příloha 16 B Smlouvy – Návrh smlouvy na dodávku elektřiny. Účastník tuto přílohu převezme, bez provedení jakýchkoli změn či úprav, ze vzoru přílohy 16 B Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 17 Smlouvy – Administrativní řád. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 17 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 18 Smlouvy – Pojištění. Účastník tuto přílohu převezme, bez provedení jakýchkoli změn či úprav, ze vzoru přílohy 18 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace. 
+Příloha 19 Smlouvy – Seznam zkratek. Účastník tuto přílohu převezme, bez provedení jakýchkoliv úprav, ze vzoru přílohy 19 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 20 – Seznam neveřejné části Zadávací dokumentace. Účastník tuto přílohu převezme, bez provedení jakýchkoli změn či úprav, ze vzoru přílohy 20 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 21 – Bezpečnostní požadavky pro dodávky standardních systémů a technologií. Účastník tuto přílohu převezme, bez provedení jakýchkoli změn či úprav, ze vzoru přílohy 21 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace.
+Příloha 22 – Dohoda o společné a nerozdílné odpovědnosti za plnění Veřejné zakázky. Pokud Účastník prokazuje ekonomickou kvalifikaci podle odst. 6.1 písm. a) části 2 Zadávací dokumentace prostřednictvím jiné osoby, tak je povinen převzít tuto přílohu ze vzoru přílohy 22 Smlouvy, obsaženého v části 4 Zadávací dokumentace (Návrh Smlouvy), ve znění všech dodatků Zadávací dokumentace, a zpracovat dle požadavků Zadavatele.
+Příloha č. 5, části 3 Formuláře – Čestné prohlášení k mezinárodním sankcím vůči Rusku a Bělorusku. Účastník tuto přílohu převezme ze vzoru Přílohy č. 5, obsažené v části 3 Zadávací dokumentace a zpracuje ji následujícím způsobem. Účastník vyplní kolonky vyznačené přímo ve formuláři, zvolí příslušnou variantu textu obsažené v této Příloze č. 5 a podepíše ji v souladu s článkem 19 této části Zadávací dokumentace. V případě společné účasti Dodavatelů bude toto čestné prohlášení vyplněno a doloženo jednotlivě každým Dodavatelem.
+Náležitosti Upravené předběžné nabídky požaduje Zadavatel obdobné, jak jsou tyto uvedeny výše pro Předběžnou nabídku, nebude-li Zadavatelem výslovně určeno jinak. 
+Požadované doklady předkládají Účastníci v prostých kopiích, není-li stanoveno jinak.
+Nabídková cena
+Nabídková cena, za kterou Účastník nabízí provést Předmět veřejné zakázky, bude uvedena v Kč bez DPH. V dané měně bude cena i Zadavatelem hrazena.
+Účastník vyplní příslušná editovatelná pole Cenové specifikace ve formátu .xlsx,  uvedené v části 4 Zadávací dokumentace (příloha 13 Smlouvy) v požadovaném rozsahu a členění specifikovaném v odst. 15.8 výše. Součástí Nabídkové ceny jsou veškeré práce, dodávky, poplatky a veškeré náklady Účastníka nezbytné pro řádné a úplné provedení Předmětu veřejné zakázky nebo s ním související, není-li Zadávacími podmínkami výslovně stanoveno jinak.
+Případ, kdy Předběžná nabídka/Upravená předběžná nabídka/Nabídka nebude obsahovat cenovou specifikaci vypracovanou podle této Zadávací dokumentace, zejména dle odst. 15.8 výše, je nesplněním Zadávacích podmínek ve smyslu § 48 odst. 2 písm. a) ZZVZ.
+Účastník je povinen uvést Nabídkovou cenu v těchto dokumentech Předběžné nabídky/Upravené předběžné nabídky/Nabídky:
+část 3 ZD (Formuláře pro zpracování Předběžné nabídky/Upravené předběžné nabídky/Nabídky), Příloha 1A - Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky nebo Příloha 1B - Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky pro společnou Předběžnou nabídku/Nabídku společníků;
+část 4 ZD (Návrh Smlouvy), odst. 8.1 Smlouvy;
+část 4 ZD (Návrh Smlouvy), příloha 13 Smlouvy; 
+část 4 ZD (Návrh Smlouvy), příloha 14 Smlouvy.
+Nabídková cena bude ve všech shora zmíněných dokumentech Účastníkem uvedena identicky. V případě, že bude ve zmíněných dokumentech uvedena Nabídková cena odlišně, pak Zadavatel bude považovat za určující Nabídkovou cenu, která bude uvedena na Průvodním listu Předběžné nabídky/Upravené předběžné nabídky/Nabídky nebo na Průvodním listu Předběžné nabídky/Upravené předběžné nabídky/Nabídky (Pro společnou Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku společníků).   
+Zadávací lhůta
+Zadávací lhůta nebyla Zadavatelem stanovena.
+forma a náležitosti Předběžné nabídky/Upravené předběžné nabídky/Nabídky
+Účastník musí předložit Předběžnou nabídku/Nabídku v plném souladu se Zadávacími podmínkami. Viz zejména podmínky uvedené v čl. 15 výše. Upravenou předběžnou nabídku, vzhledem k tomu, že nemusí obsahovat veškeré části Předběžné nabídky specifikované v čl. 15 této části Zadávací dokumentace, je Účastník povinen podávat ve formě určené Zadavatelem v závislosti na skutečnosti, jaké části Předběžné nabídky má Upravená předběžná nabídka obsahovat. Konkrétní náležitosti Upravené předběžné nabídky Zadavatel určí ve výzvě k předložení Upravené předběžné nabídky.
+Podpis Předběžné nabídky/UPravené předběžné nabídky/Nabídky
+Dokumenty, které mají být podepsány Účastníkem či Poddodavatelem, musí být podepsány k tomu oprávněnou osobou. 
+Dokumenty, které mají být podepsány a jsou předkládány Účastníkem prostřednictvím Elektronického nástroje NEN, se považují za podepsané Účastníkem.
+ Za řádné podepsání se považuje:
+pokud je Účastník podepsán osobou, která je oprávněna zastupovat Účastníka ze zákona, přičemž toto oprávnění podepisující/podepisujících osoby/osob musí být jednoznačně doloženo (např. výpisem z obchodního rejstříku, ze kterého musí vyplývat zmocnění takové osoby Účastníkem k podání Předběžné nabídky/Upravené předběžné nabídky/Nabídky).
+Bude-li na místo Účastníkem Předběžná nabídka/Upravená předběžná nabídka/Nabídka podána osobou jinou, k tomu zmocněnou, bude do Předběžné nabídky/Upravené předběžné nabídky/Nabídky vložena plná moc, která musí být řádně podepsána (buď zaručeným elektronickým podpisem, nebo musí být předložena oskenovaná vlastnoručně podepsaná plná moc) za Účastníka osobou, která je oprávněna jednat za Účastníka a ze které musí vyplývat zmocnění takové osoby Účastníkem k podání Předběžné nabídky/Upravené předběžné nabídky/Nabídky.
+Způsob a lhůta pro podání Předběžných nabídek/upravených předběžných nabídek/Nabídek
+Předběžné nabídky/Nabídky, vypracované dle Zadávací dokumentace, musí být Zadavateli podány prostřednictvím NEN, a to do konce Lhůty stanovené ve výzvě k podání Předběžných nabídek/Nabídek. Předběžné nabídky/Nabídky doručené Zadavateli v předstihu zůstanou až do doby stanovené pro otevírání Předběžných nabídek/Nabídek neotevřené v NEN.
+Předběžná nabídka/Nabídka podaná po uplynutí Lhůty pro podání Předběžných nabídek/Nabídek nebo podaná jiným způsobem než stanoveným v ZD, tj. zejména jiným způsobem než prostřednictvím stanoveného elektronického nástroje NEN uvedeného v čl. 8 této části ZD, se nepovažuje za podanou a v průběhu Jednacího řízení s uveřejněním se k ní nepřihlíží. Zadavatel bezodkladně vyrozumí Účastníka o tom, že jeho Předběžná nabídka/Nabídka byla podána po uplynutí Lhůty pro podání Předběžných nabídek/Nabídek nebo byla podána jiným způsobem než stanoveným v ZD, tj. zejména prostřednictvím stanoveného elektronického nástroje NEN uvedeného v čl. 8 této části ZD, a z toho důvodu zanikla Účastníku zadávacího řízení účast v tomto zadávacím řízení ve smyslu § 47 odst. 4 písm. b) ZZVZ.
+V důsledku změn Zadávacích podmínek provedených Zadavatelem v souladu s § 61 odst. 11 ZZVZ může být Zadavatelem v průběhu jednání o Předběžných nabídkách požadováno podání Upravené předběžné nabídky. Upravená předběžná nabídka bude Účastníkem podána prostřednictvím Interního mailboxu NEN ve lhůtě stanovené Zadavatelem ve výzvě k jejímu podání. Upravená předběžná nabídka nemusí obsahovat veškeré náležitosti, které jsou touto ZD stanovené pro Předběžnou nabídku, uvede-li Zadavatel ve výzvě k podání Upravené předběžné nabídky, že požaduje předložit pouze její část, k níž se změněná část Zadávací dokumentace vztahuje. Náležitosti Upravené předběžné nabídky vždy určí Zadavatel ve výzvě k jejímu podání.
+Otevírání Předběžných nabídek/Nabídek
+Zadavatel prostřednictvím jím pověřených osob přistoupí po uplynutí Lhůty pro podání Předběžných nabídek/Nabídek k otevírání Předběžných nabídek/Nabídek v souladu s § 109 ZZVZ.
+Jednání o Předběžných Nabídkách
+Po otevření Předběžných nabídek Zadavatel provede posouzení v souladu s čl. 23 níže, zda Předběžné nabídky odpovídají Zadávacím podmínkám (jiným než podmínek kvalifikace). Pokud Předběžná nabídka Účastníka neodpovídá Zadávacím podmínkám, postupuje Zadavatel v souladu s čl. 24 níže. Pokud Předběžná nabídka Zadávací podmínky splňuje, postupuje Zadavatel dle čl. 25 níže a provede hodnocení Předběžných nabídek (předběžné hodnocení). 
+Zadavatel je, po ukončení posouzení Předběžných nabídek se závěrem, že tyto odpovídají Zadávacím podmínkám, a po provedení hodnocení Předběžných nabídek, oprávněn rozhodnout, že o Předběžných nabídkách nebude jednáno. V takovém případě budou Předběžné nabídky považovány za Nabídky, předběžné hodnocení Předběžných nabídek bude považováno za výsledné hodnocení Nabídek a Zadavatel bude v jednacím řízení s uveřejněním následně postupovat dle čl. 26 níže.
+Nerozhodne-li Zadavatel dle odst. 22.2 výše o tom, že o Předběžných nabídkách nebude jednáno, uskuteční se, po otevření Předběžných nabídek, jejich posouzení a hodnocení, jednání o Předběžných nabídkách.
+Vlastní jednání o Předběžných nabídkách se uskuteční na základě výzvy Zadavatele učiněné prostřednictvím NEN, ve které bude, v souladu se ZZVZ, uvedena doba, místo a jazyk jednání (jednacím jazykem bude vždy jazyk český při respektování odst. 8.10 výše). Součástí výzvy k jednání může být i oznámení o výsledku hodnocení Předběžných nabídek nebo informace o aktuálně nejnižší Nabídkové ceně. Za tímto účelem Účastníci podáním Předběžné nabídky výslovně souhlasí s tím, že budou ostatním Účastníkům zadávacího řízení sděleny údaje z jejich Předběžné nabídky vztahující se k Nabídkové ceně.
+Jednání o Předběžných nabídkách bude probíhat odděleně s každým Účastníkem zvlášť. 
+Jednání o Předběžných nabídkách může probíhat i v několika kolech. 
+Na každé jednání o Předběžných nabídkách bude Účastník pozván, pokud termín dalšího jednání nebyl stanoven v protokolu uvedeném níže.
+Z jednání bude Zadavatelem pořízen písemný protokol z jednání. Podpisem každého protokolu z jednání se pro Účastníka ujednání uvedená v protokolu stávají závazná. Pozdější ujednání uvedená v protokolu z jednání nahrazují předchozí ujednání.
+Cílem Zadavatele v rámci jednání s Účastníky o Předběžných nabídkách je, v souladu § 61 odst. 8 ZZVZ, zlepšení Předběžných nabídek ve prospěch Zadavatele. S takto vytyčeným cílem bude Zadavatel vést každé jednání o Předběžné nabídce.
+Zadavatel může v průběhu jednání změnit nebo doplnit Zadávací podmínky, zejména technické podmínky, vyjma minimálních technických podmínek uvedených v příloze 3 části 4 Zadávací dokumentace (Návrh Smlouvy) a pravidel pro hodnocení nabídek uvedených v čl. 25 této části Zadávací dokumentace. O takové změně nebo doplnění bude Zadavatel Účastníky informovat prostřednictvím NEN, poskytne jim přiměřenou lhůtu pro úpravu Předběžných nabídek a vyzve je k podání Upravených předběžných nabídek zpracovaných v souladu se Zadávacími podmínkami změněnými na základě jednání o Předběžných nabídkách a výzvy k podání Upravených předběžných nabídek, jejíž součástí bude i protokol uvedený výše. 
+Zadavatel ve výzvě dle odst. 22.10 výše může Účastníky vyzvat buď k podání Upravené předběžné nabídky se všemi náležitostmi, které požaduje v Zadávací dokumentaci v případě Předběžné nabídky, nebo jen k doručení těch částí Upravené předběžné nabídky, které byly změnou Zadávacích podmínek učiněnou v důsledku jednání o Předběžných nabídkách nebo žádostí Zadavatele o objasnění/doplnění, dotčeny. Zadavatel, pro zajištění většího přehledu o změnách provedených v Upravených předběžných nabídkách preferuje zvýraznění změn provedených v Upravených předběžných nabídkách oproti Předběžným nabídkám, a to, jakkoliv barevně nebo jiným způsobem, vyjma revizního módu, jehož užití Zadavatel nepřipouští. 
+Po podání Upravených předběžných nabídek Zadavatel provede nové posouzení splnění Zadávacích podmínek, ve vztahu ke změněným či doplněným Zadávacím podmínkám v průběhu jednání o Předběžných nabídkách, a hodnocení Upravených předběžných nabídek způsobem uvedeným v čl. 25 níže.
+Nezmění-li Zadavatel v důsledku jednání o Předběžných nabídkách Zadávací podmínky, vyzve Zadavatel Účastníky k podání Nabídek bez zbytečného odkladu po ukončení jednání o Předběžných nabídkách, jinak až po posouzení a hodnocení Upravených předběžných nabídek. Budou-li Zadávací podmínky Zadavatelem upraveny, může být součástí výzvy k podání Nabídek, zpracovaných dle upravené Zadávací dokumentace, i oznámení o výsledku hodnocení Upravených předběžných nabídek. 
+posouzení PŘEDBĚŽNÝCH NABÍDek/UPRAVENÝCH PŘEDBĚŽNÝCH NABÍDek/NABÍDek
+Zadavatel posoudí splnění Zadávacích podmínek v podaných Předběžných nabídkách/Upravených předběžných nabídkách/Nabídkách Účastníků z hlediska prokázání splnění zákonných požadavků a požadavků Zadavatele uvedených v Zadávací dokumentaci. V souladu s § 39 odst. 4 ZZVZ může Zadavatel provést posouzení splnění podmínek účasti až po hodnocení Nabídek a provést posouzení splnění podmínek účasti v zadávacím řízení jen u Vybraného dodavatele.
+Ke zjevným početním chybám v Předběžné nabídce/Upravené předběžné nabídce/Nabídce, zjištěným při posouzení splnění Zadávacích podmínek v podaných Předběžných nabídkách/Upravených předběžných nabídkách/Nabídkách, které nemají vliv na hodnocení, Zadavatel nepřihlíží.
+Objasnění/doplnění předběžných NABÍDEK/UPravených předběžných nabídek/nabídek
+Zadavatel může požádat Účastníka o objasnění či doplnění Předběžné nabídky/Upravené předběžné nabídky/Nabídky dle § 46 odst. 1 ZZVZ. V žádosti Zadavatel uvede, v čem spatřuje nejasnosti Předběžné nabídky/Upravené předběžné nabídky/Nabídky, které má Účastník objasnit, případně, které údaje nebo doklady má Účastník doplnit. Zadavatel vyloučí Účastníka, pokud Účastník nedoručí objasnění či doplnění ve lhůtě třech (3) pracovních dnů ode dne doručení žádosti o objasnění či doplnění Předběžné nabídky/Upravené předběžné nabídky/Nabídky, nestanoví-li Zadavatel v žádosti o objasnění a doplnění lhůtu delší. Zadavatel může tuto lhůtu prodloužit nebo může zmeškání lhůty Účastníku na jeho žádost prominout.
+Zadavatel si vyhrazuje právo požadovat po Účastnících, v souladu s § 46 odst. 1 a § 211 odst. 2 a odst. 3 ZZVZ, ústní objasnění Předběžné nabídky, shledá-li takový postup vhodný. Rozhodne-li se Zadavatel požadovat po Účastnících ústní objasnění Předběžných nabídek, bude postupovat, v souladu s § 6 ZZVZ, takovým způsobem vůči všem Účastníkům zadávacího řízení, jejichž Předběžné nabídky bude požadovat objasnit. Zadavatel vyzve k účasti na ústním objasnění Předběžné nabídky Účastníky alespoň pět (5) pracovních dní předem. Ve výzvě Účastníku vždy uvede přesný termín, čas a místo konání, jakož i části Předběžné nabídky, které po Účastníku požaduje objasnit. Zadavatel předpokládá v průběhu ústního objasňování s Účastníkem diskutovat odborná témata proto, aby objasnění Předběžné nabídky naplnilo Zadavatelem sledovaný účel, předpokládá Zadavatel na případných ústních objasňováních Předběžných nabídek účast odborníků Účastníka, kteří zpracovávali část Předběžné nabídky, kterou požaduje Zadavatel po Účastníku objasnit. Profese Zadavatelem na ústním objasňování požadovaných osob uvede Zadavatel ve výzvě k účasti na ústním objasňování Předběžných nabídek. Zadavatel vyhotoví z průběhu ústního objasňování protokol, do kterého účastníci jednání zanesou i případné závazky Účastníka k doplnění/objasnění Předběžné nabídky, který osoby pověřené Účastníkem k účasti na objasňování Předběžné nabídky podepíší. Účastník není povinen se ústního objasňování účastnit, odmítne-li však Účastník svou účast na objasnění Předběžné nabídky, bude Zadavatel po Účastníku požadovat objasnění Předběžné nabídky v souladu s § 46 odst. 1 ZZVZ písemnou formou. 
+Po uplynutí Lhůty pro podání Nabídek nemůže být Nabídka měněna. Nabídka však může být doplněna na základě žádosti podle odst. 24.1 výše o údaje, doklady, vzorky nebo modely, které nebudou hodnoceny podle kritérií hodnocení. Uvedená podmínka platí i pro Předběžné nabídky po uplynutí Lhůty pro podání Předběžných nabídek v případě, pokud Zadavatel rozhodne dle odst. 22.2 části 1 Zadávací dokumentace o tom, že o Předběžných nabídkách nebude jednáno. 
+Za objasnění se považuje i oprava položkového rozpočtu, pokud není dotčena celková Nabídková cena nebo jiné kritérium hodnocení Nabídek. Uvedená podmínka platí i pro Předběžné nabídky po uplynutí Lhůty pro podání Předběžných nabídek, v případě, pokud Zadavatel rozhodne dle odst. 22.2 části 1 Zadávací dokumentace o tom, že o Předběžných nabídkách nebude jednáno.
+způsob hodnocení PŘEDBĚŽNÝCH NABÍDEK/upravených předběžných nabídek/Nabídek
+Hodnocení Předběžných nabídek/Upravených předběžných nabídek/Nabídek provede Komise způsobem dle ZZVZ podle jejich ekonomické výhodnosti. Ekonomická výhodnost Předběžný nabídek/Upravených předběžných nabídek/Nabídek se hodnotí podle nejnižší Nabídkové ceny bez DPH.
+Pro hodnocení Předběžných nabídek/ Upravených předběžných nabídek/ Nabídek použije Komise údaje vyplněné Účastníkem v části 3 ZD (Formuláře pro zpracování Předběžné nabídky/ Upravené předběžné nabídky/ Nabídky), v příloze č. 1A – Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky, nebo v příloze č. 1B (Průvodní list Předběžné nabídky/Upravené předběžné nabídky/Nabídky (Pro společnou Předběžnou nabídku/Upravenou předběžnou nabídku/Nabídku společníků), kde Účastník vyplní všechny požadované údaje.
+Komise seřadí Předběžné nabídky/ Upravené předběžné nabídky/ Nabídky, které byly hodnoceny, v pořadí od Předběžné nabídky/Upravené předběžné nabídky/Nabídky s nejnižší Nabídkovou cenou bez DPH, až po Předběžnou nabídku/ Upravenou předběžnou nabídek/Nabídku s nejvyšší Nabídkovou cenou bez DPH.
+Pokud je v zadávacím řízení jediný Účastník zadávacího řízení, může být Zadavatelem vybrán bez provedení hodnocení.
+výběr dodavatele, posouzení mimořádně nízké nabídkové ceny, uzavření Smlouvy
+Nejvýhodnější Nabídkou je Nabídka Účastníka, která byla vyhodnocena jako ekonomicky nejvýhodnější podle výsledků hodnocení Nabídek.
+Zadavatel k uzavření Smlouvy vybere Účastníka s nejvýhodnější Nabídkou. 
+V souladu s § 113 ZZVZ Zadavatel posoudí, zda náklady uvedené Účastníkem, tedy Nabídková cena není mimořádně nízká.
+Zadavatel z Jednacího řízení s uveřejněním vyloučí Účastníka, který v objasnění mimořádně nízké Nabídkové ceny nepotvrdil skutečnosti uvedené v § 113 odst.  4 ZZVZ nebo, v souladu s § 48 odst. 4 ZZVZ, Účastníka, jehož mimořádně nízká Nabídková cena nebyla Účastníkem řádně zdůvodněna.  
+Vybraného dodavatele Zadavatel vyzve k předložení: 
+dokladů o jeho kvalifikaci, které Zadavatel požadoval a nemá je k dispozici, a to včetně dokladů podle odst. 3.16 v části 2 ZD; pokud Zadavatel nepostupuje podle odst. 26.6 písm. b) této části Zadávací dokumentace, musí doklady o základní způsobilosti prokazovat splnění požadovaného kritéria způsobilosti v době podle odst. 3.13 v části 2 ZD;
+dokladů nebo vzorků, jejichž předložení je dle této Zadávací dokumentace podmínkou pro uzavření Smlouvy, pokud je Zadavatel již nemá k dispozici,
+dokladů prokazujících způsobilost Účastníkových Poddodavatelů, pokud je Zadavatel požadoval a nemá je k dispozici
+Ve výzvě dle čl. 26.5 této části Zadávací dokumentace Zadavatel může stanovit, že vybraný Dodavatel musí předložit též: 
+originály nebo úředně ověřené kopie dokladů podle odst. 26.5 této části Zadávací dokumentace,
+doklady o základní způsobilosti dle Kvalifikační dokumentace prokazující splnění požadovaného kritéria základní způsobilosti po doručení výzvy podle odst. 26.5 této části Zadávací dokumentace, nebo
+písemné čestné prohlášení o tom, že se nezměnily údaje rozhodné pro posouzení splnění kvalifikace obsažené v dokladech podle odst. 26.5 této části Zadávací dokumentace, které má Zadavatel k dispozici, nebo nové doklady, pokud se rozhodné údaje v těchto dokladech změnily.
+U Vybraného dodavatele, je-li českou právnickou osobou, Zadavatel zjistí údaje o jeho skutečném majiteli podle zákona upravujícího evidenci skutečných majitelů (dále jen „skutečný majitel“) z evidence skutečných majitelů podle téhož zákona (dále jen „evidence skutečných majitelů“).
+Vybraného dodavatele, je-li zahraniční právnickou osobou, Zadavatel vyzve k předložení výpisu ze zahraniční evidence obdobné evidenci skutečných majitelů nebo, není-li takové evidence, ke sdělení identifikačních údajů všech osob, které jsou jeho skutečným majitelem, a k předložení dokladů, z nichž vyplývá vztah všech těchto osob k Vybranému dodavateli; těmito doklady jsou zejména
+1. výpis ze zahraniční evidence obdobné veřejnému rejstříku,
+2. seznam akcionářů,
+3. rozhodnutí statutárního orgánu o vyplacení podílu na zisku,
+4. společenská smlouva, zakladatelská listina nebo stanovy.
+Zadavatel vyloučí Vybraného dodavatele, je-li českou právnickou osobou, která má skutečného majitele, pokud nebylo možné podle § 122 odst. 5 ZZVZ zjistit údaje o jeho skutečném majiteli z evidence skutečných majitelů; k zápisu zpřístupněnému v evidenci skutečných majitelů po odeslání oznámení o vyloučení Vybraného dodavatele se nepřihlíží. Zadavatel vyloučí Vybraného dodavatele, je-li zahraniční právnickou osobou, nepředloží-li ve stanovené lhůtě doklady dle odst. 26.8 výše.
+Zadavatel dále vyloučí Vybraného dodavatele, který nepředložil údaje, doklady nebo vzorky podle odst. 26.5.
+Zadavatel dále upozorňuje, že v souladu s § 48 odst. 9 ZZVZ vyloučí Vybraného dodavatele, u kterého bude, na základě informací vedených v obchodním rejstříku, vyplývat, že je akciovou společností (nebo má právní formu obdobnou akciové společnosti) a nemá vydány výlučně zaknihované akcie. Vybraného dodavatele se sídlem v zahraničí, který je akciovou společností nebo má právní formu obdobnou akciové společnosti, Zadavatel, v souladu s § 48 odst. 9 ZZVZ, požádá, aby v přiměřené lhůtě předložil písemné čestné prohlášení o tom, které osoby jsou vlastníky akcií, jejichž souhrnná jmenovitá hodnota přesahuje 10 % základního kapitálu dotyčného Vybraného dodavatele, s uvedením zdroje, z něhož údaje o velikosti podílu akcionářů vychází. Vzor uvedeného čestného prohlášení je obsažen v části 3 Zadávací dokumentace. V případě, že na straně Vybraného dodavatele vystupuje více osob společně (ve smyslu § 5 ZZVZ), se požadavky dle tohoto odstavce vztahují na každou osobu, která je akciovou společností nebo má právní formu obdobnou akciové společnosti. Požadavky dle tohoto odstavce se v souladu s § 48 odst. 10 ZZVZ nepoužijí, pokud se jedná o akciovou společnost, jejíž akcie v souhrnné jmenovité hodnotě 100 % základního kapitálu jsou ve vlastnictví státu, obce nebo kraje. 
+Zadavatel odešle oznámení o výběru Dodavatele všem Účastníkům, to neplatí v případě zadávacího řízení, v němž je jen jeden Účastník.
+Vybraný dodavatel je povinen poskytnout Zadavateli řádnou součinnost potřebnou k uzavření Smlouvy.
+Pokud dojde k vyloučení Vybraného dodavatele dle § 125 ZZVZ, může Zadavatel vyzvat k uzavření Smlouvy Účastníka dalšího v pořadí, které vyplývá z výsledků původního hodnocení Nabídek nebo z výsledků nového hodnocení. Takto vyzvaný Účastník se považuje za Vybraného dodavatele. 
+Vybraný dodavatel, který odmítne uzavřít se Zadavatelem Smlouvu nebo neposkytne řádnou součinnost tak, aby mohla být Smlouva v dané lhůtě uzavřena, odpovídá za škodu, která tím Zadavateli vznikne.  
+NAHRAZENÍ DODAVATELE v PRŮBĚHU TRVÁNÍ SMLOUVY JINÝM DODAVATELEM 
+Zadavatel si v souladu s ustanovením § 100 odst. 2 ZZVZ vyhrazuje právo změnit dodavatele veřejné zakázky v průběhu plnění veřejné zakázky, a to pro případ, že by Smlouva byla s vybraným Dodavatelem ukončena předčasně, tj. před uplynutím doby určité, na kterou bude Smlouva uzavřena. Nastane-li tento případ, je Zadavatel oprávněn uzavřít Smlouvu s novým Dodavatelem, a to za podmínek uvedených v tomto článku. 
+V případě postupu dle tohoto článku je Zadavatel oprávněn uzavřít Smlouvu/ s Účastníkem, který nebyl v Zadávacím řízení vybrán k uzavření Smlouvy a který se v hodnocení Nabídek umístil jako další v pořadí. Zadavatel nebude provádět nové hodnocení Nabídek, ale bude vycházet z pořadí Nabídek zjištěného na základě hodnocení Nabídek provedeného dle čl. 25 této části Zadávací dokumentace v zadávacím řízení. Zadavatel však provede u tohoto dalšího Účastníka posouzení splnění podmínek účasti, pokud tak neučinil již v Zadávacím řízení, a posoudí, zda u tohoto Účastníka nejsou naplněny povinné důvody pro vyloučení vybraného dodavatele dle § 48 ZZVZ. Pokud jsou naplněny důvody, pro které by nebylo možné uzavřít Smlouvu s tímto Účastníkem, může Zadavatel oslovit Účastníka, který se umístil na dalším místě v pořadí. V opačném případě tohoto Účastníka osloví jako dalšího vybraného Dodavatele (nového dodavatele) k uzavření Smlouvy. 
+Smlouva bude s novým Dodavatelem uzavřena v případě postupu dle tohoto článku za podmínek, které tento Dodavatel nabídl ve své Nabídce podané v zadávacím řízení, a bude uzavřena na dobu určitou, a to do doby, kdy měla skončit Smlouva s Dodavatelem, který je novým Dodavatelem postupem dle tohoto článku nahrazován. 
+Postup dle odst. 27.2 této části Zadávací dokumentace se použije obdobně pro další Účastníky v pořadí, pokud Účastník, se kterým by měla být uzavřena Smlouva, nesplní podmínky účasti v zadávacím řízení, dojde u něj k naplnění podmínek pro vyloučení, odmítne uzavřít se Zadavatelem Smlouvu, neposkytne Zadavateli součinnost k jejímu uzavření, nebo k uzavření Smlouvy nedojde z jiných důvodů na straně Dodavatele.

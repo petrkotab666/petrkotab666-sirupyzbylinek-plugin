@@ -1,0 +1,2290 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+
+ČÁST 4
+
+
+NÁVRH SMLOUVY
+
+Příloha 4
+
+Požadavky na dokumentaci
+
+
+
+
+
+
+
+
+
+
+
+
+Příloha 4
+Požadavky na dokumentaci
+
+OBSAH:
+ TOC \o "1-4" \h \z \u 1.Obecné požadavky PAGEREF _Toc169853195 \h 6
+1.1.Účel a členění dokumentace PAGEREF _Toc169853196 \h 6
+1.2.Plán tvorby dokumentace PAGEREF _Toc169853197 \h 8
+2.Projektová dokumentace PAGEREF _Toc169853198 \h 8
+2.1.Projektová dokumentace pro vydání stavebního povolení (DSP) a Ohlášení stavby – Neaplikováno PAGEREF _Toc169853199 \h 9
+2.2.Projektová dokumentace stupně Úvodní projekt (Basic Design) – Neaplikováno PAGEREF _Toc169853200 \h 9
+2.3.Studie HAZOP – Neaplikováno PAGEREF _Toc169853201 \h 9
+2.4.Studie SIL – Neaplikováno PAGEREF _Toc169853202 \h 9
+2.5.Projektová dokumentace pro provádění stavby (DpPS) – Neaplikováno PAGEREF _Toc169853203 \h 9
+2.6.Realizační projektová dokumentace (Detail Design - DD) PAGEREF _Toc169853204 \h 9
+2.6.1.Obecná část Realizační projektové dokumentace PAGEREF _Toc169853205 \h 10
+2.6.2.Část elektro Realizační projektové dokumentace PAGEREF _Toc169853206 \h 10
+2.6.3.Část SKŘ Realizační projektové dokumentace PAGEREF _Toc169853207 \h 11
+2.6.3.1.Dokumentace hardware PAGEREF _Toc169853208 \h 11
+2.6.3.2.Dokumentace software PAGEREF _Toc169853209 \h 11
+2.6.4.Část stavební Realizační projektové dokumentace PAGEREF _Toc169853210 \h 13
+2.6.4.1.Pozemní stavební objekty – Architektonicko-stavební řešení PAGEREF _Toc169853211 \h 13
+2.6.4.2.Pozemní stavební objekty – Stavebně konstrukční část PAGEREF _Toc169853212 \h 14
+2.6.4.3.Technika prostředí staveb PAGEREF _Toc169853213 \h 16
+2.6.4.4.Inženýrské objekty PAGEREF _Toc169853214 \h 19
+2.6.4.5.Značení místností a stavebních objektů PAGEREF _Toc169853215 \h 20
+2.6.5.Část technická a technologická Realizační projektové dokumentace PAGEREF _Toc169853216 \h 21
+2.6.6.Plán organizace výstavby – POV PAGEREF _Toc169853217 \h 21
+2.7.Projekt garančních měření a testů k přejímce Díla PAGEREF _Toc169853218 \h 24
+2.8.Projekt čistících operací po montážích (PČO) PAGEREF _Toc169853219 \h 25
+2.9.Projekt těsnostních a pevnostních zkoušek pro ucelené tlakové celky (PTPZ) PAGEREF _Toc169853220 \h 26
+2.10.Dokumentace skutečného provedení stavby (DSPS) PAGEREF _Toc169853221 \h 26
+2.11.Projektová dokumentace bouracích prací (DBP) – Neaplikováno PAGEREF _Toc169853222 \h 27
+2.12.Dokumentace změny stavby před jejím dokončením (DZSPD) PAGEREF _Toc169853223 \h 27
+2.13.Dokumentace pro připojení výrobny k DS (DPDS) – Neaplikováno PAGEREF _Toc169853224 \h 27
+3.Technická dokumentace (TD) PAGEREF _Toc169853225 \h 27
+3.1.Plán managementu projektu Zhotovitele (PMP) PAGEREF _Toc169853226 \h 27
+3.2.Dokumentace pro zajištění a řízení kvality Díla (QA – QC) PAGEREF _Toc169853227 \h 28
+3.2.1.Plán kvality (PK) PAGEREF _Toc169853228 \h 28
+3.2.2.Program kontrol a zkoušek (PrKZ) PAGEREF _Toc169853229 \h 29
+3.2.3.Plán kontrol a zkoušek PAGEREF _Toc169853230 \h 30
+3.2.4.Programy zkoušek (PZ) PAGEREF _Toc169853231 \h 31
+3.2.5.Kniha kontrol a zkoušek (KKZ) PAGEREF _Toc169853232 \h 31
+3.2.6.Revizní řády (RR) PAGEREF _Toc169853233 \h 31
+3.2.6.1.Tvorba revizních řádů PAGEREF _Toc169853234 \h 32
+3.2.6.2.Výchozí revizní zprávy (VRZ) PAGEREF _Toc169853235 \h 32
+3.2.6.3.Plány revizí PAGEREF _Toc169853236 \h 33
+3.2.6.4.Požadavky na zajištění nultých stavů pro sledování životnosti zařízení PAGEREF _Toc169853237 \h 33
+3.3.Dokumentace pro demontáž (DM) PAGEREF _Toc169853238 \h 33
+3.4.Montážní dokumentace (MD) PAGEREF _Toc169853239 \h 34
+3.4.1.Plán organizace montáže (POM) PAGEREF _Toc169853240 \h 34
+3.4.2.Technologické instrukce individuálních zkoušek (IZ) PAGEREF _Toc169853241 \h 35
+3.5.Předpisy pro provoz zařízení (DPP) PAGEREF _Toc169853242 \h 35
+3.6.Předpisy pro údržbu zařízení (DPU) PAGEREF _Toc169853243 \h 36
+3.7.Programy uvádění do provozu (PZUP) PAGEREF _Toc169853244 \h 37
+3.7.1.Program funkčních zkoušek (FZ) PAGEREF _Toc169853245 \h 38
+3.7.2.Program předkomplexního vyzkoušení (PKV) PAGEREF _Toc169853246 \h 38
+3.8.Projekt certifikačních zkoušek (PCZ) PAGEREF _Toc169853247 \h 39
+3.9.Průvodní technická dokumentace (PTD) PAGEREF _Toc169853248 \h 39
+3.9.1.PTD z výroby (PTD VYR) PAGEREF _Toc169853249 \h 41
+3.9.2.PTD z montáže (PTD MONT) PAGEREF _Toc169853250 \h 42
+3.9.3.PTD z uvádění do provozu (PTD NAJ) PAGEREF _Toc169853251 \h 43
+3.9.4.PTD vyhrazených technických zařízení (PTD VTZ) PAGEREF _Toc169853252 \h 43
+3.9.5.PTD ocelových konstrukcí (PTD OK) PAGEREF _Toc169853253 \h 43
+3.9.6.PTD měřících zařízení (PTD KL) PAGEREF _Toc169853254 \h 44
+3.9.7.PTD požárně bezpečnostního zařízení (PTD PBZ) PAGEREF _Toc169853255 \h 44
+3.9.8.PTD ochrany před výbuchem (PTD DOPV) PAGEREF _Toc169853256 \h 44
+3.9.9.PTD licenční ujednání, aplikační SW, SW zálohy (PTD SW) PAGEREF _Toc169853257 \h 45
+3.9.10.PTD nakládání s odpady (PTD LO) PAGEREF _Toc169853258 \h 45
+3.9.11.PTD geodetické zaměření (PTD GeZ) PAGEREF _Toc169853259 \h 45
+3.9.12.PTD geometrický plán (PTD GeP) PAGEREF _Toc169853260 \h 46
+3.9.13.PTD zaškolení personálu (PTD SKOL) PAGEREF _Toc169853261 \h 46
+3.10.Dokumentace pro školení personálu (DOO) PAGEREF _Toc169853262 \h 46
+3.11.Projekty měření požadovaných legislativou ke zkušebnímu provozu a kolaudaci Díla PAGEREF _Toc169853263 \h 47
+4.Dokumentace skutečného stavu (DSS) PAGEREF _Toc169853264 \h 47
+4.1.Opravená dokumentace – Red correct (RC) PAGEREF _Toc169853265 \h 47
+4.2.Dokumentace skutečného stavu – As Built (AsB) PAGEREF _Toc169853266 \h 47
+4.2.1.Dokumentace skutečného stavu připojení výrobny k DS (AsB DS) PAGEREF _Toc169853267 \h 48
+5.Ostatní dokumentace PAGEREF _Toc169853268 \h 48
+5.1.Geotechnický průzkum PAGEREF _Toc169853269 \h 48
+5.2.Oblast BOZP PAGEREF _Toc169853270 \h 49
+5.3.Požadavky na průvodně technickou dokumentaci měřidel PAGEREF _Toc169853271 \h 49
+5.4.Doklady k žádosti o povolení zkušebního provozu (DPZP) PAGEREF _Toc169853272 \h 49
+5.5.Doklady k žádosti o kolaudační souhlas Díla (DKS) PAGEREF _Toc169853273 \h 50
+5.6.Harmonogram PAGEREF _Toc169853274 \h 50
+6.Schvalování a kontrola DOKUMENTACE PAGEREF _Toc169853275 \h 50
+6.1.Předávání dokumentace ke schválení PAGEREF _Toc169853276 \h 50
+6.2.Proces schvalování PAGEREF _Toc169853277 \h 51
+6.3.Nekompletní dokumentace PAGEREF _Toc169853278 \h 51
+6.4.Rozpory s ustanovením Smlouvy PAGEREF _Toc169853279 \h 51
+6.5.Neschválení dokumentace PAGEREF _Toc169853280 \h 51
+6.6.Zodpovědnost Zhotovitele PAGEREF _Toc169853281 \h 51
+6.7.Kategorie schvalování PAGEREF _Toc169853282 \h 51
+6.8.Počet kopií dokumentace ke schválení PAGEREF _Toc169853283 \h 52
+6.9.Pravidla pro předávání dokumentace PAGEREF _Toc169853284 \h 52
+7.Pokyny pro zpracování dokumentace PAGEREF _Toc169853285 \h 53
+7.1.Číslování dokumentů PAGEREF _Toc169853286 \h 54
+7.2.Zpracování dokumentace PAGEREF _Toc169853287 \h 55
+7.2.1.Dokumenty v papírové podobě PAGEREF _Toc169853288 \h 55
+7.2.2.Dokumenty v digitální podobě PAGEREF _Toc169853289 \h 55
+7.2.2.1.Evidence dokumentace – jednotné seznamy PAGEREF _Toc169853290 \h 56
+7.2.2.2.Textové a tabulkové dokumenty PAGEREF _Toc169853291 \h 56
+7.2.2.3.Rastrová dokumentace PAGEREF _Toc169853292 \h 57
+7.2.2.4.Software pro práci s harmonogramem PAGEREF _Toc169853293 \h 57
+7.2.2.5.Formáty databáze PAGEREF _Toc169853294 \h 57
+7.2.2.6.Formáty 3D dokumentace PAGEREF _Toc169853295 \h 57
+7.2.2.7.Výkresová dokumentace strojní a stavební PAGEREF _Toc169853296 \h 58
+7.2.2.8.Výkresová dokumentace elektro a SKŘ PAGEREF _Toc169853297 \h 58
+7.2.2.9.Technologická, dispoziční a liniová schémata PAGEREF _Toc169853298 \h 58
+7.2.2.10.Měřítko výkresů PAGEREF _Toc169853299 \h 59
+7.2.2.11.Schématické značky PAGEREF _Toc169853300 \h 59
+7.2.2.12.Výkresové rámečky PAGEREF _Toc169853301 \h 59
+7.2.2.13.Výkresové razítko PAGEREF _Toc169853302 \h 59
+7.2.2.14.Změny ve výkresové dokumentaci (dispoziční výkresy, technologická schémata, elektrická schémata). PAGEREF _Toc169853303 \h 59
+7.2.2.15.Změny v textových a tabulkových dokumentech PAGEREF _Toc169853304 \h 60
+7.3.Pokyny pro značení KKS kódem PAGEREF _Toc169853305 \h 60
+7.4.Množství předávané dokumentace PAGEREF _Toc169853306 \h 62
+8.seznam Příloh PAGEREF _Toc169853307 \h 64
+
+
+Obecné požadavky
+Účel a členění dokumentace
+
+Dokumentace popisovaná v této příloze představuje dokumentaci zpracovávanou Zhotovitelem.
+
+Tímto dokumentem jsou stanoveny obecné požadavky na obsah, formu a strukturu dokumentace.
+
+Veškerá dokumentace musí být Zhotovitelem vyhotovena v českém jazyce nebo doložena překladem do českého jazyka tlumočníkem zapsaným do seznamu tlumočníků a překladatelů dle zákona č. 354/2019 Sb., o soudních tlumočnících a soudních překladatelích ve znění pozdějších předpisů.
+
+S dokumentací z přípravy a realizace Díla je Objednatel oprávněn nakládat všemi způsoby vymezenými v § 12 zákona č. 121/2000 Sb., zákon o právu autorském, o právech souvisejících s právem autorským a o změně některých zákonů (autorský zákon), zejména, aby mohl dokumentaci z přípravy a realizace Díla předat neomezenému množství osob, aby ji tyto použily ke splnění účelu, pro který je dokumentace z přípravy a realizace Díla Objednatelem pořizována.
+
+Dokumentace zpracovávaná v rámci Smlouvy musí být dodána Zhotovitelem Objednateli v takovém rozsahu, množství, termínech a kvalitě, aby umožnila:
+získání veškerých povolení, souhlasů a stanovisek orgánů státní správy, které jsou dle platné legislativy nutné pro realizaci a provoz Díla,
+detailní posouzení celkového řešení Díla, jeho rozdělení do časových úseků v souladu s časovým plánem a posouzení jeho souladu s požadavky Smlouvy a s rozhodnutími a podmínkami legislativního povolení stavby,
+koordinaci Díla s jeho okolím a se souběžně probíhajícími aktivitami a projekty v místě Staveniště,
+kontrolu úplnosti a kvality prací a dodávek v průběhu Díla,
+provedení Díla, jeho montáž a uvedení do provozu,
+provedení garančního měření,
+školení personálu Objednatele,
+provoz, údržbu a opravy Díla,
+zdokumentování konečného provedení a stavu Díla.
+
+Dokumentace zpracovávaná v rámci Smlouvy musí být dodána Zhotovitelem Objednateli minimálně v tomto členění:
+
+PROJEKTOVÁ DOKUMENTACE (PD)
+Realizační projektová dokumentace – Detail Design (DD)
+Projekt garančních měření a testů k přejímce Díla
+Projekt pomontážních čistících operací (PČO)
+Projekty těsnostních a pevnostních zkoušek pro ucelené tlakové celky (PTPZ)
+Dokumentace skutečného provedení stavby (DSPS)
+Projektová dokumentace bouracích prací (DBP)
+Dokumentace změny stavby před dokončením (DZSPD)
+
+TECHNICKÁ DOKUMENTACE (TD)
+Plán managementu projektu Zhotovitele (PMP)
+Dokumentace pro zajištění a řízení kvality (QA-QC)
+Dokumentace pro demontáž (DM)
+Montážní dokumentace (MD)
+Předpisy pro provoz zařízení (DPP)
+Předpisy pro údržbu zařízení (DPU)
+Programy zkoušek a uvádění do provozu (PZUP)
+Dokumentace pro obsluhu Objednatele (školení) (DOO)
+Projekt certifikačních zkoušek (PCZ)
+Projekt zkušebního provozu (PZP)
+Dokumentace pro školení personálu (DOO)
+Projekty měření požadovaných legislativou ke zkušebnímu provozu a kolaudaci Díla
+
+PRŮVODNÍ TECHNICKÁ DOKUMENTACE (PTD)
+Dokumentace z výroby (PTD VYR)
+Dokumentace z montáže (PTD MONT)
+Dokumentace z uvádění do provozu (PTD NAJ)
+Dokumentace vyhrazených technických zařízení (revizní zprávy) (PTD VTZ)
+Zprávy o výchozí prohlídce ocelových konstrukcí (PTD OK)
+Kalibrační listy (PTD KL)
+Dokumentace požárně bezpečnostního zařízení (PTD PBZ)
+Dokumentace ochrany před výbuchem (PTD DOPV)
+Licenční ujednání, aplikační SW a SW zálohy (PTD SW)
+Dokumentace nakládání s odpady (PTD LO)
+Geodetické zaměření (PTD GeZ)
+Geometrický plán (PTD GeP)
+Zaškolení personálu (PTD SKOL)
+DOKUMENTACE SKUTEČNÉHO STAVU (DSS)
+Opravená dokumentace (RC)
+Dokumentace skutečného stavu (AsB)
+OSTATNÍ DOKUMENTACE (OD)
+Geotechnický průzkum
+Harmonogram (HMG)
+Dokumentace BOZP
+Technologické postupy (TP)
+Doklady k povolení zkušebního provozu (DPZP)
+Doklady ke kolaudačnímu souhlasu (DKS)
+
+Dokumentace bude zpracována v souladu s dokumenty, normami, metodikami a technickými standarty Objednatele, které jsou uvedeny v přílohách této Smlouvy, zejména s dokumenty:
+ČEZ_TST_0029 – Základní mapa závodu (Příloha 50.10 Přílohy 1 Smlouvy),
+ČEZ_TST_0030 – Systém jednotného značení elektráren ČEZ, a. s., kódem KKS pro uhelné, plynové a vodní zdroje (Příloha 50.07 Přílohy 1 Smlouvy),
+ČEZ_TST_0049, Požadavky na dokumentaci a data o zařízení stávajících zdrojů KE a VE (Příloha 52.01 této Přílohy 4 Smlouvy).
+
+Veškerá dokumentace bude členěna po jednotlivých SO/DSO/InO a PS/DPS uvedených v Příloze 1 Smlouvy. Ve stavebních objektech je každá dokumentace členěna po provozních souborech, dílčích provozních souborech a stavebních profesích Díla. Dokumentace Díla v rámci Smlouvy zajišťovaná Zhotovitelem bude obsahovat a bude členěna dle této Přílohy 4 Smlouvy tak, jak je uvedeno níže.
+
+Zhotovitel zajistí soulad mezi dokumentací předávanou v elektronické podobě dle Přílohy 53.0 této Přílohy 4 Smlouvy a dokumentací předávanou v listinné podobě dle Přílohy 53.0 této Přílohy 4 Smlouvy.
+
+Zhotovitel dále dodá veškerou nezbytnou dokumentaci, požadovanou podle na Dílo aplikovaných zákonů, předpisů, vyhlášek a povolení Objednateli.
+
+Za účelem spolehlivé koordinace projektové dokumentace musí Zhotovitel zpracovávat všeprofesní dokumentaci v úrovni podrobnosti Basic Design databázově ve (2D) datech, stejně tak dokumentaci Detail Design a následně Dokumentaci skutečného stavu.
+
+Kompletní projektová dokumentace musí být předána ve formě naplněných databází (projektové, výkresové, katalogové a dalších) včetně jejich úplného popisu.
+
+Veškeré samostatně identifikovatelné komponenty Díla budou označeny jednotným systémem značení KKS. Zhotovitel zajistí soulad při značení jak uvedeným v dokumentaci, tak fyzickém při realizaci Díla.
+
+Plán tvorby dokumentace 
+
+Plán tvorby dokumentace, zpracovaný Zhotovitelem, popisuje způsob a postupy tvorby dokumentace Zhotovitele zpracovávané v rámci Díla, stanoví program schvalování dokumentace a určí termíny předpokládaného vydání jednotlivých dokumentů.
+
+Plán tvorby dokumentace bude obsahovat zejména:
+formální pravidla pro tvorbu dokumentace podle Přílohy 17 Smlouvy, Administrativní řád,
+soupis dokumentace zpracovávané Zhotovitelem v rozsahu uvedeném v čl.  2 až 5 této Přílohy 4 Smlouvy, ze které bude pro každý typ dokumentu zřejmé minimálně:
+rámcový obsah a struktura dokumentu,
+zpracovatel dokumentu (Zhotovitel nebo jeho poddodavatel),
+u databázových dokumentů (seznamů) bude uvedena struktura databáze,
+harmonogram schvalování a předávání dokumentace, podle kterého bude v dohodnutých termínech Zhotovitel postupně předkládat Objednateli ke schválení jednotlivé části dokumentace včetně:
+předpokládaných termínů konzultací mezi Zhotovitelem a Objednatelem,
+plánovaných termínů připomínkování a schvalování dokumentů Objednatelem,
+popř. další údaje potřebné pro řízení a koordinaci tvorby dokumentace Zhotovitele jako jsou potřebné vstupy poddodavatelů a jejich termíny.
+
+Časové údaje budou vycházet z platné verze časového harmonogramu a časového prováděcího plánu.
+
+Aktuální verze harmonogramu schvalování a předávání dokumentace bude vždy předkládána jako jedna z příloh zprávy o postupu výstavby podle odst. 11.3 Smlouvy.
+Projektová dokumentace
+Požadavky na projektovou dokumentaci a dokumentaci skutečného stavu
+Projektová dokumentace pro vydání stavebního povolení (DSP) a Ohlášení stavby – Neaplikováno
+
+Projektová dokumentace stupně Úvodní projekt (Basic Design) – Neaplikováno
+
+Studie HAZOP – Neaplikováno
+
+Studie SIL – Neaplikováno
+
+Projektová dokumentace pro provádění stavby (DpPS) – Neaplikováno
+
+
+Realizační projektová dokumentace (Detail Design - DD)
+
+Realizační projektová dokumentace bude zpracována Zhotovitelem na základě projektové dokumentace pro provádění stavby (DpPS) a bude obsahovat veškeré podrobné informace a dokumenty definující rozsah, dimenzování a kvalitu jednotlivých komponent Díla tak, aby Dílo bylo kompletní a bezpečně provozovatelné ve shodě se Smlouvou.
+
+Realizační projektová dokumentace bude navazovat svým rozsahem a zpracováním na specifické požadavky na projektovou dokumentaci pro provádění stavby a bude je rozpracovávat do podrobných detailů.
+
+Realizační projektová dokumentace zpracovaná Zhotovitelem bude obsahovat veškeré podrobné informace a dokumentaci potřebnou pro realizaci Díla.
+
+Realizační projektová dokumentace je definitivní podklad pro obstarání všech potřebných komponent Díla a slouží jako zadání pro zpracování výrobní a montážní dokumentace.
+
+Pokud dojde k nevyhnutelným změnám a odchylkám od projektové dokumentace pro provádění stavby, předem schváleným Objednatelem, Zhotovitel provádí koordinaci v průběhu projektování mezi jednotlivými profesemi a poddodavateli. Tyto změny budou Zhotovitelem zapracovány v realizační projektové dokumentaci. Veškeré změny a odchylky od projektové dokumentace pro provádění stavby, schvaluje Objednatel.
+
+Realizační projektová dokumentace bude primárně odpovídat rozsahu a obsahu přílohy č. 13 vyhlášky č. 499/2006 Sb., v platném znění, a bude nad rámec požadavků přílohy 13, vyhlášky č. 499/2006 Sb., v platném znění, Zhotovitelem dále doplněna o tyto části:
+obecná část Realizační projektové dokumentace,
+část elektro Realizační projektové dokumentace,
+část SKŘ Realizační projektové dokumentace
+část stavební Realizační projektová dokumentace,
+část technologická Realizační projektové dokumentace,
+Plán organizace výstavby
+
+Obecná část Realizační projektové dokumentace
+
+Nad rámec přílohy 13, vyhlášky č. 499/2006 Sb., v platném znění, zapracuje Zhotovitel do realizační projektové dokumentace následující dokumenty zpracované podle uvedených požadavků:
+technickou zprávu,
+koordinační schémata – včetně KKS kódů,
+koordinační dispoziční výkresy – včetně KKS kódů, 
+koordinovaný seznam elektrospotřebičů – včetně KKS kódů,
+koordinovaný seznam měřících míst na zařízení – včetně KKS kódů, 
+koordinovaný seznam regulačních ventilů – včetně KKS kódů,
+koordinovaný seznam připojovacích míst – včetně KKS kódů,
+koordinovaný seznam strojů a zařízení – včetně KKS kódů,
+koordinovaný seznam potrubních tras včetně KKS kódů,
+koordinovaný seznam armatur včetně KKS kódů,
+datové listy jednotlivých strojů a zařízení – včetně KKS kódů,
+popisy regulací a automatů – včetně KKS kódů,
+podklady pro program prvního najetí,
+seznam změn oproti projektové dokumentaci pro provádění stavby členěný po SO, InO a PS,
+popis přechodových stavů – úplné a jednoznačné technické řešení,
+podmínky realizace prací a vztahy na okolní provozovaná zařízení a objekty podmiňující realizaci předmětu plnění,
+pokud bude navrhovaná konstrukce bezpečná jen za určitých provozních podmínek, bude na to v této realizační projektové dokumentaci výrazným způsobem upozorněno a návrh těchto opatření bude její součástí.
+
+Část elektro Realizační projektové dokumentace
+
+Nad rámec přílohy 13, vyhlášky č. 499/2006 Sb. v platném znění zapracuje Zhotovitel do realizační projektové dokumentace následující dokumenty zpracované podle uvedených požadavků:
+odvolávky na platné a použité normy ČSN a IEC nebo jiné,
+použitá značení a typové podklady,
+výsledky výpočtů elektrických zařízení, (výpočty nového výkonového zatížení transformátorů, napěťových sběrnic, napájecích vývodů a provedení výpočtu charakteristik nových i stávajících jistících prvků a zkratových poměrů jednotlivých rozvaděčů, povolených úbytků napětí na napájecích přívodech elektrospotřebičů),
+nastavení ochran,
+informace o elektrozařízení:
+napěťové soustavy,
+zkratové poměry,
+pracovní prostředí,
+napájení zařízení,
+detailní popis připojení elektrozařízení na řídicí systémy,
+popis zemnění a ochrany před úrazem elektrickým proudem,
+konstrukční výkresy traf, rozváděčů, skříní, rámů apod. včetně kotvení,
+jednopólová schémata zapojení, 
+schémata zapojení elektrických ochran a měření
+schémata ovládání všech vývodů dotčených realizací Díla,
+výkresy vnitřního a vnějšího zapojení pro všechny svorkovnice všech dodávaných nebo upravovaných rozváděčů,
+osvětlení (včetně nouzového únikového osvětlení a náhradního osvětlení),
+seznam elektrospotřebičů,
+seznam kabelů v rozsahu Díla vč. veškerých údajů o délkách, odkud a kam vedou, typech kabelů, umístění do kabelových tras s určením použité lávky apod.,
+dispoziční výkresy kabelových tras,
+závěr z vyjasnění a souhlas provozovatele distribuční soustavy s poměrem napětí transformátoru a impedance pro blokové transformátory VVN/VN,
+závěr z vyjasnění a souhlas provozovatele distribuční soustavy s poměrem napětí transformátoru a impedance pro odbočkové transformátory VN/VN.
+
+Část SKŘ Realizační projektové dokumentace
+
+Nad rámec přílohy 13, vyhlášky č. 499/2006 Sb. v platném znění zapracuje Zhotovitel do realizační projektové dokumentace následující dokumenty zpracované podle uvedených požadavků:
+
+Dokumentace hardware
+
+Dokumentace HW bude obsahovat podrobné informace vztahující se k dodávané instrumentaci, skříním, kabeláži atd.
+Bude obsahovat veškeré výkresy vytvořené speciálně pro toto Dílo včetně konfigurace systému, dispozičního řešení a využití jednotlivých modulů, minimálně pak:
+konečnou specifikaci veškerého dodávaného hardware včetně náhradních dílů pro uvedení do provozu se všemi technickými údaji a údaji potřebnými pro identifikaci zařízení a objednávání náhradních dílů,
+seznam kabelů vč. veškerých údajů o délkách, typech kabelů, umístění do kabelových tras s určením použité lávky apod.,
+konečné a podrobné dispoziční výkresy umístění veškerého dodaného zařízení vč. rámů pro přístroje, kabelových tras apod.,
+čelní návrhy ovládacích panelů / pultů a výkresy uspořádání pracovišť včetně identifikace přístrojů a zařízení,
+polohopisné uspořádání jednotek a svorkovnic uvnitř skříní,
+schémata vnitřního zapojení panelů a pultů, tabulky vnitřních spojů skříní systému,
+obvodová schémata zapojení jednotlivých snímačů, akčních členů a případně dalších návazností mezi jednotlivými zařízeními až po svorky I/O karet řídících systémů
+liniová, přehledová a bloková a logická schémata (viz ČSN EN 61082-1) jednotlivých systémů a skříní,
+výkresy propojovací kabeláže mezi jednotlivými komponenty dodávaného zařízení a kabeláže na cizí zařízení vč. svorkového zapojení,
+konstrukční výkresy skříní, skříněk, rámů apod.,
+seznamy vstupů a výstupů procesních stanic,
+výkresy svorkovnic (terminálů) skříní,
+principiální schémata zemnění a ochrany před úrazem elektrickým proudem,
+schémata napájení zařízení,
+údaje o kalibračních hodnotách HW potřebných pro dosažení požadovaných provozních parametrů,
+konstrukční výkresy pro montáž měřidel do technologie – „hook-up“,
+seznamy měřidel.
+
+Dokumentace software
+
+Dokumentace SW pro SKŘ bude obsahovat informace o aplikačním software systémů v dostatečně podrobném rozsahu pro to, aby mohly i jiné osoby než autor rozumět programům a tyto programy modifikovat po uplynutí záruční doby Zhotovitele.
+
+Bude obsahovat minimálně:
+základní popis cílů programů, jejich možností a omezení,
+popis vstupních dat a výstupních hodnot vč. rozsahů proměnných, normálních hodnot, signalizačních mezí, poruchových hodnot apod.,
+funkční bloková schémata pro měření, úpravu signálů, regulace, logické řízení a ochrany,
+řídící algoritmy, jejich seznam a popis, 
+konfiguraci obrázků na monitorech,
+konfiguraci poruchových a stavových hlášení a událostí vč. návrhu formuláře pro zobrazení a tisk,
+konfigurace zpráv vč. návrhu formuláře pro tisk,
+konfiguraci úchovy historických dat,
+informace o vzorkovacích periodách, periodách pro ukládání dat, procesních cyklech jednotlivých proměnných a algoritmů,
+informace o nastavení SW (kalibraci) pro dosažení požadovaných výkonnostních kritérií,
+seznam všech SW aplikací v Díle včetně popisu k použití,
+datový model všech aplikací (seznamy databází/souborů a popis k čemu slouží), zdokumentovanou datovou strukturu všech databází/souborů, v případě, že aplikace používají relační databáze – bude uveden seznam tabulek s primárními klíči, seznam tabulek s cizími klíči, seznam vazebných položek mezi tabulkami,
+seznam vstupních a výstupních signálů, seznam proměnných,
+seznam (databáze) všech počítaných hodnot – včetně uvedení fyzikálních jednotek a principu výpočtu,
+veškeré další informace o software, který byl speciálně vytvořen nebo upraven pro toto Dílo,
+dokumentaci rozhraní na jiné systémy instalované mimo hranice Díla,
+komentované zdrojové texty SW, (algoritmy a obrazovky pro řízení technologických procesů) v elektronické podobě,
+popis způsobu prezentace informací na obrazovkách operátorských stanic (přiřazení barev stavům proměnných dynamické změny apod.), 
+způsob zabezpečení SW produktů proti náhodnému narušení a nežádoucím či nepovoleným zásahům.
+
+V rámci realizační projektové dokumentace (Detail Design) bude Zhotovitelem Objednateli předložena k posouzení a ke schválení dokumentace na zajištění kybernetické bezpečnosti.
+
+Součástí dokumentace na zajištění kybernetické bezpečnosti k síti bude:
+schéma logické a fyzické topologie sítě a vazeb na okolní systémy,
+adresní plán sítě,
+seznam všech využitých VLAN, fyzických sítí, 
+komunikační pravidla, routovací tabulky a využité protokoly.
+Bude vytvořen autorizační koncept pro přístup k systému.
+Budou popsány postupy pro zálohování systému.
+Bude popsána politika ochrany proti malware.
+Bude popsána politika pro řízení zranitelností a aktualizací. 
+Budou popsány plány pro zotavení a obnovení funkčnosti systému (DRP)
+
+Část stavební Realizační projektové dokumentace
+
+Nad rámec přílohy 13, vyhlášky č. 499/2006 Sb. v platném znění zapracuje Zhotovitel do realizační projektové dokumentace následující dokumenty zpracované podle uvedených požadavků:
+Technická zpráva
+Technická zpráva zpracovaná Zhotovitelem bude zejména obsahovat:
+zpřesnění, doplnění a zdůvodnění veškerých údajů a případných odchylek oproti ověřené projektové dokumentaci pro provádění stavby,
+zdůvodnění a zpřesnění technického, konstrukčního, materiálového a dispoziční řešení,
+stanovení zvláštních podmínek pro provádění, montáž nebo technologické postupy,
+v samostatné kapitole uvedený popis požárně bezpečnostního řešení týkajícího se konkrétně jednotlivých SO,
+podrobné technologické postupy popisující sanace železobetonových, ocelových a jiných konstrukcí, které budou vycházet ze Zhotovitelem zajištěných stavebně technických průzkumů,
+v samostatné kapitole vypsaný seznam všech požadovaných zkoušek, revizí, které jsou podrobně rozpracovány v čl. 3 Technická dokumentace této Přílohy 4 Smlouvy.
+Výkresová část
+Výkresovou část zpracuje Zhotovitel v měřítku přiměřeném jejich účelu (obvykle 1:50) dle následujícího:
+výkresy podrobností (detailů) zobrazují pro Zhotovitele závazné nebo tvarově složité konstrukce (prvky), na které klade Zhotovitel zvláštní požadavky a které je nutné při provádění stavby respektovat,
+legendy doplňují výkresy jen v nezbytném rozsahu o údaje, které nelze vyjádřit graficky,
+situace pro jednotlivé SO v měřítku 1:250 budou obsahovat hranice staveniště/pracoviště s vyznačenými vytyčovacími body a souřadnicemi. Všechny podzemní i nadzemní sítě budou v situaci jednoznačně graficky vyznačeny společně s případně odstraněnými dřevinami a křovinami včetně jejich náhrady,
+výkresy demolic budou Zhotovitelem vypracovány v souladu s kapitolou 2.11 tohoto dokumentu, která je uvedená níže. Obsahují vyznačené bourané konstrukce a demontované rozvody. U rozvodů budou Zhotovitelem vyznačeny i hranice demontáže.
+Výpočty
+Výpočty zpracuje Zhotovitel v potřebném rozsahu a v kontrolovatelné formě. Výpočty jsou součástí realizační projektové dokumentace (Detail Design) a připojují se jako doklady ve dvou vyhotoveních.
+Výkazy výměr
+Obsahuje podrobné výkazy výměr pro všechny práce a materiály zpracované dle metodiky URS, členěné dle jednotlivých SO a InO.
+
+Zpřesňující požadavky na část stavební realizační projektové dokumentace:
+
+Pozemní stavební objekty – Architektonicko-stavební řešení
+
+Zhotovitel zpracuje Architektonicko-stavební řešení a Stavebně konstrukční řešení, které bude obsahovat minimálně následující dokumenty zpracované podle uvedených požadavků:
+
+Technická zpráva
+uvádí výsledky doplňujících průzkumů a výpočtů,
+zdůvodňuje případné změny technického, konstrukčního a dispozičního řešení, vyplývající ze schvalovacího řízení předchozího stupně,
+stanovuje požadavky a zásady technického řešení stavebních detailů a materiálových variant dodavatelské dokumentace,
+obsahuje podrobné požadavky technického a materiálového řešení bezbariérových úprav,
+řeší způsob likvidace přebytečných zemin nebo odpadů,
+obsahuje katalogové listy všech použitých výrobků, včetně nezbytných certifikátů dle platné legislativy v České republice.
+Výkresová dokumentace
+Vytyčovací výkres objektu s údaji o geodetickém polohovém a výškovém referenčním systému a odstupech od sousedních pozemků, napojení na technickou infrastrukturu a vyznačení terénních úprav, s označením stavebních objektů, resp. provozních souborů,
+půdorysy celkové v měřítku 1:50 nebo 1:100 (výkopy, základy, půdorysy podlaží, střechy),
+půdorysy dílčí v měřítku 1:50 a větším, s legendou místností a uvedením povrchových úprav stěn, podlah, podhledů apod.,
+řezy (v potřebném rozsahu a měřítku),
+pohledy na všechny plochy fasády objektu včetně související navazující technologie,
+výpisy truhlářských, zámečnických a klempířských výrobků,
+výkresy bezbariérových úprav v měřítku 1:50 včetně potřebných detailů,
+dokumentace strojů a zařízení, které jsou součástí stavební části; zpracovávají se obdobně jako dokumentace strojů a zařízení technologické části,
+odkazy na pozice prvků vnitřního vybavení (interiéru), jejichž dokumentace je součástí projektové dokumentace nebo tvoří samostatnou část projektové dokumentace,
+výkresy výrobků, strojů a pomocných konstrukcí, stavebních a montážních zařízení (např. konstrukce lehké prefabrikace, konstrukce truhlářské, zámečnické, klempířské, atypické staveništní prefabrikáty, konstrukce kabelových a potrubních rozvodů apod.).
+
+Pozemní stavební objekty – Stavebně konstrukční část
+
+Stavebně konstrukční část bude Zhotovitelem zpracována pro betonové, kovové, dřevěné a jiné nosné konstrukce.
+
+Stavebně konstrukční řešení bude obsahovat minimálně následující dokumenty zpracované podle uvedených požadavků:
+Technická zpráva
+podrobný popis navrženého nosného systému stavby s rozlišením jednotlivých konstrukcí podle druhu, technologie a navržených materiálů,
+definitivní průřezové rozměry jednotlivých konstrukčních prvků (případně odkaz na výkresovou dokumentaci),
+údaje o uvažovaných zatíženích ve statickém výpočtu (stálá, užitná, klimatická, od anténních soustav, mimořádná apod.),
+údaje o požadované jakosti navržených materiálů,
+popis netradičních technologických postupů a zvláštních požadavků na provádění a jakost navržených konstrukcí,
+stanovení požadovaných kontrol zakrývaných konstrukcí a případných kontrolních měření a zkoušek, pokud jsou požadovány nad rámec povinných – stanovených příslušnými technologickými předpisy a ČSN, (příslušné normy uvede Zhotovitel v technické zprávě)
+v případě změn stávající stavby – popis konstrukce, jejího současného stavu, technologický postup s upozorněním na nutná opatření k zachování stability a únosnosti vlastní konstrukce, případně bezprostředně sousedících objektů,
+podmínky pro založení SO. Úpravy základové spáry. Požadavky na hutnění zásypů a pro násypy bude uvedena požadovaná únosnost, 
+stanovení hodnoty mezních přípustných přetvoření základové konstrukce, které neohrozí správnou funkci zařízení (celkové přípustné rovnoměrné sednutí a přípustný náklon),
+požadavky na protipožární ochranu konstrukcí,
+seznam použitých podkladů: předpisů, ČSN, literatury, výpočetních programů apod.
+požadavky na bezpečnost při provádění nosných konstrukcí – odkaz na příslušné předpisy a normy.
+Výkresová část
+výkresy půdorysů nosných konstrukcí v měřítku 1:50, výjimečně 1:100, včetně sklopených řezů, pohledů a detailů v potřebných podrobnostech; z výkresů musí být jasně identifikovatelný tvar konstrukce, všech konstrukčních prvků a detailů,
+výkresy monolitických, resp. prefabrikovaných plošných základů, pilotových základů a základového roštu, pokud tyto konstrukce nejsou dostatečně výstižným způsobem zobrazeny ve stavebních výkresech základů. Na výkresech betonových konstrukcí budou Zhotovitelem vyznačeny technologické pracovní spáry a dilatace,
+detaily styků, kotvení apod. v měřítku 1:20 nebo 1:10, (1:5),
+schéma prefabrikovaných stavebních dílců,
+podrobné výkresy vyztužení monolitických betonových konstrukcí na základě podrobného statického výpočtu obsahující pohledy a dostatečné množství příčných řezů jednoznačně určujících kvalitu betonu a oceli, polohu a průřezovou plochu, počet vložek příslušného profilu,
+výkresy sestavy, podrobností a kotvení ocelových konstrukcí obsahující půdorysy, modulovou síť, řezy a pohledy jednoznačně určující nosné konstrukce s označením průřezů všech konstrukčních prvků a podrobností vlastní konstrukce a jejího kotvení, 
+výkresy sestavy, podrobností a kotvení dřevěných konstrukcí obsahující půdorysy, modulovou síť, řezy a pohledy jednoznačně určující nosné konstrukce s označením průřezů všech konstrukčních prvků a podrobností vlastní konstrukce a jejího kotvení. 
+Podrobný statický výpočet
+Zhotovitelem vypracovaný statický výpočet v projektové dokumentaci pro provedení stavby je úplným podkladem pro vypracování technické specifikace konstrukční části a výkresové dokumentace pro provedení stavby.
+Obsahuje dimenzování veškerých konstrukcí, které jsou součástí dokumentace zajišťované Zhotovitelem Díla (výkresy betonových monolitických a prefabrikovaných konstrukcí, dodavatelská dokumentace kovových a dřevěných konstrukcí).
+Statický výpočet musí být kontrolovatelný, tzn. musí být přehledný, aby bylo možno sledovat postup výpočtu, návrhová zatížení, uvažované statické schéma a výpočetní model.
+Podrobný statický výpočet vypracovaný Zhotovitelem obsahuje zejména:
+průvodní zprávu ke statickému (dynamickému) výpočtu, stručně rekapitulující základní koncept řešení konstrukce,
+použité podklady: normy, předpisy, literaturu, dimenzovaní programy apod.,
+statické schéma konstrukce,
+údaje o materiálech a technologiích,
+rekapitulaci zatížení, zatěžovacích stavů včetně součinitelů zatížení a součinitelů kombinace,
+výpočetní modely, výpočetní schémata,
+návrh a posouzení všech nosných prvků,
+výpočet účinků na základy, dimenzování základových konstrukcí,
+návrh a posouzení všech detailů, montážních styků apod., které rozhodujícím způsobem ovlivňujících bezpečnost konstrukce,
+postup výroby – betonáže, odbedňování, montáže, předpínání, zasypávání dokončených konstrukcí apod.
+
+Technika prostředí staveb
+
+Jednotlivé části Zhotovitel zpracuje podle společných zásad a případné zpětné požadavky na stavební část a ostatní profese jsou podkladem pro celkovou koordinaci realizační projektové dokumentace (Detail Design).
+
+Zařízení pro vytápění staveb Neaplikováno
+
+Zařízení pro ochlazování staveb Neaplikováno
+
+Zařízení vzduchotechniky Neaplikováno
+
+Měření a regulace (MaR), automatický systém řízení (ASŘ), elektrická požární signalizace (EPS)
+
+Zhotovitel zpracuje dokumentaci, která bude obsahovat minimálně následující dokumenty zpracované podle uvedených požadavků:
+Technická zpráva
+základní technické údaje MaR, napájecí napěťová soustava, způsob ochrany před úrazem elektrickým proudem,
+způsob technického řešení regulace jednotlivých technologických celků vzduchotechniky, ústředního topení, chlazení a zdravotechniky nebo systémů signalizace,
+soupis datových bodů rozdělených po jednotlivých rozváděčích,
+typy navržených zařízení,
+případné vazby mezi elektroinstalací a elektrickou požární signalizací,
+způsob uložení kabelového vedení vůči stavebním konstrukcím,
+stanovení hlavního okruhu technických norem, které byly v projektu použity a podle kterých je nutné provádět montáž,
+návrh na komplexní zkoušky MaR, ASŘ nebo EPS,
+v případě revize stručný popis okruhu změn, kterých se daná revize týká.
+Výkresová část
+zákresy do půdorysů vypracované v doporučeném měřítku 1:100 nebo 1:50 tak, aby byly přehledné, včetně výškového umístění hlásičů,
+regulační schémata jednotlivých technologických a funkčních celků s vyznačenými datovými body a fyzikálními hodnotami,
+svorková schémata rozváděčů jsou součástí dokumentace zajišťované Zhotovitelem stavby.
+
+Zdravotně technické instalace Neaplikováno
+
+Plynová zařízení Neaplikováno
+
+Zařízení silnoproudé elektrotechniky
+
+Zahrnují rozvody elektrické energie, trafostanice, venkovní osvětlení a firemní označení.
+
+Zhotovitel popíše změny nebo odlišnosti v technickém řešení vůči předcházející úrovni projektové dokumentace.
+
+Zhotovitel zpracuje dokumentaci, která bude obsahovat minimálně následující dokumenty zpracované podle uvedených požadavků:
+Technická zpráva
+základní technické údaje elektroinstalace, např. napájecí napěťová soustava, způsob ochrany před úrazem elektrickým proudem, určení vnějších vlivů,
+energetickou bilanci, rozdělenou na jednotlivé druhy spotřebičů a druhy sítí včetně instalovaného a soudobého příkonu,
+způsob měření spotřeby elektrické energie včetně případného technického řešení kompenzace,
+předpokládanou roční spotřebu elektrické energie na základě provozních hodin
+způsob technického řešení napájecích rozvodů od napojení na rozvodnou síť (rozvody k hlavnímu a podružným rozváděčům a instalovaným zařízením a spotřebičům),
+způsob řešení náhradních zdrojů včetně zálohovaných rozvodů,
+popis technického řešení osvětlovací soustavy včetně ovládání,
+popis technického řešení zásuvkových okruhů,
+popis technického řešení napojení vzduchotechniky, chlazení, otopných systémů, zdravotní techniky, požárních systémů na elektrickou energii včetně případného způsobu ovládání měřením a regulací,
+popis technického řešení připojení požárních systémů, elektrické požární signalizace, elektrické zabezpečovací signalizace, kamerového systému, měření a regulace a jejich koordinace se silnoproudými zařízeními,
+popis technického řešení napojení technologických celků (systémy slaboproudé, výtahy, eskalátory apod.),
+způsob uložení kabelového nebo jiného vedení vůči stavebním konstrukcím,
+popis způsobu a provedení uzemnění a bleskosvodu včetně provedení uzemňovací soustavy.
+soupis technických norem, které byly v projektu použity a podle kterých je nutné provádět montáž. Navrhuje také komplexní zkoušky elektroinstalace, v případě potřeby stanoví technické řešení trafostanice podle připojovacích podmínek provozovatele v návaznosti na připojení vysokého napětí. V případě revize popisuje stručně okruh změn, kterých se daná revize týká,
+v případě připojení na síť VN stanoví technické řešení rozvodných zařízení VN, trafostanice podle daných připojovacích podmínek dodavatele energie,
+popisuje případné změny nebo odlišnosti v technickém řešení vůči předcházející úrovni projektové dokumentace.
+Výkresová část
+silnoproudé rozvody a zařízení zakreslené do půdorysů v doporučeném měřítku 1:100 nebo 1:50,
+výkresovou dokumentaci půdorysů (lze rozdělit na část světelných a napájecích rozvodů včetně zásuvkových okruhů),
+schémata rozváděčů v provedení jednopólovém v případě obsahu pomocných obvodů doplněných o liniová schémata,
+celkové blokové schéma hlavních napájecích rozvodů zpracované přehledně a doplněné o základní technické údaje o instalovaném a soudobém příkonu pro jednotlivé rozváděče, dimenze vedení a zkratové údaje na jednotlivých rozváděčích.
+u staveb, které obsahují vazby na ostatní profese, jako je měření a regulace, případně elektrická požární signalizace, může být rovněž blokové schéma pomocných ovládacích a signalizačních kabelů.
+
+Bleskosvody Neaplikováno
+
+Slaboproudá zařízení
+
+Zahrnují telefonní rozvody, přípravu pro datovou, počítačovou síť (PC), domácí telefon (DT), rozvod televizního signálu (STA), pro elektronický zabezpečovací systém (EZS), kontrolu vstupu (AC), rozhlas, orientační a informační systém a kamerový systém (CCTV).
+
+Zhotovitel zpracuje dokumentaci, která bude obsahovat minimálně následující dokumenty zpracované podle uvedených požadavků:
+Technická zpráva
+popis způsobu technického řešení ve smyslu požadavků na způsob a charakter rozvodů,
+způsob uložení kabelového vedení vůči stavebním konstrukcím,
+typy navržených zařízení,
+stanovení hlavního okruhu norem, které byly v dokumentaci použity a podle kterých je nutné provádět montáž,
+návrh na komplexní zkoušky,
+v případě revize stručný popis okruhů změn, kterých se daná revize týká.
+Výkresová část
+přehledné zakreslení veškerého zařízení do půdorysů v doporučeném měřítku 1:100 nebo 1:50,
+celková bloková schémata (přehledně zpracovaná) obsahující počet a logickou polohu jednotlivých koncových prvků,
+základní technické údaje, napájecí napěťovou soustavu, způsob ochrany,
+technické řešení ve smyslu požadavků na způsob a charakter rozvodů,
+uložení kabelového vedení vůči stavebním konstrukcím.
+
+Další zařízení techniky prostředí (pokud se vyskytují) Neaplikováno
+
+Vnitřní vybavení (interiér) Neaplikováno
+
+Vnější vybavení budov
+Zhotovitel zpracuje dokumentaci, která bude obsahovat minimálně následující dokumenty zpracované podle uvedených požadavků:
+Technická zpráva
+popis celkového řešení včetně bezbariérového užívání, technický popis úprav, výčet prvků drobné architektury a jejich popis.
+Výkresová část
+venkovní, zahradní a sadové úpravy,
+chodníky,
+zpevněné plochy,
+opěrné stěny,
+oplocení,
+prvky drobné architektury.
+v případě tvarově složitých výrobků obsahuje doplňující perspektivní zákres.
+
+Inženýrské objekty
+
+Zhotovitel zpracuje tuto část samostatně pro jednotlivé druhy inženýrských staveb a objektů:
+příprava území, hrubé terénní úpravy,
+čisté terénní úpravy včetně vegetačních úprav a drobné architektury,
+komunikace včetně dopravy v klidu, mostních konstrukcí, propustky apod., 
+zásobování vodou včetně objektů na síti (např. vodojemy, čerpací stanice apod.),
+kanalizace včetně zvláštních objektů (retenční a sedimentační nádrže apod.),
+zásobování energiemi (elektrická energie, plyn, teplo, rozvod světla) včetně objektů na rozvodech (trafostanice, předávací a regulační stanice apod.),
+sdružené trasy technické infrastruktury (kolektory, technické chodby, kanály apod.),
+elektronické komunikace a jiná sdělovací zařízení.
+
+Zhotovitel zpracuje dokumentaci týkajících se inženýrských objektů podle společných zásad a ve stejném členění jako v kapitolách tohoto dokumentu týkajících se stavební části realizační projektové dokumentace, pozemních staveb (Architektonicko – stavební řešení, Stavebně konstrukční řešení).
+Technická zpráva
+ doplňuje údaje, zejména z hledisek materiálových, technologie provádění, vazeb na jiné objekty, na způsoby připojování a přepojování obvykle podle podmínek stanovených příslušnými správci těchto zařízení,
+u energetických staveb nebo objektů obsahuje technická zpráva dále údaje o zkratových proudech, uzemnění, úbytcích napětí, intenzitách osvětlení apod.,
+stanoví podrobné požadavky technického a materiálového řešení bezbariérových úprav.
+Výkresová část
+Výkresová část zpracovaná Zhotovitelem upřesňuje a doplňuje dokumentaci po provedení podrobnějšího zaměření terénu a bude minimálně obsahovat:
+přehlednou situaci stavby,
+podklady pro vytyčovací výkres objektu s údaji o geodetickém polohovém a výškovém referenčním systému a odstupech od sousedních pozemků,
+podélný profil s vyznačením křížení a odbočení,
+vzorové příčné řezy,
+příčné řezy v potřebných vzdálenostech,
+výkresy rozvozu hmot,
+výkresy výkopových prací,
+výkresy propustků, opěrných nebo zárubních zdí, lávek, podchodů apod.,
+výkresy křižovatek, přípojek a odboček komunikací,
+přehledné výkresy objektů, jejich půdorysy, řezy a pohledy,
+výkresy založení spodní stavby objektů,
+výkresy skladby prefabrikovaných konstrukcí,
+výkresy ostatních nosných konstrukcí, výkresy tvarů a výztuže,
+výkresy podrobností,
+kladečské výkresy,
+výkresy bezbariérových úprav v měřítku 1:50 včetně potřebných detailů.
+
+Pro inženýrské objekty, které mají charakter pozemních objektů (jímací objekty, čerpací stanice apod.), se použije ustanovení uvedené v kapitole 2.6.4.1 Pozemní stavební objekty.
+
+Výkresová dokumentace zpracovaná Zhotovitelem pro silnoproudé a světelné rozvody dále obsahuje:
+jednopólové schéma vyjadřující elektrický rozvod včetně umístění rozváděčů, napájecích zařízení, spotřebičů, svítidel s udáním výkonů a zkratových poměrů,
+dispoziční řešení se zakreslením rozvodu silnoproudu,
+výkresy uzemňovací soustavy s uvedením počtu uzemňovacích jímek a zemničů,
+dispoziční umístění svítidel, stožárů apod.
+
+Výkresová dokumentace zpracovaná Zhotovitelem pro elektronické komunikace dále obsahuje:
+společné schéma vnějších sdělovacích rozvodů z předchozí dokumentace doplněné dimenzemi vodičů a uvedením délek kabelů
+výkresy přechodů a křižování, skříní a konstrukcí pro kabelové závěsy.
+Výkresová dokumentace zpracovaná Zhotovitelem pro sdružené trasy kabelovodů dále obsahuje:
+podélné a příčné řezy,
+výkresy kabelových komor v podrobnostech objektů pozemních staveb apod.)
+
+Výpočty
+podrobné statické a jiné výpočty provedené Zhotovitelem (např. hydrotechnické) prohlubují a doplňují výpočty na základě podrobnějších průzkumů, popř. provedených zatěžkávacích zkoušek.
+
+Dokumentace profesí elektro, SKŘ a stavební zpracuje Zhotovitel souhrnně bez ohledu na rozdělení dodávek mezi jednotlivé poddodavatele.
+
+Značení místností a stavebních objektů
+Zhotovitel zpracuje stavební části dokumentaci, která bude obsahovat řešení systému značení objektů, podlaží a označení místností (orientační systém) včetně grafického návrhu.
+
+Značit se budou administrativní a sociální místnosti a technologické prostory. Na dveřích sociálních místností budou také příslušné grafické symboly. 
+
+Dále bude realizační dokumentace stavební části Zhotovitele obsahovat seznam protipožárních dveří. Seznam protipožárních dveří vypracuje Zhotovitel v souladu s Přílohou 54.0 této Přílohy 4 Smlouvy.
+
+Dveře místností Zhotovitel navrhne označit způsobem „tabulka u dveří“ bez jmenovek a s označením čísla a názvu místnosti.
+
+Čísla a názvy místností Zhotovitel navrhne v souladu s názvy místností uvedenými v legendách stavebních výkresů jednotlivých podlaží.
+Značení stavebního objektu na vstupu do objektu bude obsahovat číslo SO, název SO a KKS kód.
+
+Část technická a technologická Realizační projektové dokumentace
+
+Nad rámec přílohy 13, vyhlášky č. 499/2006 Sb., v platném znění, zapracuje Zhotovitel do realizační projektové dokumentace následující dokumenty pro technickou a technologickou část zpracované podle uvedených požadavků:
+Technická zpráva:
+podklady pro projekt čistících operací
+Dispoziční výkresy:
+umístění a poloha strojů a technologického zařízení včetně propojovacích prvků (potrubí – od DN50 výše, kanály apod.)
+dispozice včetně uložení hlavního procesního potrubí (závěsy, pevné body atd.)
+uspořádání všech elektrických, hydraulických, pneumatických a jiných spotřebičů
+Zhotovitel zakótuje hlavní charakteristické rozměry strojů a zařízení. Izolace budou znázorněny jen v řezech. V pohledech budou izolace znázorněny jen v úsecích, které souvisejí s napojením na stroje a zařízení, křížením apod.
+Technologická schémata:
+vyznačení hranic potrubních větví,
+vyznačení rozměrů propojovacích prvků (potrubí značit u KKS kódu hodnotami pro vnější průměr a tl. stěny),
+vyznačení DN a PN použitých armatur.
+Seznamy budou vyplněny všemi daty (sloupce) dle vzorů seznamů v Příloze 54.0 této Přílohy 4 Smlouvy.
+Technická specifikace zařízení:
+skutečná orientace, počet a rozměry hrdel
+Projekt izolací:
+Zhotovitel zpracuje jednostupňový projekt izolací v souladu s podmínkami Smlouvy a jejích příloh. 
+Projekt izolací bude obsahovat:
+technickou zprávu,
+tepelné výpočty,
+výkresovou dokumentaci s detaily provedení izolací a nosných podkonstrukcí, včetně vyznačení míst, kde nebude dodržen požadavek na maximální povrchovou teplotu zařízení 50°C tak, aby se zabránilo instalaci zařízení (kabeláže) v nevhodných podmínkách,
+schémata potrubních tras,
+dispoziční výkresy.
+Projekt nátěrů a protikorozní ochrany:
+Zhotovitel zpracuje jednostupňový projekt nátěrů a protikorozní ochrany v souladu s podmínkami Smlouvy a jejích příloh. 
+Projekt bude řešen společně s projektem barevného řešení.
+Projekt značení strojů a zařízení (štítkování):
+Zhotovitel zpracuje jednostupňový projekt značení strojů a zařízení v souladu s podmínkami Smlouvy a jejích příloh. 
+Zhotovitel zpracuje seznam veškerého zařízení, potrubních tras atd., u kterých určí:
+materiálové provedení, vzhled a obsah štítků s KKS kódem a popisem,
+velikost štítků vzhledem k prostorovým podmínkám (násobky velikosti),
+počet a umístění štítků,
+materiál a způsob.
+
+Plán organizace výstavby – POV
+
+Zhotovitel zpracuje dokumentaci POV, která bude součástí realizační projektové dokumentace a bude ji v průběhu realizace Díla průběžně aktualizovat. POV bude zpracován podle uvedených požadavků s následujícím obsahem a v následujícím rozsahu:
+
+ATechnická zpráva POV
+A1Všeobecné údaje
+Identifikační údaje a stručná charakteristika stavby;
+Seznam všech účastníků výstavby;
+Seznam všech dotčených orgánů;
+Podklady pro zpracování;
+Program/postup výstavby;
+Technologie výstavby.
+A2Popis staveniště
+Obvod staveniště (stanovení/posouzení velikosti staveniště, stanovení způsobu využití ploch, vymezení ploch potřebných pro vybudování objektů zařízení staveniště včetně skladovacích a montážních ploch;
+Popis stávajícího stavu staveniště;
+Seznam pozemků;
+Stávající zástavba;
+Stručný popis stávají vzrostlé zeleně;
+Příjezdy a přístupy na staveniště, napojení na veřejnou dopravní infrastrukturu a na dopravní infrastrukturu areálu EPR 2, návrh dopravních tras;
+Úpravy z důvodů ochrany veřejného zájmu;
+Podzemní a nadzemní sítě, elektronické trasy, ochranná pásma.
+A3Geotechnický průzkum
+Závěry geotechnického průzkumu;
+Opatření POV ve vztahu ke geologickému průzkumu.
+A4Úpravy staveniště
+Prozatímní a konečné terénní úpravy;
+Návrh hospodaření s ornicí a zeminou;
+Deponie zeminy a ornice;
+Oplocení;
+Odvodnění.
+A5Zásobování staveniště, případné napojení na technickou infrastrukturu areálu EPR II
+Zásobování elektřinou vč. stanovení způsobu napojení a měření odběru;
+Zásobování staveniště vodou vč. stanovení množství potřebné vody, způsobu napojení a měření odběru;
+Odkanalizování;
+Materiálové zásobování.
+A6Zařízení staveniště
+Návrh počtu pracovníků potřebných při výstavbě, stanovení jejich časového nárůstu a úbytku;
+Poddodavatelé a realizace jejich požadavků (dle dodavatelského zabezpečení je nutno stanovit návrh počtu pracovníků pro každého zhotovitele);
+Stanovení potřebné velikosti staveniště (sociální zařízení, kanceláří apod.);
+Kapacita a využití objektů dosavadních nebo nově budovaných pro účely zařízení staveniště;
+Technické zařízení a návrh velikosti ploch;
+Osvětlení staveniště.
+A7Bezpečnost práce
+Vedení stavby – seznam osob odpovědných za bezpečnost;
+Přehled základních bezpečnostních předpisů;
+Bezpečnost a ochrana zdraví při jednotlivých druzích prací;
+Bezpečnost a ochrana zdraví při provádění výkopových prací, zejména při křížení se stávajícími inženýrskými sítěmi;
+Bezpečnost při skladování a manipulaci s materiálem;
+Bezpečnost z hlediska ochrany veřejného zájmu;
+Ochrana a ostraha staveniště;
+Bezpečností opatření ve vztahu k pracovníkům a poddodavatelům 
+Způsob koordinace s ostatní výstavbou v dotčeném prostoru;
+Koordinátor bezpečnosti a ochrany zdraví při práci (pokud bude objednatelem jmenován);
+Požární ochrana staveniště;
+Plán bezpečnosti a ochrany zdraví při práci na staveništi (po obdržení od objednatele).
+A8Ochrana životního prostředí
+Vliv realizace stavby na životní prostředí;
+Soubor opatření k ochraně životního prostředí;
+Ochrana před účinku hluku a vibrací;
+Ochrana porostů;
+Odstraňování odpadů ze staveniště;
+Nakládání s demolicemi vyzískaným materiálem vč. způsobu provádění souvisejících kontrol druhu a množství tohoto materiálu;
+Ochrana před znečištěním vod a ovzduší;
+Ochrana před škodlivými účinky dopravy;
+Plán havarijních opatření.
+A9Organizace výstavby
+Zásady organizace výstavby;
+Základní termíny výstavby a komentář k časovému plánu výstavby (lhůta výstavby, termín zahájení a dokončení stavby, termíny dokončení jednotlivých etap nebo rozhodujících objektů a zařízení, časový postup likvidace zařízení staveniště;
+Stanovení fondu pracovní doby, popř. nutných omezení při provádění stavby;
+Zásady vnitrostaveništní dopravy;
+Technologický postup výstavby;
+Technologická a klimatická omezení;
+Zabezpečení vertikální dopravy;
+Kritická místa výstavby;
+Požadavky na komplexní vyzkoušení, podmínky uvedení stavby do zkušebního provozu, požadavky na kolaudaci stavby;
+Podmínky pro likvidaci zařízení staveniště, způsob úpravy ploch po likvidaci zařízení staveniště.
+BSituace stavby (v měřítku 1:200, 1:500, 1:1000) 
+B1Vymezení staveniště
+Hranice obvodu staveniště / zájmového území (dočasný zábor);
+Hranice pozemků příslušných ke stavbě;
+Hranice pozemků dotčených dočasným záborem;
+Vytyčovací výkresy pozemků;
+Oplocení staveniště.
+B2Zemní práce
+Deponie ornice a zeminy;
+B3Inženýrské sítě
+Ochranná pásma stávajících inženýrských sítí;
+Technická opatření budovaná v rámci stávajících inženýrských sítí;
+Chráničky inženýrských sítí;
+Napojovací body staveniště (odběrná místa) – elektro, voda, kanalizace atd.;
+Odvodnění staveniště.
+B4Doprava
+Vjezdy a výjezdy ze staveniště (zájmové území + dílčí staveništní zábory);
+dočasné komunikace sloužící jako příjezd na staveniště 
+dopravní trasy v rozsahu situace, 
+základní trasy vnitrostaveništní dopravy
+Osazení dopravních značek, popř. další DIO souvisejících s provozem stavby nebo záborem části komunikace;
+Přejezdy, přechody, mosty;
+Mycí rampy těžké techniky.
+B5Mechanizace spojená s montážními pracemi
+Pracovní stanoviště mechanizace;
+Parametry a dosahy jeřábů s omezením přesahu;
+Systém bezpečné práce;
+Doprovodné montážní zařízení (lešení, vrátky...).
+B6Plochy zařízení staveniště
+Plochy výrobního zařízení staveniště (stanoviště techniky apod.);
+Plochy provozního zařízení staveniště;
+Plochy sociálního zařízení staveniště;
+Plochy skládek odpadů;
+Plochy skládek materiálu;
+Plochy určené pro skladování nebezpečných hmot, materiálů, technických plynů, barev a hořlavin;
+Plochy ostatních dočasných objektů zařízení staveniště.
+B7Bezpečnost a ochrana zdraví
+Speciální konstrukce a zařízení staveniště;
+Osvětlení staveniště.
+B8Organizace výstavby
+Postup provádění stavby, postup terénních úprav – směr výstavby.
+CČasový plán výstavby
+Termínovník (např. termíny provádění částí stavby, stavebních objektů, předávání staveniště);
+Ganttův diagram / harmonogram (zpracovaný v prostředí MS Project);
+Bilance pracovních sil, techniky apod.
+DDoklady majících bezprostřední návaznost na projekt organizace výstavby
+Originály písemností dokumentujících jednání vedená v souvislosti s POV;
+Dohody (Smlouvy) o využívání stávajících nebo nových budov jako ZS;
+Vyznačení inženýrských sítí (Objednatel předá Zhotoviteli);
+Souhlas (Smlouvy) správců sítí s odběrem energií.
+
+Projekt garančních měření a testů k přejímce Díla
+
+Projekt garančních měření a testů k přejímce Díla zpracuje Zhotovitel.
+Projekt garančních měření a testů k přejímce Díla bude řešit jak provedení garančních měření Díla (viz Příloha 3 Smlouvy), tak provádění dílčích garančních testů jednotlivých částí Díla. 
+Bez předchozího schválení Projekt garančních měření a testů k přejímce Díla Objednatelem nebudou garanční testy prováděny.
+Projekt garančních měření a testů k přejímce Díla zpracovaný Zhotovitelem bude obsahovat minimálně následující:
+Smlouvou a platnou legislativou předepsané parametry Díla, které se týkají garančních měření a testů k převzetí Díla, 
+normy a použitou literaturu, na základě, kterých budou garanční testy a měření provedeny,
+harmonogram garančních testů a měření, jejich přípravy a provádění,
+metody k vyhodnocení smluvních hodnot a garantovaných parametrů,
+popis měřících metod a použití měřících přístrojů, jakož i použitou vyhodnocovací techniku,
+soupis měřících míst,
+seznam měřícího zařízení použitého pro garanční testy a měření,
+doklady o kalibraci všech přístrojů pro garanční testy a měření,
+výsledné nejistoty měření,
+četnost odečítání hodnot,
+personální zajištění,
+návrh oprávněných subjektů, které budou jednotlivé testy a měření realizovat,
+požadavky na součinnost Objednatele včetně navazujících poddodavatelů při provádění garančních testů a měření (energie, média, provozní personál aj.) v souladu s Přílohou 6 Smlouvy,
+deník testů a měření.
+Výkresová dokumentace zpracovaná Zhotovitelem bude obsahovat minimálně následující:
+schéma měřících míst zařízení,
+konstrukční provedení míst zkušebních odběrů a jejich uspořádání,
+schéma struktury měření,
+korekční křivky (diagramy závislosti)
+
+Projekt čistících operací po montážích (PČO)
+
+Zhotovitel zpracuje a předloží Objednateli v dostatečném předstihu a v souladu s HMG před zahájením uvádění Díla do provozu k odsouhlasení Program po-montážních čistících operací v rozsahu odpovídajícím charakteru Díla:
+Chemické čištění
+Projekt chemického čištění zpracovaný Zhotovitelem bude obsahovat minimálně následující:
+technickou zprávu,
+specifikaci provizorií,
+technologické schéma,
+dispoziční výkresy,
+bilanci hmot,
+požadavky na média a energie,
+HMG,
+personální zajištění,
+požadavky na BOZP, PO, ŽP,
+likvidaci odpadů.
+Profukování
+Projekt profukování, který bude zpracovaný Zhotovitelem, bude obsahovat minimálně následující:
+technickou zprávu 
+výpočtovou zprávu
+specifikaci provizorií
+technologické schéma
+dispoziční výkresy
+bilanci hmot
+požadavky na média a energie
+HMG
+personální zajištění
+požadavky na BOZP, PO, ŽP
+Proplachy
+Projekt proplachů zpracovaný Zhotovitelem, bude obsahovat minimálně následující:
+technickou zprávu 
+výpočtovou zprávu
+specifikaci provizorií
+technologické schéma
+dispoziční výkresy
+bilanci hmot
+požadavky na média a energie
+HMG
+personální zajištění
+požadavky na BOZP, PO, ŽP
+likvidaci odpadů
+
+Projekt těsnostních a pevnostních zkoušek pro ucelené tlakové celky (PTPZ)
+
+Projekty tlakových zkoušek pro tlaková zařízení kategorií I – III zpracuje Zhotovitel v rámci Projektu tlakových, těsnostních a pevnostních zkoušek pro ucelené tlakové celky.
+
+Pro potrubní kategorie 0 a s tlakem menším nebo rovným 0,5 bar lze využít ustanovení čl. 4.2 a 4.3 z ČSN EN 13 480 v platném znění, tedy dle technických pravidel či praxe dokumentovat pouze zkoušku těsnosti provozním médiem za provozu (nebo při PČO, PKV).
+
+Projekt tlakových, těsnostních a pevnostních zkoušek pro ucelené tlakové celky, který bude zpracovaný Zhotovitelem, bude obsahovat minimálně následující:
+technickou zprávu 
+výpočtovou zprávu
+specifikaci provizorií
+technologické schéma
+dispoziční výkresy
+bilanci hmot
+požadavky na média a energie
+HMG
+personální zajištění
+požadavky na BOZP, PO, ŽP
+
+Dokumentace skutečného provedení stavby (DSPS)
+
+Pokud budou realizovány vzájemně dohodnuté odchylky a změny oproti ověřené dokumentaci DSP a podmínkám ze stavebního řízení, Zhotovitel zpracuje dokumentaci v rozsahu přílohy č. 14 vyhlášky o dokumentaci staveb (vyhláška č. 499/2006 Sb.), v platném znění.
+
+Pokud k odchylkám a změnám nedojde, Zhotovitel předá pouze dokumentaci obsahující: 
+vytyčovací protokoly stavebních objektů (SO), 
+údaje určující „definiční bod stavby a adresního místa“, 
+geodetické zaměření SO a sítí a 
+geometrické plány pro výmaz odstraněných a zápis nových SO do katastru nemovitostí.
+Pokud k odchylkám a změnám nedojde, Zhotovitel předá jen dokumentaci obsahující vytyčovací protokoly SO, údaje určující „definiční bod stavby a adresního místa“, geodetické zaměření SO a sítí a geometrické plány pro výmaz odstraněných a zápis nových SO do katastru nemovitostí.
+
+Projektová dokumentace bouracích prací (DBP) – Neaplikováno
+
+
+Dokumentace změny stavby před jejím dokončením (DZSPD)
+
+V případě, že v průběhu realizace Díla dojde k projektovým změnám v souladu s čl. 23 Smlouvy, které podléhají povolení stavebního úřadu, Zhotovitel zpracuje dokumentaci pro stavební řízení změny stavby před jejím dokončením (DZSPD) v rozsahu a obsahu stanoveném stavebním zákonem č. 283/2021 Sb. v platném znění.
+
+Tato dokumentace bude vycházet z přílohy č. 12 vyhlášky o dokumentaci staveb (vyhláška č. 499/2006 Sb.) v platném znění, avšak použijí se z ní jen dotčené části a v úvodu se doplní popis provedených změn.
+
+K této dokumentaci dále Zhotovitel zpracuje přílohy:
+seznam a popis změn, 
+porovnání změn se stavebním povolením a ověřenou projektovou dokumentací,
+revize Požárně bezpečnostního řešení (PBŘ), pokud provedené změny budou mít vliv na požární řešení Díla.
+
+V případě, že změna stavby před jejím dokončením může mít dopad na vliv záměru na životní prostředí, Zhotovitel poskytne Objednateli nezbytné podklady a výkresovou dokumentaci pro zpracování dokumentace EIA pro zjišťovací řízení.
+Dokumentace pro připojení výrobny k DS (DPDS) – Neaplikováno 
+Technická dokumentace (TD)
+
+Veškerá dokumentace bude členěna po jednotlivých stavebních objektech (SO), inženýrských objektech (InO) a provozních souborech (PS).
+
+Plán managementu projektu Zhotovitele (PMP)
+
+Zhotovitel zpracuje plán managementu projektu PMP, který musí být v souladu s ČSN ISO 10006 v platném znění.
+
+PMP je zaměřen na organizování činností Díla tak, aby byly naplněny požadavky Smlouvy, (např. požadavky na bezpečnost a ochranu zdraví při práci, životní prostředí, požární ochranu apod.) příslušné zákonné požadavky a požadavky přijatých norem.
+
+PMP Zhotovitele musí obsahovat zejména tyto informace:
+definici předmětu projektu, vstupů do projektu a vymezení cílů projektu (měřitelné, ve vazbě na čas a kvalitu), řízení cílů,
+způsob identifikace předmětu Díla
+způsob přenesení identifikace Předmětu Díla na poddodavatele
+vymezení použitelnosti
+podmínky platnosti
+registr legislativních požadavků
+vymezení použitelnosti
+podmínky platnosti
+strukturu řídicích procesů projektu,
+vymezení rozhraní mezi řídicími procesy projektu a jednotlivými subjekty, jejich pravomoci a odpovědnosti,
+organizační a časové členění projektu,
+plán řízení předmětu projektu,
+plán řízení harmonogramu projektu,
+zásady organizace výstavby (ZOV) včetně dílčích plánů organizace montáže,
+plán řízení rozpočtu projektu,
+plán komunikace,
+plán organizování činností projektu ve vazbě na členění projektu,
+požadavky na poddodavatele s ohledem na zajištění požadavků vyplývajících ze Smlouvy,
+řízení zdrojů,
+sledování projektu
+řízení změn,
+řízení kvality,
+řízení všech plánů kvality vzhledem k dohodnutému členění Díla a způsob řízení plánů kvality jednotlivých dodavatelů (požadavky na systém řízení kvality poddodavatele),
+řízení rizik,
+řízení nakupování,
+řízení BOZP, PO a ŽP,
+management informací (Best practice),
+reporting,
+řízení dokumentů a záznamů projektu,
+požadavky na PTD od poddodavatele.
+
+Dokumentace pro zajištění a řízení kvality Díla (QA – QC)
+
+Dokumentace pro zajištění a řízení kvality Díla bude vypracována v souladu s řídící dokumentací Objednatele SKČ_ME_0116 – Plán kvality a plán kontrol a zkoušek dodávek technických zařízení DOKE, uvedenou v Příloze 50.08 k Příloze 1 Smlouvy, a bude zahrnovat:
+
+Plán kvality (PK)
+
+Plán kvality Díla musí být zpracován Zhotovitelem, v souladu s normou ČSN ISO 10005 Management kvality – Směrnice pro plány kvality, a schválen Objednatelem.
+Zhotovitel zpracuje plán kvality pro celý rozsah Díla a musí obsahovat postup řízení kvality pro všechny činnosti v rámci realizace Díla.
+
+Plán kvality slouží k naplánování výkonu všech stěžejních činností, které jsou prováděny v souvislosti s přípravou a provedením Díla u Zhotovitele a jeho dodavatelů. Plán kvality Zhotovitele uvádí požadavky na zajištění řízení a prokazování kvality pro všechny dodavatelské subjekty, které se účastní na provedení určených částí Díla.
+
+V plánu kvality bude uveden výčet jednotlivých činností majících vliv na jakost Díla.
+Bude v něm uvedena odpovědnost, práva a povinnosti pracovníků pověřených řízením kvality. Svým provedením musí prokazovat, že požadavky specifikované ve Smlouvě jsou plánovány a řízeny a že jejich vývoj bude sledován. Dále bude určovat druh použitých norem, technických podmínek a předpisů pro provádění kontrol, typy záznamů o kvalitě, kdo zkoušky provádí a účast na těchto zkouškách.
+
+V plánu kvality bude přehledně uvedeno, jak jsou tyto činnosti zajištěny v jednotlivých fázích realizace, tj. zejména při:
+projektování (konstrukčním řešení),
+obchodním zajišťování nákupu materiálu a poddodávek,
+vlastní výrobě,
+stavebních pracích a montáži,
+uvádění do provozu,
+zkušebním provozu.
+
+Plán kvality Zhotovitele musí vždy obsahovat:
+identifikaci jednotlivých poddodavatelů (poddodavatelé jsou identifikováni postupně v revizích plánů kvality), jejich přiřazení k jednotlivým částem Díla, které definuje Smlouva,
+řízení Programu kontrol a zkoušek (PrKZ), 
+řízení Plánu kontrol a zkoušek (PKZ), ve vazbě na kritické znaky Díla
+řízení individuálních zkoušek (IZ),
+řízení neshod (NCR),
+řízení reklamací (RE),
+řízení alba protokolů (formuláře alba protokolů)
+řízení kvality Díla v jednotlivých fázích projektu.
+
+Souvisejícím dokumentem s Plánem kvality Zhotovitele je časový a prováděcí plán provedení Díla a program zkoušek a uvádění do provozu. V programu zkoušek a uvádění do provozu, který zpracuje Zhotovitel, budou naplánovány a popsány tyto zkoušky:
+individuální zkoušky (IZ)
+projekt těsnostních a pevnostních zkoušek pro ucelené tlakové celky,
+předkomplexní vyzkoušení (PKV),
+komplexní vyzkoušení (KV),
+komplexní zkouška (KZ),
+projekt garančního testu „A“ projekt garančního testu „B“.
+Tyto zkoušky jsou dále detailněji popsány v odst. 3.7 této Přílohy 4 Smlouvy.
+
+Program kontrol a zkoušek (PrKZ)
+
+Zhotovitel předá před zahájením prací na příslušné části Díla (výroba, montáž) Objednateli zpracovaný Program kontrol a zkoušek (PrKZ) pro výrobu, montáž.
+Zhotovitel bude aktualizovat PrKZ každých třicet (30) dní a předávat jej Objednateli.
+PrKZ bude sledovat stav na realizaci jednotlivých PKZ a bude obsahovat minimálně:
+pořadové číslo,
+číslo a název PS/DPS, SO/DSO, InO,
+stav zpracování PKZ,
+evidenční číslo PKZ,
+revize,
+termíny související se zpracováním PKZ (datum odeslání na Objednatele, schválení a podpis Objednatelem).
+
+Plán kontrol a zkoušek
+
+Zhotovitel zpracuje plán kontrol a zkoušek (PKZ) s použitím vzoru, který je uveden ve volné příloze E – VZOR – Plán kontrol a zkoušek, řídicí dokumentace Objednatele SKČ_ME_0116 uvedené v Příloze 50.08 k Příloze 1 Smlouvy, samostatně pro část výroby a samostatně pro část montáže, a to nejpozději šedesát (60) dnů před zahájením prací na příslušné části Díla.
+
+Plán kontrol a zkoušek musí být Objednatelem schválen před zahájením zkoušek.
+PKZ zahrne všechny kontroly a zkoušky, které bude Zhotovitel a jeho poddodavatelé provádět.
+
+Jedná se zejména o:
+kontroly a zkoušky při přejímce materiálu a poddodávek hromadně vyráběných zařízení,
+kontroly a zkoušky při výrobě individuálně vyráběných zařízení,   
+kontroly a zkoušky hotových výrobků (Factory Acceptance Test – FAT),
+kontroly a zkoušky zařízení (Site Acceptance Test – SAT),
+kontroly a zkoušky stavební části, včetně monitorování sedání a posunu objektů,
+kontroly a zkoušky při přejímce zařízení pro montáž,
+individuální zkoušky (IZ) v rámci ukončení montáže,
+
+Plány kontrol a zkoušek zpracované Zhotovitelem pro jednotlivé SO, InO a PS, řazené v časové posloupnosti jejich provádění, budou obsahovat zejména:
+název zkoušky nebo kontroly, 
+zkoušené nebo kontrolované zařízení,
+druh zkoušky (zařazení z hlediska výše uvedených druhů kontrol a zkoušek),
+technicky jasnou specifikaci konkrétní kontroly nebo zkoušky,
+kontrolní metody a předpisy k jejímu provedení (kontrolní postup) včetně kritérií pro hodnocení výsledků kontroly nebo zkoušky. U kontrol nebo zkoušek, pro které je v souladu s odst. 3.2.3 níže zpracováván i program zkoušek, mohou být kritéria pro hodnocení výsledků kontroly nebo zkoušky podrobněji uvedena až v navazujícím programu zkoušek,
+způsob zaznamenání výsledku (nálezu) kontroly, zkoušky a jejího hodnocení,
+místo pro zaznamenání svědečných (W – witness) nebo zádržných (H – hold) bodů odběratelské kontroly Objednatele, případně pověřené nezávislé třetí strany,
+u jednotlivých kontrol a zkoušek bude vyznačeno, u kterých zkoušek je Zhotovitel povinen přizvat zástupce Objednatele.
+
+Pro kontroly a zkoušky v rámci prokazování internetové a kybernetické bezpečnosti (IKB) dodá Zhotovitel plán kontrol a zkoušek (PKZ) minimálně v níže uvedeném rozsahu.
+
+Vstupní kontrola:
+kontrola provedení školení dle CYBEX,
+kontrola registrovaných zařízení dodavatele,
+kontrola provedení konzultace designu a kompatibility architektury s Objednatelem. 
+
+Kontrola v rámci realizace:
+kontrola architektury sítě,
+kontrola dohledu nad sítí,
+kontrola zálohování,
+kontrola hardeningu a řízení zranitelností, 
+kontrola ochrany proti malware,
+kontrola provozní bezpečnosti,
+kontrola řízení přístupu,
+kontrola sběru auditních záznamů.
+
+Výstupní kontrola:
+kontrola síťové a IKB dokumentace,
+finální kontrola díla (včetně PTD).
+
+Programy zkoušek (PZ)
+
+Rozsah, provedení a kvalita zkoušek nebo kontrol musí odpovídat požadavkům Smlouvy a požadavkům uvedeným v příslušné platné normě pro dané zařízení.
+
+Zhotovitel zpracuje programy zkoušek pro:
+kontroly a zkoušky prováděné v rámci FAT a SAT
+kontroly a zkoušky při uvádění do provozu viz odst. 3.7 přílohy 4 Smlouvy,
+kontroly a zkoušky prováděné Objednatelem pověřenou nezávislou společností či osobou při garančních testech „A“ a „B“.
+Programy zkoušek budou obsahovat zejména: 
+cíl zkoušky, 
+hodnoty, které mají být prokázány a parametry, kterých má být dosaženo,
+popis přípravy a postup zkoušky, zahrnující i časový plán zkoušky,
+seznam kontrolovaného a zkoušeného zařízení nebo jeho částí či celku,
+požadavky na připravenost funkčně souvisejících zařízení,
+požadavky na personál pro provedení zkoušky (vč. personálu Objednatele tam, kde je nutná jeho součinnost),
+úsečkový diagram s vyznačením jednotlivých činností,
+seznam dokumentů a platných norem, podle kterých bude zkouška nebo kontrola prováděna,
+metodiku měření a způsob vyhodnocení,
+kritéria úspěšnosti,
+seznam všech přístrojů použitých při zkoušce nebo kontrole a protokoly o jejich kalibraci,
+návrhy dílčích protokolů hodnotících průběh zkoušky nebo kontroly (pokud budou),
+návrh závěrečného protokolu zkoušky nebo kontroly.
+
+Kniha kontrol a zkoušek (KKZ)
+
+Kniha kontrol a zkoušek, vedená Zhotovitelem, bude zahrnovat ucelený soubor dokladů (protokolů) s výsledky všech provedených kontrol, zkoušek, přejímek a testů dle PKZ. Bude také obsahovat kopie kalibračních protokolů použitých přístrojů. 
+
+Dokladová část kontrol a zkoušek bude vedena odděleně pro stavební část, strojně technologickou část, elektro zařízení a SKŘ v samostatných složkách a v průběhu realizace Díla bude postupně doplňována.
+
+Revizní řády (RR)
+
+Tvorba revizních řádů
+
+Zhotovitel musí revizní řády vypracovat tak, aby bylo zajištěno dodržování závazných podmínek stanovených ze zákonných předpisů a ze souvisejících ČSN při provádění revizí, revizních zkoušek vyhrazených technických zařízení. 
+
+Revizní řády musí být vypracovány pro veškerá vyhrazená technická zařízení:
+dle zákona o bezpečnosti práce v souvislosti s provozem vyhrazených technických zařízení č. 250/2021 Sb., v platném znění, 
+dle vyhl. č. 48/1982 Sb., Českého úřadu bezpečnosti práce, kterou se stanoví základní požadavky k zajištění bezpečnosti práce a technických zařízení, v platném znění.
+dle nařízení vlády č. 190/2022 Sb., o vyhrazených technických elektrických zařízeních a požadavcích na zajištění jejich bezpečnosti, ve znění pozdějších předpisů
+dle nařízení vlády č. 191/2022 Sb., o vyhrazených technických plynových zařízeních a požadavcích na zajištění jejich bezpečnosti, ve znění pozdějších předpisů
+dle nařízení vlády č. 192/2022 Sb., o vyhrazených technických tlakových zařízeních a požadavcích na zajištění jejich bezpečnosti, ve znění pozdějších předpisů
+dle nařízení vlády č. 193/2022 Sb., o vyhrazených technických zdvihacích zařízeních a požadavcích na zajištění jejich bezpečnosti, ve znění pozdějších předpisů
+
+Při tvorbě revizních řádů Zhotovitel musí zohlednit legislativní požadavky, požadavky z průvodní technické dokumentace, doporučení výrobců, požadavky norem a výsledky již provedených revizí. 
+
+Pro zajištění výkonu revizí musí Zhotovitel stanovit osoby odpovědné za tvorbu revizních řádů, jejich odsouhlasení a dohled nad plněním požadavků, které z nich vyplývají. Revizními řády Zhotovitel stanoví okruh zařízení, na které se vztahují, rozsahy závaznosti, druhy revizí a druhy prostředí ve kterých jsou zařízení provozována. 
+
+V revizních řádech Zhotovitel uvede příslušné intervaly revizí, u elektrozařízení i v závislosti na druhu prostředí, ve kterém jsou provozována. Revizní činnosti musí být Zhotovitelem prováděny podle předem vypracovaných a odsouhlasených postupů, v revizních řádech.
+
+Zhotovitel uvede odkazy na předpisy pro provedení a vyhodnocení revizí. Zhotovitel stanoví požadavky na kvalifikaci pracovníků provádějící úkony spojené s revizí zařízení a dále bude stanovena forma, způsob vyhodnocení a dokladování revizních činností. V revizních řádech Zhotovitel uvede podrobnější specifické požadavky vztahující se k provozu zařízení, jako je kvalifikace personálu, které budou zpřesňovat legislativní požadavky.
+
+Výchozí revizní zprávy (VRZ)
+
+Zhotovitel bude zajišťovat tyto revize dle revizního řádu Objednatele, včetně dodržení doby předání revize Objednateli od data jejího vystavení.
+
+V případě, kdy činností Zhotovitele jsou dotčena drážní zařízení, je Zhotovitel povinen respektovat vyhlášku č. 100/1995 Sb., Ministerstva dopravy, kterou se stanoví podmínky pro provoz, konstrukci a výrobu určených technických zařízení a jejich konkretizace (Řád určených technických zařízení), ve znění pozdějších předpisů.
+
+Zhotovitel bude provádět do předaní Díla (protokolem PAC) provozní revize a vystavovat zprávy z těchto revizí.
+
+Zhotovitel předá dvě paré originálů výchozích i pravidelných revizí na Objednatele v průvodní dokumentaci vyhrazených technických zařízení (PTD VTZ). Kopie revizí budou vloženy do průvodní technické dokumentace montáže (PTD MONT) pro příslušné PS/SO.
+
+Plány revizí
+
+Zhotovitel zpracuje a předloží Objednateli k odsouhlasení nejpozději ve fázi Realizační dokumentace plány na provádění pravidelných revizí. 
+
+Všechny položky z revizních řádů musí být zahrnuty v DPÚ.
+
+Požadavky na zajištění nultých stavů pro sledování životnosti zařízení
+
+Minimální požadavky Objednatele pro zjištění vstupních parametrů vybraných částí zařízení jsou uvedeny ve volné příloze B – Seznam nultých stavů, řídící dokumentace Objednatele SKČ_ME_0116 uvedené v Příloze 50.08 k Příloze 1 Smlouvy.
+
+Dále musí být v souladu s metodikami Objednatele:
+SKČ_TST_0032, Požadavky na výrobu a montáž kotlů a parovodů (viz Příloha 52.03 této Přílohy 4 Smlouvy)
+SKČ_ME_0245, Vibrační diagnostika rotačních zařízení Příloha 50.04 k Příloze 1 Smlouvy.
+
+Zhotovitel připraví dokumentaci ke schválení pro vyplnění nultých stavů:
+speciálně určená zařízení k periodickým kontrolám a srovnání s nultými stavy,
+seznam sledovaných veličin,
+seznam referenčních ploch staveb,
+tabulky,
+vzory formulářů,
+protokoly,
+referenční plochy u stavebních konstrukcí,
+soubory *csv,
+další dokumenty doporučené Zhotovitelem.
+
+Dokumentace pro demontáž (DM)
+
+Pokud bude Zhotovitel v rámci Díla demontovat stávající zařízení, potom pro tuto činnost vypracuje dokumentaci pro demontáž. Dokumentace pro demontáž, zpracovaná Zhotovitelem, bude zahrnovat veškeré demontáže požadované Objednatelem a navrhované Zhotovitelem v rámci Díla.
+
+Dokumentace pro demontáž bude minimálně obsahovat:
+podmínky pro zahájení demontáží po odstavení zařízení z provozu,
+mechanizace – ustavení zdvihacích zařízení, lanování vrátků včetně návrhu využívání stávajících zdvihacích mechanismů Objednatele v řešeném objektu,
+seznam zařízení a postup demontáže zapracovaný v dokumentu Požadavky na montáž včetně harmonogramu demontáží, 
+Seznam dílů zařízení a postup demontáže u částí určených pro šetrnou demontáž a následné použití jako náhradní díly,
+Montáž provizorií (budou-li nutná),
+způsob přepravy na šrotiště a skládku odpadu.
+
+Montážní dokumentace (MD)
+
+Montážní dokumentace včetně technologických postupů (dále jen TP) a IZ, zpracovaná Zhotovitelem, musí obsahovat hlavně speciální postupy, podmínky a opatření pro montáž a musí se vztahovat na celý rozsah montovaného zařízení nebo konstrukcí.
+
+Plán organizace montáže (dále jen POM) strojů a zařízení dodaného Zhotovitelem formou poddodávky, budou respektovat pokyny těchto poddodavatelů. 
+
+Montážní dokumentace musí být předána Objednateli ke kontrole v souladu s HMG, nejméně 10 pracovních dní před zahájením realizace příslušné části.
+
+Montážní dokumentace bude minimálně obsahovat:
+plán organizace montáže (POM),
+schválený plán kontrol a zkoušek (PKZ) včetně technologických instrukcí k provedení IZ,
+harmonogram prací,
+seznam norem a technických předpisů, seznam legislativních požadavků,
+nářadí, mechanismy a přípravky pro montáž,
+spotřební materiál pro montáž,
+měřící přístroje a měřící zařízení pro kontrolu montáže,
+technické specifikace,
+montážní manuál dodaného zařízení,
+montážní návodky (např. utahování šroubových spojů, doporučené chemické prostředky, obecné pokyny ke svařování),
+svařovací dokumentace (certifikáty, WPS, WPQR, svařovací plány),
+dispoziční výkresy a schémata,
+montážní výkresy,
+příručka bezpečnosti práce, PO a ochrany životního prostředí,
+rizika BOZP,
+dokumentace provedení tlakových zkoušek,
+dokumentace pomontážních čistících operací,
+prokazatelné seznámení pracovníků s MD (podpisový list).
+
+Plán organizace montáže (POM)
+
+Plán organizace montáže (POM) strojů a zařízení dodávaného Zhotovitelem, bude respektovat pokyny subdodavatelů těchto strojů a zařízení. 
+
+POM bude obsahovat souhrn pokynů pro montáž dodávaného zařízení a slouží Zhotoviteli, pracovníkům subdodavatelů a pracovníkům Objednatele jako jeden z nástrojů řízení a kontroly jednotlivých činností montáže.
+
+Dokumentace POM upřesní a rozpracuje dokumentaci ZOV.
+
+POM bude minimálně obsahovat:
+Obecné informace:
+specifikace zařízení,
+charakteristika dodávek a technický popis,
+hranice dodávek, připojovací místa.
+Organizace montáže:
+personální obsazení montáže dle harmonogramu Díla,
+podmínky pro montáž (stavební/montážní připravenost, zásady pro přejímku pracoviště),
+instrukce pro zajištění bezpečnosti práce, hygieny práce a požární ochrany při montáži,
+instrukce pro ochranu životního prostředí (shromažďování a třídění odpadu, likvidace odpadu).
+Technická informace o dodávkách:
+výchozí stav dodávek (konzervace, použité konzervační prostředky, instrukce pro odstranění konzervace),
+nátěry,
+podmínky pro skladování dodávek,
+manipulace s díly při montáži (specifikace závěsných bodů).
+
+V montážní dokumentaci budou uvedeny požadavky na montážní tolerance.
+
+Technologické instrukce individuálních zkoušek (IZ)
+
+Zhotovitel zpracuje Technologické instrukce individuálních zkoušek. Individuální zkoušky (IZ) jednotlivých zařízení budou prováděny v průběhu montáže a slouží k ověření kompletnosti a kvality těchto zařízení. 
+
+Program IZ bude obsahovat minimálně:
+kontrola výrobní a montážní dokumentace,
+přezkoušení mechanické funkce smontovaných strojů a zařízení,
+dočasný chod zařízení na prázdno (i pomocným způsobem),
+provedení stavební zkoušky,
+provedení čistících, těsnostních a tlakových zkoušek,
+ověření měřícího a řídícího řetězce (smyčky, „loop check“) bude obsahovat:
+protokol o konečném nastavení snímačů (KKS, název, elektrický a fyzický rozsah měření, typ snímače, sériové číslo, nastavená hodnota),
+kontrola měřících obvodů zjišťuje: simulace analogových signálů z externího zdroje, simulace překročení limitů měření, řádné zobrazení na operátorské stanici, řádné zobrazení signálu v seznamu alarmů
+
+Každá individuální zkouška bude definována v plánu kontrol a zkoušek (PKZ) včetně odkazu na příslušnou technologickou instrukci, podle které se bude postupovat.
+
+Provádění IZ oznámí Zhotovitel Objednateli minimálně tři (3) pracovní dny před konáním zkoušky. Z každé IZ bude vystaven protokol s vyhovujícím výsledkem. Jedná se o jednu z podmínek ukončení montáže.
+
+Předpisy pro provoz zařízení (DPP)
+
+Předpisy pro provoz (DPP), zpracované Zhotovitelem, budou obsahovat strojní, stavební, elektro a SKŘ dokumenty dodávané Zhotovitelem. Předpisy pro provoz budou vydány i na základě předpisů poddodavatelů Zhotovitele pro dotčené systémy.
+Předpisy pro provoz musí obsahovat všechny potřebné informace, popisy zařízení, schémata, nákresy atd., tak aby Objednatel s jejich pomocí mohl příslušnou část Díla provozovat. V těchto předpisech musí být popsány všechny možné řádné a mimořádné provozní stavy zařízení, stejně jako jeho najíždění, normální provoz, plánované odstavení, nouzové odstavení, postup při odstraňování poruch, při havarijních stavech, řešení problémů (troubleshooting) a případné omezení provozu, jestliže je nutné. Dále musí obsahovat logický popis provozu veškerých strojů a zařízení. 
+
+Předpisy pro provoz pro zařízení a systémy v rámci Díla budou tak obsažné a podrobné, aby Objednatel mohl následně podle těchto předpisů provádět školení provozního personálu po celou dobu provozního života Díla. Zhotovitel je odpovědný za škody, kterým by se mohlo předejít dostatečným vysvětlením v předpisech pro provoz zařízení.
+
+Jednotlivé předpisy pro provoz musí být dodány ve struktuře odpovídajícím jednotlivým SO a PS (DPS), a ty budou sjednoceny v souhrnných předpisech pro provoz (DPP) Díla.
+
+Struktura předpisů pro DPP bude vypracována v souladu dle ČEZ_FO_0577, (viz Příloha 50.13 k Příloze 1 Smlouvy). Předpisy DPP musí být předány Zhotovitelem v termínu dle harmonogramu a dle odst. 7.2 Smlouvy, a v počtu pare uvedeném v odst.  REF _Ref16068338 \r \h  \* MERGEFORMAT 7.4 této Přílohy 4 Smlouvy.
+
+Předpisy pro údržbu zařízení (DPU)
+
+Předpisy pro údržbu (DPÚ), zpracované Zhotovitelem, budou obsahovat strojní, stavební, elektro a SKŘ dokumenty dodávané Zhotovitelem. Předpisy pro údržbu budou vydány i na základě předpisů poddodavatelů Zhotovitele pro dotčené systémy.
+
+Předpisy pro údržbu musí obsahovat všechny potřebné informace, popisy zařízení, schémata, nákresy atd., tak aby Objednatel s jejich pomocí mohl příslušnou část Díla udržovat. 
+
+Předpisy musí dále obsahovat organizaci, rozsah a časový plán údržbových prací, plán odstávek provozu během roku, cykly oprav včetně generálních, návrh řešení bezdemontážní diagnostiky volené podle důležitosti částí zařízení atd. Tyto předpisy musí být předány Zhotovitelem v termínu dle harmonogramu společně s provozními předpisy dle odst. 7.2 Smlouvy.
+
+Předpisy pro údržbu zařízení a systémů v rámci Díla budou tak obsažné a podrobné, aby Objednatel mohl následně podle těchto předpisů provádět školení personálu údržby po celou dobu provozního života Díla. Zhotovitel je odpovědný za škody, kterým by se mohlo předejít dostatečným vysvětlením v předpisech pro údržbu zařízení.
+
+Předpisy pro údržbu budou dodány ve struktuře odpovídajícím jednotlivým SO a PS (DPS), a ty budou sjednoceny v souhrnných předpisech pro údržbu (DPÚ) Díla. Struktura předpisů pro DPÚ bude vypracována v souladu dle CEZ_FO_0578 (viz Příloha 50.12 k Příloze 1 Smlouvy). Předpisy DPÚ musí být předány Zhotovitelem v termínu dle harmonogramu a dle odst. 7.2 Smlouvy, a v počtu pare uvedeném v odst. 7.4 této Přílohy 4 Smlouvy.
+
+ V předpisech pro údržbu musí být zahrnuty jako minimum následující položky:
+seznam komponent (ventily, pumpy, motory, nádoby atd.),
+údaje o hlavních komponentách ve formě datasheets, zahrnující název výrobce, typ, údaje o provedení, předpoklady, popisy a výkresy,
+zadané hodnoty, které musejí být dodány ve formě příručky zadaných hodnot,
+pokyny pro testování bezpečnostního zařízení,
+nástroje pro pravidelnou údržbu a prohlídky,
+podrobné výkresy, příručky pro opravy, a také podrobné příručky týkající se každého zařízení, stroje, nástroje, přístroje apod.,
+všechny výkresy musejí být podle Smlouvy dodány v provedení (odst. 7.2 této Přílohy 4 Smlouvy) a počtu (odst.  REF _Ref16068338 \r \h  \* MERGEFORMAT 7.4 této Přílohy 4 Smlouvy),
+pokyny k mazání strojů pro pravidelné mazání ve formě schémat pro mazání, jakožto kartotéky jednotlivých oddělených souborů. Schémata mazání musejí být dále poskytnuta v elektronické formě. Seznamy budou založeny na číslovacím systému, který bude udávat informaci o umístění komponent, označení maziva, množství maziva a intervaly mazání apod. Nejpozději šest (6) měsíců před uvedením Díla do provozu dodá Zhotovitel úplný seznam doporučených specifikací typů mazacích olejů a maziv ve svých dodávkách. Tyto specifikace budou založeny na standardech ČSN EN a budou zahrnovat označení typů doporučená výrobci mazacích olejů, odsouhlasené Objednatelem,
+seznamy náhradních dílů v souladu Přílohou 7 Smlouvy,
+přehled doporučených servisních společností pro jednotlivá zařízení včetně kontaktů,
+Součástí elektronické verze DPU předané Zhotovitelem budou předány veškeré elektronické softwarové zálohy SW, záloh protokolů o provedené parametrizaci, nastavení veškerého „chytrého zařízení“ PLC, elektro ochrany, frekvenční měniče, programovatelná měřidla, záskokové automaty, simocody, softstartery atd.
+
+Programy uvádění do provozu (PZUP)
+
+Zhotovitel zpracuje pro Dílo dokumentaci pro uvedení do provozu v rozsahu, který umožní Objednateli bezpečné uvedení Díla do trvalého provozu. Tato dokumentace bude obsahovat minimálně program zkoušek veškerého zařízení a popis zkoušek od ukončení montáže až do uvedení Díla do provozu v souladu s projektovanými parametry.
+
+Program zkoušek pro uvádění do provozu bude minimálně obsahovat:
+program prvního najetí (PPN) bude obsahovat soupis postupů pro první najetí celého Díla ze studeného stavu na provozní parametry,
+projekt pomontážních čistících operací (PCO),
+programy funkčních zkoušek (FZ),
+programy předkomplexního vyzkoušení (PKV) budou obsahovat zkoušky členěné po jednotlivých krocích pro ověření funkcí dodaného zařízení až po jednotlivé funkční celky. Zkoušky PKV jednotlivých funkčních celků končí zkouškou s provozním médiem.
+programy komplexního vyzkoušení (KV) budou obsahovat zkoušky pro ověření funkce zařízení při provozu za normálních a mezních podmínek,
+program komplexní zkoušky (KZ) bude obsahovat soupis redundantních zařízení, které budou během zkoušky prostřídány a způsob ověření provozuschopnosti, spolehlivosti, bezpečnosti a kvality Díla.
+
+Jednotlivé programy budou minimálně obsahovat:
+hlavní cíle, 
+účel a stručný popis zařízení, 
+výchozí podklady pro vypracování programu, 
+vazby na spolupracující systémy, 
+výchozí stav zkoušek (požadavky na připravenost zařízení a stavební části), 
+postup zkoušek, 
+kritéria úspěšnosti a jejich hodnocení, 
+požadavky na zajištění hmot a energií, 
+požadavky na součinnost Objednatele při provádění funkčních zkoušek a provozní personál, 
+požadavky na údržbu a opravy zařízení v průběhu zkoušek.
+
+Programy zkoušek budou Zhotovitelem vypracovány dle šablon, které jsou uvedeny v Příloze 55.0 této Přílohy 4 Smlouvy.
+
+Dokumentace zkoušek bude též obsahovat protipožární předpisy, bezpečnostní předpisy, analýzu rizik z hlediska obslužného personálu, předpisy pro ochranu zdraví a postupy pro likvidaci havárií vyplývající z charakteru, povahy a technických parametrů.
+
+V rámci uvádění do provozu Zhotovitel založí a bude udržovat „Deník najíždění“. „Deník najíždění“ slouží ke zdokumentování postupu a průběhu jednotlivých zkoušek, které budou v průběhu celého uvádění do provozu prováděny. Formát „Deníku najíždění“ bude A4 ve formě sešitu s pevnou vazbou. Do tohoto „Deníku najíždění“ bude Zhotovitel v souladu s odsouhlaseným Programem zkoušek a uvádění do provozu zaznamenávat průběh a výsledky jednotlivých zkoušek včetně zdůvodnění příčiny v případě nevyhovujícího výsledku zkoušky. Tento „Deník najíždění“ bude Zhotovitel předkládat Objednateli v pravidelných každodenních intervalech.
+
+Program funkčních zkoušek (FZ)
+
+Funkční zkoušky (FZ) jednotlivých zařízení Díla budou prováděny jako součást uvádění do provozu k ověření správnosti napojení na přívody energií a na řídící systém. Tyto zkoušky se provádějí bez pracovního média a slouží k prověření funkčnosti ve vazbě na ostatní části dodávky Díla. 
+
+Program FZ bude obsahovat minimálně:
+Zkouška elektromotorů:
+provedení zkoušky chodu,
+záběh motoru 4 hodiny (měření oteplení ložisek, vibrací),
+zkouška izolačního stavu motoru,
+provozní zkouška zjišťuje:
+ampérické zatížení, 
+teplota ložisek, 
+vibrace.
+Zkouška elektropohonů pro armatury:
+zkouška izolačního stavu motoru,
+provozní zkouška zjišťuje:
+směr pohybu,
+záběrový proud,
+provozní proud,
+doba provozu,
+kroutící moment,
+nastavení koncových spínačů,
+nastavení momentových spínačů,
+kontrola ovládání (z místa, z řídícího systému),
+funkci vysílače polohy.
+
+Program předkomplexního vyzkoušení (PKV)
+
+Zkoušky se provádí po jednotlivých funkčních celcích (FC). Za FC je považován soubor technologického zařízení, vč. návazného zařízení elektro a ASŘTP, který bude provozován jako celek (např. systém mazacího oleje, stanice napájecích čerpadel, kompresorová stanice). 
+
+V rámci zkoušek PKV se mimo jiné ověří: 
+funkce a zprovoznění jednotlivých technologických systémů po zaplnění příslušným pracovním médiem, 
+mechanický chod jednotlivých zařízení v sespojkovaném stavu s příslušnými motory, 
+seřízení regulačních ventilů, 
+celkové technologické zprovoznění jednotlivých FC a provedení předepsaných zkoušek (ovládání algoritmů, řízení, blokád, technologických ochran a regulací).
+
+Projekt certifikačních zkoušek (PCZ)
+
+Projekt certifikačních zkoušek zpracovává Zhotovitel pro provedení certifikačních zkoušek, kterými prokáže Objednateli, že Dílo dle této Smlouvy vyhovuje Pravidlům distribuční soustavy ČEZ Distribuce, a. s. 
+
+Projekt bude obsahovat minimálně:
+hlavní cíle, 
+účel zařízení, 
+stručný popis zařízení, 
+výchozí podklady pro vypracování projektu, 
+výchozí stav zkoušky, 
+kritéria úspěšnosti, 
+požadavky na zajištění hmot a energií, 
+požadavky na zajištění měření, 
+požadavky na součinnost Objednatele při provádění zkoušky a provozní personál,
+bezpečnostní, hygienická, organizační a protipožární opatření, 
+případná technologická omezení.
+
+V Projektu se uvedou hlavní cíle, účel zařízení, stručný popis zařízení, výchozí podklady pro vypracování projektu, výchozí stav zkoušky, kritéria úspěšnosti, požadavky na zajištění hmot a energií, požadavky na zajištění měření, požadavky na součinnost Objednatele při provádění zkoušky a provozní personál, bezpečnostní, hygienická, organizační, protipožární opatření a případná technologická omezení.
+
+Průvodní technická dokumentace (PTD)
+
+Obecné požadavky na PTD
+
+Součástí PTD zpracované Zhotovitelem budou doklady osvědčující vlastnosti a vhodnost materiálů, výrobků a typových konstrukcí, jejichž kvalita má zásadní vliv na splnění základních požadavků na stavby uvedených v §145 zákona č. 283/2021 Sb., stavební zákon, v platném znění, nebo jejichž vlastnost je v této příloze přímo vymíněná:
+zkušební certifikáty schválené zkušebními laboratořemi EU,
+prohlášení o shodě platné v době kolaudace Díla,
+protokoly o testech platné v EU,
+platné doklady k dílu z hlediska požární ochrany dle vyhlášky 246/2001 Sb., §46, odst. 5 v platném znění,
+PTD k vyhrazeným technickým zařízením tlakovým, plynovým, elektrickým a zdvihacím, dle platných legislativních a technických norem.
+
+PTD bude strukturovaně uspořádána ve složkách a podsložkách. Bude členěna podle stavebních objektů, ve stavebních objektech po provozních a dílčích provozních souborech. Stavební objekty budou dále členěny na část stavební a technické zařízení budov. Stavební část bude dále strukturovaná podle profesí hlavní stavební výroba a pomocná stavební výroba v zásadě podle způsobu členění projektové dokumentace.
+
+Detailní uspořádání PTD před jejím předáním zkonzultuje Zhotovitel s Objednatelem a provede seřazení podle pokynů Objednatele.
+
+K dokumentaci PTD bude vyhotoven kompletní seznam složek dle struktury předávané dokumentace. Každá složka bude obsahovat číslovaný seznam jednotlivých položek. V seznamu bude u každé položky uveden název dokumentu a identifikační znak tak, aby dokument jím byl jednoznačně určen (např. geometrický plán + číslo protokolu, certifikát + značka, název výrobků apod.) a počet obsažených listů A4 ve složce.  Jednotlivé dokumenty PTD budou zřetelně očíslovány ve shodě s číslováním na příslušném seznamu. Uvedený seznam PTD předá Zhotovitel Objednateli též v elektronické podobě (*.XLSX) viz Příloha 53.0 této Přílohy 4 Smlouvy.
+
+Požadavky na PTD měřidel
+
+Součástí předávané dokumentace musí být: 
+potvrzení o ověření stanoveného měřidla, protokol o montáži stanoveného měřidla s uvedením pozice montáže (včetně KKS). Tento protokol bude vypracován v souladu s ČEZ_FO_0971 (viz Příloha 52.02 této Přílohy 4 Smlouvy). V případě, že měřidlo bude prvotně ověřeno v zahraničí a bude označeno zahraniční značkou, která nebude ve shodě s platnou značkou prvotního ověření, tj. značkou prvotního EU ověření ve smyslu vyhlášky MPO č. 332/2000 Sb., v platném znění, nebo značkou shody podle zákona č. 22/1997 Sb., o technických požadavcích na výrobky, ve znění pozdějších předpisů, (zákon č. 90/2016 Sb., zákon č. 526/2020 Sb., NV 219/2016 Sb. v platném změní) bude k takovému měřidlu dodána kopie dokladů vydaných ČMI o tom, že typ měřidla dosahuje metrologickou úroveň vyžadovanou obecně závaznými právními předpisy České republiky a že ČMI provedlo zaevidování zahraniční značky prvotního ověření,
+v případě, že předmětem dodávky je měřidlo, které je uvedeno na trh v souladu s platnou legislativou EU (směrnice 2014/31/EU a 2014/32/EU, a tento charakter má i směrnice (EU) 2017/745, tzv. MDD), ale rozsah ověření nepokrývá všechny požadavky Objednatele, pak je Zhotovitel povinen zajistit platné prvotní ověření a jeho vyznačení na měřidle (např. elektroměry – měření jalové elektřiny),
+kalibrační listy nestanovených pracovních měřidel v českém jazyce (pokud budou vydány AKL mimo ČR, musí být splněny podmínky uvedené výše a musí být též na požádání Objednatele doložen překlad do českého jazyka tlumočníkem zapsaným do seznamu tlumočníků a překladatelů dle zákona č. 354/2019 Sb., o soudních tlumočnících a soudních překladatelích ve znění pozdějších předpisů.).
+seznam měřidel s kompletními údaji pro evidenci jednotlivých stanovených a nestanovených měřidel včetně jejich jednotlivých komponentů vytvořený pomocí Formuláře pro evidenci měřidel ČEZ_FO_0970 (viz Příloha_50.11 k Příloze 1 Smlouvy). Hodnota intervalu kalibrace bude stanovena dle Přílohy č. 1 vyhlášky MPO č. 345/2002 Sb. v platném znění, týká se pouze stanovených měřidel.
+Kopie Osvědčení o registraci právnické osoby u ČMI pro montáž jednotlivých typů měřidel.
+Kopie dokladů osob provádějících montáž o školení k montáži daných typů měřidel od výrobců nebo jejich regionálních zástupců v ČR.
+Aktuální kontakt na osobu zodpovědnou za montáž stanovených měřidel.
+Kopie dokladů o kalibraci/ověření měřidel používaných Zhotovitelem a jeho poddodavateli. Doklad o kalibraci nesmí být starší 5 let s výjimkou případů, kdy obecně závazné právní předpisy České republiky výslovně stanovují lhůtu jinou. V případech, kdy je výrobcem měřidla stanovena lhůta kratší než 5 let, nesmí být doklad o kalibraci starší, než je tato lhůta stanovená výrobcem měřidla. Platnost ověření musí být v souladu s platnou legislativou v ČR. Kalibrace se provádějí v souladu s metodikou SKČ_ME_0239 (viz Příloha 50.03 k Příloze 1 Smlouvy).
+veškerá měřicí zařízení použitá ke zhotovení Díla musí splňovat legislativní požadavky dle zák. č. 505/1990 Sb. ve znění pozdějších předpisů. Objednatel vyžaduje kalibraci, případně ověření pro každé použité měřící zařízení v průběhu realizace Díla dle zák. č. 505/1990 Sb.
+Zhotovitel je povinen na vyžádání Objednatele předložit platný dokument (kalibrační/ověřovací list) prokazující správné metrologické vlastnosti použitého měřícího zařízení.
+
+Všechna nestanovená pracovní měřidla a měřící řetězce budou doložena kalibračními listy bez ohledu na to, k čemu bude dané měřidlo nebo měřící řetězec sloužit nebo jaká bude jeho důležitost. 
+
+Každý kalibrační list měřidla určeného pro montáž na výrobní technologii Objednatele vystaven přímo na KKS měřidla (nejen na jeho výrobní číslo). Pokud výsledek zkoušky prokáže, že kalibrované měřidlo splňuje všechny požadavky vystaví se v kalibračním listu výsledek “vyhovuje“ s uvedením v jakém rozsahu a třídě přesnosti. Prohlášení o shodě k měřidlům bude přiloženo jako samostatný dokument. 
+
+Zhotovitel zpracuje a předloží ke schválení Objednateli plán kalibrací a ověření.
+
+PTD z výroby (PTD VYR)
+
+Současně s kompletací dodávek na staveniště předá Zhotovitel průvodní technickou dokumentaci z výroby (PTD VYR) Objednateli.
+
+PTD VYR slouží jako podklad pro zpracování montážní dokumentace, pokynů pro skladování a pokynů pro údržbu zařízení před prvním uvedením do provozu.
+
+Pokud PTD VYR naplní více svazků bude Zhotovitel vytvářet svazky týkající se téže věci jako např. armatury, prefabrikáty, rozváděče, snímače měření atd.
+
+PTD VYR bude minimálně obsahovat:
+Prohlášení o shodě dle ČSN EN ISO/IEC 17050-1 pro všechny výrobky a komplety tj.:
+stanovené výrobky (SV) dle Zákona č. 22/1997 Sb. a příslušných nařízení vlády,
+vyhrazená technická zařízení (VTZ) dle nařízení vlády č. 190/2022 Sb., 191/2022 Sb., 192/2022 Sb. a 193/2022 Sb.,
+vyhrazená zařízení (VZ) v jaderné energetice dle Zákona č.18/1997 Sb.,
+vyhrazená zařízení speciálně navrhovaná (VZSN) dle Zákona č.18/1997 Sb.,
+ostatní výroby, komplety a komponenty nezařazené.
+dokumenty o řízení kvality v průběhu výroby:
+dokumenty o prokázaní kvality všech výrobků, kompletů a komponent (PoS),
+dokumenty ověřování kvality (pokud je ve Smlouvě požadováno) minimálně v rozsahu PKZ výroby s potvrzenými kontrolními operacemi a doloženy příslušnou dokumentací (osvědčení, protokoly o zkouškách, materiálová osvědčení, certifikáty atd.),
+dokumenty o vypořádání NCR z procesu výroby.
+Všeobecné technické dokumenty, a to především v rozsahu Nařízení vlády č. 378/2001 Sb., kterým se stanoví bližší požadavky na bezpečný provoz a používání strojů, technických zařízení, přístrojů a nářadí:
+návody a manuály výrobce pro montáž, manipulaci, skladování, opravy, údržbu, výchozí a následné pravidelné kontroly a revize zařízení, jakož i pokyny pro případnou výměnu nebo změnu zařízení
+technická dokumentace nezbytná k plnému pochopení návodu, nebo pokud to požaduje zvláštní právní předpis anebo pokud je ve Smlouvě požadována jako je např. popis systému, schéma zapojení, výkresy atd.
+datové listy s informacemi o rozměrech, hmotnosti, napájení apod.,
+katalogové listy se soupisem náhradních dílů pro stroje a zařízení, Zhotovitel dále v rámci této dokumentace předloží specifikaci náhradních dílů včetně jejich výrobců, identifikačních kódů výrobce, četnosti výměny a ceny, a to pro období čtyřletého provozu,
+sestavné výkresy s kusovníkem,
+kotevní plány.
+
+PTD z montáže (PTD MONT)
+
+Nejpozději k termínu ukončení montáže předá Zhotovitel průvodní technickou dokumentaci z montáže (PTD MONT) Objednateli.
+
+PTD MONT bude minimálně obsahovat:
+Prohlášení o shodě:
+stanovené výrobky dle Zákona č. 22/1997 Sb. a příslušných nařízení vlády (NV č. 219/2016 Sb., 176/2008 Sb. a Zákon č. 100/2013 Sb.)
+dokumenty požadované technickými předpisy:
+ČSN EN 13480 Kovová průmyslová potrubí,
+ČSN 07 0705 Parní kotle – Uvádění kotlů do provozu,
+montážní dokumentací,
+technologickými postupy,
+programy TZ, TPZ, IZ a PCO.
+Dokumenty o řízení kvality v průběhu montáže:
+dokumenty Zhotovitele o prokázání kvality kompletovaných technologických a logických celků – předmětu se specifikovanými požadavky (PoS dle ČSN EN ISO/IEC 17050-1),
+dokumenty ověřování kvality v rozsahu PKZ montáže s potvrzenými kontrolními operacemi a doloženy příslušnou dokumentací (osvědčení, protokoly o zkouškách, materiálová osvědčení, certifikáty, svarová dokumentace, NDT, tepelné zpracování, betonáž, kotvení, kabeláž, nátěry, izolace, požární ucpávky, štítkování atd.),
+protokoly a záznamy o tlakových zkouškách, certifikáty tlakových zkoušek,
+protokoly a záznamy o zkouškách bez el. napětí a provozních hmot (IZ),
+protokoly a záznamy o čistících operacích (PCO – vyvářka, profuky atd.),
+dokumenty o vypořádání NCR.
+
+Zhotovitel povede elektronicky evidenci jím zhotovovaných svarů (např. MS Excel). V této evidenci musí být detailně podchyceny svařované části (např. KKS kódy), použité dokumenty (WPS/WPQR), čísla svářečů, čísla protokolů z NDT, čísla protokolů z předehřevu, tepelného zpracování a čísla protokolů z měření tvrdosti. Použitý SW musí umožňovat třídění dle libovolných kritérií (např. musí umožňovat vyfiltrovat svářeče, kteří svařovali daný úsek části Díla). Výše zmíněný SW musí být na vyžádání k dispozici Objednateli. Dále musí být k dispozici při každé stavební zkoušce.
+
+PTD z uvádění do provozu (PTD NAJ)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci z uvádění do provozu (PTD NAJ) Objednateli.
+
+PTD NAJ bude minimálně obsahovat:
+Dokumenty požadované v programech jednotlivých zkoušek (FZ, PKV, KV, KZ, GT),
+Dokumenty řízení kvality:
+protokoly o provedení FZ,
+protokoly a záznamy o provedení PKV, včetně příloh (záznamy provozních hodnot, nastavení ochran a regulace, diagnostická měření atd.),
+protokoly ze spouštěcích činností v rámci KV a KZ, včetně příloh,
+protokoly a záznamy z GT,
+protokol o certifikaci zařízení.
+
+PTD vyhrazených technických zařízení (PTD VTZ)
+
+Současně s ukončením montáže předá Zhotovitel průvodní technickou dokumentaci vyhrazených technických zařízení (PTD VTZ) Objednateli. 
+
+Zhotovitel bude tuto dokumentaci udržovat aktuální a revidovat ji v průběhu uvádění do provozu až do doby předběžného převzetí Díla (PAC).
+
+Jedná se zejména o dokumenty požadované dle Nařízení vlády č. 190/2022 Sb., 191/2022 Sb., 192/2022 Sb. a 193/2022 Sb.
+
+Dokumentace PTD VTZ bude samostatná dokumentace a bude obsahovat originály vystavených dokumentů. Kopie vystavených dokumentů budou vloženy do PTD MONT a rozděleny dle příslušných SO, InO a PS/DPS.
+
+PTD VTZ bude minimálně obsahovat:
+passporty, revizní anebo provozní knihy,
+návody k provádění revizí,
+odborná a závazné stanovisko DOSS, pokud je požadováno,
+výchozí a periodické revize zařízení,
+kontrolní prohlídky zařízení.
+
+PTD ocelových konstrukcí (PTD OK)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci ocelových konstrukcí (PTD OK) Objednateli.
+
+PTD OK bude samostatná dokumentace, která bude obsahovat originály výchozích prohlídek ocelových konstrukcí. Kopie vystavených dokumentů budou vloženy do PTD MONT a rozděleny dle příslušných SO a PS/DPS.
+
+PTD měřících zařízení (PTD KL)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci měřících zařízení a měřících řetězců (PTD KL) Objednateli.
+
+PTD KL bude samostatná dokumentace a bude obsahovat originály kalibračních listů měření a měřících řetězců. Kopie kalibračních listů budou vloženy do PTD VYR a rozděleny dle příslušných SO a PS/DPS.
+
+PTD požárně bezpečnostního zařízení (PTD PBZ)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci požárně bezpečnostních zařízení (PTD PBZ) Objednateli.
+
+Dokumentace bude zpracována zejména v souladu s legislativou:
+zákonem č. 133/1985 Sb., Zákon České národní rady o požární ochraně
+vyhláškou č. 246/2001 Sb., Vyhláška Ministerstva vnitra o stanovení podmínek požární bezpečnosti a výkonu státního požárního dozoru (vyhláška o požární prevenci)
+vyhláškou č. 23/2008 Sb., Vyhláška o technických podmínkách požární ochrany staveb 
+
+PTD PBZ bude minimálně obsahovat:
+doklady o montáži PBZ,
+doklady o oprávnění osob k montáži PBZ,
+doklady o kontrole provozuschopnosti PBZ,
+doklady o funkční zkoušce PBZ,
+doklady potvrzující požadované vlastnosti z PBŘ,
+plány BOZP a v nich požadované dokumenty dle Zákona č. 309/2006 Sb. o zajištění dalších podmínek bezpečnosti a ochrany zdraví při práci.
+seznam protipožárních přepážek (včetně veškeré dokladové části) s uvedením značení přepážky, umístění přepážky ve stavbě, použitého systému, provedení data kontroly funkčnosti, evidenční číslo protokolu o funkčnosti. Seznam protipožárních přepážek bude koordinovaný přes všechny profese v rámci dodávky Díla a bude vypracován v souladu s Přílohou 54.0 této Přílohy 4 Smlouvy.
+
+PTD ochrany před výbuchem (PTD DOPV)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci ochrany před výbuchem (PTD DOPV) Objednateli.
+
+Dokumentaci o ochraně před výbuchem zpracuje Zhotovitel v návaznosti na výsledky posuzování rizika výbuchu v souladu s Nařízením vlády č. 406/2004 Sb., o bližších požadavcích na zajištění bezpečnosti a ochrany zdraví při práci v prostředí s nebezpečím výbuchu.
+
+PTD DOPV bude minimálně obsahovat:
+ES prohlášení o shodě zařízení, ochranného systému nebo přístroje,
+specifické označení ochrany proti výbuchu, doplněné o symbol skupiny a kategorie zařízení,
+návod k použití zařízení a ochranného systému vybavený překladem do českého jazyka,
+výkresy a schémata nezbytná k uvádění do provozu, údržby, inspekce, kontrole správného chodu a opravy zařízení nebo ochranného systému,
+doklady o montáži, 
+ověření prostředí nebezpečí výbuchu před prvním uvedením do provozu,
+doklady o kontrole provozuschopnosti,
+doklady o funkční zkoušce.
+
+PTD licenční ujednání, aplikační SW, SW zálohy (PTD SW)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci softwarového vybavení (PTD SW) Objednateli.
+
+PTD SW bude minimálně obsahovat:
+licenční ujednání dodavatele SW, instalační a obnovovací (recovery) aplikace k danému zařízení,
+licence, instalační a obnovovací (recovery) aplikace pro oživení a aplikaci na stavbě,
+aplikační komentovaný SW při předání DSS,
+SW zálohu,
+přístupové kódy pro administraci SW.
+
+PTD nakládání s odpady (PTD LO)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci o likvidaci odpadů (PTD LO) Objednateli.
+
+Dokumentaci o nakládání s odpady zpracuje Zhotovitel v souladu se Zákonem č. 541/2020 Sb., o odpadech, včetně dodatků, doplňujících vyhlášek a ostatních souvisejících dokumentů a právních předpisů.
+
+PTD LO bude minimálně obsahovat:
+evidence o produkci a nakládání s odpady, vč. dokladů o předání a zneškodnění odpadů,
+protokoly z kontrol, informace z činností při nakládání s odpady, informace o případných haváriích či jiném ohrožení životního prostředí, analytické výsledky prováděných zkoušek,
+bezpečnostní listy použitých a používaných chemických látek a přípravků v českém jazyce.
+
+PTD geodetické zaměření (PTD GeZ)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci geodetického zaměření (PTD GeZ) Objednateli.
+
+Dokumentaci geodetického zaměření zpracuje Zhotovitel v souladu se Zákonem č. 200/1994 Sb., o zeměměřičství.
+
+Veškeré konstrukce a inženýrské sítě, které budou zakryty vrchní stavbou nebo zakrytím (záhozem, zásypem), budou geodeticky zaměřeny, polohopisně i výškopisně, před tímto zakrytím.
+
+V případě obnažení neznámých podzemních inženýrských sítí nebo konstrukcí, které nebyly zakresleny v původním generelu / situačních výkresech, je nutné provést jejich identifikaci a zaměřit jejich polohopis a výškopis před jejich opětovným zakrytím.
+
+Zaměření technologie hlavních objektů bude provedeno metodou laserového skenování tak, aby technologie nebyla zakryta izolacemi.
+
+PTD GeZ bude minimálně obsahovat:
+souřadnice podrobných bodů podle přílohy k č.j. ČUZK 6495/2009-22, Pomůcka k aplikaci ustanovení katastrální vyhlášky vztahujících se k souřadnicím podrobných bodů (viz Příloha 50.23 k Příloze 1 Smlouvy).
+doklady o zajištění souborného zpracování dokumentace geodetických prací. 
+technická zpráva (*.DOCX), 
+vytyčovací nebo měřící protokol, seznam souřadnic (*.DOCX), 
+výkresová dokumentace (*.DWG).
+
+PTD geometrický plán (PTD GeP)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci geometrického plánu (PTD GeP) Objednateli. Geometrický plán bude sloužit pro zápis do katastru nemovitostí.
+
+Dokumentaci geometrického plánu zpracuje Zhotovitel v souladu se Zákonem č. 200/1994 Sb., o zeměměřičství.
+
+PTD GeP bude minimálně obsahovat:
+souřadnice podrobných bodů podle přílohy k č.j. ČUZK 6495/2009-22, Pomůcka k aplikaci ustanovení katastrální vyhlášky vztahujících se k souřadnicím podrobných bodů (viz Příloha 50.23 k Příloze 1 Smlouvy).
+technická zpráva (*.DOCX), 
+vytyčovací nebo měřící protokol, seznam souřadnic (*.DOCX), 
+výkresová dokumentace (*.DWG).
+ 
+PTD zaškolení personálu (PTD SKOL)
+
+Současně s předběžným převzetím Díla (PAC) předá Zhotovitel průvodní technickou dokumentaci o zaškolení personálu (PTD SKOL) Objednateli.
+
+PTD SKOL bude minimálně obsahovat: 
+protokoly a záznamy ze školení personálu. Z protokolů a záznamů bude zřejmý předmět a rozsah školení. 
+podepsané prezenční listiny personálu Objednatele (originály).
+
+Dokumentace pro školení personálu (DOO)
+
+Zhotovitel je povinen dodat dokumentaci pro školení personálu určeného Objednatelem. Tato dokumentace bude tak obsažná a podrobná, aby umožňovala zapojení provozního a údržbářského personálu určeného Objednatelem do procesu uvádění Díla do provozu. 
+
+Dokumentace pro školení personálu musí být předána Zhotovitelem Objednateli v termínu v souladu podrobným časovým harmonogramem provedení Díla a Smlouvy.
+
+Rozsah a členění školení personálu musí odpovídat Příloze 15 Smlouvy.
+
+Dokumentace pro školení personálu určeného Objednatelem musí obsahovat minimálně následující dokumenty:
+a)plán a program školení,
+b)příručka pro školení v učebně,
+c)příručka pro školení týkající se provozu a údržby,
+d)pokyny týkající se zdraví a bezpečnosti.
+
+Projekty měření požadovaných legislativou ke zkušebnímu provozu a kolaudaci Díla 
+
+Dokumentace, zpracovaná Zhotovitelem, bude obsahovat projekty všech měření požadovaných příslušným stavebním úřadem a nárokovanými dotčenými orgány státní správy v celém průběhu přípravy a realizace Díla (např. měření hluku, vibrací, emisí, osvětlení, kvality vypouštěných odpadních vod apod.)
+
+Projekty budou zpracovány odborníky s příslušným oprávněním a v termínech nebránících realizaci a provedení vlastních měření ke zkušebnímu provozu a kolaudaci Díla.
+
+Dokumentace skutečného stavu (DSS)
+
+Dokumentace zpracovaná Zhotovitelem v rozsahu dokumentací pro provádění stavby (DpPS) a realizační projektové dokumentace (DD) bude průběžně opravována dle stavu po montáži, po uvedení do provozu a při předání Díla Objednateli.
+
+Opravená dokumentace (RC) a Dokumentace skutečného stavu (As Built) bude profesně členěna po jednotlivých stavebních objektech. Ve stavebních objektech bude dokumentace členěna po provozních souborech, dílčích provozních souborech a stavebních profesích. 
+
+Provozní soubory a dílčí provozní soubory nesouvisející se stavebním objektem Díla budou uvedeny samostatně.
+
+Opravená dokumentace – Red correct (RC)
+
+Zhotovitel bude v průběhu realizace udržovat aktuální opravenou realizační dokumentaci (tzv. Red Correct) pro celý rozsah své dodávky. Zhotovitel předá kompletní dokumentaci RC na Objednatele v souladu se Smlouvou. Dokumentace RC bude uložena na staveništi a dostupná k nahlédnutí pro Objednatele.
+
+Dokumentace bude meziprofesně zkoordinovaným, vzájemně projednaným a odsouhlaseným projektovým podkladem k vypracování čistopisu Dokumentace skutečného stavu (As Built) dle kapitoly. 4.2 této Přílohy 4 Smlouvy.
+
+Během práce na opravené dokumentaci bude Zhotovitel řešit a koordinovat meziprofesní návaznosti na společných konzultacích projektantů a určených zástupců Objednatele.
+
+Dokumentace skutečného stavu – As Built (AsB)
+
+Dokumentace skutečného stavu (As Built), zpracovaná Zhotovitelem, bude čistopisem opravené a zkoordinované Realizační projektové dokumentace (Detail Design) v rozsahu a podrobnostech dle kapitoly 4.1 této Přílohy 4 Smlouvy a bude odpovídat stavu v době předběžného převzetí Díla (PAC).
+
+Za účelem spolehlivé koordinace projektové dokumentace musí Zhotovitel zpracovávat všeprofesní dokumentaci v úrovni podrobnosti Realizační projektové dokumentace (Detail Design) databázově ve (2D) datech. 
+
+Dispoziční výkresová dokumentace (3D) bude v souladu s geodetickým zaměřením objektů Díla. Technologie v hlavních objektech Díla včetně potrubních mostů dotčených Dílem musí být zaměřeny metodou laserového skenování ve stavu, kdy technologie a rozvody nejsou zakryty izolacemi.
+
+Veškeré části dokumentace označí Zhotovitel jako „Dokumentace skutečného stavu“. V případně nedostatku místa budou značeny jako „AsB“ (např. výkresová dokumentace, razítka apod.).
+
+Dokumentace skutečného stavu připojení výrobny k DS (AsB DS)
+
+Zhotovitel zpracuje a předá Objednateli dokumentaci skutečného stavu připojení výrobny k distribuční soustavě (AsB DS) pro celý rozsah dodávky Díla. 
+
+Dokumentaci skutečného stavu připojení výrobny k distribuční soustavě zpracuje Zhotovitel v rozsahu projektové dokumentace pro připojení výrobny k DS (DPSP), v níž zapracuje Zhotovitel veškeré změny, ke kterým došlo při montáži a uvádění do provozu. Dokumentace bude odpovídat stavu v době předběžného převzetí Díla (PAC).
+
+Veškeré části dokumentace označí Zhotovitel jako „Dokumentace skutečného stavu“. V případně nedostatku místa budou značeny jako „AsB“ (např. výkresová dokumentace, razítka apod.).
+
+Ostatní dokumentace
+
+Zhotovitel dále dodá ostatní dokumentaci jako např.: protokoly z montáže a období uvádění do provozu, stavební deníky, operativní programy, dočasné provozní instrukce, popř. další mezi Zhotovitelem a Objednatelem dohodnutou dokumentaci.
+
+Geotechnický průzkum
+
+Objednatel neprováděl Geotechnický průzkum. Zhotovitel zajistí tento průzkum v místě realizace Díla, za účelem ověření skutečných poměrů, zejména v místě zakládání nosných konstrukcí. 
+
+Tento geotechnický průzkum, bude geodeticky zaměřen a provedené sondy budou zakresleny do generelu.
+
+Zhotovitel předá Objednateli výsledky z provedeného geotechnického průzkumu minimálně v tomto rozsahu:
+Oblast korozního průzkumu půdy
+měření proudového pole a přítomnosti bludných proudů
+Oblast hydrogeologie:
+výsledky ověření ustálené hladiny spodní vody
+výsledky základního chemického rozboru podzemních vod, zatřídění podzemních vod a hornin z hlediska agresivity na beton a ocel
+Oblast mechaniky zemin a hornin:
+výsledky geotechnických parametrů základových zemin v míře nezbytně nutné pro statické návrhy konstrukcí 
+protokol z geodetického zaměření provedených sond a zakreslení provedených sond do generelu řešené stavby.
+
+Oblast BOZP
+
+Zhotovitel poskytne dle čl. 15 Smlouvy informace Objednateli o rozsahu a způsobu provedení prací, a to nejpozději třicet (30) kalendářních dnů před převzetím Staveniště do užívání.
+
+Zhotovitel je povinen předat nejpozději deset (10) dnů před předáním Staveniště Objednateli přehled rizik, vznikajících při pracovních nebo technologických postupech, které zvolil.
+
+Zhotovitel je povinen předat nejpozději patnáct (15) dnů před předáním Staveniště Objednateli vyplněný dotazník BOZP k zákonu č. 309/2006 Sb. Dotazník je dokument obsahující základní údaje o poddodavateli a informace, potřebné pro posouzení a koordinaci BOZP. Dotazník BOZP bude vypracován v souladu dle CEZ_FO_0648, (viz Příloha 50.19 k Příloze 1 Smlouvy). 
+
+Zhotovitel zpracuje řád Staveniště, který musí obsahovat alespoň pravidla, týkající se níže uvedených oblastí (čl. 15 Smlouvy):
+ostrahy,
+bezpečnosti práce,
+vstupní kontroly,
+sociálního zařízení,
+lékařské péče,
+protipožární ochrany,
+ochrany životního prostředí, a
+evakuačního plánu.
+
+Zhotovitel v rámci zpracování a předání odsouhlasené Realizační projektové dokumentace předá také POV. 
+
+Zhotovitel bude během projektování průběžně aktualizovat dokumentaci potřebnou pro tvorbu a aktualizaci Plánu BOZP na staveništi, vč. technologických a pracovních postupů a bude ji předávat Objednateli k odsouhlasení.
+
+Požadavky na průvodně technickou dokumentaci měřidel
+
+Požadavky na průvodně technikou dokumentaci měřidel jsou uvedeny v kapitole 3.9 této Přílohy 4 Smlouvy a to v odst. b) požadavky na PTD měřidel.
+
+Doklady k žádosti o povolení zkušebního provozu (DPZP)
+
+K získání stanovisek orgánů státního dozoru a pro podání žádosti o povolení zkušebního provozu Díla, Zhotovitel předá Objednateli zejména:
+veškeré doklady požadované příslušným stavebním úřadem, dotčenými orgány státní správy a státního dozoru, nárokovanými v průběhu přípravy a realizace Díla, dle odst.  REF _Ref529882582 \r \h  \* MERGEFORMAT 3.9 této přílohy 4 Smlouvy,
+dodavatelský předpis pro provoz zařízení Díla dle odst.  REF _Ref529882556 \r \h  \* MERGEFORMAT 3.5 této Přílohy 4 Smlouvy,
+dodavatelský předpis pro údržbu zařízení Díla dle odst.  REF _Ref529882568 \r \h  \* MERGEFORMAT 3.6 této Přílohy 4 Smlouvy,
+stavební dokumentaci odpovídající skutečnému provedení Díla dle odst. 2.10 této Přílohy 4 Smlouvy.
+
+Doklady k žádosti o kolaudační souhlas Díla (DKS)
+
+K žádosti o vydání kolaudačního souhlasu Zhotovitel předá Objednateli zejména:
+dokumentaci skutečného provedení stavby dle odst.  REF _Ref529882767 \r \h  \* MERGEFORMAT 2.10 této Přílohy 4 Smlouvy, nebyla-li předána Zhotovitelem již ke zkušebnímu provozu,
+prohlášení Zhotovitele o shodě na Dílo jako celek (v souladu s ISO/IEC17050-1),
+prohlášení Zhotovitele podle § 145 zákona 283/2021 Sb., o územním plánování a stavebním řádu (stavební zákon), v platném znění,
+vyhodnocení zkušebního provozu,
+vyhodnocení splnění podmínek stanovených stavebním úřadem a dotčenými orgány státní správy nárokovanými v průběhu přípravy a realizace Díla – písemným prohlášením Zhotovitele,
+provozní řád objektů,
+požární a evakuační plán,
+specifikaci druhů a množství odpadů vzniklých v procesu výstavby a doložení způsobu jejich využití nebo odstranění dle zákona 541/2020 Sb., o odpadech, v platném znění.
+
+Harmonogram
+
+Zhotovitel zpracuje časový harmonogram v souladu s Přílohou 5 Smlouvy, ve kterém bude zahrnuto období od podpisu Smlouvy do konečného převzetí (FAC).
+
+Schvalování a kontrola DOKUMENTACE
+
+Předávání dokumentace ke schválení
+
+Zhotovitel dle Plánu tvorby dokumentace připraví a předá Objednateli dokumentaci uvedenou v článcích 2 až 5 této Přílohy 4 Smlouvy ke schválení. Dokumentace jakékoliv části Díla, která má být schválena Objednatelem, může být vydána (elektronicky, tiskem) pouze poté, co Objednatel dokumentaci schválí.
+
+Zhotovitel předá dokumentaci ke schválení bezpečným způsobem, tak aby nedošlo k vyzrazení předávaných informací. Úroveň bezpečnostních opatření a vhodný komunikační kanál zvolí Zhotovitel vzhledem k charakteru obsahu předmětné dokumentace (adresace prvků SKŘ, hesla, topologie, parametrizace apod.). Způsob předání a aplikovaná bezpečnostní opatření budou před předáním dokumentace schválena Objednatelem. Každá dokumentace bude předána ke schválení předávacím protokolem.
+
+Pro zjednodušení procesu schvalování svolá Zhotovitel konzultace, minimálně, při zahájení prací, nad rozpracovanou dokumentací v průběhu prací a v závěru prací na této dokumentaci. Z každé z provedených konzultací bude pořízen zápis, do kterého zaznamená dohodnuté skutečnosti (relevantní připomínky zástupců Objednatele). Kopii zápisu přiloží Zhotovitel do dokladové části dokumentace. Po závěrečné konzultaci pak předloží dokumentaci se všemi zapracovanými připomínkami ke schválení Objednateli. Termín konání konzultace sdělí Objednateli minimálně 5 pracovních dnů před termínem konání konzultace (pokud nebude dohodnuto jinak) a současně zašle program konzultace. K programu bude přiložena příslušná dokumentace k projednání.
+
+Veškeré termíny předávání dokumentace, uvedené v této Smlouvě, platí pro předávání dokumentace schválené Objednatelem.
+
+Proces schvalování
+
+Do desátého (10.) pracovního dne poté, co Objednatel obdrží výše uvedenou dokumentaci ke schválení, musí Objednatel, buď Zhotoviteli potvrdit, že akceptuje předloženou dokumentaci nebo musí sdělit Zhotoviteli písemně důvody (e-mailem), proč dokumentaci neakceptuje.
+
+Nekompletní dokumentace
+
+V případě, že dokumentace předaná Zhotovitelem ke schválení je nekompletní a Objednatel není schopen řádně dokumentaci zkontrolovat, Objednatel to neprodleně sdělí Zhotoviteli a výše uvedená lhůta deset (10) pracovních dní započne po obdržení požadované vysvětlující dokumentace/informace. Stejný postup bude použit, pokud nějaká dokumentace nemůže být schválena nebo zkontrolována proto, že jsou v ní shledány chyby, rozpory nebo odchylky od Smlouvy nebo jiné nepřesnosti a Zhotovitel je požádán, aby dokumentaci předložil po nápravě.
+
+Rozpory s ustanovením Smlouvy
+
+Objednatel může neschválit nebo nezkontrolovat pouze takovou dokumentaci, která je v rozporu s ustanovením Smlouvy, v rozporu s předchozím stupněm projektové dokumentace vyjma schválených změn nebo v rozporu s dobrou inženýrskou praxí.
+
+Neschválení dokumentace
+
+Pokud Objednatel neschválí nebo nebude akceptovat kontrolovanou dokumentaci, může Zhotovitel buď dokumentaci opravit a předat ji znovu ke schválení nebo kontrole nebo toto neschválení nebo neakceptování rozporovat v souladu s příslušnými ustanoveními Smlouvy.
+
+V případě sdělení Objednatele o neschválení dokumentace nebo zjištění, že dokumentace je nekompletní je Zhotovitel povinen se po obdržení stanoviska Objednatele ke stanovisku neprodleně vyjádřit. 
+
+V případě, že Objednatel předal k dokumentaci připomínky, musí Zhotovitel neprodleně svolat jednání k projednání předaných připomínek, zpracovat zápis, který bude vzájemně odsouhlasen Zhotovitelem a Objednatelem, ve kterém se zapíše způsob řešení. Následně Zhotovitel v dohodnuté lhůtě tuto dokumentaci opraví, případně doplní. 
+
+V případě nekompletní dokumentace výše uvedený mechanismus projednání připomínek začne platit v okamžiku, kdy byla dokumentace doplněna a Objednatel zaslal Zhotoviteli připomínky k této doplněné dokumentaci.
+
+Zodpovědnost Zhotovitele
+
+Schválení dokumentace Zhotovitele Objednatelem, ať už s úpravami nebo bez úprav, nezbavuje žádným způsobem Zhotovitele zodpovědnosti nebo závazku vyplývajícího mu z ustanovení Smlouvy.
+
+Kategorie schvalování
+
+V termínech, uvedených výše, vrátí Objednatel Zhotoviteli jednu z kopií obdržení dokumentace, nebo vyznačením v elektronické verzi dokumentace v seznamu dokumentů označenou jednou z následujících kategorií:
+Kategorie (1) Schváleno – znamená schváleno, přičemž schválení se týká pouze předloženého dokumentu s příslušným číslem a revizí. Kategorie (1) opravňuje Zhotovitele provádět práce na základě příslušného dokumentu.
+Kategorie (2) Schváleno s připomínkami – znamená principiální schválení, avšak s výhradami, které Objednatel uvede buď v dokumentu, nebo v průvodním dopise. Po kontrole a úpravě musí být dokument zaslán znovu ke schválení. Kategorie (2) rovněž opravňuje Zhotovitele provádět práce na základě této dokumentace, avšak při respektování výhrad Objednatele.
+Kategorie (3) Neschváleno – znamená, že dokument nemohl být schválen z důvodů, které Objednatel uvede. Po kontrole a úpravě musí být dokument zaslán znovu k odsouhlasení. Kategorie (3) neopravňuje Zhotovitele provádět práce v té oblasti, které se dokument týká.
+Kategorie (4) Není předmětem schvalování / pouze pro informaci – znamená, že k tomuto dokumentu není vyžadováno schválení a že tento dokument slouží jen pro informaci nebo pro předání projekčních detailů. Ačkoliv dokument není předmětem schvalování, Objednatel může k němu mít námitky nebo vznést připomínky, které vezme Zhotovitel na vědomí.
+
+Počet kopií dokumentace ke schválení
+
+Dokumentace a výkresy, předávané Zhotovitelem ke schválení předá Zhotovitel v počtu 2x elektronicky na CD/DVD + digitální uložení do Objednatelem určeného adresáře.
+
+Pravidla pro předávání dokumentace
+
+Zhotovitel předá Objednateli veškerou dokumentaci uvedenou v této Příloze  4 Smlouvy ke kontrole a schválení.
+
+Každá dokumentace bude Zhotovitelem na Objednatele předána s předávacím protokolem, ve kterém obě strany potvrdí předání a převzetí. Protokoly pro předání dokumentace budou mít následující status:
+„PRO SCHVÁLENÍ“ – jedná se o dokumentaci předávanou na Objednatele za účelem kontroly a schválení. 
+„SCHVÁLENÁ“ – jedná se o dokumentaci po kontrole obsahu a schválení ze strany Objednatele předávanou v požadovaném počtu paré (papírová verze dokumentace) a v požadovaném počtu elektronických verzí dokumentace (CD, DVD atd.).
+„PRO INFORMACI“ - není vyžadováno schválení a tento dokument slouží jen pro informaci nebo pro předání projekčních detailů. Ačkoliv dokument není předmětem schvalování, Objednatel může k němu mít námitky nebo vznést připomínky, které vezme Zhotovitel na vědomí.
+
+Veškeré termíny předávání dokumentace, uvedené v této Smlouvě, platí pro předávání dokumentace schválené a předané v požadovaném počtu paré na Objednatele. Termín předání schválené dokumentace bude uveden v předávacím protokolu podepsaným Zhotovitelem i Objednatelem.
+
+Jakákoliv část Díla, na kterou se vztahuje dokumentace, která má být schválena Objednatelem, může být vydána pouze poté, co Objednatel dokumentaci schválí.
+Předtím, než Zhotovitel předá Objednateli jakoukoliv dokumentaci zpracovanou jeho poddodavateli, sám tuto dokumentaci zkontroluje, zda je v souladu s ustanoveními této Smlouvy a dobrou inženýrskou praxí. Zhotovitel zajistí opravu případných vad před předáním Objednateli. 
+
+Pro zjednodušení procesu schvalování může Zhotovitel svolat konzultace s Objednatelem minimálně při zahájení prací, nad rozpracovanou dokumentací v průběhu prací a v závěru prací na této dokumentaci. Z každé z provedených konzultací bude pořízen zápis, do kterého zaznamená dohodnuté skutečnosti (relevantní připomínky zástupců Objednatele). Kopii zápisu přiloží Zhotovitel do dokladové části dokumentace. Po závěrečné konzultaci pak předloží dokumentaci se všemi zapracovanými připomínkami k schválení Objednateli. Termín konání konzultace sdělí Objednateli minimálně pět (5) pracovních dnů před termínem konání konzultace (pokud nebude dohodnuto jinak) a současně zašle program konzultace. K programu bude přiložena příslušná dokumentace k projednání.
+
+Zhotovitel předá dokumentaci ke schválení bezpečným způsobem, tak aby nedošlo k vyzrazení předávaných informací. Úroveň bezpečnostních opatření a vhodný komunikační kanál zvolí Zhotovitel vzhledem k charakteru obsahu předmětné dokumentace (adresace prvků SKŘ, hesla, topologie, parametrizace apod.). Způsob předání a aplikovaná bezpečnostní opatření budou před předáním dokumentace schválena Objednatelem. 
+
+Každá nová revize dokumentace zaslaná Zhotovitelem na Objednatele bude obsahovat revizní list se seznamem změn oproti předchozí verzi. Změny proti předchozí verzi budou v dokumentaci zvýrazněny. V textové části formou revizí a ve výkresové dokumentaci pomocí obláčků.
+
+Pokyny pro zpracování dokumentace
+
+Zhotovitel se bude řídit níže uvedenými pokyny, nedodržení těchto pokynů může být důvodem k tomu, že dokumentace nebude schválena Objednatelem.
+
+Tvorba a editace dokumentace v různému stupni projektu, musí být vždy zpracována v povoleném softwarovém prostředí. 
+
+Takto zpracovaná digitální dokumentace v příslušné softwarové aplikaci, bude vždy před tiskem finální verze odsouhlasena Objednatelem.
+
+Při zpracování dokumentace bude Zhotovitel respektovat požadavky:
+ČSN EN 62023, Strukturování technické informace a dokumentace
+ČSN EN ISO 7200, Technická dokumentace – Údaje v popisových polích a záhlavích dokumentů
+
+Dokumentace bude zpracována v jednotné a srozumitelné formě a v souladu s běžnými zvyklostmi včetně dokumentace skutečného stavu. Seznamy dokumentací budou zpracovány dle Základní adresářové struktury (viz Příloha 53.02 této Přílohy 4 Smlouvy). U dokumentace zajišťované poddodavateli zajistí Zhotovitel sjednocení formy i obsahu dokumentace v rámci Díla.
+
+Výkresy se zpracovávají v měřítku podle příslušných technických norem s ohledem na požadavky specifikované v příslušném projektovém stupni tohoto Díla. Výkresy musí být opatřeny poměrovým měřítkem. Při případném zmenšení výkresu musí být dodrženy podmínky čitelnosti. 
+
+Originál každého listu výkresu bude zhotoven na trvanlivém materiálu ve formě výstupu z laserové nebo inkoustové tiskárny nebo plotteru.
+
+Originály předávané v papírové formě musí být přesnou kopií dokumentu v digitální formě.
+
+Výkresová dokumentace zpracovaná Zhotovitelem v AutoCADu bude zároveň předávána v digitálním tvaru ve formátu „živého“ PDF pro možnost běžného náhledu a kontroly. Toto PDF bude uloženo jako samostatný soubor pod stejným evidenčním číslem. Soubory AutoCAdu i PDF budou mít stejný název.
+
+Výkresy budou dostatečně podrobné a úplné a budou zkontrolovány Zhotovitelem a zkoordinovány se všemi příslušnými profesemi dříve, než budou předány Objednateli.
+Vícelistý dokument (složený dokument) uloží Zhotovitel pouze jako jeden soubor. Zhotovitel nebude ukládat jednotlivé listy dokumentu do samostatných souborů ani provádět jejich zkomprimování.
+
+Používání „pakovacích programů“ ZIP atd. není povoleno.
+
+Pokud nebude smluvními stranami dohodnuto jinak, mohou být předány protokoly kvality od zahraničních poddodavatelů v anglickém jazyce.
+
+Všechny dokumenty, které se týkají záležitostí provozu nebo údržby, problémů zdravotních a bezpečnostních, otázek uvedení Díla do provozu a otázek vztahujících se ke všem pracovním místům, budou předloženy v ČESKÉM JAZYCE.
+
+Číslování dokumentů
+
+Číslování dokumentů bude provedeno v souladu s ČSN EN 61355-1 ed. 2 Třídění a označování dokumentů pro průmyslové celky, systémy a zařízení a v souladu s níže uvedenými požadavky. Číslování dokumentů dle uvedených požadavků Zhotovitel požije především pro dokumentaci základního projektu (Basic Design - BD), realizační dokumentaci (Detail Design - DD) a dokumentaci skutečného stavu (As Built - AsB). 
+
+Číslo dokumentu Zhotovitele v razítku, na titulní straně a v hlavičce dokumentů bude shodné s názvem souboru v digitální podobě. Dokumenty, které vznikají formou skenování nebo fotoaparátu tedy rastrové budou také opatřeny číslem dokumentu. Evidenční číslo elektronických dokumentů může být doplněno libovolným textem tak, aby délka cesty k souboru nepřesáhla 255 znaků.
+
+U databázových projekčních nástrojů bude struktura číslování převzata z tohoto systému číslování.
+
+Dokumenty, které budou předány Zhotoviteli jako podklad pro změnu, budou opraveny, přičemž bude zachováno jejich číslování. U těchto dokumentů se pouze navýší číslo revize.
+
+Číslování ostatních částí dokumentace, mimo BD, DD a AsB, provede Zhotovitel tak, aby bylo zřejmé, k jakému projektu, jaké lokalitě a jaké části Díla se dokument vztahuje. Číslování zvolené Zhotovitelem musí být jednotné pro celou tuto dodávku dokumentace.
+
+Požadovaná skladba evidenčního čísla dokumentů pro BD, DD a AsB v souladu s Přílohou 53.04 této Přílohy 4 Smlouvy:
+
+Zpracování dokumentace
+
+Dokumenty v papírové podobě
+
+Dokumentace předávaná v dodávce Díla bude potvrzena Zhotovitelem v paré č. 1 a č. 2 vlastnoručním podpisem technických zpráv, výpočtových zpráv, výkresové dokumentace, kontrolních, krycích a titulních listů. V dalších paré tištěné předávané dokumentace mohou být vlastnoruční podpisy nahrazeny prostým mechanickým podpisem (podpisové razítko, vytištěný podpis).
+
+Paré č. 1 a č. 2 příslušné tištěné dokumentace bude opatřeno originálními autorizačními razítky dle Pravidel pro používání razítka při výkonu povolání autorizovaného inženýra a autorizovaného technika ve znění platném k datu předávání dokumentace.
+
+Dokumentace bude rozdělena dle projekčního řešení podle SO, InO, PS a DPS. Papírové dokumenty týkající se stejné věci Zhotovitel zařadí do samostatných svazků (spisů) podle logických vazeb tak, aby vytvářely jednotlivé dokumentace a soubory dokumentů. Pokud existují originály, které nejsou předávány v rámci jiného typu dokumentace, zařadí tyto Zhotovitel do paré č.1.
+
+Zhotovitel označí svazek dokumentace evidenčním číslem. Dále každý svazek označí tak, aby bylo zřejmé, pro jakou lokalitu, projekt (Číslo stavby, nebo číslo jmenovité akce, které přidělí Objednatel.), PS/DPS, InO nebo SO/DSO je daný svazek příslušný. Svazky budou značeny na hřbetu na přední straně. Zhotovitel zajistí shodné provedení značení pro dokumentaci v celém rozsahu Díla. 
+
+Zhotovitel má zakázáno použít v označení svazku znaky:   /  :  *  ?  <  >  |
+
+Zhotovitel ke každé dokumentaci (souboru dokumentů) přiloží tištěný seznam dokumentů, podepsaný zodpovědným pracovníkem Zhotovitele. 
+
+Zhotovitel ke každému svazku průvodní technické dokumentaci (PTD) vloží kontrolní list uvedený v Příloze 53.0 této Přílohy 4 Smlouvy podepsaný zodpovědnými zástupci Zhotovitele a Objednatele.
+
+Dokumenty v digitální podobě
+
+Zhotovitel každý digitální dokument (složený dokument) označí archivním (evidenčním) číslem původce (dodavatelské číslo dokumentu) a revizí dokumentu. Pod tímto číslem také uloží jeho digitální podobu (jméno elektronického souboru). Evidenční číslo dokumentu může být doplněno textovým popisem.
+
+Zhotovitel má zakázáno používat v názvech složek a souborů znaky:   /  :  *  ?  <  >  |
+Zhotovitel nebude ukládat zkomprimované soubory. Provede jejich rozbalení a každý elektronický soubor uvede v seznamu jako samostatnou položku.
+
+Dokumentaci v digitální podobě předá Zhotovitel v původních formátech, ve kterých byla vytvořena. Je nepřípustné, aby Zhotovitel předal pouze nascanovanou dokumentaci. Digitalizaci dokumentace využije Zhotovitel pouze v nutných případech, není-li dokumentace dostupná v otevřených formátech.
+
+Pokud nelze (z technických, právních důvodů) vyhotovovat digitální podobu dokumentu, Zhotovitel na to v seznamu dokumentace upozorní.
+
+Zhotovitel uloží digitální podoby dokumentů v základní adresářové struktuře shodné s projektovým členěním. Tato struktura bude odpovídat Příloze 53.0 této Přílohy 4 Smlouvy a její výslednou podobu si nechá Zhotovitel Objednatelem odsouhlasit. Složky budou označeny evidenčním číslem svazku. Další případné zakládání podsložek uvnitř svazku bude přispívat ke spojení dokumentů týkajících se stejné věci.
+
+Evidence dokumentace – jednotné seznamy
+
+Součástí předání dokumentace bude databázový seznam, případně digitální seznam dokumentace dle vzoru uvedeného v Příloze 53.01 této Přílohy 4 Smlouvy. Seznam dokumentace slouží k jednotnému popisu složek dokumentů (svazků dokumentace) a jemu odpovídajících dokumentů (založené dokumenty ve svazku dokumentů), a dále zajišťuje jednotný vstup klíčových slov a vytváří odkaz na digitální dokumentaci v adresářové struktuře. Základní adresářová struktura pro digitální data (viz Příloha 53.02 této Přílohy 4 Smlouvy), této struktuře musí odpovídat i řazení dokumentů a dokumentací předávaných Zhotovitelem v listinné podobě.
+
+Evidence předávané dokumentace (seznam dokumentace) je rozdělen do dvou částí. Seznam svazků – je určen pro evidenci jednotlivých svazků. Každý svazek v případě správného doplnění generuje list – seznam dokumentace se shodným názvem jako název svazku. Údaje z řádky svazku jsou přeneseny do hlavičky seznamu dokumentace.
+
+Každý dokument (složený dokument) Zhotovitel uvede v seznamu dokumentace jako samostatnou položku (řádek). Složený dokument, považuje-li to Zhotovitel za účelné a existuje-li k němu vlastní seznam (rozpiska, kusovník) převede a uloží jako jeden soubor. V listinné podobě mu též Zhotovitel přidělí samostatné evidenční číslo a zaeviduje jako jednu položku.
+
+Zhotovitel vyplní v seznamu dokumentace třídu a podtřídu dokumentu v souladu s ČSN EN 61355-1 ed. 2. DCC kód bude obsahovat:
+kód technického oboru (odvětví)
+kód hlavní třídy druhu dokumentu
+kód podtřídy druhu dokumentu
+
+Zhotovitel zajistí, aby papírová (tištěná) část seznamu obsahovala samostatné sloupce pro následující údaje (v závorce je uveden maximální počet alfanumerických znaků):
+pořadové číslo položky (10)
+projekční označení zařízení, KKS (20, nebo dle dohody s Objednatelem)
+popis předmětu, název, typ (40)
+popis dokumentu (50)
+archivní (evidenční) číslo (29)
+revize dokumentu (5)
+původce dokumentu (10)
+počet listů dokumentu (5)
+
+Textové a tabulkové dokumenty
+
+Pro tvorbu tabulek, seznamů, specifikací a udržení jejich integrity využije Zhotovitel šablon uvedených v samostatných přílohách Smlouvy.
+
+Formáty textové dokumentace a tabulek musí být v otevřeném a editovatelném tvaru:
+*.DOCX pro Microsoft WORD verze 2010 nebo kompatibilní verze z řady MS Office,
+*.XLSX pro Microsoft EXCEL verze 2010 nebo kompatibilní verze z řady MS Office,
+*.PDF pro Adobe Acrobat tzv. vektorové PDF
+
+Rastrová dokumentace
+
+Formáty rastrové dokumentace budou použity následující:
+*.TIFF (bez komprese nebo v kompresi GRUP IV) pro skenovanou dokumentaci – součástí dokumentu musí být i razítko se základními identifikačními údaji zpracovatele,
+*.JPG pro fotodokumentaci pořízenou digitálním fotoaparátem. Fotodokumentace musí být členěná do tematických adresářů, případně podadresářů. Součástí musí být i seznam souborů v tabulce *.XLS se stručným popisem minimálně ve struktuře – název souboru a popis (objekt fotografování),
+*.JPG, *.PDF. pro další doklady, osvědčení, atesty apod. 
+
+Minimální technické parametry:
+*.JPG pro fotodokumentaci pořízenou digitálním fotoaparátem ve formátu *.JPG, bude rozměr kratší strany min. 2048 bodů
+*.PDF - rastrové PDF bude minimální rozlišení 300 x 300 dpi, barevná hloubka 24 bitů nebo 256 stupňů šedi, velikost formátu snímané plochy nejméně A4.
+
+Software pro práci s harmonogramem
+
+Pro řízení Díla, tj. plánování, sledování a vyhodnocování postupu činností bude používán harmonogram, zpracovávaný a předaný v MS Project 2010 podle metody CPM (metoda kritické cesty).
+
+Formáty databáze
+
+Databázové soubory budu zpracovány v SW Microsoft Access verze 2010 nebo kompatibilní verze z řady MS Office.
+
+Formáty 3D dokumentace
+
+V průběhu realizace Díla bude Zhotovitel do 3D modelu zapracovávat veškeré změny, které budou na Díle provedeny. Po každém zapracování předá revizi 3D modelu Objednateli.
+
+Veškeré komponenty pojmenuje Zhotovitel KKS kódem a rozdělí je na logické celky InO, SO a PS (DPS).
+
+Do dokumentace skutečného stavu (AsB), budou technologie hlavních objektů, včetně dotčených částí potrubních mostů zaměřeny metodou laserového skenování ve stavu, kdy technologie a potrubní rozvody ještě nejsou zakryty izolacemi.
+
+Dokumentace bude předána ve formátech *.DWG, *.DWF, případně *.NWD.
+
+Formát *.DWF je požadován, aby mohl být umožnil prohlížení a odměřování výstupů z laserového skenování pomocí bezplatného SW prohlížeče Autodesk Design.
+Formát *.NWD je požadován pro prohlížení modelu pomocí SW prohlížeče Autodesk Navisworks Freedom.
+
+Výkresová dokumentace strojní a stavební
+
+Výkresová dokumentace bude prováděna s použitím software AutoCAD. Pro uvedený software mohou být použity nadstavby AutoCAD pro různé profese.
+
+Soubory budou ukládány do formátu dwg tak, aby pro prohlížení, editaci a tisk souboru mohl být použit AutoCAD 2020.
+
+Podrobné požadavky na tvorbu výkresové dokumentace jsou uvedeny v Příloze 56.0 této Přílohy 4 Smlouvy.
+
+Požadavky na zpracování výkresové dokumentace:
+není dovoleno používat tvary; tvary musí být převedeny do podoby bloku,
+bude použita kódová stránka češtiny ANSI_1250,
+každý soubor smí obsahovat maximálně jeden výkres v modelovém prostoru,
+výkres musí být uložený v maximálním pohledu,
+všechny hladiny musí být zapnuté a zpřístupněné pro zobrazení, jejich názvy nesmí obsahovat diakritiku,
+předávaný výkres nesmí obsahovat nepoužité styly, hladiny a bloky,
+dokumentace bude obsahovat v jednom souboru AutoCAD s příponou *.DWG seznam použitých značek a zkratek obsažených na výkrese (v případě technologických schémat i použité technologické značky), typy čar a barvy s číslem „per“ a „tloušťkou“,
+pro rozlišení tloušťky čar na výkrese se smí používat výhradně typ čáry polyline s definovanou tloušťkou,
+bloky se musí vytvářet jen v hladině 0 a to z entit, které jsou v hladině 0,
+takto vytvořené bloky se nerozkládají a vkládají se do odpovídajících hladin,
+prvky ve výkrese, které jsou označeny kódem KKS musí být blokem, kód musí být obsažen v atributu KKS,
+pokud dokument obsahuje kód KKS, musí být vytvořen jako blok s atributem,
+KKS bude použit celý, tj. členění blok + systém + agregát + komponenta
+razítko musí být blokem s atributy a bude umístěné v pravém dolním rohu.
+
+Výkresová dokumentace elektro a SKŘ
+
+Dokumentace elektro a SKŘ, s výjimkou algoritmů bude zpracována projekčním databázovým software. 
+
+Přehledová, liniová a montážní schémata budou zpracována v AutoCADu verze 2020, formát výkresů *.dwg.
+
+Výstupem bude minimálně celý projekt ve formátu databázového projektu, datový model projektu a zároveň bude proveden export do formátů *.DWG a vektorového *.PDF.
+
+Výstupní soubor DWG musí odpovídat podmínkám požadavku na strojní a stavební výkresovou dokumentaci.
+
+Technologická, dispoziční a liniová schémata
+
+Při zpracování strojně technologických schémat (P&I diagramy), dispozičních a liniová schémata budou důsledně používány grafické formy schematických značek (viz Příloha 56.0 této Přílohy 4 Smlouvy), včetně jejich vnitřní struktury atributu. Informace uvnitř atributu budou vyplněny v rozsahu odpovídajícím stupni dokumentace, pro který je daný výkres zpracován. Z těchto údajů budou Zhotovitelem vygenerovány požadované seznamy v podobě tabulek.
+
+Měřítko výkresů
+
+Zpracovatel výkresové dokumentace bude připravovat dokumentaci pro tisk podle předem zadaného měřítka s respektováním požadavku čitelnosti všech údajů, na výkrese uvedených.
+
+Schématické značky
+
+Výkresy technologických schémat budou Zhotovitelem vytvořeny s použitím schematických značek a typů čar pro značení médií. Ke kreslení P&ID diagramů budou použity značky uvedené v Příloze 56.0 této Přílohy 4 Smlouvy. Značky obsahují jen nutné a zobrazované atributy.
+
+Výkresové rámečky
+
+Všechny výkresy budou opatřeny výkresovými rámečky formátu A0 až A4. V případě prodlouženého formátu je možné tyto rámečky upravovat. Ke kreslení výkresů budou použity výkresové rámečky uvedené v Příloze 56.0 této Přílohy 4 Smlouvy.
+
+Výkresové razítko
+
+Výkresy budou opatřeny výkresovým razítkem zpracovatele příslušné části dokumentace. 
+
+Výkresové razítko zpracovatele bude obsahovat minimálně tyto následující údaje:
+Název stavby
+Stupeň projektu
+Projektant
+Jméno schvalujícího za Zhotovitele
+Stavební objekt/ provozní soubor
+Název dokumentu nebo výkresu
+Číslo dokumentu je shodné s číslem souboru včetně přípony
+Označení a popis revize
+Datum revize nebo vzniku a datum schválení
+Použitá skutečná měřítka
+Formát výkresu
+Poměrové pravítko
+
+Grafická forma razítka bude dohodnuta před zahájení projektových prací s ohledem na standardy vybraného Zhotovitele a bude zakotvena v Administrativním řádu.
+
+Změny ve výkresové dokumentaci (dispoziční výkresy, technologická schémata, elektrická schémata).
+
+Změna anebo revize ve výkresové dokumentaci bude orámovaná obláčkem a bude opatřena revizním znakem shodným s revizním znakem uvedeným v rohovém razítku. V rohovém razítku bude vyplněn změnový řádek, ve kterém budou vyplněny všechny údaje včetně podpisů a heslovitého popisu změny.
+
+Jako revize dokumentace je chápán i přechod dokumentu mezi různými stupni dokumentace (tj. běžně přechod mezi BD, DD a AsB).
+
+Změny v textových a tabulkových dokumentech 
+
+Změny anebo revize v textových dokumentech budou provedeny v revizním módu (funkcionalita Word), pokud bude dokument obsahovat více jak 20 stránek, bude na jeho začátku uveden změnový seznam – seznam stránek, na kterých jsou změny. 
+
+Změny v seznamech budou obsahovat sloupec „Rev“ (revize), ve kterém bude označena každá položka, které došlo ke změně revizním znakem, stejně tak budou revizním znakem označeny všechny doplněné řádky. V případě zrušení položky nebudou jejich řádky odstraněny, budou pouze přeškrtnuty a ve sloupci „Poznámka“ bude uvedeno „Zrušeno“. Tyto řádku budou odstraněny až v následující revizi seznamu. Buňky, ve kterých došlo ke změně, budou podbarveny světle žlutou barvou, u doplněných a odstraněných položek budou podbarveny celé řádky světle žlutou barvou. 
+
+Čistopis Objednatelem schválené dokumentace předá Zhotovitel Objednateli bez zvýraznění změn v obláčkách změn ve výkresech. Textové dokumenty budou předány s přijatými změnami a s vypnutým revizním módem.
+
+Pokyny pro značení KKS kódem
+
+KKS je technologicky a funkčně orientovaný systém značení, jehož základem je agregát. Tomu je třeba přizpůsobit i způsob dokumentování Díla, popsaný detailně ve Standardu KKS uvedené v Příloze 50.07 k Příloze 1 Smlouvy. Výsledkem dokumentace dle tohoto standardu je databáze elektronické dokumentace (ED), označená a provázaná s databází kódů KKS. Obě databáze jsou v konečné fázi provázány s centrální databází datového serveru systému EDManager.
+
+Správce systému KKS a ED:
+
+SA1960, s.r.o.
+
+Kontaktní adresa:
+
+Rybářská 575/10, 603 00 Brno
+
+Kontaktní osoby a jejich tel. čísla:  
+
+Ing. Jan Smejkal, jsmejkal@sa1960.cz
+
+602 545 092
+
+
+Pro značení zařízení v rámci Díla dále platí následující zásady:
+Nová zařízení – nový kód KKS dle Metodiky KKS.
+Výměna komponentu (rekonstrukce, repase, přeložky atd.) – pokud se mění způsob řízení, provede se překódování dle Metodiky KKS (výměna předčíslí za pozice „G a F0“).
+Výměna komponentu (rekonstrukce, repase, přeložky atd.) – pokud se nemění způsob řízení, ponechá se stávající kód KKS.
+Stávající zařízení bez výměny – pokud se mění způsob řízení, provede se překódování dle Metodiky KKS (výměna předčíslí za pozice „G a F0“).
+Stávající zařízení bez výměny – pokud se nemění způsob řízení, ponechá se stávající kód KKS.
+
+Zhotovitel v rámci předmětu a ceny Díla zajistí:
+vypracování projektu strojní technologie, včetně kódů KKS technologie
+vypracování projektu elektro a MaR v návaznosti na kodifikovaný projekt technologie se zakreslením kódů KKS elektro a MaR
+aktuálnost předané, kodifikované dokumentace dle skutečného stavu instalovaného zařízení
+fyzické značení zařízení kódy KKS
+
+Základní požadavky na kodifikaci zařízení:
+důsledné dodržení Metodiky KKS (jak při tvorbě elektronické dokumentace výkresů, tak i číselných kódů technologického zařízení)  
+dodržení funkční hierarchie kódů zařízení
+vytvoření kódů - min. KKS 2.stupně u strojní technologie a kódů KKS 3.stupně v části elektro a MaR v případě dodávek nových technologií a upřesnění Objednatele
+vytvoření odpovídajících 4., resp. 5. úrovní ED v rozsahu dodávky Díla
+zajištění kompatibility ED s databází kódů KKS a jejich vzájemné provázání s centrální databází. (návaznost vytvořených 2. a 3. stupňů KKS na aktuální 1. stupně KKS, a 4., resp. 5. úrovně ED na stávající 3. úrovně ED)
+dodržení značení, formátů, prostředí databází a dalších podmínek v souladu s Metodikou KKS 
+dodání písemného potvrzení ověření správnosti kodifikace a ED Správcem systému KKS - certifikátu. Certifikát musí obsahovat potvrzení kontroly:
+databáze kódů KKS realizační dokumentace,
+databáze schémat ED realizační dokumentace,
+databáze kódů KKS dokumentace skutečného stavu,
+databáze schémat ED skutečného stavu,
+provedení provázanosti databází se schématy a vložení do systému ED Manager.
+
+Body a) a b) musí být kladně hodnoceny Správcem systému KKS a ED na revizi A certifikátu, který bude přílohou realizační dokumentace, body c), d) a e) obdobně na revizi B certifikátu, který bude přílohou dokumentace skutečného stavu. 
+
+Dokumentace KKS a ED musí být v konečné fázi doložena certifikátem s kladným hodnocením všech bodů, u všech realizovaných technologií (strojní, elektro, MaR) - viz následující vzorová tabulka.
+
+Realizační dokumentace
+Dokumentace skutečného stavu
+strojní
+elektro
+MaR
+strojní
+elektro
+MaR
+Kontrola implementace KKS dle Metodiky KKS
+ANO
+ANO
+ANO
+ANO
+ANO
+ANO
+Kontrola el. dokumentace dle Metodiky KKS
+ANO
+ANO
+ANO
+ANO
+ANO
+ANO
+Vložení kódů KKS do Centrální databáze KKS
+ANO
+ANO
+ANO
+ANO
+ANO
+ANO
+Vytvoření automatické vazby na Centrální DB KKS
+---
+---
+---
+ANO
+ANO
+ANO
+Vložení el. dokumentace do systému EDM
+---
+---
+---
+ANO
+ANO
+ANO
+
+Zhotovitel vypracuje databáze KKS a ED při dodržení Metodiky KKS samostatně nebo si část Díla (kódy KKS) zajistí subdodávkou u Správce systému KKS, se kterým bude od počátku Díla aktivně spolupracovat.
+Objednatel předá Zhotoviteli v smluvně dohodnutém termínu:
+Metodiku KKS (potřebné díly Metodiky KKS v elektronické formě), současná metodika je v Příloze 50.07 k Příloze 1 Smlouvy.
+Zadávací, dostupnou dokumentaci stávajícího zařízení, dle potřeby i navazujícího zařízení
+Databázi existujícího aktuálního stupně KKS (1.stupeň) daného a navazujícího zařízení
+Databázi elektronických schémat (3.úrovně) daného a navazujícího zařízení
+Určení hranic kodifikace nového Díla a případně navazující stávající části technologie
+
+Množství předávané dokumentace 
+
+Veškerá schválená dokumentace, která je předmětem dodávky Díla a je specifikována výše bude Zhotovitelem na Objednatele předána minimálně 3x elektronicky na CD/DVD či jiném nosiči dat, pokud není uvedeno, nebo dohodnuto jinak.
+
+Kromě toho bude dokumentace Zhotovitelem na Objednatele předána minimálně 3x v tištěné formě, pokud nebude uvedeno, nebo dohodnuto jinak. Tištěná dokumentace bude opatřena číslem paré.
+
+Výjimku v množství předávané dokumentace tvoří následující případy:
+
+Dokumentace:
+Tištěná forma
+Elektronická forma
+Dokumentace ke kontrole a schválení
+(2x)
+1x
+Dokumentace změny stavby před jejím dokončením (DZSPD)
+6x
+6x
+Realizační dokumentace Detail Design (DD)
+3x
+1x
+Podklady pro zpracovatele realizačních projektů ostatních profesí (DPPP)
+5x
+1x
+Dokumentace skutečného provedení stavby (DSPS)
+4x
+1x
+Dokumentace pro montáž (MD) a demontáž (DM)
+2x
+1x
+Předpisy pro provoz zařízení (DPP)
+6x
+1x
+Předpisy pro údržbu zařízení (DPU)
+6x
+1x
+Programy zkoušek a uvádění do provozu (PZUP)
+4x
+1x
+Projekt certifikačních zkoušek (PCZ)
+4x
+1x
+Průvodní technická dokumentace (PTD)
+2x
+2x
+Dokumentace pro školení personálu (DOO)
+6x
+1x
+Projekt garančních měření/testů k přejímce Díla
+4x
+1x
+Projekty měření požadovaných legislativou ke zkušebnímu provozu a kolaudaci Díla
+3x
+1x
+Opravená dokumentace – Red correct (RC)
+3x
+1x
+Dokumentace skutečného stavu – As Built (AsB)
+3x
+1x
+Doklady k žádosti o povolení zkušebního provozu (DPZP)
+4x
+1x
+Doklady k žádosti o kolaudační souhlas Díla (DKS)
+4x
+1
+3D dokumentace (3D)
+0x
+1x
+
+
+seznam Příloh 
+ P4_52.0_PŘÍLOHY ŘÍDÍCÍ DOKUMENTACE OBJEDNATELE:
+52.01
+ČEZ_TST_0049
+Požadavky na dokumentaci a data o zařízení stávajících zdrojů KE a VE
+52.02
+ČEZ_FO_0971
+Formulář pro evidenci namontovaných stanovených měřidel
+52.03
+SKČ_TST_0032
+Požadavky na výrobu a montáž kotlů a parovodů a metodikou
+
+ P4_53.0
+53.01
+Šablona seznamu dokumentace.xls
+53.02
+Základní adresářová struktura DOKUMENTACE.txt
+53.03
+Návod na evidenci dokumentace na KE
+53.04
+Předpis pro tvorbu čísla dokumentu a názvu souboru
+ P4_54.0
+54.01
+SKČ_ME_0116 - volná příloha D – Seznamy VZT
+
+54.02
+Podklady pro profesi ASŘTP info.xls
+
+54.03
+Seznam armatur.xls
+
+54.04
+Seznam elektrospotřebičů.xls
+
+54.05
+Seznam kabelů.xls
+
+54.06
+Seznam měření.xls
+
+54.07
+Seznam potrubních tras.xls
+
+54.08
+Seznam připojovacích míst.xls
+
+54.09
+Seznam regulačních okruhů.xls
+
+54.10
+Seznam strojů a zařizeni.xls
+
+54.11
+Seznam rozvaděčů.xlsx
+
+54.12
+Seznam místností.xlsx
+
+54.13
+Seznam_protipozarnich_prepazek.xlsx
+
+54.14
+Seznam_protipozarnich_dveri.xlsx
+
+ P4_55.0
+55.01
+KV_šablona.doc
+
+55.02
+KZ_šablona.doc
+
+55.03
+PKV_šablona.doc
+
+55.04
+POV_šablona.doc
+
+55.05
+Pravidla_texty.doc
+
+P4_56.0
+56.01
+Bloky_do_vykresu.zip
+
+56.02
+Menu, typy car pro Acad.zip
+
+56.03
+Prototypove_vykresy.zip
+
+56.04
+Ramecky_pro_výkresy.zip
+
+56.05
+Tabulky pro importy.zip
+

@@ -1,0 +1,100 @@
+
+
+
+ 
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+ 
+
+
+
+
+ČÁST 4
+ 
+ 
+NÁVRH SMLOUVY
+
+Příloha 6
+
+Součinnost Objednatele
+
+
+
+
+
+
+
+
+
+
+
+
+Příloha 6
+Součinnost Objednatele
+V souladu s čl. 30 Smlouvy se Objednatel zavazuje poskytnout Zhotoviteli součinnost v níže uvedeném rozsahu.
+Zařízení staveniště
+Objednatel poskytne Zhotoviteli prostor pro Zařízení staveniště (ZS), skladovací plochy pro ZS a skladovací plochy pro materiál na ploše přilehlé k areálu EPR vyznačené v mapové situaci, výkres č. TEP0314_SVY_DPS-C5-5-Situace-Zarizeni-staveniste-list5-Areal-EPR_19_R00.
+
+Nejpozději k termínu milníku M3 smluvní strany uzavřou Nájemní smlouvu pro Zařízení staveniště, jejíž závazný vzor je uveden v příloze 16 A Smlouvy.
+
+Objednatel poskytne připojovací místa rozvodů elektrické energie (NN). Zhotovitel provede na své náklady napojení na připojovací místa určená Objednatelem, která osadí samostatnými měřícími zařízeními odebraných energií. Odebrané energie uhradí Zhotovitel Objednateli v souladu s Přílohou 16 A a 16 B Smlouvy. Veškeré náklady za odebrané elektrické energie, včetně zajištění potřebných revizí jsou zahrnuty ve smluvní ceně. Přesné umístění napojovacích bodů bude řešeno Zhotovitelem v POV v návaznosti na napojovací body.
+
+Připojovací místa pitné vody a splaškové kanalizace pro Zařízení Staveniště Objednatel nebude poskytovat.
+
+Zhotovitel po ukončení své činnosti uvede na své náklady předané plochy a zařízení do původního stavu.
+
+Zařízení staveniště mimo areál EPR, jeho umístění a vybavení si zajistí Zhotovitel po dohodě s vlastníky či uživateli souvisejících pozemků vlastními prostředky. Jeho umístění se předpokládá v pracovním pruhu inženýrských objektů, popř. vedle nich v oplocenkách. Přívody energií a jejich napojení si zajistí zhotovitel rovněž vlastními prostředky.
+
+STAVENIŠTĚ PRO REALIZACI DÍLA
+Objednatel zajistí účast pracovníků Objednatele na koordinaci Díla v rámci projektové přípravy a v průběhu realizace Díla.
+
+Objednatel poskytne Zhotoviteli připojovací místa rozvodů elektrické energie (NN) na Staveništi v rámci areálu EPR. Zhotovitel provede na své náklady napojení rozvodů elektrické energie. Zhotovitel na vlastní náklady a zodpovědnost osadí samostatné měření odebraných energií. Odebrané energie uhradí Zhotovitel Objednateli v souladu s přílohou 16 B Smlouvy. Veškeré náklady za odebrané energie včetně zajištění potřebných revizí jsou zahrnuty ve smluvní ceně. Přesné umístění napojovacích bodů bude řešeno Zhotovitelem v POV v návaznosti na napojovací body.
+
+Zhotovitel se zavazuje provádět pravidelné měsíční odečty odebraných energií, které předá Objednateli a následně uhradí v dohodnuté výši a termínech dle uzavřené Nájemní smlouvy.
+
+Objednatel Zhotoviteli poskytne nížE uvedená zařízení/PLNĚNÍ:
+Objednatel zajistí následující legislativní povolení:
+Územní rozhodnutí 
+Povolení k zahájení zkušebního provozu Díla
+Zajištění kolaudace Díla
+
+Výstavba objektu Centrální elektrické stanice (SO 1008), z které bude Zhotovitel zajišťovat napájení jím instalované trafostanice, je protiplněním Objednatele.
+
+Napájecí a ovládací kabely mezi trafostanicí a  Centrální elektrickou stanicí budou ve venkovním prostoru Zhotovitelem vedeny po energetickém mostě, a to až po vnější stěny Centrální elektrické stanice. Výstavba energetického mostu je protiplněním Objednatele. Kabely budou na energetickém mostě uloženy do Zhotovitelem dodaných a instalovaných pozinkovaných kabelových žlabů se zákrytem.
+
+Kabelová trasa uvnitř objektu Centrální elektrické stanice je protiplněním Objednatele, stejně jako napájecí rozvaděče vn a nn. Zhotovitelem navržené a dodávané kabely budou obsahovat délkovou rezervou 10 metrů u každého z kabelů pro jejich zapojení v napájecích rozvaděčích.
+
+Obdobné protiplnění bude Objednatelem poskytnuto i v souvislosti s instalací vypínacího prvku TOTAL STOP pro vypínání přívodu napětí z Centrální elektrické stanice a s vedením kabelové trasy a kabeláže pro ovládání vypínacího prvku TOTAL STOP mezi trafostanicí a Centrální elektrickou stanicí.
+
+Napájení a ovládací a signalizační prvky uzavíracích klapek, všechny, signály z frekvenčních měničů, měřiče tepla a jednotlivých snímačů tlaku a teplot, ovládací a signalizační okruhy z rozvaděčů RH1 a R-220 jsou soustředěny do sdruženého rozvaděče RM1 ve st. 550. Vlastní řízení, ovládání a signalizace jsou řešeny řídicím systémem, který je protiplněním Objednatele. Zhotovitel předá Objednateli kompletní seznamy měření a akčních členů, podklady pro připojení nových zařízení do řídícího systému, podklady pro připojení monitoringu netěsností potrubí a podklady pro tvorbu algoritmů a obrazovek.
+
+Realizace přeložky optických kabelů GK071 a GK072 mimo prostor umístění trafostanice je protiplněním Objednatele.
+
+Zřízení prostupu pro kabely jižní obvodovou zdí SO 550 a vybudování nového navazujícího kabelového kanálu uvnitř stavby je protiplněním Objednatele.
+
+Souběh ostatních investičních akcí Objednatele v zájmovém území plnění Zhotovitele: 
+EPR 940 Rekonstrukce rozvodny 110 kV GIS 
+TEP 313 Nový zdroj TAS Prunéřov – etapa 2b – KGJ 45 MW
+TEP 323 VTL přípojka zemního plynu + předávací a regulační stanice
+TEP 330 Nový zdroj TAS Prunéřov – etapa 2a – zahrnuje 2x PK 26 MWt, 2x BM 17,5MWt, CES CHÚV, ČOV + periferie vč. rekonstrukce obj. ČSTS
+TEP 332 PM 45 MW EPR Prunéřov_Akumulace 
+
+Uvádění do provozu
+Objednatel poskytne Zhotoviteli média pro zkoušky a uvádění Díla do provozu v rozsahu elektrická energie a požární voda.
+
+Objednatel zajistí účast pracovníků Objednatele při zkouškách, uvádění do provozu a garančních testech Díla.
+Ostatní plnění
+Veškerá ostatní plnění, která Objednatel neposkytuje v souladu s článkem 30 Smlouvy a touto přílohou 6, zajišťuje Zhotovitel. Náklady na provedení takového plnění jsou zahrnuty ve smluvní ceně.

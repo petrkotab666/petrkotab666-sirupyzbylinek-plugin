@@ -1,0 +1,3762 @@
+{
+  "breadcrumb": {
+    "items": [
+      {
+        "href": "/",
+        "title": "Úvod"
+      },
+      {
+        "href": "/verejne-zakazky",
+        "title": "Veřejné zakázky"
+      },
+      {
+        "href": "/verejne-zakazky/detail-zakazky/N006-24-V00019426",
+        "title": "CV_HV propoj EPR-Kadaň"
+      },
+      {
+        "href": "/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/4530620753",
+        "title": "Detail uveřejnění"
+      }
+    ]
+  },
+  "breadcrumbData": {
+    "breadcrumbData": {
+      "Zadavaci_postup_hist-Kod=@0 AND aktualni = true and not exists(Zadavaci_postup_hist,Hist = &Hist and create_cas>&create_cas and aktualni = true)-N006/24/V00019426": {
+        "nazev": {
+          "isFetching": false,
+          "value": "CV_HV propoj EPR-Kadaň"
+        }
+      }
+    }
+  },
+  "collectionStore": {
+    "collections": {}
+  },
+  "detailObjectStore": {
+    "objects": {
+      "detail-info-4530620753": {
+        "isFetching": false,
+        "id": "",
+        "object": null
+      }
+    }
+  },
+  "enumDescriptions": {
+    "descriptions": {
+      "Kategorie_zadavatele": {
+        "enumName": "Kategorie_zadavatele",
+        "items": [
+          {
+            "intValue": 0,
+            "name": "Dotovany",
+            "description": "Dotovaný zadavatel",
+            "locKey": "SRC-336086"
+          },
+          {
+            "intValue": 2,
+            "name": "Sektorovy",
+            "description": "Sektorový zadavatel",
+            "locKey": "SRC-336090"
+          },
+          {
+            "intValue": 3,
+            "name": "Ceska_republika",
+            "description": "Česká republika",
+            "locKey": "SRC-336092"
+          },
+          {
+            "intValue": 4,
+            "name": "Statni_pris_org",
+            "description": "Státní příspěvková organizace",
+            "locKey": "SRC-336094"
+          },
+          {
+            "intValue": 5,
+            "name": "Uzemni_celek",
+            "description": "Územní samosprávný celek nebo jeho příspěvková organizace",
+            "locKey": "SRC-336096"
+          },
+          {
+            "intValue": 6,
+            "name": "Jina_prav_osoba",
+            "description": "Jiná právnická osoba",
+            "locKey": "SRC-336098"
+          },
+          {
+            "intValue": 7,
+            "name": "Ceska_narodni_banka",
+            "description": "Česká národní banka",
+            "locKey": "SRC-603384"
+          },
+          {
+            "intValue": 8,
+            "name": "Jina_osoba",
+            "description": "Jiná osoba",
+            "locKey": "SRC-603385"
+          }
+        ]
+      },
+      "Druh_VZ": {
+        "enumName": "Druh_VZ",
+        "items": [
+          {
+            "intValue": 0,
+            "name": "Dodavky",
+            "description": "Veřejná zakázka na dodávky",
+            "locKey": "SRC-606646"
+          },
+          {
+            "intValue": 1,
+            "name": "Sluzby",
+            "description": "Veřejná zakázka na služby",
+            "locKey": "SRC-606647"
+          },
+          {
+            "intValue": 2,
+            "name": "Stavebni_prace",
+            "description": "Veřejná zakázka na stavební práce",
+            "locKey": "SRC-606648"
+          },
+          {
+            "intValue": 3,
+            "name": "Koncese_na_sluzby",
+            "description": "Koncese na služby",
+            "locKey": "SRC-606649"
+          },
+          {
+            "intValue": 4,
+            "name": "Koncese_na_stavebni_prace",
+            "description": "Koncese na stavební práce",
+            "locKey": "SRC-606650"
+          },
+          {
+            "intValue": 5,
+            "name": "Dodav",
+            "description": "Dodávky",
+            "locKey": "SRC-614356"
+          },
+          {
+            "intValue": 6,
+            "name": "Sluz",
+            "description": "Služby",
+            "locKey": "SRC-614357"
+          },
+          {
+            "intValue": 7,
+            "name": "Staveb",
+            "description": "Stavební práce",
+            "locKey": "SRC-614665"
+          }
+        ]
+      },
+      "Typ_VZ": {
+        "enumName": "Typ_VZ",
+        "items": [
+          {
+            "intValue": 0,
+            "name": "Maly_rozsah",
+            "description": "Veřejná zakázka malého rozsahu",
+            "locKey": "SRC-336052"
+          },
+          {
+            "intValue": 1,
+            "name": "Nadlimitni",
+            "description": "Nadlimitní veřejná zakázka",
+            "locKey": "SRC-336054"
+          },
+          {
+            "intValue": 2,
+            "name": "Podlimitni",
+            "description": "Podlimitní veřejná zakázka",
+            "locKey": "SRC-336056"
+          },
+          {
+            "intValue": 3,
+            "name": "Podlimitni_mimo_ZVZ",
+            "description": "Podlimitní veřejná zakázka mimo zadávací řízení",
+            "locKey": "SRC-336058"
+          },
+          {
+            "intValue": 4,
+            "name": "Podlimitni_SoN",
+            "description": "Podlimitní soutěž o návrh",
+            "locKey": "SRC-372208"
+          },
+          {
+            "intValue": 5,
+            "name": "Nadlimitni_Son",
+            "description": "Nadlimitní soutěž o návrh",
+            "locKey": "SRC-372210"
+          },
+          {
+            "intValue": 6,
+            "name": "Koncese_maleho_rozsahu",
+            "description": "Koncese malého rozsahu",
+            "locKey": "SRC-608467"
+          },
+          {
+            "intValue": 7,
+            "name": "Koncese",
+            "description": "Koncese",
+            "locKey": "SRC-608468"
+          },
+          {
+            "intValue": 8,
+            "name": "Zjednoduseny",
+            "description": "Zjednodušený režim",
+            "locKey": "SRC-806709"
+          }
+        ]
+      },
+      "Stav_postupu": {
+        "enumName": "Stav_postupu",
+        "items": [
+          {
+            "intValue": 0,
+            "name": "neukoncena",
+            "description": "Neukončen",
+            "locKey": "SRC-384858"
+          },
+          {
+            "intValue": 1,
+            "name": "zadana",
+            "description": "Zadán",
+            "locKey": "SRC-384861"
+          },
+          {
+            "intValue": 2,
+            "name": "zrusena",
+            "description": "Zrušen",
+            "locKey": "SRC-384864"
+          },
+          {
+            "intValue": 3,
+            "name": "plneni",
+            "description": "Ukončení plnění",
+            "locKey": "SRC-384866"
+          },
+          {
+            "intValue": 4,
+            "name": "ukonceno_ve_spec",
+            "description": "Ukončen ve fázi specifikace",
+            "locKey": "SRC-478283"
+          },
+          {
+            "intValue": 5,
+            "name": "planovana",
+            "description": "Plánován",
+            "locKey": "SRC-482640"
+          },
+          {
+            "intValue": 6,
+            "name": "Neuspesny",
+            "description": "Neúspěšný",
+            "locKey": "SRC-824420"
+          }
+        ]
+      },
+      "Stav_DNS": {
+        "enumName": "Stav_DNS",
+        "items": [
+          {
+            "intValue": 1,
+            "name": "Zavadeni",
+            "description": "Zavádění",
+            "locKey": "SRC-357589"
+          },
+          {
+            "intValue": 2,
+            "name": "Otevren",
+            "description": "Otevřen",
+            "locKey": "SRC-357591"
+          },
+          {
+            "intValue": 3,
+            "name": "Ukoncen",
+            "description": "Ukončen",
+            "locKey": "SRC-357607"
+          }
+        ]
+      },
+      "Typ_formulare": {
+        "enumName": "Typ_formulare",
+        "items": [
+          {
+            "intValue": 0,
+            "name": "Radny",
+            "description": "Řádný",
+            "locKey": "SRC-376590"
+          },
+          {
+            "intValue": 1,
+            "name": "Opravny",
+            "description": "Opravný",
+            "locKey": "SRC-370420"
+          },
+          {
+            "intValue": 2,
+            "name": "Nova_zakazka",
+            "description": "Formulář zakládá novou zakázku",
+            "locKey": "SRC-615923"
+          },
+          {
+            "intValue": 3,
+            "name": "Existujici_zakazka",
+            "description": "Formulář se týká zakázky evidenčního čísla",
+            "locKey": "SRC-615922"
+          },
+          {
+            "intValue": 4,
+            "name": "Navazuje_dle137",
+            "description": "Formulář navazuje na formulář vydaný dle zákona č. 137/2006 Sb.",
+            "locKey": "SRC-615938"
+          },
+          {
+            "intValue": 5,
+            "name": "Navazuje_dle134",
+            "description": "Formulář navazuje na formulář vydaný dle zákona č. 134/2016 Sb.",
+            "locKey": "SRC-615939"
+          }
+        ]
+      },
+      "Stav_SK": {
+        "enumName": "Stav_SK",
+        "items": [
+          {
+            "intValue": 1,
+            "name": "Zaveden",
+            "description": "Zaveden",
+            "locKey": "SRC-611711"
+          },
+          {
+            "intValue": 2,
+            "name": "Ukoncen",
+            "description": "Ukončen",
+            "locKey": "SRC-611712"
+          }
+        ]
+      }
+    }
+  },
+  "errorStore": {
+    "errors": []
+  },
+  "localization": {
+    "currentLanguage": "CZ",
+    "languages": {
+      "CZ": {
+        "NEN-767365": {
+          "code": "NEN-767365",
+          "text": "Provozní řád",
+          "description": "Provozní řád",
+          "isMissing": false
+        },
+        "NEN-767461": {
+          "code": "NEN-767461",
+          "text": "Nabídka školení",
+          "description": "Nabídka školení",
+          "isMissing": false
+        },
+        "NEN-793789": {
+          "code": "NEN-793789",
+          "text": "Školení ZZVZ",
+          "description": "Školení ZZVZ",
+          "isMissing": false
+        },
+        "NEN-767964": {
+          "code": "NEN-767964",
+          "text": "Videa",
+          "description": "Videa",
+          "isMissing": false
+        },
+        "NEN-767975": {
+          "code": "NEN-767975",
+          "text": "Informace a novinky",
+          "description": "Informace a novinky",
+          "isMissing": false
+        },
+        "NEN-700614": {
+          "code": "NEN-700614",
+          "text": "Veřejné zakázky",
+          "description": "Veřejné zakázky",
+          "isMissing": false
+        },
+        "NEN-738419": {
+          "code": "NEN-738419",
+          "text": "Registry",
+          "description": "Registry",
+          "isMissing": false
+        },
+        "NEN-767682": {
+          "code": "NEN-767682",
+          "text": "Registrace",
+          "description": "Registrace",
+          "isMissing": false
+        },
+        "NEN-744259": {
+          "code": "NEN-744259",
+          "text": "Test kompatibility",
+          "description": "Test kompatibility",
+          "isMissing": false
+        },
+        "NEN-754428": {
+          "code": "NEN-754428",
+          "text": "Prohlášení o přístupnosti",
+          "description": "Prohlášení o přístupnosti",
+          "isMissing": false
+        },
+        "NEN-749252": {
+          "code": "NEN-749252",
+          "text": "Přihlášení",
+          "description": "Přihlášení",
+          "isMissing": false
+        },
+        "NEN-764292": {
+          "code": "NEN-764292",
+          "text": "Ukázka vzhledu",
+          "description": "Ukázka vzhledu",
+          "isMissing": false
+        },
+        "NEN-770159": {
+          "code": "NEN-770159",
+          "text": "Zpracování osobních údajů a cookies",
+          "description": "Zpracování osobních údajů a cookies",
+          "isMissing": false
+        },
+        "NEN-665597": {
+          "code": "NEN-665597",
+          "text": "Obnovení zapomenutého hesla",
+          "description": "Obnovení zapomenutého hesla",
+          "isMissing": false
+        },
+        "NEN-645284": {
+          "code": "NEN-645284",
+          "text": "Zadání hesla a potvrzení změn v systému NEN",
+          "description": "Zadání hesla a potvrzení změn v systému NEN",
+          "isMissing": false
+        },
+        "NEN-835444": {
+          "code": "NEN-835444",
+          "text": "Poptávka po školení",
+          "description": "Poptávka po školení",
+          "isMissing": false
+        },
+        "NEN-786858": {
+          "code": "NEN-786858",
+          "text": "Hlavní obsah",
+          "description": "Hlavní obsah",
+          "isMissing": false
+        },
+        "NEN-786979": {
+          "code": "NEN-786979",
+          "text": "Zkratky",
+          "description": "Zkratky",
+          "isMissing": false
+        },
+        "NEN-645333": {
+          "code": "NEN-645333",
+          "text": "Přeskočit na Hlavní obsah",
+          "description": "Přeskočit na Hlavní obsah",
+          "isMissing": false
+        },
+        "NEN-645332": {
+          "code": "NEN-645332",
+          "text": "Přeskočit na Hlavní navigaci",
+          "description": "Přeskočit na Hlavní navigaci",
+          "isMissing": false
+        },
+        "NEN-785549": {
+          "code": "NEN-785549",
+          "text": "Přeskočit na Patičku",
+          "description": "Přeskočit na Patičku",
+          "isMissing": false
+        },
+        "NEN-785550": {
+          "code": "NEN-785550",
+          "text": "Přeskočit na stránku Přihlášení",
+          "description": "Přeskočit na stránku Přihlášení",
+          "isMissing": false
+        },
+        "NEN-786855": {
+          "code": "NEN-786855",
+          "text": "Hlavní menu",
+          "description": "Hlavní menu",
+          "isMissing": false
+        },
+        "NEN-743741": {
+          "code": "NEN-743741",
+          "text": "Registrace",
+          "description": "Registrace",
+          "isMissing": false
+        },
+        "NEN-819382": {
+          "code": "NEN-819382",
+          "text": "Informace pro uživatele",
+          "description": "Informace pro uživatele",
+          "isMissing": false
+        },
+        "NEN-463236": {
+          "code": "NEN-463236",
+          "text": "Změna jazyka",
+          "description": "Změna jazyka",
+          "isMissing": false
+        },
+        "NEN-738416": {
+          "code": "NEN-738416",
+          "text": "Úvod",
+          "description": "Úvod",
+          "isMissing": false
+        },
+        "NEN-738417": {
+          "code": "NEN-738417",
+          "text": "Veřejné zakázky",
+          "description": "Veřejné zakázky",
+          "isMissing": false
+        },
+        "NEN-738418": {
+          "code": "NEN-738418",
+          "text": "Profily zadavatelů",
+          "description": "Profily zadavatelů",
+          "isMissing": false
+        },
+        "NEN-644069": {
+          "code": "NEN-644069",
+          "text": "Národní elektronický nástroj",
+          "description": "Národní elektronický nástroj",
+          "isMissing": false
+        },
+        "NEN-812656": {
+          "code": "NEN-812656",
+          "text": "Základní informace o organizaci",
+          "description": "Základní informace o organizaci",
+          "isMissing": false
+        },
+        "NEN-812662": {
+          "code": "NEN-812662",
+          "text": "Další informace o organizaci",
+          "description": "Další informace o organizaci",
+          "isMissing": false
+        },
+        "NEN-812506": {
+          "code": "NEN-812506",
+          "text": "Úřední název",
+          "description": "Úřední název obchodní firmy/název subjektu",
+          "isMissing": false
+        },
+        "NEN-812510": {
+          "code": "NEN-812510",
+          "text": "Doplněk k úřednímu názvu",
+          "description": "Doplněk k obchodní firmě/názvu/jménu a příjmení",
+          "isMissing": false
+        },
+        "NEN-812698": {
+          "code": "NEN-812698",
+          "text": "Evidenční číslo profilu ve VVZ",
+          "description": "Evidenční číslo profilu ve Věstníku veřejných zakázek",
+          "isMissing": false
+        },
+        "NEN-812546": {
+          "code": "NEN-812546",
+          "text": "Právní forma organizace",
+          "description": "Právní forma subjektu",
+          "isMissing": false
+        },
+        "NEN-812517": {
+          "code": "NEN-812517",
+          "text": "Obec",
+          "description": "Název obce, ve které má subjekt sídlo",
+          "isMissing": false
+        },
+        "NEN-812518": {
+          "code": "NEN-812518",
+          "text": "Část obce",
+          "description": "Název části obce, ve které má subjekt sídlo",
+          "isMissing": false
+        },
+        "NEN-812523": {
+          "code": "NEN-812523",
+          "text": "Ulice",
+          "description": "Název ulice, ve které má subjekt sídlo",
+          "isMissing": false
+        },
+        "NEN-812525": {
+          "code": "NEN-812525",
+          "text": "Číslo orientační",
+          "description": "Číslo orientační sídla subjektu",
+          "isMissing": false
+        },
+        "NEN-812527": {
+          "code": "NEN-812527",
+          "text": "Stát - kód",
+          "description": "Kód státu, ve kterém má subjekt sídlo",
+          "isMissing": false
+        },
+        "NEN-812507": {
+          "code": "NEN-812507",
+          "text": "Základní informace",
+          "description": "Základní informace",
+          "isMissing": false
+        },
+        "NEN-812757": {
+          "code": "NEN-812757",
+          "text": "Profil zadavatele v NEN",
+          "description": "Profil zadavatele v NEN",
+          "isMissing": false
+        },
+        "NEN-812511": {
+          "code": "NEN-812511",
+          "text": "IČO",
+          "description": "Identifikační číslo subjektu",
+          "isMissing": false
+        },
+        "NEN-812512": {
+          "code": "NEN-812512",
+          "text": "DIČ",
+          "description": "Daňové identifikační číslo subjektu",
+          "isMissing": false
+        },
+        "NEN-812513": {
+          "code": "NEN-812513",
+          "text": "Jiný identifikátor",
+          "description": "Jiný identifikátor uvedený organizací než je IČO, DIČ, rodné číslo nebo datum narození.",
+          "isMissing": false
+        },
+        "NEN-812615": {
+          "code": "NEN-812615",
+          "text": "Právní forma",
+          "description": "Právní forma",
+          "isMissing": false
+        },
+        "NEN-778515": {
+          "code": "NEN-778515",
+          "text": "Telefon",
+          "description": "Telefon ve tvaru +xxx yyyyyyyyy (kde 'xxx' je předvolba státu, 'yyyyyyyyy' je libovolná kombinace číslic)",
+          "isMissing": false
+        },
+        "NEN-812551": {
+          "code": "NEN-812551",
+          "text": "Telefon 2",
+          "description": "Telefon ve tvaru +xxx yyyyyyyyy (kde 'xxx' je předvolba státu, 'yyyyyyyyy' je libovolná kombinace číslic)",
+          "isMissing": false
+        },
+        "NEN-812552": {
+          "code": "NEN-812552",
+          "text": "Fax",
+          "description": "Číslo faxu (ústředna) ve tvaru +xxx yyyyyyyyy (kde 'xxx' je předvolba státu, 'yyyyyyyyy' je libovolná kombinace číslic)",
+          "isMissing": false
+        },
+        "NEN-812553": {
+          "code": "NEN-812553",
+          "text": "WWW",
+          "description": "Obecná webová adresa subjektu",
+          "isMissing": false
+        },
+        "NEN-812554": {
+          "code": "NEN-812554",
+          "text": "E-mail",
+          "description": "E-mailová adresa subjektu (obecná adresa)",
+          "isMissing": false
+        },
+        "NEN-812532": {
+          "code": "NEN-812532",
+          "text": "Kategorie zadavatele",
+          "description": "Kategorie zadavatele -  je určena podle člena sdružení, na něhož se vztahuje nejnižší finanční limit dle nařízení vlády č. 172/2016 Sb.",
+          "isMissing": false
+        },
+        "NEN-812654": {
+          "code": "NEN-812654",
+          "text": "Relevantní činnost",
+          "description": "Zadavatel vykonává relevantní činnost dle § 153 ZZVZ",
+          "isMissing": false
+        },
+        "NEN-812737": {
+          "code": "NEN-812737",
+          "text": "Zadavatel vykonává na základě zvláštního nebo výhradního práva relevantní činnost podle § 152 ZZVZ",
+          "description": "Zadavatel vykonává na základě zvláštního nebo výhradního práva relevantní činnost podle § 152 ZZVZ",
+          "isMissing": false
+        },
+        "NEN-812738": {
+          "code": "NEN-812738",
+          "text": "Může nad tímto zadavatelem veřejný zadavatel přímo nebo nepřímo uplatňovat dominantní vliv?",
+          "description": "Může nad tímto zadavatelem veřejný zadavatel přímo nebo nepřímo uplatňovat dominantní vliv?",
+          "isMissing": false
+        },
+        "NEN-812739": {
+          "code": "NEN-812739",
+          "text": "Zadavatel působící v oblasti obrany",
+          "description": "Příznak, jestli se jedná o zadavatele působící v oblasti obrany.",
+          "isMissing": false
+        },
+        "NEN-812555": {
+          "code": "NEN-812555",
+          "text": "Společné zadávání",
+          "description": "Společné zadávání",
+          "isMissing": false
+        },
+        "NEN-812556": {
+          "code": "NEN-812556",
+          "text": "Název společného zadávání",
+          "description": "Název společného zadávání, pod kterým bude v systému zobrazen",
+          "isMissing": false
+        },
+        "NEN-812557": {
+          "code": "NEN-812557",
+          "text": "Způsob jednání za společné zadávání",
+          "description": "Způsob jednání za společné zadávání",
+          "isMissing": false
+        },
+        "NEN-812558": {
+          "code": "NEN-812558",
+          "text": "Vedoucí člen společného zadávání",
+          "description": "Název vedoucího člena společného zadávání",
+          "isMissing": false
+        },
+        "NEN-812516": {
+          "code": "NEN-812516",
+          "text": "Sídlo/místo podnikání",
+          "description": "Sídlo/místo podnikání",
+          "isMissing": false
+        },
+        "NEN-812524": {
+          "code": "NEN-812524",
+          "text": "Číslo popisné",
+          "description": "Číslo popisné sídla subjektu",
+          "isMissing": false
+        },
+        "NEN-812526": {
+          "code": "NEN-812526",
+          "text": "PSČ",
+          "description": "Poštovní směrovací číslo obce, ve které má subjekt sídlo",
+          "isMissing": false
+        },
+        "NEN-812777": {
+          "code": "NEN-812777",
+          "text": "Kód NUTS",
+          "description": "Označení územní statistické jednotky",
+          "isMissing": false
+        },
+        "NEN-812528": {
+          "code": "NEN-812528",
+          "text": "Bankovní spojení",
+          "description": "Bankovní spojení",
+          "isMissing": false
+        },
+        "NEN-812533": {
+          "code": "NEN-812533",
+          "text": "Název účtu",
+          "description": "Název účtu, pod kterým bude účet v systému zobrazen",
+          "isMissing": false
+        },
+        "NEN-812543": {
+          "code": "NEN-812543",
+          "text": "Předčíslí účtu",
+          "description": "Předčíslí čísla účtu ve formátu ABO",
+          "isMissing": false
+        },
+        "NEN-812544": {
+          "code": "NEN-812544",
+          "text": "Číslo účtu",
+          "description": "Číslo účtu ve formátu ABO",
+          "isMissing": false
+        },
+        "NEN-812503": {
+          "code": "NEN-812503",
+          "text": "Kód banky",
+          "description": "Výběr kódu banky",
+          "isMissing": false
+        },
+        "NEN-812593": {
+          "code": "NEN-812593",
+          "text": "IBAN",
+          "description": "Číslo účtu v mezinárodním formátu IBAN",
+          "isMissing": false
+        },
+        "NEN-812504": {
+          "code": "NEN-812504",
+          "text": "SWIFT",
+          "description": "Kód banky pro mezinárodní platební styk - tzv. SWIFT (BIC) kód",
+          "isMissing": false
+        },
+        "NEN-812681": {
+          "code": "NEN-812681",
+          "text": "Další informace o dodavateli",
+          "description": "Další informace o dodavateli",
+          "isMissing": false
+        },
+        "NEN-812531": {
+          "code": "NEN-812531",
+          "text": "Předmět činnosti organizace",
+          "description": "Předmět činnosti organizace - popis činnosti u dodavatele",
+          "isMissing": false
+        },
+        "NEN-812548": {
+          "code": "NEN-812548",
+          "text": "Roční obrat organizace",
+          "description": "Roční obrat v jednotlivých letech existence subjektu - dodavatel",
+          "isMissing": false
+        },
+        "NEN-812547": {
+          "code": "NEN-812547",
+          "text": "Rok vzniku organizace",
+          "description": "Rok vzniku organizace - dodavatel",
+          "isMissing": false
+        },
+        "NEN-812549": {
+          "code": "NEN-812549",
+          "text": "Počet zaměstnanců",
+          "description": "Počet zaměstnanců organizace",
+          "isMissing": false
+        },
+        "NEN-812596": {
+          "code": "NEN-812596",
+          "text": "Členové společného zadávání",
+          "description": "Členové společného zadávání",
+          "isMissing": false
+        },
+        "NEN-812508": {
+          "code": "NEN-812508",
+          "text": "IČO",
+          "description": "Identifikační číslo organizace",
+          "isMissing": false
+        },
+        "NEN-748837": {
+          "code": "NEN-748837",
+          "text": "Detail",
+          "description": "Detail",
+          "isMissing": false
+        },
+        "NEN-765109": {
+          "code": "NEN-765109",
+          "text": "Předchozí",
+          "description": "Předchozí",
+          "isMissing": false
+        },
+        "NEN-787016": {
+          "code": "NEN-787016",
+          "text": "Stránka",
+          "description": "Stránka",
+          "isMissing": false
+        },
+        "NEN-765110": {
+          "code": "NEN-765110",
+          "text": "Následující",
+          "description": "Následující",
+          "isMissing": false
+        },
+        "NEN-812848": {
+          "code": "NEN-812848",
+          "text": "NIPEZ dodavatele",
+          "description": "NIPEZ dodavatele",
+          "isMissing": false
+        },
+        "NEN-812585": {
+          "code": "NEN-812585",
+          "text": "Kód z NIPEZ",
+          "description": "Kód z NIPEZ",
+          "isMissing": false
+        },
+        "NEN-812582": {
+          "code": "NEN-812582",
+          "text": "Název z NIPEZ ",
+          "description": "Název z NIPEZ ",
+          "isMissing": false
+        },
+        "NEN-812586": {
+          "code": "NEN-812586",
+          "text": "Kód z CPV",
+          "description": "Kód z CPV",
+          "isMissing": false
+        },
+        "NEN-812583": {
+          "code": "NEN-812583",
+          "text": "Název z CPV",
+          "description": "Název z CPV",
+          "isMissing": false
+        },
+        "NEN-812658": {
+          "code": "NEN-812658",
+          "text": "Hlavní předmět činnosti",
+          "description": "Hlavní předmět činnosti",
+          "isMissing": false
+        },
+        "NEN-812505": {
+          "code": "NEN-812505",
+          "text": "Hlavní předmět činnosti",
+          "description": "Hlavní předmět činnosti subjektu",
+          "isMissing": false
+        },
+        "NEN-812530": {
+          "code": "NEN-812530",
+          "text": "Jiná činnost",
+          "description": "Hlavní předmět činnosti  v případě výběru \"Jiný\"",
+          "isMissing": false
+        },
+        "NEN-812659": {
+          "code": "NEN-812659",
+          "text": "Druh relevantní činnosti",
+          "description": "Druh relevantní činnosti",
+          "isMissing": false
+        },
+        "NEN-812650": {
+          "code": "NEN-812650",
+          "text": "Druh relevantní činnosti",
+          "description": "Druh relevantní činnosti",
+          "isMissing": false
+        },
+        "NEN-767512": {
+          "code": "NEN-767512",
+          "text": "+420 272 680 985",
+          "description": "+420 272 680 985",
+          "isMissing": false
+        },
+        "NEN-749124": {
+          "code": "NEN-749124",
+          "text": "Service desk",
+          "description": "Service desk",
+          "isMissing": false
+        },
+        "NEN-645478": {
+          "code": "NEN-645478",
+          "text": "Telefon",
+          "description": "Telefon",
+          "isMissing": false
+        },
+        "NEN-645446": {
+          "code": "NEN-645446",
+          "text": "Volání je zpoplatněno vnitrostátní minutovou sazbou dle vašeho tarifu.",
+          "description": "Volání je zpoplatněno vnitrostátní minutovou sazbou dle vašeho tarifu.",
+          "isMissing": false
+        },
+        "NEN-767513": {
+          "code": "NEN-767513",
+          "text": "Po - Pá | 06:00 - 18:00",
+          "description": "Po - Pá | 06:00 - 18:00",
+          "isMissing": false
+        },
+        "NEN-786806": {
+          "code": "NEN-786806",
+          "text": "6:00-18:00 v pracovní dny . Volání je zpoplatněno vnitrostátní minutovou sazbou dle vašeho tarifu.",
+          "description": "6:00-18:00 v pracovní dny . Volání je zpoplatněno vnitrostátní minutovou sazbou dle vašeho tarifu.",
+          "isMissing": false
+        },
+        "NEN-645476": {
+          "code": "NEN-645476",
+          "text": "Email",
+          "description": "Email",
+          "isMissing": false
+        },
+        "NEN-767356": {
+          "code": "NEN-767356",
+          "text": "hotline@nipez.cz",
+          "description": "hotline@nipez.cz",
+          "isMissing": false
+        },
+        "NEN-852133": {
+          "code": "NEN-852133",
+          "text": "Nový portál, který spojuje informace o veřejných zakázkách z různých elektronických nástrojů, usnadňuje jejich vyhledávání a umožní kompletní elektronickou komunikaci dodavatelů se zadavateli.",
+          "description": "Nový portál, který spojuje informace o veřejných zakázkách z různých elektronických nástrojů, usnadňuje jejich vyhledávání a umožní kompletní elektronickou komunikaci dodavatelů se zadavateli.",
+          "isMissing": false
+        },
+        "NEN-767362": {
+          "code": "NEN-767362",
+          "text": "2022 © Ministerstvo pro místní rozvoj • Informace jsou poskytovány v souladu se zákonem č. 106/1999 Sb., o svobodném přístupu k informacím.",
+          "description": "2022 © Ministerstvo pro místní rozvoj • Informace jsou poskytovány v souladu se zákonem č. 106/1999 Sb., o svobodném přístupu k informacím.",
+          "isMissing": false
+        },
+        "NEN-767361": {
+          "code": "NEN-767361",
+          "text": "Verze NEN 2.3, HMTL5",
+          "description": "Verze NEN 2.3, HMTL5",
+          "isMissing": false
+        },
+        "NEN-767360": {
+          "code": "NEN-767360",
+          "text": "Zpět nahoru",
+          "description": "Zpět nahoru",
+          "isMissing": false
+        },
+        "NEN-767472": {
+          "code": "NEN-767472",
+          "text": "Uživatelská podpora",
+          "description": "Uživatelská podpora",
+          "isMissing": false
+        },
+        "NEN-767460": {
+          "code": "NEN-767460",
+          "text": "Užitečné informace",
+          "description": "Užitečné informace",
+          "isMissing": false
+        },
+        "NEN-767462": {
+          "code": "NEN-767462",
+          "text": "Uživatelské příručky",
+          "description": "Uživatelské příručky",
+          "isMissing": false
+        },
+        "NEN-767463": {
+          "code": "NEN-767463",
+          "text": "Často kladené dotazy",
+          "description": "Často kladené dotazy",
+          "isMissing": false
+        },
+        "NEN-767354": {
+          "code": "NEN-767354",
+          "text": "Prohlášení o přístupnosti",
+          "description": "Prohlášení o přístupnosti",
+          "isMissing": false
+        },
+        "NEN-767368": {
+          "code": "NEN-767368",
+          "text": "Statistické informace",
+          "description": "Statistické informace",
+          "isMissing": false
+        },
+        "NEN-767464": {
+          "code": "NEN-767464",
+          "text": "Důležité odkazy",
+          "description": "Důležité odkazy",
+          "isMissing": false
+        },
+        "NEN-852132": {
+          "code": "NEN-852132",
+          "text": "Zakázky GOV",
+          "description": "Zakázky GOV",
+          "isMissing": false
+        },
+        "NEN-767465": {
+          "code": "NEN-767465",
+          "text": "Testovací prostředí NEN",
+          "description": "Testovací prostředí NEN",
+          "isMissing": false
+        },
+        "NEN-767467": {
+          "code": "NEN-767467",
+          "text": "Portál o veřejných zakázkách",
+          "description": "Portál o veřejných zakázkách",
+          "isMissing": false
+        },
+        "NEN-767468": {
+          "code": "NEN-767468",
+          "text": "Úřední věstník EU",
+          "description": "Úřední věstník EU",
+          "isMissing": false
+        },
+        "NEN-767469": {
+          "code": "NEN-767469",
+          "text": "Věstník veřejných zakázek",
+          "description": "Věstník veřejných zakázek",
+          "isMissing": false
+        },
+        "NEN-767471": {
+          "code": "NEN-767471",
+          "text": "Informační systém o veřejných zakázkách",
+          "description": "Informační systém o veřejných zakázkách",
+          "isMissing": false
+        },
+        "NEN-754139": {
+          "code": "NEN-754139",
+          "text": "Seznam kvalifikovaných dodavatelů",
+          "description": "Seznam kvalifikovaných dodavatelů",
+          "isMissing": false
+        },
+        "NEN-660632": {
+          "code": "NEN-660632",
+          "text": "Doplňky k podepisování a dešifrování",
+          "description": "Crypto ke stažení ",
+          "isMissing": false
+        },
+        "NEN-770169": {
+          "code": "NEN-770169",
+          "text": "Můžeme si u vás uložit cookies?",
+          "description": "Můžeme si u vás uložit cookies?",
+          "isMissing": false
+        },
+        "NEN-770170": {
+          "code": "NEN-770170",
+          "text": "Co že to znamená? Cookies jsou malé datové soubory, které slouží např. k tomu, aby si web pamatoval vaše nastavení a to, co vás zajímá, nebo abychom jej zlepšovali. Pro ukládání různých typů cookies od vás potřebujeme souhlas. Web bude fungovat i bez souhlasu, s ním ale o něco lépe.",
+          "description": "Co že to znamená? Cookies jsou malé datové soubory, které slouží např. k tomu, aby si web pamatoval vaše nastavení a to, co vás zajímá, nebo abychom jej zlepšovali. Pro ukládání různých typů cookies od vás potřebujeme souhlas. Web bude fungovat i bez souhlasu, s ním ale o něco lépe.",
+          "isMissing": false
+        },
+        "NEN-770171": {
+          "code": "NEN-770171",
+          "text": "Souhlasím se všemi",
+          "description": "Souhlasím se všemi",
+          "isMissing": false
+        },
+        "NEN-770172": {
+          "code": "NEN-770172",
+          "text": "Odmítnout všechny",
+          "description": "Odmítnout všechny",
+          "isMissing": false
+        },
+        "NEN-770173": {
+          "code": "NEN-770173",
+          "text": "Podrobné nastavení",
+          "description": "Podrobné nastavení",
+          "isMissing": false
+        },
+        "NEN-645485": {
+          "code": "NEN-645485",
+          "text": "NACHÁZÍTE SE:",
+          "description": "NACHÁZÍTE SE:",
+          "isMissing": false
+        },
+        "NEN-738574": {
+          "code": "NEN-738574",
+          "text": "Ne",
+          "description": "Ne",
+          "isMissing": false
+        },
+        "SRC-336096": {
+          "code": "SRC-336096",
+          "text": "Územní samosprávný celek nebo jeho příspěvková organizace",
+          "description": "Územní samosprávný celek nebo jeho příspěvková organizace",
+          "isMissing": false
+        },
+        "NEN-744019": {
+          "code": "NEN-744019",
+          "text": "Seznam veřejných zakázek",
+          "description": "Seznam veřejných zakázek",
+          "isMissing": false
+        },
+        "NEN-744020": {
+          "code": "NEN-744020",
+          "text": "Registr DNS",
+          "description": "Registr DNS",
+          "isMissing": false
+        },
+        "NEN-744021": {
+          "code": "NEN-744021",
+          "text": "Věstník NEN",
+          "description": "Věstník NEN",
+          "isMissing": false
+        },
+        "NEN-812877": {
+          "code": "NEN-812877",
+          "text": "Systémy kvalifikace",
+          "description": "Registr Systému kvalifikace",
+          "isMissing": false
+        },
+        "NEN-744118": {
+          "code": "NEN-744118",
+          "text": "Veřejné zakázky",
+          "description": "Veřejné zakázky",
+          "isMissing": false
+        },
+        "NEN-622252": {
+          "code": "NEN-622252",
+          "text": "Seznam veřejných zakázek uveřejněných v systému NEN, seřazených chronologicky dle data uveřejnění.",
+          "description": "Seznam veřejných zakázek uveřejněných v systému NEN, seřazených chronologicky dle data uveřejnění.",
+          "isMissing": false
+        },
+        "NEN-812859": {
+          "code": "NEN-812859",
+          "text": "Údaje zadávacího postupu",
+          "description": "Údaje zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-742282": {
+          "code": "NEN-742282",
+          "text": "Název",
+          "description": "Název",
+          "isMissing": false
+        },
+        "NEN-812690": {
+          "code": "NEN-812690",
+          "text": "Druh zadávacího postupu",
+          "description": "Druh zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-743013": {
+          "code": "NEN-743013",
+          "text": "Hlavní místo plnění",
+          "description": "Hlavní místo plnění (NUTS - Nomenklatura územních statistických jednotek)",
+          "isMissing": false
+        },
+        "NEN-812860": {
+          "code": "NEN-812860",
+          "text": "Druh veřejné zakázky",
+          "description": "Druh veřejné zakázky",
+          "isMissing": false
+        },
+        "NEN-812689": {
+          "code": "NEN-812689",
+          "text": "Typ zadávacího postupu",
+          "description": "Typ zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-751267": {
+          "code": "NEN-751267",
+          "text": "Aktuální stav",
+          "description": "Aktuální stav",
+          "isMissing": false
+        },
+        "NEN-742286": {
+          "code": "NEN-742286",
+          "text": "Předpokládaná hodnota bez DPH v CZK",
+          "description": "Předpokládaná hodnota bez DPH v CZK",
+          "isMissing": false
+        },
+        "NEN-742285": {
+          "code": "NEN-742285",
+          "text": "Lhůta aktuálního typu podání",
+          "description": "Lhůta aktuálního typu podání",
+          "isMissing": false
+        },
+        "NEN-794420": {
+          "code": "NEN-794420",
+          "text": "Datum prvního uveřejnění",
+          "description": "Datum prvního uveřejnění",
+          "isMissing": false
+        },
+        "NEN-794423": {
+          "code": "NEN-794423",
+          "text": "Datum posledního uveřejnění",
+          "description": "Datum posledního uveřejnění",
+          "isMissing": false
+        },
+        "NEN-743014": {
+          "code": "NEN-743014",
+          "text": "Předmět",
+          "description": "Předmět",
+          "isMissing": false
+        },
+        "NEN-743015": {
+          "code": "NEN-743015",
+          "text": "Výběr z číselníku NIPEZ",
+          "description": "Výběr z číselníku NIPEZ",
+          "isMissing": false
+        },
+        "NEN-743016": {
+          "code": "NEN-743016",
+          "text": "Výběr z číselníku CPV",
+          "description": "Výběr z číselníku CPV",
+          "isMissing": false
+        },
+        "NEN-743017": {
+          "code": "NEN-743017",
+          "text": "Místo plnění",
+          "description": "Místo plnění",
+          "isMissing": false
+        },
+        "NEN-751268": {
+          "code": "NEN-751268",
+          "text": "Popis předmětu",
+          "description": "Popis předmětu",
+          "isMissing": false
+        },
+        "NEN-751972": {
+          "code": "NEN-751972",
+          "text": "Dodavatel/Účastník",
+          "description": "Dodavatel/Účastník",
+          "isMissing": false
+        },
+        "NEN-812861": {
+          "code": "NEN-812861",
+          "text": "Úřední název vybraného dodavatele",
+          "description": "Úřední název vybraného dodavatele",
+          "isMissing": false
+        },
+        "NEN-812693": {
+          "code": "NEN-812693",
+          "text": "IČO vybraného dodavatele",
+          "description": "IČO vybraného dodavatele",
+          "isMissing": false
+        },
+        "NEN-812862": {
+          "code": "NEN-812862",
+          "text": "Úřední název účastníka",
+          "description": "Úřední název účastníka",
+          "isMissing": false
+        },
+        "NEN-812863": {
+          "code": "NEN-812863",
+          "text": "IČO účastníka",
+          "description": "IČO účastníka",
+          "isMissing": false
+        },
+        "NEN-751471": {
+          "code": "NEN-751471",
+          "text": "Zadavatel",
+          "description": "Zadavatel",
+          "isMissing": false
+        },
+        "NEN-742292": {
+          "code": "NEN-742292",
+          "text": "Název zadavatele",
+          "description": "Název zadavatele",
+          "isMissing": false
+        },
+        "NEN-742293": {
+          "code": "NEN-742293",
+          "text": "IČO zadavatele",
+          "description": "IČO zadavatele",
+          "isMissing": false
+        },
+        "NEN-812869": {
+          "code": "NEN-812869",
+          "text": "Právní forma",
+          "description": "Právní forma",
+          "isMissing": false
+        },
+        "NEN-812868": {
+          "code": "NEN-812868",
+          "text": "Kód NUTS",
+          "description": "Kód NUTS",
+          "isMissing": false
+        },
+        "NEN-812866": {
+          "code": "NEN-812866",
+          "text": "Obec",
+          "description": "Obec",
+          "isMissing": false
+        },
+        "NEN-812865": {
+          "code": "NEN-812865",
+          "text": "Část obce",
+          "description": "Část obce",
+          "isMissing": false
+        },
+        "NEN-812867": {
+          "code": "NEN-812867",
+          "text": "Ulice",
+          "description": "Ulice",
+          "isMissing": false
+        },
+        "NEN-742295": {
+          "code": "NEN-742295",
+          "text": "Podle kódu",
+          "description": "Podle kódu",
+          "isMissing": false
+        },
+        "NEN-742283": {
+          "code": "NEN-742283",
+          "text": "Systémové číslo NEN",
+          "description": "Systémové číslo NEN",
+          "isMissing": false
+        },
+        "NEN-812731": {
+          "code": "NEN-812731",
+          "text": "Evidenční číslo zakázky ve VVZ",
+          "description": "Evidenční číslo zakázky ve Věstníku veřejných zakázek",
+          "isMissing": false
+        },
+        "NEN-812691": {
+          "code": "NEN-812691",
+          "text": "Evidenční číslo Úředního věstníku EU",
+          "description": "Evidenční číslo Úředního věstníku EU",
+          "isMissing": false
+        },
+        "NEN-812630": {
+          "code": "NEN-812630",
+          "text": "Systémové číslo ET",
+          "description": "Systémové číslo ET",
+          "isMissing": false
+        },
+        "NEN-812692": {
+          "code": "NEN-812692",
+          "text": "Systémové číslo IEN",
+          "description": "Systémové číslo IEN",
+          "isMissing": false
+        },
+        "NEN-847154": {
+          "code": "NEN-847154",
+          "text": "Identifikátor NIPEZ",
+          "description": "Identifikátor NIPEZ",
+          "isMissing": false
+        },
+        "NEN-742948": {
+          "code": "NEN-742948",
+          "text": "Rychlé vyhledávání",
+          "description": "Rychlé vyhledávání",
+          "isMissing": false
+        },
+        "NEN-747766": {
+          "code": "NEN-747766",
+          "text": "Rozšířené vyhledávání",
+          "description": "Rozšířené vyhledávání",
+          "isMissing": false
+        },
+        "NEN-768417": {
+          "code": "NEN-768417",
+          "text": "Vymazat všechny filtry",
+          "description": "Vymazat všechny filtry",
+          "isMissing": false
+        },
+        "NEN-768418": {
+          "code": "NEN-768418",
+          "text": "Aplikovat filtr",
+          "description": "Aplikovat filtr",
+          "isMissing": false
+        },
+        "NEN-765498": {
+          "code": "NEN-765498",
+          "text": "Hledat",
+          "description": "Hledat",
+          "isMissing": false
+        },
+        "NEN-742323": {
+          "code": "NEN-742323",
+          "text": "Od",
+          "description": "Od",
+          "isMissing": false
+        },
+        "NEN-742324": {
+          "code": "NEN-742324",
+          "text": "Do",
+          "description": "Do",
+          "isMissing": false
+        },
+        "NEN-742321": {
+          "code": "NEN-742321",
+          "text": "Od",
+          "description": "Od",
+          "isMissing": false
+        },
+        "NEN-765995": {
+          "code": "NEN-765995",
+          "text": "Čas",
+          "description": "Čas",
+          "isMissing": false
+        },
+        "NEN-742322": {
+          "code": "NEN-742322",
+          "text": "Do",
+          "description": "Do",
+          "isMissing": false
+        },
+        "NEN-748840": {
+          "code": "NEN-748840",
+          "text": "Zobrazit detail",
+          "description": "Zobrazit detail",
+          "isMissing": false
+        },
+        "NEN-812594": {
+          "code": "NEN-812594",
+          "text": "Systémové číslo NEN",
+          "description": "Přidělené systémové číslo NEN",
+          "isMissing": false
+        },
+        "NEN-812694": {
+          "code": "NEN-812694",
+          "text": "Název zadávacího postupu",
+          "description": "Název zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-738558": {
+          "code": "NEN-738558",
+          "text": "Aktuální stav",
+          "description": "Aktuální stav zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-812618": {
+          "code": "NEN-812618",
+          "text": "Zadavatel",
+          "description": "Zadavatel",
+          "isMissing": false
+        },
+        "NEN-738562": {
+          "code": "NEN-738562",
+          "text": "Lhůta podání nabídek",
+          "description": "Lhůta pro podání nabídek",
+          "isMissing": false
+        },
+        "NEN-659782": {
+          "code": "NEN-659782",
+          "text": "Načíst dalších @0",
+          "description": "Načíst dalších @0",
+          "isMissing": false
+        },
+        "SRC-606646": {
+          "code": "SRC-606646",
+          "text": "Veřejná zakázka na dodávky",
+          "description": "Veřejná zakázka na dodávky",
+          "isMissing": false
+        },
+        "SRC-606647": {
+          "code": "SRC-606647",
+          "text": "Veřejná zakázka na služby",
+          "description": "Veřejná zakázka na služby",
+          "isMissing": false
+        },
+        "SRC-606648": {
+          "code": "SRC-606648",
+          "text": "Veřejná zakázka na stavební práce",
+          "description": "Veřejná zakázka na stavební práce",
+          "isMissing": false
+        },
+        "SRC-606649": {
+          "code": "SRC-606649",
+          "text": "Koncese na služby",
+          "description": "Koncese na služby",
+          "isMissing": false
+        },
+        "SRC-606650": {
+          "code": "SRC-606650",
+          "text": "Koncese na stavební práce",
+          "description": "Koncese na stavební práce",
+          "isMissing": false
+        },
+        "SRC-336052": {
+          "code": "SRC-336052",
+          "text": "Veřejná zakázka malého rozsahu",
+          "description": "Veřejná zakázka malého rozsahu",
+          "isMissing": false
+        },
+        "SRC-806709": {
+          "code": "SRC-806709",
+          "text": "Zjednodušený režim",
+          "description": "Zjednodušený režim",
+          "isMissing": false
+        },
+        "SRC-336056": {
+          "code": "SRC-336056",
+          "text": "Podlimitní veřejná zakázka",
+          "description": "Podlimitní veřejná zakázka",
+          "isMissing": false
+        },
+        "SRC-336058": {
+          "code": "SRC-336058",
+          "text": "Podlimitní veřejná zakázka mimo zadávací řízení",
+          "description": "Podlimitní veřejná zakázka mimo zadávací řízení",
+          "isMissing": false
+        },
+        "SRC-336054": {
+          "code": "SRC-336054",
+          "text": "Nadlimitní veřejná zakázka",
+          "description": "Nadlimitní veřejná zakázka",
+          "isMissing": false
+        },
+        "SRC-372208": {
+          "code": "SRC-372208",
+          "text": "Podlimitní soutěž o návrh",
+          "description": "Podlimitní soutěž o návrh",
+          "isMissing": false
+        },
+        "SRC-372210": {
+          "code": "SRC-372210",
+          "text": "Nadlimitní soutěž o návrh",
+          "description": "Nadlimitní soutěž o návrh",
+          "isMissing": false
+        },
+        "SRC-608467": {
+          "code": "SRC-608467",
+          "text": "Koncese malého rozsahu",
+          "description": "Koncese malého rozsahu",
+          "isMissing": false
+        },
+        "SRC-608468": {
+          "code": "SRC-608468",
+          "text": "Koncese",
+          "description": "Koncese",
+          "isMissing": false
+        },
+        "SRC-482640": {
+          "code": "SRC-482640",
+          "text": "Plánován",
+          "description": "Plánován",
+          "isMissing": false
+        },
+        "SRC-824420": {
+          "code": "SRC-824420",
+          "text": "Neúspěšný",
+          "description": "Neúspěšný",
+          "isMissing": false
+        },
+        "SRC-384858": {
+          "code": "SRC-384858",
+          "text": "Neukončen",
+          "description": "Neukončen",
+          "isMissing": false
+        },
+        "SRC-384861": {
+          "code": "SRC-384861",
+          "text": "Zadán",
+          "description": "Zadán",
+          "isMissing": false
+        },
+        "SRC-384866": {
+          "code": "SRC-384866",
+          "text": "Ukončení plnění",
+          "description": "Ukončení plnění",
+          "isMissing": false
+        },
+        "SRC-384864": {
+          "code": "SRC-384864",
+          "text": "Zrušen",
+          "description": "Zrušen",
+          "isMissing": false
+        },
+        "NEN-747722": {
+          "code": "NEN-747722",
+          "text": "Nenalezen žádný záznam. Nemáme co zobrazit.",
+          "description": "Nenalezen žádný záznam. Nemáme co zobrazit.",
+          "isMissing": false
+        },
+        "NEN-645406": {
+          "code": "NEN-645406",
+          "text": "Seznam profilů zadavatelů",
+          "description": "Seznam profilů zadavatelů",
+          "isMissing": false
+        },
+        "NEN-744018": {
+          "code": "NEN-744018",
+          "text": "Detail profilu",
+          "description": "Detail profilu",
+          "isMissing": false
+        },
+        "NEN-812592": {
+          "code": "NEN-812592",
+          "text": "Detail dokumentu",
+          "description": "Detail dokumentu",
+          "isMissing": false
+        },
+        "NEN-812542": {
+          "code": "NEN-812542",
+          "text": "Další informace",
+          "description": "Další informace o osobě",
+          "isMissing": false
+        },
+        "NEN-812853": {
+          "code": "NEN-812853",
+          "text": "Zahájené zakázky",
+          "description": "Zahájené zakázky",
+          "isMissing": false
+        },
+        "NEN-812854": {
+          "code": "NEN-812854",
+          "text": "Uzavřené zakázky",
+          "description": "Uzavřené zakázky",
+          "isMissing": false
+        },
+        "NEN-812855": {
+          "code": "NEN-812855",
+          "text": "Plánované zakázky",
+          "description": "Plánované zakázky",
+          "isMissing": false
+        },
+        "NEN-814485": {
+          "code": "NEN-814485",
+          "text": "Dynamické nákupní systémy",
+          "description": "Dynamické nákupní systémy",
+          "isMissing": false
+        },
+        "NEN-852802": {
+          "code": "NEN-852802",
+          "text": "Seznam profilů zadavatelů - platné",
+          "description": "Seznam profilů zadavatelů - platné",
+          "isMissing": false
+        },
+        "NEN-747236": {
+          "code": "NEN-747236",
+          "text": "Detail uveřejnění",
+          "description": "Detail uveřejnění",
+          "isMissing": false
+        },
+        "NEN-812843": {
+          "code": "NEN-812843",
+          "text": "Detail vysvětlení",
+          "description": "Detail vysvětlení",
+          "isMissing": false
+        },
+        "NEN-807152": {
+          "code": "NEN-807152",
+          "text": "Detail poskytnutí",
+          "description": "Detail poskytnutí",
+          "isMissing": false
+        },
+        "NEN-747575": {
+          "code": "NEN-747575",
+          "text": "Detail",
+          "description": "Detail",
+          "isMissing": false
+        },
+        "NEN-768487": {
+          "code": "NEN-768487",
+          "text": "Detail položky předmětu",
+          "description": "Detail položky předmětu",
+          "isMissing": false
+        },
+        "NEN-750892": {
+          "code": "NEN-750892",
+          "text": "Autorizovaná část NEN",
+          "description": "Autorizovaná část NEN",
+          "isMissing": false
+        },
+        "NEN-812829": {
+          "code": "NEN-812829",
+          "text": "Informace",
+          "description": "Informace",
+          "isMissing": false
+        },
+        "NEN-812636": {
+          "code": "NEN-812636",
+          "text": "Části",
+          "description": "Části",
+          "isMissing": false
+        },
+        "NEN-770284": {
+          "code": "NEN-770284",
+          "text": "Dokumenty",
+          "description": "Dokumenty",
+          "isMissing": false
+        },
+        "NEN-812732": {
+          "code": "NEN-812732",
+          "text": "Vysvětlení zadávací dokumentace",
+          "description": "Vysvětlení zadávací dokumentace",
+          "isMissing": false
+        },
+        "NEN-812771": {
+          "code": "NEN-812771",
+          "text": "Vysvětlení soutěžních podmínek",
+          "description": "Vysvětlení soutěžních podmínek",
+          "isMissing": false
+        },
+        "NEN-812831": {
+          "code": "NEN-812831",
+          "text": "Výsledek",
+          "description": "Výsledek",
+          "isMissing": false
+        },
+        "NEN-768242": {
+          "code": "NEN-768242",
+          "text": "Přejít do autorizované části NEN",
+          "description": "Přejít do autorizované části NEN",
+          "isMissing": false
+        },
+        "NEN-812570": {
+          "code": "NEN-812570",
+          "text": "Popis předmětu",
+          "description": "Stručný popis předmětu zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-749962": {
+          "code": "NEN-749962",
+          "text": "Lhůty pro jednotlivé části mohou být rozdílné. Zobrazena je první nejbližší lhůta pro podání.",
+          "description": "Lhůty pro jednotlivé části mohou být rozdílné. Zobrazena je první nejbližší lhůta pro podání.",
+          "isMissing": false
+        },
+        "NEN-812605": {
+          "code": "NEN-812605",
+          "text": "Aktuální stav ZP",
+          "description": "Aktuální stav zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-773253": {
+          "code": "NEN-773253",
+          "text": "Název zavedeného DNS",
+          "description": "Název zavedeného DNS",
+          "isMissing": false
+        },
+        "NEN-812705": {
+          "code": "NEN-812705",
+          "text": "Zakázka, ve které bylo DNS zavedeno",
+          "description": "Zakázka, ve které bylo DNS zavedeno",
+          "isMissing": false
+        },
+        "NEN-812743": {
+          "code": "NEN-812743",
+          "text": "Rozdělení na části",
+          "description": "Rozdělení na části/kategorie",
+          "isMissing": false
+        },
+        "NEN-812687": {
+          "code": "NEN-812687",
+          "text": "Identifikátor ZP na profilu zadavatele",
+          "description": "Identifikátor zadávacího postupu na profil zadavatele",
+          "isMissing": false
+        },
+        "NEN-812756": {
+          "code": "NEN-812756",
+          "text": "Režim VZ dle volby zadavatele",
+          "description": "Režim veřejné zakázky",
+          "isMissing": false
+        },
+        "NEN-812622": {
+          "code": "NEN-812622",
+          "text": "Druh zadávacího postupu",
+          "description": "Druh zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-812826": {
+          "code": "NEN-812826",
+          "text": "Specifikace zadávacího řízení",
+          "description": "Specifikace zadávacího řízení, která odpovídá v souladu s XML schématy uveřejněnými na internetových stránkách Informačního systému o veřejných zakázkách.",
+          "isMissing": false
+        },
+        "NEN-812678": {
+          "code": "NEN-812678",
+          "text": "Druh",
+          "description": "Druh",
+          "isMissing": false
+        },
+        "NEN-812707": {
+          "code": "NEN-812707",
+          "text": "Předpokládaná hodnota (bez DPH)",
+          "description": "Předpokládaná hodnota (bez DPH)",
+          "isMissing": false
+        },
+        "NEN-812587": {
+          "code": "NEN-812587",
+          "text": "Měna",
+          "description": "Měna, ve které je zadána předpokládaná hodnota",
+          "isMissing": false
+        },
+        "NEN-812744": {
+          "code": "NEN-812744",
+          "text": "Datum zrušení ZP",
+          "description": "Datum zrušení ZP",
+          "isMissing": false
+        },
+        "NEN-812746": {
+          "code": "NEN-812746",
+          "text": "Datum uveřejnění ZP na profil",
+          "description": "Datum prvního uveřejnění ZP na profil zadavatele",
+          "isMissing": false
+        },
+        "NEN-812817": {
+          "code": "NEN-812817",
+          "text": "Datum uveřejnění ZP na Věstník NEN",
+          "description": "Datum uveřejnění ZP na Věstník NEN",
+          "isMissing": false
+        },
+        "NEN-824098": {
+          "code": "NEN-824098",
+          "text": "Datum ukončení soutěže o návrh",
+          "description": "Datum ukončení soutěže o návrh",
+          "isMissing": false
+        },
+        "NEN-824104": {
+          "code": "NEN-824104",
+          "text": "Identifikátor dotačního projektu",
+          "description": "Identifikátor dotačního projektu",
+          "isMissing": false
+        },
+        "NEN-812595": {
+          "code": "NEN-812595",
+          "text": "Specifikace podání",
+          "description": "Způsob a doba podání",
+          "isMissing": false
+        },
+        "NEN-852285": {
+          "code": "NEN-852285",
+          "text": "Za podání (žádost o účast, předběžnou nabídku, nabídku, návrh) prostřednictvím systému NEN se považuje též podání s využitím portálu Zakázky GOV",
+          "description": "Za podání (žádost o účast, předběžnou nabídku, nabídku, návrh) prostřednictvím systému NEN se považuje též podání s využitím portálu Zakázky GOV",
+          "isMissing": false
+        },
+        "NEN-812822": {
+          "code": "NEN-812822",
+          "text": "Lhůta pro podání předběžných zájmů",
+          "description": "Lhůta pro podání předběžných zájmů",
+          "isMissing": false
+        },
+        "NEN-812818": {
+          "code": "NEN-812818",
+          "text": "Lhůta pro podání žádostí o účast",
+          "description": "Lhůta pro podání žádostí o účast",
+          "isMissing": false
+        },
+        "NEN-812819": {
+          "code": "NEN-812819",
+          "text": "Lhůta pro podání předběžných nabídek",
+          "description": "Lhůta pro podání předběžných nabídek",
+          "isMissing": false
+        },
+        "NEN-812619": {
+          "code": "NEN-812619",
+          "text": "Lhůta pro podání nabídek",
+          "description": "Lhůta pro podání nabídek",
+          "isMissing": false
+        },
+        "NEN-812670": {
+          "code": "NEN-812670",
+          "text": "Lhůta pro podání návrhů",
+          "description": "Lhůta pro podání návrhů",
+          "isMissing": false
+        },
+        "NEN-812671": {
+          "code": "NEN-812671",
+          "text": "Lhůta pro podání informací",
+          "description": "Lhůta pro podání informací",
+          "isMissing": false
+        },
+        "NEN-812534": {
+          "code": "NEN-812534",
+          "text": "Kontaktní osoba zadavatele",
+          "description": "Kontaktní osoba zadavatele",
+          "isMissing": false
+        },
+        "NEN-812535": {
+          "code": "NEN-812535",
+          "text": "Titul před jménem",
+          "description": "Titul před jménem",
+          "isMissing": false
+        },
+        "NEN-812536": {
+          "code": "NEN-812536",
+          "text": "Jméno",
+          "description": "Jméno osoby",
+          "isMissing": false
+        },
+        "NEN-812537": {
+          "code": "NEN-812537",
+          "text": "Příjmení",
+          "description": "Příjmení osoby",
+          "isMissing": false
+        },
+        "NEN-812538": {
+          "code": "NEN-812538",
+          "text": "Titul za jménem",
+          "description": "Titul za jménem",
+          "isMissing": false
+        },
+        "NEN-812540": {
+          "code": "NEN-812540",
+          "text": "Funkce/pracovní pozice",
+          "description": "Funkce/pracovní pozice osoby",
+          "isMissing": false
+        },
+        "NEN-812541": {
+          "code": "NEN-812541",
+          "text": "E-mail",
+          "description": "E-mailová adresa osoby",
+          "isMissing": false
+        },
+        "NEN-812550": {
+          "code": "NEN-812550",
+          "text": "Telefon 1",
+          "description": "Telefon ve tvaru +xxx yyyyyyyyy (kde 'xxx' je předvolba státu, 'yyyyyyyyy' je libovolná kombinace číslic)",
+          "isMissing": false
+        },
+        "NEN-812708": {
+          "code": "NEN-812708",
+          "text": "Fax",
+          "description": "Fax",
+          "isMissing": false
+        },
+        "NEN-812597": {
+          "code": "NEN-812597",
+          "text": "Předmět",
+          "description": "Předmět",
+          "isMissing": false
+        },
+        "NEN-812683": {
+          "code": "NEN-812683",
+          "text": "Kód z číselníku NIPEZ",
+          "description": "Kód z číselníku NIPEZ",
+          "isMissing": false
+        },
+        "NEN-812684": {
+          "code": "NEN-812684",
+          "text": "Název z číselníku NIPEZ",
+          "description": "Název z číselníku NIPEZ",
+          "isMissing": false
+        },
+        "NEN-812846": {
+          "code": "NEN-812846",
+          "text": "Hlavní místo plnění",
+          "description": "Hlavní místo plnění",
+          "isMissing": false
+        },
+        "NEN-812685": {
+          "code": "NEN-812685",
+          "text": "Kód z číselníku CPV",
+          "description": "Kód z číselníku CPV",
+          "isMissing": false
+        },
+        "NEN-812686": {
+          "code": "NEN-812686",
+          "text": "Název z číselníku CPV",
+          "description": "Název z číselníku CPV",
+          "isMissing": false
+        },
+        "NEN-812502": {
+          "code": "NEN-812502",
+          "text": "Název předmětu",
+          "description": "Název předmětu",
+          "isMissing": false
+        },
+        "NEN-812584": {
+          "code": "NEN-812584",
+          "text": "Textové pole pro popis místa plnění",
+          "description": "Textové pole pro popis místa plnění",
+          "isMissing": false
+        },
+        "NEN-812581": {
+          "code": "NEN-812581",
+          "text": "Položky předmětu",
+          "description": "Položky předmětu",
+          "isMissing": false
+        },
+        "NEN-812571": {
+          "code": "NEN-812571",
+          "text": "Název položky",
+          "description": "Název položky předmětu ",
+          "isMissing": false
+        },
+        "NEN-812572": {
+          "code": "NEN-812572",
+          "text": "Popis položky",
+          "description": "Popis položky předmětu veřejné zakázky",
+          "isMissing": false
+        },
+        "GUI-280054": {
+          "code": "GUI-280054",
+          "text": "Seřazeno vzestupně",
+          "description": "Seřazeno vzestupně",
+          "isMissing": false
+        },
+        "NEN-812677": {
+          "code": "NEN-812677",
+          "text": "Místo plnění",
+          "description": "Místo plnění",
+          "isMissing": false
+        },
+        "NEN-812680": {
+          "code": "NEN-812680",
+          "text": "Kód",
+          "description": "Kód",
+          "isMissing": false
+        },
+        "NEN-812679": {
+          "code": "NEN-812679",
+          "text": "Místo plnění",
+          "description": "Místo plnění - výběr z CZ-NUTS",
+          "isMissing": false
+        },
+        "NEN-812833": {
+          "code": "NEN-812833",
+          "text": "Doplňující informace",
+          "description": "Doplňující informace",
+          "isMissing": false
+        },
+        "NEN-812735": {
+          "code": "NEN-812735",
+          "text": "VZ zadávána na základě RS/RD",
+          "description": "VZ zadávána na základě RS/RD",
+          "isMissing": false
+        },
+        "NEN-812736": {
+          "code": "NEN-812736",
+          "text": "Rámcová smlouva/dohoda",
+          "description": "Jednoznačný identifikátor související veřejné zakázky na uzavření rámcové dohody dle bodu 1. d) přílohy č. 8 vyhlášky č. 168/2016 Sb.",
+          "isMissing": false
+        },
+        "NEN-812561": {
+          "code": "NEN-812561",
+          "text": "Zadávaná v DNS",
+          "description": "VZ zadávaná v DNS - ANO/NE",
+          "isMissing": false
+        },
+        "NEN-812560": {
+          "code": "NEN-812560",
+          "text": "DNS",
+          "description": "Jednoznačný identifikátor související veřejné zakázky na zavedení dynamického nákupního systému dle bodu 1. d) přílohy č. 8 vyhlášky č. 168/2016 Sb.",
+          "isMissing": false
+        },
+        "NEN-812529": {
+          "code": "NEN-812529",
+          "text": "Výsledkem ZP bude zavedení DNS",
+          "description": "Příznak, zda výsledkem zadávacího postupu bude zavedení dynamického nákupního systému - ANO/NE",
+          "isMissing": false
+        },
+        "NEN-812755": {
+          "code": "NEN-812755",
+          "text": "Jedná se o rámcovou dohodu",
+          "description": "Jedná se o rámcovou dohodu",
+          "isMissing": false
+        },
+        "NEN-769974": {
+          "code": "NEN-769974",
+          "text": "Importovaná VZ",
+          "description": "Jedná se o importovanou VZ",
+          "isMissing": false
+        },
+        "NEN-812752": {
+          "code": "NEN-812752",
+          "text": "Jednoznačný identifikátor související ZP na profilu zadavatele",
+          "description": "Jednoznačný identifikátor související ZP na profilu zadavatele",
+          "isMissing": false
+        },
+        "NEN-812730": {
+          "code": "NEN-812730",
+          "text": "Identifikátor ZP na archivním profilu zadavatele",
+          "description": "Identifikátor ZP na archivním profilu zadavatele",
+          "isMissing": false
+        },
+        "NEN-812824": {
+          "code": "NEN-812824",
+          "text": "Webová adresa profilu zadavatele mimo NEN",
+          "description": "Webová adresa profilu zadavatele mimo NEN, kde uveřejnil zadávací podmínky",
+          "isMissing": false
+        },
+        "NEN-812751": {
+          "code": "NEN-812751",
+          "text": "Původní kód profilu",
+          "description": "Původní kód profilu zadavatele",
+          "isMissing": false
+        },
+        "NEN-812629": {
+          "code": "NEN-812629",
+          "text": "Evidenční číslo v TED",
+          "description": "Evidenční číslo Úředního věstníku EU",
+          "isMissing": false
+        },
+        "NEN-812631": {
+          "code": "NEN-812631",
+          "text": "Systémové číslo IEN",
+          "description": "Systémové číslo IEN",
+          "isMissing": false
+        },
+        "NEN-812747": {
+          "code": "NEN-812747",
+          "text": "Evidence uveřejnění v NEN",
+          "description": "Evidence uveřejnění v NEN",
+          "isMissing": false
+        },
+        "NEN-812645": {
+          "code": "NEN-812645",
+          "text": "Datum uveřejnění",
+          "description": "Datum uveřejnění",
+          "isMissing": false
+        },
+        "NEN-812643": {
+          "code": "NEN-812643",
+          "text": "Uveřejnění",
+          "description": "Uveřejnění",
+          "isMissing": false
+        },
+        "NEN-812722": {
+          "code": "NEN-812722",
+          "text": "Datum oduveřejnění",
+          "description": "Datum oduveřejnění",
+          "isMissing": false
+        },
+        "NEN-812721": {
+          "code": "NEN-812721",
+          "text": "Oduveřejnil",
+          "description": "Oduveřejnil",
+          "isMissing": false
+        },
+        "GUI-280052": {
+          "code": "GUI-280052",
+          "text": "Seřazeno sestupně",
+          "description": "Seřazeno sestupně",
+          "isMissing": false
+        },
+        "NEN-812720": {
+          "code": "NEN-812720",
+          "text": "Evidence uveřejnění ve VVZ",
+          "description": "Evidence uveřejnění ve VVZ",
+          "isMissing": false
+        },
+        "NEN-812709": {
+          "code": "NEN-812709",
+          "text": "Datum potvrzení",
+          "description": "Datum potvrzení přijetí formuláře ve VVZ",
+          "isMissing": false
+        },
+        "NEN-781265": {
+          "code": "NEN-781265",
+          "text": "Datum uveřejnění",
+          "description": "Datum uveřejnění formuláře ve VVZ",
+          "isMissing": false
+        },
+        "NEN-812710": {
+          "code": "NEN-812710",
+          "text": "Evidenční číslo formuláře VVZ",
+          "description": "Evidenční číslo formuláře VVZ",
+          "isMissing": false
+        },
+        "NEN-812713": {
+          "code": "NEN-812713",
+          "text": "Druh formuláře",
+          "description": "Druh formuláře",
+          "isMissing": false
+        },
+        "NEN-738573": {
+          "code": "NEN-738573",
+          "text": "Ano",
+          "description": "Ano",
+          "isMissing": false
+        },
+        "NEN-812515": {
+          "code": "NEN-812515",
+          "text": "Rodné číslo",
+          "description": "Rodné číslo",
+          "isMissing": false
+        },
+        "NEN-812700": {
+          "code": "NEN-812700",
+          "text": "Typ subjektu",
+          "description": "Typ subjektu",
+          "isMissing": false
+        },
+        "NEN-812740": {
+          "code": "NEN-812740",
+          "text": "Obrana",
+          "description": "Příznak, jestli se jedná o zadavatele působící v oblasti obrany.",
+          "isMissing": false
+        },
+        "NEN-812741": {
+          "code": "NEN-812741",
+          "text": "Dominantní vliv",
+          "description": "Může nad tímto zadavatelem veřejný zadavatel přímo nebo nepřímo uplatňovat dominantní vliv.",
+          "isMissing": false
+        },
+        "NEN-812653": {
+          "code": "NEN-812653",
+          "text": "Relevantní činnost",
+          "description": "Zadavatel vykonává relevantní činnost dle § 153 ZZVZ",
+          "isMissing": false
+        },
+        "NEN-812742": {
+          "code": "NEN-812742",
+          "text": "Relevantní činnost na základě výhrady",
+          "description": "Zadavatel vykonává na základě zvláštního nebo výhradního práva relevantní činnost podle § 152 ZZVZ",
+          "isMissing": false
+        },
+        "NEN-812603": {
+          "code": "NEN-812603",
+          "text": "Profil zadavatele mimo NEN",
+          "description": "Veřejně přístupná webová adresa profilu zadavatele",
+          "isMissing": false
+        },
+        "NEN-812703": {
+          "code": "NEN-812703",
+          "text": "Archivní profil zadavatele",
+          "description": "Odkaz na internetovou adresu archivního (předešlého) profilu zadavatele",
+          "isMissing": false
+        },
+        "NEN-812666": {
+          "code": "NEN-812666",
+          "text": "Profil zadavatele hostovaný v NEN",
+          "description": "Profil zadavatele hostovaný v NEN",
+          "isMissing": false
+        },
+        "NEN-812776": {
+          "code": "NEN-812776",
+          "text": "Datum uveřejnění ve VVZ",
+          "description": "Datum uveřejnění ve Věstníku veřejných zakázek",
+          "isMissing": false
+        },
+        "NEN-812774": {
+          "code": "NEN-812774",
+          "text": "Datum vytvoření profilu v NEN",
+          "description": "Datum vytvoření profilu zadavatele v NEN",
+          "isMissing": false
+        },
+        "NEN-812726": {
+          "code": "NEN-812726",
+          "text": "Multiprofil",
+          "description": "Profil je sdílen více zadavateli",
+          "isMissing": false
+        },
+        "NEN-812729": {
+          "code": "NEN-812729",
+          "text": "Název multiprofilu",
+          "description": "Název multiprofilu",
+          "isMissing": false
+        },
+        "NEN-769956": {
+          "code": "NEN-769956",
+          "text": "Adresa multiprofilu",
+          "description": "Odkaz na internetovou adresu multiprofilu",
+          "isMissing": false
+        },
+        "NEN-812704": {
+          "code": "NEN-812704",
+          "text": "Veřejné dokumenty zadavatele",
+          "description": "Veřejné dokumenty zadavatele",
+          "isMissing": false
+        },
+        "NEN-812591": {
+          "code": "NEN-812591",
+          "text": "Soubor",
+          "description": "Soubor",
+          "isMissing": false
+        },
+        "NEN-812715": {
+          "code": "NEN-812715",
+          "text": "Antivirová kontrola",
+          "description": "Antivirová kontrola",
+          "isMissing": false
+        },
+        "NEN-812847": {
+          "code": "NEN-812847",
+          "text": "Stáhnout všechny přílohy",
+          "description": "Stáhnout všechny přílohy",
+          "isMissing": false
+        },
+        "XG-336210": {
+          "code": "XG-336210",
+          "text": "SWIFT",
+          "description": "Kód banky pro mezinárodní platební styk - tzv. SWIFT (BIC) kód",
+          "isMissing": false
+        },
+        "NEN-812696": {
+          "code": "NEN-812696",
+          "text": "Seznam e-tržišť zadavatele",
+          "description": "Seznam e-tržišť zadavatele",
+          "isMissing": false
+        },
+        "NEN-812695": {
+          "code": "NEN-812695",
+          "text": "Název e-tržiště",
+          "description": "Název e-tržiště",
+          "isMissing": false
+        },
+        "NEN-747452": {
+          "code": "NEN-747452",
+          "text": "Adresa e-tržiště",
+          "description": "Adresa e-tržiště",
+          "isMissing": false
+        },
+        "NEN-747453": {
+          "code": "NEN-747453",
+          "text": "Adresa profilu",
+          "description": "Profil zadavatele na e-tržišti",
+          "isMissing": false
+        },
+        "NEN-812559": {
+          "code": "NEN-812559",
+          "text": "Další informace",
+          "description": "Další informace o organizaci",
+          "isMissing": false
+        },
+        "NEN-812545": {
+          "code": "NEN-812545",
+          "text": "Popis",
+          "description": "Popis",
+          "isMissing": false
+        },
+        "NEN-812562": {
+          "code": "NEN-812562",
+          "text": "Text",
+          "description": "Text další informace, která bude zobrazena v rámci informací o organizaci",
+          "isMissing": false
+        },
+        "NEN-812879": {
+          "code": "NEN-812879",
+          "text": "Informace o neaktivních profilech zadavatele",
+          "description": "Informace o neaktivních profilech zadavatele",
+          "isMissing": false
+        },
+        "NEN-812827": {
+          "code": "NEN-812827",
+          "text": "Profil zadavatele – odkaz",
+          "description": "Profil zadavatele – odkaz",
+          "isMissing": false
+        },
+        "NEN-812574": {
+          "code": "NEN-812574",
+          "text": "Platí od",
+          "description": "Platí od",
+          "isMissing": false
+        },
+        "NEN-812575": {
+          "code": "NEN-812575",
+          "text": "Platí do",
+          "description": "Platí do",
+          "isMissing": false
+        },
+        "SRC-336098": {
+          "code": "SRC-336098",
+          "text": "Jiná právnická osoba",
+          "description": "Jiná právnická osoba",
+          "isMissing": false
+        },
+        "NEN-602383": {
+          "code": "NEN-602383",
+          "text": "Seznam platných profilů zadavatelů",
+          "description": "Seznam platných profilů zadavatelů v LWMenu",
+          "isMissing": false
+        },
+        "NEN-602382": {
+          "code": "NEN-602382",
+          "text": "Seznam zrušených profilů zadavatelů",
+          "description": "Seznam zrušených profilů zadavatelů",
+          "isMissing": false
+        },
+        "NEN-812617": {
+          "code": "NEN-812617",
+          "text": "Seznam platných profilů zadavatelů",
+          "description": "Seznam platných profilů zadavatelů",
+          "isMissing": false
+        },
+        "NEN-789441": {
+          "code": "NEN-789441",
+          "text": "Seznam platných profilů zadavatele v systému NEN. Vyhledávání dle názvu organizace, multiprofilu, názvu profilu. Aktivní i neaktivní profily zadavatele.",
+          "description": "Seznam platných profilů zadavatele v systému NEN. Vyhledávání dle názvu organizace, multiprofilu, názvu profilu. Aktivní i neaktivní profily zadavatele.",
+          "isMissing": false
+        },
+        "NEN-812769": {
+          "code": "NEN-812769",
+          "text": "Úřední název organizace",
+          "description": "Úřední název organizace",
+          "isMissing": false
+        },
+        "NEN-812770": {
+          "code": "NEN-812770",
+          "text": "Název profilu",
+          "description": "Název profilu",
+          "isMissing": false
+        },
+        "NEN-812876": {
+          "code": "NEN-812876",
+          "text": "Neaktivní",
+          "description": "Zadavatel má zneaktivněný profil v NEN, ale profil není zrušený.",
+          "isMissing": false
+        },
+        "NEN-812716": {
+          "code": "NEN-812716",
+          "text": "Název DNS",
+          "description": "Název DNS",
+          "isMissing": false
+        },
+        "NEN-812701": {
+          "code": "NEN-812701",
+          "text": "Hlavní kód CPV",
+          "description": "Hlavní kód CPV",
+          "isMissing": false
+        },
+        "NEN-812623": {
+          "code": "NEN-812623",
+          "text": "Stav",
+          "description": "Aktuální stav DNS",
+          "isMissing": false
+        },
+        "NEN-812638": {
+          "code": "NEN-812638",
+          "text": "Datum zavedení",
+          "description": "Datum zavedení DNS",
+          "isMissing": false
+        },
+        "NEN-812624": {
+          "code": "NEN-812624",
+          "text": "Datum ukončení",
+          "description": "Datum ukončení",
+          "isMissing": false
+        },
+        "NEN-602386": {
+          "code": "NEN-602386",
+          "text": "Registr zadavatelů",
+          "description": "Registr zadavatelů",
+          "isMissing": false
+        },
+        "NEN-602387": {
+          "code": "NEN-602387",
+          "text": "Registr dodavatelů",
+          "description": "Registr dodavatelů",
+          "isMissing": false
+        },
+        "NEN-789444": {
+          "code": "NEN-789444",
+          "text": "Seznam dodavatelů registrovaných v systému NEN. Vyhledávání dodavatele podle úředního názvu, IČO, externí administrace, právní formy, kódu NUTS.",
+          "description": "Seznam dodavatelů registrovaných v systému NEN. Vyhledávání dodavatele podle úředního názvu, IČO, externí administrace, právní formy, kódu NUTS.",
+          "isMissing": false
+        },
+        "NEN-812714": {
+          "code": "NEN-812714",
+          "text": "Externí administrátor",
+          "description": "Příznak, jestli je organizace externím administrátorem",
+          "isMissing": false
+        },
+        "NEN-812628": {
+          "code": "NEN-812628",
+          "text": "Zadávací postup",
+          "description": "Zadávací postup",
+          "isMissing": false
+        },
+        "NEN-812641": {
+          "code": "NEN-812641",
+          "text": "Zadavatel",
+          "description": "Zadavatel",
+          "isMissing": false
+        },
+        "NEN-812688": {
+          "code": "NEN-812688",
+          "text": "Základní údaje",
+          "description": "Základní údaje",
+          "isMissing": false
+        },
+        "NEN-812672": {
+          "code": "NEN-812672",
+          "text": "Detail uveřejněné informace",
+          "description": "Detail uveřejněné informace",
+          "isMissing": false
+        },
+        "NEN-747346": {
+          "code": "NEN-747346",
+          "text": "Detail uveřejnění zavedení DNS",
+          "description": "Detail uveřejnění zavedení DNS",
+          "isMissing": false
+        },
+        "NEN-812838": {
+          "code": "NEN-812838",
+          "text": "Název dynamického nákupního systému",
+          "description": "Název dynamického nákupního systému",
+          "isMissing": false
+        },
+        "NEN-812667": {
+          "code": "NEN-812667",
+          "text": "Počet dodavatelů",
+          "description": "Počet dodavatelů",
+          "isMissing": false
+        },
+        "NEN-812627": {
+          "code": "NEN-812627",
+          "text": "Délka trvání - dny",
+          "description": "Doba trvání ve dnech.",
+          "isMissing": false
+        },
+        "NEN-812840": {
+          "code": "NEN-812840",
+          "text": "Délka trvání - měsíce",
+          "description": "Délka trvání - měsíce",
+          "isMissing": false
+        },
+        "NEN-812841": {
+          "code": "NEN-812841",
+          "text": "Délka trvání - roky",
+          "description": "Délka trvání - roky",
+          "isMissing": false
+        },
+        "NEN-812839": {
+          "code": "NEN-812839",
+          "text": "Předmět dynamického nákupního systému",
+          "description": "Předmět dynamického nákupního systému",
+          "isMissing": false
+        },
+        "NEN-812608": {
+          "code": "NEN-812608",
+          "text": "Dodavatelé, s nimiž byla smlouva uzavřena",
+          "description": "Dodavatelé, s nimiž byla smlouva uzavřena",
+          "isMissing": false
+        },
+        "NEN-812663": {
+          "code": "NEN-812663",
+          "text": "Datum výběru",
+          "description": "Datum výběru",
+          "isMissing": false
+        },
+        "NEN-812664": {
+          "code": "NEN-812664",
+          "text": "Hodnota soutěžní ceny bez DPH",
+          "description": "Hodnota soutěžní ceny bez DPH",
+          "isMissing": false
+        },
+        "NEN-812607": {
+          "code": "NEN-812607",
+          "text": "Měna",
+          "description": "Měna ceny",
+          "isMissing": false
+        },
+        "NEN-807738": {
+          "code": "NEN-807738",
+          "text": "Písemná zpráva - odůvodnění",
+          "description": "Písemná zpráva - odůvodnění",
+          "isMissing": false
+        },
+        "NEN-812886": {
+          "code": "NEN-812886",
+          "text": "Odůvodnění použití jiných komunikačních prostředků při podání nabídky namísto elektronických prostředků",
+          "description": "Odůvodnění použití jiných komunikačních prostředků při podání nabídky namísto elektronických prostředků",
+          "isMissing": false
+        },
+        "NEN-812888": {
+          "code": "NEN-812888",
+          "text": "Odůvodnění nerozdělení nadlimitní veřejné zakázky na části",
+          "description": "Odůvodnění nerozdělení nadlimitní veřejné zakázky na části",
+          "isMissing": false
+        },
+        "NEN-812889": {
+          "code": "NEN-812889",
+          "text": "Odůvodnění stanovení požadavků na prokázání obratu v případě postupu podle § 78 odst. 3, pokud je neuvedl v zadávací dokumentaci",
+          "description": "Odůvodnění stanovení požadavků na prokázání obratu v případě postupu podle § 78 odst. 3, pokud je neuvedl v zadávací dokumentaci",
+          "isMissing": false
+        },
+        "NEN-825137": {
+          "code": "NEN-825137",
+          "text": "Doplňující informace",
+          "description": "Doplňující informace",
+          "isMissing": false
+        },
+        "NEN-807292": {
+          "code": "NEN-807292",
+          "text": "Osoby se střetem zájmu",
+          "description": "Osoby se střetem zájmu",
+          "isMissing": false
+        },
+        "NEN-812890": {
+          "code": "NEN-812890",
+          "text": "Jméno a příjmení osoby",
+          "description": "Jméno a příjmení osoby",
+          "isMissing": false
+        },
+        "NEN-812883": {
+          "code": "NEN-812883",
+          "text": "Soupis přijatých opatření",
+          "description": "Soupis přijatých opatření",
+          "isMissing": false
+        },
+        "NEN-812734": {
+          "code": "NEN-812734",
+          "text": "Seznam poddodavatelů",
+          "description": "Seznam poddodavatelů",
+          "isMissing": false
+        },
+        "NEN-812665": {
+          "code": "NEN-812665",
+          "text": "IČO",
+          "description": "IČO",
+          "isMissing": false
+        },
+        "NEN-747322": {
+          "code": "NEN-747322",
+          "text": "Detail uveřejnění zrušení",
+          "description": "Detail uveřejnění zrušení",
+          "isMissing": false
+        },
+        "NEN-812647": {
+          "code": "NEN-812647",
+          "text": "Datum a čas rozhodnutí o zrušení",
+          "description": "Datum a čas rozhodnutí o zrušení",
+          "isMissing": false
+        },
+        "NEN-812611": {
+          "code": "NEN-812611",
+          "text": "Ustanovení §",
+          "description": "Ustanovení §",
+          "isMissing": false
+        },
+        "NEN-812612": {
+          "code": "NEN-812612",
+          "text": "Odůvodnění",
+          "description": "Odůvodnění ustanovení $",
+          "isMissing": false
+        },
+        "NEN-812614": {
+          "code": "NEN-812614",
+          "text": "Odůvodnění zrušení",
+          "description": "Odůvodnění zrušení",
+          "isMissing": false
+        },
+        "NEN-812613": {
+          "code": "NEN-812613",
+          "text": "Bližší specifikace odůvodnění",
+          "description": "Bližší specifikace odůvodnění",
+          "isMissing": false
+        },
+        "NEN-812745": {
+          "code": "NEN-812745",
+          "text": "Seznam účastníků",
+          "description": "Seznam účastníků",
+          "isMissing": false
+        },
+        "NEN-747640": {
+          "code": "NEN-747640",
+          "text": "Detail uveřejnění do Věstníku veřejných zakázek",
+          "description": "Detail uveřejnění do Věstníku veřejných zakázek",
+          "isMissing": false
+        },
+        "NEN-812712": {
+          "code": "NEN-812712",
+          "text": "Kód formuláře",
+          "description": "Kód formuláře",
+          "isMissing": false
+        },
+        "NEN-781270": {
+          "code": "NEN-781270",
+          "text": "Datum odeslání",
+          "description": "Datum odeslání formuláře do VVZ",
+          "isMissing": false
+        },
+        "NEN-812711": {
+          "code": "NEN-812711",
+          "text": "Typ formuláře",
+          "description": "Typ formuláře",
+          "isMissing": false
+        },
+        "NEN-812673": {
+          "code": "NEN-812673",
+          "text": "Skutečně uhrazená cena v jednotlivých letech plnění",
+          "description": "Skutečně uhrazená cena v jednotlivých letech plnění",
+          "isMissing": false
+        },
+        "NEN-812606": {
+          "code": "NEN-812606",
+          "text": "Evidenční číslo smlouvy",
+          "description": "Evidenční číslo smlouvy",
+          "isMissing": false
+        },
+        "NEN-812674": {
+          "code": "NEN-812674",
+          "text": "Rok",
+          "description": "Rok",
+          "isMissing": false
+        },
+        "NEN-812676": {
+          "code": "NEN-812676",
+          "text": "Skutečná cena s DPH",
+          "description": "Skutečná uhrazená cena s DPH v jednotlivých letech plnění",
+          "isMissing": false
+        },
+        "NEN-812675": {
+          "code": "NEN-812675",
+          "text": "Skutečná cena bez DPH",
+          "description": "Skutečná uhrazená cena bez DPH v jednotlivých letech plnění",
+          "isMissing": false
+        },
+        "NEN-812875": {
+          "code": "NEN-812875",
+          "text": "Dodatky smlouvy/dohody",
+          "description": "Dodatky smlouvy/dohody",
+          "isMissing": false
+        },
+        "NEN-812668": {
+          "code": "NEN-812668",
+          "text": "Číslo dodatku",
+          "description": "Číslo dodatku",
+          "isMissing": false
+        },
+        "NEN-812669": {
+          "code": "NEN-812669",
+          "text": "Datum podpisu",
+          "description": "Datum podpisu",
+          "isMissing": false
+        },
+        "NEN-812874": {
+          "code": "NEN-812874",
+          "text": "Internetová adresa, na které je dodatek umístěn",
+          "description": "Internetová adresa, na které je dodatek umístěn",
+          "isMissing": false
+        },
+        "NEN-812850": {
+          "code": "NEN-812850",
+          "text": "Nabídková cena s DPH",
+          "description": "Nabídková cena účastníka s DPH",
+          "isMissing": false
+        },
+        "NEN-812851": {
+          "code": "NEN-812851",
+          "text": "Nabídková cena bez DPH",
+          "description": "Nabídková cena účastníka bez DPH",
+          "isMissing": false
+        },
+        "NEN-830413": {
+          "code": "NEN-830413",
+          "text": "Dodavatel byl vybrán",
+          "description": "Dodavatel byl vybrán",
+          "isMissing": false
+        },
+        "NEN-824859": {
+          "code": "NEN-824859",
+          "text": "S dodavatelem byla uzavřena smlouva nebo rámcová dohoda",
+          "description": "Údaj o tom, že byla s dodavatelem uzavřena smlouva nebo rámcová dohoda",
+          "isMissing": false
+        },
+        "NEN-812601": {
+          "code": "NEN-812601",
+          "text": "Datum uzavření smlouvy",
+          "description": "Datum uzavření smlouvy",
+          "isMissing": false
+        },
+        "NEN-812609": {
+          "code": "NEN-812609",
+          "text": "Smluvní cena s DPH",
+          "description": "Smluvní cena s DPH",
+          "isMissing": false
+        },
+        "NEN-812602": {
+          "code": "NEN-812602",
+          "text": "Smluvní cena bez DPH",
+          "description": "Smluvní cena bez DPH",
+          "isMissing": false
+        },
+        "NEN-812872": {
+          "code": "NEN-812872",
+          "text": "Smluvní cena s dodatky s DPH",
+          "description": "Smluvní cena s dodatky s DPH",
+          "isMissing": false
+        },
+        "NEN-812873": {
+          "code": "NEN-812873",
+          "text": "Smluvní cena s dodatky bez DPH",
+          "description": "Smluvní cena s dodatky bez DPH",
+          "isMissing": false
+        },
+        "NEN-812772": {
+          "code": "NEN-812772",
+          "text": "Text vysvětlení soutěžních podmínek",
+          "description": "Text vysvětlení soutěžních podmínek",
+          "isMissing": false
+        },
+        "NEN-812733": {
+          "code": "NEN-812733",
+          "text": "Text vysvětlení zadávací dokumentace",
+          "description": "Text vysvětlení zadávací dokumentace",
+          "isMissing": false
+        },
+        "NEN-807151": {
+          "code": "NEN-807151",
+          "text": "Text poskytnutí údajů z nabídek",
+          "description": "Text poskytnutí údajů z nabídek",
+          "isMissing": false
+        },
+        "NEN-807155": {
+          "code": "NEN-807155",
+          "text": "Text poskytnutí údajů z nabídek",
+          "description": "Text poskytnutí údajů z nabídek",
+          "isMissing": false
+        },
+        "NEN-812832": {
+          "code": "NEN-812832",
+          "text": "Uveřejněné dokumenty",
+          "description": "Uveřejněné dokumenty",
+          "isMissing": false
+        },
+        "NEN-812697": {
+          "code": "NEN-812697",
+          "text": "Typ dokumentu",
+          "description": "Typ dokumentu",
+          "isMissing": false
+        },
+        "NEN-812880": {
+          "code": "NEN-812880",
+          "text": "Evidenční číslo smlouvy/dodatku",
+          "description": "Evidenční číslo smlouvy/dodatku",
+          "isMissing": false
+        },
+        "NEN-812823": {
+          "code": "NEN-812823",
+          "text": "Vysvětlení zadávací dokumentace",
+          "description": "Vysvětlení zadávací dokumentace",
+          "isMissing": false
+        },
+        "NEN-812706": {
+          "code": "NEN-812706",
+          "text": "Přílohy",
+          "description": "Přílohy",
+          "isMissing": false
+        },
+        "NEN-605848": {
+          "code": "NEN-605848",
+          "text": "Základní údaje",
+          "description": "Základní údaje",
+          "isMissing": false
+        },
+        "NEN-645266": {
+          "code": "NEN-645266",
+          "text": "Vámi požadovaná stránka neexistuje.",
+          "description": "Vámi požadovaná stránka neexistuje.",
+          "isMissing": false
+        },
+        "NEN-645267": {
+          "code": "NEN-645267",
+          "text": "Prosím, zkontrolujte si URL adresu.",
+          "description": "Prosím, zkontrolujte si URL adresu.",
+          "isMissing": false
+        },
+        "SRC-336094": {
+          "code": "SRC-336094",
+          "text": "Státní příspěvková organizace",
+          "description": "Státní příspěvková organizace",
+          "isMissing": false
+        },
+        "NEN-808699": {
+          "code": "NEN-808699",
+          "text": "Zobrazit informace o podpisu",
+          "description": "Zobrazit informace o podpisu",
+          "isMissing": false
+        },
+        "SRC-336092": {
+          "code": "SRC-336092",
+          "text": "Česká republika",
+          "description": "Česká republika",
+          "isMissing": false
+        },
+        "NEN-740359": {
+          "code": "NEN-740359",
+          "text": "Detail veřejné zakázky",
+          "description": "Detail veřejné zakázky",
+          "isMissing": false
+        },
+        "NEN-810857": {
+          "code": "NEN-810857",
+          "text": "Detail externího elektronického podpisu",
+          "description": "Detail externího elektronického podpisu",
+          "isMissing": false
+        },
+        "NEN-812682": {
+          "code": "NEN-812682",
+          "text": "Typ dokumentu",
+          "description": "Typ dokumentu",
+          "isMissing": false
+        },
+        "NEN-812748": {
+          "code": "NEN-812748",
+          "text": "Odkaz na soubor",
+          "description": "Hypertextový odkaz na soubor",
+          "isMissing": false
+        },
+        "NEN-812852": {
+          "code": "NEN-812852",
+          "text": "Data souboru",
+          "description": "Data souboru",
+          "isMissing": false
+        },
+        "NEN-812563": {
+          "code": "NEN-812563",
+          "text": "Název dokumentu",
+          "description": "Název dokumentu",
+          "isMissing": false
+        },
+        "NEN-812719": {
+          "code": "NEN-812719",
+          "text": "Uveřejnil",
+          "description": "Uveřejnil",
+          "isMissing": false
+        },
+        "NEN-812590": {
+          "code": "NEN-812590",
+          "text": "Velikost",
+          "description": "Velikost souboru v bajtech.",
+          "isMissing": false
+        },
+        "NEN-812589": {
+          "code": "NEN-812589",
+          "text": "Formát",
+          "description": "Formát, ve kterém je dokument uložen",
+          "isMissing": false
+        },
+        "NEN-810144": {
+          "code": "NEN-810144",
+          "text": "Externí elektronické podpisy",
+          "description": "Externí elektronické podpisy",
+          "isMissing": false
+        },
+        "SRC-357591": {
+          "code": "SRC-357591",
+          "text": "Otevřen",
+          "description": "Otevřen",
+          "isMissing": false
+        },
+        "NEN-812723": {
+          "code": "NEN-812723",
+          "text": "Položka předmětu",
+          "description": "Položka předmětu",
+          "isMissing": false
+        },
+        "NEN-812749": {
+          "code": "NEN-812749",
+          "text": "Musí plnit vybraný dodavatel",
+          "description": "Zadavatel v souladu s § 105 odst. 2 ZZVZ požaduje, aby tato položka při plnění veřejné zakázky byla plněna přímo vybraným dodavatelem.",
+          "isMissing": false
+        },
+        "NEN-812573": {
+          "code": "NEN-812573",
+          "text": "Množství",
+          "description": "Množství za položku - číselné vyjádření množství v zadaných měrných jednotkách",
+          "isMissing": false
+        },
+        "NEN-812882": {
+          "code": "NEN-812882",
+          "text": "Jednotka",
+          "description": "Jednotka",
+          "isMissing": false
+        },
+        "NEN-812598": {
+          "code": "NEN-812598",
+          "text": "Předpokládaná hodnota bez DPH",
+          "description": "Předpokládaná hodnota  bez DPH za položku předmětu veřejné zakázky",
+          "isMissing": false
+        },
+        "NEN-812599": {
+          "code": "NEN-812599",
+          "text": "Předpokládaná hodnota na 1 měrnou jednotku",
+          "description": "Předpokládaná hodnota za položku stanovená na 1 měrnou jednotku položky",
+          "isMissing": false
+        },
+        "NEN-812828": {
+          "code": "NEN-812828",
+          "text": "Textové pole pro popis místa plnění",
+          "description": "Popis místa plnění pro položku předmětu",
+          "isMissing": false
+        },
+        "NEN-812576": {
+          "code": "NEN-812576",
+          "text": "Parametry položky",
+          "description": "Parametry položky",
+          "isMissing": false
+        },
+        "NEN-812577": {
+          "code": "NEN-812577",
+          "text": "Název vlastnosti",
+          "description": "Název vlastnosti",
+          "isMissing": false
+        },
+        "NEN-812579": {
+          "code": "NEN-812579",
+          "text": "Operátor",
+          "description": "Operátor",
+          "isMissing": false
+        },
+        "NEN-812578": {
+          "code": "NEN-812578",
+          "text": "Hodnota vlastnosti",
+          "description": "Hodnota vlastnosti",
+          "isMissing": false
+        },
+        "NEN-812699": {
+          "code": "NEN-812699",
+          "text": "Přílohy položky",
+          "description": "Přílohy položky",
+          "isMissing": false
+        },
+        "NEN-812616": {
+          "code": "NEN-812616",
+          "text": "Zadávací dokumentace",
+          "description": "Zadávací dokumentace",
+          "isMissing": false
+        },
+        "NEN-812724": {
+          "code": "NEN-812724",
+          "text": "Ostatní dokumenty",
+          "description": "Ostatní dokumenty",
+          "isMissing": false
+        },
+        "NEN-812881": {
+          "code": "NEN-812881",
+          "text": "Přílohy položek předmětu",
+          "description": "Přílohy položek předmětu",
+          "isMissing": false
+        },
+        "NEN-807150": {
+          "code": "NEN-807150",
+          "text": "Zpřístupnění údajů z nabídek",
+          "description": "Zpřístupnění údajů z nabídek",
+          "isMissing": false
+        },
+        "NEN-812660": {
+          "code": "NEN-812660",
+          "text": "Jiné kontaktní adresy",
+          "description": "Jiné kontaktní adresy",
+          "isMissing": false
+        },
+        "NEN-812600": {
+          "code": "NEN-812600",
+          "text": "Název subjektu k adrese",
+          "description": "Obchodní firma/název/jméno a příjmení dodavatele (lze volit i odlišné označení, než je přiřazeno k předběžně registrovanému subjektu jako celku)",
+          "isMissing": false
+        },
+        "NEN-812661": {
+          "code": "NEN-812661",
+          "text": "Kontaktní osoby",
+          "description": "Kontaktní osoby",
+          "isMissing": false
+        },
+        "NEN-812568": {
+          "code": "NEN-812568",
+          "text": "Titul před",
+          "description": "Titul před jménem osoby",
+          "isMissing": false
+        },
+        "NEN-812567": {
+          "code": "NEN-812567",
+          "text": "Jméno",
+          "description": "Jméno",
+          "isMissing": false
+        },
+        "NEN-812566": {
+          "code": "NEN-812566",
+          "text": "Příjmení",
+          "description": "Příjmení osoby",
+          "isMissing": false
+        },
+        "NEN-812569": {
+          "code": "NEN-812569",
+          "text": "Titul za",
+          "description": "Titul za jménem osoby",
+          "isMissing": false
+        },
+        "NEN-812580": {
+          "code": "NEN-812580",
+          "text": "E-mail",
+          "description": "E-mailová adresa",
+          "isMissing": false
+        },
+        "SRC-603385": {
+          "code": "SRC-603385",
+          "text": "Jiná osoba",
+          "description": "Jiná osoba",
+          "isMissing": false
+        },
+        "NEN-812750": {
+          "code": "NEN-812750",
+          "text": "Detail uveřejnění",
+          "description": "Detail uveřejnění",
+          "isMissing": false
+        },
+        "NEN-812845": {
+          "code": "NEN-812845",
+          "text": "Stát",
+          "description": "Stát",
+          "isMissing": false
+        },
+        "NEN-825712": {
+          "code": "NEN-825712",
+          "text": "Název dodavatele poddodavatele",
+          "description": "Úřední název dodavatele smlouvy spojeného s poddodavatelem",
+          "isMissing": false
+        },
+        "NEN-812842": {
+          "code": "NEN-812842",
+          "text": "Doplňující informace",
+          "description": "Doplňující informace",
+          "isMissing": false
+        },
+        "NEN-812610": {
+          "code": "NEN-812610",
+          "text": "Datum uzavření smlouvy",
+          "description": "Datum uzavření smlouvy",
+          "isMissing": false
+        },
+        "NEN-825067": {
+          "code": "NEN-825067",
+          "text": "Základní popis předmětu plnění smlouvy",
+          "description": "Základní popis předmětu plnění smlouvy",
+          "isMissing": false
+        },
+        "NEN-812632": {
+          "code": "NEN-812632",
+          "text": "Smluvní cena bez DPH",
+          "description": "Smluvní cena bez DPH",
+          "isMissing": false
+        },
+        "NEN-812633": {
+          "code": "NEN-812633",
+          "text": "Smluvní cena s DPH",
+          "description": "Smluvní cena s DPH",
+          "isMissing": false
+        },
+        "NEN-812773": {
+          "code": "NEN-812773",
+          "text": "Internetová adresa, na které je smlouva umístěna",
+          "description": "Internetová adresa, na které je smlouva umístěna",
+          "isMissing": false
+        },
+        "NEN-812844": {
+          "code": "NEN-812844",
+          "text": "Vybraný dodavatel je sdružením dodavatelů",
+          "description": "Vybraný dodavatel je sdružením dodavatelů",
+          "isMissing": false
+        },
+        "NEN-825562": {
+          "code": "NEN-825562",
+          "text": "Účastník zadávacího řízení je sdružením dodavatelů",
+          "description": "Účastník zadávacího řízení je sdružením dodavatelů",
+          "isMissing": false
+        },
+        "NEN-812753": {
+          "code": "NEN-812753",
+          "text": "IČO vedoucího účastníka",
+          "description": "IČO vedoucího účastníka",
+          "isMissing": false
+        },
+        "NEN-812754": {
+          "code": "NEN-812754",
+          "text": "Název vedoucího účastníka",
+          "description": "Název vedoucího účastníka",
+          "isMissing": false
+        },
+        "NEN-821548": {
+          "code": "NEN-821548",
+          "text": "Odůvodnění výběru dodavatelů, se kterými byla uzavřena smlouva nebo rámcová dohoda",
+          "description": "Odůvodnění výběru dodavatelů, se kterými byla uzavřena smlouva nebo rámcová dohoda",
+          "isMissing": false
+        },
+        "NEN-824184": {
+          "code": "NEN-824184",
+          "text": "Informace o vyloučení účastníka",
+          "description": "Informace o vyloučení účastníka",
+          "isMissing": false
+        },
+        "NEN-824186": {
+          "code": "NEN-824186",
+          "text": "Účastník vyloučen",
+          "description": "Účastník vyloučen",
+          "isMissing": false
+        },
+        "NEN-812834": {
+          "code": "NEN-812834",
+          "text": "Nabídka účastníka byla vyřazena pro mimořádně nízkou nabídkovou cenu",
+          "description": "Nabídka účastníka byla vyřazena pro mimořádně nízkou nabídkovou cenu",
+          "isMissing": false
+        },
+        "NEN-812836": {
+          "code": "NEN-812836",
+          "text": "Účastník zadávacího řízení ze zadávacího řízení odstoupil nebo odmítl uzavřít smlouvu nebo neposkytl zadavateli potřebnou součinnost",
+          "description": "Účastník zadávacího řízení ze zadávacího řízení odstoupil nebo odmítl uzavřít smlouvu nebo neposkytl zadavateli potřebnou součinnost",
+          "isMissing": false
+        },
+        "NEN-824191": {
+          "code": "NEN-824191",
+          "text": "Odůvodnění vyloučení dodavatele",
+          "description": "Odůvodnění vyloučení dodavatele",
+          "isMissing": false
+        },
+        "NEN-812835": {
+          "code": "NEN-812835",
+          "text": "Důvod rozhodnutí pro vyřazení pro mimořádně nízkou nabídkovou cenu",
+          "description": "Důvod rozhodnutí pro vyřazení pro mimořádně nízkou nabídkovou cenu",
+          "isMissing": false
+        },
+        "NEN-812837": {
+          "code": "NEN-812837",
+          "text": "Důvod pro odstoupení nebo odmítnutí uzavření smlouvy",
+          "description": "Důvod pro odstoupení nebo odmítnutí uzavření smlouvy",
+          "isMissing": false
+        },
+        "NEN-824212": {
+          "code": "NEN-824212",
+          "text": "Další dodavatelé sdružení",
+          "description": "Další dodavatelé sdružení",
+          "isMissing": false
+        },
+        "NEN-812728": {
+          "code": "NEN-812728",
+          "text": "Dotaz",
+          "description": "Dotaz",
+          "isMissing": false
+        },
+        "NEN-812884": {
+          "code": "NEN-812884",
+          "text": "Další údaje - odůvodnění",
+          "description": "Další údaje - odůvodnění",
+          "isMissing": false
+        },
+        "NEN-812887": {
+          "code": "NEN-812887",
+          "text": "Odůvodnění použití zjednodušeného režimu",
+          "description": "Odůvodnění použití zjednodušeného režimu",
+          "isMissing": false
+        },
+        "NEN-824910": {
+          "code": "NEN-824910",
+          "text": "Odůvodnění použití jednacího řízení s uveřejněním nebo řízení se soutěžním dialogem",
+          "description": "Odůvodnění použití jednacího řízení s uveřejněním nebo řízení se soutěžním dialogem",
+          "isMissing": false
+        },
+        "NEN-812885": {
+          "code": "NEN-812885",
+          "text": "Odůvodnění použití jednacího řízení bez uveřejnění",
+          "description": "Odůvodnění použití jednacího řízení bez uveřejnění",
+          "isMissing": false
+        },
+        "NEN-807229": {
+          "code": "NEN-807229",
+          "text": "Detail osoby",
+          "description": "Detail osoby",
+          "isMissing": false
+        },
+        "NEN-843224": {
+          "code": "NEN-843224",
+          "text": "Detail organizace",
+          "description": "Detail organizace",
+          "isMissing": false
+        },
+        "SRC-376590": {
+          "code": "SRC-376590",
+          "text": "Řádný",
+          "description": "Řádný",
+          "isMissing": false
+        },
+        "NEN-812871": {
+          "code": "NEN-812871",
+          "text": "Částka změny dodatku s DPH",
+          "description": "Částka změny dodatku s DPH",
+          "isMissing": false
+        },
+        "NEN-812870": {
+          "code": "NEN-812870",
+          "text": "Částka změny dodatku bez DPH",
+          "description": "Částka změny dodatku bez DPH",
+          "isMissing": false
+        },
+        "NEN-812588": {
+          "code": "NEN-812588",
+          "text": "Hlavní předmět činnosti",
+          "description": "Hlavní předmět činnosti",
+          "isMissing": false
+        },
+        "NEN-812648": {
+          "code": "NEN-812648",
+          "text": "Druh relevantní činnosti",
+          "description": "Druh relevantní činnosti",
+          "isMissing": false
+        },
+        "NEN-812651": {
+          "code": "NEN-812651",
+          "text": "Jiná činnost",
+          "description": "Popis druhu relevantní činnosti, když je zvoleno 'Jiný - nutno uvést'.",
+          "isMissing": false
+        },
+        "NEN-609792": {
+          "code": "NEN-609792",
+          "text": "Seznam zadavatelů multiprofilu",
+          "description": "Seznam zadavatelů multiprofilu",
+          "isMissing": false
+        },
+        "NEN-770732": {
+          "code": "NEN-770732",
+          "text": "Aktivní",
+          "description": "Aktivní na multiprofilu",
+          "isMissing": false
+        },
+        "NEN-812725": {
+          "code": "NEN-812725",
+          "text": "Název profilu",
+          "description": "Název profilu zadavatele v NEN",
+          "isMissing": false
+        },
+        "NEN-812856": {
+          "code": "NEN-812856",
+          "text": "Jiné kontaktní adresy",
+          "description": "Jiné kontaktní adresy",
+          "isMissing": false
+        },
+        "NEN-603539": {
+          "code": "NEN-603539",
+          "text": "Kontaktní osoby",
+          "description": "Kontaktní osoby",
+          "isMissing": false
+        },
+        "NEN-744124": {
+          "code": "NEN-744124",
+          "text": "Věstník NEN",
+          "description": "Věstník NEN",
+          "isMissing": false
+        },
+        "NEN-789439": {
+          "code": "NEN-789439",
+          "text": "Přehled jednotlivých uveřejnění o veřejných zakázkách v systému NEN, seřazených chronologicky dle data uveřejnění.",
+          "description": "Přehled jednotlivých uveřejnění o veřejných zakázkách v systému NEN, seřazených chronologicky dle data uveřejnění.",
+          "isMissing": false
+        },
+        "NEN-648904": {
+          "code": "NEN-648904",
+          "text": "Národní elektronický nástroj (NEN) je komplexní elektronický nástroj pro administraci a zadávání veřejných zakázek a koncesí pro všechny kategorie veřejných zakázek a všechny kategorie zadavatelů, vč. sektorových. NEN podporuje všechny rozsahy elektronizace od evidence zadávacích řízení po plně elektronické postupy.",
+          "description": "Národní elektronický nástroj (NEN) je komplexní elektronický nástroj pro administraci a zadávání veřejných zakázek a koncesí pro všechny kategorie veřejných zakázek a všechny kategorie zadavatelů, vč. sektorových. NEN podporuje všechny rozsahy elektronizace od evidence zadávacích řízení po plně elektronické postupy.",
+          "isMissing": false
+        },
+        "NEN-645300": {
+          "code": "NEN-645300",
+          "text": "Úvodní stránka",
+          "description": "Úvodní stránka",
+          "isMissing": false
+        },
+        "NEN-786556": {
+          "code": "NEN-786556",
+          "text": "Zobrazit všechny informace a novinky",
+          "description": "Zobrazit všechny informace a novinky",
+          "isMissing": false
+        },
+        "NEN-645393": {
+          "code": "NEN-645393",
+          "text": "zobrazit vše",
+          "description": "zobrazit vše",
+          "isMissing": false
+        },
+        "NEN-749126": {
+          "code": "NEN-749126",
+          "text": "Portál NEN",
+          "description": "Portál NEN",
+          "isMissing": false
+        },
+        "NEN-749112": {
+          "code": "NEN-749112",
+          "text": "[Národní elektronický nástroj (NEN)] je komplexní elektronický nástroj pro [administraci a zadávání veřejných zakázek] a koncesí pro všechny kategorie veřejných zakázek a všechny kategorie zadavatelů.",
+          "description": "[Národní elektronický nástroj (NEN)] je komplexní elektronický nástroj pro [administraci a zadávání veřejných zakázek] a koncesí pro všechny kategorie veřejných zakázek a všechny kategorie zadavatelů.",
+          "isMissing": false
+        },
+        "NEN-839144": {
+          "code": "NEN-839144",
+          "text": "Přihlásit se identitou NIPEZ",
+          "description": "Přihlásit se identitou NIPEZ",
+          "isMissing": false
+        },
+        "NEN-749113": {
+          "code": "NEN-749113",
+          "text": "Přihlásit se účtem NEN",
+          "description": "Přihlásit se účtem NEN",
+          "isMissing": false
+        },
+        "NEN-749116": {
+          "code": "NEN-749116",
+          "text": "Nová registrace",
+          "description": "Nová registrace",
+          "isMissing": false
+        },
+        "NEN-746935": {
+          "code": "NEN-746935",
+          "text": "Test kompatibility",
+          "description": "Test kompatibility",
+          "isMissing": false
+        },
+        "NEN-749119": {
+          "code": "NEN-749119",
+          "text": "testovacího prostředí",
+          "description": "testovacího prostředí",
+          "isMissing": false
+        },
+        "NEN-749117": {
+          "code": "NEN-749117",
+          "text": "Přihlášení do @0",
+          "description": "Přihlášení do @0",
+          "isMissing": false
+        },
+        "NEN-645423": {
+          "code": "NEN-645423",
+          "text": "Přihlášení",
+          "description": "Přihlášení",
+          "isMissing": false
+        },
+        "NEN-767963": {
+          "code": "NEN-767963",
+          "text": "Příručky",
+          "description": "Příručky",
+          "isMissing": false
+        },
+        "NEN-786554": {
+          "code": "NEN-786554",
+          "text": "Zobrazit všechna školení NEN",
+          "description": "Zobrazit všechna školení NEN",
+          "isMissing": false
+        },
+        "NEN-818359": {
+          "code": "NEN-818359",
+          "text": "Školení nejsou aktuálně nabízena.",
+          "description": "Školení nejsou aktuálně nabízena.",
+          "isMissing": false
+        },
+        "NEN-749239": {
+          "code": "NEN-749239",
+          "text": "zadavatelů",
+          "description": "zadavatelů",
+          "isMissing": false
+        },
+        "NEN-749240": {
+          "code": "NEN-749240",
+          "text": "dodavatelů",
+          "description": "dodavatelů",
+          "isMissing": false
+        },
+        "NEN-749241": {
+          "code": "NEN-749241",
+          "text": "realizovaných zakázek",
+          "description": "realizovaných zakázek",
+          "isMissing": false
+        },
+        "NEN-749242": {
+          "code": "NEN-749242",
+          "text": "(mld. Kč)  hodnota zakázek v NEN",
+          "description": "(mld. Kč)  hodnota zakázek v NEN",
+          "isMissing": false
+        },
+        "NEN-749127": {
+          "code": "NEN-749127",
+          "text": "Chci dostávat upozornění a novinky",
+          "description": "Chci dostávat upozornění a novinky",
+          "isMissing": false
+        },
+        "NEN-819429": {
+          "code": "NEN-819429",
+          "text": "Odeslat",
+          "description": "Odeslat",
+          "isMissing": false
+        },
+        "NEN-819406": {
+          "code": "NEN-819406",
+          "text": "E-mailová adresa",
+          "description": "E-mailová adresa",
+          "isMissing": false
+        },
+        "NEN-749987": {
+          "code": "NEN-749987",
+          "text": "Přihlašovací stránka",
+          "description": "Přihlašovací stránka",
+          "isMissing": false
+        },
+        "NEN-789459": {
+          "code": "NEN-789459",
+          "text": "Přihlášení do autorizované části systému NEN. Změna zapomenutého hesla. Možnost přihlášení do testovacího prostředí.",
+          "description": "Přihlášení do autorizované části systému NEN. Změna zapomenutého hesla. Možnost přihlášení do testovacího prostředí.",
+          "isMissing": false
+        },
+        "NEN-749297": {
+          "code": "NEN-749297",
+          "text": "Zapomenuté heslo",
+          "description": "Zapomenuté heslo",
+          "isMissing": false
+        },
+        "NEN-767364": {
+          "code": "NEN-767364",
+          "text": "Provozní informace",
+          "description": "Provozní informace",
+          "isMissing": false
+        },
+        "NEN-812702": {
+          "code": "NEN-812702",
+          "text": "Detail DNS",
+          "description": "Dynamický nákupní systém.",
+          "isMissing": false
+        },
+        "NEN-749348": {
+          "code": "NEN-749348",
+          "text": "Postupy zadávané v DNS",
+          "description": "Postupy zadávané v DNS",
+          "isMissing": false
+        },
+        "NEN-812637": {
+          "code": "NEN-812637",
+          "text": "Stav",
+          "description": "Stav",
+          "isMissing": false
+        },
+        "NEN-812639": {
+          "code": "NEN-812639",
+          "text": "Datum ukončení",
+          "description": "Datum ukončení",
+          "isMissing": false
+        },
+        "NEN-812640": {
+          "code": "NEN-812640",
+          "text": "Počet registrovaných dodavatelů",
+          "description": "Počet dodavatelů registrovaných v DNS",
+          "isMissing": false
+        },
+        "NEN-812717": {
+          "code": "NEN-812717",
+          "text": "Stručný popis předmětu",
+          "description": "Stručný popis předmětu",
+          "isMissing": false
+        },
+        "NEN-812642": {
+          "code": "NEN-812642",
+          "text": "Katalog komodit",
+          "description": "Katalog komodit",
+          "isMissing": false
+        },
+        "NEN-812620": {
+          "code": "NEN-812620",
+          "text": "Název položky",
+          "description": "Název položky předmětu",
+          "isMissing": false
+        },
+        "NEN-812621": {
+          "code": "NEN-812621",
+          "text": "Množství",
+          "description": "Množství",
+          "isMissing": false
+        },
+        "NEN-825609": {
+          "code": "NEN-825609",
+          "text": "Dodavatelé",
+          "description": "Dodavatelé",
+          "isMissing": false
+        },
+        "NEN-820438": {
+          "code": "NEN-820438",
+          "text": "Zadávací dokumentace zavádějící zakázky",
+          "description": "Zadávací dokumentace zavádějící zakázky",
+          "isMissing": false
+        },
+        "NEN-820437": {
+          "code": "NEN-820437",
+          "text": "Vysvětlení zadávací dokumentace zavádějící zakázky",
+          "description": "Vysvětlení zadávací dokumentace zavádějící zakázky",
+          "isMissing": false
+        },
+        "SRC-357607": {
+          "code": "SRC-357607",
+          "text": "Ukončen",
+          "description": "Ukončen",
+          "isMissing": false
+        },
+        "NEN-744123": {
+          "code": "NEN-744123",
+          "text": "Registr DNS",
+          "description": "Registr DNS",
+          "isMissing": false
+        },
+        "NEN-789438": {
+          "code": "NEN-789438",
+          "text": "Registr dynamických nákupních systémů zavedených, nebo evidovaných v systému NEN.",
+          "description": "Registr dynamických nákupních systémů zavedených, nebo evidovaných v systému NEN.",
+          "isMissing": false
+        },
+        "NEN-842245": {
+          "code": "NEN-842245",
+          "text": "Hledám aktualizace...",
+          "description": "Hledám aktualizace...",
+          "isMissing": false
+        },
+        "NEN-812564": {
+          "code": "NEN-812564",
+          "text": "Kód",
+          "description": "Přidělené systémové číslo NEN",
+          "isMissing": false
+        },
+        "NEN-812565": {
+          "code": "NEN-812565",
+          "text": "Název",
+          "description": "Název zadávacího postupu",
+          "isMissing": false
+        },
+        "NEN-812830": {
+          "code": "NEN-812830",
+          "text": "NIPEZ předmětu",
+          "description": "NIPEZ předmětu",
+          "isMissing": false
+        },
+        "NEN-613664": {
+          "code": "NEN-613664",
+          "text": "Ostatní propojené části",
+          "description": "Ostatní propojené části",
+          "isMissing": false
+        },
+        "NEN-852803": {
+          "code": "NEN-852803",
+          "text": "Seznam profilů zadavatelů - zrušené",
+          "description": "Seznam profilů zadavatelů - zrušené",
+          "isMissing": false
+        },
+        "NEN-812763": {
+          "code": "NEN-812763",
+          "text": "Název",
+          "description": "Název systému kvalifikace",
+          "isMissing": false
+        },
+        "NEN-812764": {
+          "code": "NEN-812764",
+          "text": "Předmět",
+          "description": "Předmět systému kvalifikace",
+          "isMissing": false
+        },
+        "NEN-812768": {
+          "code": "NEN-812768",
+          "text": "Účel",
+          "description": "Účel systému kvalifikace",
+          "isMissing": false
+        },
+        "NEN-812765": {
+          "code": "NEN-812765",
+          "text": "Systémové číslo",
+          "description": "Systémové číslo",
+          "isMissing": false
+        },
+        "NEN-812766": {
+          "code": "NEN-812766",
+          "text": "Stav",
+          "description": "Stav",
+          "isMissing": false
+        },
+        "NEN-812759": {
+          "code": "NEN-812759",
+          "text": "Období od",
+          "description": "Období, od kdy je systém kvalifikace zaveden",
+          "isMissing": false
+        },
+        "NEN-812762": {
+          "code": "NEN-812762",
+          "text": "Období do",
+          "description": "Období, do kdy je systém kvalifikace zaveden",
+          "isMissing": false
+        },
+        "NEN-847586": {
+          "code": "NEN-847586",
+          "text": "Rozdělení na kategorie",
+          "description": "Rozdělení na kategorie",
+          "isMissing": false
+        },
+        "NEN-847621": {
+          "code": "NEN-847621",
+          "text": "Kategorie",
+          "description": "Kategorie",
+          "isMissing": false
+        },
+        "NEN-812767": {
+          "code": "NEN-812767",
+          "text": "Systémové číslo",
+          "description": "Přidělené systémové číslo NEN",
+          "isMissing": false
+        },
+        "NEN-812758": {
+          "code": "NEN-812758",
+          "text": "Název",
+          "description": "Název",
+          "isMissing": false
+        },
+        "SRC-611711": {
+          "code": "SRC-611711",
+          "text": "Zaveden",
+          "description": "Zaveden",
+          "isMissing": false
+        },
+        "NEN-812718": {
+          "code": "NEN-812718",
+          "text": "Seznam zadávacích postupů zadávaných v DNS",
+          "description": "Seznam zadávacích postupů zadávaných v DNS",
+          "isMissing": false
+        },
+        "NEN-812625": {
+          "code": "NEN-812625",
+          "text": "Kód",
+          "description": "Kód záznamu",
+          "isMissing": false
+        },
+        "NEN-812626": {
+          "code": "NEN-812626",
+          "text": "Název",
+          "description": "Název záznamu",
+          "isMissing": false
+        }
+      }
+    }
+  },
+  "nodeContext": null,
+  "queryParams": {},
+  "statisticsStore": {
+    "fetchingStarted": false,
+    "statisticsData": null
+  },
+  "userCookieSettingsStore": {
+    "showModal": false,
+    "settings": {
+      "userSet": false,
+      "preferences": false,
+      "statistics": false
+    }
+  },
+  "widgetStore": {
+    "newsStore": {
+      "items": [],
+      "errors": []
+    },
+    "trainingStore": {
+      "items": [],
+      "errors": []
+    }
+  },
+  "router": {
+    "location": {
+      "pathname": "/",
+      "search": "",
+      "hash": "",
+      "key": "ykmd9h"
+    },
+    "action": "POP"
+  }
+}

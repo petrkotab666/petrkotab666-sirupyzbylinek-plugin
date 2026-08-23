@@ -1,0 +1,128 @@
+[
+  {
+    "label": "result_publication",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287462405",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287462405",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 171412,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/result_publication.html"
+  },
+  {
+    "label": "contract_nested",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287462405/detail-uverejneni/3287463593",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287462405/detail-uverejneni/3287463593",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 178434,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/contract_nested.html"
+  },
+  {
+    "label": "written_report",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287467525",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287467525",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 171863,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/written_report.html"
+  },
+  {
+    "label": "written_report_0_Písemná zpráva_CV_HV propoj.pdf",
+    "url": "https://nen.nipez.cz/file?id=3287469562",
+    "final": "https://nen.nipez.cz/dms2_public/Download.aspx?fileName=UMOtc2VtbsOhIHpwcsOhdmFfQ1ZfSFYgcHJvcG9qLnBkZnw6fHRJRC1GRDQ3ODcxNjlCM0ZGNTM3NzhCQ0E3NTA5N0I0N0RGMzY1NDU5RjFBRTEzMUI4Q0NGNkZGRjE5QTkwREUyRUUzLTBjfDp8LTg1ODQxNDA5MzM0NDMwNzk0Nzh8OnxaczV3M2xvekxoRUgxbytocEpLbzlNR3pPMUh6WEJxeXQ1UGVLVlUxRWN3PXw6fHw6fGMyQWU1cUxSc0NxbGNBcHE2cVpVVkhNaXh4MWdHa2hWNVlUVUZzUEdPbzQ9fDp8Y3MtQ1o%3d",
+    "status": 200,
+    "type": "application/pdf",
+    "bytes": 169326,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/written_report_0_P_semn_zpr_va_CV_HV_propoj.pdf.pdf"
+  },
+  {
+    "label": "participants",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287462484",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/3287462484",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 181967,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/participants.html"
+  },
+  {
+    "label": "mod_april",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/4313953565",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/4313953565",
+    "status": 404,
+    "type": "text/html; charset=utf-8",
+    "bytes": 164894,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/mod_april.html"
+  },
+  {
+    "label": "mod_june",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/4530620753",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/4530620753",
+    "status": 404,
+    "type": "text/html; charset=utf-8",
+    "bytes": 164035,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/mod_june.html"
+  },
+  {
+    "label": "mod_july",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/4566297342",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/detail-info/4566297342",
+    "status": 404,
+    "type": "text/html; charset=utf-8",
+    "bytes": 162931,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/mod_july.html"
+  },
+  {
+    "label": "vestnik_result",
+    "url": "https://nen.nipez.cz/vestnik/detail-info/3287462405",
+    "final": "https://nen.nipez.cz/vestnik/detail-info/3287462405",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 171604,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/vestnik_result.html"
+  },
+  {
+    "label": "vestnik_written_report",
+    "url": "https://nen.nipez.cz/vestnik/detail-info/3287467525",
+    "final": "https://nen.nipez.cz/vestnik/detail-info/3287467525",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 169712,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/vestnik_written_report.html"
+  },
+  {
+    "label": "vestnik_written_report_0_Písemná zpráva_CV_HV propoj.pdf",
+    "url": "https://nen.nipez.cz/file?id=3287469562",
+    "final": "https://nen.nipez.cz/dms1_public/Download.aspx?fileName=UMOtc2VtbsOhIHpwcsOhdmFfQ1ZfSFYgcHJvcG9qLnBkZnw6fHRJRC1GRDQ3ODcxNjlCM0ZGNTM3NzhCQ0E3NTA5N0I0N0RGMzY1NDU5RjFBRTEzMUI4Q0NGNkZGRjE5QTkwREUyRUUzLTBjfDp8LTg1ODQxNDA5MzM0MDY1NTgyMTR8OnxERlRLZDdueWNwbThoSm9SQkJIb2lJcUFpTEE4OGJLSXQ2bGpwd0ovZE44PXw6fHw6fDJHb28yUEFBd2VJZ2tiTE9oU29uV0x0N2lZbk1WYWxoSlN2M2s5TjZWZGM9fDp8Y3MtQ1o%3d",
+    "status": 200,
+    "type": "application/pdf",
+    "bytes": 169326,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/vestnik_written_report_0_P_semn_zpr_va_CV_HV_propoj.pdf.pdf"
+  },
+  {
+    "label": "vestnik_mod_april",
+    "url": "https://nen.nipez.cz/vestnik/detail-info/4313953565",
+    "final": "https://nen.nipez.cz/vestnik/detail-info/4313953565",
+    "status": 404,
+    "type": "text/html; charset=utf-8",
+    "bytes": 160114,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/vestnik_mod_april.html"
+  },
+  {
+    "label": "vestnik_mod_june",
+    "url": "https://nen.nipez.cz/vestnik/detail-info/4530620753",
+    "final": "https://nen.nipez.cz/vestnik/detail-info/4530620753",
+    "status": 404,
+    "type": "text/html; charset=utf-8",
+    "bytes": 162768,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/vestnik_mod_june.html"
+  },
+  {
+    "label": "vestnik_mod_july",
+    "url": "https://nen.nipez.cz/vestnik/detail-info/4566297342",
+    "final": "https://nen.nipez.cz/vestnik/detail-info/4566297342",
+    "status": 404,
+    "type": "text/html; charset=utf-8",
+    "bytes": 165919,
+    "path": "tmp_cez_document_corpus_scan_20260823/downloads/vestnik_mod_july.html"
+  }
+]

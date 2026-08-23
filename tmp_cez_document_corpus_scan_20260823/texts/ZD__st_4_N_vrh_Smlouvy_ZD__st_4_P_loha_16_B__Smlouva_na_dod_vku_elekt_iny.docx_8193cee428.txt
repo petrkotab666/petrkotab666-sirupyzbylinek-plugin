@@ -1,0 +1,324 @@
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+„CV_HV propoj epr - kadaň“
+
+
+ČÁST 4
+
+
+návrh smlouvy
+
+Příloha 16 B
+
+
+Návrh Smlouvy na dodávku elektřiny
+
+
+Příloha 16 B
+Návrh Smlouvy na dodávku elektřiny
+
+Smlouva na dodávku elektřiny z rozvodů ČEZ, a. s. – lokalita Prunéřov
+uzavíraná mezi níže uvedenými smluvními stranami podle ustanovení 
+§ 1746 odst. 2 zákona č. 89/2012Sb., občanský zákoník, ve znění pozdějších změn a doplňků 
+ [dále také jen „Smlouva“]
+
+
+
+Ev. číslo smlouvy dodavatele ……
+Ev. číslo smlouvy odběratele ……….
+Smluvní strany:
+Dodavatel: ČEZ, a. s.
+se sídlem Duhová 2/1444, Praha 4, PSČ 140 53
+zapsána v obchodním rejstříku vedeném Městským soudem v Praze, spisová značka  B 1581
+zastoupena / Osoby oprávněné k podpisu smlouvy:
+Ing. Martin Mládek, expert prodeje energií v areálech elektráren
+Ing. Marcela Šobichová, specialista prodeje energií v areálech elektráren
+IČO:45274649
+DIČ:              CZ45274649
+                                                                    
+Bankovní spojení:                                   Komerční banka, a.s. 
+číslo účtu:                                                4901711/0100
+
+Kontaktní osoby:   ve věcech smluvních:    Ing. Marcela Šobichová, tel.: 592 111 230
+                         ve věcech technických: ……………………………..
+
+Korespondenční adresa:                           
+                            
+[dále jen „Dodavatel“]
+
+a 
+
+Odběratel:
+Sídlo:……………………………..
+Zapsaný:v obchodním rejstříku vedeném …………….soudem v ……….., spisová značka ………… …
+Zastoupena / Osoby oprávněné k podpisu smlouvy:
+…………………………………….
+………………………………….
+
+IČO:………….
+DIČ:
+
+Bankovní spojení:………………….
+číslo účtu:……………….
+
+
+Kontaktní osoby:ve věcech smluvních: ………………, tel.: ……………….
+ve věcech technických: ………………, tel.: ……………….
+Fakturační adresa: 
+
+Korespondenční adresa:  
+                            
+
+[dále jen „Odběratel“]
+
+Dodavatel a Odběratel společně dále také jen „Smluvní strany“ a každý jednotlivě „Smluvní strana“.
+
+I.
+Předmět Smlouvy
+
+Předmětem Smlouvy je závazek Dodavatele dodávat Odběrateli elektřinu ve sjednaném množství a výkonu do odběrného místa Odběratele uvedeného níže v článku II. této smlouvy a blíže specifikovaného v příloze č. 1 této Smlouvy. 
+
+Odběratel se zavazuje odebrat sjednané množství elektřiny v odběrném místě podle podmínek této Smlouvy a uhradit Dodavateli řádně a včas dohodnutou platbu za dodávku elektřiny.
+
+Dodávka elektřiny se uskutečňuje z výrobního zařízení Dodavatele, způsobem uvedeným v příloze č. 1 Smlouvy. Dodávka elektřiny je splněna přechodem elektřiny z výrobního zařízení Dodavatele přes měřicí zařízení do odběrného místa Odběratele v předávacím místě.
+
+II.
+Specifikace odběrného místa
+
+1) Název a adresa odběrného místa:
+    Elektrárna Prunéřov – bližší specifikace je uvedena v příloze 1. 
+
+Napěťová hladina: FORMCHECKBOX  VVN FORMCHECKBOX  VN FORMCHECKBOX  NN
+
+
+III.
+Časová a technická specifikace plnění
+
+
+Základní údaje:
+       Datum zahájení dodávky:…………..
+
+Datum ukončení dodávky: ………………..
+
+Sjednané množství elektřiny na období roku činí ………. MWh
+
+
+Množství elektřiny měsíce musí být sjednané nejpozději 1 měsíc před začátkem dalšího kalendářního roku. Nedojde-li ke sjednání množství elektřiny na další kalendářní rok, má se zato, že nadále platí hodnoty sjednané pro předchozí kalendářní rok.
+
+IV.
+Cena, vyúčtování, zálohy a platební podmínky
+
+Cena za dodávku elektřiny v roce 2024 se sjednává takto:
+
+
+Tarif
+
+Dny v týdnu
+
+Obchodní hodiny
+
+Cena (Kč/MWh)
+Jednotarif
+Standard - E
+Pondělí - neděle
+0 - 24
+5 125,- 
+
+Pevná cena za měsíc za 1 OM
+Cena (Kč/měsíc)
+
+128,00
+K těmto cenám je již připočtena daň z elektřiny dle platného zákona. Daň z elektřiny činí 28,30 Kč/MWh.
+K těmto cenám bude připočtena příslušná sazba DPH dle platného zákona.
+
+Dodavatel provádí vyúčtování dodávky elektřiny následujícím způsobem: 
+
+a) Vyúčtování dodávky elektřiny podle podmínek Smlouvy bude Dodavatelem Odběrateli prováděno za příslušný kalendářní měsíc (dále jen „zúčtovací období“), a to vystavením daňového dokladu (faktury), který bude obsahovat náležitosti daňového dokladu podle zákona o DPH platného v okamžiku uskutečnění zdanitelného plnění a bude obsahovat samostatně vyčíslený údaj o ceně za celkové množství odebrané elektřiny za zúčtovací období. Zdanitelné plnění se považuje za uskutečněné dnem stanoveným v zákoně o DPH ve znění platném ke dni uskutečnění zdanitelného plnění. Konečná faktura za smluvené období bude vystavena ihned po ukončení odběru.
+b) Fakturu s vyúčtováním dodávky elektřiny Dodavatel odešle Odběrateli nejpozději do 15. dne kalendářního měsíce následujícího po zúčtovacím období na sjednanou zasílací adresu dle Smlouvy. Faktura je splatná nejpozději 14. den ode dne jejího vystavení (konkrétní den splatnosti bude uveden na faktuře). Odběratel je oprávněn před uplynutím lhůty splatnosti vrátit bez zaplacení fakturu, která neobsahuje některou náležitost nebo má jiné závady v obsahu. Ve vrácené faktuře musí vyznačit důvod vrácení. Dodavatel je povinen podle povahy nesprávnosti fakturu opravit nebo nově zhotovit. Oprávněným vrácením faktury se stanoví běh lhůty její splatnosti. Nová lhůta splatnosti běží znovu ode dne doručení opravené nebo nově vyhotovené faktury. Peněžitý závazek Odběratele se považuje za splněný dnem odepsání příslušné částky z účtu Odběratele ve prospěch účtu Dodavatele.
+
+Pro případ prodlení Odběratele se zaplacením řádně vystavené a doručené faktury, sjednávají smluvní strany úrok z prodlení ve výši 0,03 % z dlužné částky za každý i jen započatý den prodlení.
+
+Dodavatel a Odběratel sjednávají, že v případě, kdy Odběratel bude v prodlení s úhradou faktury (zálohy, nebo úroku z prodlení) za dodávku elektřiny Dodavatelem více než 30 dnů, je Dodavatel oprávněn přerušit, omezit nebo odepřít dodávku elektřiny do odběrného místa Odběratele, a to po předchozím upozornění na takovéto přerušení dodávky elektřiny. Upozornění může být písemné nebo prostřednictvím e-mailu. Dodavatel a Odběratel sjednávají, že v případě přerušení dodávky elektřiny z důvodu neúhrady pohledávky není Odběratel oprávněn po Dodavateli požadovat náhradu škody vzniklé přerušením dodávky elektřiny Dodavatelem Odběrateli. Náklady spojené s obnovením dodávky elektřiny hradí Odběratel a činí 1 500,- Kč za každý takový případ.
+
+V.
+Platnost a účinnost Smlouvy
+
+Smlouva nabývá platnosti dnem podpisu Smlouvy oběma Smluvními stranami s účinností od zahájení dodávky elektřiny na dobu neurčitou nebo na dobu určitou. Ustanovení Smlouvy, v nichž se předpokládá provedení stanovených činností před termínem účinnosti, jsou účinná dnem podpisu Smlouvy.
+Smlouvu sjednanou na dobu neurčitou lze ukončit dohodou obou Smluvních stran, nebo písemnou výpovědí některé ze Smluvních stan bez udání důvodu. Výpovědní doba činí tři měsíce. Výpovědní doba začíná běžet prvním dnem kalendářního měsíce následujícího po doručení výpovědi druhé Smluvní straně.
+Cena za dodávku elektřiny uvedená v článku IV. Smlouvy se sjednává pro první kalendářní rok trvání Smlouvy. Pro každý další kalendářní rok trvání Smlouvy je oprávněn cenu stanovit Dodavatel a sdělit ji Odběrateli nejpozději do 31. 12. roku předcházejícího, a to formou zaslání nového ceníku.
+
+VI.
+Zvláštní ujednání
+
+V případě, že Odběratel požaduje dodávku elektřiny osvobozenou od daně z elektřiny a je držitelem oprávnění k nabytí elektřiny osvobozené od daně tak, jak stanovuje příslušný právní předpis, musí tuto skutečnost doložit věrohodným způsobem Dodavateli s uvedením účelu použití elektřiny. Současně Dodavateli předloží seznam měřících míst s uvedením čísla měřícího zařízení, která spadají pod odběrné místo s registračním číslem, na které bylo správcem daně vydáno povolení k nabytí elektřiny osvobozené od daně z elektřiny. V případě změny čísla měřícího zařízení Odběratel neprodleně Dodavateli předá aktualizovaný seznam.
+V případě, kdy Odběratel pozbude oprávnění nabývat elektřinu osvobozenou od daně z elektřiny, případně dojde k jeho změně, musí tuto skutečnost neprodleně oznámit písemně Dodavateli. Odběratel odpovídá Dodavateli za jakékoliv porušení povinnosti stanovené právními předpisy v souvislosti s nabytím a užitím elektřiny osvobozené od daně, Odběratel uhradí Dodavateli škodu vzniklou Odběratelovým porušením příslušného právního předpisu, upravujícím daňové povinnosti v souvislosti s dodávkou elektřiny a neoznámením Dodavateli o svém pozbytí nebo změně oprávnění nabývat elektřinu osvobozenou od daně z elektřiny.
+Smluvní strany berou na vědomí, že tato Smlouva nepodléhá povinnosti uveřejnění v registru smluv ve smyslu zákona č. 340/2015 Sb., o zvláštních podmínkách účinnosti některých smluv, uveřejňování těchto smluv a o registru smluv (zákon o registru smluv).
+Smluvní strany se zavazují, že před případným uveřejněním této Smlouvy dle příslušných ustanovení zákona o registru smluv, budou kontaktovat druhou ze smluvních stran za účelem zajištění ochrany informací, které jsou z povinnosti uveřejnění prostřednictvím registru smluv vyjmuty.
+Smluvní strany se dohodly, že Dodavatel je oprávněn daňové doklady a dokumenty související s fakturací dle této Smlouvy vystavovat v elektronické podobě a tyto posílat na e-mailovou adresu odběratele: ……………………………., přičemž každý takto vystavený doklad bude s přílohou/přílohami tvořit jeden dokument. Odběratel se zavazuje, že nebude žádným způsobem měnit obsah takto vystavovaných a doručovaných daňových dokladů a dokumentů souvisejících s fakturací. Faktura se považuje za doručenou okamžikem doručení e-mailu do e-mailové schránky určené pro příjem faktur. Zasílání faktur poštou bude přesto i nadále možné, a to na fakturační adresu Odběratele uvedenou v záhlaví Smlouvy.
+Smluvní strany se dohodly, že změnu e-mailové adresy uvedené v odst. 5) výše tohoto článku Smlouvy je možno provést písemným sdělením Odběratele s tím, že sdělení musí být podepsáno osobou (osobami) oprávněnými k podpisu této Smlouvy, a to bez nutnosti uzavřít o tomto dodatek ke Smlouvě.  Daňový doklad a dokumenty související s fakturací budou odeslány ve formátu pdf .
+Smluvní strany jsou obecně při plnění Smlouvy povinny postupovat v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 ze dne 27. dubna 2016 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů a o zrušení směrnice 95/46/ES (obecné nařízení o ochraně osobních údajů), v platném znění („Nařízení“) a zákonem č. 110/2019 Sb., o zpracování osobních údajů, ve znění pozdějších předpisů (dále jen „ZZOÚ“).
+Budou-li si Smluvní strany za účelem plnění Smlouvy zpracovávat osobní údaje, uzavřou za tím účelem smlouvu o zpracování osobních údajů dle čl. 28 odst. 3 Nařízení a ZZOÚ.
+
+
+VII.
+Společná a závěrečná ustanovení
+
+Případné změny kontaktních osob uvedených v záhlaví Smlouvy, či jejich telefonických, faxových nebo e-mailových spojení, se považují za změněné dnem doručení doporučeného dopisu oznamujícího tuto změnu druhé smluvní straně, a to osobě oprávněné zastupovat příslušnou smluvní stranu ve věcech smluvních. 
+Změny sídla a/nebo změny adresy pro doručování a/nebo změny názvu subjektu a/nebo osob oprávněných jednat ve věcech smluvních a/nebo osob oprávněných jednat ve věcech technických budou prováděny jednostranným písemným oznámením doručeným druhé smluvní straně, a to bezodkladně po každé takovéto změně a nepodléhají povinnosti uzavřít písemný dodatek k této smlouvě. Změna je vůči druhé smluvní straně účinná okamžikem doručení. Nečinnost smluvní strany jde k její tíži. 
+Smluvní strany vylučují použití první věty ustanovení § 558 odst. 2 občanského zákoníku. Smluvní strany se dále dohodly, že obchodní zvyklosti nemají přednost před žádným ustanovením zákona.
+Změny této Smlouvy, mohou být prováděny pouze po dohodě obou smluvních stran, a to formou číslovaného písemného dodatku řádně podepsaného oprávněnými osobami obou smluvních stran k podpisu Smlouvy, přičemž jinou, než písemnou formu dodatku smluvní strany vylučují. K platnosti dodatku Smlouvy se vyžaduje dohoda o celém jeho obsahu
+Pokud by jakýkoliv závazek (povinnost) podle Smlouvy byl nebo by se stal neplatným nebo právně nevymahatelným, nebude to mít vliv na platnost a právní vymahatelnost ostatních závazků (povinností) podle Smlouvy. Smluvní strany se zavazují nahradit takovýto neplatný nebo právně nevymahatelný závazek (povinnost) novým, platným a právně vymahatelným závazkem (povinností), jehož předmět bude nejvhodněji odpovídat předmětu a účelu původního závazku (povinnosti).
+Smlouva je vyhotovena ve dvou stejnopisech, po jejím podpisu každá strana obdrží po jedno vyhotovení.
+Smluvní strany prohlašují, že k přijetí této Smlouvy přistoupily po vzájemném srozumitelném projednání, že obsah Smlouvy odpovídá skutečnému stavu věci a je výrazem jejich pravé a svobodné vůle, což potvrzují podpisy svých oprávněných zástupců.
+Nestanoví-li Smlouva jinak, řídí se vzájemné vztahy smluvních stran ustanoveními zákona č. 89/2012 Sb., občanský zákoník, ve znění pozdějších předpisů.
+Smluvní strany shodně konstatují, že se podmínkami sjednanými v této Smlouvě řídí na základě vzájemné dohody od …………………... To znamená, že svá vzájemná plnění poskytnutá od uvedeného dne do data nabytí platnosti této Smlouvy, považují za plnění poskytnutá dle této Smlouvy. Tato Smlouva nabývá platnosti dnem podpisu posledním ze smluvních stran.
+
+
+Přílohy:
+Příloha č. 1 – Způsob dodávky elektřiny
+
+
+
+Za Dodavatele 
+
+
+
+
+
+
+……………………………………………..
+
+
+
+………………………………………………..
+
+
+
+Za Odběratele
+
+
+
+
+
+
+………………………………………………..
+
+
+
+…………………………………………………
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Příloha č. 1 - Způsob dodávky elektřiny ke Smlouvě na dodávku elektřiny 
+Ev. č. smlouvy dodavatele ………………
+Ev. č. smlouvy odběratele ……………….
+
+Smluvní strany:
+  Dodavatel: 
+ 
+
+ Odběratel: 
+
+
+ Adresa pro písemný styk:
+   
+  
+ Datum sjednání přílohy:
+ 
+
+
+Způsob dodávky elektřiny
+
+
+
+Specifikace OM  1
+Název odběrného místa: …………………
+Obec: ………
+PSČ: ………
+Ulice, č.p.: ………………..
+Okres: ……….
+
+Předávací místo 
+1.
+Napojení
+Počáteční stav
+Typ měření
+Hodnota  jistícího prvku
+Sazba
+Elektroměr
+Číslo …………
+
+
+
+
+
+
+
+
+Odběratel prohlašuje, že jeho odběrná elektrická zařízení vyhovují platným ČSN, bezpečnostním a požárním předpisům.
+
+
+Množství dodané elektřiny:
+
+Množství dodané elektřiny v jednotlivých odběrných a připojovacích místech je dáno rozdílem mezi počátečním a konečným stavem fakturačního elektroměru v daném měsíci, násobený příslušným koeficientem. Celkové dodané množství elektřiny Odběrateli v daném měsíci je dáno součtem spotřeb jednotlivých odběrných a připojovacích míst.
+Měření odběru elektřiny pro Odběratele zajistí na své náklady Dodavatel, přičemž měření bude průběhové a bude měřen pouze odběr činné elektřiny.
+Dodavatel bude odběrateli prodávat pouze činnou elektřinu.
+Dodavatel nepožaduje kompenzovat odebíranou jalovou energii a dodavatel nebude Odběrateli účtovat odběr jalové elektřiny.
+Při poruše nebo periodické metrologické kontrole měřicího zařízení se náhradní hodnoty dodávek a odběrů elektřiny dopočítají z hodnot srovnatelného uceleného období v průběhu trvání Smlouvy, kdy byly údaje řádně měřeny, nebo převezmou z náhradního měření, nebo se dopočet provede technickým výpočtem dle příkonu spotřebičů.
+
+
+Dodávky elektřiny, přerušení dodávky elektřiny a jiné provozní stavy:
+
+Dodavatel je oprávněn omezit nebo přerušit dodávky elektřiny. V těchto případech je vyloučeno právo Odběratele na náhradu škody a ušlého zisku:
+Delší přerušení napájení na jednom z přívodů bude pouze při nutných opravách a údržbě zařízení. 
+Při stavech nouze dle zákona č. 458/2000 Sb. nebo činnostech bezprostředně zamezujících jejich vzniku.
+Při provádění plánovaných rekonstrukcí, oprav, údržbových a revizních prací (započetí a skončení omezení nebo přerušení dodávek je Dodavatel povinen oznámit Odběrateli nejméně 15 dnů předem).
+Při vzniku a odstraňování poruch na výrobních a rozvodných zařízeních.
+Při provádění nutných provozních manipulací.
+Při neoprávněném odběru.
+V případě, kdy Odběratel používá při odběru elektřiny zařízení ohrožující životy, zdraví nebo majetek.
+V případě, že Odběratel používá při odběru elektřiny zařízení, která ovlivňují kvalitu elektřiny v neprospěch ostatních Odběratelů.
+

@@ -1,0 +1,164 @@
+
+
+===== PAGE 1 =====
+ 
+Stránka 1 z 3 
+ 
+ 
+ 
+Vysvětlení zadávací dokumentace - č. 17/ZD 
+ 
+NÁZEV VEŘEJNÉ ZAKÁZKY: CV_HV propoj EPR-Kadaň 
+Zadavatel: 
+ 
+ČEZ Teplárenská, a.s. , se sídlem Duhová 1444/2, 
+Michle, 140 00 Praha 4 , IČO: 27309941, zapsán v 
+obchodním rejstříku vedeném Městským soudem v 
+Praze, oddíl B, vložka 17910 
+Evidenční číslo zakázky: Z2024-029445 
+Evidenční číslo formuláře: F2024-029445 
+TED: 384212-2024 
+ 
+ČEZ Teplárenská, a.s., jako Zadavatel výše uvedené Veřejné zakázky, obdržel dotaz y k Zadávací 
+dokumentaci. Žádost o vysvětlení byla Zadavateli doručena dne 07.01.2025, a to prostřednictvím NEN, 
+v souladu s § 211 ZZVZ. 
+V souladu s § 98 zákona č. 134/2016 Sb., o zadávání veřejných zakázek, v platném znění, a článkem 
+11 části 1 Zadávací dokumentace, Zadavatel níže uvádí přesné znění dotaz ů včetně odpovědí, které 
+zveřejní rovněž na Profilu zadavatele.  
+Pojmy s velkým počátečním písmenem jsou definovány v Zadávací dokumentaci.   
+ 
+ Zadavatel obdržel od Účastníka jednu (1) zprávu s celkem pěti (5) dotazy. 
+Níže Zadavatel uvádí znění dotazů Účastníka pod pořadovým číslem 58-62. 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 58 
+Dobrý den ve spojitosti se zpracováním nabídky a studováním zaslaných podkladů k výše 
+uvedené poptávce se na Vás obracím se žádostí o poskytnutí dodatečných informací:   
+ 
+Dotaz:  
+V technické zprávě TEP0314_TZ_D2-1-2-DPS-Technicka-zprava_01_R00, oddíl 7.5.2 je 
+uvedeno, že v úseku EPR -L28 a L40-NB1.2 a NB2.2 bude provedena 100% zkouška 
+ultrazvukem. V ZD_část 4_Příloha_08_Plán kvality a PKZ je ve článku 3. uvedeno, že 
+zhotovitel je povinen provést nedestruktivní zkoušky prozářením pomocí použití 
+uzavřeného radioaktivního zářiče…  
+  
+Jelikož je tloušťka stěny horkovodního potrubí tl. 6,3mm, není zkouška ultrazvukem vhodná, 
+resp. je použitelná až od tl. stěny 8mm.  
+  
+Prosíme o vyjádření, zda skutečně trváte na ultrazvukové zkoušce, nebo zda může 
+být nahrazena jinou NDT, např. prozářením (URT)?  
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 58 
+ 
+Zadavatel trvá na ultrazvukové zkoušce. 
+Pořadové číslo 
+dotazu 
+Dotaz:   
+InO 01 - D1 - Trasa horkovodu - Stavební část  
+
+===== PAGE 2 =====
+ 
+Stránka 2 z 3 
+Účastníka: 
+(citace dotazu) 
+č. 59 
+  
+Ve výkazu výměr chybí položka sejmutí ornice v tl. do 0,2m v ploše 84.513,333 m2.  
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 59 
+ 
+Zadavatel sděluje, že sejmutí ornice je uvažováno pod položkou 16 - Skrývka zemin 
+schopných zúrodnění v rovině a ve sklonu do 1:5. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 60 
+Dotaz:  
+Další dotaz se týká upřesnění specifikace pohonů k armaturám, kde v PD nejsou uvedeny 
+požadované parametry:  
+• Požadované napětí pohonů  
+• Požadované schéma výbavy pohonů  
+  
+Prosíme o doplnění požadovaných parametrů napětí a výbavy pohonů armatur .  
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 60 
+ 
+Zadavatel sděluje, že uvedené informace jsou součástí  přílohy 51.02 PDPS, část 5 
+ZD, požadované napětí pohonů (viz PDPS, výkres č. TEP0314_PID_D2 -5-DPS-
+P&ID_02_R00). 
+Požadované schéma výbavy pohonů je v kompetenci Zhotovitele na základě jeho 
+volby konkrétního výrobku. Zadavatel specifikuje  požadavky na provedení 
+servopohonů v technické zprávě (viz TEP0314_TZ_D2-7-2-DPS-DPS03-02-
+Technicka-zprava_01_R00). 
+Zapojení armatur viz PDPS, výkres č. TEP0314_FSCH_D2 -7-2-DPS-DPS03-02-
+Rozvadec-RM1_03_R00. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 61 
+Dotaz:   
+V uzemním rozhodnutí je uvedeno dokončení stavby do 30.9.2026. Při plánované 
+délce realizace +650dnů od podpisu SoD, by pro splnění dokončení k 30.9.2026 
+musela být Sod podepsána k 30.1.2025.   
+  
+Jak bude řešeno – žádostí změny stavby před dokončením, 
+posunem termínu dokončení? Kdo bude zajišťovat – 
+objednatel nebo zhotovitel? 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 61 
+ 
+Zadavatel sděluje , že uvedené bude řešeno změnou stavby před dokončením, 
+přičemž v souladu s  odst. 6.5  písm. c)  Návrhu Smlouvy, část 4 ZD je 
+projednání změny stavby před dokončením v kompetenci Zhotovitele. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 62 
+Dotaz:   
+  
+MaR a elektro - prosíme o upřesnění typů snímačů a jejich technologické rozsahy měření viz. 
+např. u tlakoměrů a teploměrů :  
+  
+PI101-110 Průmyslový snímač relativního tlaku, proudový výstup 4…20mA    11 ks  
+PIC111-117 Průmyslový snímač relativního tlaku, proudový výstup 4…20mA 7 ks  
+ 
+
+===== PAGE 3 =====
+ 
+Stránka 3 z 3 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 62 
+Zadavatel doplňuje níže uvedené parametry: 
+Teploměry: rozsah 0 - 200°C 
+Snímače tlaku: rozsah 0 - 2,5 MPa 
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán. 
+ 
+ 

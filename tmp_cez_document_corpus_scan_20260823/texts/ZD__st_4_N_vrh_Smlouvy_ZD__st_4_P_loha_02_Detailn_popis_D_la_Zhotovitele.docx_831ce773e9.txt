@@ -1,0 +1,427 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM 
+
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+
+
+
+ČÁST 4
+
+
+návrh smlouvy
+
+Příloha 2
+
+Detailní popis Díla Zhotovitele
+
+
+
+
+
+
+
+
+
+
+
+
+
+Příloha 2
+Detailní popis Díla Zhotovitele
+Detailní Popis Díla Zhotovitele
+Objednatel požaduje uvést popisy řešení v takovém detailu, aby bylo zcela zřejmé, že navržené řešení Zhotovitele vyhovuje podmínkám vymezeným Objednatelem v příloze 1 Smlouvy.
+Popis Díla jako celku
+1.
+Popis celkového architektonicko-stavebního řešení. 
+
+
+2.
+Popis celkového technického řešení, technologie a výkonových parametrů. 
+
+
+3.
+Popis řešení napojovacích bodů.
+
+
+4.
+Popis řešení ZOV (zejména popis staveniště a popis zařízení staveniště, dopravní řešení)
+
+
+5.
+Popis řešení připojení zařízení staveniště na inženýrské sítě
+
+
+6.
+Ostatní nespecifikované (doplní Účastník)
+
+
+Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Výkres situace s vyznačením zařízení staveniště, včetně přípojek inženýrských sítí a napojení na komunikace.
+
+Popis jednotlivých PROVOZNÍCH a stavebních ČÁSTÍ DÍLA Zhotovitele
+Objednatel požaduje uvést popisy řešení v takovém detailu, aby bylo zcela zřejmé, že navržené řešení Zhotovitele vyhovuje podmínkám vymezeným Objednatelem v Příloze 1 Smlouvy.
+DPS 01.01 – oběhová čerpadla 
+2.1.1.Popis
+1.
+Dopravní výška oběhového čerpadla
+2.
+Dopravní výška podávacího čerpadla
+3. 
+Příkon oběhového čerpadla
+4.
+Příkon podávacího čerpadla
+5.
+Ostatní nespecifikované (doplní Účastník)
+2.1.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Datasheet výrobce oběhových čerpadel včetně charakteristik a parametrů a hlavních komponent
+
+2.
+Datasheet výrobce podávacího čerpadla včetně charakteristik a parametrů a hlavních komponent
+
+DPS 01.02 potrubí a armatury 
+2.2.1.Popis
+1.
+Návrh řešení napojení oběhových a podávacích čerpadel na horkovody a stávající rozvody v SO 550.
+2.
+Návrh dimenzování potrubí topné a vratné vody – výpočet tlakových, hydraulických a tepelných ztrát
+3.
+Návrh provedení a uložení potrubí – pevnostně dilatační výpočet
+4.
+Návrh potrubních rozvodů – schéma obsahující hlavní potrubí, armatury a měření
+5.
+Návrh řešení rozvodů ostatních médií pro veškerou technologii
+6.
+Ostatní nespecifikované (doplní Účastník)
+2.2.2Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Grafické znázornění (dispoziční řešení), ze kterého bude zřejmé umístění.
+
+2.
+P&ID horkovodního propoje
+
+3.
+Datasheet výrobce hlavních uzavíracích armatur včetně pohonu
+
+4.
+Datasheet výrobce oddělovacích armatur včetně pohonu
+
+5.
+Datasheet předizolovaného potrubí topné větve
+
+6.
+Datasheet předizolovaného potrubí vratné větve
+
+7.
+Materiálový certifikát potrubí
+
+DPS 01.03 izolace a nátěry 
+2.3.1.Popis
+1.
+Popis použitých materiálů a postup provádění izolačních prací
+2.
+Návrh a výpočet izolací potrubí pro všechny DN
+3.
+Ostatní nespecifikované (doplní Účastník)
+2.3.2Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Datasheet izolačních materiálů 
+
+2.
+Datasheet nátěrů
+
+DPS 01.04 pomocné ocelové konstrukce 
+2.4.1.Popis
+1.
+Popis pomocných ocelových konstrukcí
+2.
+Ostatní nespecifikované (doplní Účastník)
+2.4.2Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Půdorysy s vyznačením pomocných ocelový konstrukcí
+
+2.
+Řezy s vyznačením pomocných ocelový konstrukcí
+
+3.
+Detaily s pomocnými ocelovými konstrukcemi
+
+PS 02 Elektro část
+Popis
+1.
+Celkový technický popis dodávaného elektrického zařízení
+
+
+2.
+Technický popis řešení kabeláže a hlavních kabelových tras z rozvaděčů v trafokisku do technologie, popis návrhu a dimenzování 
+
+
+3.
+Technický popis transformátorů VN/NN a transformátorového kiosku pro umístění transformátorů a rozvaděčů
+
+
+4.
+Technický popis frekvenčních měničů
+
+
+5.
+Technický popis elektrických motorů
+
+
+6.
+Technický popis návaznosti části elektro na řídicí systémy, popis koncepce řízení a ovládání části elektro
+
+
+7.
+Technický popis zprovoznění, odzkoušení a uvedení el. zařízení do provozu
+
+
+8.
+Technický popis konstrukčního provedení a výzbroje NN rozvaděčů
+
+
+9.
+Technický popis provedení uzemnění a ochrany před bleskem
+
+
+10.
+Ostatní nespecifikované (doplní Účastník)
+
+
+Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Jednopólové elektrické schéma části VN a NN 
+
+2.
+Datasheet frekvenčních měničů
+
+3.
+Datasheet transformátorů VN/NN
+
+4.
+Datasheet elektrických motorů nad 75 kW
+
+PS 03 ASŘTP - SKŘ 
+2.6.1.Popis
+1.
+Popis dodávané polní instrumentace (měření a akční členy) základní typy, principy a parametry; seznam bilančních a stanovených měřidel.
+2.
+Základní popis řízení oběhových čerpadel (stručný popis algoritmu)
+3.
+Popis provozního systému monitoringu netěsnosti potrubí, přenosný diagnostický přístroj, rozdělení potrubí na úseky.
+4.
+Popis provedení hlavních kabelových tras.
+5.
+Ostatní nespecifikované (doplní Účastník)
+2.6.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Datasheety zařízení monitoringu netěsností, základní schéma.
+
+SO 1001stavební úpravy objektu 550
+2.7.1.Popis
+1.
+Popis rozsahu stavebních úprav SO 550– příprava pro instalaci technologie PS01 a PS02
+
+2.
+Návrh výztuže základů pro oběhové čerpadla
+
+3.
+Návrh výztuže základů pro podávací čerpadla
+
+4.
+Ostatní nespecifikované (doplní Účastník)
+
+2.7.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Grafické znázornění (dispoziční řešení), ze kterého bude zřejmé umístění a napojení objektu na inženýrské sítě a technickou infrastrukturu.
+
+2.
+Dispoziční řešení uvnitř objektu, rozmístění základů
+
+3.
+Specifické řezy se základy
+
+4.
+Výkres výztuže základů pro oběhové čerpadla
+
+5.
+Výkres výztuže základů pro podávací čerpadla
+
+SO 1002trafostanice a zpevněné plochy
+2.8.1.Popis
+1.
+Popis rozsahu SO 1002
+2
+Popis technických specifikací trafostanice
+3.
+Popis technických specifikací zpevněné plochy
+4.
+Ostatní nespecifikované (doplní Účastník)
+2.8.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Grafické znázornění (dispoziční řešení), ze kterého bude zřejmé umístění a napojení objektu na inženýrské sítě a technickou infrastrukturu.
+
+
+2.
+Půdorys trafostanice
+
+3.
+Řezy trafostanice
+
+InO 01trasa horkovodu
+2.9.1.Popis
+1.
+Popis řešení nových inženýrských sítí a technické infrastruktury.
+2.
+Návrh horkovodu – schéma obsahující hlavní potrubí, armatury a měření
+3.
+Popis koncových zařízení a připojení, oddělení jednotlivých částí horkovodu
+4.
+Popis řešení a provedení protlaků pod komunikacemi
+5.
+Ostatní nespecifikované (doplní Účastník)
+2.9.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Výkres situace, nebo dílčích situací, ze kterých bude patrné rozsah rušených úseků a vedení přeložených tras inženýrských sítí a technické infrastruktury včetně označení míst napojení na stávající sítě a infrastrukturu. Z výkresu situace bude patrný rozsah vedení nových inženýrských sítí a technické infrastruktury. Legenda sítí, včetně rozlišení nadzemního nebo podzemního vedení.
+
+2.
+Grafické znázornění (dispoziční řešení), ze kterého bude zřejmé umístění InO.
+
+3.
+P&ID horkovodního propoje
+
+4.
+Datasheet výrobce hlavních uzavíracích armatur včetně pohonu
+
+5.
+Datasheet výrobce oddělovacích armatur včetně pohonu
+
+6.
+Datasheet předizolovaného potrubí topné větve
+
+7.
+Datasheet předizolovaného potrubí vratné větve
+
+8.
+Certifikáty předizolovaného potrubí Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2 a Certifikát výrobku  Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.
+
+InO 02Rozvod VN 10 kV
+2.10.1.Popis
+1.
+Popis provedení přípojek VN 10,5 kV z rozvaděče v CES do trafostanice včetně popisu dimenzování a uložení kabeláže
+2.
+Popis připojení VN kabeláže na obou stranách (transformátory a rozvaděče v CES) a popis provedení VN koncovek
+3.
+Ostatní nespecifikované (doplní Účastník)
+2.10.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Datasheet VN kabelů a datatsheety kabelových koncovek
+
+InO 03Rozvod NN
+2.11.1.Popis
+1.
+Popis provedení přípojek NN z rozvaděče v CES do trafostanice včetně popisu dimenzování a uložení kabeláže
+2.
+Popis připojení NN kabeláže na obou stranách (rozvaděče v trafokiosku a rozvaděče v CES)
+3.
+Ostatní nespecifikované (doplní Účastník)
+2.11.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Datasheet NN kabelů
+
+InO 04kabelová chránička optické komunikace
+2.12.1.Popis
+1.
+Popis rozsahu InO 04 - Kabelová chránička optické komunikace
+2.
+Technické specifikace chráničky, její uložení, podmínky položení chráničky.
+3.
+Ostatní nespecifikované (doplní Účastník)
+2.12.2.Požadované dokumenty k prokázání vlastností
+
+Dokumenty k prokázání splnění požadavků Objednatele
+Číslo dokumentu
+1.
+Grafické znázornění kabelové chráničky v návaznosti na okolní konstrukce, zejména v místech složitých detailů – půdorys, řezy
+
+2.
+Ostatní nespecifikované [doplní Účastník]
+
+VEDLEJŠÍ ROZPOČTOVÉ NÁKLADY (VRN)
+3.1.Popis
+1.
+Zařízení staveniště (vč. energií a médií)
+2.
+Staveništní doprava
+3.
+Přesun hmot
+4.
+Školení personálu provozu a údržby
+5.
+Likvidace odpadů
+6.
+Výkon autorského dozoru
+7.
+Zajištění činností BOZP na staveništi
+
+8.
+Ostatní nespecifikované (doplní Účastník)
+
+OSTATNÍ
+(doplní Účastník)

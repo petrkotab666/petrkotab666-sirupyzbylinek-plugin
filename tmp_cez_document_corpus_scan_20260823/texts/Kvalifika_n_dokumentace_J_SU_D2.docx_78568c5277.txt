@@ -1,0 +1,414 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+ČÁST 2
+
+
+
+KVALIFIKAČNÍ DOKUMENTACE – KVALIFIKAČNÍ PODMÍNKY ÚČASTI V ZADÁVACÍM ŘÍZENÍ, OBSAH, FORMA A ZPŮSOB PODÁNÍ ŽÁDOSTI O ÚČAST
+
+
+
+
+
+
+
+
+
+
+
+OBSAH
+ TOC \o "1-1" \u 1.Definice a výklad pojmů PAGEREF _Toc150769706 \h 3
+2.KVALIFIKAČNÍ DOKUMENTACE PAGEREF _Toc150769707 \h 3
+3.požadavky Zadavatele na kvalifikacI, způsob prokázání kvalifikace PAGEREF _Toc150769708 \h 3
+4.základní způsobilost PAGEREF _Toc150769709 \h 8
+5.Profesní způsobilost PAGEREF _Toc150769710 \h 9
+6.ekonomická kvalifikace PAGEREF _Toc150769711 \h 13
+7.technická kvalifikace PAGEREF _Toc150769712 \h 15
+8.dokumenty tvořící žádost o účast PAGEREF _Toc150769713 \h 23
+9.Podpis žádosti o účast PAGEREF _Toc150769714 \h 27
+10.Způsob, místo a lhůta pro podání Žádostí o účast PAGEREF _Toc150769715 \h 27
+11.Posouzení kvalifikace PAGEREF _Toc150769716 \h 28
+12.Seznam příloh ke Kvalifikační dokumentaci PAGEREF _Toc150769717 \h 28
+13.Přílohy ke Kvalifikační dokumentaci PAGEREF _Toc150769718 \h 29
+
+Definice a výklad pojmů
+Pro účely této Kvalifikační dokumentace jsou pojmy definovány v odst. 1.1, části 1 Zadávací dokumentace – Pokyny pro dodavatele, průběh zadávacího řízení.
+KVALIFIKAČNÍ DOKUMENTACE
+Kvalifikační dokumentace je nedílnou součástí Zadávací dokumentace k Veřejné zakázce zadávané v jednacím řízení s uveřejněním dle § 161 ZZVZ.
+Kvalifikační dokumentace upravuje v podrobnostech požadavky Zadavatele na kvalifikaci a způsobilost Dodavatele, způsob jejího prokázání a podání Žádosti o účast.
+požadavky Zadavatele na kvalifikacI, způsob prokázání kvalifikace
+Kvalifikovaným pro plnění Veřejné zakázky je Dodavatel, který: 
+prokáže splnění základní způsobilosti podle čl. 4 této Kvalifikační dokumentace a
+prokáže splnění profesní způsobilosti podle čl. 5 této Kvalifikační dokumentace a
+prokáže splnění ekonomické kvalifikace podle čl. 6 této Kvalifikační dokumentace a
+prokáže splnění technické kvalifikace podle čl. 7 této Kvalifikační dokumentace.
+Nestanoví-li Zadavatel dále v této Kvalifikační dokumentaci výslovně jinak, předkládá Dodavatel pouze prosté kopie dokladů prokazujících splnění způsobilosti/kvalifikace. 
+Zadavatel však Dodavateli doporučuje předložit k prokázání kvalifikace originály nebo ověřené kopie dokladů prokazujících splnění kvalifikace. 
+V případě postupu Dodavatele podle předchozího odstavce se originály nebo ověřené kopie dokladů prokazující kvalifikaci Dodavatele předkládají v Žádosti o účast v elektronickém originále opatřeném uznávaným elektronickým podpisem nebo jako konverze listinného dokumentu do dokumentu obsaženého v datové zprávě (dále jen „autorizovaná konverze“). Autorizovanou konverzi na žádost provádějí kontaktní místa veřejné správy (např. notáři, držitel poštovní licence), a advokáti za podmínek stanovených jiným právním předpisem.
+Disponuje-li Dodavatel doklady prokazujícími kvalifikaci v elektronickém originále opatřeném uznávaným elektronickým podpisem příslušného orgánu, který takový doklad vydal, nebo v případě čestných prohlášení k prokázání základní způsobilosti, ekonomické kvalifikace a příslušných kritérií technické kvalifikace uznávaným elektronickým podpisem osoby oprávněné zastupovat Dodavatele, je Dodavatel oprávněn předložit takový doklad v tomto elektronickém originále.
+Disponuje-li Dodavatel doklady uvedenými v písm. a) výše v listinném originále opatřeném vlastnoručním podpisem nebo v listinné podobě vzniklé autorizovanou konverzí elektronického originálu a opatřené ověřovací doložkou, nechá Dodavatel provést autorizovanou konverzi takových listinných dokladů do elektronické podoby a předloží je v podobě autorizované konverze včetně ověřovací doložky. 
+Disponuje-li Dodavatel doklady uvedenými v písm. a) výše v listinné prosté kopii (tj. například prostým tiskem elektronického originálu), Dodavatel nepředkládá autorizovanou konverzi takového dokladu. Zadavatel v tomto případě doporučuje předložit elektronický originál opatřený uznávaným elektronickým podpisem příslušného orgánu postupem dle písm. a) výše.
+Pokud není Dodavatel z důvodů, které mu nelze přičítat, schopen předložit požadovaný doklad, je oprávněn předložit jiný rovnocenný doklad a písemné čestné prohlášení, ve kterém předložení rovnocenného dokladu namísto Zadavatelem požadovaného dokladu Zadavateli řádně odůvodní.
+Pokud je vyžadováno předložení dokladu podle právního řádu České republiky, může Dodavatel předložit obdobný doklad podle právního řádu státu, ve kterém se tento doklad vydává. Pokud se podle příslušného právního řádu požadovaný doklad nevydává, může být nahrazen písemným čestným prohlášením, ve kterém však musí Účastník uvést i skutečnost, že se daný doklad, požadovaný Zadavatelem nebo ZZVZ, dle daného právního řádu nevydává.
+Povinnost předložit doklad může Dodavatel splnit i odkazem na odpovídající informace vedené v informačním systému veřejné správy podle zákona č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozdějších předpisů nebo v obdobném systému vedeném v jiném členském státu, který umožňuje neomezený dálkový přístup. Takový odkaz musí obsahovat internetovou adresu a údaje pro přihlášení a vyhledání požadované informace, jsou-li takové údaje nezbytné.
+Není-li stanoveno v Zadávací dokumentaci jinak, není Dodavatel oprávněn nahradit předložení dokladů požadovaných Zadavatelem v této Kvalifikační dokumentaci čestným prohlášením. Tím není vyloučeno, aby Dodavatel nahradil požadované doklady jednotným evropským osvědčením pro veřejné zakázky podle § 87 ZZVZ. 
+V případě, že byla kvalifikace získána v zahraničí, prokazuje její splnění Dodavatel doklady vydanými podle právního řádu země, ve kterém byla získána, a to v rozsahu požadovaném Zadavatelem.
+Zadavatel, v souladu s § 228 odst. 2 ZZVZ, uzná výpis ze seznamu kvalifikovaných dodavatelů jako způsob prokázání základní způsobilosti nebo profesní způsobilosti (v tom rozsahu, v jakém údaje ve výpisu ze seznamu kvalifikovaných dodavatelů prokazují splnění kritérií profesní způsobilosti). Výpis ze seznamu kvalifikovaných Dodavatelů nesmí být starší tří (3) měsíců ke dni zahájení zadávacího řízení. Zadavatel nemusí přijmout výpis ze seznamu kvalifikovaných dodavatelů, na kterém je vyznačeno zahájení řízení o změně údajů nebo o vyřazení Dodavatele ze seznamu kvalifikovaných dodavatelů podle § 232 ZZVZ.
+Stejně jako výpisem ze seznamu kvalifikovaných Dodavatelů může Dodavatel prokázat kvalifikaci osvědčením, které pochází z jiného členského státu, v němž má Dodavatel sídlo, a které je obdobou výpisu ze seznamu kvalifikovaných dodavatelů. 
+Zadavatel uzná, v souladu s § 234 odst. 1 ZZVZ, platný certifikát vydaný v rámci schváleného systému certifikovaných dodavatelů (§ 233 ZZVZ) jako způsob prokázání kvalifikace v příslušném rozsahu za předpokladu, že údaje v certifikátu uvedené pokrývají požadavky na prokázání splnění kvalifikace stanovené Zadavatelem, popřípadě jejich část (v takovém případě údaje uvedené v certifikátu prokazují splnění kvalifikace právě v tom rozsahu, v jakém pokrývají požadavky Zadavatele stanovené na prokázání splnění kvalifikace; ve zbývajícím rozsahu musí být splnění kvalifikace prokázáno jiným způsobem stanoveným touto Zadávací dokumentací). 
+Stejně jako certifikátem vydaným v rámci schváleného systému certifikovaných dodavatelů může Dodavatel prokázat kvalifikaci osvědčením, které pochází z jiného členského státu, v němž má Dodavatel sídlo, a které je obdobou certifikátu vydaného v rámci systému certifikovaných dodavatelů.
+Pokud Dodavatel prokazuje plnění některého kvalifikačního předpokladu dokladem vystaveným na jméno fyzické osoby, musí k uvedenému dokladu připojit prohlášení, že se jedná o zaměstnance, statutární orgán nebo člena statutárního orgánu Dodavatele. V případě, že se nejedná o zaměstnance, statutární orgán nebo člena statutárního orgánu Dodavatele, jedná se o prokázání kvalifikačního předpokladu prostřednictvím jiné osoby ve smyslu odst. 3.16 níže, a v takovém případě musí Dodavatel předložit doklady uvedené právě v odst. 3.16 níže. Tímto nejsou dotčena ustanovení o prokazování kvalifikace v případech, kdy Předmět veřejné zakázky hodlá plnit více Dodavatelů společně ve smyslu odst. 3.17 a násl. 
+Vyplněné a podepsané Čestné prohlášení (Příloha č. 2 ke Kvalifikační dokumentaci) prokazuje splnění základní způsobilosti podle čl. 4, odst. 4.1 písm. a).
+Zadavatel upozorňuje Dodavatele, že od Vybraného dodavatele si před podpisem Smlouvy může vyžádat doklady a dokumenty dle čl. 26 části 1 ZD.
+V případě, kdy je umožněno předložení písemného čestného prohlášení Dodavatele, musí být takové prohlášení podepsáno v souladu s požadavky uvedenými v čl. 9 této Kvalifikační dokumentace. Dodavatel může využít vzor čestného prohlášení, který je uveden v příloze č.  6 ke Kvalifikační dokumentaci (v rozsahu vyplývajícím z uvedeného vzoru). 
+Prokázání kvalifikace prostřednictvím jiných osob (např. Poddodavateli)
+Pokud není Dodavatel schopen prokázat kvalifikaci požadovanou Zadavatelem v rozsahu podle odst. 3.1 výše, je oprávněn kvalifikaci s výjimkou prokázání kritérií podle odst. 5.1 písm. d) níže prokázat prostřednictvím jiných osob (např. Poddodavatelů). Prokázání kritérií podle odst. 4.1 písm. a) a 5.1 písm. a) níže je vždy povinen prokázat jak Dodavatel, tak každý Poddodavatel, jakož i každá jiná osoba, prostřednictvím které Dodavatel prokazuje kvalifikaci či její části, viz níže.
+V případě prokazování splnění kvalifikace či její části prostřednictvím jiné osoby, např. Poddodavatele, je Dodavatel povinen Zadavateli v Žádosti o účast za takovou každou jinou osobu předložit:
+Smlouvu nebo jinou osobou, např. Poddodavatelem podepsané potvrzení o její existenci, které bude obsahovat: 
+závazek jiné osoby k poskytnutí plnění určeného k plnění Veřejné zakázky nebo k poskytnutí věcí nebo práv, s nimiž bude Dodavatel oprávněn disponovat při plnění Veřejné zakázky, a to alespoň v rozsahu, v jakém jiná osoba prokázala kvalifikaci za Dodavatele, Závazek přitom musí být dostatečně konkrétní tak, aby spolehlivě dokládal reálnou míru jiné osoby, např. Poddodavatele, na plnění Veřejné zakázky, zejména musí být uvedeno, jaké plnění jiná osoba Dodavateli poskytne a v jakém rozsahu tak, aby Zadavatel mohl posoudit, zda skutečný podíl jiné osoby, např. Poddodavatele, na plnění Veřejné zakázky odpovídá rozsahu, v jakém tato osoba prokázala za Dodavatele kvalifikaci. Zadavatel výslovně upozorňuje, že nebude dostačující, pokud obsahem závazku bude pouze zopakování textu ZZVZ nebo závazek poskytnout kvalifikaci pro účely Veřejné zakázky, takto předloženou kvalifikaci bude Zadavatel považovat za nesplněnou. Zadavatel trvá na tom, aby ze závazku jiné osoby, např. Poddodavatele, bylo zřejmé, jaké konkrétní plnění bude takovou jinou osobou Dodavateli poskytnuto a zda toto plnění odpovídá rozsahu, v jakém kvalifikaci jiná osoba, např. Poddodavatel, za Dodavatele prokazuje nebo, 
+nebude-li Dodavatel schopen definovat rozsah plnění jiné osoby, např. Poddodavatele, způsobem uvedeným shora, pod písm. a), platí podmínka dle § 83 odst. 3 ZZVZ, a Dodavatel může zákonný požadavek způsobu prokazování kvalifikace prostřednictvím jiné osoby, např. Poddodavatele, splnit formulováním společné a nerozdílné odpovědnosti za plnění celé Veřejné zakázky jiné osoby, např. Poddodavatele, s Dodavatelem (ustanovení § 83 odst. 3 ZZVZ tím není dotčeno). V takovém případě bude součástí Žádosti o účast závazek jiné osoby, např. Poddodavatele, ke společné a nerozdílné odpovědnosti jiné osoby, např. Poddodavatele, za celý Předmět Veřejné zakázky. Avšak prokazuje-li Dodavatel prostřednictvím jiné osoby kvalifikaci a předkládá doklady podle odst. 7.1 písm. a) až c) Kvalifikační dokumentace níže vztahující se k takové jiné osobě, musí ze smlouvy nebo potvrzení o její existenci podle písm. a) výše vyplývat závazek, že jiná osoba bude vykonávat stavební práce či služby, ke kterým se prokazované kritérium kvalifikace vztahuje.
+v případě prokázání ekonomické kvalifikace podle odst. 6.1 písm. a) Kvalifikační dokumentace (v souladu s § 83 odst. 4 ZZVZ) bude písemný závazek jiné osoby, např. Poddodavatele, prokázán předložením Dohody o společné a nerozdílné odpovědnosti za plnění Veřejné zakázky v souladu s odst. 6.1 písm. a) Kvalifikační dokumentace.
+Doklady o splnění základní způsobilosti dle odst. 4.1 písm. a) Kvalifikační dokumentace touto jinou osobou, např. Poddodavatelem. 
+Doklady o splnění profesní způsobilosti dle odst. 5.1 písm. a) Kvalifikační dokumentace touto jinou osobou, např. Poddodavatelem. 
+Doklady prokazující splnění Dodavateli chybějící části kvalifikace prostřednictvím této jiné osoby, např. Poddodavatele.
+Na kvalifikaci jiné osoby, jejímž prostřednictvím je prokazována kvalifikace, se vztahují pravidla stanovená ZZVZ nebo Zadávacími podmínkami pro kvalifikaci Dodavatele, za kterého je kvalifikace prokazována.
+Prokazování kvalifikace subjekty podávajícími společnou Žádost o účast
+Chce-li Předmět veřejné zakázky plnit několik osob společně a za tím účelem budou podávat společnou Žádost o účast a následně společnou Předběžnou nabídku a Nabídku (pokud prokážou splnění kvalifikačních požadavků), musí každá z nich samostatně:
+Prokázat splnění způsobilosti podle odst. 4.1 písm. a) Kvalifikační dokumentace a  
+Prokázat splnění způsobilosti uvedené v kvalifikačním požadavku 5.1 písm. a) Kvalifikační dokumentace. 
+Kvalifikační požadavek odst. 5.1 písm. d) této Kvalifikační dokumentace musí splnit alespoň jeden ze subjektů podávajících společnou Žádost o účast. Při prokazování ostatních kvalifikačních kritérií platí obdobně odst. 3.16 výše, týkající se prokazování kvalifikace prostřednictvím jiné osoby. 
+Osoby, které podaly společnou Žádost o účast (dle odst. 3.17 výše) jsou považovány právě za jednoho Dodavatele/Účastníka.
+V případě podání společné Žádosti o účast budou v Žádosti o účast řádně uvedeny identifikační údaje, v souladu s § 28 odst. 1 písm. g) ZZVZ, všech osob podávajících společnou Žádost o účast. K Žádosti o účast musí být přiložena plná moc pro jednu z osob k jednání za Dodavatele ve věci této Veřejné zakázky a k podepisování právních jednání v souvislosti s Veřejnou zakázkou (včetně podpisu smluvních ujednání) za Dodavatele. Zmocnění dané osoby bude trvat po celou dobu společné účasti Dodavatele v zadávacím řízení. Zástupčí oprávnění bude v plné moci vymezeno dostatečně jasně a srozumitelně tak, aby nebylo pochyb o právu zmocněnce jednat za Dodavatele, jako zmocnitele, ve shora uvedené věci. Komunikace mezi Zadavatelem a subjekty podávajícími společnou Žádost o účast jako jeden Dodavatel, bude po celou dobu zadávacího řízení Veřejné zakázky probíhat prostřednictvím výše uvedeného zmocněného subjektu. Veškerá písemná právní jednání v souvislosti s Jednacím řízením s uveřejněním budou považována za Dodavateli doručená okamžikem odeslání pověřenému subjektu prostřednictvím NEN. Společná Žádost o účast bude za Dodavatele podepsána osobami oprávněnými jednat za výše uvedenou zmocněnou osobu, případně může být Žádost o účast podepsána osobami oprávněnými jednat za každého ze subjektů podávajících společnou Žádost o účast jako jeden Dodavatel.
+V případě, že má být Předmět veřejné zakázky plněn společně několika Dodavateli, jsou povinni Dodavatelé, kteří budou společně podávat Žádost o účast, předložit současně s doklady prokazujícími splnění kvalifikačních předpokladů smlouvu, ve které bude obsažen závazek, že všichni tito Dodavatelé budou vůči Zadavateli a třetím osobám z jakýchkoliv právních vztahů vzniklých v souvislosti s Veřejnou zakázkou zavázáni společně a nerozdílně, a to po celou dobu plnění Veřejné zakázky, jakož i po dobu trvání jiných závazků vyplývajících z této Veřejné zakázky. Požadavek na závazek podle věty první tohoto odstavce, aby Dodavatelé byli zavázáni společně a nerozdílně, platí, pokud zvláštní právní předpis nebo Zadavatel nestanoví jinak.
+Změny kvalifikace Účastníka zadávacího řízení 
+Pokud po předložení dokladů prokazujících splnění kvalifikace Účastníka dojde v průběhu Jednacího řízení s uveřejněním ke změně kvalifikace Účastníka, je Účastník povinen nejpozději do pěti (5) pracovních dnů, ode dne, kdy k takové změně došlo, tuto skutečnost Zadavateli písemně, prostřednictvím NEN, oznámit. Účastník je povinen Zadavateli předložit nové doklady ke kvalifikaci do deseti (10) pracovních dnů od oznámení této skutečnosti Zadavateli. Zadavatel může tyto lhůty prodloužit nebo prominout jejich zmeškání. Povinnost podle tohoto odstavce Účastníku nevzniká tehdy, pokud je kvalifikace změněna takovým způsobem, že:
+podmínky kvalifikace jsou nadále Účastníkem splněny
+a
+nedošlo k ovlivnění kritérií hodnocení Předběžných nabídek/Nabídek.
+Zadavatel může vyloučit Účastníka zadávacího řízení, pokud prokáže, že Účastník zadávacího řízení nesplnil povinnost podle tohoto odstavce.  
+základní způsobilost
+Dodavatel musí prokázat splnění podmínek základní způsobilosti dle § 74 ZZVZ. Způsobilým k plnění Předmětu veřejné zakázky je Dodavatel, který prokáže, způsobem uvedeným v tabulce níže, splnění kvalifikačních požadavků, uvedených tamtéž.
+Poř. č. požadavku
+Kvalifikační požadavek
+Způsob prokázání splnění kvalifikačního požadavku ve vztahu k ČR
+Poznámky
+4.1 a)
+Dodavatel není v likvidaci ve smyslu § 187 občanského zákoníku, nebylo proti němu vydáno rozhodnutí o úpadku ve smyslu § 136 insolvenčního zákona, nebyla vůči němu nařízena nucená správa podle jiného právního předpisu nebo se nenachází v obdobné situaci podle právního řádu země sídla Dodavatele. Dodavatel nebyl v zemi svého sídla v posledních 5 letech před zahájením zadávacího řízení pravomocně odsouzen pro trestný čin uvedený v příloze č. 3 k ZZVZ nebo obdobný trestný čin podle právního řádu země sídla Dodavatele.
+Předložením písemného čestného prohlášení o uvedené skutečnosti.
+Dodavatel/jiná osoba/osoba podávající společnou Žádost o účast se sídlem mimo Českou republiku musí splnění kvalifikačního požadavku prokázat ve vztahu k zemi svého sídla.
+
+Dodavatel může využít vzor čestného prohlášení, který je uveden v příloze č. 2 ke Kvalifikační dokumentaci (v rozsahu vyplývajícím z uvedeného vzoru). Čestné prohlášení bude podepsáno způsobem dle čl. 9 této Kvalifikační dokumentace.  V případě prokazování části kvalifikačních požadavků prostřednictvím jiné osoby ve smyslu odst. 3.16 výše, je Dodavatel povinen vzor upravit tak, že čestné prohlášení nepodává Dodavatel, ale jiná osoba.
+
+
+Tímto odst. 4.1 není dotčen čl. 3, zejména odst. 3.6 a 3.9 až 3.11 Kvalifikační dokumentace.
+Profesní způsobilost
+Dodavatel musí prokázat splnění podmínek profesní způsobilosti dle § 77 ZZVZ. Způsobilým k plnění Předmětu veřejné zakázky je Dodavatel, který prokáže způsobem uvedeným v tabulce níže splnění kvalifikačních požadavků uvedených tamtéž. Splnění profesní kvalifikace uvedené v odst. 5.1 písm. d) níže musí Dodavatel/osoby podávající společnou Žádost o účast prokázat výlučně vlastními kapacitami, tzn. nikoliv prostřednictvím jiné osoby, v souladu s ustanovením § 105 odst. 2 ZZVZ.
+ 
+Poř. č. požadavku
+Kvalifikační požadavek
+Způsob prokázání splnění kvalifikačního požadavku ve vztahu k ČR
+Poznámky
+5.1 a)
+Profesní způsobilost dle § 77 odst. 1 ZZVZ
+Předložením výpisu z obchodního rejstříku, či výpisu z jiné obdobné evidence (je nepřípustné, aby Dodavatel/jiná osoba/osoba podávající společnou Žádost o účast prokazoval splnění uvedené kvalifikace pomocí elektronického výpisu z obchodního rejstříku pořízeného prostřednictvím sítě internet, neboť takový výpis má pouze informativní charakter.  Toto se netýká elektronického výpisu z obchodního rejstříku, vygenerovaného na „justice.cz“ ani podepsaného elektronického výpisu z obchodního rejstříku, tj. elektronického dokumentu ve formě datové zprávy ve smyslu zákona č. 300/2008 Sb., o elektronických úkonech a autorizované konverzi dokumentů.); nebo 
+předložením čestného prohlášení, není-li Dodavatel/jiná osoba/osoba podávající společnou Žádost o účast v obchodním rejstříku či obdobné evidenci zapsána, neboť takovému zápisu nepodléhá.
+
+
+V případě, že byla kvalifikace získána v zahraničí, prokazuje její splnění Dodavatel/jiná osoba/osoba podávající společnou Žádost o účast doklady vydanými podle právního řádu země, ve které byla získána, a to v rozsahu požadovaném Zadavatelem.
+
+Doklady nemusí Dodavatel/jiná osoba/osoba podávající společnou Žádost o účast předložit, pokud právní předpisy v zemi jejího sídla obdobnou profesní způsobilost nevyžadují. V takovém případě předloží Dodavatel/jiná osoba/osoba podávající společnou Žádost o účast čestné prohlášení, že v zemi jejího sídla právní předpisy obdobnou profesní způsobilost pro plnění Předmětu veřejné zakázky nevyžadují. 
+
+Splnění uvedené způsobilosti musí Zadavateli prokázat všechny subjekty, jejichž prostřednictvím se Dodavatel Jednacího řízení s uveřejněním účastní, tedy jak všichni Poddodavatelé, kterými prokazuje splnění jakékoliv části kvalifikace, tak subjekty podávající společnou Žádost o účast. 
+
+Dodavatel může využít vzor čestného prohlášení, který je uveden v příloze č. 6 ke Kvalifikační dokumentaci (v rozsahu vyplývajícím z uvedeného vzoru). V případě prokazování části kvalifikačních požadavků prostřednictvím jiné osoby ve smyslu odst. 3.16 výše, je Dodavatel povinen vzor upravit tak, že čestné prohlášení nepodává Dodavatel, ale jiná osoba.
+5.1 b)
+Oprávnění k podnikání v rozsahu odpovídajícím Předmětu veřejné zakázky dle § 77 odst. 2 písm. a) ZZVZ
+Předložením platného dokladu o oprávnění k podnikání podle zvláštních právních předpisů, tj. dokladů prokazujících příslušné živnostenské oprávnění. Příslušným živnostenským oprávněním ve vztahu k Předmětu Veřejné zakázky je živnostenské oprávnění k výkonu níže uvedených předmětů podnikání: 
+Projektová činnost ve výstavbě, 
+Provádění staveb, jejich změn a odstraňování.
+
+
+
+V případě, že byla kvalifikace získána v zahraničí, prokazuje se doklady vydanými podle právního řádu země, ve které byla získána, a to v rozsahu požadovaném Zadavatelem. 
+
+Doklady nemusí Dodavatel předložit, pokud právní předpisy v zemi sídla Dodavatele/jiné osoby/osoby podávající společnou Žádost o účast obdobnou profesní způsobilost nevyžadují. V takovém případě předloží Dodavatel písemné čestné prohlášení, že v zemi sídla Dodavatele/jiné osoby/osoby podávající společnou Žádost o účast právní předpisy obdobnou profesní způsobilost pro plnění Předmětu veřejné zakázky nevyžadují.
+
+Dodavatel může využít vzor čestného prohlášení, který je uveden v příloze č. 6 ke Kvalifikační dokumentaci (v rozsahu vyplývajícím z uvedeného vzoru). V případě prokazování části kvalifikačních požadavků prostřednictvím jiné osoby ve smyslu odst. 3.16 výše, je Dodavatel povinen vzor upravit tak, že čestné prohlášení nepodává Dodavatel, ale jiná osoba.
+
+5.1. c)
+Profesní způsobilost dle § 77 odst. 2 písm. c) ZZVZ
+Předložením platných dokladů o oprávnění:
+k montáži, opravám, revizím a zkouškách vydané příslušným orgánem státního odborného dozoru (Technická inspekce ČR – TIČR) ve smyslu § 8 a 9 zákona č. 250/2021 Sb., o bezpečnosti práce v souvislosti s provozem vyhrazených technických zařízení a o změně souvisejících zákonů, v platném znění a v souladu se zněním následujících nařízení vlády:
+ č. 190/2022 Sb., o vyhrazených technických elektrických zařízeních a požadavcích na zajištění jejich bezpečnosti, v platném znění.
+Dodavatel může využít vzor čestného prohlášení, který je uveden v příloze č. 6 ke Kvalifikační dokumentaci (v rozsahu vyplývajícím z uvedeného vzoru). V případě prokazování části kvalifikačních požadavků prostřednictvím jiné osoby ve smyslu odst. 3.16 výše, je Dodavatel povinen vzor upravit tak, že čestné prohlášení nepodává Dodavatel, ale jiná osoba.
+
+Doklady nemusí Dodavatel předložit, pokud právní předpisy v zemi sídla Dodavatele/jiné osoby/osoby podávající společnou Žádost o účast obdobnou profesní způsobilost nevyžadují. V takovém případě předloží Dodavatel čestné prohlášení, že v zemi jeho sídla/sídla jiné osoby/osoby podávající společnou Žádost o účast právní předpisy obdobnou profesní způsobilost pro plnění Předmětu veřejné zakázky nevyžadují. 
+
+V případě, že byla kvalifikace získána v zahraničí, prokazuje se doklady vydanými podle právního řádu země, ve které byla získána, a to v rozsahu požadovaném Zadavatelem.
+5.1. d)
+Profesní způsobilost dle § 77 odst. 2 písm. c) ZZVZ
+Předložením platného dokladu:
+certifikátu vydaného v souladu s Technickým pravidlem kvalifikace CWS ANB a pro výkon činnosti v souladu s ČSN EN ISO 14731
+Mezinárodní/ Evropský svářečský inženýr
+Dále předložením podepsaného čestného prohlášení, v němž Dodavatel/osoby podávající společnou Žádost o účast uvede, že disponuje osobou v zaměstnaneckém nebo obdobném poměru, která splňuje požadavky specifikované Zadavatelem v kvalifikačním požadavku 5.1. písm. d) Kvalifikační dokumentace, prostřednictvím které se Zadavateli zavazuje plnit Předmět Veřejné zakázky 
+K této osobě budou uvedeny následující informace:
+jméno osoby, 
+název zaměstnavatele osoby, 
+informace o jejím vzdělání a odborné kvalifikaci a 
+pověření osoby k realizaci Veřejné zakázky. 
+
+Přílohou čestného prohlášení bude profesní životopis, který bude podepsán právě touto fyzickou osobou (nikoliv tedy Dodavatelem/ /osobou podávající společnou Žádost o účast).
+Pro vyloučení pochybností Zadavatel uvádí, že nepřipouští splnění tohoto požadavku jinou osobou.
+
+
+Tímto odst. 5.1 není dotčen čl. 3, zejména odst. 3.6 a 3.9 až 3.11 Kvalifikační dokumentace. 
+ekonomická kvalifikace
+Dodavatel musí prokázat splnění podmínek ekonomické kvalifikace dle § 78 ZZVZ a § 167 odst. 1 ZZVZ. Kvalifikovaným k plnění Předmětu veřejné zakázky je Dodavatel, který prokáže, způsobem uvedeným v tabulce níže, splnění kvalifikačních požadavků, uvedených tamtéž.
+Poř. č. požadavku
+Kvalifikační požadavek
+Způsob prokázání splnění kvalifikačního požadavku 
+Poznámky
+6.1 a)
+Minimální roční obrat za poslední tři (3) uzavřená účetní období, a to v každém z nich, minimálně ve výši 550.000.000, - Kč (slovy: pět set padesát milionů korun českých). 
+Předložením 
+výkazu zisku a ztrát Dodavatele/jiné osoby/osoby podávající společnou Žádost o účast nebo 
+obdobného dokladu podle právního řádu země sídla Dodavatele/jiné osoby/osoby podávající společnou Žádost o účast a zároveň
+vyplněné a řádně podepsané (v souladu s čl. 9 níže) tabulky formuláře, který je uveden v příloze č. 5 (Tabulka výkazu obratu Dodavatele) této Kvalifikační dokumentace
+v případě prokázání ekonomické kvalifikace prostřednictvím jiné osoby podle odst. 3.16 výše, vyplněné a řádně podepsané (v souladu s čl. 9 níže) Dohody o společné a nerozdílné odpovědnosti za plnění Veřejné zakázky (originál), jejíž vzor je obsažen v části 4 Zadávací dokumentace (Návrh Smlouvy), příloha 22 Smlouvy. 
+Jestliže Dodavatel/jiná osoba/osoba podávající společnou Žádost o účast vznikla později, postačí, předloží-li údaje o svém obratu v požadované výši za všechna účetní období od svého vzniku.
+Zadavatel připouští prokázání uvedené kvalifikace i v jiné než české měně, v takovém případě roční obrat Dodavatele/jiné osoby/osoby podávající společnou Žádost o účast Zadavatel přepočte kurzem devizového trhu České národní banky ke dni, ve kterém skončila Lhůta pro podání Žádostí o účast v Jednacím řízení s uveřejněním. 
+Pro vyloučení jakýchkoliv pochybností Zadavatel uvádí, že obratové kritérium musí být vždy splněno Dodavatelem nebo jinou osobou nebo osobou podávající společnou Žádost o účast samostatně (Zadavatel nepřipouští součet obratů)
+technická kvalifikace
+Dodavatel musí prokázat splnění kritérií technické kvalifikace dle § 79 ZZVZ a § 167 odst. 1 ZZVZ. Kvalifikovaným k plnění Předmětu veřejné zakázky je Dodavatel, který prokáže, způsobem uvedeným v tabulce níže, splnění kvalifikačních požadavků, uvedených tamtéž. Kritéria technické kvalifikace stanovil Zadavatel v souladu se zásadou přiměřenosti za účelem prokázání odborných schopností a zkušeností nezbytných pro plnění Veřejné zakázky v odpovídající kvalitě. 
+Poř. č. požadavku
+Kvalifikační požadavek
+Způsob prokázání splnění kvalifikačního požadavku
+7.1 a)
+Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který prokáže zkušenost s realizací alespoň dvou (2) významných zakázek, jejímž předmětem byl závazek Dodavatele provést: výstavbu, modernizaci nebo rekonstrukci horkovodu spočívající ve vypracování PD, montáži a uvedení do provozu horkovodu min. dimenzi DN400 v předizolovaném provedení.
+Předizolované potrubí použité při realizaci předložených významných zakázek musí být certifikováno v souladu s níže uvedeným:
+Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+anebo
+Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.
+
+
+Zakázka musí být v době prokázání kvalifikace řádně dokončena a předána jejímu Objednateli.
+Uvedenou zkušenost musel Dodavatel nabýt za posledních pět (5) let před zahájením zadávacího řízení. 
+Pro vyloučení pochybností Zadavatel uvádí, že výše uvedené činnosti, tj. vypracování PD, montáž a uvedení horkovodu do provozu, kterými bude Dodavatel prokazovat splnění kritéria technické kvalifikace podle tohoto bodu, nemusely nastat v dané zakázce kumulativně. Zadavatel připouští prokázání splnění kritéria technické kvalifikace dvěma referenčními zakázkami, a to pro vypracování PD a samostatně pro montáž a uvedení horkovodu do provozu.
+
+
+Předložením řádně vyplněné a podepsané tabulky formuláře „Seznam stavebních prací, významných dodávek nebo služeb“, která bude dokládat zkušenost Dodavatele/ jiné osoby/osoby podávající společnou Nabídky na realizaci zakázek k prokázání splnění kvalifikačního požadavku 7.1 a). 
+Formulář tabulky je uveden v příloze č. 4 Kvalifikační dokumentace. Dodavatel/jiná osoba/osoby podávající společnou Žádost o účast současně ke každé referenci uvedené v „Seznamu stavebních prací, významných dodávek nebo služeb“ předloží i osvědčení objednatele dané referenční zakázky o jejím řádném provedení a dokončení předmětných stavebních prací, dodávek a služeb.
+Osvědčení objednatele referenční zakázky může být nahrazeno písemným čestným prohlášením Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast, Zadavatel však preferuje osvědčení podepsané objednatelem referenční zakázky. V osvědčení i čestném prohlášení budou vždy uvedeny kontaktní údaje na osoby objednatele dané referenční zakázky, u kterých si může Zadavatel referenci prověřit (jméno a příjmení, pozice, telefon, e-mail). 
+Zadavatel zároveň upozorňuje, že může, ve smyslu § 39 odst. 5 ZZVZ, ověřovat věrohodnost poskytnutých údajů a pokud by např. čestné prohlášení Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast neodpovídalo skutečnosti, může se jednat o důvod pro vyloučení Účastníka dle § 48 odst. 2 písm. c) ZZVZ.
+Doby, ve kterých musely být zakázky Dodavatelem/ jinou osobou/osobou podávající společnou Žádost o účast realizovány, jsou dodrženy, byly-li zakázky v daných dobách dokončeny.
+Pro vyloučení pochybností Zadavatel uvádí, že zkušenosti Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast s realizací zakázek musí být doloženy i v případě, že objednatelem takových zakázek byl Zadavatel či jiná entita ze Skupiny ČEZ.
+7.1 b)
+Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který prokáže zkušenost s realizací alespoň jedné (1) zakázky, jejímž předmětem bylo vypracování PD, montáž a uvedení do provozu nového horkovodu o dimenzi potrubí min. DN250 v předizolovaném provedení s použitím elektrosvařitelných spojek, o délce min. 3 500 m a hodnota zakázky činila min. 50 mil Kč bez DPH. Zakázka musí být v době prokázání kvalifikace řádně dokončena a předána Objednateli.
+Předizolované potrubí použité při realizaci předložených významných zakázek musí být certifikováno v souladu s níže uvedeným:
+Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+anebo
+Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.
+
+Uvedenou zkušenost musel Dodavatel nabýt za posledních deset (10) let před zahájením zadávacího řízení. 
+Pro vyloučení pochybností Zadavatel uvádí, že výše uvedené činnosti, tj. vypracování PD, montáž a uvedení do provozu nového horkovodu, kterými bude Dodavatel prokazovat splnění kritéria technické kvalifikace podle tohoto bodu, nemusely nastat v dané zakázce kumulativně. Zadavatel připouští prokázání splnění kritéria technické kvalifikace dvěma referenčními zakázkami, a to pro vypracování PD a samostatně pro montáž a uvedení horkovodu do provozu.
+Předložením řádně vyplněné a podepsané tabulky formuláře „Seznam stavebních prací, významných dodávek nebo služeb“, která bude dokládat zkušenost Dodavatele/ jiné osoby/osoby podávající společnou Nabídky na realizaci zakázek k prokázání splnění kvalifikačního požadavku 7.1 b). 
+Formulář tabulky je uveden v příloze č. 4 Kvalifikační dokumentace. Dodavatel/jiná osoba/osoby podávající společnou Žádost o účast současně ke každé referenci uvedené v „Seznamu stavebních prací, významných dodávek nebo služeb“ předloží i osvědčení objednatele dané referenční zakázky o jejím řádném provedení a dokončení předmětných stavebních prací, dodávek a služeb.
+Osvědčení objednatele referenční zakázky může být nahrazeno písemným čestným prohlášením Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast, Zadavatel však preferuje osvědčení podepsané objednatelem referenční zakázky. V osvědčení i čestném prohlášení budou vždy uvedeny kontaktní údaje na osoby objednatele dané referenční zakázky, u kterých si může Zadavatel referenci prověřit (jméno a příjmení, pozice, telefon, e-mail). 
+Zadavatel zároveň upozorňuje, že může, ve smyslu § 39 odst. 5 ZZVZ, ověřovat věrohodnost poskytnutých údajů a pokud by např. čestné prohlášení Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast neodpovídalo skutečnosti, může se jednat o důvod pro vyloučení Účastníka dle § 48 odst. 2 písm. c) ZZVZ.
+Doby, ve kterých musely být zakázky Dodavatelem/ jinou osobou/osobou podávající společnou Žádost o účast realizovány, jsou dodrženy, byly-li zakázky v daných dobách dokončeny.
+Pro vyloučení pochybností Zadavatel uvádí, že zkušenosti Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast s realizací zakázek musí být doloženy i v případě, že objednatelem takových zakázek byl Zadavatel či jiná entita ze Skupiny ČEZ.
+7.1 c)
+
+Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který prokáže zkušenost s realizací alespoň jedné (1) významné zakázky, jejímž předmětem bylo vypracování PD, montáž a uvedení do provozu nového horkovodu o dimenzi potrubí min. DN200 v předizolovaném provedení, kdy hodnota zakázky činila min. 100 mil. Kč bez DPH. Zakázka musí být v době prokázání kvalifikace řádně dokončena a předána Objednateli.
+Předizolované potrubí použité při realizaci předložených významných zakázek musí být certifikováno v souladu s níže uvedeným:
+Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+anebo
+Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.
+Uvedenou zkušenost musel Dodavatel nabýt za posledních deset (10) let před zahájením zadávacího řízení. 
+Pro vyloučení pochybností Zadavatel uvádí, že výše uvedené činnosti, tj. vypracování PD, montáž a uvedení do provozu nového horkovodu, kterými bude Dodavatel prokazovat splnění kritéria technické kvalifikace podle tohoto bodu, nemusely nastat v dané zakázce kumulativně. Zadavatel připouští prokázání splnění kritéria technické kvalifikace dvěma referenčními zakázkami, a to pro vypracování PD a samostatně pro montáž a uvedení horkovodu do provozu.
+Předložením řádně vyplněné a podepsané tabulky formuláře „Seznam stavebních prací, významných dodávek nebo služeb“, která bude dokládat zkušenost Dodavatele/ jiné osoby/osoby podávající společnou Nabídky na realizaci zakázek k prokázání splnění kvalifikačního požadavku 7.1 c). 
+Formulář tabulky je uveden v příloze č. 4 Kvalifikační dokumentace. Dodavatel/jiná osoba/osoby podávající společnou Žádost o účast současně ke každé referenci uvedené v „Seznamu stavebních prací, významných dodávek nebo služeb“ předloží i osvědčení objednatele dané referenční zakázky o jejím řádném provedení a dokončení předmětných stavebních prací, dodávek a služeb.
+Osvědčení objednatele referenční zakázky může být nahrazeno písemným čestným prohlášením Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast, Zadavatel však preferuje osvědčení podepsané objednatelem referenční zakázky. V osvědčení i čestném prohlášení budou vždy uvedeny kontaktní údaje na osoby objednatele dané referenční zakázky, u kterých si může Zadavatel referenci prověřit (jméno a příjmení, pozice, telefon, e-mail). 
+Zadavatel zároveň upozorňuje, že může, ve smyslu § 39 odst. 5 ZZVZ, ověřovat věrohodnost poskytnutých údajů a pokud by např. čestné prohlášení Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast neodpovídalo skutečnosti, může se jednat o důvod pro vyloučení Účastníka dle § 48 odst. 2 písm. c) ZZVZ.
+Doby, ve kterých musely být zakázky Dodavatelem/ jinou osobou/osobou podávající společnou Žádost o účast realizovány, jsou dodrženy, byly-li zakázky v daných dobách dokončeny.
+Pro vyloučení pochybností Zadavatel uvádí, že zkušenosti Dodavatele/ jiné osoby/osoby podávající společnou Žádost o účast s realizací zakázek musí být doloženy i v případě, že objednatelem takových zakázek byl Zadavatel či jiná entita ze Skupiny ČEZ.
+7.1 d)
+Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který Zadavateli prokáže, že má zaveden systém řízení jakosti/kvality dle ČSN EN ISO 9001 (certifikát vydaný Dodavateli). 
+
+Předložením platného certifikátu systému řízení jakosti/kvality ČSN EN ISO 9001, vydaného podle českých technických norem akreditovanou osobou, pro oblast spojenou s předmětem plnění.
+nebo 
+potvrzení certifikačního orgánu o úspěšném provedení certifikace. Zadavatel uzná rovnocenné doklady vydané v členském státě Evropské unie a rovněž jiné doklady o rovnocenných opatřeních k zajištění jakosti/kvality.
+7.1 e)
+Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který Zadavateli prokáže, že má zaveden systém environmentálního řízení i dle normy ČSN EN ISO 14001 (certifikát vydaný Dodavateli).
+Předložením platného certifikátu systému environmentálního řízení vydaného dle normy ČSN EN ISO 14001 akreditovanou osobou, nebo dokladu o registraci do systému environmentálního řízení a auditu (EMAS), pro oblast spojenou s předmětem plnění.
+nebo 
+potvrzení certifikačního orgánu o úspěšném provedení certifikace.
+
+7.1 f)
+Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který Zadavateli prokáže, že splňuje požadavky na bezpečnost a ochranu zdraví při práci dle ČSN EN ISO 45001 veřejné zakázky z hlediska bezpečnosti a ochrany zdraví při práci (certifikát vydaný Dodavateli).
+Předložením platného certifikátu systému managementu bezpečnosti a ochrany zdraví při práci dle ČSN EN ISO 45001 vydaného akreditovanou osobou, nebo potvrzení certifikačního orgánu o úspěšném provedení certifikace.
+Zadavatel uzná rovnocenné doklady (certifikáty) vydané akreditovanou osobou v členském státě Evropské unie a rovněž jiné doklady o rovnocenných opatřeních v oblasti systému managementu z hlediska bezpečnosti a ochrany zdraví při práci, nebo 
+předložením vyplněného a podepsaného formuláře „Dotazník pro hodnocení přístupu Dodavatele k ŽP a BOZP“, který je uveden v příloze č. 1 Kvalifikační dokumentace (k prokázání splnění daného kvalifikačního požadavku je nezbytně nutné, aby Dodavatel/jiná osoba/osoby podávající společnou Nabídku prokazující kvalifikační požadavek po vyplnění tabulky dosáhla hodnocení v rozsahu A-C.)
+7.1 g)
+Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který Zadavateli prokáže, že disponuje osobami s níže uvedenou odbornou způsobilostí: 
+Projektový manažer
+autorizovaný inženýr v oboru Pozemní stavby nebo Technologická zařízení staveb, VŠ vzdělání stavebního směru,
+pět (5) let praxe v oblasti výstavby energetických zdrojů/tepláren (rekonstrukce nebo nová výstavba) či výstavby potrubních liniových staveb tepelných sítí,
+praxe na pozici projektového manažera, který se v posledních deseti (10) letech podílel alespoň na jedné (1), realizované zakázce uvedené do trvalého provozu v oblasti výstavby energetického zdroje/teplárny či výstavby, modernizace nebo rekonstrukce potrubní liniové stavby tepelných sítí, jejíž hodnota činila min. 100 mil. Kč bez DPH a byla použita minimálně dimenze potrubí DN350,
+a zároveň praxe na pozici projektové manažera, který se v posledních deseti (10) letech podílel alespoň na jedné (1) zakázce v oblasti výstavby energetického zdroje/ teplárny či výstavby, modernizace nebo rekonstrukce potrubní liniové stavby, jejíž hodnota činila min. 80 mil Kč bez DPH a byla použita minimálně dimenze potrubí DN400 na části horkovodu.
+Hlavní inženýr projektu/ Dozor projektanta
+pět (5) let praxe v oblasti projektování energetických zařízení, potrubních liniových staveb tepelných sítí či technologických zařízení staveb, 
+praxe na pozici hlavního inženýra projektu, který se v posledních deseti (10) letech podílel alespoň na jedné (1), realizované zakázce uvedené do trvalého provozu v oblasti výstavby energetického zdroje/teplárny či výstavby, modernizace nebo rekonstrukce potrubní liniové stavby tepelné sítě,
+osvědčení o autorizaci podle zákona č. 360/1992 Sb., o výkonu povolání autorizovaných architektů a o výkonu povolání autorizovaných inženýrů a techniků činných ve výstavbě, ve znění pozdějších předpisů, (případně osvědčení o registraci v případě osob usazených nebo hostujících) v oboru Pozemní stavby nebo Technologická zařízení staveb. 
+Stavbyvedoucí
+pět (5) let praxe v oblasti výstavby energetických zdrojů/tepláren či výstavba, modernizace nebo rekonstrukce potrubních liniových staveb tepelných sítí či technologických zařízení staveb.
+praxe na pozici vedoucího stavby, který se v posledních deseti (10) letech podílel alespoň na jedné (1) realizované zakázce uvedené do trvalého provozu v oblasti výstavby energetického zdroje/teplárny či výstavba, modernizace nebo rekonstrukce potrubní liniové stavby tepelných sítí,
+Znalost češtiny (minimální úroveň B2 dle CEFR),
+osvědčení o autorizaci podle zákona č. 360/1992 Sb., o výkonu povolání odborné vedení provádění stavby a o výkonu povolání autorizovaných inženýrů a techniků činných ve výstavbě, ve znění pozdějších předpisů, (případně osvědčení o registraci v případě osob usazených nebo hostujících) v oboru Pozemní stavby nebo Technologická zařízení staveb.
+Manažer zajištění a kontroly kvality
+pět (5) let praxe v oblasti zajištění a kontroly kvality během výstavby energetických zdrojů/tepláren či výstavba, modernizace nebo rekonstrukce potrubních liniových staveb či technologických zařízení staveb,
+praxe na pozici manažera zajištění a kontroly kvality, který se v posledních deseti (10) letech podílel alespoň na jedné (1) realizované zakázce uvedené do trvalého provozu v oblasti výstavby energetického zdroje/teplárny či výstavba, modernizace nebo rekonstrukce potrubních liniových staveb či technologických zařízení staveb.
+
+Předložením čestného prohlášení, v němž Dodavatel/jiná osoba/osoby podávající společnou Žádost o účast uvede, že disponuje osobou, která splňuje vlastnosti specifikované Zadavatelem v kvalifikačním požadavku 7.1 f) Kvalifikační dokumentace, prostřednictvím které se Zadavateli zavazuje plnit Předmět Veřejné zakázky. 
+K této osobě budou uvedeny následující informace:
+jméno osoby, 
+název zaměstnavatele osoby (jedná-li se o fyzickou osobu podnikající, uvede Dodavatel/jiná osoba/osoby podávající společnou Žádost o účast právě tuto skutečnost),
+informace o jejím vzdělání a odborné kvalifikaci a 
+role osoby při realizaci Veřejné zakázky. 
+Přílohou čestného prohlášení budou veškeré doklady (osvědčení o vzdělání a odborné kvalifikaci osoby, profesní životopisy v seznamu uvedených), kterými splnění kvalifikačního požadavku 7.1 f) Dodavatel/jiná osoba/osoby podávající společnou Žádost o účast prokazuje.
+Zadavatel nadto požaduje, aby profesní životopis fyzické osoby byl podepsán právě touto fyzickou osobou (nikoliv tedy Dodavatelem/jinou osobou/osobou podávající společnou Žádost o účast).
+dokumenty tvořící žádost o účast
+Žádost o účast bude předložena Zadavateli v písemné formě prostřednictvím NEN ve formátu *.pdf. 
+Žádost o účast musí tvořit dokumenty uvedené v prvním sloupci tabulky níže, není-li uvedeno v konkrétním případě, že doklad Zadavateli předkládají pouze zahraniční osoby, nebo osoby podávající společnou Žádost o účast. Zadavatel doporučuje Žádost o účast rozdělit do složek 1 až 7 nebo 8 (pokud Dodavatel dle své vůle naplní i složku 8) a jednotlivé složky označit způsobem uvedeným ve třetím sloupci tabulky. 
+
+Název dokumentu
+Popis 
+Doporučené označení složky v NEN
+Odkaz na formulář, je-li součástí Zadávací dokumentace
+Identifikační list
+V případě Žádosti o účast podané samostatně jediným subjektem. 
+1_Identifikační list_A
+Příloha č. 1 A KD
+
+V případě Žádosti o účast podané společně několika subjekty.
+1_Identifikační list_B 
+Příloha č. 1 B KD
+Smlouva osob podávající společnou Žádost o účast dle odst. 3.17 KD
+V případě Žádosti o účast podané společně několika subjekty. 
+1a_Smlouva
+(název osob dle obchodního rejstříku)
+
+Plná moc/plné moci osoby/osob za osoby podávající společnou Žádost o účast dle odst. 3.17 KD
+Doklad bude uveden jen v případě, podává-li Žádost o účast několik subjektů společně a neplyne-li zmocnění z výpisu, který je povinna každá osoba předložit v souladu s kvalifikačním požadavkem 5.1 a). Z plné moci musí být zmocnění vymezeno jednoznačně a zcela určitě a srozumitelně. 
+1b_Plná moc_XXX (název osoby dle obchodního rejstříku)
+
+Zmocnění 
+Zmocnění k podpisu Identifikačního listu, není-li Dodavatel podepsán osobami uvedenými ve výpisu, který je povinna každá osoba předložit v souladu s kvalifikačním požadavkem 5.1 a).
+2_Zmocnění_XXX (Název osoby dle obchodního rejstříku)
+
+Doklady prokazující splnění základní způsobilosti podle článku 4 této Kvalifikační dokumentace.
+
+Dodavatel uvede veškeré doklady, které požaduje Zadavatel k prokázání základní způsobilosti uvedené v odst. 4.1 této KD. 
+Prokazuje-li Dodavatel část kvalifikace prostřednictvím jiné osoby ve smyslu odst. 3.16 této KD, pak bude Žádost o účast obsahovat i doklady k prokázání základní způsobilosti Dodavatele, a právě tolik složek, kolik je osob, prostřednictvím kterých Dodavatel prokazoval splnění některé části kvalifikace. Uvedené platí obdobně u společné Žádosti o účast.
+3_Základní způsobilost_XXX (název osoby dle obchodního rejstříku)
+Příloha č. 2 KD Vzor čestného prohlášení Dodavatele k prokázání základní kvalifikace;
+Příloha č. 6 KD – Vzor čestného prohlášení Dodavatele ohledně skutečnosti nevydávání Zadavatelem požadovaného dokladu týkající se kvalifikace 
+Doklady prokazující splnění profesní způsobilosti podle článku 5 této Kvalifikační dokumentace.
+
+Dodavatel uvede veškeré doklady, které požaduje Zadavatel k prokázání profesní způsobilosti uvedené v odst. 5.1 této KD. 
+Prokazuje-li Dodavatel část kvalifikace prostřednictvím jiné osoby ve smyslu odst. 3.16 této KD, pak bude Žádost o účast obsahovat i doklady k prokázání profesní způsobilosti dle odst. 5.1 a) Dodavatele, a právě tolik složek, kolik je osob, prostřednictvím kterých Dodavatel prokazoval některou část kvalifikace. Uvedené platí obdobně u společné Žádosti o účast.
+4_Profesní způsobilost_XXX (název osoby dle obchodního rejstříku)
+Příloha č. 6 KD – Vzor čestného prohlášení Dodavatele ohledně skutečnosti nevydávání Zadavatelem požadovaného dokladu týkající se kvalifikace
+Doklady prokazující splnění ekonomické kvalifikace podle článku 6 této Kvalifikační dokumentace.
+Dodavatel uvede veškeré doklady, které požaduje Zadavatel k prokázání ekonomické kvalifikace uvedené v odst. 6.1 této KD. 
+5_Ekonomická kvalifikace_XXX (název osoby dle obchodního rejstříku) 
+Příloha č. 5 KD – Tabulka výkazu obratu Dodavatele
+Doklady prokazující splnění technické kvalifikace podle článku 7 této Kvalifikační dokumentace.
+
+Dodavatel uvede veškeré doklady, které požaduje Zadavatel k prokázání technické kvalifikace, uvedené v odst. 7.1 této KD. 
+6_Technická kvalifikace_XXX 
+(název osoby dle obchodního rejstříku)
+Příloha č. 3 KD- Dotazník pro hodnocení přístupu Dodavatele k ŽP a BOZP; 
+Příloha č. 4 KD – Vzor formuláře „Seznam stavebních prací, významných dodávek nebo služeb“;
+Příloha č. 6 KD – Vzor čestného prohlášení Dodavatele ohledně skutečnosti nevydávání Zadavatelem požadovaného dokladu týkající se kvalifikace
+Plné moci osob podepisujících/plná moc osoby podepisující formulář „Seznam stavebních prací, významných dodávek nebo služeb“
+Dodavatel doloží plné moci osob/plnou moc osoby podepisující formulář „Seznam stavebních prací, významných dodávek nebo služeb“. 
+6a_Plné moci seznamu prací
+
+Prohlášení subjektu s formou akciové společnosti nebo s právní formou obdobnou akciové společnosti se sídlem v zahraničí 
+Doklad bude uveden jen v případě, předkládá-li Žádost o účast akciová či obdobná společnost se sídlem v zahraničí. Čestné prohlášení musí obsahovat informaci o tom, které osoby jsou vlastníky akcií, jejichž souhrnná jmenovitá hodnota přesahuje 10 % základního kapitálu takové osoby, s uvedením zdroje, z něhož údaje o velikosti podílu akcionářů vychází. Podává-li Žádost o účast více osob, musí být toto čestné prohlášení předloženo za každou akciovou či obdobnou společnost se sídlem v zahraničí.
+7_Zahraniční subjekt_XXX (název osoby dle obchodního rejstříku)
+Příloha č. 3 části 3 ZD – Vzor čestného prohlášení Dodavatele se sídlem v zahraničí
+Další doklady, které požaduje Dodavatel za vhodné k uvedení v Žádosti o účast, a další dokumenty, jsou-li touto Kvalifikační dokumentací vyžadovány
+
+8_Ostatní
+
+Podpis žádosti o účast
+Dokumenty, které mají být podepsány Dodavatelem, musí být podepsány k tomu oprávněnou osobou.
+Dokumenty, které mají být podepsány Dodavatelem, předkládané Dodavatelem prostřednictvím Elektronického nástroje NEN se považují za podepsané Dodavatelem.
+Bude-li Žádost o účast podávat za Dodavatele jiná, k tomu zmocněná osoba, musí být do Žádosti o účast vložena plná moc, která musí být řádně podepsána (buď zaručeným elektronickým podpisem, nebo musí být předložena oskenovaná vlastnoručně podepsaná plná moc) za Dodavatele osobou, která je oprávněna jednat za Dodavatele a ze které musí vyplývat zmocnění takové osoby Dodavatelem k podání Žádosti o účast.
+Dokumenty tvořící Žádost o účast, u nichž je požadován podpis jiné osoby dle této Kvalifikační dokumentace, musí být řádně podepsány buď zaručeným elektronickým podpisem, nebo vlastnoručně podepsané a naskenované. Za řádné podepsání se považuje, pokud za jinou osobu bude/ou podepsána/y osoba/osoby, která/é je/jsou oprávněna/y jednat jménem či za jinou osobu.
+V případě, že dokumenty požadované v této Kvalifikační dokumentaci, u nichž je požadován podpis jiné osoby, bude podepisovat osoba k tomuto úkonu zmocněná, musí být do Žádosti o účast vložena i plná moc. Plná moc musí být řádně podepsána osobou, která je oprávněna jednat za jinou osobu a musí být v ní výslovně uvedeny veškeré úkony, k nimž je zmocněná osoba oprávněna. Pokud podepisuje za jinou osobu prokurista zapsaný v obchodním rejstříku jiné osoby, nemusí vkládat do Žádosti o účast plnou moc. 
+Způsob, místo a lhůta pro podání Žádostí o účast
+Žádost o účast bude předložena Zadavateli elektronicky prostřednictvím elektronického nástroje NEN na webové adrese: https://nen.nipez.cz.  
+Zadavatel požaduje, aby Žádost o účast byla šifrována pomocí veřejného klíče Zadavatele (certifikát pro šifrování), který je ke stažení v sekci „Zadávací dokumentace“ k této Veřejné zakázce na Profilu zadavatele. 
+Žádost o účast musí být doručena Zadavateli nejpozději do konce Lhůty pro podání Žádosti o účast uvedené v Oznámení o zahájení zadávacího řízení.  
+K Žádosti o účast, která bude Zadavateli doručena, v rozporu se ZZVZ, po termínu uvedeném v Oznámení o zahájení zadávacího řízení nebo podána jiným způsobem než stanoveným v této Zadávací dokumentaci, se nepřihlíží. Zadavatel bezodkladně vyrozumí Dodavatele o tom, že jeho Žádost o účast byla podána po uplynutí Lhůty pro podání Žádostí o účast nebo nebyla podána prostřednictvím stanoveného elektronického nástroje v souladu se Zadávací dokumentací nebo nebyla šifrována pomocí veřejného klíče. 
+Posouzení kvalifikace 
+Zadavatel posoudí, zda Účastník splnil kvalifikaci dle odst. 3.1 výše.
+Zadavatel může požadovat po Účastníkovi, aby písemně objasnil předložené informace či doklady, nebo předložil další informace či doklady prokazující splnění kvalifikace. Účastník je povinen splnit tuto povinnost ve lhůtě stanovené Zadavatelem. Skutečnosti rozhodné pro splnění kvalifikace mohou nastat v případě postupu podle tohoto ustanovení i po uplynutí Lhůty pro podání Žádostí o účast.
+Účastník, který nesplní kvalifikaci v požadovaném rozsahu nebo nesplní povinnost stanovenou v odst. 3.20 výše, bude Zadavatelem vyloučen z účasti v Jednacím řízení s uveřejněním. 
+Zadavatel bezodkladně odešle Účastníkovi oznámení o jeho vyloučení z účasti v Jednacím řízení s uveřejněním s odůvodněním.
+Seznam příloh ke Kvalifikační dokumentaci
+Příloha č. 1 A – Identifikační list Dodavatele
+Příloha č. 1 B – Identifikační list Dodavatele – pro více subjektů podávajících společnou Žádost o účast 
+Příloha č. 2 - Vzor čestného prohlášení Dodavatele k prokázání základní kvalifikace 
+Příloha č. 3 - Dotazník pro hodnocení přístupu Dodavatele k ŽP a BOZP 
+Příloha č. 4 - Vzor formuláře „Seznam stavebních prací, významných dodávek nebo služeb“ 
+Příloha č. 5 - Tabulka výkazu obratu Dodavatele
+Příloha č. 6 - Vzor čestného prohlášení Dodavatele ohledně skutečnosti nevydávání Zadavatelem požadovaného dokladu týkající se kvalifikace
+Přílohy ke Kvalifikační dokumentaci
+Příloha č. 1 
+A. Identifikační list Dodavatele
+
+B. Identifikační list Dodavatele – pro více subjektů podávajících společnou Žádost o účast 
+
+Příloha č. 2 
+Vzor čestného prohlášení Dodavatele k prokázání základní kvalifikace 
+
+Příloha č. 3 
+Dotazník pro hodnocení přístupu Dodavatele k ŽP a BOZP
+Před vytištěním uvedený dotazník Dodavatel vyplní v elektronické podobě dle návodu uvedeného v tomto dotazníku. Po jeho vyplnění se automaticky zobrazí výsledná kategorie a dosažený počet bodů. (požadovaná kategorie A-C). 
+
+Příloha č. 4  
+Vzor formuláře „Seznam stavebních prací, významných dodávek nebo služeb“
+
+Příloha č. 5
+Tabulka výkazu obratu Dodavatele
+
+Příloha č. 6 
+Vzor čestného prohlášení Dodavatele ohledně skutečnosti nevydávání Zadavatelem požadovaného dokladu týkající se kvalifikace
+
+
+

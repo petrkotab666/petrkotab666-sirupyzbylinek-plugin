@@ -1,0 +1,339 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+
+ 
+„CV_HV propoj EPR-Kadaň“
+ 
+
+
+
+
+ČÁST 4
+
+
+NÁVRH SMLOUVY
+
+Příloha 19
+
+Seznam zkratek
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zkratka
+Význam
+
+
+AC
+Kontrola vstupu
+AML
+Opatření proti praní špinavých peně (Anti Money Laundering ) 
+AsB
+Dokumentace skutečného stavu 
+AsB DS
+Dokumentace skutečného stavu připojení výrobny k DS 
+ASŘ / ASŘTP
+Automatický systém řízení / technologického procesu
+BOZP
+Bezpečnost a ochrana zdraví při práci
+CCTV 
+Rozhlas, orientační a informační systém a kamerový systém
+CES
+Centrální elektrická stanice
+CPM
+Metoda kritické cesty (Critical Path Method)
+CYBEX
+Pravidla kybernetické bezpečnosti pro externí pracovníky
+ČMI
+Český metrologický institut
+ČR
+Česká republika
+ČSN
+Označení českých technických norem
+DBP
+Projektová dokumentace bouracích prací 
+DD
+Realizační projektová dokumentace 
+DD
+Realizační projektová dokumentace (Detail Design)
+DKS
+Doklady ke kolaudačnímu souhlasu 
+DKS
+Doklady ke kolaudačnímu souhlasu 
+DM
+Dokumentace pro demontáž 
+DM
+Dokumentace pro demontáž 
+DN
+Jmenovitá světlost potrubí
+DOO
+Dokumentace pro obsluhu Objednatele (školení) / pro školení personálu 
+DOSS
+Dotčené orgány státní správy
+DPDS
+Dokumentace pro připojení výrobny k DS 
+DPH
+Daň z přidané hodnoty
+DPP
+Předpisy pro provoz zařízení 
+DpPS
+projektová dokumentace pro provádění stavby
+DPS
+Dílčí provozní soubor
+DPSP
+Dokumentace pro školení personálu 
+DPU
+Předpisy pro údržbu zařízení 
+DPZP
+Doklady k povolení zkušebního provozu 
+DRP
+Plán obnovy (Disaster Recovery Plan)
+DS
+Distribuční soustava
+DSPS
+Dokumentace skutečného provedení stavby 
+DT
+domácí telefon
+DZSPD
+Dokumentace změny stavby před dokončením 
+ED
+Elektronická dokumentace
+EMC
+Elektromagnetická kompatibilita (Electromagnetic Compatibility)
+EMS
+Systém environmentálního managementu (Environmental Management Systém)
+EPR či EPR II
+Elektrárna Prunéřov
+EPS
+Elektrická požární signalizace
+ETU
+Elektrárna Tušimice
+EU
+Evropská unie
+EZS
+Elektronický zabezpečovací systém
+FAC
+Konečné předání díla
+FAT
+Factory Acceptance Test 
+FC
+Funkční celek
+FM
+Frekvenční měnič
+FZ
+Funkční zkoušky / Program funkčních zkoušek
+GT
+Garanční test
+HDO
+Hromadné dálkové ovládání
+HMG
+Harmonogram
+HoTuKa
+Horkovod Tušimice - Kadaň
+HV či TN
+Horkovod či technický napaječ
+HW
+Hardware
+ICT
+Informační a komunikační technologie (Information and Communication Technologies) 
+IČO
+Identifikační číslo
+IKB
+Informační a kybernetická bezpečnost
+InO
+Inženýrský objekt
+IZ
+Individuální zkoušky 
+JPS
+Jednopólové schéma
+KD
+kvalifikační dokumentace 
+KKS
+Technologicky a funkčně orientovaný systém značení
+KKZ
+Kniha kontrol a zkoušek
+KV
+Komplexní vyzkoušení 
+KZ
+Komplexní zkouška 
+MaR
+Měření a regulace 
+MD
+Montážní dokumentace 
+MD
+Montážní dokumentace 
+NB
+Napojovací bod
+NCR
+Protokol o neshodě (Non-Conformance Report)
+NDT
+Nedestruktivní testování
+NN
+Nízké napětí
+NV
+Nařízení vlády
+OČ
+Oběhová čerpadla
+OD
+Ostatní dokumentace
+OK
+Ocelové konstrukce
+P&ID 
+Schéma potrubí a přístrojů (Piping and Instrumentation Diagram)
+PAC
+Předběžné převzetí díla
+PBŘ
+Požárně bezpečnostní řešení
+PC
+Počítačová síť
+PCZ
+Projekt certifikačních zkoušek 
+PČ
+Podávací čerpadla
+PČO
+Projekt pomontážních čistících operací 
+PD 
+Projektová dokumentace
+PK
+Plán kvality
+PKV
+Předkomplexní vyzkoušení 
+PKZ
+Plán kontrol a zkoušek
+PLC
+Průmyslový počítač (Programmable Logic Controller)
+PMP
+Plán managementu projektu Zhotovitele
+PN
+Jjmenovitý tlak potrubí
+PO
+Požární ochrana
+POM
+Plán organizace montáže
+PoS
+Prohlášení o shodě
+POV
+Plán organizace výstavby
+PPN
+Program prvního najetí
+PrKZ
+Program kontrol a zkoušek 
+PS
+Provozní soubor
+PTD
+Průvodní technická dokumentace
+PTD DOPV
+Dokumentace ochrany před výbuchem 
+PTD GeP
+Geometrický plán 
+PTD GeZ
+Geodetické zaměření 
+PTD KL
+Kalibrační listy 
+PTD LO
+Dokumentace nakládání s odpady 
+PTD MONT
+Dokumentace z montáže 
+PTD NAJ
+Dokumentace z uvádění do provozu 
+PTD OK
+Zprávy o výchozí prohlídce ocelových konstrukcí 
+PTD PBZ
+Dokumentace požárně bezpečnostního zařízení 
+PTD SKOL
+Zaškolení personálu 
+PTD SW
+Licenční ujednání, aplikační SW a SW zálohy 
+PTD VTZ
+Dokumentace vyhrazených technických zařízení (revizní zprávy) 
+PTD VYR
+Dokumentace z výroby 
+PTPZ
+Projekty těsnostních a pevnostních zkoušek pro ucelené tlakové celky 
+PZP
+Projekt zkušebního provozu 
+PZUP
+Programy zkoušek a uvádění do provozu
+QA-QC
+Dokumentace pro zajištění a řízení kvality 
+RC
+Opravená dokumentace 
+RE
+Reklamace
+RR
+Revizní řády
+RT
+zkoušení materiálu prozářením
+SAT
+Site Acceptance Test 
+SKŘ
+Systém kontroly řízení
+SO
+Stavební objekt
+SV
+Stanovený výrobek
+SW
+Software
+TAS
+ČEZ Teplárenská, a.s.
+TD
+Technická dokumentace
+TH
+Tepelné hospodářství
+TP
+Technologické postupy 
+TZB
+Technické zařízení budov
+URZ
+Zavřený radioaktivní zářič
+VN
+Vysoké napětí
+VoKB
+Vyhláška č. 82/2018 Sb. (vyhláška o kybernetické bezpečnosti) 
+VRZ
+Výchozí revizní zpráva
+VVN
+Velmi vysoké napětí
+WBS
+Stromová struktura činností v HMG, metoda číslování (Work Breakdown Structure)
+WPQR
+Kvalifikace postupu svařování (Welding Procedure Qualification Record)
+WPS
+Svařovací postup (Welding Procedure Specification)
+ZoKB
+Zákon č. 181/2014 Sb. (zákon o kybernetické bezpečnosti)
+ZOV
+Zásady organizace výstavby 
+ZP
+Zákoník práce
+ZS 
+Zařízení staveniště
+ZZOÚ
+Zákon 110/2019 Sb., o zpracování osobních údajů
+ZZVZ
+Zákon č. 134/2016 Sb., o zadávání veřejných zakázek
+ŽP
+Životní prostředí

@@ -1,0 +1,94 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+„CV_HV propoj epr – kadaň“
+
+
+
+
+
+ČÁST 4
+
+
+návrh smlouvy
+
+
+Příloha 18
+
+
+Pojištění
+
+
+
+
+Příloha 18
+Pojištění
+
+Část A – pojištění zajištěné Objednatelem
+Stavebně montážní pojištění
+Pojištěný:Objednatel, Zhotovitel, poddodavatelé smluvně zúčastnění na budovaném Díle.
+
+Předmět pojištění:Sekce pojištění věcí:
+all risk pojištění pro případ fyzické ztráty, poškození nebo škody na Díle nebo částech Díla včetně materiálu použitého při provádění Díla.
+
+Sekce pojištění odpovědnosti:
+pro případ právním předpisem stanovené povinnosti nahradit nepředvídatelnou újmu způsobenou jiné osobě činností pojištěného ve spojení s prováděním Díla. Pojištění bude krýt veškerá tělesná zranění nebo smrt utrpěné jinou osobou a ztráty, poškození nebo škody na majetku jiné osoby kromě čisté finanční škody. Za jinou osobu se nepovažuje pojištěný a jeho zaměstnanci.
+
+Trvání pojištění:od data prvního předání Staveniště Zhotoviteli včetně období zkoušek a testování až do data Předběžného převzetí Díla Objednatelem (PAC).
+Pojistná částka:Sekce pojištění věcí:
+minimálně smluvní cena Díla dle Smlouvy (vyloučit však lze hodnotu neopakovatelných položek, např. dokumentace, SW a licencí).
+
+Sekce pojištění odpovědnosti:
+limit plnění minimálně 50 mil. Kč (slovy: padesát milionů korun českých) za jednu událost a všechny události agregovaně za pojistnou dobu.
+Spoluúčast:Sekce pojištění věcí:
+maximálně 1 000 000 Kč (slovy: jeden milion korun českých) za každou pojistnou událost, avšak
+maximálně 2 000 000 Kč (slovy: dva miliony korun českých) za každou pojistnou událost pro období zkoušek a testování a dále pro dvacet čtyři (24) měsíců záruční doby.
+
+Sekce pojištění odpovědnosti:
+maximálně 500 000 Kč (slovy: pět set tisíc korun českých) za každou pojistnou událost.
+Doložky/podmínky:(výčet hlavních, avšak ne všech doložek/podmínek)
+- stávající majetek (limit min. 50 mil. Kč),
+- rozšířená záruční doba (minimálně 24 měsíců),
+- riziko projektanta (limit min. 100 mil. Kč),
+- riziko dodavatele (limit min. 100 mil. Kč),
+- katastrofická rizika (limit min. 100 mil. Kč),
+- křížová odpovědnost.
+V případě, že v době sjednávání pojištění budou výše uvedené parametry tržně nedostupné případně dostupné za výrazně nevýhodných podmínek pro pojištěné, zahájí Smluvní strany jednání k úpravě výše uvedených parametrů s cílem přiblížit se co nejvíce k oboustranně přijatelným a tržně dostupným a výhodným podmínkám.
+
+Část B – pojištění zajištěné Zhotovitelem
+Pojištění přepravy
+
+Pojištěný:Objednatel, Zhotovitel, přepravce příp. poddodavatelé smluvně zúčastnění na budovaném Díle, pokud zajišťují transport pojištěných věcí a/nebo jsou jejich vlastníky.
+Předmět pojištění:pro případ ztráty, škody a poškození na věcech (tvořících Dílo či části Díla) během přepravy (včetně manipulací, nakládky, vykládky a skladování) od Zhotovitele, poddodavatelů nebo ze závodů výrobců na místo plnění Díla i opačným směrem. 
+
+Trvání pojištění:pro každou přepravu od jejího počátku (od započetí první manipulace pro naložení do dopravního prostředku) až do jejího konce (do ukončení poslední manipulace při vyložení z dopravního prostředku a složení na určené místo) včetně dočasného skladování během přepravy.
+Pojistná částka:minimálně 100 % hodnoty přepravovaných věcí v cenách znovupořízení včetně případných cel a poplatků a přepravních nákladů.
+Spoluúčast:maximálně 500 000 Kč (slovy: pět set tisíc korun českých) za každou pojistnou událost.
+Do pojištění bude zařazena každá přeprava, u které celková hodnota všech přepravovaných věcí překročí 1 000 000 Kč (slovy: jeden milion korun českých).
+Za podmínky dodržení všech výše uvedených parametrů může být toto pojištění zajištěno smluvním přepravcem.
+Termín prokázání:na písemnou výzvu Objednatele, a to do třech (3) dnů od výzvy  
+
+Pojištění profesní odpovědnosti
+
+Pojištěný:Zhotovitel, případně poddodavatelé provádějící příslušné činnosti viz předmět pojištění.
+Předmět pojištění:povinnost nahradit újmu způsobenou v souvislosti s činností architektů, inženýrů a techniků činných ve výstavbě (tzv. autorizované osoby) vč. dalších odborných činností (např. zpracování dokumentace, koordinace prací apod.).
+
+Trvání pojištění:od data podpisu Smlouvy do data Předběžného převzetí Díla Objednatelem (PAC) a dále následujících minimálně šedesát (60) měsíců.
+Pojistná částka:limit plnění minimálně 25 000 000 Kč (slovy: dvacet pět milionů korun českých) pro jednu pojistnou událost a v ročním agregátu.
+Spoluúčast:maximálně 500 000 Kč (slovy: pět set tisíc korun českých) za každou pojistnou událost.
+Termín prokázání:dle milníku M1 uvedeného v odst. 7.2 Smlouvy a dále kdykoli na písemnou výzvu Objednatele, a to do třech (3) dnů od výzvy.
+

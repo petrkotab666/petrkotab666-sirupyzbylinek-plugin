@@ -1,0 +1,52 @@
+
+===== xl/worksheets/sheet1.xml =====
+ 
+                       11                         20                  0    1    2    3    14    13    12    21    15                                                                        5         6                7       8         9      10                        
+
+===== xl/worksheets/sheet2.xml =====
+ 
+                        11                               25                     0    1    2    3    14    13    16    22    17    18    19    4                                                                                          5         6                   7          8            9      10                           
+
+===== xl/worksheets/sheet3.xml =====
+ 
+                      11                           23                   0    1    2    3    14    13    12    22    24    15                                                                              5         6                 7        8          9      10                         
+
+===== xl/sharedStrings.xml =====
+ 
+   Název zakázky    Termín předání/převzetí zakázky objednatelem   
+(den, měsíc a rok)    Místo realizace zakázky
+(stát, město)    Název, IČO a adresa objednatele zakázky
+(kontaktní osoba/ telefonní spojení/e-mail)
+    Byla tato zakázka řádně dokončena a předána jejímu objednateli? 
+ANO/NE    V ............................. dne ............................. 
+[Účastník tuto instrukci odstraní vždy. V případě zaručeného elektronického podpisu Účastník smaže text uvedený výše, cituji „dne …“.]    [Dodavatel tuto instrukci odstraní vždy. V případě zaručeného elektronického podpisu Dodavatel  smaže text uvedený výše, cituji „dne …“.]    …………………………………………………                                                                             [            Jméno, příjmení a podpis osob(y) oprávněných(é) jednat za Dodavatele           ]           V případě prokázání kvalifikace prostřednictvím jiné osoby (např. poddodavatelem) bude zpracovaný Seznam stavebních prací, významných dodávek nebo služeb podepsán i jinou osobou v souladu s ZD, část 2 - Kvalifikační dokumentace.    Příloha č. 4 k části 2 ZD  - Vzor formuláře „Seznam stavebních prací, významných dodávek a služeb“                                                                                                                                                                                          Název Veřejné zakázky: „CV_HV propoj EPR-Kadaň“    Jaká byla dimenze potrubí realizované zakázky?
+    Dodavatel provedl výstavbu, modernizaci  nebo rekonstrukci?    Byly tyto činnosti předmětem zakázky - vypracování projektové dokumentace, dodávka potrubí, montáž a uvedení do provozu, a to vše kumulativně nebo více smlouvami na stejném zařízení? 
+(ANO/NE)    Byla tato zakázka řádně dokončena a předána jejímu objednateli? 
+(ANO/NE)    Jaká byla dimenze  potrubí realizované zakázky?
+    Byla použito předizolované potrubí s elektrosvařitelnými spojkami?             (ANO/NE)    Jaká byla délka potrubí realizované zakázky?    Jaká byla hodnota zakázky? ( V případě cizí měny bude částka Zadavatelem přepočtana, a to kurzem, ke dni lhůty pro podání žádostí o účast.)     Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který prokáže zkušenost s realizací alespoň dvou (2) významných zakázek, jejímž předmětem byl závazek Dodavatele provést: výstavbu, modernizaci nebo rekonstrukci horkovodu spočívající ve vypracování PD, dodávce potrubí, montáži a uvedení do provozu horkovodo min. dimenzi DN400 v předizolovaném provedení
+Předizolované potrubí použité při realizaci předložených významných zakázek musí být certifikováno v souladu s níže uvedeným:
+1)	Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+a zároveň
+2)	Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.
+
+Zakázka musí být v době prokázání kvalifikace řádně dokončena a předána jejímu Objednateli.
+Uvedenou zkušenost musel Dodavatel nabýt za posledních pět (5) let před zahájením zadávacího řízení. 
+Pro vyloučení pochybností Zadavatel uvádí, že výše uvedené činnosti, tj. vypracování PD, dodání potrubí, montáž a uvedení horkovodu do provozu, kterými bude Dodavatel prokazovat splnění kritéria technické kvalifikace podle tohoto bodu, musely nastat v dané zakázce kumulativně, avšak Zadavatel připouští prokázání splnění kritéria technické kvalifikace více smlouvami na stejném zařízení.
+    Bylo použití předizolované potrubí certifikováno:      1) Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+a zároveň 2) Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.  (ANO/NE)    Bylo použití předizolované potrubí certifikováno:      1) Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+a zároveň 2) Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.                            (ANO/NE)    Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který prokáže zkušenost s realizací alespoň jedné (1) významné zakázky, jejímž předmětem bylo vypracování PD, dodávka, montáž a uvedení do provozu nového horkovodu o dimenzi potrubí min. DN200 v předizolovaném provedení, kdy hodnota zakázky činila min. 100 mil. Kč. Zakázka musí být v době prokázání kvalifikace řádně dokončena a předána Objednateli.
+Předizolované potrubí použité při realizaci předložených významných zakázek musí být certifikováno v souladu s níže uvedeným:
+1)	Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+a zároveň
+2)	Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.
+
+Uvedenou zkušenost musel Dodavatel nabýt za posledních deset (10) let před zahájením zadávacího řízení. 
+Pro vyloučení pochybností Zadavatel uvádí, že výše uvedené činnosti, tj. vypracování PD, dodání, montáž a uvedení do provozu nového horkovodu, kterými bude Dodavatel prokazovat splnění kritéria technické kvalifikace podle tohoto bodu, musely nastat v dané zakázce kumulativně, avšak Zadavatel připouští prokázání splnění kritéria technické kvalifikace více smlouvami na stejném zařízení.
+    Jaká byla hodnota zakázky? ( V případě cizí měny bude částka Zadavatelem přepočtana, a to kurzem, ke dni lhůty pro podání žádosti o účast.)     Technickou kvalifikaci dle tohoto bodu splní Dodavatel, který prokáže zkušenost s realizací alespoň jedné (1) zakázky, jejímž předmětem bylo vypracování PD, dodávka, montáž a uvedení do provozu nového horkovodu o dimenzi potrubí min. DN250 v předizolovaném provedení s použitím elektrosvařitelných spojek, o délce min. 3 500 m a hodnota zakázky činila min. 50 mil Kč. Zakázka musí být v době prokázání kvalifikace řádně dokončena a předána Objednateli.
+Předizolované potrubí použité při realizaci předložených významných zakázek musí být certifikováno v souladu s níže uvedeným:
+3)	Certifikát EHP: Euroheat&Power EHP 001, podle EN 253, EN 448, EN 488-1, EN 488-2, EN 14419, EN 15698-1 a EN 15698-2,
+a zároveň
+4)	Certifikát výrobku, Technický a zkušební ústav stavební Praha, s.p., podle §5 nařízení vlády č. 163/2002 Sb. a podle 312/2005 Sb. a 215/2016 Sb.
+
+Uvedenou zkušenost musel Dodavatel nabýt za posledních deset (10) let před zahájením zadávacího řízení. 
+Pro vyloučení pochybností Zadavatel uvádí, že výše uvedené činnosti, tj. vypracování PD, dodání, montáž a uvedení do provozu nového horkovodu, kterými bude Dodavatel prokazovat splnění kritéria technické kvalifikace podle tohoto bodu, musely nastat v dané zakázce kumulativně, avšak Zadavatel připouští prokázání splnění kritéria technické kvalifikace více smlouvami na stejném zařízení.   

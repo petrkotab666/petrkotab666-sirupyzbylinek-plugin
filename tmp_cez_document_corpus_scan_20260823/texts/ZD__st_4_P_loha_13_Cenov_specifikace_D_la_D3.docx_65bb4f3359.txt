@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+ČÁST 4
+
+
+NÁVRH SMLOUVY
+
+Příloha 13
+
+Cenová specifikace Díla
+
+
+
+Příloha 13
+Cenová specifikace Díla
+CENOVÁ SPECIFIKACE
+
+
+„CV_HV propoj EPR-Kadaň“
+
+ČÁST 1:
+
+
+
+Příloha  13 - Cenová  specifikace  díla
+
+ČÁST 2:
+
+
+
+Požadavky na zpracování položkového soupisu prací změn v průběhu výstavby
+
+
+Požadavky na zpracování položkového soupisu prací změn v průběhu výstavby: 
+
+
+Položkový soupis prací změn bude zpracován ve stejné struktuře a členění, jako položkový soupis prací přiložený ke smlouvě o dílo.
+
+Rozpočet změn bude předložen vždy jako jeden exportní soubor z rozpočtového SW v otevřeném formátu .xls, nebo .xlsx opatřený společnou Rekapitulací.  Pokud Zhotovitel nedisponuje rozpočtovým SW předloží změnový rozpočet zpracovaný v MS Office (Excel) v otevřeném formátu .xls, nebo .xlsx a to přednostně  v souladu s Vyhl.169/2016 Sb. 
+
+Rekapitulace změn bude obsahovat vždy základní členění:
+VCP – Rozpočet kladných změn (vícepráce). Předmětem VCP může být více dílčích rozpočtů (PS, SO, VON, VRN) , které se však budou započítávat pouze do kladných změn.
+MP – Rozpočet záporných změn (méněpráce). Předmětem MP může být více dílčích rozpočtů (PS, SO, VON, VRN), které se však budou započítávat pouze do záporných změn.
+Rekapitulace bude součtem těchto dvou základních soupisů kladných/záporných změn.    
+
+Každá položka změnového rozpočtu bude vždy obsahovat výkaz výměr (numerický výpočet množství).
+
+Změnový rozpočet bez výpočtu množství, bude povinně obsahovat v části „VV“ (výkaz výměr) odkaz na konkrétní přílohu návrhu změny, ze které Zhotovitel množství převzal.
+
+Soupis kladných a záporných změn bude prioritně obsahovat položky z objednatelem schválené projektové dokumentace.
+
+Položky z SoD, jejichž množství se změnilo nad rámec SoD, budou v části „cenová soustava“ opatřeny informací např. „P.Č.17 SoD“, a to za účelem kontroly JC (jednotkové ceny) ze smlouvy.
+
+Pokud se uplatněná výkonová položka nenachází v základní smlouvě, použije Zhotovitel položku novou, a to z cenové soustavy ÚRS aktuální v době realizace. Každá taková položka bude současně opatřena povinnou informací o cenové úrovni v části „Cenová soustava“.
+
+Materiálové dodávky budou oceněny za použití cenové soustavy ÚRS. Pokud se dodávka v cenové soustavě nenachází může být Zhotovitelem uplatněna položka z databáze ceníku „materiály on-line“. Informaci o zdroji uvede Zhotovitel do sloupce „cenová soustava“ vepsáním textu „m-online“.
+
+V případě, kdy nelze výkon, nebo dodávku zatřídit dle cenové soustavy ÚRS, je možné vytvořit vlastní položku (R-položku) opatřenou jedinečným kódem a v popisu řádně specifikovat.  Vlastní položka bude v části „cenová soustava“ opatřena informací „R-položka“. 
+Ke každé vlastní položce Zhotovitel doloží podrobnou kalkulaci za účelem ověření jednotkové ceny. Zhotovitelem předložená podrobná kalkulace bude zpracována dle kalkulačního vzorce v souladu s Metodikou ÚRS a bude obsahovat přiměřený ZISK. Zhotovitel je taktéž oprávněn uplatnit ziskovou přirážku při realizaci formou subdodávky do přiměřené výše. 
+
+Rozpočet kladných změn nebude v žádné části obsahovat nové položky vyjádřené v %. Pokud bude předmětem víceprací položka např. přesunu hmot, bude v rozpočtu uplatněna výhradně tonážní přirážka s vazbou na hmotnost dodávek z rozpočtu změn. 
+
+Množství přesouvané a likvidované suti musí vždy respektovat množství/hmotnost z demontážních položek.  Náklady na zvýšený přesun suti bude akceptován pouze po řádném zdůvodnění a doložení místa ukládky.
+
+Rozpočet změn bude zpracován dle Metodiky ÚRS. Jednotlivé položky budou v rozpočtu tříděny dle katalogu směrných cen. Montážní položka bude vždy nadřazena dodávce materiálu. Specifikovaný materiál bude vždy ve vazbě s montážní položkou. 
+
+
+
+
+

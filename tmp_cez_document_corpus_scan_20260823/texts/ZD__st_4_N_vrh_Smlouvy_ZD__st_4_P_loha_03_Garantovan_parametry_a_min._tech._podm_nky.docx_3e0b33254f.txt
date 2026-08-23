@@ -1,0 +1,181 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM
+
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+
+ČÁST 4
+
+
+NÁVRH SMLOUVY
+
+Příloha 3
+
+Garantované parametry a minimální technické podmínky
+
+
+
+
+
+
+
+
+
+
+
+
+
+Příloha 3
+Garantované parametry a minimální technické podmínky
+
+Obsah
+TOC \o "1-3" \h \z \u1Obecná pravidla pro garanční testy PAGEREF _Toc169853142 \h 3
+2ZÁKLADNÍ NORMY A POSTUPY PRO GARANČNÍ TESTY PAGEREF _Toc169853143 \h 4
+2.1Emise – hluk PAGEREF _Toc169853144 \h 4
+2.2Garanční test PAGEREF _Toc169853145 \h 4
+3GARANTOVANÉ PARAMETRY PAGEREF _Toc169853146 \h 5
+Garantované parametry pro GT PAGEREF _Toc169853147 \h 5
+4MINIMÁLNÍ TECHNICKÉ PODMÍNKY PAGEREF _Toc169853148 \h 5
+
+Obecná pravidla pro garanční testy
+Zhotovitel provede garanční testy za účelem ověření hodnot uvedených v kap. 3 Garantované parametry Zhotovitele této přílohy.
+
+Způsob provádění všech garančních testů Díla bude uveden v dokumentu Projekt garančních testů, který vypracuje Zhotovitel a předloží ke schválení Objednateli. Podmínkou pro zahájení garančních testů je schválený dokument Projekt garančních testů, podle kterého se budou tyto testy řídit.
+
+Garanční testy bude provádět Zhotovitel za účasti a technické spolupráce Objednatele. 
+Metody měření musí být v souladu se smlouvou, příslušnými zákony, vyhláškami a požadavky Objednatele a musí být uvedeny v „Projektu garančního testu“. Rovněž musí být v „Projektu garančního testu“ navrženy/uvedeny výčtem všechny normy (ČSN EN), které budou při provádění Garančního testu použity. Objednatel si vyhrazuje právo seznam norem v rámci schvalovacího procesu „Projektu Garančního testu“ revidovat. 
+
+Projekt garančních testů bude obsahovat minimálně následující:
+metody a příslušné přístroje pro garanční testy včetně automatických analyzátorů
+použité normy
+seznam měřícího zařízení použitého pro garanční testy
+přesnost přístrojů použitých pro garanční testy
+kalibrace všech přístrojů pro garanční testy
+výsledné nejistoty měření
+četnost odečítání hodnot
+seznam měřících míst
+harmonogram garančních testů a jejich přípravy
+organizace měření
+návrh oprávněných subjektů, které budou jednotlivá měření realizovat
+deník zkoušek
+
+Přístrojová technika pro garanční test bude v souladu s normami uvedenými v dokumentu „Projekt garančního testu“. Zhotovitel předloží Objednateli před zahájením garančního testu platné kalibrační osvědčení k použitým měřicím přístrojům. 
+
+Garanční měření bude provádět Zhotovitelem navržená a Objednatelem schválená nezávislá akreditovaná organizace.
+
+Jakékoli použité opravné postupy (korekce naměřených hodnot, nejistoty měření) musí být uvedeny v Projektu garančního testu.
+
+Dílo bude v průběhu garančního testu provozováno personálem Objednatele, který bude s provozováním a obsluhou zařízení seznámen Zhotovitelem před zahájením Garančního testu.
+
+Zhotovitel vybaví zařízení potřebnými měřícími místy a poskytne dodatečnou přístrojovou techniku se stanovenou přesností na provedení garančních testů.
+
+V době provádění garančních testů nesmí být prováděny žádné opravy, seřizování nebo úpravy na zařízení Díla. Záložní zařízení bude též podrobeno provádění garančního testu.
+
+V případě, že termíny ve schváleném harmonogramu garančních testů nebude možno dodržet z důvodu objektivních provozních podmínek ležících na straně Objednatele, např. zajišťování dodávek tepla smluvním partnerům, dodržení jiných smluvních závazků, anebo zamezení škody na zařízení Objednatele, umožní Objednatel splnění garantovaných parametrů Zhotoviteli v náhradní lhůtě. Nový termín bude stanoven Objednatelem zápisem do stavebního deník u bez uzavření dodatku ke Smlouvě a Zhotovitel je povinen se jím řídit.
+
+Objednatel poskytne pro účely garančních testů  provozní hmoty (vodu, elektrickou energii) a provozní personál pro realizaci garančních testů. Provozní personál Objednatele se v průběhu garančních testů bude plně řídit pokyny Zhotovitele.
+
+Zhotovitel plně odpovídá za řízení a provoz zařízení a za vedení záznamů a protokolů. Zhotovitel musí respektovat koordinační pokyny při spolupráci s oprávněnými osobami ze strany Objednatele. Veškeré protokoly z kontrolních měření musí být bezprostředně po ukončení garančních testů vzájemně odsouhlaseny.
+
+Na základě výsledků garančních testů vypracuje Zhotovitel do jednoho (1) měsíce “Hodnotící zprávu garančního testu”, včetně vyhodnocení naměřených hodnot s ohledem na splnění garantovaných parametrů. Výsledky budou Objednatelem posouzeny.
+
+Objednatel uzná dosažené hodnoty za splněné podepsáním „Protokolu o prokázání garantovaných parametrů Garančního testu" v návaznosti na “Hodnotící zprávu garančního testu“. Uznání je podmíněno splněním všech hodnot uvedených v čl. 3 Garantované parametry Zhotovitele této přílohy.
+
+Garantované parametry v následujících tabulkách červeně podbarvené a označené symbolem W, jsou nepřekročitelné, resp. nepodkročitelné a jejich nedodržení je v souladu se Smlouvou důvodem k nepřevzetí Díla.
+
+
+ZÁKLADNÍ NORMY A POSTUPY PRO GARANČNÍ TESTY
+
+Emise – hluk
+Zákon 272/2011 Sb. – O ochraně zdraví před nepříznivými účinky hluku a vibrací; ve znění pozdějších předpisů
+Zákon 258/2000 Sb. „Zákon o ochraně veřejného zdraví a o změně některých souvisejících zákonů“, Díl 6 Ochrana před hlukem, vibracemi a neionizujícím zářením
+ČSN EN ISO 3746 Akustika – Určení hladin akustického výkonu zdrojů hluku pomocí akustického tlaku
+Metodický návod pro měření a hodnocení hluku v mimopracovním prostředí. Ministerstvo zdravotnictví České republiky; říjen 2017
+ČSN ISO 1996-1: Akustika – Popis, měření a hodnocení hluku prostředí. Část 1: Základní veličiny a postupy pro hodnocení. Úřad pro technickou normalizaci, metrologii a státní zkušebnictví; únor 2017 
+ČSN ISO 1996-2: Akustika – Popis, měření a hodnocení hluku prostředí. Část 2: Určování hladin akustického tlaku. Úřad pro technickou normalizaci, metrologii a státní zkušebnictví; září 2018
+ČSN ISO 9613: Akustika – Útlum při šíření zvuku ve venkovním prostoru; září 1998.
+
+
+Garanční test 
+
+Zhotovitel provede Garanční test (dále též GT), kterým prokáže Objednateli, že Dílo splňuje všechny hodnoty uvedené v kap. 3.1 Garantované parametry pro GT. 
+
+GT bude proveden po Zhotovitelem úspěšně vykonané Komplexní zkoušce a před zahájením Zkušebního provozu Díla.
+
+
+GARANTOVANÉ PARAMETRY
+
+Garantované parametry pro GT 
+
+Garantovaný parametr
+Jednotka
+Hodnoty GP
+kat.
+3.1.1
+Přenesený tepelný výkon
+MWt
+≥ 52
+W
+3.1.2
+Průtok síťové vody
+t/h
+≥ 750
+W
+3.1.3
+Teplota vody v topné větvi
+°C
+        130      1)
+W
+3.1.4
+Teplota vody ve vratné větvi
+°C
+70      1)
+W
+3.1.5
+Provozní tlak
+MPa
+0,8 – 1,45
+W
+3.1.6
+Tlaková třída potrubí včetně příslušenství
+PN
+25
+W
+3.1.7
+Hladina akustického tlaku ve vzdálenosti 1 m od vnějšího obrysu oběhového/podávacího čerpadla
+dB (a)
+≤85
+W
+
+Pro výpočtovou venkovní teplotu -15 °C
+
+Všechny rotační stroje musí splňovat požadavek na vibrace v souladu s příslušnou normou řady ČSN ISO, pásmo A:
+ČSN ISO 20816-1 - Obecné pokyny pro měření;
+ISO 20816-3 – Průmyslové stroje nad 15 kW;
+ČSN ISO 10816-7 – Odstředivá čerpadla;
+ČSN 122011 – Ventilátory.
+
+MINIMÁLNÍ TECHNICKÉ PODMÍNKY 
+
+Zhotovitel je povinen splnit níže uvedené minimální technické podmínky. Jejich splnění bude prokázáno a vyhodnoceno v rámci plnění Díla nejpozději však do termínu PAC. 
+
+Požadavky na minimální technické podmínky: 
+Minimální technickou podmínkou je  minimální tepelný výkon 52MWt přenášený při teplotním spádu 130 °C / 70 °C.

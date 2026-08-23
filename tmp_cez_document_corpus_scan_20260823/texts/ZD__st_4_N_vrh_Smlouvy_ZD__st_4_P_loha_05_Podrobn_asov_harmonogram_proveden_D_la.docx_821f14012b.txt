@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM 
+
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+
+ČÁST 4
+
+
+návrh smlouvy
+
+Příloha 5
+
+Podrobný časový harmonogram provedení Díla
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Příloha 5
+Podrobný časový harmonogram provedení Díla
+Zhotovitel zpracuje podrobný časový harmonogram provádění Díla, který předloží Objednateli ke schválení do třiceti (30) dnů od podpisu Smlouvy.
+Podrobný časový harmonogram provádění Díla bude obsahovat:
+Hierarchickou strukturu činností/milníků vytvořenou pomocí unikátních WBS kódů určující doby trvání a termíny dokončení hlavních částí prováděného Díla a klíčové vnější vazby.
+Ganttův diagram se zobrazením závislostí/vztahů mezi jednotlivými činnostmi.
+Podrobný časový harmonogram provádění Díla, bude Zhotovitelem zpracován podle zásad metody CPM (metoda kritické cesty) a Objednateli bude předán ve formátu *.mpp (MS Project 2010 Standard) a současně i ve formátu *.pdf.
+Jednotlivé činnosti/milníky budou v podrobném časovém harmonogramu provádění Díla rozpracovány do dalších detailních úrovní, respektujících požadavek na efektivní plánování, sledování a řízení prací na všech stupních řízení.
+Podrobný časový harmonogram provádění Díla bude obsahovat min. následující základní informace:
+číslo činnosti/milníku (WBS kód),
+název činnosti/milníku (případně popis její věcné náplně),
+datum zahájení činnosti, 
+doba trvání činnosti (dny, hodiny) potřebná k jejímu dokončení,
+vazby na předešlé a následné činnosti/milníky,
+zobrazení kritické cesty,
+zobrazení technologických přestávek,
+zobrazení smluvních milníků uvedených v odst. 7.2. Smlouvy,
+označení provozního souboru (PS), dílčího provozního souboru (DPS), popř. stavebního objektu (SO), inženýrského objektu (InO)
+přiřazení zdrojů; uvedení, kdo bude úkol plnit (Zhotovitel/poddodavatel).
+Smluvní milníky uvedené v odst. 7.2. Smlouvy zapracuje Zhotovitel do podrobného časového harmonogramu provádění Díla spolu s termíny, které Objednatel pro jednotlivé milníky stanovil.
+Podrobný časový harmonogram provádění Díla musí zahrnovat období od podpisu Smlouvy do Konečného převzetí Díla.
+Objednatelem schválený podrobný časový harmonogram provádění díla (směrný plán, baseline) bude, ve výše uvedených formátech, používán Zhotovitelem pro plánování, sledování a vyhodnocování postupu jednotlivých činností v rámci provádění Díla.
+Podrobný časový harmonogram provádění Díla bude vyhodnocován, aktualizován a optimalizován Zhotovitelem průběžně. V měsíčních intervalech, popř. podle potřeby řízení na základě rozhodnutí zástupce Objednatele ve věcech technických a realizačních operativně, bude Zhotovitelem předkládán Objednateli ke kontrole.
+Podkladem pro novou aktualizaci podrobného časového harmonogramu provádění Díla je vždy poslední platná Objednatelem schválená verze podrobného časového harmonogramu provádění Díla a Objednatelem schválené změny v souladu se Smlouvou (směrný plán, baseline či re-baseline).
+Při aktualizaci podrobného časového harmonogramu provádění Díla musí být Zhotovitelem vždy respektovány a zachovány hlavní milníky Díla uvedené v odst. 7.2 Smlouvy.
+Měsíční (popř. operativní) aktualizace, optimalizace a vyhodnocení podrobného časového harmonogramu provádění Díla předkládané ke kontrole Objednateli musí zahrnovat min. tyto činnosti:
+vyhodnocení plnění všech aktuálních činností v podrobném časovém harmonogramu provádění Díla za uplynulý měsíc (za předešlé období), tzn. vyhodnocení ukončených a neukončených činností, vyhodnocení stavu rozpracovanosti probíhajících činností, vyhodnocení případných skluzů v zahajování a průběhu činností uplynulého období,
+aktualizaci a optimalizaci podrobného časového harmonogramu provádění Díla pro následující období,
+zavedení požadovaných nových činností do podrobného časového harmonogramu provádění Díla v souladu s plněním Díla,
+úpravu a optimalizaci topologie podrobného časového harmonogramu provádění Díla,
+úpravu termínů zahájení (ukončení) požadovaných činností v podrobném časovém harmonogramu provádění Díla,
+úpravu průběžných dob požadovaných činností v podrobném časovém harmonogramu provádění Díla,
+zrušení požadovaných činností v podrobném časovém harmonogramu provádění Díla.
+zpracování podrobného rozdílového časového harmonogramu provádění Díla, ve kterém budou porovnány dva stavy, tj. plánovaný a skutečný postup, 
+zpracování průvodní zprávy s popisem jakékoli významné změny/odchylky oproti poslední Objednatelem schválené verzi podrobného časového harmonogramu provádění Díla; v případě vzniku skluzu v plnění některé z činností Zhotovitel navrhne opatření pro překonání jeho vlivu na postup prací na Díle.
+Hlavní zásady pro zpracování podrobného rozdílového časového harmonogramu pro provádění stavby:
+struktura WBS podrobného rozdílového časového harmonogramu provádění Díla musí vycházet ze struktury WBS směrného plánu,
+v podrobném rozdílovém časovém harmonogramu provádění Díla musí být rozeznatelné odchylky jednotlivých činností v porovnávaných stavech (plánovaný a skutečný postup); podrobný rozdílový časový harmonogram provádění Díla tak musí obsahovat mj. sloupce s daty zahájení a ukončení činnosti z obou porovnávaných stavů, sloupec, který znázorňuje časovou odchylku těchto činností ve dnech (sloupec „Odchylka dokončení“), sloupec popisující stav činnosti (sloupec „Stav“: Dokončeno / Podle plánu / Budoucí úkol / Zpožděné) a sloupec s uvedením procenta dokončenosti (sloupec „Dokončení %“),
+v podrobné rozdílovém časovém harmonogramu provádění Díla musí být zjevné všechny oproti plánovanému stavu nově vzniklé skutečnosti.
+V případě, že Zhotovitel během jím průběžně prováděné aktualizace, optimalizace a hodnocení podrobného časového harmonogramu provádění Díla zjistí změny na kritické cestě, bude o této skutečnosti neprodleně informovat zástupce Objednatele ve věcech technických a realizačních.

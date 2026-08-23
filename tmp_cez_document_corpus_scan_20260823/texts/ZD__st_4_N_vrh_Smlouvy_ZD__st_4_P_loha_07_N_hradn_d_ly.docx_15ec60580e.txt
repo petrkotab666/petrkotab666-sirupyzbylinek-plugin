@@ -1,0 +1,286 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM 
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+
+ČÁST 4
+
+
+návrh smlouvy
+
+Příloha 7
+
+Náhradní díly
+
+
+
+
+
+
+
+
+
+
+
+
+
+Příloha 7
+Náhradní díly
+Obsah:
+ TOC \o "1-3" \h \z \u 1Náhradní díly PAGEREF _Toc126591193 \h 3
+1.1Rychle se opotřebující díly PAGEREF _Toc126591194 \h 3
+1.2Náhradní díly pro 60měsíční záruční provoz PAGEREF _Toc126591196 \h 3
+1.3Náhradní díly pro 10letý pozáruční provoz PAGEREF _Toc126591198 \h 4
+1.4Strategické/významné náhradní díly PAGEREF _Toc126591200 \h 4
+
+2Spotřební materiál PAGEREF _Toc126591202 \h 5
+
+
+Náhradní díly
+Rychle se opotřebující díly
+Jedná se o náhradní díly, u nichž se předpokládá opotřebení v průběhu ročního provozu.
+Tyto díly musí být dostupné v rámci běžné údržby.
+
+Tabulka č. 1 Seznam rychle se opotřebujících dílů
+Poř. č.
+Název dílu / kat. číslo výrobce
+Jednotka
+Počet
+SO
+PS
+Výrobce
+Četnost výměny
+Lhůta dodání
+Cena za 1 jednotku
+[Kč bez DPH]
+1
+
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+n+1
+
+
+
+
+
+
+
+
+
+
+Náhradní díly pro 60měsíční záruční provoz
+Jedná se o náhradní díly, které jsou nutné pro zajištění plynulého záručního provozu.
+
+Tabulka č. 2 Seznam náhradních dílů pro 60měsíční záruční provoz
+Poř. č.
+Název dílu / kat. číslo výrobce
+Jednotka
+Počet
+SO
+PS
+Výrobce
+Četnost výměny
+Lhůta dodání
+Cena za 1 jednotku
+[Kč bez DPH]
+1
+
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+n+1
+
+
+
+
+
+
+
+
+
+Náhradní díly pro 10letý pozáruční provoz
+Jedná se o náhradní díly pro 10letý pozáruční provoz s cenou nižší než 10 mil. Kč (bez DPH), které nejsou uvedené jako strategické náhradní díly v tabulce č. 4 níže.
+
+Tabulka č. 3 Seznam náhradních dílů pro 10letý pozáruční provoz
+Poř. č.
+Název dílu / kat. číslo výrobce
+Jednotka
+Počet
+SO
+PS
+Výrobce
+Četnost výměny
+Lhůta dodání
+Cena za 1 jednotku
+[Kč bez DPH]
+1
+
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+n+1
+
+
+
+
+
+
+
+
+
+Strategické/významné náhradní díly
+Jedná se o vyjmenované náhradní díly a náhradní díly s pořizovací cenou vyšší než 10 mil. Kč (bez DPH).
+
+Tabulka č. 4 Seznam vyjmenovaných náhradních dílů a náhradních dílů s pořizovací cenou vyšší než 10 milionů Kč
+Poř. č.
+Název dílu / kat. číslo výrobce
+Jednotka
+Počet
+SO
+PS
+Výrobce
+Četnost výměny
+Lhůta dodání
+Cena za 1 jednotku
+[Kč bez DPH]
+1
+
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+n+1
+
+
+
+
+
+
+
+
+
+
+Spotřební materiál
+Jedná se o základní výčet spotřebního materiálu nezbytného pro spolehlivý a bezpečný provoz Díla.
+
+Tabulka č. 5 Seznam spotřebního materiálu
+Poř. č.
+Název materiálu / kat. číslo výrobce
+Jednotka
+Počet
+SO
+PS
+Výrobce
+Spotřeba materiálu
+Lhůta dodání
+Cena za 1 jednotku
+[Kč bez DPH]
+1
+
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+n+1
+
+
+
+
+
+
+
+
+
+

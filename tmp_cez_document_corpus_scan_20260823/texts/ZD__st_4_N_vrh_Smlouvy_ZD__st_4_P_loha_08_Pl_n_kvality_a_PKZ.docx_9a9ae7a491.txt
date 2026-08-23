@@ -1,0 +1,144 @@
+
+
+
+
+
+
+
+
+
+ZADÁVACÍ DOKUMENTACE
+
+JEDNACÍ ŘÍZENÍ S UVEŘEJNĚNÍM 
+
+
+
+
+
+
+„CV_HV propoj EPR-Kadaň“
+
+
+
+
+
+ČÁST 4
+
+
+návrh smlouvy
+
+Příloha 8
+
+Plán kvality a plán kontrol a zkoušek
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Obsah
+ TOC \o "1-3" \h \z \u 
+1.Obecné povinnosti Zhotovitele PAGEREF _Toc155352788 \h 3
+2.Skladba plánu kvality PAGEREF _Toc155352789 \h 3
+3.Nedestruktivní zkoušení PAGEREF _Toc155352790 \h 3
+4.Výchozí stav zařízení PAGEREF _Toc155352791 \h 4
+5.Seznamy vyhrazených zařízení PAGEREF _Toc155352792 \h 4
+6.Zásady při realizaci plánu kvality PAGEREF _Toc155352793 \h 4
+6.1Vyzývací lhůty PAGEREF _Toc155352794 \h 4
+6.2Způsob vyzývání PAGEREF _Toc155352795 \h 4
+6.3Označení (kód) činnosti a účasti při kontrolách a zkouškách nebo přejímkách PAGEREF _Toc155352796 \h 4
+6.4Přehled záznamů o jakosti Díla PAGEREF _Toc155352797 \h 5
+6.5Potvrzení o provedené kontrole, zkoušce nebo přejímce PAGEREF _Toc155352798 \h 5
+6.6Zmařené kontroly a zkoušky nebo přejímky PAGEREF _Toc155352799 \h 5
+6.7Neshodný výrobek PAGEREF _Toc155352800 \h 5
+6.8Uvolnění expedice nebo následné montáže PAGEREF _Toc155352801 \h 5
+6.9Předávaná dokumentace související s plánem kontrol a zkoušek PAGEREF _Toc155352802 \h 5
+6.10Dokumentace systému kvality Zhotovitele PAGEREF _Toc155352803 \h 6
+7.Další povinnosti Zhotovitele PAGEREF _Toc155352804 \h 6
+
+
+
+Obecné povinnosti Zhotovitele
+Zhotovitel je povinen při prokazování kvality Díla dodržovat ustanovení uvedená v článku 13 Smlouvy.
+Zhotovitel je povinen zpracovat Plán kvality a plán kontrol a zkoušek dle přílohy 4 Smlouvy.
+Zhotovitel je povinen zpracovat Seznamy vyhrazených technických zařízení.
+Zhotovitel je povinen předložit Objednateli ke schválení plán kvality ve lhůtě uvedené v článku 13 Smlouvy.
+Zhotovitel je povinen předložit Objednateli ke schválení plán kontrol a zkoušek spolu s realizační projektovou dokumentací ve lhůtě uvedené v článku 13 Smlouvy.
+Skladba plánu kvality
+Plán kvality Zhotovitel zpracuje v souladu s ČSN ISO 10005 (010332). Jeho náplň a rozsah je popsán v příloze 4 Smlouvy.
+Plán kontrol a zkoušek (PKZ) bude samostatnou přílohou plánu kvality a bude tvořit nedílnou součást plánu kvality. Náplň, rozsah a forma plánu kontrol a zkoušek jsou popsány v příloze 4 Smlouvy a jsou pro Zhotovitele závazné. Zhotovitelem musí být používán a Objednateli předán plán kontrol a zkoušek odpovídající tomuto požadavku.
+Seznamy vyhrazených technických zařízení.
+Nedestruktivní zkoušení
+Nejpozději jeden (1) měsíc před zahájením nedestruktivního zkoušení/testování (dále též jen NDT) Zhotovitel předloží Objednateli k odsouhlasení návrh zkušebních postupů pro všechny použité metody včetně vzorů zkušebních protokolů a certifikátů zkušebního personálu NDT. Objednatel je povinen odsouhlasit předložený návrh do deseti (10) dnů po jeho předložení nebo sdělit Zhotoviteli důvody jeho neschválení. V případě, že Objednatel neschválí Zhotoviteli předložený návrh z důvodu, že Zhotovitel či jeho poddodavatel provádějící NDT nevyhovuje obecně závazným právním předpisům pro nedestruktivní zkoušení Díla nebo části Díla, je Zhotovitel povinen pro provedení NDT zajistit, aby další poddodavatel či Zhotovitel sám vyhověl obecně závazným právním předpisům pro nedestruktivní zkoušení Díla nebo části Díla. V případě dalšího předložení návrhu se stejným způsobem opakuje odsouhlasení návrhu zkušebních postupů pro všechny použité metody včetně vzorů zkušebních protokolů a certifikátů zkušebního personálu NDT Zhotovitele dle tohoto odstavce. Neschválení předloženého návrhu Objednatelem z důvodu, že Zhotovitel či jeho poddodavatel provádějící NDT nevyhovuje požadavkům stanoveným Smlouvou a/nebo obecně závaznými právními předpisy pro nedestruktivní zkoušení Díla nebo části Díla, není důvodem pro prodloužení doby dokončení Díla nebo části Díla. 
+Zhotovitel je dále povinen:
+realizovat RT (zkoušení materiálu prozářením) při použití uzavřeného radioaktivního zářiče (dále jen URZ) v souladu se zákonem č. 263/2016 Sb., atomový zákon, ve znění pozdějších předpisů včetně příslušně platných vyhlášek Státního ústavu pro jadernou bezpečnost,
+oznamovat RT při použití URZ Objednateli (konkrétní den a hodinu) a požádat Objednatele o povolení k této činnosti, Zhotovitel je povinen tyto činnosti uvést do podrobného časového harmonogramu provedení Díla,
+uvést zkoušenou technologii (její povrch) i okolí po provedení NDT do původního stavu,
+umožnit pověřeným pracovníkům Objednatele kontrolu realizace NDT – způsobilost, zařízení, průběh NDT, protokoly a zdokumentování dodržování zákona 263/2016 Sb., v platném znění.
+Výchozí stav zařízení
+Zhotovitel provede měření a dokladování výchozích stavů při výrobě a montáži zařízení. Tato data předá Objednateli spolu s průvodně technickou dokumentací.
+Seznamy vyhrazených zařízení
+Zhotovitel dále jako součást plánu kvality z předá Objednateli seznam vyhrazených technických elektrických zařízení dle Nařízení vlády č. 190/2022 Sb., v platném znění, dodaných a instalovaných Objednatelem jako součást realizace Díla či stávajících vyhrazených technických elektrických zařízení dotčených realizací Díla.
+Obdobně budou Zhotovitelem předány Objednateli i seznamy dalších vyhrazených technických zařízení ve smyslu Zákona č. 250/2021 Sb. (resp. Nařízení vlády č. 191/2022 Sb., 192/2022 Sb., 193/2022 Sb.) v platném znění, budou-li tato zařízení dodána a instalována Objednatelem jako součást realizace Díla nebo pokud se bude jednat o stávající vyhrazená technická zařízení dotčená realizací Díla. 
+Seznamy budou zpracovány v souladu s požadavky uvedenými v příloze 4 Smlouvy.
+Zásady při realizaci plánu kvality
+Vyzývací lhůty 
+Vyzývací lhůty jsou uvedeny v článku 13 Smlouvy.
+Způsob vyzývání 
+Výzvu Zhotovitel provádí písemně e-mailem dle článku 13 Smlouvy adresovaným zástupcům Objednatele ve věcech technických a realizačních a ve věcech řízení kvality.
+Označení (kód) činnosti a účasti při kontrolách a zkouškách nebo přejímkách
+Charakter činnosti a účasti při technických kontrolách a zkouškách nebo přejímkách stanovují obě smluvní strany v plánech kontrol a zkoušek nebo přejímek zkratkou u příslušné kontroly, zkoušky nebo přejímky takto:
+Rposuzovací bod (Review Point)
+Objednatel provede posouzení záznamů/protokolů ze stanovených technických kontrol a zkoušek.
+Cposuzovací bod s předáním záznamů/protokolů
+Zhotovitel provede, předloží a předá Objednateli k posouzení záznamy/protokoly ze stanovených kontrol a zkoušek.
+Wsvědečný/ověřovací bod (Witness Point)
+Objednatel musí být o tomto kroku informován podle dohodnutých podmínek. V případě, že se Objednatel svědečného bodu neúčastní, Zhotovitel má právo pokračovat v další činnosti. Neúčast a výsledky kontrolního kroku musí být dokumentovány.
+Hzádržný bod (Hold Point)
+Objednatel musí být o tomto kroku informován podle dohodnutých podmínek. Bez provedení technické kontroly nebo zkoušky nelze pokračovat v další práci.
+HFzádržný bod fakturační 
+Shodné jako v případě H s tím, že k tomuto zádržnému bodu má Objednatel oprávnění změnit platební kalendář v souladu s platebními a fakturačními podmínkami uvedenými ve Smlouvě.
+HIShodné jako v případě H s tím, že výkon kontroly a zkoušky nebo přejímky provádí pro Objednatele inspekční orgán, který je uveden v organizačním schématu pro oblast realizace dodávky a oblast uvádění do provozu.
+Přehled záznamů o jakosti Díla
+Plány kontrol a zkoušek,
+Výzvy k provedení kontroly a zkoušky nebo přejímky,
+Protokoly o neshodě,
+Návrhy na provedení změny, žádanky o odchylku,
+Předávací protokol o realizaci plánu kvality,
+Protokoly o kontrole a zkoušce nebo přejímce (i dílčí),
+Zápisy ve stavebním deníku,
+Fotodokumentace.
+Potvrzení o provedené kontrole, zkoušce nebo přejímce 
+Provedené kontroly a zkoušky nebo přejímky musí potvrdit kontrolující svým podpisem a datem kontroly v originálu plánu kontrol a zkoušek. Tento originál, jehož vedení a uložení zajišťuje v průběhu realizace Díla zástupce Zhotovitele oprávněný ve věcech řízení kvality, bude při předání realizace plánu kvality po ukončení realizace Díla předán zástupci Objednatele oprávněnému ve věcech řízení kvality.
+Zmařené kontroly a zkoušky nebo přejímky
+Zmařenou kontrolou, zkouškou nebo přejímkou se rozumí každá neúspěšná kontrola, zkouška či přejímka, která je zdokumentována protokolem o neshodě (NCR), nebo když kontrola a zkouška nebo přejímka nebyla ze strany Zhotovitele řádně připravena.
+Neshodný výrobek
+Řešení případných neshodných výrobků v rámci plnění Smlouvy probíhá podle protokolu o neshodě.
+Uvolnění expedice nebo následné montáže
+Výrobek může být expedován z výroby nebo může být pokračováno v montáži jen tehdy, pokud vyhověl výstupní kontrole Zhotovitele a byly-li úspěšně provedeny všechny stanovené kontroly a zkoušky podle plánu kontrol a zkoušek. 
+Předávaná dokumentace související s plánem kontrol a zkoušek 
+Objednatel obdrží od Zhotovitele v rámci technické dokumentace k Dílu mj.:
+originál plánu kontrol a zkoušek s originály podpisů osob, potvrzujících úspěšné provedení kontrol a zkoušek,
+veškerou dokumentaci plynoucí z realizace plánu kontrol a zkoušek, zkompletovanou do knihy kontrol a zkoušek, tj. dokumentaci z výroby do jednoho (1) týdne po expedici a dokumentaci montážní nejpozději při předání Díla, pokud tato dokumentace není nutná k provedení jiných kontrol nebo zkoušek obsažených v plánu kontrol a zkoušek (např. při stavební zkoušce vyhrazených tlakových zařízení).
+Dokumentace systému kvality Zhotovitele
+Pokud je k prokázání kvality Díla nutný další dokument ze systému řízení kvality Zhotovitele, který není uveden v  plánu kvality, je Zhotovitel povinen požadovaný dokument Objednateli poskytnout.
+Další povinnosti Zhotovitele
+Zhotovitel zajistí, aby Dílo bylo provedeno v souladu s požadavky harmonizovaných evropských norem (ČSN EN). V oborech, ve kterých v době uzavření Smlouvy nebudou v České republice přijaty harmonizované normy (ČSN EN), budou použity české technické normy (ČSN), ale musí být splněny požadavky i existujících evropských technických norem (EN). Uvedené technické normy se stanou v plném znění závazné pro realizaci Díla uzavřením Smlouvy.
+Vyhrazená technická zařízení musí splňovat požadavky zákona č. 250/2021 Sb., v platném znění, Nařízení vlády č. 190/2022 Sb., 191/2022 Sb., 192/2022 Sb., 193/2022 Sb. (vše v platném znění) a příslušných českých technických norem.
+Při výrobě a montáži výrobků podléhajících zákonu č. 22/1997 Sb., v platném znění, se do doby uvedení na trh nebo do provozu nejedná o vyhrazená zařízení, ale o stanovené výrobky, u kterých musí být plněny požadavky příslušných harmonizovaných norem. Pokud ještě není norma harmonizována s normami EU, musí zařízení splňovat požadavky příslušných nařízení vlády České republiky a Evropských směrnic pro jednotlivé druhy stanovených výrobků. 
+U stanovených výrobků podléhajících zákonu č. 22/1997 Sb., v platném znění, Zhotovitel musí vycházet z kódu ČSN EN (EN) a při použití jiného kódu musí Zhotovitel provést jeho porovnání s ČSN EN (EN) a zároveň provede i pevnostní přepočet. V případě souběhu platnosti verzí ČSN, EN bude použita vždy novější platná verze.
+Veškeré zařízení bude projektováno a konstruováno v jednotné metrické soustavě jednotek SI, dle zákona 505/1990 Sb., v platném znění.
+Zhotovitel je povinen respektovat ustanovení zákona č. 22/1997 Sb., v platném znění, a příslušná nařízení vlády České republiky. Důraz je kladen na § 12 a § 13 zákona č. 22/1997 Sb., v platném znění, které stanovují povinnost výrobce nebo dovozce před uvedením na trh posoudit a vydat ES prohlášení o shodě výrobku s technickými předpisy a o dodržení stanoveného postupu posouzení shody a uchovávat je deset (10) let od ukončení výroby. 
+Výrobky budou označeny značkou CE a v určených případech i číslem notifikované osoby. I u zahraničních dodávek pocházejících ze států mimo EU musí Zhotovitel zajistit certifikaci dle požadavků evropských předpisů a notifikovaných osob.
+Za závazné jsou pro Zhotovitele ve vztahu k Dílu považovány právní předpisy a technické normy uvedené zejména v Příloze 1 Smlouvy.

@@ -1,0 +1,591 @@
+
+
+===== PAGE 1 =====
+ 
+Stránka 1 z 8 
+ 
+ 
+ 
+Vysvětlení zadávací dokumentace - č. 16/ZD 
+ 
+NÁZEV VEŘEJNÉ ZAKÁZKY: CV_HV propoj EPR-Kadaň 
+Zadavatel: 
+ 
+ČEZ Teplárenská, a.s. , se sídlem Duhová 1444/2, 
+Michle, 140 00 Praha 4 , IČO: 27309941, zapsán v 
+obchodním rejstříku vedeném Městským soudem v 
+Praze, oddíl B, vložka 17910 
+Evidenční číslo zakázky: Z2024-029445 
+Evidenční číslo formuláře: F2024-029445 
+TED: 384212-2024 
+ 
+ČEZ Teplárenská, a.s., jako Zadavatel výše uvedené Veřejné zakázky, obdržel dotaz y k Zadávací 
+dokumentaci. Žádost o vysvětlení byla Zadavateli doručena dne 20.12.2024, a to prostřednictvím NEN, 
+v souladu s § 211 ZZVZ. 
+V souladu s § 98 zákona č. 134/2016 Sb., o zadávání veřejných zakázek, v platném znění, a článkem 
+11 části 1 Zadávací dokumentace, Zadavatel níže uvádí přesné znění dotaz ů včetně odpovědí, které 
+zveřejní rovněž na Profilu zadavatele.  
+Pojmy s velkým počátečním písmenem jsou definovány v Zadávací dokumentaci.   
+ 
+ Zadavatel obdržel od Účastníka jednu (1) zprávu s celkem dvaceti (20) dotazy. 
+Níže Zadavatel uvádí znění dotazu Účastníka pod pořadovým číslem 38-57. 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 38 
+1. V technické zprávě pro část „D2.1.1 - InO 01 - Stavebni část“ je v kapitole 
+9 uvedeno: „Před zahájením kácení je nutné respektovat požadavky 
+vyplývající z územního rozhodnutí a jednotlivých vyjádření majitelů 
+pozemků.“ 
+Má zadavatel tyto požadavky od majitelů k dispozici? Pokud ano, 
+žádáme o doplnění PD. Pokud ne kdy budou tyto požadavky zhotoviteli 
+předány? 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 38 
+Zadavatel sděluje, že veškeré podklady jsou součástí části 5 ZD, Neveřejná část 
+zadávací dokumentace, tj. jednotlivá vyjádření majitelů pozemků jsou součástí části 
+51.04_Dokladová část - podklad k územnímu rozhodnutí. 
+Územní rozhodnutí je obsaženo ve složce 51.03_Územní rozhodnutí. 
+ 
+Povolení kácení/mýcení stromů či křovin vč. souvisejících podkladů pro jeho vydání 
+jsou součástí plnění Zhotovitele. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 39 
+2. Podle podmínek pro umístění a provádění stavby uvedených 
+v Územním rozhodnutí je v bodě 13. e) požadována ochrana před účinky 
+bludných proudou. Tato ochrana se podle našeho názoru týká chráničky 
+protlaku pod železnicí a horkovodu. Tato ochrana není podle našeho 
+
+===== PAGE 2 =====
+ 
+Stránka 2 z 8 
+názoru v předané dokumentaci řešena. Žádáme zadavatele o vysvětlení a 
+doplnění dokumentace. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 39 
+ 
+Zadavatel sděluje, že c itovaný požadavek Drážního úřadu je vztažen zejména ke 
+křížení trasy horkovodu s tratí Chomutov -Karlovy Vary. Vzhledem k  tomu, že toto 
+křížení je řešeno přechodem horkovodu v  bezkanálovém provedení po stávající 
+uzemněné mostní konstrukci  nad tratí Chomutov -Karlovy Vary , není nutné tuto 
+problematiku v PDPS řešit (viz PDPS, část Souhrnná zpráva, str. 6). 
+Ochranu vlastního horkovodu a chrániček protlaku pod vlečkou v  areálu EPR před 
+účinky bludných proudů není nutno řešit. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 40 
+3. Dle výkazu výměr je požadováno osazení kloubových 3 ks 
+kloubových kompenzátorů v rámci DPS 01.02 - Potrubí a armatury. Dle 
+předaného výkazu výměr je třeba dodat i další 6 ks kloubových 
+kompenzátorů v rámci InO 01 - D2 - Trasa horkovodu - Strojní část.  
+V předaných podkladech jsme našli zřejmě tyto kompenzátory v rámci 
+nadzemní části – na stávajícím přemostění. Na výkrese „TEP0314_VUZ_D2-
+1-2-DPS-Rezy-nadzemni-cast-most_17_R00“ je naznačeno 6 armatur u 
+kterých žádáme o potvrzení, že se jedná o kloubové kompenzátory. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 40 
+ 
+Zadavatel požaduje realizaci  šesti armatur zakreslených na výkrese 
+„TEP0314_VUZ_D2-1-2-DPS-Rezy-nadzemni-cast-most_17_R00“, které 
+představují kloubové kompenzátory. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 41 
+4. Zhotovitel bude povinen dodat kloubové kompenzátory pro 
+potrubí DN 400 (PN25). Pro řádné ocenění dodávky kompenzátorů žádáme 
+zadavatele o doplnění informací: 
+a. Hodnotu posuvu (úhlovou výchylku)  
+b. Úhlová výchylka - je u všech kompenzátorů stejná? 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 41 
+ 
+Zadavatel doplňuje, že pro řádné ocenění dodávky kompenzátorů bude Zhotovitelem 
+uvažována úhlová odchylka kompenzátorů 4°, vyjma úhlové odchylky v hlavě 
+kompenzátoru, která bude uvažována 8°.  
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+Součástí Zhotovitelem zpracovávané realizační dokumentace  bude pevnostní 
+výpočet potrubního systému, kde budou parametry kloubových kompenzátorů 
+potvrzené, popř. upřesněné. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 42 
+5. Ve výkazu výměr je v listu InO 01 - D2 - Trasa horkovodu - Strojní 
+část uvedena položka č. 125 - voda pitná pro ostatní odběratele. 
+Je tato položka protiplněním objednatele? Pokud není protiplněním 
+objednatele, za jakou cenu bude zhotoviteli poskytnuta? 
+
+===== PAGE 3 =====
+ 
+Stránka 3 z 8 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 42 
+ 
+Zadavatel sděluje, že u vedená položka není součinností Objednatele. Zhotovitel ji 
+zajistí v rámci realizace stavby. 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 43 
+6. Ve výkazu výměr je v listu DPS 01.04 - Pomocné ocelové konstrukce 
+uvedena položka č. 14 – 28318512 - deska PTFE tl 1mm – kg - 94,185. 
+V projektové dokumentaci jsou popisech POK popsány kluzné desky o 
+tloušťce 10 mm (rozměr 350 x 250 x 10). Pokládáme výše uvedený popis za 
+nejasný. Jedná se o ocelovou desku o tloušťce 10 mm a na ní uloženou TPFE 
+desku o tl. 1 mm?  
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 43 
+ 
+Zadavatel požaduje ocelovou desku o tloušťce 10 mm a na ní uloženou TPFE desku 
+o tloušťce 1 mm. 
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 44 
+7. Reflektometr BDP105 uvedený v dokumentaci (výkaz výměr list DPS 
+03.03 - Systém detekce netěsnosti HV položka č.5 – M - BDP105 - 
+Přenosný reflektometrický detektor netěsností předizol. potrubí) dosud 
+není vyvinut a není tedy na trhu. Z tohoto důvodu se žádáme zadavatele o 
+potvrzení resp. úpravu dokumentace aby bylo možné dodat dostupné 
+reflektometry (např. BDP104). 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 44 
+ 
+Zadavatel požaduje reflektometr BDP104. Současně Zadavatel připouští dodání i 
+jiného typu přístroje stejných nebo lepších parametrů. 
+ 
+V rámci Dodatku k  ZD budou do PDPS vloženy základní technické parametry 
+reflektometru BDP104. V  případě použití jiného výrobku Zhotovitelem jsou tyto 
+parametry považovány za minimální možné. 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 45 
+8. Zadavatel v projektové dokumentaci (51.02_PDPS SITEZ ) uvádí 
+v části D2.6 PS 02 - Elektro část  typový výrobek UF 3066 od spol. BetonBau 
+(resp. Gritec). Je zadavatelem po uchazečích resp. budoucím zhotoviteli 
+požadováno dodat tento konkrétní výrobek? 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 45 
+ 
+Zadavatel nepožaduje dodání tohoto konkrétního výrobku.  
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 46 
+9. Zadavatel v návrhu SoD uvádí v bodě 8.3 že: „Zhotovitel tímto ve 
+smyslu § 2620 odst. 2 ObčZ na sebe přebírá nebezpečí změny okolností.“ 
+Vzhledem k charakteru a rozsahu díla, celkové náročnosti na přípravu 
+projektu, rozsahu se domníváme, že je toto smluvní ustanovení 
+nepřiměřené. Žádáme Zadavatele o přehodnocení tohoto požadavku 
+Zadavatele. 
+
+===== PAGE 4 =====
+ 
+Stránka 4 z 8 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 46 
+ 
+Zadavatel, sděluje, že poslední věta odst. 8.3 Návrhu Smlouvy, část 4 ZD bude 
+odstraněna. Zadavatel uvedenou informaci zohlední v  Dodatku k  ZD, který bude 
+v nejbližší době vydán.  
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 47 
+10. Zadavatel v návrhu SoD uvádí v bodě 8.4, že: „Zhotovitel zaručuje a 
+odpovídá za to, že cenová specifikace je úplná a Zhotovitel není oprávněn 
+požadovat zvýšení smluvní ceny Díla, objeví-li se potřeba dalších prací k 
+dokončení Díla“. 
+Dle §. 36 ZZVZ nelze přenášet odpovědnost za správnost a úplnost zadávací 
+dokumentace (tedy i výkazu výměr) na uchazeče, resp. budoucího 
+zhotovitele. Žádáme zadavatel o vypuštění tohoto ustanovení. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 47 
+ 
+Zadavatel trvá na znění odst. 8.4 Návrh Smlouvy, část 4 ZD a zároveň je přesvědčen, 
+že tímto smluvním ustanovením nedochází k zakázanému přenosu odpovědnosti za 
+správnost a úplnost zadávací dokumentace ve smyslu § 36 ZZVZ na 
+Dodavatele.                      
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 48 
+11. Zadavatel v návrhu smlouvy o dílo uvádí v čl. 12.18 že se vylučuje 
+aplikace několika ustanovení § Občanského Zákoníku. Žádáme o 
+přehodnocení postoje Zadavatele k § 2594 a žádáme o úpravu návrhu 
+smlouvy tak aby byl aplikováno toto ustanovení Občanského zákoníku. 
+Domníváme se, že např. v případě nesprávného příkazu objednatele, nelze 
+přenášet na zhotovitele rizika, náklady a případně odpovědnost za vady 
+plynoucí právě z nesprávného příkazu objednatele. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 48 
+ 
+Zadavatel odstraní vyloučení § Občanského Zákoníku v odst. 12.18 Návrh Smlouvy, 
+část 4 ZD, a to § 2594. Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který 
+bude v nejbližší době vydán.  
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 49 
+12. Zadavatel v  návrhu smlouvy o dílo uvádí v  čl. 12.18 že se vylučuje 
+aplikace několika ustanovení § Občanského zákoníku. Žádáme o 
+přehodnocení postoje zadavatele k  § 2627 Skryté překážky a žádáme o 
+úpravu návrhu smlouvy tak aby byl aplikováno toto ustanovení Občanského 
+zákoníku. Domníváme se, že tímto objednatel nepřiměřeně přenáší na 
+zhotovitele rizika a náklady. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 49 
+ 
+Zadavatel sděluje, že ustanovení odst. 12.18  Návrhu Smlouvy, část 4 ZD  zůstává 
+beze změny a zároveň Dodatkem k ZD doplní níže uvedené ustanovení.  
+Zjistí-li Zhotovitel při provádění Díla skryté překážky týkající se místa, kde má být 
+Dílo provedeno, které nemohl ani při náležité péči před zahájením provádění Díla 
+zjistit, a které zároveň znemožňují provést Dílo dohodnutým způsobem, oznámí to 
+
+===== PAGE 5 =====
+ 
+Stránka 5 z 8 
+bez zbytečného odkladu Objednateli a navrhne mu změnu v  souladu s  čl. 23. 
+Smlouvy. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 50 
+13. Uchazeči jsou povinni podle dokumentu „POKYNY PRO DODAVATELE, 
+PRŮBĚH ZADÁVACÍHO ŘÍZENÍ“ resp. podle bodu 15.8. vypracovat dokument 
+„Příloha 2 Smlouvy – Detailní popis Díla Zhotovitele“. 
+Podle požadavků uvedených v  tomto dokumentu je potřeba doložit (mimo 
+jiné) pro část DPS 01.02 potrubí a armatury  
+„Návrh dimenzování potrubí topné a vratné vody – výpočet tlakových, 
+hydraulických a tepelných ztrát“ a „Návrh provedení a uložení potrubí – 
+pevnostně dilatační výpočet“. Přičemž Zadavatel v Příloze smlouvy o Dílo č. 
+1 - Technická specifikace Díla Objednate le v kapitole 2.2. Koncepce řešení 
+uvádí, že tyto dokumenty budou zpracovány Zhotovitelem v  rámci 
+zpracování realizační projektové dokumentace. Žádáme zadavatele o 
+vysvětlení tohoto požadavku, případně žádáme zadavatele o zrušení této 
+části Detailního popi su Díla Zhotovitele  případně o potvrzení, že do 
+dokumentu Detailní popis Díla zhotovitele lze pro tyto dokumenty uvést text 
+například: „Bude zpracováno v rámci přípravy realizační dokumentace podle 
+požadavků ze Zadávací dokumentace a příslušné legislativy.“ 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 50 
+ 
+Zadavatel upřesňuje, že v příloze 2 Smlouvy - Detailní popis Díla Zhotovitele, část 4 
+ZD lze pro předmětné dokumenty uvést text: „Bude zpracováno Zhotovitelem jako 
+součást realizační dokumentace podle požadavků ze Zadávací dokumentace a 
+příslušné legislativy.“ 
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 51 
+14. Uchazeči jsou povinni podle dokumentu „POKYNY PRO DODAVATELE, 
+PRŮBĚH ZADÁVACÍHO ŘÍZENÍ“ resp. podle bodu 15.8. vypracovat dokument 
+„Příloha 2 Smlouvy – Detailní popis Díla Zhotovitele“. 
+Podle požadavků uvedených v  tomto dokumentu je potřeba doložit (mimo 
+jiné) pro část DPS 01.02 potrubí a armatury  
+Datasheet předizolovaného potrubí topné větve a 
+Datasheet předizolovaného potrubí vratné větve 
+V rámci DPS 01.02 se nedodává předizolované potrubí. Žádáme zadavatele o 
+vysvětlení. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 51 
+ 
+Zadavatel upřesňuje, že p ožadavek na předložení Datasheetu předizolovaného 
+potrubí topné větve a Datasheetu předizolovaného potrubí vratné větve pro část DPS 
+01.02 potrubí a armatury se ze strany Objednatele ruší. 
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+
+===== PAGE 6 =====
+ 
+Stránka 6 z 8 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 52 
+15. Uchazeči jsou povinni podle dokumentu „POKYNY PRO DODAVATELE, 
+PRŮBĚH ZADÁVACÍHO ŘÍZENÍ“ resp. podle bodu 15.8. vypracovat dokument 
+„Příloha 2 Smlouvy – Detailní popis Díla Zhotovitele“. 
+Podle požadavků uvedených v  tomto dokumentu je potřeba doložit (mimo 
+jiné) pro část DPS 01.03 IZOLACE A NÁTĚRY 
+Návrh a výpočet izolací potrubí pro všechny DN 
+Přičemž zadavatel v  Příloze smlouvy o Dílo č. 1 - Technická specifikace Díla 
+Objednatele v kapitole 3.1.3 DPS01.03 Izolace a nátěry uvádí, že tyto Návrh 
+a příslušné výpočty budou zpracovány Zhotovitelem v  rámci zpracování 
+realizační projektové dokumentace.  
+Žádáme zadavatele o vysvětlení tohoto požadavku, případně žádáme 
+zadavatele o zrušení této části Detailního popisu Díla Zhotovitele  případně 
+o potvrzení, že do dokumentu Detailní popis Díla Zhotovitele lze pro tyto 
+dokumenty uvést text například: „Bude zpracováno v  rámci přípravy 
+realizační dokumentace podle požadavků ze Zadávací dokumentace a 
+příslušné legislativy.“ 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 52 
+ 
+Zadavatel upřesňuje, že v příloze 2 Smlouvy - Detailní popis Díla Zhotovitele, část 4 
+ZD lze pro předmětný dokument uvést text: „Bude zpracováno Zhotovitelem jako 
+součást realizační dokumentace podle požadavků ze Zadávací dokumentace a 
+příslušné legislativy.“ 
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 53 
+16. Uchazeči jsou povinni podle dokumentu „POKYNY PRO DODAVATELE, 
+PRŮBĚH ZADÁVACÍHO ŘÍZENÍ“ resp. podle bodu 15.8. vypracovat dokument 
+„Příloha 2 Smlouvy – Detailní popis Díla Zhotovitele“. 
+Podle požadavků uvedených v  tomto dokumentu je potřeba doložit (mimo 
+jiné) pro část SO 1001 STAVEBNÍ ÚPRAVY OBJEKTU 550  
+Výkres výztuže základů pro oběhové čerpadla 
+Výkres výztuže základů pro podávací čerpadla. 
+Přičemž zadavatel v Příloze smlouvy o Dílo č. 1 - Technická specifikace Díla 
+Objednatele uvádí na několika místech, že návrh základů bude proveden 
+Statikem Zhotovitele v realizační projektové dokumentaci. 
+Žádáme zadavatele o vysvětlení tohoto požadavku, případně žádáme 
+zadavatele o zrušení této části Detailního popisu Díla Zhotovitele případně 
+o potvrzení, že do dokumentu Detailní popis Díla Zhotovitele lze pro tyto 
+dokumenty uvést text například: „Bude zpracováno v  rámci přípravy 
+realizační dokumentace podle požadavků ze Zadávací dokumentace a 
+příslušné legislativy.“ 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 53 
+ 
+Zadavatel upřesňuje, že v příloze 2 Smlouvy - Detailní popis Díla Zhotovitele, část 4 
+ZD lze pro předmětné dokumenty uvést text: „Bude zpracováno Zhotovitelem jako 
+součást realizační dokumentace podle požadavků ze Zadávací dokumentace a 
+příslušné legislativy.“ 
+ 
+
+===== PAGE 7 =====
+ 
+Stránka 7 z 8 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 54 
+17. Uchazeči jsou povinni podle dokumentu „POKYNY PRO DODAVATELE, 
+PRŮBĚH ZADÁVACÍHO ŘÍZENÍ“ resp. podle bodu 15.8. vypracovat dokument 
+„Příloha 2 Smlouvy – Detailní popis Díla Zhotovitele“. 
+Podle požadavků uvedených v  tomto dokumentu je potřeba doložit (mimo 
+jiné) pro část InO 01 TRASA HORKOVODU: 
+P&ID horkovodního propoje 
+Nerozumíme požadavku zadavatele na zpracování PID diagramu In01 – 
+Trasa horkovodu. P&ID diagramy jsou vhodné zachycení logických a 
+technických návaznosti v  složitých objektech/souborech jako je například 
+PS01 Čerpací stanice oběhové vody (kde tento P&ID zadavatel ve svých 
+podkladech uvádí).  
+Logické a technické návaznosti, který by měl P&ID diagram zachycovat, jsou 
+zcela zřejmé a z Výkresové dokumentace zpracované pro tuto stavbu.  
+Domníváme se, že P&ID diagram část InO 01 TRASA HORKOVODU 
+nestandardním požadavkem a žádáme Zadavatele o přehodnocení jeho 
+požadavku na poskytnutí P&ID horkovodního propoje. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 54 
+ 
+Zadavatel upřesňuje, že p ožadavek na předložení P&ID horkovodního propoje pro 
+část InO 01 Trasa horkovodu se ze strany Objednatele ruší. 
+ 
+Zadavatel uvedenou informaci zohlední v Dodatku k ZD, který bude v nejbližší době 
+vydán.  
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 55 
+18. Zadavatel v příloze č. 1 Návrhu Smlouvy o dílo uvádí v kapitole Cílový 
+stav: 
+Přívodní větev horkovodu bude Zhotovitelem navržena a dodána v 
+předizolovaném provedení s izolací série 3 (nebo 2x zesílená izolace), vratná 
+větev bude Zhotovitelem navržena a dodána s izolací série 2 (nebo 1x 
+zesílená izolace). 
+ 
+Ve výkazu výměr dále zadavatel uvádí pouze sérii 3 pro přívodní větev a sérii 
+2 pro vratnou větev. Takovéto zadání považujeme za nejednoznačné a 
+žádáme zadavatele upřesnění jeho požadavku. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 55 
+ 
+Zadavatel sděluje, že v případě izolace série 3 se jedná o 2 x zesílenou izolaci a 
+v případě série 2 pak o 1 x zesílenou izolaci. Tloušťky izolací jsou uvedeny v  PDPS 
+(část 5 ZD) a ve výkazu výměr. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+19. Není jednoznačně specifikován požadavek na NDT zkoušky na PI 
+potrubí. Prosíme o upřesnění stupně hodnocení RTG zkoušek a jaký je 
+požadavek. Zda 10 %, nebo 100 %.  Současně nejsou RTG zkoušky uvedeny 
+ve výkazu výměr. Žádáme zadavatele upřesnění požadavku. 
+
+===== PAGE 8 =====
+ 
+Stránka 8 z 8 
+č. 56  
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 56 
+ 
+Zadavatel sděluje, že p ožadavek na NDT zkoušky  vč. RT zkoušek s  uvedením st. 
+přípustnosti je specifikován v PDPS (část 5 ZD), a to v technické zprávě arch. číslo 
+TEP0314_TZ_D2-1-2-DPS-Technicka-zprava_01_R00 na str.11 a 12 a v  technické 
+zprávě arch. číslo TEP0314_TZ_D2-5-DPS-Technicka-zprava_01_R00 na str. 16 a 
+17. 
+Zkoušky je nutno ocenit na listě VRN pol. 8 řádek 157. 
+ 
+Pořadové číslo 
+dotazu 
+Účastníka: 
+(citace dotazu) 
+č. 57 
+20. Dne 5. 12. 2024 jsme od zadavatele obdrželi výzvu k  podání nabídek 
+s tím, že lhůta pro podání byla stanovena na 13. 1. 2025 a následně posunuta 
+na 20. 1. 2025. S  ohledem na skutečnost, že příprava nabídky spadá do 
+vánočních a novoročních svátků, tedy i do období nařízených celozávodních 
+dovolených, a to jak na straně zaměstnanců samotného účastníka, tak i jeho 
+poddodavatelů, žádáme zadavatele o prodloužení lhůty pro podání nabídek 
+do 3. 2. 2025.  Pro posouzení zadávací dokumentace, zajištění dohod o 
+mlčenlivosti se subdodavateli, vznesení dotazů a zajištění odpovědí 
+(vysvětlení zadávací dokumentace), přípravu cenové části a náročn ou 
+přípravu detailního popisu díla potřebují účastníci dostatečný čas tak, aby 
+připravili skutečně přesnou a odborně zpracovanou nabídku, což za takto 
+omezených časových podmínek není v tuto chvíli možné. 
+ 
+Pořadové číslo 
+odpovědi 
+Zadavatele na 
+dotaz: 
+č. 57 
+ 
+ 
+Vzhledem k  tomu, že Zadavatel v  nejbližší době vydá Dodatek k  ZD, tak zároveň 
+s vydáním tohoto dodatku dojde k prodloužení lhůty pro podání Předběžné nabídky. 
+ 
+ 
