@@ -1,3 +1,2 @@
 200
 https://search.joinpeertube.org/api/v1/search/videos?search=Kada%C5%88+2024&start=0&count=100
-{'Server': 'nginx/1.22.1', 'Date': 'Sun, 23 Aug 2026 05:25:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '418580', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"66314-rbxvtPwHF/MypmZK5ad2TNEGJHw"', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Permissions-Policy': 'browsing-topics=()', 'X-Clacks-Overhead': 'GNU Terry Pratchett'}

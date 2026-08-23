@@ -1,3 +1,2 @@
 200
 https://tv.pirati.cz/api/v1/search/videos?search=Kada%C5%88+2024&start=0&count=100&sort=-publishedAt&searchTarget=local
-{'date': 'Sun, 23 Aug 2026 05:25:30 GMT', 'content-type': 'application/json; charset=utf-8', 'content-length': '164125', 'x-frame-options': 'DENY', 'tk': 'N', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Retry-After', 'x-ratelimit-limit': '50', 'x-ratelimit-remaining': '42', 'x-ratelimit-reset': '1787462734', 'etag': 'W/"2811d-QVOyZ6jZcpj8m+yr55LM+xav4Hk"', 'access-control-allow-origin': '*', 'strict-transport-security': 'max-age=63072000; includeSubDomains; preload;', 'server': 'Sharing Is Caring 1.0', 'x-powered-by': 'Dark side of the Force'}

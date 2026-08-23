@@ -1,3 +1,2 @@
 200
 https://search.joinpeertube.org/api/v1/search/videos?search=zastupitelstvo+m%C4%9Bsta+Kada%C5%88&start=0&count=100
-{'Server': 'nginx/1.22.1', 'Date': 'Sun, 23 Aug 2026 05:25:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '250108', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"3d0fc-CzCJ10gkVqMfrlTacMsgHC2lUF8"', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Permissions-Policy': 'browsing-topics=()', 'X-Clacks-Overhead': 'GNU Terry Pratchett'}
