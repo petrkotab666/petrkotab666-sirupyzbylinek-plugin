@@ -1,0 +1,67 @@
+[
+  {
+    "label": "sfzp_main",
+    "url": "https://otevrenadata.sfzp.cz/",
+    "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='otevrenadata.sfzp.cz', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))\"))"
+  },
+  {
+    "label": "sfzp_data_0",
+    "url": "https://otevrenadata.sfzp.cz/otevrenadata.csv",
+    "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='otevrenadata.sfzp.cz', port=443): Max retries exceeded with url: /otevrenadata.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))\"))"
+  },
+  {
+    "label": "sfzp_data_1",
+    "url": "https://otevrenadata.sfzp.cz/openData.csv",
+    "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='otevrenadata.sfzp.cz', port=443): Max retries exceeded with url: /openData.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))\"))"
+  },
+  {
+    "label": "sfzp_data_2",
+    "url": "https://otevrenadata.sfzp.cz/data/otevrenadata.csv",
+    "error": "SSLError(MaxRetryError(\"HTTPSConnectionPool(host='otevrenadata.sfzp.cz', port=443): Max retries exceeded with url: /data/otevrenadata.csv (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))\"))"
+  },
+  {
+    "label": "registry_0",
+    "url": "https://smlouvy.gov.cz/vyhledavani?search=4570081576",
+    "final": "https://smlouvy.gov.cz/vyhledavani?search=4570081576",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 37271,
+    "path": "tmp_cez_decisive_followup_20260823/downloads/registry_0.html"
+  },
+  {
+    "label": "registry_1",
+    "url": "https://smlouvy.gov.cz/vyhledavani?contract_num=4570081576",
+    "final": "https://smlouvy.gov.cz/vyhledavani?contract_num=4570081576",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 17031,
+    "path": "tmp_cez_decisive_followup_20260823/downloads/registry_1.html"
+  },
+  {
+    "label": "registry_2",
+    "url": "https://smlouvy.gov.cz/vyhledavani?subject_idnum=27309941&contract_num=4570081576",
+    "final": "https://smlouvy.gov.cz/vyhledavani?subject_idnum=27309941&contract_num=4570081576",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 37788,
+    "path": "tmp_cez_decisive_followup_20260823/downloads/registry_2.html"
+  },
+  {
+    "label": "registry_3",
+    "url": "https://smlouvy.gov.cz/vyhledavani?subject_name=%C4%8CEZ%20Tepl%C3%A1rensk%C3%A1&contract_num=4570081576",
+    "final": "https://smlouvy.gov.cz/vyhledavani?subject_name=%C4%8CEZ%20Tepl%C3%A1rensk%C3%A1&contract_num=4570081576",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 38172,
+    "path": "tmp_cez_decisive_followup_20260823/downloads/registry_3.html"
+  },
+  {
+    "label": "registry_4",
+    "url": "https://smlouvy.gov.cz/vyhledavani?search=CV_HV%20propoj%20EPR-Kada%C5%88",
+    "final": "https://smlouvy.gov.cz/vyhledavani?search=CV_HV%20propoj%20EPR-Kada%C5%88",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 37271,
+    "path": "tmp_cez_decisive_followup_20260823/downloads/registry_4.html"
+  }
+]
