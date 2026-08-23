@@ -1,0 +1,40 @@
+name: Temporary CEZ decisive follow-up
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  followup:
+    if: startsWith(github.event.issue.title, '[CEZ-DECISIVE]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - run: python3 -m pip install --quiet requests beautifulsoup4
+      - name: Extract contract clauses, authors and public-register data
+        shell: bash
+        run: |
+          set +e
+          mkdir -p tmp_cez_decisive_followup_20260823
+          python3 scripts/tmp_cez_decisive_followup_20260823.py > /tmp/cez-decisive.log 2>&1
+          code=$?
+          cp /tmp/cez-decisive.log tmp_cez_decisive_followup_20260823/RUN.log
+          echo "$code" > tmp_cez_decisive_followup_20260823/EXIT_CODE.txt
+          cat /tmp/cez-decisive.log
+          exit 0
+      - name: Commit findings
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp_cez_decisive_followup_20260823
+          git commit -m "Store temporary decisive CEZ follow-up findings" || exit 0
+          git push origin HEAD:main
