@@ -2,7 +2,7 @@ name: Temporary VVZ public API fetch
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
   workflow_dispatch:
 
 permissions:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   fetch-vvz:
-    if: github.event_name == 'workflow_dispatch' || github.event.issue.title == '[tmp-vvz-fetch-20260823]'
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, '[tmp-vvz-fetch-20260823]')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -24,16 +24,21 @@ jobs:
           rm -rf tmp-vvz-api-output
           mkdir -p tmp-vvz-api-output
           python3 - <<'PY'
-          import json, os, re, urllib.parse, urllib.request
+          import json, os, re, urllib.parse, urllib.request, urllib.error
 
           OUT = "tmp-vvz-api-output"
           BASE = "https://api.vvz.nipez.cz"
           HEADERS = {
               "Accept": "application/json, text/plain, */*",
               "Accept-Language": "cs-CZ,cs;q=0.9,en;q=0.8",
+              "Cache-Control": "no-cache",
               "Origin": "https://vvz.nipez.cz",
+              "Pragma": "no-cache",
               "Referer": "https://vvz.nipez.cz/",
-              "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36",
+              "Sec-Fetch-Dest": "empty",
+              "Sec-Fetch-Mode": "cors",
+              "Sec-Fetch-Site": "same-site",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
           }
 
           def fetch(name, path, params=None):
@@ -51,17 +56,22 @@ jobs:
                           record["body"] = json.loads(raw.decode("utf-8"))
                       except Exception:
                           record["body_text"] = raw.decode("utf-8", errors="replace")
+              except urllib.error.HTTPError as e:
+                  raw = e.read()
+                  record["status"] = e.code
+                  record["error"] = repr(e)
+                  record["error_body"] = raw.decode("utf-8", errors="replace")
               except Exception as e:
                   record["error"] = repr(e)
               with open(os.path.join(OUT, name + ".json"), "w", encoding="utf-8") as f:
                   json.dump(record, f, ensure_ascii=False, indent=2)
               return record.get("body")
 
+          common = {"form": "vz", "formGroup": "vz"}
           search = fetch("00_search_Z2024-029445", "/api/submissions/search", {
               "page": 1,
               "limit": 200,
-              "form": "vz",
-              "workflowPlace": "UVEREJNENO_VVZ",
+              **common,
               "data.evCisloZakazkyVvz": "Z2024-029445",
               "order[data.datumUverejneniVvz]": "DESC",
               "order[createdAt]": "DESC",
@@ -97,8 +107,7 @@ jobs:
               fetch("20_" + form_no, "/api/submissions/search", {
                   "page": 1,
                   "limit": 50,
-                  "form": "vz",
-                  "workflowPlace": "UVEREJNENO_VVZ",
+                  **common,
                   "data.evCisloFormulareVvz": form_no,
                   "order[createdAt]": "DESC",
               })
