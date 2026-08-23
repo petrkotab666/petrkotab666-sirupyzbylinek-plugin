@@ -1,0 +1,139 @@
+[
+  {
+    "name": "procedure_exact",
+    "query": "procedure-identifier = 016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 60067
+  },
+  {
+    "name": "procedure_exact_quoted",
+    "query": "procedure-identifier = \"016c74a6-ac6c-450b-aeb2-577a856bdb6f\"",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 60067
+  },
+  {
+    "name": "title_exact",
+    "query": "FT = \"CV_HV propoj EPR- Kadaň\"",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 75556
+  },
+  {
+    "name": "title_ascii",
+    "query": "FT = \"CV_HV propoj EPR- Kadan\"",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 75556
+  },
+  {
+    "name": "title_short",
+    "query": "FT = \"CV_HV propoj EPR\"",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 75556
+  },
+  {
+    "name": "changed_award",
+    "query": "changed-notice-version-identifier = 615457-2025",
+    "status": 400,
+    "content_type": "application/json",
+    "bytes": 249
+  },
+  {
+    "name": "changed_award_minimal",
+    "query": "changed-notice-version-identifier = 615457-2025",
+    "status": 400,
+    "content_type": "application/json",
+    "bytes": 249
+  },
+  {
+    "name": "xml_253141-2026",
+    "url": "https://ted.europa.eu/en/notice/253141-2026/xml",
+    "final_url": "https://ted.europa.eu/en/notice/253141-2026/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 29862
+  },
+  {
+    "name": "xml_274007-2026",
+    "url": "https://ted.europa.eu/en/notice/274007-2026/xml",
+    "final_url": "https://ted.europa.eu/en/notice/274007-2026/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 25133
+  },
+  {
+    "name": "xml_384212-2024",
+    "url": "https://ted.europa.eu/en/notice/384212-2024/xml",
+    "final_url": "https://ted.europa.eu/en/notice/384212-2024/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 19559
+  },
+  {
+    "name": "xml_436013-2024",
+    "url": "https://ted.europa.eu/en/notice/436013-2024/xml",
+    "final_url": "https://ted.europa.eu/en/notice/436013-2024/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 20299
+  },
+  {
+    "name": "xml_439224-2026",
+    "url": "https://ted.europa.eu/en/notice/439224-2026/xml",
+    "final_url": "https://ted.europa.eu/en/notice/439224-2026/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 28955
+  },
+  {
+    "name": "xml_492836-2024",
+    "url": "https://ted.europa.eu/en/notice/492836-2024/xml",
+    "final_url": "https://ted.europa.eu/en/notice/492836-2024/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 20292
+  },
+  {
+    "name": "xml_512715-2024",
+    "url": "https://ted.europa.eu/en/notice/512715-2024/xml",
+    "final_url": "https://ted.europa.eu/en/notice/512715-2024/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 20292
+  },
+  {
+    "name": "xml_519047-2026",
+    "url": "https://ted.europa.eu/en/notice/519047-2026/xml",
+    "final_url": "https://ted.europa.eu/en/notice/519047-2026/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 30615
+  },
+  {
+    "name": "xml_524314-2024",
+    "url": "https://ted.europa.eu/en/notice/524314-2024/xml",
+    "final_url": "https://ted.europa.eu/en/notice/524314-2024/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 20288
+  },
+  {
+    "name": "xml_615457-2025",
+    "url": "https://ted.europa.eu/en/notice/615457-2025/xml",
+    "final_url": "https://ted.europa.eu/en/notice/615457-2025/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 25553
+  },
+  {
+    "name": "xml_819125-2025",
+    "url": "https://ted.europa.eu/en/notice/819125-2025/xml",
+    "final_url": "https://ted.europa.eu/en/notice/819125-2025/xml",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 23448
+  }
+]

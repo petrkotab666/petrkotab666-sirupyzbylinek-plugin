@@ -1,0 +1,155 @@
+{
+  "publication_number": "253141-2026",
+  "root": "ContractAwardNotice",
+  "uuid": null,
+  "issue_date": "2025-09-03+02:00",
+  "procedure_ids": [
+    {
+      "tag": "ID",
+      "text": "RES-0001",
+      "attrs": {
+        "schemeName": "result"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "TEN-0001",
+      "attrs": {
+        "schemeName": "tender"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "CON-0001",
+      "attrs": {
+        "schemeName": "contract"
+      }
+    },
+    {
+      "tag": "ContractFolderID",
+      "text": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "attrs": {}
+    }
+  ],
+  "modifications": [
+    {
+      "changed_notice_identifier": "615457-2025",
+      "modified_contract_identifier": "CON-0001",
+      "change_descriptions": [
+        {
+          "tag": "ChangeDescription",
+          "text": "Zhotovitel při realizaci Díla, konkrétně v průběhu prací na Realizační projektové dokumentaci (dále jen „RPD“) zjistil několik vad v Projektové dokumentaci pro provedení stavby (dále jen „PDPS“) a v Dokumentaci pro územní rozhodnutí (dále jen „DUR“), které pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“) a ze které Zhotovitel vychází při provádění Díla. K řádnému provedení Díla ze strany Zhotovitele je nutné v důsledku uvedených vad PDPS a DUR, které jsou blíže popsány níže, v současné době upravit podklad pro tvorbu RPD. Změny, ke kterým je nutné nyní přistoupit jsou vyvolané vadami PDPS, přičemž Zadavatel ani Zhotovitel neměli, jak tyto vady zjistit před podpisem samotné smlouvy. PDPS byla vyhotovena třetí osobou, resp. odbornou osobou v souladu a v detailu dle vyhlášky 499/2006 Sb. Konkrétně se jednalo o to, že původně zakreslená trasa horkovodu, která byla odsouhlasena všemi dotčenými orgány státní správy a vlastníky technické infrastruktury v rámci vydání územního rozhodnutí, kdy žádný z vlastníků/správců inženýrských sítí neuvedl, že by navrhovaná trasa byla v rozporu s existujícími sítěmi, se ve skutečnosti dostala do kolize s exitujícími inženýrskými sítěmi. Na skutečný rozpor PDPS s realitou se přišlo až při tvorbě RPD, kdy Zhotovitel při průzkumných vrtech, popř. při vytyčení sítí zjistil, že navržená trasa horkovodního propoje dle PDPS v několika bodech (oblastech) se dostává do střetu s existujícími inženýrskými sítěmi. Zadavatel tento rozpor nemohl a neměl, jak zjistit před tím (např. při tvorbě ZD, v průběhu realizace zadávacího řízení), než Zhotovitel přistoupil ke tvorbě RPD. Skutečné provedení patek stožárů VVN pod úrovní terénu bylo zjistitelné pouze na základě hydrogeologického průzkumu, který je součástí plnění Zhotovitele v rámci zpracování RPD. V rámci tohoto průzkumu byly provedeny sondy u patek stožárů a bylo zjištěno, že patky pod úrovní terénu zasahují do původně zamýšlené trasy vedení horkovodu. Uložení sítí plynovodu a vodovodu bylo po vytýčení a zaměření zjištěno v odlišné trase, než bylo uvedeno v podkladech poskytnutých vlastníky inženýrských sítí, kteří v tomto úseku nemají k dispozici digitalizované podklady z důvodu stáří sítí. Na základě vytýčení sítí, provedeného hydrogeologického a stavebně technického průzkumu Zhotovitel navrhne a projekčně zpracuje úpravu řešení v kolizních místech, přičemž projednání navržených úprav s vlastníky dotčené infrastruktury a nalezení společného řešení trvá v řádu dvou až tří měsíců. Tato změna si pravděpodobně vyžádá zpracování dokumentace změny stavby před dokončením a její projednání před podáním žádosti o změnu na stavební úřad. Veškeré uvedené činnosti, které nyní Zhotovitel v souvislosti s výše popsaným problémem musí provést, nebyly předpokládány a mají přímý dopad do harmonogramu plnění dle Smlouvy. Tento dopad do harmonogramu Smlouvy je dán zejména požadavky třetích stran, které Zhotovitel nemůže ovlivnit (např. souhlas správce komunikací s nezbytným průzkumem, který dle správce může být proveden nejdříve po skončení zimního období). Konečný termín převzetí Díla zůstává nezměněn. Uzavřeným dodatkem ke Smlouvě dojde k rozdělení a prodloužení dotčených milníků dle Smlouvy, tak aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí vytvořit nový podklad v detailu PDPS pro dotčené části trasy horkovodního propoje zasažené neočekávanými kolizemi s inženýrskými sítěmi, aby vůbec mohl začít projektovat RPD. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ],
+      "reason_codes": [
+        {
+          "tag": "ReasonCode",
+          "text": "mod-cir",
+          "attrs": {
+            "listName": "modification-justification"
+          }
+        }
+      ],
+      "reason_descriptions": [
+        {
+          "tag": "ReasonDescription",
+          "text": "Zhotovitel při realizaci Díla, konkrétně v průběhu prací na Realizační projektové dokumentaci (dále jen „RPD“) zjistil několik vad v Projektové dokumentaci pro provedení stavby (dále jen „PDPS“) a v Dokumentaci pro územní rozhodnutí (dále jen „DUR“), které pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“) a ze které Zhotovitel vychází při provádění Díla. K řádnému provedení Díla ze strany Zhotovitele je nutné v důsledku uvedených vad PDPS a DUR, které jsou blíže popsány níže, v současné době upravit podklad pro tvorbu RPD. Změny, ke kterým je nutné nyní přistoupit jsou vyvolané vadami PDPS, přičemž Zadavatel ani Zhotovitel neměli, jak tyto vady zjistit před podpisem samotné smlouvy. PDPS byla vyhotovena třetí osobou, resp. odbornou osobou v souladu a v detailu dle vyhlášky 499/2006 Sb. Konkrétně se jednalo o to, že původně zakreslená trasa horkovodu, která byla odsouhlasena všemi dotčenými orgány státní správy a vlastníky technické infrastruktury v rámci vydání územního rozhodnutí, kdy žádný z vlastníků/správců inženýrských sítí neuvedl, že by navrhovaná trasa byla v rozporu s existujícími sítěmi, se ve skutečnosti dostala do kolize s exitujícími inženýrskými sítěmi. Na skutečný rozpor PDPS s realitou se přišlo až při tvorbě RPD, kdy Zhotovitel při průzkumných vrtech, popř. při vytyčení sítí zjistil, že navržená trasa horkovodního propoje dle PDPS v několika bodech (oblastech) se dostává do střetu s existujícími inženýrskými sítěmi. Zadavatel tento rozpor nemohl a neměl, jak zjistit před tím (např. při tvorbě ZD, v průběhu realizace zadávacího řízení), než Zhotovitel přistoupil ke tvorbě RPD. Skutečné provedení patek stožárů VVN pod úrovní terénu bylo zjistitelné pouze na základě hydrogeologického průzkumu, který je součástí plnění Zhotovitele v rámci zpracování RPD. V rámci tohoto průzkumu byly provedeny sondy u patek stožárů a bylo zjištěno, že patky pod úrovní terénu zasahují do původně zamýšlené trasy vedení horkovodu. Uložení sítí plynovodu a vodovodu bylo po vytýčení a zaměření zjištěno v odlišné trase, než bylo uvedeno v podkladech poskytnutých vlastníky inženýrských sítí, kteří v tomto úseku nemají k dispozici digitalizované podklady z důvodu stáří sítí. Na základě vytýčení sítí, provedeného hydrogeologického a stavebně technického průzkumu Zhotovitel navrhne a projekčně zpracuje úpravu řešení v kolizních místech, přičemž projednání navržených úprav s vlastníky dotčené infrastruktury a nalezení společného řešení trvá v řádu dvou až tří měsíců. Tato změna si pravděpodobně vyžádá zpracování dokumentace změny stavby před dokončením a její projednání před podáním žádosti o změnu na stavební úřad. Veškeré uvedené činnosti, které nyní Zhotovitel v souvislosti s výše popsaným problémem musí provést, nebyly předpokládány a mají přímý dopad do harmonogramu plnění dle Smlouvy. Tento dopad do harmonogramu Smlouvy je dán zejména požadavky třetích stran, které Zhotovitel nemůže ovlivnit (např. souhlas správce komunikací s nezbytným průzkumem, který dle správce může být proveden nejdříve po skončení zimního období). Konečný termín převzetí Díla zůstává nezměněn. Uzavřeným dodatkem ke Smlouvě dojde k rozdělení a prodloužení dotčených milníků dle Smlouvy, tak aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí vytvořit nový podklad v detailu PDPS pro dotčené části trasy horkovodního propoje zasažené neočekávanými kolizemi s inženýrskými sítěmi, aby vůbec mohl začít projektovat RPD. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ],
+      "all_fields": [
+        {
+          "tag": "ChangedNoticeIdentifier",
+          "text": "615457-2025",
+          "attrs": {}
+        },
+        {
+          "tag": "ModifiedContractIdentifier",
+          "text": "CON-0001",
+          "attrs": {}
+        },
+        {
+          "tag": "ChangeDescription",
+          "text": "Zhotovitel při realizaci Díla, konkrétně v průběhu prací na Realizační projektové dokumentaci (dále jen „RPD“) zjistil několik vad v Projektové dokumentaci pro provedení stavby (dále jen „PDPS“) a v Dokumentaci pro územní rozhodnutí (dále jen „DUR“), které pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“) a ze které Zhotovitel vychází při provádění Díla. K řádnému provedení Díla ze strany Zhotovitele je nutné v důsledku uvedených vad PDPS a DUR, které jsou blíže popsány níže, v současné době upravit podklad pro tvorbu RPD. Změny, ke kterým je nutné nyní přistoupit jsou vyvolané vadami PDPS, přičemž Zadavatel ani Zhotovitel neměli, jak tyto vady zjistit před podpisem samotné smlouvy. PDPS byla vyhotovena třetí osobou, resp. odbornou osobou v souladu a v detailu dle vyhlášky 499/2006 Sb. Konkrétně se jednalo o to, že původně zakreslená trasa horkovodu, která byla odsouhlasena všemi dotčenými orgány státní správy a vlastníky technické infrastruktury v rámci vydání územního rozhodnutí, kdy žádný z vlastníků/správců inženýrských sítí neuvedl, že by navrhovaná trasa byla v rozporu s existujícími sítěmi, se ve skutečnosti dostala do kolize s exitujícími inženýrskými sítěmi. Na skutečný rozpor PDPS s realitou se přišlo až při tvorbě RPD, kdy Zhotovitel při průzkumných vrtech, popř. při vytyčení sítí zjistil, že navržená trasa horkovodního propoje dle PDPS v několika bodech (oblastech) se dostává do střetu s existujícími inženýrskými sítěmi. Zadavatel tento rozpor nemohl a neměl, jak zjistit před tím (např. při tvorbě ZD, v průběhu realizace zadávacího řízení), než Zhotovitel přistoupil ke tvorbě RPD. Skutečné provedení patek stožárů VVN pod úrovní terénu bylo zjistitelné pouze na základě hydrogeologického průzkumu, který je součástí plnění Zhotovitele v rámci zpracování RPD. V rámci tohoto průzkumu byly provedeny sondy u patek stožárů a bylo zjištěno, že patky pod úrovní terénu zasahují do původně zamýšlené trasy vedení horkovodu. Uložení sítí plynovodu a vodovodu bylo po vytýčení a zaměření zjištěno v odlišné trase, než bylo uvedeno v podkladech poskytnutých vlastníky inženýrských sítí, kteří v tomto úseku nemají k dispozici digitalizované podklady z důvodu stáří sítí. Na základě vytýčení sítí, provedeného hydrogeologického a stavebně technického průzkumu Zhotovitel navrhne a projekčně zpracuje úpravu řešení v kolizních místech, přičemž projednání navržených úprav s vlastníky dotčené infrastruktury a nalezení společného řešení trvá v řádu dvou až tří měsíců. Tato změna si pravděpodobně vyžádá zpracování dokumentace změny stavby před dokončením a její projednání před podáním žádosti o změnu na stavební úřad. Veškeré uvedené činnosti, které nyní Zhotovitel v souvislosti s výše popsaným problémem musí provést, nebyly předpokládány a mají přímý dopad do harmonogramu plnění dle Smlouvy. Tento dopad do harmonogramu Smlouvy je dán zejména požadavky třetích stran, které Zhotovitel nemůže ovlivnit (např. souhlas správce komunikací s nezbytným průzkumem, který dle správce může být proveden nejdříve po skončení zimního období). Konečný termín převzetí Díla zůstává nezměněn. Uzavřeným dodatkem ke Smlouvě dojde k rozdělení a prodloužení dotčených milníků dle Smlouvy, tak aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí vytvořit nový podklad v detailu PDPS pro dotčené části trasy horkovodního propoje zasažené neočekávanými kolizemi s inženýrskými sítěmi, aby vůbec mohl začít projektovat RPD. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        },
+        {
+          "tag": "ReasonCode",
+          "text": "mod-cir",
+          "attrs": {
+            "listName": "modification-justification"
+          }
+        },
+        {
+          "tag": "ReasonDescription",
+          "text": "Zhotovitel při realizaci Díla, konkrétně v průběhu prací na Realizační projektové dokumentaci (dále jen „RPD“) zjistil několik vad v Projektové dokumentaci pro provedení stavby (dále jen „PDPS“) a v Dokumentaci pro územní rozhodnutí (dále jen „DUR“), které pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“) a ze které Zhotovitel vychází při provádění Díla. K řádnému provedení Díla ze strany Zhotovitele je nutné v důsledku uvedených vad PDPS a DUR, které jsou blíže popsány níže, v současné době upravit podklad pro tvorbu RPD. Změny, ke kterým je nutné nyní přistoupit jsou vyvolané vadami PDPS, přičemž Zadavatel ani Zhotovitel neměli, jak tyto vady zjistit před podpisem samotné smlouvy. PDPS byla vyhotovena třetí osobou, resp. odbornou osobou v souladu a v detailu dle vyhlášky 499/2006 Sb. Konkrétně se jednalo o to, že původně zakreslená trasa horkovodu, která byla odsouhlasena všemi dotčenými orgány státní správy a vlastníky technické infrastruktury v rámci vydání územního rozhodnutí, kdy žádný z vlastníků/správců inženýrských sítí neuvedl, že by navrhovaná trasa byla v rozporu s existujícími sítěmi, se ve skutečnosti dostala do kolize s exitujícími inženýrskými sítěmi. Na skutečný rozpor PDPS s realitou se přišlo až při tvorbě RPD, kdy Zhotovitel při průzkumných vrtech, popř. při vytyčení sítí zjistil, že navržená trasa horkovodního propoje dle PDPS v několika bodech (oblastech) se dostává do střetu s existujícími inženýrskými sítěmi. Zadavatel tento rozpor nemohl a neměl, jak zjistit před tím (např. při tvorbě ZD, v průběhu realizace zadávacího řízení), než Zhotovitel přistoupil ke tvorbě RPD. Skutečné provedení patek stožárů VVN pod úrovní terénu bylo zjistitelné pouze na základě hydrogeologického průzkumu, který je součástí plnění Zhotovitele v rámci zpracování RPD. V rámci tohoto průzkumu byly provedeny sondy u patek stožárů a bylo zjištěno, že patky pod úrovní terénu zasahují do původně zamýšlené trasy vedení horkovodu. Uložení sítí plynovodu a vodovodu bylo po vytýčení a zaměření zjištěno v odlišné trase, než bylo uvedeno v podkladech poskytnutých vlastníky inženýrských sítí, kteří v tomto úseku nemají k dispozici digitalizované podklady z důvodu stáří sítí. Na základě vytýčení sítí, provedeného hydrogeologického a stavebně technického průzkumu Zhotovitel navrhne a projekčně zpracuje úpravu řešení v kolizních místech, přičemž projednání navržených úprav s vlastníky dotčené infrastruktury a nalezení společného řešení trvá v řádu dvou až tří měsíců. Tato změna si pravděpodobně vyžádá zpracování dokumentace změny stavby před dokončením a její projednání před podáním žádosti o změnu na stavební úřad. Veškeré uvedené činnosti, které nyní Zhotovitel v souvislosti s výše popsaným problémem musí provést, nebyly předpokládány a mají přímý dopad do harmonogramu plnění dle Smlouvy. Tento dopad do harmonogramu Smlouvy je dán zejména požadavky třetích stran, které Zhotovitel nemůže ovlivnit (např. souhlas správce komunikací s nezbytným průzkumem, který dle správce může být proveden nejdříve po skončení zimního období). Konečný termín převzetí Díla zůstává nezměněn. Uzavřeným dodatkem ke Smlouvě dojde k rozdělení a prodloužení dotčených milníků dle Smlouvy, tak aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí vytvořit nový podklad v detailu PDPS pro dotčené části trasy horkovodního propoje zasažené neočekávanými kolizemi s inženýrskými sítěmi, aby vůbec mohl začít projektovat RPD. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ]
+    }
+  ],
+  "amounts": [
+    {
+      "tag": "TotalAmount",
+      "text": "427724562.68",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    },
+    {
+      "tag": "PayableAmount",
+      "text": "427724562.68",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    }
+  ],
+  "dates_and_durations": [
+    {
+      "tag": "AwardDate",
+      "text": "2025-08-26+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "PublicationDate",
+      "text": "2026-04-14+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2026-04-13+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "StartDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "DurationMeasure",
+      "text": "650",
+      "attrs": {
+        "unitCode": "DAY"
+      }
+    },
+    {
+      "tag": "AwardDate",
+      "text": "2000-01-01Z",
+      "attrs": {}
+    }
+  ]
+}

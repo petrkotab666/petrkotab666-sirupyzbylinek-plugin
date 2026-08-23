@@ -1,0 +1,90 @@
+{
+  "publication_number": "615457-2025",
+  "root": "ContractAwardNotice",
+  "uuid": null,
+  "issue_date": "2025-09-03+02:00",
+  "procedure_ids": [
+    {
+      "tag": "ID",
+      "text": "RES-0001",
+      "attrs": {
+        "schemeName": "result"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "TEN-0001",
+      "attrs": {
+        "schemeName": "tender"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "CON-0001",
+      "attrs": {
+        "schemeName": "contract"
+      }
+    },
+    {
+      "tag": "ContractFolderID",
+      "text": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "attrs": {}
+    }
+  ],
+  "modifications": [],
+  "amounts": [
+    {
+      "tag": "TotalAmount",
+      "text": "427724562.68",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    },
+    {
+      "tag": "PayableAmount",
+      "text": "427724562.68",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    }
+  ],
+  "dates_and_durations": [
+    {
+      "tag": "AwardDate",
+      "text": "2025-08-26+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "PublicationDate",
+      "text": "2025-09-19+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2025-09-18+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "StartDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "DurationMeasure",
+      "text": "650",
+      "attrs": {
+        "unitCode": "DAY"
+      }
+    },
+    {
+      "tag": "AwardDate",
+      "text": "2000-01-01Z",
+      "attrs": {}
+    }
+  ]
+}

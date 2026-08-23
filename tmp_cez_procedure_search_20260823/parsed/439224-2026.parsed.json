@@ -1,0 +1,155 @@
+{
+  "publication_number": "439224-2026",
+  "root": "ContractAwardNotice",
+  "uuid": null,
+  "issue_date": "2025-09-03+02:00",
+  "procedure_ids": [
+    {
+      "tag": "ID",
+      "text": "RES-0001",
+      "attrs": {
+        "schemeName": "result"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "TEN-0001",
+      "attrs": {
+        "schemeName": "tender"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "CON-0001",
+      "attrs": {
+        "schemeName": "contract"
+      }
+    },
+    {
+      "tag": "ContractFolderID",
+      "text": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "attrs": {}
+    }
+  ],
+  "modifications": [
+    {
+      "changed_notice_identifier": "615457-2025",
+      "modified_contract_identifier": "CON-0001",
+      "change_descriptions": [
+        {
+          "tag": "ChangeDescription",
+          "text": "Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ],
+      "reason_codes": [
+        {
+          "tag": "ReasonCode",
+          "text": "mod-cir",
+          "attrs": {
+            "listName": "modification-justification"
+          }
+        }
+      ],
+      "reason_descriptions": [
+        {
+          "tag": "ReasonDescription",
+          "text": "Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ],
+      "all_fields": [
+        {
+          "tag": "ChangedNoticeIdentifier",
+          "text": "615457-2025",
+          "attrs": {}
+        },
+        {
+          "tag": "ModifiedContractIdentifier",
+          "text": "CON-0001",
+          "attrs": {}
+        },
+        {
+          "tag": "ChangeDescription",
+          "text": "Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        },
+        {
+          "tag": "ReasonCode",
+          "text": "mod-cir",
+          "attrs": {
+            "listName": "modification-justification"
+          }
+        },
+        {
+          "tag": "ReasonDescription",
+          "text": "Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ]
+    }
+  ],
+  "amounts": [
+    {
+      "tag": "TotalAmount",
+      "text": "427756486.26",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    },
+    {
+      "tag": "PayableAmount",
+      "text": "427756486.26",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    }
+  ],
+  "dates_and_durations": [
+    {
+      "tag": "AwardDate",
+      "text": "2025-08-26+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "PublicationDate",
+      "text": "2026-06-26+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2026-06-25+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "StartDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "DurationMeasure",
+      "text": "650",
+      "attrs": {
+        "unitCode": "DAY"
+      }
+    },
+    {
+      "tag": "AwardDate",
+      "text": "2000-01-01Z",
+      "attrs": {}
+    }
+  ]
+}

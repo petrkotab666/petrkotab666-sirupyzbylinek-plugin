@@ -1,0 +1,49 @@
+{
+  "publication_number": "384212-2024",
+  "root": "ContractNotice",
+  "uuid": null,
+  "issue_date": "2024-06-26+02:00",
+  "procedure_ids": [
+    {
+      "tag": "ContractFolderID",
+      "text": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "attrs": {}
+    }
+  ],
+  "modifications": [],
+  "amounts": [],
+  "dates_and_durations": [
+    {
+      "tag": "PublicationDate",
+      "text": "2024-06-28Z",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2024-06-26+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "EndDate",
+      "text": "2024-08-06+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "EndTime",
+      "text": "10:00:00+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "StartDate",
+      "text": "2025-06-30+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "DurationMeasure",
+      "text": "650",
+      "attrs": {
+        "unitCode": "DAY"
+      }
+    }
+  ]
+}

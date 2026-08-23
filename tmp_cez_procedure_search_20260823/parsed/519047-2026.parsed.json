@@ -1,0 +1,155 @@
+{
+  "publication_number": "519047-2026",
+  "root": "ContractAwardNotice",
+  "uuid": null,
+  "issue_date": "2025-09-03+02:00",
+  "procedure_ids": [
+    {
+      "tag": "ID",
+      "text": "RES-0001",
+      "attrs": {
+        "schemeName": "result"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "TEN-0001",
+      "attrs": {
+        "schemeName": "tender"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "CON-0001",
+      "attrs": {
+        "schemeName": "contract"
+      }
+    },
+    {
+      "tag": "ContractFolderID",
+      "text": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "attrs": {}
+    }
+  ],
+  "modifications": [
+    {
+      "changed_notice_identifier": "615457-2025",
+      "modified_contract_identifier": "CON-0001",
+      "change_descriptions": [
+        {
+          "tag": "ChangeDescription",
+          "text": "Objednatel, v rámci přípravy zadávací dokumentace pro zadávací řízení na realizaci veřejné zakázky nechal odborným zhotovitelem, spol. SITEZ s.r.o., zpracovat dokumentaci pro územní řízení (dále jen „DUR“), dle vyhlášky č. 499/2006 Sb., která byla součástí žádosti o vydání rozhodnutí o umístění stavby. Součástí podkladů předaných Objednatelem v rámci zadávacího řízení bylo i souhlasné „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pasu zařízení distribuční soustavy“ provozovatele distribuční soustavy, spol. ČEZ Distribuce, a.s. (dále jen „ČEZd“) ze dne 4. 9. 2023, z kterého Objednateli nevyplývala povinnost posoudit vlivy VVN a ZVN, tzn. že dotčený správce vedení VVN a ZVN, tj. ČEZd, nepožadoval, v navržené trase horkovodního propoje, zpracování výpočtu vlivů VVN a ZVN na potrubí horkovodu. Projektová dokumentace pro provedení stavby (dál jen „PDPS“), která je zpracována na základě DUR, ke kterým se společnost ČEZd vyjadřovala, byla součástí zadávací dokumentace veřejné zakázky CV_HV PROPOJ EPR – KADAŇ. PDPS Objednatel před převzetím od spol. SITEZ s.r.o. s péčí odborníka zkontroloval a potvrdil, že v ní neshledal zjevné vady, které by bránily převzetí PDPS. Zároveň Zhotovitel, obdržel od ČEZd shodný závěr, ze kterého nevyplývala povinnost posoudit vlivy VVN a ZVN ve „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pásmu zařízení distribuční soustavy“ ze dne 24.10.2025. Při provádění Díla, v rámci zpracování Realizační projektové dokumentace, v úsecích TR Vernéřov – TR Málkov a TR Merkur – TR Vernéřov, zjistil Zhotovitel nepředpokládanou hladinu podzemní vody (dle původního předpokladu se zde podzemní voda neměla vůbec vyskytovat). Tuto neočekávanou skutečnost, tj. výskyt podzemní vody v půdě v blízkosti/v ochranném pásu VVN a ZVN na horkovod, Zhotovitel z opatrnosti konzultoval s ČEZd, která v tomto případě doporučila zpracování posouzení vlivů VVN a ZVN na potrubí horkovodu (viz email TAS / IE-14-03-10001-X501 / Al - 069 ze dne 10.11.2025). Zhotovitel požadavku (resp. návrhu) ČEZd vyhověl a na svůj náklad zajistil zpracování výpočtu vlivů VVN a ZVN u specializované společnosti INFEL s.r.o., která je uvedena v seznamu ČEZd respektovaných zpracovatelů, a to dne 12.12.2025. Společnost INFEL s.r.o. zpracovala a předala Zhotoviteli dokumentaci „Výpočet vlivů VVN a ZVN na potrubí horkovodu“ (č. dokumentu 250070/01) dne 18.5.2026. Ze závěru zprávy k výpočtu, který odborná spol. provedla, vyplývá, že doplnění potrubí o prvky eliminující negativní vlivy VVN a ZVN je podmínkou, kterou je nutné splnit, aby bylo možné potrubí provozovat v souladu s relevantními technickými normami. Vzhledem k tomu, že i přes to, že Zhotovitel postupoval s péčí řádného odborníka, nemohl předjímat hladinu podzemní vody, kterou nadto v místě nepředpokládala ani ČEZd, viz vyjádření ČEZd zmíněná shora, nebyly mu tedy známy skutečnosti, pro které by bylo nutné opatřovat potrubí horkovodu zařízením pro eliminaci vlivu VN a ZVN. Objednatel, s vědomím negativních induktivních, kapacitních a galvanický vlivů a vlivu střídavých proudů na kvalitu horkovodu (koroze způsobující netěsnosti, degradace díla apod.), který je prvkem kritické infrastruktury, jehož poškození by mělo negativní vliv na životní potřeby obyvatel Kadaně, musí tato opatření provést tak, aby byla zajištěna požadované kvalita a udržitelnost horkovodu. V opačném případě (tj. pokud by navrhované změny nebyly provedeny) by uvedené mělo přímý dopad do životnosti potrubí horkovodu, vysokému výskytu poruch a v konečném důsledku by vedlo k nemožnosti jeho provozování. Uzavřeným dodatkem ke Smlouvě dojde k prodloužení dotčených milníků dle Smlouvy tak, aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí část trasy uzemnit FeZn pásky, což vyplývá z výpočtů vlivů VVN a ZVN a zpracovat revizi Realizační projektové dokumentace. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ],
+      "reason_codes": [
+        {
+          "tag": "ReasonCode",
+          "text": "mod-cir",
+          "attrs": {
+            "listName": "modification-justification"
+          }
+        }
+      ],
+      "reason_descriptions": [
+        {
+          "tag": "ReasonDescription",
+          "text": "Objednatel, v rámci přípravy zadávací dokumentace pro zadávací řízení na realizaci veřejné zakázky nechal odborným zhotovitelem, spol. SITEZ s.r.o., zpracovat dokumentaci pro územní řízení (dále jen „DUR“), dle vyhlášky č. 499/2006 Sb., která byla součástí žádosti o vydání rozhodnutí o umístění stavby. Součástí podkladů předaných Objednatelem v rámci zadávacího řízení bylo i souhlasné „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pasu zařízení distribuční soustavy“ provozovatele distribuční soustavy, spol. ČEZ Distribuce, a.s. (dále jen „ČEZd“) ze dne 4. 9. 2023, z kterého Objednateli nevyplývala povinnost posoudit vlivy VVN a ZVN, tzn. že dotčený správce vedení VVN a ZVN, tj. ČEZd, nepožadoval, v navržené trase horkovodního propoje, zpracování výpočtu vlivů VVN a ZVN na potrubí horkovodu. Projektová dokumentace pro provedení stavby (dál jen „PDPS“), která je zpracována na základě DUR, ke kterým se společnost ČEZd vyjadřovala, byla součástí zadávací dokumentace veřejné zakázky CV_HV PROPOJ EPR – KADAŇ. PDPS Objednatel před převzetím od spol. SITEZ s.r.o. s péčí odborníka zkontroloval a potvrdil, že v ní neshledal zjevné vady, které by bránily převzetí PDPS. Zároveň Zhotovitel, obdržel od ČEZd shodný závěr, ze kterého nevyplývala povinnost posoudit vlivy VVN a ZVN ve „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pásmu zařízení distribuční soustavy“ ze dne 24.10.2025. Při provádění Díla, v rámci zpracování Realizační projektové dokumentace, v úsecích TR Vernéřov – TR Málkov a TR Merkur – TR Vernéřov, zjistil Zhotovitel nepředpokládanou hladinu podzemní vody (dle původního předpokladu se zde podzemní voda neměla vůbec vyskytovat). Tuto neočekávanou skutečnost, tj. výskyt podzemní vody v půdě v blízkosti/v ochranném pásu VVN a ZVN na horkovod, Zhotovitel z opatrnosti konzultoval s ČEZd, která v tomto případě doporučila zpracování posouzení vlivů VVN a ZVN na potrubí horkovodu (viz email TAS / IE-14-03-10001-X501 / Al - 069 ze dne 10.11.2025). Zhotovitel požadavku (resp. návrhu) ČEZd vyhověl a na svůj náklad zajistil zpracování výpočtu vlivů VVN a ZVN u specializované společnosti INFEL s.r.o., která je uvedena v seznamu ČEZd respektovaných zpracovatelů, a to dne 12.12.2025. Společnost INFEL s.r.o. zpracovala a předala Zhotoviteli dokumentaci „Výpočet vlivů VVN a ZVN na potrubí horkovodu“ (č. dokumentu 250070/01) dne 18.5.2026. Ze závěru zprávy k výpočtu, který odborná spol. provedla, vyplývá, že doplnění potrubí o prvky eliminující negativní vlivy VVN a ZVN je podmínkou, kterou je nutné splnit, aby bylo možné potrubí provozovat v souladu s relevantními technickými normami. Vzhledem k tomu, že i přes to, že Zhotovitel postupoval s péčí řádného odborníka, nemohl předjímat hladinu podzemní vody, kterou nadto v místě nepředpokládala ani ČEZd, viz vyjádření ČEZd zmíněná shora, nebyly mu tedy známy skutečnosti, pro které by bylo nutné opatřovat potrubí horkovodu zařízením pro eliminaci vlivu VN a ZVN. Objednatel, s vědomím negativních induktivních, kapacitních a galvanický vlivů a vlivu střídavých proudů na kvalitu horkovodu (koroze způsobující netěsnosti, degradace díla apod.), který je prvkem kritické infrastruktury, jehož poškození by mělo negativní vliv na životní potřeby obyvatel Kadaně, musí tato opatření provést tak, aby byla zajištěna požadované kvalita a udržitelnost horkovodu. V opačném případě (tj. pokud by navrhované změny nebyly provedeny) by uvedené mělo přímý dopad do životnosti potrubí horkovodu, vysokému výskytu poruch a v konečném důsledku by vedlo k nemožnosti jeho provozování. Uzavřeným dodatkem ke Smlouvě dojde k prodloužení dotčených milníků dle Smlouvy tak, aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí část trasy uzemnit FeZn pásky, což vyplývá z výpočtů vlivů VVN a ZVN a zpracovat revizi Realizační projektové dokumentace. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ],
+      "all_fields": [
+        {
+          "tag": "ChangedNoticeIdentifier",
+          "text": "615457-2025",
+          "attrs": {}
+        },
+        {
+          "tag": "ModifiedContractIdentifier",
+          "text": "CON-0001",
+          "attrs": {}
+        },
+        {
+          "tag": "ChangeDescription",
+          "text": "Objednatel, v rámci přípravy zadávací dokumentace pro zadávací řízení na realizaci veřejné zakázky nechal odborným zhotovitelem, spol. SITEZ s.r.o., zpracovat dokumentaci pro územní řízení (dále jen „DUR“), dle vyhlášky č. 499/2006 Sb., která byla součástí žádosti o vydání rozhodnutí o umístění stavby. Součástí podkladů předaných Objednatelem v rámci zadávacího řízení bylo i souhlasné „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pasu zařízení distribuční soustavy“ provozovatele distribuční soustavy, spol. ČEZ Distribuce, a.s. (dále jen „ČEZd“) ze dne 4. 9. 2023, z kterého Objednateli nevyplývala povinnost posoudit vlivy VVN a ZVN, tzn. že dotčený správce vedení VVN a ZVN, tj. ČEZd, nepožadoval, v navržené trase horkovodního propoje, zpracování výpočtu vlivů VVN a ZVN na potrubí horkovodu. Projektová dokumentace pro provedení stavby (dál jen „PDPS“), která je zpracována na základě DUR, ke kterým se společnost ČEZd vyjadřovala, byla součástí zadávací dokumentace veřejné zakázky CV_HV PROPOJ EPR – KADAŇ. PDPS Objednatel před převzetím od spol. SITEZ s.r.o. s péčí odborníka zkontroloval a potvrdil, že v ní neshledal zjevné vady, které by bránily převzetí PDPS. Zároveň Zhotovitel, obdržel od ČEZd shodný závěr, ze kterého nevyplývala povinnost posoudit vlivy VVN a ZVN ve „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pásmu zařízení distribuční soustavy“ ze dne 24.10.2025. Při provádění Díla, v rámci zpracování Realizační projektové dokumentace, v úsecích TR Vernéřov – TR Málkov a TR Merkur – TR Vernéřov, zjistil Zhotovitel nepředpokládanou hladinu podzemní vody (dle původního předpokladu se zde podzemní voda neměla vůbec vyskytovat). Tuto neočekávanou skutečnost, tj. výskyt podzemní vody v půdě v blízkosti/v ochranném pásu VVN a ZVN na horkovod, Zhotovitel z opatrnosti konzultoval s ČEZd, která v tomto případě doporučila zpracování posouzení vlivů VVN a ZVN na potrubí horkovodu (viz email TAS / IE-14-03-10001-X501 / Al - 069 ze dne 10.11.2025). Zhotovitel požadavku (resp. návrhu) ČEZd vyhověl a na svůj náklad zajistil zpracování výpočtu vlivů VVN a ZVN u specializované společnosti INFEL s.r.o., která je uvedena v seznamu ČEZd respektovaných zpracovatelů, a to dne 12.12.2025. Společnost INFEL s.r.o. zpracovala a předala Zhotoviteli dokumentaci „Výpočet vlivů VVN a ZVN na potrubí horkovodu“ (č. dokumentu 250070/01) dne 18.5.2026. Ze závěru zprávy k výpočtu, který odborná spol. provedla, vyplývá, že doplnění potrubí o prvky eliminující negativní vlivy VVN a ZVN je podmínkou, kterou je nutné splnit, aby bylo možné potrubí provozovat v souladu s relevantními technickými normami. Vzhledem k tomu, že i přes to, že Zhotovitel postupoval s péčí řádného odborníka, nemohl předjímat hladinu podzemní vody, kterou nadto v místě nepředpokládala ani ČEZd, viz vyjádření ČEZd zmíněná shora, nebyly mu tedy známy skutečnosti, pro které by bylo nutné opatřovat potrubí horkovodu zařízením pro eliminaci vlivu VN a ZVN. Objednatel, s vědomím negativních induktivních, kapacitních a galvanický vlivů a vlivu střídavých proudů na kvalitu horkovodu (koroze způsobující netěsnosti, degradace díla apod.), který je prvkem kritické infrastruktury, jehož poškození by mělo negativní vliv na životní potřeby obyvatel Kadaně, musí tato opatření provést tak, aby byla zajištěna požadované kvalita a udržitelnost horkovodu. V opačném případě (tj. pokud by navrhované změny nebyly provedeny) by uvedené mělo přímý dopad do životnosti potrubí horkovodu, vysokému výskytu poruch a v konečném důsledku by vedlo k nemožnosti jeho provozování. Uzavřeným dodatkem ke Smlouvě dojde k prodloužení dotčených milníků dle Smlouvy tak, aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí část trasy uzemnit FeZn pásky, což vyplývá z výpočtů vlivů VVN a ZVN a zpracovat revizi Realizační projektové dokumentace. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        },
+        {
+          "tag": "ReasonCode",
+          "text": "mod-cir",
+          "attrs": {
+            "listName": "modification-justification"
+          }
+        },
+        {
+          "tag": "ReasonDescription",
+          "text": "Objednatel, v rámci přípravy zadávací dokumentace pro zadávací řízení na realizaci veřejné zakázky nechal odborným zhotovitelem, spol. SITEZ s.r.o., zpracovat dokumentaci pro územní řízení (dále jen „DUR“), dle vyhlášky č. 499/2006 Sb., která byla součástí žádosti o vydání rozhodnutí o umístění stavby. Součástí podkladů předaných Objednatelem v rámci zadávacího řízení bylo i souhlasné „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pasu zařízení distribuční soustavy“ provozovatele distribuční soustavy, spol. ČEZ Distribuce, a.s. (dále jen „ČEZd“) ze dne 4. 9. 2023, z kterého Objednateli nevyplývala povinnost posoudit vlivy VVN a ZVN, tzn. že dotčený správce vedení VVN a ZVN, tj. ČEZd, nepožadoval, v navržené trase horkovodního propoje, zpracování výpočtu vlivů VVN a ZVN na potrubí horkovodu. Projektová dokumentace pro provedení stavby (dál jen „PDPS“), která je zpracována na základě DUR, ke kterým se společnost ČEZd vyjadřovala, byla součástí zadávací dokumentace veřejné zakázky CV_HV PROPOJ EPR – KADAŇ. PDPS Objednatel před převzetím od spol. SITEZ s.r.o. s péčí odborníka zkontroloval a potvrdil, že v ní neshledal zjevné vady, které by bránily převzetí PDPS. Zároveň Zhotovitel, obdržel od ČEZd shodný závěr, ze kterého nevyplývala povinnost posoudit vlivy VVN a ZVN ve „Vyjádření k žádosti o souhlas s činností a/nebo s umístěním stavby v ochranném pásmu zařízení distribuční soustavy“ ze dne 24.10.2025. Při provádění Díla, v rámci zpracování Realizační projektové dokumentace, v úsecích TR Vernéřov – TR Málkov a TR Merkur – TR Vernéřov, zjistil Zhotovitel nepředpokládanou hladinu podzemní vody (dle původního předpokladu se zde podzemní voda neměla vůbec vyskytovat). Tuto neočekávanou skutečnost, tj. výskyt podzemní vody v půdě v blízkosti/v ochranném pásu VVN a ZVN na horkovod, Zhotovitel z opatrnosti konzultoval s ČEZd, která v tomto případě doporučila zpracování posouzení vlivů VVN a ZVN na potrubí horkovodu (viz email TAS / IE-14-03-10001-X501 / Al - 069 ze dne 10.11.2025). Zhotovitel požadavku (resp. návrhu) ČEZd vyhověl a na svůj náklad zajistil zpracování výpočtu vlivů VVN a ZVN u specializované společnosti INFEL s.r.o., která je uvedena v seznamu ČEZd respektovaných zpracovatelů, a to dne 12.12.2025. Společnost INFEL s.r.o. zpracovala a předala Zhotoviteli dokumentaci „Výpočet vlivů VVN a ZVN na potrubí horkovodu“ (č. dokumentu 250070/01) dne 18.5.2026. Ze závěru zprávy k výpočtu, který odborná spol. provedla, vyplývá, že doplnění potrubí o prvky eliminující negativní vlivy VVN a ZVN je podmínkou, kterou je nutné splnit, aby bylo možné potrubí provozovat v souladu s relevantními technickými normami. Vzhledem k tomu, že i přes to, že Zhotovitel postupoval s péčí řádného odborníka, nemohl předjímat hladinu podzemní vody, kterou nadto v místě nepředpokládala ani ČEZd, viz vyjádření ČEZd zmíněná shora, nebyly mu tedy známy skutečnosti, pro které by bylo nutné opatřovat potrubí horkovodu zařízením pro eliminaci vlivu VN a ZVN. Objednatel, s vědomím negativních induktivních, kapacitních a galvanický vlivů a vlivu střídavých proudů na kvalitu horkovodu (koroze způsobující netěsnosti, degradace díla apod.), který je prvkem kritické infrastruktury, jehož poškození by mělo negativní vliv na životní potřeby obyvatel Kadaně, musí tato opatření provést tak, aby byla zajištěna požadované kvalita a udržitelnost horkovodu. V opačném případě (tj. pokud by navrhované změny nebyly provedeny) by uvedené mělo přímý dopad do životnosti potrubí horkovodu, vysokému výskytu poruch a v konečném důsledku by vedlo k nemožnosti jeho provozování. Uzavřeným dodatkem ke Smlouvě dojde k prodloužení dotčených milníků dle Smlouvy tak, aby toto prodloužení reflektovalo tu skutečnost, že Zhotovitel musí část trasy uzemnit FeZn pásky, což vyplývá z výpočtů vlivů VVN a ZVN a zpracovat revizi Realizační projektové dokumentace. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.",
+          "attrs": {
+            "languageID": "CES"
+          }
+        }
+      ]
+    }
+  ],
+  "amounts": [
+    {
+      "tag": "TotalAmount",
+      "text": "427756486.26",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    },
+    {
+      "tag": "PayableAmount",
+      "text": "427756486.26",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    }
+  ],
+  "dates_and_durations": [
+    {
+      "tag": "AwardDate",
+      "text": "2025-08-26+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "PublicationDate",
+      "text": "2026-07-27+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2026-07-24+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "StartDate",
+      "text": "2025-09-03+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "DurationMeasure",
+      "text": "760",
+      "attrs": {
+        "unitCode": "DAY"
+      }
+    },
+    {
+      "tag": "AwardDate",
+      "text": "2000-01-01Z",
+      "attrs": {}
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "publication_number": "274007-2026",
+  "root": "ContractAwardNotice",
+  "uuid": null,
+  "issue_date": "2026-04-15+02:00",
+  "procedure_ids": [
+    {
+      "tag": "ID",
+      "text": "RES-0001",
+      "attrs": {
+        "schemeName": "result"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "TEN-0001",
+      "attrs": {
+        "schemeName": "tender"
+      }
+    },
+    {
+      "tag": "ID",
+      "text": "CON-0001",
+      "attrs": {
+        "schemeName": "contract"
+      }
+    },
+    {
+      "tag": "ContractFolderID",
+      "text": "d252e7f2-6eb3-4528-a655-93e07203383e",
+      "attrs": {}
+    }
+  ],
+  "modifications": [],
+  "amounts": [
+    {
+      "tag": "TotalAmount",
+      "text": "855000",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    },
+    {
+      "tag": "PayableAmount",
+      "text": "855000",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    },
+    {
+      "tag": "EstimatedOverallContractAmount",
+      "text": "1",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    }
+  ],
+  "dates_and_durations": [
+    {
+      "tag": "AwardDate",
+      "text": "2026-03-16+01:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2026-04-15+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "PublicationDate",
+      "text": "2026-04-22+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2026-04-21+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "StartDate",
+      "text": "2026-04-15+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "EndDate",
+      "text": "2027-09-30+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "AwardDate",
+      "text": "2000-01-01Z",
+      "attrs": {}
+    }
+  ]
+}

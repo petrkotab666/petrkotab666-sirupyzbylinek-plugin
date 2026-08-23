@@ -1,0 +1,62 @@
+{
+  "publication_number": "819125-2025",
+  "root": "ContractNotice",
+  "uuid": null,
+  "issue_date": "2025-12-09+01:00",
+  "procedure_ids": [
+    {
+      "tag": "ContractFolderID",
+      "text": "d252e7f2-6eb3-4528-a655-93e07203383e",
+      "attrs": {}
+    }
+  ],
+  "modifications": [],
+  "amounts": [
+    {
+      "tag": "EstimatedOverallContractAmount",
+      "text": "1",
+      "attrs": {
+        "currencyID": "CZK"
+      }
+    }
+  ],
+  "dates_and_durations": [
+    {
+      "tag": "PublicationDate",
+      "text": "2025-12-10+01:00",
+      "attrs": {}
+    },
+    {
+      "tag": "IssueDate",
+      "text": "2025-12-09+01:00",
+      "attrs": {}
+    },
+    {
+      "tag": "DurationMeasure",
+      "text": "0",
+      "attrs": {
+        "unitCode": "DAY"
+      }
+    },
+    {
+      "tag": "EndDate",
+      "text": "2026-01-28+01:00",
+      "attrs": {}
+    },
+    {
+      "tag": "EndTime",
+      "text": "13:00:00+01:00",
+      "attrs": {}
+    },
+    {
+      "tag": "StartDate",
+      "text": "2026-04-01+02:00",
+      "attrs": {}
+    },
+    {
+      "tag": "EndDate",
+      "text": "2027-09-30+02:00",
+      "attrs": {}
+    }
+  ]
+}
