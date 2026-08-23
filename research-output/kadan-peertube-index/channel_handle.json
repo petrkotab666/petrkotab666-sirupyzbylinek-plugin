@@ -1,0 +1,1325 @@
+{
+  "total": 12,
+  "data": [
+    {
+      "id": 2136,
+      "uuid": "5839305e-25d3-4ad0-a4c5-cca67ecb0e17",
+      "shortUUID": "bTS6jg2mvUWkT34JfhvTzH",
+      "url": "https://tv.pirati.cz/videos/watch/5839305e-25d3-4ad0-a4c5-cca67ecb0e17",
+      "name": "mimořádné zasedání zastupitelstva města Kadaň  17.8.2026 - nemocnice",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": 1,
+        "label": "CC BY 4.0"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 5752,
+      "aspectRatio": 1.7778,
+      "views": 46,
+      "viewers": 0,
+      "downloads": 4,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/c11cb5fe-b979-4ed3-9ac6-479b9f7d8b81.jpg",
+      "previewPath": "/lazy-static/thumbnails/220c4726-fd6d-4e80-8d39-b479629a3ac0.jpg",
+      "thumbnails": [
+        {
+          "height": 1080,
+          "width": 1920,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/220c4726-fd6d-4e80-8d39-b479629a3ac0.jpg"
+        },
+        {
+          "height": 1400,
+          "width": 1400,
+          "aspectRatio": "1:1",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/d628a04a-4f2d-46d2-bbb5-f4f8c8c29f1d.jpg"
+        },
+        {
+          "height": 720,
+          "width": 1280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/9f68b902-c5fe-4d0e-9a39-e63ddb3d280c.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/94a35359-9fd4-465a-bbc9-6feaec74b4a5.jpg"
+        },
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/c11cb5fe-b979-4ed3-9ac6-479b9f7d8b81.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/bTS6jg2mvUWkT34JfhvTzH",
+      "createdAt": "2026-08-17T14:05:44.585Z",
+      "updatedAt": "2026-08-22T21:43:17.421Z",
+      "publishedAt": "2026-08-17T15:22:42.476Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 2126,
+      "uuid": "0d62a42d-30cf-49f8-8e5d-641c8f362b1d",
+      "shortUUID": "2DSgXBSo9xFRriBbAfyEzK",
+      "url": "https://tv.pirati.cz/videos/watch/0d62a42d-30cf-49f8-8e5d-641c8f362b1d",
+      "name": "17. zasedání zastupitelstva města Kadaň 25.6.2026 část2/2",
+      "category": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "licence": {
+        "id": 1,
+        "label": "CC BY 4.0"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 10400,
+      "aspectRatio": 1.7778,
+      "views": 2,
+      "viewers": 0,
+      "downloads": 3,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/543f41ec-2a23-492f-90f3-55c5b6102d5b.jpg",
+      "previewPath": "/lazy-static/thumbnails/3cf0004e-c944-4ae1-95ef-b81ca726b273.jpg",
+      "thumbnails": [
+        {
+          "height": 1080,
+          "width": 1920,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/3cf0004e-c944-4ae1-95ef-b81ca726b273.jpg"
+        },
+        {
+          "height": 1400,
+          "width": 1400,
+          "aspectRatio": "1:1",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/d5255f78-732c-4918-83c2-e9bd045b6376.jpg"
+        },
+        {
+          "height": 720,
+          "width": 1280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/4a1c1874-e1c6-45fb-abb3-38151b78db15.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/a5c09bcf-dd60-4054-8a9c-ba433acb9be1.jpg"
+        },
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/543f41ec-2a23-492f-90f3-55c5b6102d5b.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/2DSgXBSo9xFRriBbAfyEzK",
+      "createdAt": "2026-07-11T11:06:12.598Z",
+      "updatedAt": "2026-08-18T08:43:17.413Z",
+      "publishedAt": "2026-07-11T11:25:18.262Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 2125,
+      "uuid": "d92a61c4-9019-43ff-9e77-edb32bc044ed",
+      "shortUUID": "sPmNvcZiCFAVfmBWJTt1y6",
+      "url": "https://tv.pirati.cz/videos/watch/d92a61c4-9019-43ff-9e77-edb32bc044ed",
+      "name": "17. zasedání zastupitelstva města Kadaň 25.6.2026 část1/2 - nemocnice",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": 1,
+        "label": "CC BY 4.0"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 7251,
+      "aspectRatio": 1.7778,
+      "views": 2,
+      "viewers": 0,
+      "downloads": 4,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/0bc0f037-64d5-4f95-88a4-f294026dcf41.jpg",
+      "previewPath": "/lazy-static/thumbnails/22c835d1-9d9b-45c5-9371-71deff16778c.jpg",
+      "thumbnails": [
+        {
+          "height": 1080,
+          "width": 1920,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/22c835d1-9d9b-45c5-9371-71deff16778c.jpg"
+        },
+        {
+          "height": 1400,
+          "width": 1400,
+          "aspectRatio": "1:1",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/f0cba219-cd62-4e0b-9782-7acea423afed.jpg"
+        },
+        {
+          "height": 720,
+          "width": 1280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/9dc3d1b7-5fb6-43a5-bbb3-e6f9f23ef7fa.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/54751bcd-24d9-48b0-b88a-1997ed87c789.jpg"
+        },
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/0bc0f037-64d5-4f95-88a4-f294026dcf41.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/sPmNvcZiCFAVfmBWJTt1y6",
+      "createdAt": "2026-07-11T09:29:28.795Z",
+      "updatedAt": "2026-08-17T19:13:17.319Z",
+      "publishedAt": "2026-07-11T09:42:32.529Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 2121,
+      "uuid": "46529c9a-baad-477e-a67d-57b563958387",
+      "shortUUID": "9FE8fQ16KaY2Bpxxfmgizi",
+      "url": "https://tv.pirati.cz/videos/watch/46529c9a-baad-477e-a67d-57b563958387",
+      "name": "16. zasedání zastupitelstva města Kadaň 26.3.2026",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": 8,
+        "label": "Free of known copyright restrictions"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 8658,
+      "aspectRatio": 1.7778,
+      "views": 2,
+      "viewers": 0,
+      "downloads": 12,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/3f323d03-a761-4550-aebb-d164fa88c667.jpg",
+      "previewPath": "/lazy-static/thumbnails/2127f3f4-aa61-4440-8cce-fd64c760efdd.jpg",
+      "thumbnails": [
+        {
+          "height": 1080,
+          "width": 1920,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/2127f3f4-aa61-4440-8cce-fd64c760efdd.jpg"
+        },
+        {
+          "height": 1400,
+          "width": 1400,
+          "aspectRatio": "1:1",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/cbe6a3e2-b654-496f-a54a-ceaa464ae702.jpg"
+        },
+        {
+          "height": 720,
+          "width": 1280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/96671cf7-02a7-4c7b-9a36-954c3c9da475.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/64012a77-6b96-4ece-abb7-556dc838d8fa.jpg"
+        },
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/3f323d03-a761-4550-aebb-d164fa88c667.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/9FE8fQ16KaY2Bpxxfmgizi",
+      "createdAt": "2026-07-07T13:06:08.368Z",
+      "updatedAt": "2026-08-18T08:43:17.354Z",
+      "publishedAt": "2026-07-07T13:21:45.673Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 1367,
+      "uuid": "09f34430-d077-4c19-b932-41005e402f19",
+      "shortUUID": "2egmcxfuaLggVdcyZ1EhYr",
+      "url": "https://tv.pirati.cz/videos/watch/09f34430-d077-4c19-b932-41005e402f19",
+      "name": "Mimořádné zasedání zastupitelstva města Kadaně - 6.11.2024",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 4049,
+      "aspectRatio": 1.7778,
+      "views": 3,
+      "viewers": 0,
+      "downloads": 5,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/437c43ff-28b8-4dfd-8d6e-bc05e51d0fee.jpg",
+      "previewPath": "/lazy-static/thumbnails/377f0452-3bbd-4874-8c45-1a58ec800a3b.jpg",
+      "thumbnails": [
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/377f0452-3bbd-4874-8c45-1a58ec800a3b.jpg"
+        },
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/437c43ff-28b8-4dfd-8d6e-bc05e51d0fee.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/2egmcxfuaLggVdcyZ1EhYr",
+      "createdAt": "2024-11-07T17:35:27.104Z",
+      "updatedAt": "2026-07-24T11:04:03.953Z",
+      "publishedAt": "2024-11-07T17:48:43.076Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 1366,
+      "uuid": "673e75fd-5545-4531-836d-c84a520d9396",
+      "shortUUID": "dKrEpv2mLVXxtvyd5uHfZd",
+      "url": "https://tv.pirati.cz/videos/watch/673e75fd-5545-4531-836d-c84a520d9396",
+      "name": "8. zasedání zastupitelstva města Kadaň 12.9.2024",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 5262,
+      "aspectRatio": 1.7778,
+      "views": 4,
+      "viewers": 0,
+      "downloads": 4,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/08abfeb7-dfe1-4622-a733-6eafd8d183fc.jpg",
+      "previewPath": "/lazy-static/thumbnails/622f7f78-3ec8-4699-9836-c07613f0658b.jpg",
+      "thumbnails": [
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/622f7f78-3ec8-4699-9836-c07613f0658b.jpg"
+        },
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/08abfeb7-dfe1-4622-a733-6eafd8d183fc.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/dKrEpv2mLVXxtvyd5uHfZd",
+      "createdAt": "2024-11-07T16:21:32.938Z",
+      "updatedAt": "2026-07-24T11:04:03.927Z",
+      "publishedAt": "2024-11-07T16:44:42.279Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 1249,
+      "uuid": "673cc2f1-d2bc-4c4a-a314-638306e4de34",
+      "shortUUID": "dKoUt8Tv2yzRmC8gLeqP2f",
+      "url": "https://tv.pirati.cz/videos/watch/673cc2f1-d2bc-4c4a-a314-638306e4de34",
+      "name": "7. zasedání zastupitelstva města Kadaň 13.6.2024",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 6332,
+      "aspectRatio": 1.7778,
+      "views": 6,
+      "viewers": 0,
+      "downloads": 3,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/65ccc3ec-a4d0-403c-96ad-97eb9bbabd73.jpg",
+      "previewPath": "/lazy-static/thumbnails/850aa91a-3609-45f6-8031-065bad854118.jpg",
+      "thumbnails": [
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/850aa91a-3609-45f6-8031-065bad854118.jpg"
+        },
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/65ccc3ec-a4d0-403c-96ad-97eb9bbabd73.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/dKoUt8Tv2yzRmC8gLeqP2f",
+      "createdAt": "2024-06-13T16:41:03.561Z",
+      "updatedAt": "2026-07-24T10:34:05.359Z",
+      "publishedAt": "2024-06-13T16:50:33.741Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 682,
+      "uuid": "8b124785-f314-4477-a9ac-32305c0a19ef",
+      "shortUUID": "ib3pHahtaG5g9rcGtRNPcV",
+      "url": "https://tv.pirati.cz/videos/watch/8b124785-f314-4477-a9ac-32305c0a19ef",
+      "name": "Mimoradne zasedani zastupitelstva 18.4.2024",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 909,
+      "aspectRatio": null,
+      "views": 1,
+      "viewers": 0,
+      "downloads": 5,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/6bbb3b0a-c3cc-44e7-916e-8d94ffe7f5aa.jpg",
+      "previewPath": "/lazy-static/thumbnails/2a779d18-644a-4a6c-883c-7517a748d604.jpg",
+      "thumbnails": [
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/6bbb3b0a-c3cc-44e7-916e-8d94ffe7f5aa.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/2a779d18-644a-4a6c-883c-7517a748d604.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/ib3pHahtaG5g9rcGtRNPcV",
+      "createdAt": "2024-04-18T16:14:27.230Z",
+      "updatedAt": "2026-07-24T11:04:03.871Z",
+      "publishedAt": "2024-04-18T16:15:27.461Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 671,
+      "uuid": "d58c02ce-d6a0-435c-855c-1457c4cba0c5",
+      "shortUUID": "snrBKq1niWWnSAQhBap1vK",
+      "url": "https://tv.pirati.cz/videos/watch/d58c02ce-d6a0-435c-855c-1457c4cba0c5",
+      "name": "6. Zasedání ZM kadaň - Padrta",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 443,
+      "aspectRatio": null,
+      "views": 804,
+      "viewers": 0,
+      "downloads": 5,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/53ca2c36-b886-460b-a79d-74f72dc2033e.jpg",
+      "previewPath": "/lazy-static/thumbnails/8936b0da-1d02-4fc5-82eb-8427e720442a.jpg",
+      "thumbnails": [
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/53ca2c36-b886-460b-a79d-74f72dc2033e.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/8936b0da-1d02-4fc5-82eb-8427e720442a.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/snrBKq1niWWnSAQhBap1vK",
+      "createdAt": "2024-04-08T12:44:52.185Z",
+      "updatedAt": "2026-08-16T16:13:17.316Z",
+      "publishedAt": "2024-04-08T12:46:46.811Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 659,
+      "uuid": "6fcaaab7-aeb8-465f-848c-b857895e3e5e",
+      "shortUUID": "eNEnTjboNjFsWfrjgGNH3o",
+      "url": "https://tv.pirati.cz/videos/watch/6fcaaab7-aeb8-465f-848c-b857895e3e5e",
+      "name": "6. zasedání zastupitelstva města Kadaň 14.3.2024",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 7444,
+      "aspectRatio": null,
+      "views": 69,
+      "viewers": 0,
+      "downloads": 3,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/0d83c07e-ccaf-4f8b-8463-d73181eb1931.jpg",
+      "previewPath": "/lazy-static/thumbnails/62fa371e-b4bd-48eb-afd2-c02949e667d6.jpg",
+      "thumbnails": [
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/0d83c07e-ccaf-4f8b-8463-d73181eb1931.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/62fa371e-b4bd-48eb-afd2-c02949e667d6.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/eNEnTjboNjFsWfrjgGNH3o",
+      "createdAt": "2024-03-14T20:38:43.883Z",
+      "updatedAt": "2026-07-24T10:34:05.059Z",
+      "publishedAt": "2024-03-14T20:47:58.762Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 565,
+      "uuid": "41cfc6bd-8e46-42a2-9730-23444b0ffd8c",
+      "shortUUID": "98mdJ8nsSL8hnM1UuuLAE9",
+      "url": "https://tv.pirati.cz/videos/watch/41cfc6bd-8e46-42a2-9730-23444b0ffd8c",
+      "name": "4. zasedání zastupitelstva města Kadaň 13.9.2023",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 5797,
+      "aspectRatio": null,
+      "views": 80,
+      "viewers": 0,
+      "downloads": 5,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/19ff50ec-1bea-4283-9452-c6ccbad3addd.jpg",
+      "previewPath": "/lazy-static/thumbnails/eb2d560d-e9a9-43dd-bcfd-a446541a91ea.jpg",
+      "thumbnails": [
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/19ff50ec-1bea-4283-9452-c6ccbad3addd.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/eb2d560d-e9a9-43dd-bcfd-a446541a91ea.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/98mdJ8nsSL8hnM1UuuLAE9",
+      "createdAt": "2023-09-13T19:31:37.593Z",
+      "updatedAt": "2026-07-24T11:04:03.590Z",
+      "publishedAt": "2023-09-13T19:40:08.252Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    },
+    {
+      "id": 477,
+      "uuid": "cdc66a4e-efd9-464e-8da0-34416ed4da13",
+      "shortUUID": "rpMbktF4QMiYUoX3eKm8jk",
+      "url": "https://tv.pirati.cz/videos/watch/cdc66a4e-efd9-464e-8da0-34416ed4da13",
+      "name": "1. zasedání zastupitelstva města Kadaně 15.12.2022",
+      "category": {
+        "id": 11,
+        "label": "News & Politics"
+      },
+      "licence": {
+        "id": null,
+        "label": "Unknown"
+      },
+      "language": {
+        "id": "cs",
+        "label": "Czech"
+      },
+      "privacy": {
+        "id": 1,
+        "label": "Public"
+      },
+      "nsfw": false,
+      "nsfwFlags": 0,
+      "nsfwSummary": null,
+      "truncatedDescription": null,
+      "description": null,
+      "isLocal": true,
+      "duration": 7968,
+      "aspectRatio": null,
+      "views": 0,
+      "viewers": 0,
+      "downloads": 3,
+      "likes": 0,
+      "dislikes": 0,
+      "thumbnailPath": "/lazy-static/thumbnails/04775e9a-bc41-47bc-af74-1c5ab63fcfa3.jpg",
+      "previewPath": "/lazy-static/thumbnails/69ca92be-3221-450c-b29b-af2c1f3964ee.jpg",
+      "thumbnails": [
+        {
+          "height": 157,
+          "width": 280,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/04775e9a-bc41-47bc-af74-1c5ab63fcfa3.jpg"
+        },
+        {
+          "height": 480,
+          "width": 850,
+          "aspectRatio": "16:9",
+          "fileUrl": "https://tv.pirati.cz/lazy-static/thumbnails/69ca92be-3221-450c-b29b-af2c1f3964ee.jpg"
+        }
+      ],
+      "embedPath": "/videos/embed/rpMbktF4QMiYUoX3eKm8jk",
+      "createdAt": "2023-04-23T10:57:07.754Z",
+      "updatedAt": "2026-07-24T10:34:04.284Z",
+      "publishedAt": "2023-04-23T11:20:11.819Z",
+      "originallyPublishedAt": null,
+      "isLive": false,
+      "account": {
+        "id": 8398,
+        "displayName": "Pavel Miltner",
+        "name": "pavel.miltner",
+        "url": "https://tv.pirati.cz/accounts/pavel.miltner",
+        "host": "tv.pirati.cz",
+        "avatars": []
+      },
+      "channel": {
+        "id": 704,
+        "name": "kadansky_pirat",
+        "displayName": "Kadaňský pirát",
+        "url": "https://tv.pirati.cz/video-channels/kadansky_pirat",
+        "host": "tv.pirati.cz",
+        "avatars": [
+          {
+            "width": 48,
+            "path": "/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/597500e9-67ea-4d44-a36d-9d9d0e2139ed.jpg",
+            "createdAt": "2026-03-25T01:09:26.016Z",
+            "updatedAt": "2026-03-25T01:09:26.016Z"
+          },
+          {
+            "width": 120,
+            "path": "/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/72fafc08-e34f-4e9d-9373-e4e48a6d0a99.jpg",
+            "createdAt": "2026-03-25T01:09:26.011Z",
+            "updatedAt": "2026-03-25T01:09:26.011Z"
+          },
+          {
+            "width": 600,
+            "path": "/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/4e8a0829-0d15-48cf-b686-a2c9dce33d2e.jpg",
+            "createdAt": "2026-03-25T01:09:26.005Z",
+            "updatedAt": "2026-03-25T01:09:26.005Z"
+          },
+          {
+            "width": 1500,
+            "path": "/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "fileUrl": "https://tv.pirati.cz/lazy-static/avatars/a9a47a51-7449-4eda-8bf6-a930a1fd858b.jpg",
+            "createdAt": "2026-03-25T01:09:25.999Z",
+            "updatedAt": "2026-03-25T01:09:25.999Z"
+          }
+        ]
+      },
+      "comments": 0
+    }
+  ]
+}
