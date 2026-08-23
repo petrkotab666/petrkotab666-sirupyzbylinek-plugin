@@ -1,0 +1,129 @@
+name: TEMP Extract Kadaň 2024 public council videos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-kadan-2024-batch-extract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out research index branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/kadan-peertube-index-20260823
+          fetch-depth: 0
+
+      - name: Install media tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg jq
+          python -m pip install --quiet --upgrade 'yt-dlp[default,curl-cffi]'
+          yt-dlp --version
+
+      - name: Download recordings and create timestamped contact sheets
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=/tmp/kadan-2024-batch
+          rm -rf "$ROOT"
+          mkdir -p "$ROOT"
+
+          extract_one() {
+            label="$1"
+            uuid="$2"
+            out="$ROOT/$label"
+            mkdir -p "$out"
+            cd "$out"
+            url="https://tv.pirati.cz/videos/watch/$uuid"
+            echo "$url" > source-url.txt
+            yt-dlp --dump-single-json "$url" > metadata.json
+            yt-dlp --newline -f 'worst[ext=mp4]/worst' --merge-output-format mp4 -o 'meeting.%(ext)s' "$url"
+            video="$(find . -maxdepth 1 -type f -name 'meeting.*' ! -name '*.part' | head -n1)"
+            test -s "$video"
+            ffprobe -v error -show_format -show_streams -of json "$video" > ffprobe.json
+            ffmpeg -nostdin -hide_banner -loglevel error -i "$video" \
+              -vf "fps=1/10,scale=640:-2,drawtext=text='%{pts\\:hms}':x=8:y=h-th-8:fontsize=24:fontcolor=white:box=1:boxcolor=black@0.75,tile=5x6:padding=4:margin=4" \
+              -q:v 3 -vsync vfr 'contact_%03d.jpg'
+            find . -maxdepth 1 -name 'contact_*.jpg' -printf '%f\t%s\n' | sort > contact-files.txt
+            printf 'label=%s\nuuid=%s\ncompleted=%s\nsheets=%s\n' \
+              "$label" "$uuid" "$(date -u +%FT%TZ)" "$(find . -maxdepth 1 -name 'contact_*.jpg' | wc -l)" > status.txt
+            rm -f "$video"
+          }
+
+          extract_one 2024-04-18 8b124785-f314-4477-a9ac-32305c0a19ef
+          extract_one 2024-06-13 673cc2f1-d2bc-4c4a-a314-638306e4de34
+          extract_one 2024-09-12 673e75fd-5545-4531-836d-c84a520d9396
+          extract_one 2024-11-06 09f34430-d077-4c19-b932-41005e402f19
+
+      - name: Upload 18 April evidence
+        id: u0418
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2024-04-18-contact-sheets
+          path: /tmp/kadan-2024-batch/2024-04-18/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Upload 13 June evidence
+        id: u0613
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2024-06-13-contact-sheets
+          path: /tmp/kadan-2024-batch/2024-06-13/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Upload 12 September evidence
+        id: u0912
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2024-09-12-contact-sheets
+          path: /tmp/kadan-2024-batch/2024-09-12/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Upload 6 November evidence
+        id: u1106
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-votes-2024-11-06-contact-sheets
+          path: /tmp/kadan-2024-batch/2024-11-06/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Record artifact identifiers on research branch
+        shell: bash
+        env:
+          A0418: ${{ steps.u0418.outputs.artifact-id }}
+          A0613: ${{ steps.u0613.outputs.artifact-id }}
+          A0912: ${{ steps.u0912.outputs.artifact-id }}
+          A1106: ${{ steps.u1106.outputs.artifact-id }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          git config user.name 'kadan-vote-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          mkdir -p research-output/kadan-2024-batch
+          cat > research-output/kadan-2024-batch/artifact-info.tsv <<EOF
+          date\tuuid\tartifact_id\trun_id
+          2024-04-18\t8b124785-f314-4477-a9ac-32305c0a19ef\t${A0418}\t${RUN_ID}
+          2024-06-13\t673cc2f1-d2bc-4c4a-a314-638306e4de34\t${A0613}\t${RUN_ID}
+          2024-09-12\t673e75fd-5545-4531-836d-c84a520d9396\t${A0912}\t${RUN_ID}
+          2024-11-06\t09f34430-d077-4c19-b932-41005e402f19\t${A1106}\t${RUN_ID}
+          EOF
+          printf 'completed=%s\nrun_id=%s\n' "$(date -u +%FT%TZ)" "$RUN_ID" > research-output/kadan-2024-batch/status.txt
+          git add research-output/kadan-2024-batch
+          git commit -m 'research: record 2024 Kadaň evidence artifacts [skip ci]'
+          git push origin HEAD:research/kadan-peertube-index-20260823
