@@ -1,0 +1,188 @@
+name: TEMP Index Kadaň PeerTube archive
+
+on:
+  push:
+    branches:
+      - research/kadan-peertube-index-20260823
+    paths:
+      - '.github/workflows/temp-kadan-peertube-index.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out isolated research branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/kadan-peertube-index-20260823
+          fetch-depth: 0
+
+      - name: Query public PeerTube APIs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests
+          rm -rf /tmp/kadan-peertube-index
+          mkdir -p /tmp/kadan-peertube-index
+          python <<'PY'
+          from __future__ import annotations
+          import json
+          import pathlib
+          import time
+          import urllib.parse
+          import requests
+
+          out = pathlib.Path('/tmp/kadan-peertube-index')
+          session = requests.Session()
+          session.headers.update({'User-Agent': 'Mozilla/5.0 public-records-research/1.0'})
+
+          def get_json(label: str, url: str):
+              last = None
+              for attempt in range(4):
+                  try:
+                      response = session.get(url, timeout=120)
+                      (out / f'{label}.status.txt').write_text(
+                          f'{response.status_code}\n{response.url}\n{dict(response.headers)}\n', encoding='utf-8')
+                      response.raise_for_status()
+                      data = response.json()
+                      (out / f'{label}.json').write_text(
+                          json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+                      return data
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(2 ** attempt)
+              (out / f'{label}.error.txt').write_text(repr(last), encoding='utf-8')
+              return None
+
+          base = 'https://tv.pirati.cz'
+          calls = {
+              'channel_handle': f'{base}/api/v1/video-channels/kadansky_pirat/videos?start=0&count=100&sort=-publishedAt',
+              'channel_id': f'{base}/api/v1/video-channels/704/videos?start=0&count=100&sort=-publishedAt',
+              'account': f'{base}/api/v1/accounts/pavel.miltner/videos?start=0&count=100&sort=-publishedAt',
+          }
+          queries = [
+              'Kadaň',
+              'Kadan',
+              'zastupitelstvo města Kadaň',
+              'zasedání zastupitelstva města Kadaň',
+              'zastupitelstva města Kadaň',
+              'Kadaň 2023',
+              'Kadaň 2024',
+          ]
+          for i, query in enumerate(queries, 1):
+              params = urllib.parse.urlencode({
+                  'search': query,
+                  'start': 0,
+                  'count': 100,
+                  'sort': '-publishedAt',
+                  'searchTarget': 'local',
+              })
+              calls[f'local_search_{i:02d}'] = f'{base}/api/v1/search/videos?{params}'
+              sepia_params = urllib.parse.urlencode({'search': query, 'start': 0, 'count': 100})
+              calls[f'sepia_search_{i:02d}'] = f'https://search.joinpeertube.org/api/v1/search/videos?{sepia_params}'
+
+          payloads = {}
+          for label, url in calls.items():
+              payloads[label] = get_json(label, url)
+
+          videos = {}
+          def ingest(item, source):
+              if not isinstance(item, dict):
+                  return
+              uuid = item.get('uuid') or item.get('shortUUID') or item.get('id')
+              if not uuid:
+                  return
+              key = str(uuid)
+              rec = videos.setdefault(key, {
+                  'uuid': item.get('uuid'),
+                  'shortUUID': item.get('shortUUID'),
+                  'id': item.get('id'),
+                  'name': item.get('name') or item.get('title'),
+                  'publishedAt': item.get('publishedAt') or item.get('createdAt'),
+                  'originallyPublishedAt': item.get('originallyPublishedAt'),
+                  'duration': item.get('duration'),
+                  'url': item.get('url'),
+                  'channel': None,
+                  'account': None,
+                  'sources': [],
+              })
+              channel = item.get('channel') or item.get('videoChannel')
+              if isinstance(channel, dict):
+                  rec['channel'] = channel.get('displayName') or channel.get('name')
+              elif channel:
+                  rec['channel'] = str(channel)
+              account = item.get('account')
+              if isinstance(account, dict):
+                  rec['account'] = account.get('displayName') or account.get('name')
+              elif account:
+                  rec['account'] = str(account)
+              if source not in rec['sources']:
+                  rec['sources'].append(source)
+
+          for label, payload in payloads.items():
+              if not isinstance(payload, dict):
+                  continue
+              for item in payload.get('data') or []:
+                  ingest(item, label)
+
+          rows = sorted(videos.values(), key=lambda r: str(r.get('publishedAt') or ''), reverse=True)
+          (out / 'all-videos.json').write_text(
+              json.dumps(rows, ensure_ascii=False, indent=2), encoding='utf-8')
+
+          header = ['publishedAt','name','uuid','shortUUID','duration','channel','account','url','sources']
+          lines = ['\t'.join(header)]
+          for row in rows:
+              vals = [
+                  row.get('publishedAt'), row.get('name'), row.get('uuid'), row.get('shortUUID'),
+                  row.get('duration'), row.get('channel'), row.get('account'), row.get('url'),
+                  ','.join(row.get('sources') or []),
+              ]
+              lines.append('\t'.join('' if v is None else str(v).replace('\t',' ') for v in vals))
+          (out / 'all-videos.tsv').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+          wanted = []
+          for row in rows:
+              text = f"{row.get('name','')} {row.get('publishedAt','')}".lower()
+              if ('zastupitel' in text or 'kadaň' in text or 'kadan' in text) and ('2023' in text or '2024' in text):
+                  wanted.append(row)
+          (out / 'kadan-council-2023-2024.json').write_text(
+              json.dumps(wanted, ensure_ascii=False, indent=2), encoding='utf-8')
+          wanted_lines = ['\t'.join(header)]
+          for row in wanted:
+              vals = [
+                  row.get('publishedAt'), row.get('name'), row.get('uuid'), row.get('shortUUID'),
+                  row.get('duration'), row.get('channel'), row.get('account'), row.get('url'),
+                  ','.join(row.get('sources') or []),
+              ]
+              wanted_lines.append('\t'.join('' if v is None else str(v).replace('\t',' ') for v in vals))
+          (out / 'kadan-council-2023-2024.tsv').write_text('\n'.join(wanted_lines) + '\n', encoding='utf-8')
+          (out / 'summary.txt').write_text(
+              f'api_calls={len(calls)}\nunique_videos={len(rows)}\nmatched_2023_2024={len(wanted)}\n', encoding='utf-8')
+          PY
+
+      - name: Publish index to research branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'kadan-vote-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          rm -rf research-output/kadan-peertube-index
+          mkdir -p research-output/kadan-peertube-index
+          cp -a /tmp/kadan-peertube-index/. research-output/kadan-peertube-index/
+          git add research-output/kadan-peertube-index
+          git commit -m 'research: index public Kadaň PeerTube records [skip ci]'
+          git push origin HEAD:research/kadan-peertube-index-20260823
+
+      - name: Upload index artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-peertube-index-2023-2024
+          path: /tmp/kadan-peertube-index/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
