@@ -1,0 +1,39 @@
+name: Temporary CEZ focused evidence extraction
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    if: startsWith(github.event.issue.title, '[CEZ-FOCUS]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Extract focused evidence
+        shell: bash
+        run: |
+          set +e
+          python3 scripts/tmp_cez_focused_evidence_20260823.py > /tmp/cez-focus.log 2>&1
+          code=$?
+          mkdir -p tmp_cez_focused_evidence_20260823
+          cp /tmp/cez-focus.log tmp_cez_focused_evidence_20260823/RUN.log
+          echo "$code" > tmp_cez_focused_evidence_20260823/EXIT_CODE.txt
+          cat /tmp/cez-focus.log
+          exit 0
+      - name: Commit focused evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp_cez_focused_evidence_20260823
+          git commit -m "Store temporary CEZ focused evidence extraction" || exit 0
+          git push origin HEAD:main
