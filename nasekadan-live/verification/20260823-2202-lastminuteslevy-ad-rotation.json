@@ -1,0 +1,57 @@
+{
+  "version": "20260823-2202-lastminuteslevy-ad-rotation",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-08-23T20:07:55.745616+00:00",
+  "checks": {
+    "https://nasekadan.cz/reklamy.js": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/reklamy.js?nkbridgeverify=20260823-2202-lastminuteslevy-ad-rotation-1787515669",
+      "present": {
+        "owned-lastminuteslevy-banner": false,
+        "lastminuteslevy-wide-20260823.svg": false,
+        "Aktuální last minute nabídky s porovnáním podle ceny, termínu a slevy.": false
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "figures": [],
+        "images": [
+          "<img src=\"${escapeHtml(banner)}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"${escapeHtml(banner)}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"${escapeHtml(safeHttpUrl(item.image))}\" width=\"${Number(item.width)||300}\" height=\"${Number(item.height)||600}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"${escapeHtml(banner)}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"/assets/reklamy/vaseuklizecka-cisteni-wide-sharp-v3.svg\" width=\"1200\" height=\"576\" alt=\"Čištění koberců, sedaček a čalounění – Vaše uklízečka, telefon 603 206 308\" decoding=\"async\">"
+        ]
+      },
+      "ok": false
+    },
+    "https://www.nasekadan.cz/reklamy.js": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/reklamy.js?nkbridgeverify=20260823-2202-lastminuteslevy-ad-rotation-1787515669",
+      "present": {
+        "owned-lastminuteslevy-banner": false,
+        "lastminuteslevy-wide-20260823.svg": false,
+        "Aktuální last minute nabídky s porovnáním podle ceny, termínu a slevy.": false
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "figures": [],
+        "images": [
+          "<img src=\"${escapeHtml(banner)}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"${escapeHtml(banner)}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"${escapeHtml(safeHttpUrl(item.image))}\" width=\"${Number(item.width)||300}\" height=\"${Number(item.height)||600}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"${escapeHtml(banner)}\" alt=\"${title}\" loading=\"lazy\" decoding=\"async\">",
+          "<img src=\"/assets/reklamy/vaseuklizecka-cisteni-wide-sharp-v3.svg\" width=\"1200\" height=\"576\" alt=\"Čištění koberců, sedaček a čalounění – Vaše uklízečka, telefon 603 206 308\" decoding=\"async\">"
+        ]
+      },
+      "ok": false
+    }
+  }
+}
