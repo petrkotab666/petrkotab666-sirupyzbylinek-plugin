@@ -1,0 +1,280 @@
+[
+  {
+    "name": "vvz_contract",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=200&form=vz&data.evCisloZakazkyVvz=Z2024-029445&order%5Bdata.datumUverejneniVvz%5D=DESC&order%5BcreatedAt%5D=DESC",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=200&form=vz&data.evCisloZakazkyVvz=Z2024-029445&order%5Bdata.datumUverejneniVvz%5D=DESC&order%5BcreatedAt%5D=DESC",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-018644_0",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz=F2026-018644",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz=F2026-018644",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-018644_1",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Beq%5D=F2026-018644",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Beq%5D=F2026-018644",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-018644_2",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Blike%5D=F2026-018644",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Blike%5D=F2026-018644",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-033864_0",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz=F2026-033864",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz=F2026-033864",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-033864_1",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Beq%5D=F2026-033864",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Beq%5D=F2026-033864",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-033864_2",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Blike%5D=F2026-033864",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Blike%5D=F2026-033864",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-040224_0",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz=F2026-040224",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz=F2026-040224",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-040224_1",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Beq%5D=F2026-040224",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Beq%5D=F2026-040224",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "vvz_F2026-040224_2",
+    "method": "GET",
+    "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Blike%5D=F2026-040224",
+    "final": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=100&form=vz&data.evCisloFormulareVvz%5Blike%5D=F2026-040224",
+    "status": 400,
+    "type": "application/problem+json; charset=utf-8",
+    "bytes": 187
+  },
+  {
+    "name": "ted_439224_detail",
+    "method": "GET",
+    "url": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+    "final": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+    "status": 202,
+    "type": "text/html; charset=utf-8",
+    "bytes": 0,
+    "path": "tmp_cez_primary_research_20260823/raw/ted_439224_detail.html"
+  },
+  {
+    "name": "ted_439224_xml",
+    "method": "GET",
+    "url": "https://ted.europa.eu/en/notice/439224-2026/xml",
+    "final": "https://ted.europa.eu/en/notice/439224-2026/xml",
+    "status": 200,
+    "type": "application/xml",
+    "bytes": 28955,
+    "path": "tmp_cez_primary_research_20260823/raw/ted_439224_xml.xml"
+  },
+  {
+    "name": "ted_439224_html",
+    "method": "GET",
+    "url": "https://ted.europa.eu/en/notice/439224-2026/html",
+    "final": "https://ted.europa.eu/en/notice/439224-2026/html",
+    "status": 200,
+    "type": "text/html",
+    "bytes": 53469,
+    "path": "tmp_cez_primary_research_20260823/raw/ted_439224_html.html"
+  },
+  {
+    "name": "ted_439224_pdf",
+    "method": "GET",
+    "url": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+    "final": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+    "status": 200,
+    "type": "application/pdf",
+    "bytes": 156637,
+    "path": "tmp_cez_primary_research_20260823/raw/ted_439224_pdf.pdf"
+  },
+  {
+    "name": "nen_vysvetleni_16",
+    "method": "GET",
+    "url": "https://nen.nipez.cz/file?id=2581846942",
+    "final": "https://nen.nipez.cz/dms1_public/Download.aspx?fileName=VnlzdsSbdGxlbsOtIMSNLiAxNi5wZGZ8Onx0SUQtMDIyRjY1OTU4NDNFRTdDNDA2RUY5QTM3NDNGRTg2M0MzMTVBRTA3RjJCQTNGMEJDRTIyMkJBRkYxNTQ3MzdBQS0wY3w6fC04NTg0MTQwOTQ2MjUxMDU4NTY1fDp8bHFkNklvRlU2VnVzdjFHWjNNZWJCYTkyNXRtaHc1S1ZBdVN6VTBKWWVZYz18Onx8OnxZUGNZckh4dTI1TDFpblJOUFN0ZDVsaytiS3haWHk3WEMvOUd1VlJzVmRVPXw6fGNzLUNa",
+    "status": 200,
+    "type": "application/pdf",
+    "bytes": 307386,
+    "path": "tmp_cez_primary_research_20260823/raw/nen_vysvetleni_16.pdf"
+  },
+  {
+    "name": "nen_vysvetleni_20",
+    "method": "GET",
+    "url": "https://nen.nipez.cz/file?id=2628806615",
+    "final": "https://nen.nipez.cz/dms2_public/Download.aspx?fileName=VnlzdsSbdGxlbsOtIMSNLiAyMC5wZGZ8Onx0SUQtRTA1MURFMzE3MzdCOEQwQ0JDOTgwMDQ0RTY4MjA5NTg2NUUyMUVCOENCMjhGNUJDMTZFQzA1NzY3MTY0RkE0NC0wY3w6fC04NTg0MTQwOTQ2MjIzMzc4NjAzfDp8S1pyQnRpbUIzbGpqWk5zeHlWaEVzU3BWQU5ISkplVHZKN3kwRTdldVhQST18Onx8OnxkK2YwR3NmYmlzTTcrS0U2YzhvdDNDUjdobjNpRU44bEpSQlFWMFQ2WitFPXw6fGNzLUNa",
+    "status": 200,
+    "type": "application/pdf",
+    "bytes": 234913,
+    "path": "tmp_cez_primary_research_20260823/raw/nen_vysvetleni_20.pdf"
+  },
+  {
+    "name": "datlab_vysvetleni_20",
+    "method": "GET",
+    "url": "https://bpapi.datlab.eu/document/afc0bd6d74b27651811131edef827b0f392dcf82b7b12daaf0bd6e13ce3df4fb",
+    "final": "https://bpapi.datlab.eu/document/afc0bd6d74b27651811131edef827b0f392dcf82b7b12daaf0bd6e13ce3df4fb",
+    "status": 200,
+    "type": "application/pdf",
+    "bytes": 234913,
+    "path": "tmp_cez_primary_research_20260823/raw/datlab_vysvetleni_20.pdf"
+  },
+  {
+    "name": "nen_main",
+    "method": "GET",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 219926,
+    "path": "tmp_cez_primary_research_20260823/raw/nen_main.html"
+  },
+  {
+    "name": "nen_documents",
+    "method": "GET",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/zadavaci-dokumentace",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-24-V00019426/zadavaci-dokumentace",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 192142,
+    "path": "tmp_cez_primary_research_20260823/raw/nen_documents.html"
+  },
+  {
+    "name": "nen_tds",
+    "method": "GET",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-25-V00041260",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-25-V00041260",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 195307,
+    "path": "tmp_cez_primary_research_20260823/raw/nen_tds.html"
+  },
+  {
+    "name": "nen_tds_result",
+    "method": "GET",
+    "url": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-25-V00041260/vysledek",
+    "final": "https://nen.nipez.cz/verejne-zakazky/detail-zakazky/N006-25-V00041260/vysledek",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "bytes": 184060,
+    "path": "tmp_cez_primary_research_20260823/raw/nen_tds_result.html"
+  },
+  {
+    "name": "ted_search_0",
+    "method": "POST",
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "final": "https://api.ted.europa.eu/v3/notices/search",
+    "status": 200,
+    "type": "application/json",
+    "bytes": 4462,
+    "path": "tmp_cez_primary_research_20260823/raw/ted_search_0.json",
+    "payload": {
+      "query": "publication-number = 439224-2026",
+      "fields": [
+        "publication-number"
+      ],
+      "page": 1,
+      "limit": 10,
+      "scope": "ALL",
+      "checkQuerySyntax": false
+    }
+  },
+  {
+    "name": "ted_search_1",
+    "method": "POST",
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "final": "https://api.ted.europa.eu/v3/notices/search",
+    "status": 200,
+    "type": "application/json",
+    "bytes": 6743,
+    "path": "tmp_cez_primary_research_20260823/raw/ted_search_1.json",
+    "payload": {
+      "query": "publication-number = 439224-2026",
+      "fields": [
+        "publication-number",
+        "notice-title",
+        "procedure-identifier",
+        "publication-date"
+      ],
+      "page": 1,
+      "limit": 10
+    }
+  },
+  {
+    "name": "ted_search_2",
+    "method": "POST",
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "final": "https://api.ted.europa.eu/v3/notices/search",
+    "status": 200,
+    "type": "application/json",
+    "bytes": 78,
+    "path": "tmp_cez_primary_research_20260823/raw/ted_search_2.json",
+    "payload": {
+      "query": "FT = \"Z2024-029445\"",
+      "fields": [
+        "publication-number"
+      ],
+      "page": 1,
+      "limit": 50,
+      "scope": "ALL"
+    }
+  },
+  {
+    "name": "ted_package_0",
+    "method": "GET",
+    "url": "https://ted.europa.eu/packages/daily/202600121",
+    "final": "https://ted.europa.eu/packages/daily/202600121",
+    "status": 200,
+    "type": "application/gzip",
+    "bytes": 17569554
+  },
+  {
+    "name": "ted_package_1",
+    "method": "GET",
+    "url": "https://ted.europa.eu/packages/notice/daily/202600121",
+    "final": "https://ted.europa.eu/packages/notice/daily/202600121",
+    "status": 404,
+    "type": "application/json",
+    "bytes": 134
+  }
+]

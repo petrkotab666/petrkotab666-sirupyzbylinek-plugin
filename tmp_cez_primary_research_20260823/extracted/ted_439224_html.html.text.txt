@@ -1,0 +1,2374 @@
+
+
+ 
+
+  
+
+  
+
+  
+
+  
+
+  
+121/2026
+
+  
+
+        @font-face {
+    font-family: 'arial-regular';
+    src: url('https://ted.europa.eu/o/ted2-theme/fonts/arial-regular.woff2') format('woff2'),
+    url('https://ted.europa.eu/o/ted2-theme/fonts/arial-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arial-bold';
+    src: url('https://ted.europa.eu/o/ted2-theme/fonts/arial-bold.woff2') format('woff2'),
+    url('https://ted.europa.eu/o/ted2-theme/fonts/arial-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#notice a, #summary a {
+    color: #3D6ECF;
+    text-decoration: none;
+}
+
+#notice a:hover, #summary a:hover {
+    color: #1454B7;
+}
+
+#notice img, #summary img {
+    vertical-align: text-bottom;
+}
+
+#notice div :not([class]), #summary div :not([class]) {
+    margin-bottom: 2px;
+}
+
+/*------------------------------------*\
+    SECTIONS
+\*------------------------------------*/
+
+#notice {
+    padding: 1px 20px;
+    font-size: 15px;
+    line-height: 1.25rem;
+    color: #444;
+    font-family: 'arial-regular';
+}
+
+#summary {
+    padding: 1px 20px;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem;
+    color: #444;
+    font-family: 'arial-regular';
+}
+
+#summary .summary-section {
+    padding-left: 20px;
+}
+
+/*------------------------------------*\
+    CLASSES
+\*------------------------------------*/
+
+#notice .header {
+    padding-bottom: 15px;
+}
+
+#notice .h2, #summary .h2 {
+    padding-top: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #DDD;
+}
+
+#notice .section-content, #summary .section-content {
+    margin-left: 65px;
+    margin-bottom: 12px;
+}
+
+#notice .subsection-content, #summary .subsection-content {
+    margin-top: 12px;
+}
+
+#notice .sublevel__number, #summary .sublevel__number {
+    float: left;
+    margin-left: -65px;
+    width: 55px;
+    text-align: right;
+}
+
+#summary .sublevel__content {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#notice.title, #summary .title {
+    display: block;
+}
+
+#notice .bold, #summary .bold {
+    font-family: 'arial-bold';
+}
+
+#notice .label {
+    margin-top: 2px;
+    display: inline;
+}
+
+#notice .line {
+    margin-top: 2px;
+    display: inline-block;
+    white-space: normal;
+}
+#notice div :not([class]), #summary div {
+    padding-bottom: 7px;
+}
+
+#notice .footer {
+    /* We mark this element as running by using the running function
+     * to specify a named position. The name can be any valid CSS identifier.
+     * See the @page rule below. */
+    position: running(footer);
+}
+
+@page {
+    margin: 5% 20px 10% 20px;
+    @bottom-left {
+        border-top: 1px solid #DDD;
+        padding-top: 10px;
+        content: element(footer);
+        vertical-align: top;
+    }
+    @bottom-right {
+        border-top: 1px solid #DDD;
+        padding-top: 10px;
+        content: "Page " counter(page) "/" counter(pages);
+        vertical-align: top;
+    }
+}
+
+@page :first {
+    margin-top: 2%;
+}
+
+    
+
+ 
+
+ 
+
+  
+
+   
+
+See the notice on TED website
+
+ 
+
+   
+
+439224-2026 - Contract modification
+
+   
+ 
+
+   
+
+    439224-2026
+   
+
+   
+
+    
+
+ 
+ 
+439224-2026 - Contract modification
+
+     
+
+      Czechia – Pipelaying construction work – CV_HV propoj EPR- Kadaň
+     
+
+     
+
+      OJ S 121/2026 26/06/2026
+     
+
+     
+
+      Contract modification notice
+     
+ 
+Works
+
+    
+
+   
+
+   
+
+    1. 
+Buyer
+
+   
+
+   
+
+    
+
+     
+1.1. 
+
+    
+
+    
+
+     
+Buyer
+
+    
+
+    
+
+     
+Official name
+
+:&nbsp;
+
+ČEZ Teplárenská, a.s.
+
+    
+
+    
+
+     
+Email
+
+:&nbsp;
+
+anna.husakova01@cez.cz
+
+    
+
+   
+
+   
+
+    2. 
+Procedure
+
+   
+
+   
+
+    
+
+     
+2.1. 
+
+    
+
+    
+
+     
+Procedure
+
+    
+
+    
+
+     
+Title
+
+:&nbsp;
+
+CV_HV propoj EPR- Kadaň
+
+    
+
+    
+
+     
+Description
+
+:&nbsp;
+
+Předmětem veřejné zakázky na stavební práce je navrhnout a vypracovat realizační projektovou dokumentaci, v souladu s ní provést stavební práce, a dále dodat, nainstalovat, vyzkoušet a uvést do provozu horkovod mezi lokalitami Prunéřov - Kadaň, včetně prokázání garantovaných parametrů a provést další stavební a jiné související práce.
+
+    
+
+    
+
+     
+Procedure identifier
+
+:&nbsp;
+
+016c74a6-ac6c-450b-aeb2-577a856bdb6f
+
+    
+
+    
+
+     
+Internal identifier
+
+:&nbsp;
+
+N006/24/V00019426
+
+    
+
+    
+
+     
+
+      
+2.1.1. 
+
+     
+
+     
+
+      
+Purpose
+
+     
+
+     
+
+      
+Main nature of the contract
+
+:&nbsp;
+
+Works
+
+     
+
+     
+
+      
+Main classification
+
+&nbsp;
+
+(
+
+cpv
+
+):&nbsp;
+
+45231110
+
+&nbsp;
+
+Pipelaying construction work
+
+     
+
+    
+
+    
+
+     
+
+      
+2.1.2. 
+
+     
+
+     
+
+      
+Place of performance
+
+     
+
+     
+
+      
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Ústecký kraj
+
+&nbsp;
+
+(
+
+CZ042
+
+)
+
+     
+
+     
+
+      
+Country
+
+:&nbsp;
+
+Czechia
+
+     
+
+    
+
+    
+
+     
+
+      
+2.1.4. 
+
+     
+
+     
+
+      
+General information
+
+     
+
+     
+
+      
+Legal basis
+
+:&nbsp;
+
+     
+
+     
+
+      
+Directive 2014/25/EU
+
+     
+
+     
+
+      
+134/2016 Sb.
+
+&nbsp;
+
+- 
+
+Zákon o zadávání veřejných zakázek
+
+     
+
+    
+
+   
+
+   
+
+    5. 
+Lot
+
+   
+
+   
+
+    
+
+     
+5.1. 
+
+    
+
+    
+
+     
+Lot
+
+:&nbsp;
+
+LOT-0001
+
+    
+
+    
+
+     
+Title
+
+:&nbsp;
+
+CV_HV propoj EPR- Kadaň
+
+    
+
+    
+
+     
+Description
+
+:&nbsp;
+
+Předmětem veřejné zakázky na stavební práce je navrhnout a vypracovat realizační projektovou dokumentaci, v souladu s ní provést stavební práce, a dále dodat, nainstalovat, vyzkoušet a uvést do provozu horkovod mezi lokalitami Prunéřov - Kadaň, včetně prokázání garantovaných parametrů a provést další stavební a jiné související práce.
+
+    
+
+    
+
+     
+Internal identifier
+
+:&nbsp;
+
+N006/24/V00019426
+
+    
+
+    
+
+     
+
+      
+5.1.1. 
+
+     
+
+     
+
+      
+Purpose
+
+     
+
+     
+
+      
+Main nature of the contract
+
+:&nbsp;
+
+Works
+
+     
+
+     
+
+      
+Main classification
+
+&nbsp;
+
+(
+
+cpv
+
+):&nbsp;
+
+45231110
+
+&nbsp;
+
+Pipelaying construction work
+
+     
+
+    
+
+    
+
+     
+
+      
+5.1.2. 
+
+     
+
+     
+
+      
+Place of performance
+
+     
+
+     
+
+      
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Ústecký kraj
+
+&nbsp;(
+
+CZ042
+
+)
+
+     
+
+     
+
+      
+Country
+
+:&nbsp;
+
+Czechia
+
+     
+
+    
+
+    
+
+     
+
+      
+5.1.3. 
+
+     
+
+     
+
+      
+Estimated duration
+
+     
+
+     
+
+      
+Start date
+
+:&nbsp;
+
+03/09/2025
+
+     
+
+     
+
+      
+Duration
+
+:&nbsp;
+
+650
+
+&nbsp;
+
+Days
+
+     
+
+    
+
+    
+
+     
+
+      
+5.1.4. 
+
+     
+
+     
+
+      
+Renewal
+
+     
+
+     
+
+      
+Maximum renewals
+
+:&nbsp;
+
+0
+
+     
+
+    
+
+    
+
+     
+
+      
+5.1.6. 
+
+     
+
+     
+
+      
+General information
+
+     
+
+     
+
+      
+The procurement is covered by the Government Procurement Agreement (GPA)
+
+:&nbsp;
+
+yes
+
+     
+
+    
+
+    
+
+     
+
+      
+5.1.7. 
+
+     
+
+     
+
+      
+Strategic procurement
+
+     
+
+     
+
+      
+Aim of strategic procurement
+
+:&nbsp;
+
+Reduction of environmental impacts
+
+      
+
+       
+Description
+
+:&nbsp;
+
+Blíže specifikováno v zadávací dokumentaci
+
+      
+
+     
+
+     
+
+      
+Aim of strategic procurement
+
+:&nbsp;
+
+Innovative purchase
+
+      
+
+       
+Description
+
+:&nbsp;
+
+Blíže specifikováno v zadávací dokumentaci
+
+      
+
+     
+
+     
+
+      
+Aim of strategic procurement
+
+:&nbsp;
+
+Fulfilment of social objectives
+
+      
+
+       
+Description
+
+:&nbsp;
+
+Blíže specifikováno v zadávací dokumentaci
+
+      
+
+     
+
+     
+
+      
+Approach to reducing environmental impacts
+
+:&nbsp;
+
+Pollution prevention and control
+
+     
+
+     
+
+      
+Social objective promoted
+
+:&nbsp;
+
+Employment opportunities for the long-term unemployed, disadvantaged and/or for persons with disabilities
+
+     
+
+     
+
+      
+Innovation procurement
+
+:&nbsp;
+
+The procured works, supplies, or services entail process innovation
+
+     
+
+    
+
+    
+
+     
+
+      
+5.1.15. 
+
+     
+
+     
+
+      
+Techniques
+
+     
+
+     
+
+      
+Framework agreement
+
+:&nbsp;
+
+      
+
+       
+No framework agreement
+
+      
+
+     
+
+    
+
+    
+
+     
+
+      
+5.1.16. 
+
+     
+
+     
+
+      
+Further information, mediation and review
+
+     
+
+     
+
+      
+Review organisation
+
+:&nbsp;
+
+Úřad pro ochranu hospodářské soutěže
+
+     
+
+     
+
+      
+Information about review deadlines
+
+: 
+
+Podmínkou pro podání návrhu k ÚOHS je podání námitek k Zadavateli, které je nutné doručit do 15 dnů ode dne, kdy se stěžovatel dozvěděl o domnělém porušení zákona Zadavatelem, nejpozději však do uzavření smlouvy nebo do chvíle, kdy se soutěž o návrh považuje po výběru návrhu za ukončenou. Námitky proti úkonům oznamovaným v dokumentech, které je Zadavatel povinen podle zákona uveřejnit či odeslat stěžovateli, musí být doručeny Zadavateli do 15 dnů od jejich uveřejnění či doručení stěžovateli. Pokud je v zadávacím řízení stanovena lhůta pro podání žádostí o účast, musí být námitky proti podmínkám vztahujícím se ke kvalifikaci dodavatele doručeny Zadavateli nejpozději do skončení této lhůty. Pokud je v zadávacím řízení stanovena lhůta pro podání nabídek, musí být námitky proti zadávacím podmínkám doručeny Zadavateli nejpozději do skončení této lhůty. Námitky proti obsahu výzvy k podání nabídek v dynamickém nákupním systému nebo při zadávání veřejné zakázky na základě rámcové dohody musí být zadavateli doručeny nejpozději do konce lhůty pro podání nabídek. V soutěži o návrh musí být námitky proti soutěžním podmínkám doručeny nejpozději do konce lhůty pro podání návrhů. Zadavatel může v zadávací dokumentaci nebo soutěžních podmínkách stanovit, že námitky podle § 242 odst. 3 nebo 4 zákona lze podat nejpozději 72 hodin před skončením lhůt podle § 242 odst. 3 nebo 4 zákona. Námitky proti dobrovolnému oznámení o záměru uzavřít smlouvu podle § 212 odst. 2 zákona musí být doručeny Zadavateli do 30 dnů od uveřejnění tohoto oznámení. Zadavatel je povinen námitky vyřídit do 15 dnů. Návrh je nutné doručit ÚOHS i Zadavateli do 10 dnů ode dne, v němž stěžovatel obdržel rozhodnutí, kterým Zadavatel námitky odmítnul nebo do 25 dnů od odeslání námitek, pokud Zadavatel o námitkách nerozhodl. Po uzavření smlouvy na veřejnou zakázku či rámcové dohody lze podat pouze návrh na uložení zákazu plnění smlouvy, a to i bez předchozího podání námitek. Návrh na uložení zákazu plnění smlouvy doručí navrhovatel ÚOHS a ve stejnopisu Zadavateli do 30 dnů ode dne, kdy Zadavatel uveřejnil oznámení o uzavření smlouvy způsobem podle § 212 odst. 2 zákona s uvedením důvodu pro zadání veřejné zakázky bez uveřejnění oznámení o zahájení zadávacího řízení, předběžného oznámení nebo výzvy k podání nabídek ve zjednodušeném podlimitním řízení, nejpozději však do 6 měsíců od uzavření této smlouvy. Návrh na uložení zákazu plnění smlouvy podle § 254 odstavce 1 písm. d) zákona doručí navrhovatel ÚOHS a ve stejnopisu Zadavateli do 30 dnů ode dne, kdy Zadavatel uveřejnil oznámení o uzavření smlouvy na základě rámcové dohody podle § 137 zákona nebo oznámení o uzavření smlouvy v dynamickém nákupním systému podle § 142 zákona, nejpozději však do 6 měsíců od uzavření této smlouvy. Ve lhůtě pro doručení návrhu je navrhovatel povinen složit na účet ÚOHS kauci ve výši 1 % z nabídkové ceny navrhovatele za celou dobu plnění veřejné zakázky nebo za dobu prvních čtyř let plnění v případě smluv na dobu neurčitou, nejméně však ve výši 50 000 Kč, nejvýše ve výši 10 000 000 Kč. V případě, že navrhovatel nemůže stanovit celkovou nabídkovou cenu, je povinen složit kauci ve výši 100 000 Kč. V případě návrhu na uložení zákazu plnění smlouvy je navrhovatel povinen složit kauci ve výši 200 000 Kč. Jde-li o řízení o přezkoumání postupu pro zadávání koncesí, je navrhovatel povinen ve lhůtě pro doručení návrhu složit na účet ÚOHS kauci ve výši 1 % z předpokládané hodnoty koncese uveřejněné ve Věstníku veřejných zakázek nebo na profilu Zadavatele, nejméně však ve výši 50 000 Kč, nejvýše ve výši 10 000 000 Kč. V případě, že Zadavatel neuveřejní ve Věstníku veřejných zakázek nebo na profilu Zadavatele předpokládanou hodnotu koncese, je navrhovatel povinen složit kauci ve výši 100 000 Kč. V případě návrhu na uložení zákazu plnění koncesní smlouvy je navrhovatel povinen složit kauci ve výši 200 000 Kč.
+
+     
+
+     
+
+      
+Organisation providing additional information about the procurement procedure
+
+:&nbsp;
+
+ČEZ, a. s.
+
+     
+
+     
+
+      
+Organisation providing offline access to the procurement documents
+
+:&nbsp;
+
+ČEZ, a. s.
+
+     
+
+     
+
+      
+Organisation providing more information on the review procedures
+
+:&nbsp;
+
+Úřad pro ochranu hospodářské soutěže
+
+     
+
+    
+
+   
+
+   
+
+    6. 
+Results
+
+   
+
+   
+
+    
+
+     
+Value of all contracts awarded in this notice
+
+:&nbsp;
+
+427 756 486,26
+
+&nbsp;
+
+CZK
+
+    
+
+   
+
+   
+
+    
+
+     
+6.1. 
+
+    
+
+    
+
+     
+Result lot identifier
+
+:&nbsp;
+
+LOT-0001
+
+    
+
+    
+
+     
+
+      
+6.1.2. 
+
+     
+
+     
+
+      
+Information about winners
+
+     
+
+     
+
+      
+Winner
+
+:&nbsp;
+
+     
+
+     
+
+      
+Leader of tendering party
+
+:&nbsp;
+
+HOMOLA a.s.
+
+     
+
+     
+
+      
+Official name
+
+:&nbsp;
+
+ELTE Holding a.s.
+
+     
+
+     
+
+      
+Official name
+
+:&nbsp;
+
+GASCONTROL, společnost s r.o.
+
+     
+
+     
+
+      
+Tender
+
+:&nbsp;
+
+     
+
+     
+
+      
+Tender identifier
+
+:&nbsp;
+
+HOMOLA a.s.
+
+     
+
+     
+
+      
+Identifier of lot or group of lots
+
+:&nbsp;
+
+LOT-0001
+
+     
+
+     
+
+      
+Value of the tender
+
+:&nbsp;
+
+427 756 486,26
+
+&nbsp;
+
+CZK
+
+     
+
+     
+
+      
+The tender was ranked
+
+:&nbsp;
+
+no
+
+     
+
+     
+
+      
+Rank of the tender
+
+:&nbsp;
+
+1
+
+     
+
+     
+
+      
+
+       
+Subcontracting
+
+:&nbsp;
+
+No
+
+      
+
+     
+
+     
+
+      
+Contract information
+
+:&nbsp;
+
+      
+
+       
+Identifier of the contract
+
+:&nbsp;
+
+4570081576
+
+      
+
+      
+
+       
+Date on which the winner was chosen
+
+:&nbsp;
+
+26/08/2025
+
+      
+
+      
+
+       
+Date of the conclusion of the contract
+
+:&nbsp;
+
+03/09/2025
+
+      
+
+     
+
+    
+
+    
+
+     
+
+      
+6.1.4. 
+
+     
+
+     
+
+      
+Statistical information
+
+     
+
+     
+
+      
+Summary of the review requests the buyer received
+
+:&nbsp;
+
+      
+
+       
+Number of complainants
+
+:&nbsp;
+
+2
+
+      
+
+     
+
+    
+
+   
+
+   
+
+    7. 
+Modification
+
+   
+
+   
+
+    
+
+     
+7.1. 
+
+    
+
+    
+
+     
+Modification
+
+    
+
+    
+
+     
+Identifier of the previous contract award notice
+
+:&nbsp;
+
+615457-2025
+
+    
+
+    
+
+     
+Identifier of the modified contract
+
+:&nbsp;
+
+4570081576
+
+    
+
+    
+
+     
+Reason for modification
+
+:&nbsp;
+
+Need for modifications because of circumstances which a diligent buyer could not predict.
+
+    
+
+    
+
+     
+Description
+
+:&nbsp;
+
+Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+
+    
+
+    
+
+     
+7.1.1. 
+
+    
+
+    
+
+     
+Change
+
+    
+
+    
+
+     
+Description of modifications
+
+:&nbsp;
+
+Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+
+    
+
+   
+
+   
+
+    8. 
+Organisations
+
+   
+
+   
+
+    
+
+     
+8.1. 
+
+    
+
+    
+
+     
+ORG-0001
+
+    
+
+    
+
+     
+Official name
+
+:&nbsp;
+
+ČEZ Teplárenská, a.s.
+
+    
+
+    
+
+     
+Registration number
+
+:&nbsp;
+
+27309941
+
+    
+
+    
+
+     
+Postal address
+
+:&nbsp;
+
+Duhová 1444/2
+
+    
+
+    
+
+     
+Town
+
+:&nbsp;
+
+Praha - Michle
+
+    
+
+    
+
+     
+Postcode
+
+:&nbsp;
+
+14000
+
+    
+
+    
+
+     
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Hlavní město Praha
+
+&nbsp;(
+
+CZ010
+
+)
+
+    
+
+    
+
+     
+Country
+
+:&nbsp;
+
+Czechia
+
+    
+
+    
+
+     
+Email
+
+:&nbsp;
+
+anna.husakova01@cez.cz
+
+    
+
+    
+
+     
+Telephone
+
+:&nbsp;
+
++420 606632896
+
+    
+
+    
+
+     
+Internet address
+
+:&nbsp;
+
+https://www.cez.cz/
+
+    
+
+    
+
+     
+Roles of this organisation
+
+:&nbsp;
+
+     
+
+      
+Buyer
+
+     
+
+    
+
+   
+
+   
+
+    
+
+     
+8.1. 
+
+    
+
+    
+
+     
+ORG-0002
+
+    
+
+    
+
+     
+Official name
+
+:&nbsp;
+
+Úřad pro ochranu hospodářské soutěže
+
+    
+
+    
+
+     
+Registration number
+
+:&nbsp;
+
+65349423
+
+    
+
+    
+
+     
+Postal address
+
+:&nbsp;
+
+třída Kpt. Jaroše 1926/7
+
+    
+
+    
+
+     
+Town
+
+:&nbsp;
+
+Brno
+
+    
+
+    
+
+     
+Postcode
+
+:&nbsp;
+
+60200
+
+    
+
+    
+
+     
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Jihomoravský kraj
+
+&nbsp;(
+
+CZ064
+
+)
+
+    
+
+    
+
+     
+Country
+
+:&nbsp;
+
+Czechia
+
+    
+
+    
+
+     
+Email
+
+:&nbsp;
+
+posta@uohs.cz
+
+    
+
+    
+
+     
+Telephone
+
+:&nbsp;
+
++420 542167111
+
+    
+
+    
+
+     
+Internet address
+
+:&nbsp;
+
+https://uohs.gov.cz
+
+    
+
+    
+
+     
+Roles of this organisation
+
+:&nbsp;
+
+     
+
+      
+Review organisation
+
+     
+
+     
+
+      
+Organisation providing more information on the review procedures
+
+     
+
+    
+
+   
+
+   
+
+    
+
+     
+8.1. 
+
+    
+
+    
+
+     
+ORG-0003
+
+    
+
+    
+
+     
+Official name
+
+:&nbsp;
+
+HOMOLA a.s.
+
+    
+
+    
+
+     
+Registration number
+
+:&nbsp;
+
+26792770
+
+    
+
+    
+
+     
+Postal address
+
+:&nbsp;
+
+Vratimovská 624/11
+
+    
+
+    
+
+     
+Town
+
+:&nbsp;
+
+Ostrava - Kunčičky
+
+    
+
+    
+
+     
+Postcode
+
+:&nbsp;
+
+71800
+
+    
+
+    
+
+     
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Moravskoslezský kraj
+
+&nbsp;(
+
+CZ080
+
+)
+
+    
+
+    
+
+     
+Country
+
+:&nbsp;
+
+Czechia
+
+    
+
+    
+
+     
+Email
+
+:&nbsp;
+
+obchod@homola.cz
+
+    
+
+    
+
+     
+Telephone
+
+:&nbsp;
+
++420 739521475
+
+    
+
+    
+
+     
+Roles of this organisation
+
+:&nbsp;
+
+     
+
+      
+Tenderer
+
+     
+
+     
+
+      
+Leader of tendering party
+
+     
+
+     
+
+      
+Winner of these lots
+
+:&nbsp;
+
+LOT-0001
+
+     
+
+    
+
+   
+
+   
+
+    
+
+     
+8.1. 
+
+    
+
+    
+
+     
+ORG-0004
+
+    
+
+    
+
+     
+Official name
+
+:&nbsp;
+
+ELTE Holding a.s.
+
+    
+
+    
+
+     
+Registration number
+
+:&nbsp;
+
+46708111
+
+    
+
+    
+
+     
+Postal address
+
+:&nbsp;
+
+Za Válcovnou 465/49
+
+    
+
+    
+
+     
+Town
+
+:&nbsp;
+
+Ústí nad Labem - Předlice
+
+    
+
+    
+
+     
+Postcode
+
+:&nbsp;
+
+40001
+
+    
+
+    
+
+     
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Ústecký kraj
+
+&nbsp;(
+
+CZ042
+
+)
+
+    
+
+    
+
+     
+Country
+
+:&nbsp;
+
+Czechia
+
+    
+
+    
+
+     
+Email
+
+:&nbsp;
+
+obchod@homola.as
+
+    
+
+    
+
+     
+Telephone
+
+:&nbsp;
+
++420 739521475
+
+    
+
+    
+
+     
+Roles of this organisation
+
+:&nbsp;
+
+     
+
+      
+Tenderer
+
+     
+
+     
+
+     
+
+      
+Winner of these lots
+
+:&nbsp;
+
+LOT-0001
+
+     
+
+    
+
+   
+
+   
+
+    
+
+     
+8.1. 
+
+    
+
+    
+
+     
+ORG-0005
+
+    
+
+    
+
+     
+Official name
+
+:&nbsp;
+
+GASCONTROL, společnost s r.o.
+
+    
+
+    
+
+     
+Registration number
+
+:&nbsp;
+
+46578021
+
+    
+
+    
+
+     
+Postal address
+
+:&nbsp;
+
+Dělnická 883/46
+
+    
+
+    
+
+     
+Town
+
+:&nbsp;
+
+Havířov - Prostřední Suchá
+
+    
+
+    
+
+     
+Postcode
+
+:&nbsp;
+
+73564
+
+    
+
+    
+
+     
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Moravskoslezský kraj
+
+&nbsp;(
+
+CZ080
+
+)
+
+    
+
+    
+
+     
+Country
+
+:&nbsp;
+
+Czechia
+
+    
+
+    
+
+     
+Email
+
+:&nbsp;
+
+obchod@homola.as
+
+    
+
+    
+
+     
+Telephone
+
+:&nbsp;
+
++420 739521475
+
+    
+
+    
+
+     
+Roles of this organisation
+
+:&nbsp;
+
+     
+
+      
+Tenderer
+
+     
+
+     
+
+     
+
+      
+Winner of these lots
+
+:&nbsp;
+
+LOT-0001
+
+     
+
+    
+
+   
+
+   
+
+    
+
+     
+8.1. 
+
+    
+
+    
+
+     
+ORG-0006
+
+    
+
+    
+
+     
+Official name
+
+:&nbsp;
+
+ČEZ, a. s.
+
+    
+
+    
+
+     
+Registration number
+
+:&nbsp;
+
+45274649
+
+    
+
+    
+
+     
+Postal address
+
+:&nbsp;
+
+Duhová 1444/2
+
+    
+
+    
+
+     
+Town
+
+:&nbsp;
+
+Praha - Michle
+
+    
+
+    
+
+     
+Postcode
+
+:&nbsp;
+
+14000
+
+    
+
+    
+
+     
+Country subdivision (NUTS)
+
+:&nbsp;
+
+Hlavní město Praha
+
+&nbsp;(
+
+CZ010
+
+)
+
+    
+
+    
+
+     
+Country
+
+:&nbsp;
+
+Czechia
+
+    
+
+    
+
+     
+Email
+
+:&nbsp;
+
+anna.husakova01@cez.cz
+
+    
+
+    
+
+     
+Telephone
+
+:&nbsp;
+
++420 606632896
+
+    
+
+    
+
+     
+Roles of this organisation
+
+:&nbsp;
+
+     
+
+      
+Procurement service provider
+
+     
+
+     
+
+      
+Organisation providing additional information about the procurement procedure
+
+     
+
+     
+
+      
+Organisation providing offline access to the procurement documents
+
+     
+
+    
+
+   
+
+   
+
+    
+Notice information
+
+   
+
+   
+
+    
+
+     
+Notice identifier/version
+
+:&nbsp;
+
+64d11ab6-6031-4b2b-b7a0-6abbee7f6c68
+
+&nbsp; - &nbsp;
+
+01
+
+    
+
+    
+
+     
+Form type
+
+:&nbsp;
+
+Contract modification
+
+    
+
+    
+
+     
+Notice type
+
+:&nbsp;
+
+Contract modification notice
+
+    
+
+    
+
+     
+Notice subtype
+
+:&nbsp;
+
+39
+
+    
+
+    
+
+     
+Notice dispatch date
+
+:&nbsp;
+
+25/06/2026
+
+&nbsp;
+
+13:04:37 (UTC+02:00) Eastern European Time, Central European Summer Time
+
+    
+
+    
+
+     
+Languages in which this notice is officially available
+
+:&nbsp;
+
+Czech
+
+    
+
+    
+
+     
+Notice publication number
+
+:&nbsp;
+
+439224-2026
+
+    
+
+    
+
+     
+OJ S issue number
+
+:&nbsp;
+
+121/2026
+
+    
+
+    
+
+     
+Publication date
+
+:&nbsp;
+
+26/06/2026
+
+    
+
+   
+ 
+
+  
+
+ 
+

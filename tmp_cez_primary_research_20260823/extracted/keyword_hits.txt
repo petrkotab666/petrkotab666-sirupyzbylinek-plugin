@@ -1,0 +1,1834 @@
+
+### datlab_vysvetleni_20.pdf.txt line 43
+41: Dotaz:   
+42: Návrh SoD , odstavec 7,  bod 7.2  
+43: Milník M6 Instalace a montáž trafostanice a čerpadel. Tento milník má 
+44: návaznost na objekt Centrální elektrické stanice (CES), který není 
+45: předmětem této smlouvy.  
+
+### datlab_vysvetleni_20.pdf.txt line 189
+187: P1_51.0 Ostatní dokumentace-51.2_PDPS SITEZ – B - Souhrnná technická 
+188: zpráva  
+189: Dle Souhrnné technické zprávy nebyl proveden geologický, hydrogeologický 
+190: ani stavebně historický průzkum.  
+191:   
+
+### datlab_vysvetleni_20.pdf.txt line 192
+190: ani stavebně historický průzkum.  
+191:   
+192: • Jak bude řešeno čerpání vody? Dle našeho odborného posouzení 
+193: 40h čerpání obsažených ve výkazu výměr je nedostačující.  
+194: • Jak bude řešen případný archeologický průzkum, pokud bude nutný?  
+
+### datlab_vysvetleni_20.pdf.txt line 193
+191:   
+192: • Jak bude řešeno čerpání vody? Dle našeho odborného posouzení 
+193: 40h čerpání obsažených ve výkazu výměr je nedostačující.  
+194: • Jak bude řešen případný archeologický průzkum, pokud bude nutný?  
+195: • Jak bude řešen nález betonových konstrukcí při výkopových pracích?  
+
+### datlab_vysvetleni_20.pdf.txt line 202
+200: dotaz: 
+201: č. 76 
+202: Zadavatel sděluje, že čerpání vody se předpokládá pouze u převedení vody z 
+203: potoka. Přesný postup čerpání zpracuje Zhotovitel v rámci svého technického 
+204: řešení a předá jej v rámci Realizační projektové dokumentace. Zadavatel 
+
+### datlab_vysvetleni_20.pdf.txt line 203
+201: č. 76 
+202: Zadavatel sděluje, že čerpání vody se předpokládá pouze u převedení vody z 
+203: potoka. Přesný postup čerpání zpracuje Zhotovitel v rámci svého technického 
+204: řešení a předá jej v rámci Realizační projektové dokumentace. Zadavatel 
+205: předpokládá přípravu a následné uložení 2x12m potrubí a příslušných kolen mimo 
+
+### datlab_vysvetleni_20.pdf.txt line 210
+208: Zájmové území stavby se nenachází na území s archeologickými nálezy. Případně 
+209: bude řešeno v souladu s článkem 23 Návrhu Smlouvy, část 4 ZD, formou 
+210: změnového řízení. 
+211: V případě, že bude nutné při výkopových pracích bourání betonových konstrukcí,  
+212: bude řešeno v souladu s článkem 23 Návrhu Smlouvy, část 4 ZD, formou 
+
+### datlab_vysvetleni_20.pdf.txt line 213
+211: V případě, že bude nutné při výkopových pracích bourání betonových konstrukcí,  
+212: bude řešeno v souladu s článkem 23 Návrhu Smlouvy, část 4 ZD, formou 
+213: změnového řízení. 
+214:  
+215:  
+
+### datlab_vysvetleni_20.pdf.txt line 237
+235: potrubí. 
+236:  
+237: Změna bude zohledněna v Dodatku k ZD, který bude v nejbližší době vydán. 
+238: Pořadové číslo 
+239: dotazu 
+
+### datlab_vysvetleni_20.pdf.txt line 265
+263: Zadavatel sděluje, že pro armatury v sekčních šachtách jsou požadovány navařovací 
+264: kulové kohouty se snímatelnou izolací včetně oplechování.  
+265: Změna bude zohledněna v Dodatku ZD, který bude v nejbližší době vydán. 
+266:  
+267: Pořadové číslo 
+
+### datlab_vysvetleni_20.pdf.txt line 307
+305:   
+306: Máme respektovat stávající technické řešení ze zadávací dokumentace, 
+307: nebo zadavatel zváží změnu řešení a upraví zadávací dokumentaci a výkazy 
+308: výměr? 
+309: Pořadové číslo 
+
+### datlab_vysvetleni_20.pdf.txt line 316
+314: Zadavatel doplňuje, že chránička HDPE40 bude rozdělena instalačními kabelovými 
+315: šachtami.  
+316: Změna bude zohledněna v Dodatku ZD, který bude v nejbližší době vydán. 
+317: Pořadové číslo 
+318: dotazu 
+
+### nen_documents.html.text.txt line 98
+96: EN
+97: 
+98: Změna jazyka
+99: 
+100: Úvod
+
+### nen_main.html.text.txt line 98
+96: EN
+97: 
+98: Změna jazyka
+99: 
+100: Úvod
+
+### nen_main.html.text.txt line 328
+326: 03. 02. 2025 20:29
+327: 
+328: Změna nebo doplnění zadávací dokumentace
+329: 
+330: Detail
+
+### nen_main.html.text.txt line 352
+350: 17. 01. 2025 19:28
+351: 
+352: Změna nebo doplnění zadávací dokumentace
+353: 
+354: Detail
+
+### nen_main.html.text.txt line 408
+406: 27. 07. 2026 02:03
+407: 
+408: F2026-040224
+409: 
+410: Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka
+
+### nen_main.html.text.txt line 410
+408: F2026-040224
+409: 
+410: Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka
+411: 
+412: 25. 06. 2026 13:05
+
+### nen_main.html.text.txt line 416
+414: 26. 06. 2026 08:02
+415: 
+416: F2026-033864
+417: 
+418: Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka
+
+### nen_main.html.text.txt line 418
+416: F2026-033864
+417: 
+418: Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka
+419: 
+420: 13. 04. 2026 08:05
+
+### nen_main.html.text.txt line 424
+422: 14. 04. 2026 08:04
+423: 
+424: F2026-018644
+425: 
+426: Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka
+
+### nen_main.html.text.txt line 426
+424: F2026-018644
+425: 
+426: Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka
+427: 
+428: 18. 09. 2025 14:06
+
+### nen_tds.html.text.txt line 98
+96: EN
+97: 
+98: Změna jazyka
+99: 
+100: Úvod
+
+### nen_tds_result.html.text.txt line 98
+96: EN
+97: 
+98: Změna jazyka
+99: 
+100: Úvod
+
+### nen_vysvetleni_16.pdf.txt line 146
+144: č. 42 
+145: 5. Ve výkazu výměr je v listu InO 01 - D2 - Trasa horkovodu - Strojní 
+146: část uvedena položka č. 125 - voda pitná pro ostatní odběratele. 
+147: Je tato položka protiplněním objednatele? Pokud není protiplněním 
+148: objednatele, za jakou cenu bude zhotoviteli poskytnuta? 
+
+### nen_vysvetleni_16.pdf.txt line 236
+234: č. 46 
+235: 9. Zadavatel v návrhu SoD uvádí v bodě 8.3 že: „Zhotovitel tímto ve 
+236: smyslu § 2620 odst. 2 ObčZ na sebe přebírá nebezpečí změny okolností.“ 
+237: Vzhledem k charakteru a rozsahu díla, celkové náročnosti na přípravu 
+238: projektu, rozsahu se domníváme, že je toto smluvní ustanovení 
+
+### nen_vysvetleni_16.pdf.txt line 321
+319:  
+320: Zadavatel sděluje, že ustanovení odst. 12.18  Návrhu Smlouvy, část 4 ZD  zůstává 
+321: beze změny a zároveň Dodatkem k ZD doplní níže uvedené ustanovení.  
+322: Zjistí-li Zhotovitel při provádění Díla skryté překážky týkající se místa, kde má být 
+323: Dílo provedeno, které nemohl ani při náležité péči před zahájením provádění Díla 
+
+### nen_vysvetleni_16.pdf.txt line 329
+327:  
+328: Stránka 5 z 8 
+329: bez zbytečného odkladu Objednateli a navrhne mu změnu v  souladu s  čl. 23. 
+330: Smlouvy. 
+331:  
+
+### nen_vysvetleni_16.pdf.txt line 446
+444: Podle požadavků uvedených v  tomto dokumentu je potřeba doložit (mimo 
+445: jiné) pro část SO 1001 STAVEBNÍ ÚPRAVY OBJEKTU 550  
+446: Výkres výztuže základů pro oběhové čerpadla 
+447: Výkres výztuže základů pro podávací čerpadla. 
+448: Přičemž zadavatel v Příloze smlouvy o Dílo č. 1 - Technická specifikace Díla 
+
+### nen_vysvetleni_16.pdf.txt line 447
+445: jiné) pro část SO 1001 STAVEBNÍ ÚPRAVY OBJEKTU 550  
+446: Výkres výztuže základů pro oběhové čerpadla 
+447: Výkres výztuže základů pro podávací čerpadla. 
+448: Přičemž zadavatel v Příloze smlouvy o Dílo č. 1 - Technická specifikace Díla 
+449: Objednatele uvádí na několika místech, že návrh základů bude proveden 
+
+### nen_vysvetleni_16.pdf.txt line 491
+489: Trasa horkovodu. P&ID diagramy jsou vhodné zachycení logických a 
+490: technických návaznosti v  složitých objektech/souborech jako je například 
+491: PS01 Čerpací stanice oběhové vody (kde tento P&ID zadavatel ve svých 
+492: podkladech uvádí).  
+493: Logické a technické návaznosti, který by měl P&ID diagram zachycovat, jsou 
+
+### nen_vysvetleni_20.pdf.txt line 43
+41: Dotaz:   
+42: Návrh SoD , odstavec 7,  bod 7.2  
+43: Milník M6 Instalace a montáž trafostanice a čerpadel. Tento milník má 
+44: návaznost na objekt Centrální elektrické stanice (CES), který není 
+45: předmětem této smlouvy.  
+
+### nen_vysvetleni_20.pdf.txt line 189
+187: P1_51.0 Ostatní dokumentace-51.2_PDPS SITEZ – B - Souhrnná technická 
+188: zpráva  
+189: Dle Souhrnné technické zprávy nebyl proveden geologický, hydrogeologický 
+190: ani stavebně historický průzkum.  
+191:   
+
+### nen_vysvetleni_20.pdf.txt line 192
+190: ani stavebně historický průzkum.  
+191:   
+192: • Jak bude řešeno čerpání vody? Dle našeho odborného posouzení 
+193: 40h čerpání obsažených ve výkazu výměr je nedostačující.  
+194: • Jak bude řešen případný archeologický průzkum, pokud bude nutný?  
+
+### nen_vysvetleni_20.pdf.txt line 193
+191:   
+192: • Jak bude řešeno čerpání vody? Dle našeho odborného posouzení 
+193: 40h čerpání obsažených ve výkazu výměr je nedostačující.  
+194: • Jak bude řešen případný archeologický průzkum, pokud bude nutný?  
+195: • Jak bude řešen nález betonových konstrukcí při výkopových pracích?  
+
+### nen_vysvetleni_20.pdf.txt line 202
+200: dotaz: 
+201: č. 76 
+202: Zadavatel sděluje, že čerpání vody se předpokládá pouze u převedení vody z 
+203: potoka. Přesný postup čerpání zpracuje Zhotovitel v rámci svého technického 
+204: řešení a předá jej v rámci Realizační projektové dokumentace. Zadavatel 
+
+### nen_vysvetleni_20.pdf.txt line 203
+201: č. 76 
+202: Zadavatel sděluje, že čerpání vody se předpokládá pouze u převedení vody z 
+203: potoka. Přesný postup čerpání zpracuje Zhotovitel v rámci svého technického 
+204: řešení a předá jej v rámci Realizační projektové dokumentace. Zadavatel 
+205: předpokládá přípravu a následné uložení 2x12m potrubí a příslušných kolen mimo 
+
+### nen_vysvetleni_20.pdf.txt line 210
+208: Zájmové území stavby se nenachází na území s archeologickými nálezy. Případně 
+209: bude řešeno v souladu s článkem 23 Návrhu Smlouvy, část 4 ZD, formou 
+210: změnového řízení. 
+211: V případě, že bude nutné při výkopových pracích bourání betonových konstrukcí,  
+212: bude řešeno v souladu s článkem 23 Návrhu Smlouvy, část 4 ZD, formou 
+
+### nen_vysvetleni_20.pdf.txt line 213
+211: V případě, že bude nutné při výkopových pracích bourání betonových konstrukcí,  
+212: bude řešeno v souladu s článkem 23 Návrhu Smlouvy, část 4 ZD, formou 
+213: změnového řízení. 
+214:  
+215:  
+
+### nen_vysvetleni_20.pdf.txt line 237
+235: potrubí. 
+236:  
+237: Změna bude zohledněna v Dodatku k ZD, který bude v nejbližší době vydán. 
+238: Pořadové číslo 
+239: dotazu 
+
+### nen_vysvetleni_20.pdf.txt line 265
+263: Zadavatel sděluje, že pro armatury v sekčních šachtách jsou požadovány navařovací 
+264: kulové kohouty se snímatelnou izolací včetně oplechování.  
+265: Změna bude zohledněna v Dodatku ZD, který bude v nejbližší době vydán. 
+266:  
+267: Pořadové číslo 
+
+### nen_vysvetleni_20.pdf.txt line 307
+305:   
+306: Máme respektovat stávající technické řešení ze zadávací dokumentace, 
+307: nebo zadavatel zváží změnu řešení a upraví zadávací dokumentaci a výkazy 
+308: výměr? 
+309: Pořadové číslo 
+
+### nen_vysvetleni_20.pdf.txt line 316
+314: Zadavatel doplňuje, že chránička HDPE40 bude rozdělena instalačními kabelovými 
+315: šachtami.  
+316: Změna bude zohledněna v Dodatku ZD, který bude v nejbližší době vydán. 
+317: Pořadové číslo 
+318: dotazu 
+
+### ted_439224_html.html.text.txt line 175
+173:    
+174: 
+175: 439224-2026 - Contract modification
+176: 
+177:    
+
+### ted_439224_html.html.text.txt line 182
+180:    
+181: 
+182:     439224-2026
+183:    
+184: 
+
+### ted_439224_html.html.text.txt line 191
+189:  
+190:  
+191: 439224-2026 - Contract modification
+192: 
+193:      
+
+### ted_439224_html.html.text.txt line 205
+203:      
+204: 
+205:       Contract modification notice
+206:      
+207:  
+
+### ted_439224_html.html.text.txt line 643
+641: 
+642:       
+643: Estimated duration
+644: 
+645:      
+
+### ted_439224_html.html.text.txt line 661
+659: 
+660:       
+661: Duration
+662: 
+663: :&nbsp;
+
+### ted_439224_html.html.text.txt line 914
+912: 
+913:       
+914: Information about review deadlines
+915: 
+916: : 
+
+### ted_439224_html.html.text.txt line 971
+969: 
+970:      
+971: Value of all contracts awarded in this notice
+972: 
+973: :&nbsp;
+
+### ted_439224_html.html.text.txt line 1097
+1095: 
+1096:       
+1097: Value of the tender
+1098: 
+1099: :&nbsp;
+
+### ted_439224_html.html.text.txt line 1233
+1231: 
+1232:     7. 
+1233: Modification
+1234: 
+1235:    
+
+### ted_439224_html.html.text.txt line 1249
+1247: 
+1248:      
+1249: Modification
+1250: 
+1251:     
+
+### ted_439224_html.html.text.txt line 1278
+1276: 
+1277:      
+1278: Reason for modification
+1279: 
+1280: :&nbsp;
+
+### ted_439224_html.html.text.txt line 1282
+1280: :&nbsp;
+1281: 
+1282: Need for modifications because of circumstances which a diligent buyer could not predict.
+1283: 
+1284:     
+
+### ted_439224_html.html.text.txt line 1293
+1291: :&nbsp;
+1292: 
+1293: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+1294: 
+1295:     
+
+### ted_439224_html.html.text.txt line 1314
+1312: 
+1313:      
+1314: Description of modifications
+1315: 
+1316: :&nbsp;
+
+### ted_439224_html.html.text.txt line 1318
+1316: :&nbsp;
+1317: 
+1318: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+1319: 
+1320:     
+
+### ted_439224_html.html.text.txt line 2283
+2281: :&nbsp;
+2282: 
+2283: Contract modification
+2284: 
+2285:     
+
+### ted_439224_html.html.text.txt line 2294
+2292: :&nbsp;
+2293: 
+2294: Contract modification notice
+2295: 
+2296:     
+
+### ted_439224_html.html.text.txt line 2342
+2340: :&nbsp;
+2341: 
+2342: 439224-2026
+2343: 
+2344:     
+
+### ted_439224_pdf.pdf.txt line 4
+2: 
+3: ===== PAGE 1 =====
+4: 439224-2026 Page 1/7
+5: See the notice on TED website
+6: 439224-2026 - Contract modification
+
+### ted_439224_pdf.pdf.txt line 6
+4: 439224-2026 Page 1/7
+5: See the notice on TED website
+6: 439224-2026 - Contract modification
+7: Czechia – Pipelaying construction work – CV_HV propoj EPR- Kadaň
+8: OJ S 121/2026 26/06/2026
+
+### ted_439224_pdf.pdf.txt line 9
+7: Czechia – Pipelaying construction work – CV_HV propoj EPR- Kadaň
+8: OJ S 121/2026 26/06/2026
+9: Contract modification notice
+10: Works
+11: 1. Buyer
+
+### ted_439224_pdf.pdf.txt line 47
+45: 
+46: ===== PAGE 2 =====
+47: 439224-2026 Page 2/7
+48: 5.1.2.
+49:  
+
+### ted_439224_pdf.pdf.txt line 53
+51: Country subdivision (NUTS): Ústecký kraj (CZ042)
+52: Country: Czechia
+53: 5.1.3.  Estimated duration
+54: Start date: 03/09/2025
+55: Duration: 650 Days
+
+### ted_439224_pdf.pdf.txt line 55
+53: 5.1.3.  Estimated duration
+54: Start date: 03/09/2025
+55: Duration: 650 Days
+56: 5.1.4.  Renewal
+57: Maximum renewals: 0
+
+### ted_439224_pdf.pdf.txt line 76
+74: 5.1.16.  Further information, mediation and review
+75: Review organisation: Úřad pro ochranu hospodářské soutěže
+76: Information about review deadlines: Podmínkou pro podání návrhu k ÚOHS je podání námitek 
+77: k Zadavateli, které je nutné doručit do 15 dnů ode dne, kdy se stěžovatel dozvěděl o 
+78: domnělém porušení zákona Zadavatelem, nejpozději však do uzavření smlouvy nebo do 
+
+### ted_439224_pdf.pdf.txt line 97
+95: 
+96: ===== PAGE 3 =====
+97: 439224-2026 Page 3/7
+98: 10 dnů ode dne, v němž stěžovatel obdržel rozhodnutí, kterým Zadavatel námitky odmítnul 
+99: nebo do 25 dnů od odeslání námitek, pokud Zadavatel o námitkách nerozhodl. Po uzavření 
+
+### ted_439224_pdf.pdf.txt line 129
+127: hospodářské soutěže
+128: 6. Results
+129: Value of all contracts awarded in this notice: 427 756 486,26 CZK
+130: 6.1.  Result lot identifier: LOT-0001
+131: 6.1.2.  Information about winners
+
+### ted_439224_pdf.pdf.txt line 139
+137: Tender identifier: HOMOLA a.s.
+138: Identifier of lot or group of lots: LOT-0001
+139: Value of the tender: 427 756 486,26 CZK
+140: The tender was ranked: no
+141: Rank of the tender: 1
+
+### ted_439224_pdf.pdf.txt line 146
+144: 
+145: ===== PAGE 4 =====
+146: 439224-2026 Page 4/7
+147: Identifier of the contract: 4570081576
+148: Date on which the winner was chosen: 26/08/2025
+
+### ted_439224_pdf.pdf.txt line 153
+151: Summary of the review requests the buyer received: 
+152: Number of complainants: 2
+153: 7. Modification
+154: 7.1.  Modification
+155: Identifier of the previous contract award notice: 615457-2025
+
+### ted_439224_pdf.pdf.txt line 154
+152: Number of complainants: 2
+153: 7. Modification
+154: 7.1.  Modification
+155: Identifier of the previous contract award notice: 615457-2025
+156: Identifier of the modified contract: 4570081576
+
+### ted_439224_pdf.pdf.txt line 157
+155: Identifier of the previous contract award notice: 615457-2025
+156: Identifier of the modified contract: 4570081576
+157: Reason for modification: Need for modifications because of circumstances which a diligent 
+158: buyer could not predict.
+159: Description: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v 
+
+### ted_439224_pdf.pdf.txt line 160
+158: buyer could not predict.
+159: Description: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v 
+160: instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze 
+161: kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového 
+162: vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na 
+
+### ted_439224_pdf.pdf.txt line 161
+159: Description: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v 
+160: instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze 
+161: kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového 
+162: vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na 
+163: základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové 
+
+### ted_439224_pdf.pdf.txt line 163
+161: kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového 
+162: vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na 
+163: základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové 
+164: vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto 
+165: reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k 
+
+### ted_439224_pdf.pdf.txt line 170
+168: kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala 
+169: specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí 
+170: zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové 
+171: vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před 
+172: skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení 
+
+### ted_439224_pdf.pdf.txt line 176
+174: součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že 
+175: skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel 
+176: následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně 
+177: nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného 
+178: nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by 
+
+### ted_439224_pdf.pdf.txt line 183
+181: od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle 
+182: vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu 
+183: znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při 
+184: převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané 
+185: PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad 
+
+### ted_439224_pdf.pdf.txt line 186
+184: převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané 
+185: PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad 
+186: mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy 
+187: konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl 
+188: potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani 
+
+### ted_439224_pdf.pdf.txt line 187
+185: PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad 
+186: mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy 
+187: konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl 
+188: potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani 
+189: v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení 
+
+### ted_439224_pdf.pdf.txt line 188
+186: mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy 
+187: konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl 
+188: potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani 
+189: v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení 
+190: (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění 
+
+### ted_439224_pdf.pdf.txt line 193
+191: celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení 
+192: lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, 
+193: že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 
+194: 
+195: ===== PAGE 5 =====
+
+### ted_439224_pdf.pdf.txt line 196
+194: 
+195: ===== PAGE 5 =====
+196: 439224-2026 Page 5/7
+197: 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, 
+198: odst. 6 ZZVZ.
+
+### ted_439224_pdf.pdf.txt line 197
+195: ===== PAGE 5 =====
+196: 439224-2026 Page 5/7
+197: 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, 
+198: odst. 6 ZZVZ.
+199: 7.1.1.  Change
+
+### ted_439224_pdf.pdf.txt line 200
+198: odst. 6 ZZVZ.
+199: 7.1.1.  Change
+200: Description of modifications: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 
+201: spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací 
+202: protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního 
+
+### ted_439224_pdf.pdf.txt line 201
+199: 7.1.1.  Change
+200: Description of modifications: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 
+201: spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací 
+202: protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního 
+203: kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS
+
+### ted_439224_pdf.pdf.txt line 202
+200: Description of modifications: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 
+201: spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací 
+202: protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního 
+203: kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS
+204: “) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové 
+
+### ted_439224_pdf.pdf.txt line 204
+202: protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního 
+203: kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS
+204: “) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové 
+205: vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto 
+206: reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k 
+
+### ted_439224_pdf.pdf.txt line 211
+209: kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala 
+210: specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí 
+211: zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové 
+212: vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před 
+213: skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení 
+
+### ted_439224_pdf.pdf.txt line 217
+215: součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že 
+216: skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel 
+217: následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně 
+218: nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného 
+219: nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by 
+
+### ted_439224_pdf.pdf.txt line 224
+222: od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle 
+223: vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu 
+224: znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při 
+225: převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané 
+226: PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad 
+
+### ted_439224_pdf.pdf.txt line 227
+225: převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané 
+226: PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad 
+227: mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy 
+228: konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl 
+229: potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani 
+
+### ted_439224_pdf.pdf.txt line 228
+226: PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad 
+227: mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy 
+228: konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl 
+229: potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani 
+230: v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení 
+
+### ted_439224_pdf.pdf.txt line 229
+227: mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV. Lze tedy 
+228: konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl 
+229: potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani 
+230: v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení 
+231: (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. Uzavřený dodatek nemění 
+
+### ted_439224_pdf.pdf.txt line 234
+232: celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení 
+233: lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, 
+234: že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 
+235: 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, 
+236: odst. 6 ZZVZ.
+
+### ted_439224_pdf.pdf.txt line 235
+233: lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, 
+234: že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 
+235: 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, 
+236: odst. 6 ZZVZ.
+237: 8. Organisations
+
+### ted_439224_pdf.pdf.txt line 246
+244: 
+245: ===== PAGE 6 =====
+246: 439224-2026 Page 6/7
+247: Country subdivision (NUTS): Hlavní město Praha (CZ010)
+248: Country: Czechia
+
+### ted_439224_pdf.pdf.txt line 297
+295: 
+296: ===== PAGE 7 =====
+297: 439224-2026 Page 7/7
+298: 8.1.  ORG-0005
+299: Official name: GASCONTROL, společnost s r.o.
+
+### ted_439224_pdf.pdf.txt line 327
+325: Notice information
+326: Notice identifier/version: 64d11ab6-6031-4b2b-b7a0-6abbee7f6c68  -  01
+327: Form type: Contract modification
+328: Notice type: Contract modification notice
+329: Notice subtype: 39
+
+### ted_439224_pdf.pdf.txt line 328
+326: Notice identifier/version: 64d11ab6-6031-4b2b-b7a0-6abbee7f6c68  -  01
+327: Form type: Contract modification
+328: Notice type: Contract modification notice
+329: Notice subtype: 39
+330: Notice dispatch date: 25/06/2026 13:04:37 (UTC+02:00) Eastern European Time, Central 
+
+### ted_439224_pdf.pdf.txt line 333
+331: European Summer Time
+332: Languages in which this notice is officially available: Czech
+333: Notice publication number: 439224-2026
+334: OJ S issue number: 121/2026
+335: Publication date: 26/06/2026
+
+### ted_439224_xml.xml.text.txt line 22
+20: 
+21: 							
+22: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. 
+23: Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV.  Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. 
+24:  
+
+### ted_439224_xml.xml.text.txt line 23
+21: 							
+22: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. 
+23: Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV.  Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. 
+24:  
+25: Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+
+### ted_439224_xml.xml.text.txt line 25
+23: Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV.  Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. 
+24:  
+25: Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+26: 
+27: 						
+
+### ted_439224_xml.xml.text.txt line 35
+33: 
+34: 							
+35: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. 
+36: Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV.  Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. 
+37:  
+
+### ted_439224_xml.xml.text.txt line 36
+34: 							
+35: Zhotovitel v průběhu prací na Díle, konkrétně realizaci milníku M6 spočívající v instalaci a montáži trafostanice a čerpadel obdržel dne 15. 5. 2026 vytyčovací protokol sítí, ze kterého je zjevná kolize (nesoulad) vytyčené sítě, tj. konkrétně podzemního kabelového vedení VN 6kV, s projektovou dokumentací pro provedení stavby (dále jen „PDPS“) na základě které měl Zhotovitel instalovat trafostanici. Jedná se o to, že podzemní kabelové vedení se reálně nachází o 1,5 metru mimo oproti zakreslené síti v generelu závodu a tímto reálným posunem (tj. nesouladu faktického stavu se stavem uvedeným v podkladu) došlo k tomu, že zákonné ochranné pásmo uvedeného kabelu nově přímo zasahuje do plánovaného umístění trafostanice. Zadavatel musí tuto kolizi řešit, neboť dokud nedojde k dořešení této kolize, nemůže dojít k instalaci trafostanice. V PDPS, kterou pro Objednatele vypracovala specializovaná projekční společnost (dále jen „Zpracovatel PDPS“), a která byla součástí zadávací dokumentace a Zhotovitel z ní vychází při provádění Díla, je podzemní kabelové vedení VN 6kV zakresleno mimo rozsah plánované instalace a montáže trafostanice. Před skutečným zahájením prací v souvislosti s umístěním trafostanice je nutné provést vytyčení sítí, neboť je nutné znát přesné vedení sítí i velikost jejich ochranného pásma. Zhotovitel v součinnosti s Objednatelem tedy před zahájením prací zajistili vytyčení sítě a bylo zjištěno, že skutečné vedení sítě je umístěno v zájmové oblasti pro umístění trafostanice. Zhotovitel následně realizoval sondy, kterými ověřil, že podzemní kabelové vedení VN 6kV se skutečně nachází mimo pozici, kterou uváděl generel závodu. Zhotovitel na základě výše uvedeného nemůže, do doby provedení přeložky VN kabelu, realizovat plnění milníku M6, protože by došlo k porušení Zákona č. 458/2000 Sb., §45, odst. 8, písm. d.), dle kterých není možné provádět stavby v ochranném pásmu vedení VN kabelu. 
+36: Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV.  Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. 
+37:  
+38: Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+
+### ted_439224_xml.xml.text.txt line 38
+36: Objednatel si nechal zpracovat PDPS od specializované projekční společnosti. Zpracovatel PDPS dokumentaci zpracoval dle vyhlášky č. 499/2006 Sb., jedním z podkladů pro tvorbu PDPS byl také generel závodu znázorňující umístění podzemního kabelového vedení VN 6kV. Objednatel potvrdil, že při převzetí z jeho strany proběhla kontrola a Objednatel neshledal žádné zjevné vady v předané PDPS. Kabel je umístěn pod zemí, čili Objednatel nemohl s přiměřenou péčí odhalit nesoulad mezi PDPS a skutečným stavem vedení podzemního kabelového vedení VN 6kV.  Lze tedy konstatovat, že Objednatel jednal s řádnou péčí v souladu s § 222 odst. 6 ZZVZ a nemohl potřebu změny smlouvy, v důsledku potřeby provedení přeložky VN kabelu předvídat, a to ani v době přípravy zadávací dokumentace k veřejné zakázce a ani v průběhu zadávacího řízení (tj. od zahájení zadávacího řízení do okamžiku uzavření Smlouvy. 
+37:  
+38: Uzavřený dodatek nemění celkovou povahu VZ, jelikož plnění Zhotovitele zůstává stejné. Dochází pouze k prodloužení lhůty pro splnění dílčího plnění Zhotovitele, tak aby toto prodloužení reflektovalo tu skutečnost, že před umístěním trafostanice musí proběhnout přeložka podzemního kabelového vedení VN 6 kV. Zadavatel uvádí, že navrhované změny Smlouvy podřazuje pod postup ve smyslu § 222, odst. 6 ZZVZ.
+39:  
+40: 
+
+### ted_439224_xml.xml.text.txt line 599
+597: 				
+598: 
+599: 00439224-2026
+600: 
+601: 121/2026
+
+### ted_search_0.pretty.json line 4
+2:   "notices": [
+3:     {
+4:       "publication-number": "439224-2026",
+5:       "links": {
+6:         "xml": {
+
+### ted_search_0.pretty.json line 7
+5:       "links": {
+6:         "xml": {
+7:           "MUL": "https://ted.europa.eu/en/notice/439224-2026/xml"
+8:         },
+9:         "pdf": {
+
+### ted_search_0.pretty.json line 10
+8:         },
+9:         "pdf": {
+10:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/pdf",
+11:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+12:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 11
+9:         "pdf": {
+10:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/pdf",
+11:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+12:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+13:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 12
+10:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/pdf",
+11:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+12:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+13:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+14:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 13
+11:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+12:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+13:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+14:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+15:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 14
+12:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+13:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+14:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+15:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+16:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 15
+13:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+14:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+15:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+16:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+17:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 16
+14:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+15:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+16:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+17:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+18:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 17
+15:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+16:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+17:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+18:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+19:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 18
+16:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+17:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+18:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+19:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+20:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 19
+17:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+18:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+19:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+20:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+21:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 20
+18:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+19:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+20:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+21:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+22:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 21
+19:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+20:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+21:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+22:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+23:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 22
+20:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+21:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+22:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+23:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+24:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 23
+21:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+22:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+23:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+24:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+25:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 24
+22:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+23:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+24:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+25:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+26:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 25
+23:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+24:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+25:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+26:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+27:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 26
+24:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+25:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+26:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+27:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+28:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 27
+25:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+26:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+27:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+28:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+29:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 28
+26:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+27:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+28:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+29:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+30:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 29
+27:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+28:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+29:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+30:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+31:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 30
+28:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+29:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+30:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+31:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+32:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+
+### ted_search_0.pretty.json line 31
+29:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+30:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+31:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+32:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+33:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/pdf"
+
+### ted_search_0.pretty.json line 32
+30:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+31:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+32:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+33:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/pdf"
+34:         },
+
+### ted_search_0.pretty.json line 33
+31:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+32:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+33:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/pdf"
+34:         },
+35:         "pdfs": {
+
+### ted_search_0.pretty.json line 36
+34:         },
+35:         "pdfs": {
+36:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdfs"
+37:         },
+38:         "html": {
+
+### ted_search_0.pretty.json line 39
+37:         },
+38:         "html": {
+39:           "BUL": "https://ted.europa.eu/bg/notice/-/detail/439224-2026",
+40:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+41:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 40
+38:         "html": {
+39:           "BUL": "https://ted.europa.eu/bg/notice/-/detail/439224-2026",
+40:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+41:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+42:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 41
+39:           "BUL": "https://ted.europa.eu/bg/notice/-/detail/439224-2026",
+40:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+41:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+42:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+43:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 42
+40:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+41:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+42:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+43:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+44:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 43
+41:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+42:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+43:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+44:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+45:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 44
+42:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+43:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+44:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+45:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+46:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 45
+43:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+44:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+45:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+46:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+47:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 46
+44:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+45:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+46:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+47:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+48:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 47
+45:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+46:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+47:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+48:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+49:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 48
+46:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+47:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+48:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+49:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+50:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 49
+47:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+48:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+49:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+50:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+51:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 50
+48:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+49:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+50:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+51:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+52:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 51
+49:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+50:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+51:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+52:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+53:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 52
+50:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+51:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+52:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+53:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+54:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 53
+51:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+52:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+53:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+54:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+55:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 54
+52:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+53:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+54:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+55:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+56:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 55
+53:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+54:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+55:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+56:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+57:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 56
+54:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+55:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+56:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+57:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+58:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 57
+55:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+56:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+57:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+58:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+59:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 58
+56:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+57:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+58:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+59:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+60:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 59
+57:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+58:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+59:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+60:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+61:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+
+### ted_search_0.pretty.json line 60
+58:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+59:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+60:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+61:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+62:           "SWE": "https://ted.europa.eu/sv/notice/-/detail/439224-2026"
+
+### ted_search_0.pretty.json line 61
+59:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+60:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+61:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+62:           "SWE": "https://ted.europa.eu/sv/notice/-/detail/439224-2026"
+63:         },
+
+### ted_search_0.pretty.json line 62
+60:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+61:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+62:           "SWE": "https://ted.europa.eu/sv/notice/-/detail/439224-2026"
+63:         },
+64:         "htmlDirect": {
+
+### ted_search_0.pretty.json line 65
+63:         },
+64:         "htmlDirect": {
+65:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/html",
+66:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+67:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 66
+64:         "htmlDirect": {
+65:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/html",
+66:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+67:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+68:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 67
+65:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/html",
+66:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+67:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+68:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+69:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 68
+66:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+67:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+68:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+69:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+70:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 69
+67:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+68:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+69:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+70:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+71:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 70
+68:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+69:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+70:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+71:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+72:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 71
+69:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+70:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+71:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+72:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+73:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 72
+70:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+71:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+72:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+73:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+74:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 73
+71:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+72:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+73:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+74:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+75:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 74
+72:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+73:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+74:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+75:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+76:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 75
+73:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+74:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+75:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+76:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+77:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 76
+74:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+75:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+76:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+77:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+78:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 77
+75:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+76:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+77:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+78:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+79:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 78
+76:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+77:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+78:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+79:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+80:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 79
+77:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+78:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+79:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+80:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+81:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 80
+78:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+79:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+80:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+81:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+82:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 81
+79:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+80:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+81:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+82:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+83:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 82
+80:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+81:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+82:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+83:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+84:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 83
+81:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+82:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+83:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+84:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+85:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 84
+82:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+83:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+84:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+85:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+86:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 85
+83:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+84:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+85:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+86:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+87:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+
+### ted_search_0.pretty.json line 86
+84:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+85:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+86:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+87:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+88:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/html"
+
+### ted_search_0.pretty.json line 87
+85:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+86:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+87:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+88:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/html"
+89:         }
+
+### ted_search_0.pretty.json line 88
+86:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+87:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+88:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/html"
+89:         }
+90:       }
+
+### ted_search_1.pretty.json line 4
+2:   "notices": [
+3:     {
+4:       "publication-number": "439224-2026",
+5:       "publication-date": "2026-06-26+02:00",
+6:       "procedure-identifier": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+
+### ted_search_1.pretty.json line 9
+7:       "links": {
+8:         "xml": {
+9:           "MUL": "https://ted.europa.eu/en/notice/439224-2026/xml"
+10:         },
+11:         "pdf": {
+
+### ted_search_1.pretty.json line 12
+10:         },
+11:         "pdf": {
+12:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/pdf",
+13:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+14:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 13
+11:         "pdf": {
+12:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/pdf",
+13:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+14:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+15:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 14
+12:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/pdf",
+13:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+14:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+15:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+16:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 15
+13:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/pdf",
+14:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+15:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+16:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+17:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 16
+14:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdf",
+15:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+16:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+17:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+18:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 17
+15:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/pdf",
+16:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+17:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+18:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+19:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 18
+16:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/pdf",
+17:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+18:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+19:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+20:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 19
+17:           "EST": "https://ted.europa.eu/et/notice/439224-2026/pdf",
+18:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+19:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+20:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+21:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 20
+18:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/pdf",
+19:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+20:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+21:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+22:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 21
+19:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/pdf",
+20:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+21:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+22:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+23:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 22
+20:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/pdf",
+21:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+22:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+23:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+24:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 23
+21:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/pdf",
+22:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+23:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+24:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+25:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 24
+22:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/pdf",
+23:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+24:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+25:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+26:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 25
+23:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/pdf",
+24:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+25:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+26:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+27:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 26
+24:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/pdf",
+25:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+26:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+27:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+28:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 27
+25:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/pdf",
+26:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+27:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+28:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+29:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 28
+26:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/pdf",
+27:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+28:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+29:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+30:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 29
+27:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/pdf",
+28:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+29:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+30:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+31:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 30
+28:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/pdf",
+29:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+30:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+31:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+32:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 31
+29:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/pdf",
+30:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+31:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+32:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+33:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 32
+30:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/pdf",
+31:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+32:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+33:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+34:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+
+### ted_search_1.pretty.json line 33
+31:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/pdf",
+32:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+33:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+34:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+35:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/pdf"
+
+### ted_search_1.pretty.json line 34
+32:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/pdf",
+33:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+34:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+35:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/pdf"
+36:         },
+
+### ted_search_1.pretty.json line 35
+33:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/pdf",
+34:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/pdf",
+35:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/pdf"
+36:         },
+37:         "pdfs": {
+
+### ted_search_1.pretty.json line 38
+36:         },
+37:         "pdfs": {
+38:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/pdfs"
+39:         },
+40:         "html": {
+
+### ted_search_1.pretty.json line 41
+39:         },
+40:         "html": {
+41:           "BUL": "https://ted.europa.eu/bg/notice/-/detail/439224-2026",
+42:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+43:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 42
+40:         "html": {
+41:           "BUL": "https://ted.europa.eu/bg/notice/-/detail/439224-2026",
+42:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+43:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+44:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 43
+41:           "BUL": "https://ted.europa.eu/bg/notice/-/detail/439224-2026",
+42:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+43:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+44:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+45:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 44
+42:           "SPA": "https://ted.europa.eu/es/notice/-/detail/439224-2026",
+43:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+44:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+45:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+46:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 45
+43:           "CES": "https://ted.europa.eu/cs/notice/-/detail/439224-2026",
+44:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+45:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+46:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+47:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 46
+44:           "DAN": "https://ted.europa.eu/da/notice/-/detail/439224-2026",
+45:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+46:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+47:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+48:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 47
+45:           "DEU": "https://ted.europa.eu/de/notice/-/detail/439224-2026",
+46:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+47:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+48:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+49:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 48
+46:           "EST": "https://ted.europa.eu/et/notice/-/detail/439224-2026",
+47:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+48:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+49:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+50:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 49
+47:           "ELL": "https://ted.europa.eu/el/notice/-/detail/439224-2026",
+48:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+49:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+50:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+51:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 50
+48:           "ENG": "https://ted.europa.eu/en/notice/-/detail/439224-2026",
+49:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+50:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+51:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+52:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 51
+49:           "FRA": "https://ted.europa.eu/fr/notice/-/detail/439224-2026",
+50:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+51:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+52:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+53:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 52
+50:           "GLE": "https://ted.europa.eu/ga/notice/-/detail/439224-2026",
+51:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+52:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+53:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+54:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 53
+51:           "HRV": "https://ted.europa.eu/hr/notice/-/detail/439224-2026",
+52:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+53:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+54:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+55:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 54
+52:           "ITA": "https://ted.europa.eu/it/notice/-/detail/439224-2026",
+53:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+54:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+55:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+56:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 55
+53:           "LAV": "https://ted.europa.eu/lv/notice/-/detail/439224-2026",
+54:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+55:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+56:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+57:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 56
+54:           "LIT": "https://ted.europa.eu/lt/notice/-/detail/439224-2026",
+55:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+56:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+57:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+58:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 57
+55:           "HUN": "https://ted.europa.eu/hu/notice/-/detail/439224-2026",
+56:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+57:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+58:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+59:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 58
+56:           "MLT": "https://ted.europa.eu/mt/notice/-/detail/439224-2026",
+57:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+58:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+59:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+60:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 59
+57:           "NLD": "https://ted.europa.eu/nl/notice/-/detail/439224-2026",
+58:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+59:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+60:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+61:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 60
+58:           "POL": "https://ted.europa.eu/pl/notice/-/detail/439224-2026",
+59:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+60:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+61:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+62:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 61
+59:           "POR": "https://ted.europa.eu/pt/notice/-/detail/439224-2026",
+60:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+61:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+62:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+63:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+
+### ted_search_1.pretty.json line 62
+60:           "RON": "https://ted.europa.eu/ro/notice/-/detail/439224-2026",
+61:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+62:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+63:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+64:           "SWE": "https://ted.europa.eu/sv/notice/-/detail/439224-2026"
+
+### ted_search_1.pretty.json line 63
+61:           "SLK": "https://ted.europa.eu/sk/notice/-/detail/439224-2026",
+62:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+63:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+64:           "SWE": "https://ted.europa.eu/sv/notice/-/detail/439224-2026"
+65:         },
+
+### ted_search_1.pretty.json line 64
+62:           "SLV": "https://ted.europa.eu/sl/notice/-/detail/439224-2026",
+63:           "FIN": "https://ted.europa.eu/fi/notice/-/detail/439224-2026",
+64:           "SWE": "https://ted.europa.eu/sv/notice/-/detail/439224-2026"
+65:         },
+66:         "htmlDirect": {
+
+### ted_search_1.pretty.json line 67
+65:         },
+66:         "htmlDirect": {
+67:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/html",
+68:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+69:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 68
+66:         "htmlDirect": {
+67:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/html",
+68:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+69:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+70:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 69
+67:           "BUL": "https://ted.europa.eu/bg/notice/439224-2026/html",
+68:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+69:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+70:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+71:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 70
+68:           "SPA": "https://ted.europa.eu/es/notice/439224-2026/html",
+69:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+70:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+71:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+72:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 71
+69:           "CES": "https://ted.europa.eu/cs/notice/439224-2026/html",
+70:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+71:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+72:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+73:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 72
+70:           "DAN": "https://ted.europa.eu/da/notice/439224-2026/html",
+71:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+72:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+73:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+74:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 73
+71:           "DEU": "https://ted.europa.eu/de/notice/439224-2026/html",
+72:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+73:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+74:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+75:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 74
+72:           "EST": "https://ted.europa.eu/et/notice/439224-2026/html",
+73:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+74:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+75:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+76:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 75
+73:           "ELL": "https://ted.europa.eu/el/notice/439224-2026/html",
+74:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+75:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+76:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+77:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 76
+74:           "ENG": "https://ted.europa.eu/en/notice/439224-2026/html",
+75:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+76:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+77:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+78:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 77
+75:           "FRA": "https://ted.europa.eu/fr/notice/439224-2026/html",
+76:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+77:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+78:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+79:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 78
+76:           "GLE": "https://ted.europa.eu/ga/notice/439224-2026/html",
+77:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+78:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+79:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+80:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 79
+77:           "HRV": "https://ted.europa.eu/hr/notice/439224-2026/html",
+78:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+79:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+80:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+81:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 80
+78:           "ITA": "https://ted.europa.eu/it/notice/439224-2026/html",
+79:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+80:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+81:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+82:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 81
+79:           "LAV": "https://ted.europa.eu/lv/notice/439224-2026/html",
+80:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+81:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+82:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+83:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 82
+80:           "LIT": "https://ted.europa.eu/lt/notice/439224-2026/html",
+81:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+82:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+83:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+84:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 83
+81:           "HUN": "https://ted.europa.eu/hu/notice/439224-2026/html",
+82:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+83:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+84:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+85:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 84
+82:           "MLT": "https://ted.europa.eu/mt/notice/439224-2026/html",
+83:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+84:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+85:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+86:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 85
+83:           "NLD": "https://ted.europa.eu/nl/notice/439224-2026/html",
+84:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+85:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+86:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+87:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 86
+84:           "POL": "https://ted.europa.eu/pl/notice/439224-2026/html",
+85:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+86:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+87:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+88:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 87
+85:           "POR": "https://ted.europa.eu/pt/notice/439224-2026/html",
+86:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+87:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+88:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+89:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+
+### ted_search_1.pretty.json line 88
+86:           "RON": "https://ted.europa.eu/ro/notice/439224-2026/html",
+87:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+88:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+89:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+90:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/html"
+
+### ted_search_1.pretty.json line 89
+87:           "SLK": "https://ted.europa.eu/sk/notice/439224-2026/html",
+88:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+89:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+90:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/html"
+91:         }
+
+### ted_search_1.pretty.json line 90
+88:           "SLV": "https://ted.europa.eu/sl/notice/439224-2026/html",
+89:           "FIN": "https://ted.europa.eu/fi/notice/439224-2026/html",
+90:           "SWE": "https://ted.europa.eu/sv/notice/439224-2026/html"
+91:         }
+92:       },
