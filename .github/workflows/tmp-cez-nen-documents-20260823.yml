@@ -1,0 +1,30 @@
+name: Temporary CEZ NEN document inventory
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  inventory:
+    if: startsWith(github.event.issue.title, '[CEZ-NEN-DOCS]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - run: python3 -m pip install --quiet requests beautifulsoup4
+      - run: python3 scripts/tmp_cez_nen_documents_20260823.py
+      - name: Commit inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp_cez_nen_documents_20260823
+          git commit -m "Store temporary CEZ NEN document inventory" || exit 0
+          git push origin HEAD:main
