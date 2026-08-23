@@ -17,14 +17,24 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - run: python3 -m pip install --quiet requests beautifulsoup4
-      - run: python3 scripts/tmp_cez_nen_documents_20260823.py
-      - name: Commit inventory
+      - name: Install dependencies
+        run: python3 -m pip install --quiet requests beautifulsoup4
+      - name: Run inventory and retain diagnostics
+        shell: bash
+        run: |
+          set +e
+          mkdir -p tmp_cez_nen_documents_20260823
+          python3 scripts/tmp_cez_nen_documents_20260823.py > tmp_cez_nen_documents_20260823/RUN.log 2>&1
+          code=$?
+          echo "$code" > tmp_cez_nen_documents_20260823/EXIT_CODE.txt
+          cat tmp_cez_nen_documents_20260823/RUN.log
+          exit 0
+      - name: Commit inventory or failure diagnostics
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add tmp_cez_nen_documents_20260823
-          git commit -m "Store temporary CEZ NEN document inventory" || exit 0
+          git commit -m "Store temporary CEZ NEN document inventory diagnostics" || exit 0
           git push origin HEAD:main
