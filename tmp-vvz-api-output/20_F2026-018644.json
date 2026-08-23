@@ -1,0 +1,4 @@
+{
+  "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=50&form=vz&workflowPlace=UVEREJNENO_VVZ&data.evCisloFormulareVvz=F2026-018644&order%5BcreatedAt%5D=DESC",
+  "error": "<HTTPError 400: 'Bad Request'>"
+}
