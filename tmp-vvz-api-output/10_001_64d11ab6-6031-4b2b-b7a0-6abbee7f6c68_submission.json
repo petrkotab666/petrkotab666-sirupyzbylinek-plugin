@@ -1,0 +1,81 @@
+{
+  "url": "https://api.vvz.nipez.cz/api/submissions/64d11ab6-6031-4b2b-b7a0-6abbee7f6c68",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "body": {
+    "id": "64d11ab6-6031-4b2b-b7a0-6abbee7f6c68",
+    "submissionVersion": "/api/submission_versions/604ec296-7c1b-430d-b790-1b167c9c8bb3",
+    "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+    "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+    "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+    "data": {
+      "verzeSdk": "1.13.2",
+      "dodavatele": [
+        {
+          "ico": "26792770",
+          "nazev": "HOMOLA a.s."
+        },
+        {
+          "ico": "46708111",
+          "nazev": "ELTE Holding a.s."
+        },
+        {
+          "ico": "46578021",
+          "nazev": "GASCONTROL, společnost s r.o."
+        }
+      ],
+      "evCisloTed": "439224-2026",
+      "zadavatele": [
+        {
+          "ico": "27309941",
+          "nazev": "ČEZ Teplárenská, a.s."
+        }
+      ],
+      "zdrojPodani": {
+        "id": "WEB-hfeqoq",
+        "typ": "WEB",
+        "uzivatelVvzLogin": "hfeqoq"
+      },
+      "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+      "uverejnitTed": true,
+      "uverejnitVvz": true,
+      "druhFormulare": "39",
+      "zakazkaZrusena": false,
+      "datumPrijetiVvz": "2026-06-25T13:04:38+02:00",
+      "datumOdeslaniTed": "2026-06-25T13:04:41+02:00",
+      "formularOpravuje": false,
+      "evCisloZakazkyVvz": "Z2024-029445",
+      "datumUverejneniTed": "2026-06-26T05:00:24+02:00",
+      "datumUverejneniVvz": "2026-06-26T08:00:55+02:00",
+      "formularZneplatnen": false,
+      "lhutaUverejneniTed": "2026-06-29T02:00:00+02:00",
+      "lhutaUverejneniVvz": "2026-06-26T23:59:00+02:00",
+      "uzivatelskyNazevFormulare": "Kopie: 39 Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka",
+      "evCisloVvzSouvisejicihoFormulare": "F2025-051795"
+    },
+    "dataHash": "5af0775464608e870aa4be056b326bd50336bb0fe29fdfc66801efe5658fe235",
+    "workflowPlaceCode": "UVEREJNENO_VVZ",
+    "variableId": "F2026-033864",
+    "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+    "publicId": "DW5OsL1GYCqKeDbytxVK5VR2J7QeIa66",
+    "copyFromSubmissionVersion": "/api/submission_versions/daaed391-3ebf-4714-8837-23102adeffda",
+    "version": 9,
+    "validityPeriod": "2026-06-19T10:08:38+02:00/",
+    "owner": {
+      "name": "Husáková Anna",
+      "email": "anna.husakova01@cez.cz",
+      "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+    },
+    "createdBy": {
+      "name": "Husáková Anna",
+      "email": "anna.husakova01@cez.cz",
+      "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+    },
+    "updatedBy": {
+      "name": "vvz-uloziste-formularu-bridge",
+      "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+    },
+    "createdAt": "2026-06-19T10:08:38+02:00",
+    "updatedAt": "2026-06-26T08:00:55+02:00"
+  }
+}

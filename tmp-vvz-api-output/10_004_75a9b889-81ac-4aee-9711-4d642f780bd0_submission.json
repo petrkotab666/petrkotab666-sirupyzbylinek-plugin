@@ -1,0 +1,67 @@
+{
+  "url": "https://api.vvz.nipez.cz/api/submissions/75a9b889-81ac-4aee-9711-4d642f780bd0",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "body": {
+    "id": "75a9b889-81ac-4aee-9711-4d642f780bd0",
+    "submissionVersion": "/api/submission_versions/e2b53fdf-7191-4e3c-9c76-56b201badaed",
+    "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+    "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+    "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+    "data": {
+      "verzeSdk": "1.8.2",
+      "evCisloTed": "524314-2024",
+      "zadavatele": [
+        {
+          "ico": "27309941",
+          "nazev": "ČEZ Teplárenská, a.s."
+        }
+      ],
+      "zdrojPodani": {
+        "id": "WEB-hfeqoq",
+        "typ": "WEB",
+        "uzivatelVvzLogin": "hfeqoq"
+      },
+      "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+      "uverejnitTed": true,
+      "uverejnitVvz": true,
+      "druhFormulare": "17",
+      "zakazkaZrusena": false,
+      "datumPrijetiVvz": "2024-08-30T12:34:14+02:00",
+      "datumOdeslaniTed": "2024-08-30T12:34:17+02:00",
+      "formularOpravuje": true,
+      "evCisloZakazkyVvz": "Z2024-029445",
+      "datumUverejneniTed": "2024-09-02T00:00:00+02:00",
+      "datumUverejneniVvz": "2024-09-02T02:10:24+02:00",
+      "formularZneplatnen": false,
+      "lhutaUverejneniTed": "2024-09-02T02:00:00+02:00",
+      "lhutaUverejneniVvz": "2024-09-04T23:59:00+02:00",
+      "lhutaNabidkyZadosti": "2024-10-07T10:00:00+02:00",
+      "uzivatelskyNazevFormulare": "17 Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka",
+      "evCisloVvzSouvisejicihoFormulare": "F2024-041188"
+    },
+    "dataHash": "61a5c5a5bef5299a94a16a4655617fd5d4c6a54d3d646ae1baf24f5318271006",
+    "workflowPlaceCode": "UVEREJNENO_VVZ",
+    "variableId": "F2024-042303",
+    "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+    "publicId": "bRWCgPKU4bZIyEKvOmBnUJmQuvgpPICv",
+    "version": 7,
+    "validityPeriod": "2024-08-30T08:00:54+02:00/",
+    "owner": {
+      "name": "Husáková Anna",
+      "email": "anna.husakova01@cez.cz",
+      "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+    },
+    "createdBy": {
+      "name": "Husáková Anna",
+      "email": "anna.husakova01@cez.cz",
+      "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+    },
+    "updatedBy": {
+      "name": "vvz-uloziste-formularu-bridge",
+      "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+    },
+    "createdAt": "2024-08-30T08:00:54+02:00",
+    "updatedAt": "2024-09-02T10:00:37+02:00"
+  }
+}

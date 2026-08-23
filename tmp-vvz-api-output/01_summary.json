@@ -1,1 +1,664 @@
-[]
+[
+  {
+    "index": 0,
+    "id": "d0bf078e-e050-4617-8dbe-6eeab56f8409",
+    "form_hits": [
+      "F2026-040224"
+    ],
+    "item": {
+      "id": "d0bf078e-e050-4617-8dbe-6eeab56f8409",
+      "submissionVersion": "/api/submission_versions/da73fef6-ddfd-4607-89cd-b3d51ec957be",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "26792770",
+            "nazev": "HOMOLA a.s."
+          },
+          {
+            "ico": "46708111",
+            "nazev": "ELTE Holding a.s."
+          },
+          {
+            "ico": "46578021",
+            "nazev": "GASCONTROL, společnost s r.o."
+          }
+        ],
+        "evCisloTed": "519047-2026",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "39",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-07-24T08:22:39+02:00",
+        "datumOdeslaniTed": "2026-07-24T08:22:42+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2026-07-27T05:00:13+02:00",
+        "datumUverejneniVvz": "2026-07-27T02:01:54+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-07-27T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-07-29T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Kopie: 39 Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-051795"
+      },
+      "dataHash": "520a4ae4b2d0b5a338c16ab8eb698e0262aaa7bc662abd37886b1f841f3a57cb",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-040224",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "dLFU5cpRShuXwUk9mR7peyiFKHPB4upU",
+      "copyFromSubmissionVersion": "/api/submission_versions/daaed391-3ebf-4714-8837-23102adeffda",
+      "version": 7,
+      "validityPeriod": "2026-07-15T11:34:26+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-07-15T11:34:26+02:00",
+      "updatedAt": "2026-07-27T05:00:22+02:00"
+    }
+  },
+  {
+    "index": 1,
+    "id": "64d11ab6-6031-4b2b-b7a0-6abbee7f6c68",
+    "form_hits": [
+      "F2026-033864"
+    ],
+    "item": {
+      "id": "64d11ab6-6031-4b2b-b7a0-6abbee7f6c68",
+      "submissionVersion": "/api/submission_versions/604ec296-7c1b-430d-b790-1b167c9c8bb3",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "26792770",
+            "nazev": "HOMOLA a.s."
+          },
+          {
+            "ico": "46708111",
+            "nazev": "ELTE Holding a.s."
+          },
+          {
+            "ico": "46578021",
+            "nazev": "GASCONTROL, společnost s r.o."
+          }
+        ],
+        "evCisloTed": "439224-2026",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "39",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-06-25T13:04:38+02:00",
+        "datumOdeslaniTed": "2026-06-25T13:04:41+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2026-06-26T05:00:24+02:00",
+        "datumUverejneniVvz": "2026-06-26T08:00:55+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-06-29T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-06-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Kopie: 39 Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-051795"
+      },
+      "dataHash": "5af0775464608e870aa4be056b326bd50336bb0fe29fdfc66801efe5658fe235",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-033864",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "DW5OsL1GYCqKeDbytxVK5VR2J7QeIa66",
+      "copyFromSubmissionVersion": "/api/submission_versions/daaed391-3ebf-4714-8837-23102adeffda",
+      "version": 9,
+      "validityPeriod": "2026-06-19T10:08:38+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-06-19T10:08:38+02:00",
+      "updatedAt": "2026-06-26T08:00:55+02:00"
+    }
+  },
+  {
+    "index": 2,
+    "id": "009e1ec7-5cd5-4b4e-869d-1c63f91739d1",
+    "form_hits": [
+      "F2026-018644"
+    ],
+    "item": {
+      "id": "009e1ec7-5cd5-4b4e-869d-1c63f91739d1",
+      "submissionVersion": "/api/submission_versions/daaed391-3ebf-4714-8837-23102adeffda",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "26792770",
+            "nazev": "HOMOLA a.s."
+          },
+          {
+            "ico": "46708111",
+            "nazev": "ELTE Holding a.s."
+          },
+          {
+            "ico": "46578021",
+            "nazev": "GASCONTROL, společnost s r.o."
+          }
+        ],
+        "evCisloTed": "253141-2026",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "39",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-04-13T08:04:41+02:00",
+        "datumOdeslaniTed": "2026-04-13T08:04:44+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2026-04-14T05:00:16+02:00",
+        "datumUverejneniVvz": "2026-04-14T08:00:38+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-04-15T14:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-04-14T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "39 Oznámení o změně závazku ze smlouvy – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-051795"
+      },
+      "dataHash": "2bf2b81f97d3b5c1bf18f86999a52748fdbb28ba7cd069e693ef80ce37dab4ef",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-018644",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "fTb2yYVukVaezOFvS2p1qne72fzgmvbB",
+      "version": 9,
+      "validityPeriod": "2026-03-30T08:09:58+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-03-30T08:09:58+02:00",
+      "updatedAt": "2026-04-14T08:00:38+02:00"
+    }
+  },
+  {
+    "index": 3,
+    "id": "3a8047f8-5f5a-4d0f-ac9e-5695cab0735d",
+    "form_hits": [],
+    "item": {
+      "id": "3a8047f8-5f5a-4d0f-ac9e-5695cab0735d",
+      "submissionVersion": "/api/submission_versions/d77d4506-d566-4688-a56c-c57b415fcdf2",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.13.0",
+        "dodavatele": [
+          {
+            "ico": "26792770",
+            "nazev": "HOMOLA a.s."
+          },
+          {
+            "ico": "46708111",
+            "nazev": "ELTE Holding a.s."
+          },
+          {
+            "ico": "46578021",
+            "nazev": "GASCONTROL, společnost s r.o."
+          }
+        ],
+        "evCisloTed": "615457-2025",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "30",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2025-09-18T14:05:21+02:00",
+        "datumOdeslaniTed": "2025-09-18T14:05:25+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2025-09-19T00:00:00+02:00",
+        "datumUverejneniVvz": "2025-09-19T14:01:22+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2025-09-22T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2025-09-19T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "30 Oznámení o výsledku zadávacího řízení – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-042303"
+      },
+      "dataHash": "54100d6f845c28ea68e5ef9812ca2e2feaf62cc2433701b1477042b78079771a",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2025-051795",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "vKVtEPjCHk5LtyKma1MizOihq11ET1Yn",
+      "version": 9,
+      "validityPeriod": "2025-09-16T13:47:49+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2025-09-16T13:47:49+02:00",
+      "updatedAt": "2025-09-19T14:01:22+02:00"
+    }
+  },
+  {
+    "index": 4,
+    "id": "75a9b889-81ac-4aee-9711-4d642f780bd0",
+    "form_hits": [],
+    "item": {
+      "id": "75a9b889-81ac-4aee-9711-4d642f780bd0",
+      "submissionVersion": "/api/submission_versions/e2b53fdf-7191-4e3c-9c76-56b201badaed",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.8.2",
+        "evCisloTed": "524314-2024",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "17",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2024-08-30T12:34:14+02:00",
+        "datumOdeslaniTed": "2024-08-30T12:34:17+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2024-09-02T00:00:00+02:00",
+        "datumUverejneniVvz": "2024-09-02T02:10:24+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2024-09-02T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2024-09-04T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2024-10-07T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "17 Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-041188"
+      },
+      "dataHash": "61a5c5a5bef5299a94a16a4655617fd5d4c6a54d3d646ae1baf24f5318271006",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2024-042303",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "bRWCgPKU4bZIyEKvOmBnUJmQuvgpPICv",
+      "version": 7,
+      "validityPeriod": "2024-08-30T08:00:54+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2024-08-30T08:00:54+02:00",
+      "updatedAt": "2024-09-02T10:00:37+02:00"
+    }
+  },
+  {
+    "index": 5,
+    "id": "174791a9-99ce-4c0e-8122-fa19517afb0c",
+    "form_hits": [],
+    "item": {
+      "id": "174791a9-99ce-4c0e-8122-fa19517afb0c",
+      "submissionVersion": "/api/submission_versions/1b45cd60-ef12-4ddd-8bc6-445d53bb6c1e",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.8.2",
+        "evCisloTed": "512715-2024",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-dloqai",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "dloqai"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "17",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2024-08-23T17:39:39+02:00",
+        "datumOdeslaniTed": "2024-08-23T17:39:42+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2024-08-27T00:00:00+02:00",
+        "datumUverejneniVvz": "2024-08-26T02:00:44+02:00",
+        "formularZneplatnen": true,
+        "lhutaUverejneniTed": "2024-08-26T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2024-08-28T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2024-09-06T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "17 Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-039387"
+      },
+      "dataHash": "b5a667c287954766d11b5fdd813bb04179b42627a27b50980724a81b6c7d71e9",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2024-041188",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "NxrgSHLeqeWVM2y80nTrZxJIGAv4aDOA",
+      "version": 8,
+      "validityPeriod": "2024-08-23T17:22:09+02:00/",
+      "owner": {
+        "name": "Romana Vašková",
+        "email": "romana.vaskova@cez.cz",
+        "id": "cfa1135e-d286-4ede-b835-98d58fa9908d"
+      },
+      "createdBy": {
+        "name": "Romana Vašková",
+        "email": "romana.vaskova@cez.cz",
+        "id": "cfa1135e-d286-4ede-b835-98d58fa9908d"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2024-08-23T17:22:09+02:00",
+      "updatedAt": "2024-09-02T02:10:25+02:00"
+    }
+  },
+  {
+    "index": 6,
+    "id": "d45f19a9-3ccf-406e-bf01-6359930ac8b5",
+    "form_hits": [],
+    "item": {
+      "id": "d45f19a9-3ccf-406e-bf01-6359930ac8b5",
+      "submissionVersion": "/api/submission_versions/c4546eaf-b32d-4de7-97bf-8a2461e7a56a",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.8.2",
+        "evCisloTed": "492836-2024",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "17",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2024-08-14T08:35:39+02:00",
+        "datumOdeslaniTed": "2024-08-14T08:35:43+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2024-08-16T00:00:00+02:00",
+        "datumUverejneniVvz": "2024-08-16T14:00:04+02:00",
+        "formularZneplatnen": true,
+        "lhutaUverejneniTed": "2024-08-16T14:00:00+02:00",
+        "lhutaUverejneniVvz": "2024-08-16T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2024-08-30T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "17 Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-033816"
+      },
+      "dataHash": "7e576b365eb3ee82b893fb9f63c264e3400e3d753da57e1ec212779009e896fb",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2024-039387",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "kkblnhFuqPYOWmw8i1K59Skg8UILvVCG",
+      "version": 10,
+      "validityPeriod": "2024-08-07T09:39:22+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2024-08-07T09:39:22+02:00",
+      "updatedAt": "2024-08-26T02:00:45+02:00"
+    }
+  },
+  {
+    "index": 7,
+    "id": "40ee36b7-d85d-4de4-ad70-31b6f662143b",
+    "form_hits": [],
+    "item": {
+      "id": "40ee36b7-d85d-4de4-ad70-31b6f662143b",
+      "submissionVersion": "/api/submission_versions/e3433dbd-0fed-4236-9d3f-4f6555e8ba54",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.8.2",
+        "evCisloTed": "436013-2024",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "17",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2024-07-17T19:47:58+02:00",
+        "datumOdeslaniTed": "2024-07-17T19:48:01+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2024-07-19T00:00:00+02:00",
+        "datumUverejneniVvz": "2024-07-19T14:00:27+02:00",
+        "formularZneplatnen": true,
+        "lhutaUverejneniTed": "2024-07-22T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2024-07-19T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2024-08-16T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "17 Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-029445"
+      },
+      "dataHash": "d08ce17e90b96e065a97871e5c04f281f223c648675e333467e0527448c6ab89",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2024-033816",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "cXgPk4Q0Q3XS8yUSPQpGu6sjxwpGYG19",
+      "version": 10,
+      "validityPeriod": "2024-07-16T09:50:29+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2024-07-16T09:50:29+02:00",
+      "updatedAt": "2024-08-16T14:00:07+02:00"
+    }
+  },
+  {
+    "index": 8,
+    "id": "645a6679-0d7c-4aa6-98a9-2b9ee92ded73",
+    "form_hits": [],
+    "item": {
+      "id": "645a6679-0d7c-4aa6-98a9-2b9ee92ded73",
+      "submissionVersion": "/api/submission_versions/5f8530d0-c0bd-4f9c-b97b-eed1fb8fd23c",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e7174a4f-4484-4576-980f-6967c67a5941",
+      "data": {
+        "verzeSdk": "1.8.2",
+        "evCisloTed": "384212-2024",
+        "zadavatele": [
+          {
+            "ico": "27309941",
+            "nazev": "ČEZ Teplárenská, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hfeqoq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hfeqoq"
+        },
+        "nazevZakazky": "CV_HV propoj EPR- Kadaň",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "17",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2024-06-26T20:42:27+02:00",
+        "datumOdeslaniTed": "2024-06-26T20:42:31+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-029445",
+        "datumUverejneniTed": "2024-06-28T00:00:00+02:00",
+        "datumUverejneniVvz": "2024-06-28T14:00:07+02:00",
+        "formularZneplatnen": true,
+        "lhutaUverejneniTed": "2024-07-01T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2024-06-28T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2024-08-06T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "17 Oznámení o zahájení zadávacího řízení – sektorová veřejná zakázka"
+      },
+      "dataHash": "0dd330673b414b5ac04110fa2b00fa4b3ec6b551bae1539ec4dc4836797734b8",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2024-029445",
+      "relatedId": "016c74a6-ac6c-450b-aeb2-577a856bdb6f",
+      "publicId": "EaQlvCFLBorkUnPRLBeao4tuhhcg7gyL",
+      "version": 10,
+      "validityPeriod": "2024-06-24T12:44:00+02:00/",
+      "owner": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "createdBy": {
+        "name": "Husáková Anna",
+        "email": "anna.husakova01@cez.cz",
+        "id": "7c945cd4-5154-4a31-91d9-8122d670d793"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2024-06-24T12:44:00+02:00",
+      "updatedAt": "2024-07-19T14:00:28+02:00"
+    }
+  }
+]

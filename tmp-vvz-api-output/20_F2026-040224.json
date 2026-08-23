@@ -1,4 +1,3160 @@
 {
-  "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=50&form=vz&workflowPlace=UVEREJNENO_VVZ&data.evCisloFormulareVvz=F2026-040224&order%5BcreatedAt%5D=DESC",
-  "error": "<HTTPError 400: 'Bad Request'>"
+  "url": "https://api.vvz.nipez.cz/api/submissions/search?page=1&limit=50&form=vz&formGroup=vz&data.evCisloFormulareVvz=F2026-040224&order%5BcreatedAt%5D=DESC",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "body": [
+    {
+      "id": "e4923c9a-1f1d-4a5d-ba07-7fd064414525",
+      "submissionVersion": "/api/submission_versions/81516b17-c5e6-4625-a790-966a0e77e43d",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/4f1e8362-38cb-45cd-9988-5a6e0893762a",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "46504621",
+            "nazev": "PRVNÍ STAVEBNÍ CHRUDIM a.s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "72048972",
+            "nazev": "Národní hřebčín Kladruby nad Labem"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-yqkcuv",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "yqkcuv"
+        },
+        "nazevZakazky": "Revitalizace historického objektu NKP Hřebčín Kladruby nad Labem – obnova stodoly ocelokolny",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T21:12:28+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-018044",
+        "datumUverejneniVvz": "2026-08-21T21:20:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Kopie: Kopie: 38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-018044"
+      },
+      "dataHash": "a663b7f87ce556571badbdc102d97e8f00c9cfa8e0551ade3210a09ff51b4213",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045937",
+      "relatedId": "34ee7592-3d06-443f-a949-2326a69eca33",
+      "publicId": "7hUL4NsfrQ3OSLheXLlMDVNhiZBACtDD",
+      "copyFromSubmissionVersion": "/api/submission_versions/3666f245-d535-4113-b8ab-92169d561352",
+      "version": 5,
+      "validityPeriod": "2026-08-21T21:08:16+02:00/",
+      "owner": {
+        "name": "IVANA ŠILHANOVÁ",
+        "email": "info@istenders.cz",
+        "id": "09b22da0-a2fe-40b5-8d59-eeff7b9ac27e"
+      },
+      "createdBy": {
+        "name": "IVANA ŠILHANOVÁ",
+        "email": "info@istenders.cz",
+        "id": "09b22da0-a2fe-40b5-8d59-eeff7b9ac27e"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T21:08:16+02:00",
+      "updatedAt": "2026-08-21T21:20:01+02:00"
+    },
+    {
+      "id": "605a49fd-4be0-42ce-b5a3-ca77c9018530",
+      "submissionVersion": "/api/submission_versions/a072b799-87ba-4853-bab0-cf4b13529625",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/165e5a72-2dd5-47e0-a232-4053a4ecb52a",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "25021915",
+            "nazev": "Metrostav CZ s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00260479",
+            "nazev": "Město Dubá"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-rpurho",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "rpurho"
+        },
+        "nazevZakazky": "Modernizace autobusového terminálu Dubá",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T20:54:01+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-041724",
+        "datumUverejneniVvz": "2026-08-21T21:00:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-041724"
+      },
+      "dataHash": "dee24a02c059cc6345a50ac33008031d63a894c697d16e6eaf06eb0552bcf313",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045936",
+      "relatedId": "9bfd050f-7e44-4ed6-8c40-e6014526f7e7",
+      "publicId": "smSwFYawwKNhDuR6l3cr1WLbj808yagf",
+      "version": 5,
+      "validityPeriod": "2026-08-21T20:31:46+02:00/",
+      "owner": {
+        "name": "RADEK VRANÝ",
+        "email": "vrany@eurokomplus.cz",
+        "id": "1150e727-e66c-4c3f-9a53-71b4465a84ba"
+      },
+      "createdBy": {
+        "name": "RADEK VRANÝ",
+        "email": "vrany@eurokomplus.cz",
+        "id": "1150e727-e66c-4c3f-9a53-71b4465a84ba"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T20:31:46+02:00",
+      "updatedAt": "2026-08-21T21:00:02+02:00"
+    },
+    {
+      "id": "f802e496-38e0-4e56-85ba-3c5ae1f5febd",
+      "submissionVersion": "/api/submission_versions/d7e1e2a2-503e-4aaa-9a4e-aac4d84349a2",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/165e5a72-2dd5-47e0-a232-4053a4ecb52a",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "25021915",
+            "nazev": "Metrostav CZ s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00260479",
+            "nazev": "Město Dubá"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-rpurho",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "rpurho"
+        },
+        "nazevZakazky": "Modernizace autobusového terminálu Dubá",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T19:55:57+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-041724",
+        "datumUverejneniVvz": "2026-08-21T20:00:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-041724"
+      },
+      "dataHash": "abd2b411c1665a429da00733625819ca619d5990b308ab1405d42b84962bee36",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045933",
+      "relatedId": "9bfd050f-7e44-4ed6-8c40-e6014526f7e7",
+      "publicId": "vd83OeCkuSYs2f4wo9waDvVkBVLHhXIr",
+      "version": 5,
+      "validityPeriod": "2026-08-21T19:30:35+02:00/",
+      "owner": {
+        "name": "RADEK VRANÝ",
+        "email": "vrany@eurokomplus.cz",
+        "id": "1150e727-e66c-4c3f-9a53-71b4465a84ba"
+      },
+      "createdBy": {
+        "name": "RADEK VRANÝ",
+        "email": "vrany@eurokomplus.cz",
+        "id": "1150e727-e66c-4c3f-9a53-71b4465a84ba"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T19:30:35+02:00",
+      "updatedAt": "2026-08-21T20:00:02+02:00"
+    },
+    {
+      "id": "ee21f280-80da-4eaf-bd57-26f6f153614b",
+      "submissionVersion": "/api/submission_versions/1ff35587-4c48-463a-b6f3-a257b4b708bd",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/4c18f400-bcbb-4895-b175-a0e355b7a3a3",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "27085201",
+            "nazev": "VPK Suchý s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00235482",
+            "nazev": "Město Kouřim"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-ccppsn",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "ccppsn"
+        },
+        "nazevZakazky": "Vodovodní přivaděč - město Kouřim",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T19:25:28+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045932",
+        "datumUverejneniVvz": "2026-08-21T19:30:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "35b7b4d84443a0c37446ed56e83be18305c8d65ba33e4dc5ce69efa2e45c819e",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045932",
+      "relatedId": "65cdabc9-4887-4298-a0cf-9f1270b8b599",
+      "publicId": "IB5VwrP7eWtoPezBldCnVzbveujHpYpv",
+      "version": 5,
+      "validityPeriod": "2026-08-21T19:12:14+02:00/",
+      "owner": {
+        "name": "IRENA LAPEŠOVÁ",
+        "email": "lapes@tntconsulting.cz",
+        "id": "9dfe4c70-b68d-40ef-a57b-fca25fba2be2"
+      },
+      "createdBy": {
+        "name": "IRENA LAPEŠOVÁ",
+        "email": "lapes@tntconsulting.cz",
+        "id": "9dfe4c70-b68d-40ef-a57b-fca25fba2be2"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T19:12:14+02:00",
+      "updatedAt": "2026-08-21T19:30:02+02:00"
+    },
+    {
+      "id": "f414d988-bba3-42ac-b0ec-0ae313e3ca97",
+      "submissionVersion": "/api/submission_versions/5ae23310-0128-4ddf-b2d3-c0efb7bf1fc9",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b8a87291-d199-4425-86a5-9d62cfaa7dbd",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "46349235",
+            "nazev": "NOVADUS, spol. s r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00233501",
+            "nazev": "Městys Liteň"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-untqpq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "untqpq"
+        },
+        "nazevZakazky": "Liteň – Propojení vodovodních systémů Leč-Liteň, Vodojem a AT stanice",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T18:13:59+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045928",
+        "datumUverejneniVvz": "2026-08-21T18:20:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "e1004ae1f68392f2b8e0083b95169f326bf19f77b96f77cc67ed7a084a7e03bc",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045928",
+      "relatedId": "0b094ea1-ddfc-4fe1-a53f-782642ce4cf0",
+      "publicId": "bJpjHQSEfWw6DrKuT43Iq96LLYKwr5jo",
+      "version": 5,
+      "validityPeriod": "2026-08-21T17:37:06+02:00/",
+      "owner": {
+        "name": "PETR ŠIŠKA",
+        "email": "siskapetr@seznam.cz",
+        "id": "39a7427f-f65a-4faa-b312-84352582ff50"
+      },
+      "createdBy": {
+        "name": "PETR ŠIŠKA",
+        "email": "siskapetr@seznam.cz",
+        "id": "39a7427f-f65a-4faa-b312-84352582ff50"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T17:37:06+02:00",
+      "updatedAt": "2026-08-21T18:20:01+02:00"
+    },
+    {
+      "id": "8d8be9bc-dad7-46b6-8751-6154e9cd8b55",
+      "submissionVersion": "/api/submission_versions/9d0db502-b65a-4854-9a68-5478ebeed9f3",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/763d0dbe-ac09-4778-b205-b0d4c69a194c",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "27755541",
+            "nazev": "Stavební firma Stavospol Znojmo s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "45671303",
+            "nazev": "Základní škola, Znojmo, náměstí Republiky 9"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-dwttvl",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "dwttvl"
+        },
+        "nazevZakazky": "Stavební úpravy ZŠ Znojmo, náměstí Republiky 9",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T23:09:48+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-040209",
+        "datumUverejneniVvz": "2026-08-21T23:10:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-040209"
+      },
+      "dataHash": "2143f4596361162398bb72a8cef66f1009fc3b12a14692289f242ec0d08d37ee",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045938",
+      "relatedId": "ee151d9f-768d-49d3-8172-c26df385313b",
+      "publicId": "dcvozJYQpveVAJk7g2JROxVfQbZShp5K",
+      "version": 5,
+      "validityPeriod": "2026-08-21T17:33:22+02:00/",
+      "owner": {
+        "name": "IVANA ŠŤASTNÁ",
+        "email": "stasiv@seznam.cz",
+        "id": "2e2812b6-70bd-4786-94f2-c8b09bee87de"
+      },
+      "createdBy": {
+        "name": "IVANA ŠŤASTNÁ",
+        "email": "stasiv@seznam.cz",
+        "id": "2e2812b6-70bd-4786-94f2-c8b09bee87de"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T17:33:22+02:00",
+      "updatedAt": "2026-08-21T23:10:01+02:00"
+    },
+    {
+      "id": "c7c2a062-29a9-40d2-ae3f-2015c8548f55",
+      "submissionVersion": "/api/submission_versions/2324d91c-55ac-4181-b632-9b8f20153dd0",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/38825fee-5903-421f-95c5-58fa10dc00df",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "29262241",
+            "nazev": "ELIS-střechy s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00287351",
+            "nazev": "Město Kroměříž"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-qyeekh",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "qyeekh"
+        },
+        "nazevZakazky": "Rekonstrukce střechy sportovní haly TJ SLAVIA v Kroměříži",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T13:44:40+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-070890",
+        "datumUverejneniVvz": "2026-08-21T13:50:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Kopie: 38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-070890"
+      },
+      "dataHash": "d6a59535ee033b68737b2a545016cd125ef9964f10e99373bc61dc52ca02507c",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045888",
+      "relatedId": "eb15e2cf-c8e4-4d1c-9ef7-875a4f9184db",
+      "publicId": "AEkSOyeScIeQfnMKffqbg4G43LUluiBc",
+      "copyFromSubmissionVersion": "/api/submission_versions/1ba0bf92-9fc1-4476-91ed-c5392e2fe912",
+      "version": 5,
+      "validityPeriod": "2026-08-21T13:40:23+02:00/",
+      "owner": {
+        "name": "LIBOR PECHÁČEK",
+        "email": "zakazky@mesto-kromeriz.cz",
+        "id": "4c90740b-f273-427c-a61a-f7dcff7eb672"
+      },
+      "createdBy": {
+        "name": "LIBOR PECHÁČEK",
+        "email": "zakazky@mesto-kromeriz.cz",
+        "id": "4c90740b-f273-427c-a61a-f7dcff7eb672"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T13:40:23+02:00",
+      "updatedAt": "2026-08-21T13:50:01+02:00"
+    },
+    {
+      "id": "7cdb42e1-2f6f-47a7-b800-31fd95b2cfd1",
+      "submissionVersion": "/api/submission_versions/6551f36f-10a8-4f69-a695-432ce5bc067c",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e6f02646-7760-4d2d-b5c5-d0853016169c",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "45192464",
+            "nazev": "Ridera Stavební a.s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00843989",
+            "nazev": "Fakultní nemocnice Ostrava"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-pbiura",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "pbiura"
+        },
+        "nazevZakazky": "Vybudování ambulancí pro KARIM ve 4.NP Polikliniky ve FN Ostrava",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T13:40:48+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-049776",
+        "datumUverejneniVvz": "2026-08-21T13:50:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-049776"
+      },
+      "dataHash": "94ea396f07aaca0cc1076a7aeddf3d09f1782c4d3b87b83dd75da2ce34c373d0",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045886",
+      "relatedId": "e9b89b9b-bdb5-4c2b-877f-ed3fd2d0b037",
+      "publicId": "jMU8SwK8kfGDfJJuEdbknvaYKIv1Oxd5",
+      "copyFromSubmissionVersion": "/api/submission_versions/2663e1ef-ddd8-4ce7-a572-4ecafc0af172",
+      "version": 5,
+      "validityPeriod": "2026-08-21T13:13:02+02:00/",
+      "owner": {
+        "name": "Jana Vidláková",
+        "email": "jana.vidlakova@fno.cz",
+        "id": "b39fc463-201d-4f78-a12d-360c6c1d1af7"
+      },
+      "createdBy": {
+        "name": "Jana Vidláková",
+        "email": "jana.vidlakova@fno.cz",
+        "id": "b39fc463-201d-4f78-a12d-360c6c1d1af7"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T13:13:02+02:00",
+      "updatedAt": "2026-08-21T13:50:01+02:00"
+    },
+    {
+      "id": "c6f730a9-7771-4ec3-9b89-1363dc4df490",
+      "submissionVersion": "/api/submission_versions/8388bed6-7de2-4a5b-9dd3-20f2aa78d5a1",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/a26a61ad-8a5e-4cb0-9b4f-518b661315b8",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "17662087",
+            "nazev": "FortiFox Technologies, a.s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00075345",
+            "nazev": "Městský ústav sociálních služeb města Plzně, příspěvková organizace"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-repkmf",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "repkmf"
+        },
+        "nazevZakazky": "Komplexní oprava rozvodů DZR \"Čtyřlístek\" – jihozápadní pavilon ",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T13:55:51+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-050799",
+        "datumUverejneniVvz": "2026-08-21T14:00:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-069076"
+      },
+      "dataHash": "2aebd338079942e77f2dd3a6644c560a042140b166db8ae1e13432f47f1de08f",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045895",
+      "relatedId": "212f83d7-aaea-4ab4-a233-8eef38ff5edf",
+      "publicId": "Aw2GFOhxcMaavsbXqMjnlHOOAxSclHaX",
+      "version": 5,
+      "validityPeriod": "2026-08-21T13:10:07+02:00/",
+      "owner": {
+        "name": "MARTIN TRUHLÁŘ",
+        "email": "truhlar@ozsylvan.cz",
+        "id": "935e2fb9-dc5b-45b3-8a26-8bbd6216a9df"
+      },
+      "createdBy": {
+        "name": "MARTIN TRUHLÁŘ",
+        "email": "truhlar@ozsylvan.cz",
+        "id": "935e2fb9-dc5b-45b3-8a26-8bbd6216a9df"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T13:10:07+02:00",
+      "updatedAt": "2026-08-21T14:00:02+02:00"
+    },
+    {
+      "id": "6f923e13-8a71-4c69-ac94-687a214649e7",
+      "submissionVersion": "/api/submission_versions/8a01c6d7-293c-48ca-941b-a9c8de14d4ce",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b97bc56d-b639-4644-bd1d-8f786ea5bd87",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "zadavatele": [
+          {
+            "ico": "00251984",
+            "nazev": "Město Vodňany"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-qvfsaq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "qvfsaq"
+        },
+        "nazevZakazky": "Modernizace ulic Husova, Písecká, Alešova, Hejdukova a Kalinovo náměstí ve Vodňanech – Etapa 2",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T13:03:13+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-037235",
+        "datumUverejneniVvz": "2026-08-21T13:10:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-02T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-045205"
+      },
+      "dataHash": "d2fcd8e59fb738fe13007757e991b337c5160a45c900548d0849055c0ecb1b5c",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045877",
+      "relatedId": "fcf9d8b4-d9d3-4105-ab8e-0c24ddb6400b",
+      "publicId": "hjRmMAsV9fjnq0ud3V2ATkBXjmY8LPE3",
+      "version": 5,
+      "validityPeriod": "2026-08-21T12:55:27+02:00/",
+      "owner": {
+        "name": "TEREZA DIO",
+        "email": "tereza.dio@gplinvest.cz",
+        "id": "3b6316e5-deb4-4090-ac5d-f9e1c3084fd4"
+      },
+      "createdBy": {
+        "name": "TEREZA DIO",
+        "email": "tereza.dio@gplinvest.cz",
+        "id": "3b6316e5-deb4-4090-ac5d-f9e1c3084fd4"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T12:55:27+02:00",
+      "updatedAt": "2026-08-21T13:10:01+02:00"
+    },
+    {
+      "id": "d485eb73-2617-43c9-b79d-fddf729c5db2",
+      "submissionVersion": "/api/submission_versions/0616269a-2a16-471e-873c-11b739029f06",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/78cde245-5ef7-4218-ae50-3782c1289a06",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "zadavatele": [
+          {
+            "ico": "00023001",
+            "nazev": "Institut klinické a experimentální medicíny"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-xqibdf",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "xqibdf"
+        },
+        "nazevZakazky": "Stavební úpravy TCH-JIP v 1.NP Objektu E",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T14:21:03+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-043818",
+        "datumUverejneniVvz": "2026-08-21T14:30:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-16T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-043818"
+      },
+      "dataHash": "2f018b45d0ccbe8fdd5d4016c975bb8e9a8f1028f62888e6744057a5f8d7bb37",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045902",
+      "relatedId": "02848829-11a7-42e6-971f-0ee59f50db97",
+      "publicId": "SRISN67ELkHuXSXHiGrFAFP3oS5e50M7",
+      "version": 5,
+      "validityPeriod": "2026-08-21T12:41:13+02:00/",
+      "owner": {
+        "name": "KLÁRA ZÁBRODSKÁ",
+        "email": "zabrodska@akzr.cz",
+        "id": "1151d1f9-186b-426c-a917-28bed590be11"
+      },
+      "createdBy": {
+        "name": "KLÁRA ZÁBRODSKÁ",
+        "email": "zabrodska@akzr.cz",
+        "id": "1151d1f9-186b-426c-a917-28bed590be11"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T12:41:13+02:00",
+      "updatedAt": "2026-08-21T14:30:01+02:00"
+    },
+    {
+      "id": "665ce5b6-6225-43f2-b915-e720fa886f82",
+      "submissionVersion": "/api/submission_versions/2663e1ef-ddd8-4ce7-a572-4ecafc0af172",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e6f02646-7760-4d2d-b5c5-d0853016169c",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "45192464",
+            "nazev": "Ridera Stavební a.s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00843989",
+            "nazev": "Fakultní nemocnice Ostrava"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-pbiura",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "pbiura"
+        },
+        "nazevZakazky": "Vybudování ambulancí pro KARIM ve 4.NP Polikliniky ve FN Ostrava",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T13:06:19+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-049776",
+        "datumUverejneniVvz": "2026-08-21T13:10:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-049776"
+      },
+      "dataHash": "277ac39eefd54656f03428eac992865d267dd4df9e9afb16720f4829b29ab52c",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045879",
+      "relatedId": "e9b89b9b-bdb5-4c2b-877f-ed3fd2d0b037",
+      "publicId": "0WUupOEV8uUVvwSRPC7xDurnTrp1KnS6",
+      "version": 5,
+      "validityPeriod": "2026-08-21T12:40:45+02:00/",
+      "owner": {
+        "name": "Jana Vidláková",
+        "email": "jana.vidlakova@fno.cz",
+        "id": "b39fc463-201d-4f78-a12d-360c6c1d1af7"
+      },
+      "createdBy": {
+        "name": "Jana Vidláková",
+        "email": "jana.vidlakova@fno.cz",
+        "id": "b39fc463-201d-4f78-a12d-360c6c1d1af7"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T12:40:45+02:00",
+      "updatedAt": "2026-08-21T13:10:01+02:00"
+    },
+    {
+      "id": "e77cb26f-2de5-46e3-aac7-9f3f27f2fd74",
+      "submissionVersion": "/api/submission_versions/ae0f2f71-f087-457f-b2e9-34278f81a0bd",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/3ffe9109-9e74-4115-961a-83777f4cd183",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "24166189",
+            "nazev": "MaGe Construction , s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00090450",
+            "nazev": "Krajská správa a údržba silnic Vysočiny, příspěvková organizace"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-aogkyu",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "aogkyu"
+        },
+        "nazevZakazky": "II/150 Kopaniny – most ev. č. 150-006",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T12:52:00+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045872",
+        "datumUverejneniVvz": "2026-08-21T13:00:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "6ae9c70db242ab62b0ed4477b2e138f6b61490896dc1808cfed83c277cd3a8d0",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045872",
+      "relatedId": "54011d6d-9c4e-4c32-99df-11a23e935e15",
+      "publicId": "lX8aasGnaPDiiYqMporL1hVMB36RsXLn",
+      "version": 5,
+      "validityPeriod": "2026-08-21T11:31:30+02:00/",
+      "owner": {
+        "name": "Alena Janoušková",
+        "email": "janouskova.a@ksusv.cz",
+        "id": "89387dec-736a-4442-956c-6b2a59375bd1"
+      },
+      "createdBy": {
+        "name": "Alena Janoušková",
+        "email": "janouskova.a@ksusv.cz",
+        "id": "89387dec-736a-4442-956c-6b2a59375bd1"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T11:31:30+02:00",
+      "updatedAt": "2026-08-21T13:00:02+02:00"
+    },
+    {
+      "id": "e675e077-2029-4d1d-9fe6-435859ed7910",
+      "submissionVersion": "/api/submission_versions/3fdaac4e-9149-483c-8eda-9a23c36ccf03",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/e2d627ee-d407-4994-a8ab-ed6e3eea5388",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "48035599",
+            "nazev": "SWIETELSKY stavební s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00085031",
+            "nazev": "Správa a údržba silnic Pardubického kraje"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-hkwfjt",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "hkwfjt"
+        },
+        "nazevZakazky": "Silnice III/03426 Studnice – Košínov – hranice Pk",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T11:29:30+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-023719",
+        "datumUverejneniVvz": "2026-08-21T11:30:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Kopie: 38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-023719"
+      },
+      "dataHash": "a2ba0e3b4aa1f3f3d0032220f8147f6cc3a6f62ff543320b69698141767c6f92",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045860",
+      "relatedId": "dc711988-8106-429d-b8a7-f3a15a3cad7d",
+      "publicId": "Qtw9BZ5yNGQlr5J5lEwW4crmoGuPOcfq",
+      "copyFromSubmissionVersion": "/api/submission_versions/101e31f5-f56f-40d6-9421-01ed20d4f175",
+      "version": 5,
+      "validityPeriod": "2026-08-21T11:23:55+02:00/",
+      "owner": {
+        "name": "LENKA VAŠÁTKOVÁ",
+        "email": "lenka.vasatkova@suspk.cz",
+        "id": "257d2d74-a124-4da5-b8f6-20800bda34bc"
+      },
+      "createdBy": {
+        "name": "LENKA VAŠÁTKOVÁ",
+        "email": "lenka.vasatkova@suspk.cz",
+        "id": "257d2d74-a124-4da5-b8f6-20800bda34bc"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T11:23:55+02:00",
+      "updatedAt": "2026-08-21T11:30:01+02:00"
+    },
+    {
+      "id": "e08947c9-7625-4024-b91d-534b751d5b29",
+      "submissionVersion": "/api/submission_versions/1be0c87c-6a74-4cd2-8603-77aedd1c17d9",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/7d4e8e01-8d02-4454-afa3-5c53cc226191",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "25504487",
+            "nazev": "RAPOS, spol. s r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00301493",
+            "nazev": "Město Lipník nad Bečvou"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-geiswx",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "geiswx"
+        },
+        "nazevZakazky": "Revitalizace areálu Technických služeb v Lipníku nad Bečvou",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T11:43:30+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-015458",
+        "datumUverejneniVvz": "2026-08-21T11:50:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-029291"
+      },
+      "dataHash": "688ea7d0e0e684667ab2ad5bb1ff5be5f37c3d65158f4bda73639e09e416c4dc",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045862",
+      "relatedId": "0d6b3723-55ca-4dcc-ab8a-077289f4d277",
+      "publicId": "L2webOtq6Jb2cVAZOw6R1CEQA6DaTFBr",
+      "version": 5,
+      "validityPeriod": "2026-08-21T11:16:40+02:00/",
+      "owner": {
+        "name": "DOMINIKA DOLÁKOVÁ",
+        "email": "vr@arsra.cz",
+        "id": "09e9db73-54a5-4429-a94f-2825f51e844c"
+      },
+      "createdBy": {
+        "name": "DOMINIKA DOLÁKOVÁ",
+        "email": "vr@arsra.cz",
+        "id": "09e9db73-54a5-4429-a94f-2825f51e844c"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T11:16:40+02:00",
+      "updatedAt": "2026-08-21T11:50:01+02:00"
+    },
+    {
+      "id": "f02af3b2-53ce-45ef-8584-018aefc4a18b",
+      "submissionVersion": "/api/submission_versions/d717ae53-74f3-40a8-8ae4-776a5542f70d",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/35028dcf-fa73-4016-a1c5-64204d140c51",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "14406560",
+            "nazev": "KARL-STAVBY s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "48342912",
+            "nazev": "Gymnázium J.Š. Baara, Domažlice, Pivovarská 323"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-kjfofy",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "kjfofy"
+        },
+        "nazevZakazky": "Energetické úspory GJŠB Domažlice – 2. vyhlášení",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T11:12:34+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045848",
+        "datumUverejneniVvz": "2026-08-21T11:20:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "36e4eb1e554a50981a250fe5980b8fe168ec1f7cad7b685da4159875ac869cb3",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045848",
+      "relatedId": "e0626aaf-fe41-454c-b8a7-a272b977ce84",
+      "publicId": "EH6CBv5Su7hDrPUwvMwErPUhY619lBWi",
+      "version": 5,
+      "validityPeriod": "2026-08-21T10:25:05+02:00/",
+      "owner": {
+        "name": "René Hartman",
+        "email": "rene.hartman@cnpk.cz",
+        "id": "10fcbf59-f8a9-4c4b-aae5-3afa7e992a3d"
+      },
+      "createdBy": {
+        "name": "René Hartman",
+        "email": "rene.hartman@cnpk.cz",
+        "id": "10fcbf59-f8a9-4c4b-aae5-3afa7e992a3d"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T10:25:05+02:00",
+      "updatedAt": "2026-08-21T11:20:02+02:00"
+    },
+    {
+      "id": "bc8c6170-bc68-40e2-8835-13e69f8cb29e",
+      "submissionVersion": "/api/submission_versions/15f7cddc-dc8b-488a-9e4d-65e1665bdf7e",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/5b4f8722-7df9-4335-a5e3-ceff3c62e102",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "24257311",
+            "nazev": "IVPS Group s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "47767375",
+            "nazev": "Římskokatolická farnost Bohosudov"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-kkdrzi",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "kkdrzi"
+        },
+        "nazevZakazky": "Výměna krytiny střech lodi, bočních přístaveb a presbyteria kostela Bolestné Panny Marie v Bohosudově",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T10:30:37+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-051285",
+        "datumUverejneniVvz": "2026-08-21T10:40:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-051285"
+      },
+      "dataHash": "47876cb7265d6ce8575e054483f1fa7e351a1dc01b68d410f37d83d1a5f5546a",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045830",
+      "relatedId": "e47af63f-3d47-4e6a-8cd0-4d43b0fd7d80",
+      "publicId": "KnFQe4eFF0ZUyj9qWfxajoOgRcxYCU3B",
+      "version": 5,
+      "validityPeriod": "2026-08-21T10:20:03+02:00/",
+      "owner": {
+        "name": "Nikola Smolková",
+        "email": "nikola.smolkova@civera.cz",
+        "id": "5ef08bb2-5acd-44de-a9f3-783f9fb131bf"
+      },
+      "createdBy": {
+        "name": "Nikola Smolková",
+        "email": "nikola.smolkova@civera.cz",
+        "id": "5ef08bb2-5acd-44de-a9f3-783f9fb131bf"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T10:20:03+02:00",
+      "updatedAt": "2026-08-21T10:40:01+02:00"
+    },
+    {
+      "id": "e1e650e6-76a9-457c-b82a-5c40cf44d1a7",
+      "submissionVersion": "/api/submission_versions/c242e969-d72d-4079-8eec-487ff8cc87d3",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/5b4f8722-7df9-4335-a5e3-ceff3c62e102",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "24257311",
+            "nazev": "IVPS Group s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "49086910",
+            "nazev": "Cisterciácké opatství Osek"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-kkdrzi",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "kkdrzi"
+        },
+        "nazevZakazky": "Rekonstrukce střechy a stropu a statické zajištění schodiště Panského domu v areálu Kláštera Osek",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T09:54:07+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-051237",
+        "datumUverejneniVvz": "2026-08-21T10:00:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-051237"
+      },
+      "dataHash": "e828c9a65e16472ca6f6192976d4b6ad09cfe454c21cf5321da648d7cbcc0b33",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045820",
+      "relatedId": "9877a34f-ed2b-4742-b1ca-1d253f1becf7",
+      "publicId": "kaHw359Au2VkuqzDmh98A40RfmHyj5QV",
+      "version": 5,
+      "validityPeriod": "2026-08-21T09:39:02+02:00/",
+      "owner": {
+        "name": "Nikola Smolková",
+        "email": "nikola.smolkova@civera.cz",
+        "id": "5ef08bb2-5acd-44de-a9f3-783f9fb131bf"
+      },
+      "createdBy": {
+        "name": "Nikola Smolková",
+        "email": "nikola.smolkova@civera.cz",
+        "id": "5ef08bb2-5acd-44de-a9f3-783f9fb131bf"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T09:39:02+02:00",
+      "updatedAt": "2026-08-21T10:00:02+02:00"
+    },
+    {
+      "id": "ca0d785b-9097-44ac-94a3-1489c22e6f0a",
+      "submissionVersion": "/api/submission_versions/da0a4adc-8bb5-4913-a955-f04967616463",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/cd3bea84-b3c6-4835-b687-88ba99d6f3db",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "04311949",
+            "nazev": "KZP - stavby s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00275069",
+            "nazev": "OBEC LIČNO"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-bdkgjh",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "bdkgjh"
+        },
+        "nazevZakazky": "Lično - ZTV pro výstavbu RD",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T09:21:51+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-054505",
+        "datumUverejneniVvz": "2026-08-21T09:30:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-054505"
+      },
+      "dataHash": "559d1f58740d0306b65928a24048b6ea03089e6c00f68b3acf799c5b674a51da",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045805",
+      "relatedId": "234589d0-0ae3-494a-8748-f6b63aef2751",
+      "publicId": "HIoHLqnjO4UYbaidoxl0nkYaDOqxTQyL",
+      "version": 5,
+      "validityPeriod": "2026-08-21T09:15:35+02:00/",
+      "owner": {
+        "name": "ALEŠ LIBOTOVSKÝ",
+        "email": "ales.libotovsky@seznam.cz",
+        "id": "0d73a322-571a-443d-aed9-661ccdfeb914"
+      },
+      "createdBy": {
+        "name": "ALEŠ LIBOTOVSKÝ",
+        "email": "ales.libotovsky@seznam.cz",
+        "id": "0d73a322-571a-443d-aed9-661ccdfeb914"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T09:15:35+02:00",
+      "updatedAt": "2026-08-21T09:30:01+02:00"
+    },
+    {
+      "id": "f2421e19-8597-44a5-b421-5d6c60f47fc5",
+      "submissionVersion": "/api/submission_versions/a2b0ad62-0b5a-42f7-8916-7e507fb54143",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/f66becc9-3391-40ea-98f6-b88a6ee45f88",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "28729943",
+            "nazev": "K + P stavební výroba s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00261009",
+            "nazev": "Obec Svor"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-daleof",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "daleof"
+        },
+        "nazevZakazky": "Rozšíření a zkvalitnění nabídky cestovního ruchu Svor – Reichenbach O. L. – obnova lesního koupaliště",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T09:12:17+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-001210",
+        "datumUverejneniVvz": "2026-08-21T09:20:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy Svor obnova koupaliště dodatek č. 2",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-001210"
+      },
+      "dataHash": "a3ab665b503f5748884d712432a81a2f65d8eb911308b9b4234d512cf4b2693c",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045801",
+      "relatedId": "bb1154f8-6ad1-4970-b944-97cae690e0a7",
+      "publicId": "rnA0hCP6AOWYEni2f50UImS25lCULAXZ",
+      "copyFromSubmissionVersion": "/api/submission_versions/686c4a76-57f9-4292-b367-f63369fb2ab4",
+      "version": 5,
+      "validityPeriod": "2026-08-21T08:51:57+02:00/",
+      "owner": {
+        "name": "VERONIKA HÜBNEROVÁ",
+        "email": "verca.kuzel@email.cz",
+        "id": "5477c931-1f7a-4f93-97b4-718101e460c9"
+      },
+      "createdBy": {
+        "name": "VERONIKA HÜBNEROVÁ",
+        "email": "verca.kuzel@email.cz",
+        "id": "5477c931-1f7a-4f93-97b4-718101e460c9"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T08:51:57+02:00",
+      "updatedAt": "2026-08-21T09:20:02+02:00"
+    },
+    {
+      "id": "e7eb3673-e408-4afd-94e5-d78aec2c5d7c",
+      "submissionVersion": "/api/submission_versions/06d4f48f-36e2-4c33-9657-44a90225f8d8",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/60c60bf4-6b96-4f26-be0a-1629b5028a48",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "65410840",
+            "nazev": "REINVEST spol. s r.o."
+          },
+          {
+            "ico": "46712143",
+            "nazev": "V A R I A  s.r.o. - inženýrská činnost a provádění staveb"
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00264474",
+            "nazev": "Město Terezín"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-eujrnj",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "eujrnj"
+        },
+        "nazevZakazky": "Proviantní sklad Terezín, sanace střechy - služby TDI a BOZP",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T09:11:22+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045800",
+        "datumUverejneniVvz": "2026-08-21T09:20:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "5224161a8eccea7109e5a2561c6c74451e4bec8fe7d9d4400964c2fab616f354",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045800",
+      "relatedId": "27f3f217-b61b-4d31-b53b-b0156b50a6ba",
+      "publicId": "wzTwrZ88wQgxzUgQHc3Mrzbu1tQFOVxC",
+      "version": 5,
+      "validityPeriod": "2026-08-21T08:35:09+02:00/",
+      "owner": {
+        "name": "Jiří Novák",
+        "email": "jnovak@epp.cz",
+        "id": "a7bb37be-8a18-43bd-981c-efb1c5293a15"
+      },
+      "createdBy": {
+        "name": "Jiří Novák",
+        "email": "jnovak@epp.cz",
+        "id": "a7bb37be-8a18-43bd-981c-efb1c5293a15"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T08:35:09+02:00",
+      "updatedAt": "2026-08-21T09:20:01+02:00"
+    },
+    {
+      "id": "78bb5d7e-9099-43df-91b6-ff83c0ea35f2",
+      "submissionVersion": "/api/submission_versions/eeab2187-f8c7-4d87-a5e5-b12be98e75d1",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/889b0a05-b80f-4108-ad71-490b1b7a1761",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "zadavatele": [
+          {
+            "ico": "00240702",
+            "nazev": "Město Říčany"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-jcjatb",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "jcjatb"
+        },
+        "nazevZakazky": "Muzeum - Návštěvnické centrum na hradě ",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T08:25:57+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-043414",
+        "datumUverejneniVvz": "2026-08-21T08:30:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-14T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-043706"
+      },
+      "dataHash": "fbb6b8bc4721ae6a24eff8ca37f91cfa921d9a5cc5a5d90fc49944f399d84af5",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045790",
+      "relatedId": "63329d27-063f-40db-acb3-5110fd6e3e7f",
+      "publicId": "CDE2VMjSHewg8OH5e7Pl7BIUweHmnztp",
+      "version": 5,
+      "validityPeriod": "2026-08-21T08:18:52+02:00/",
+      "owner": {
+        "name": "IVANA HYBNEROVÁ",
+        "email": "ivana.hybnerova@ricany.cz",
+        "id": "aaced166-db67-46ec-96c5-bb63f0923e7e"
+      },
+      "createdBy": {
+        "name": "IVANA HYBNEROVÁ",
+        "email": "ivana.hybnerova@ricany.cz",
+        "id": "aaced166-db67-46ec-96c5-bb63f0923e7e"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T08:18:52+02:00",
+      "updatedAt": "2026-08-21T08:30:01+02:00"
+    },
+    {
+      "id": "b5dc0c1b-a128-4509-ac58-ab34a5deef91",
+      "submissionVersion": "/api/submission_versions/25eb8b24-8138-49ae-bd18-ddc95d80471b",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/3ffe9109-9e74-4115-961a-83777f4cd183",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "07936567",
+            "nazev": "GriToN CZ s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00090450",
+            "nazev": "Krajská správa a údržba silnic Vysočiny, příspěvková organizace"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-nydlwg",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "nydlwg"
+        },
+        "nazevZakazky": "Revitalizace areálu KSÚSV Havlíčkův Brod",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T07:19:04+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-007746",
+        "datumUverejneniVvz": "2026-08-21T07:20:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-007746"
+      },
+      "dataHash": "fb031d2825f0356774e21fb8d1d66cbd169f4705ef0917cc72f79530a94c3d85",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045773",
+      "relatedId": "f0559926-2762-46ea-8166-a5b49d34d286",
+      "publicId": "UPyQtWkHDz4TykDDCo2Ba3DQ9oaCMPU8",
+      "version": 5,
+      "validityPeriod": "2026-08-21T07:14:05+02:00/",
+      "owner": {
+        "name": "Terezie Klímová",
+        "email": "terezie.klimova@ksusv.cz",
+        "id": "8d6b95a0-603f-4bdf-aa22-4dda4fb22a45"
+      },
+      "createdBy": {
+        "name": "Terezie Klímová",
+        "email": "terezie.klimova@ksusv.cz",
+        "id": "8d6b95a0-603f-4bdf-aa22-4dda4fb22a45"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T07:14:05+02:00",
+      "updatedAt": "2026-08-21T07:20:02+02:00"
+    },
+    {
+      "id": "f8b6a1ea-315b-4765-95fa-eca272b48336",
+      "submissionVersion": "/api/submission_versions/986bb7f6-5d22-4946-971b-6be1c8178bfe",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b6aee2bf-ccc0-4f85-8bd4-3b5e8bf4ff42",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "47974460",
+            "nazev": "Geocentrum spol. s r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "01312774",
+            "nazev": "Státní pozemkový úřad"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-zzvimr",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "zzvimr"
+        },
+        "nazevZakazky": "Komplexní pozemkové úpravy v k.ú. Hulín část",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T07:47:49+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2021-029503",
+        "datumUverejneniVvz": "2026-08-21T07:50:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2021-029503"
+      },
+      "dataHash": "110a44446faf8ba4ef5d776cbf378ee87851d7b208367de5cf9db05f3ede0021",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045776",
+      "relatedId": "16093da2-c0db-48dc-bbbb-6c83a77040bb",
+      "publicId": "3qgRRJZx94dMYWXFCEcyM20aMZ0r8iYF",
+      "version": 5,
+      "validityPeriod": "2026-08-21T06:17:54+02:00/",
+      "owner": {
+        "name": "Petra Dubcová",
+        "email": "petra.dubcova@spu.gov.cz",
+        "id": "1cca25c9-fcb2-4488-8478-370568730e0f"
+      },
+      "createdBy": {
+        "name": "Petra Dubcová",
+        "email": "petra.dubcova@spu.gov.cz",
+        "id": "1cca25c9-fcb2-4488-8478-370568730e0f"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-21T06:17:54+02:00",
+      "updatedAt": "2026-08-21T07:50:01+02:00"
+    },
+    {
+      "id": "ce7582e5-0219-4451-b8d7-9c3535016340",
+      "submissionVersion": "/api/submission_versions/d190a5d9-c79c-4ec3-bb64-fb6983e2d484",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/587e6faf-8b81-4020-9dfe-dee1898116b6",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "28625528",
+            "nazev": "PROFI TRUCK BUSINESS s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "70947031",
+            "nazev": "Mikroregion Česká Kalifornie"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-oyxsxf",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "oyxsxf"
+        },
+        "nazevZakazky": "Dodávka vozidla na svoz odpadu pro Mikroregion Česká Kalifornie",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T23:38:24+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045769",
+        "datumUverejneniVvz": "2026-08-20T23:40:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "2f02383b9a38837ce4135a5d5d0160e40bd9d9ea1a60d26e09f573ac07a4cfda",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045769",
+      "relatedId": "3a6886e6-e69b-498a-9851-22640a9c8834",
+      "publicId": "LmbQKSWCoKWPgVzPHv4Tb7zXKp6II2SP",
+      "version": 5,
+      "validityPeriod": "2026-08-20T22:49:23+02:00/",
+      "owner": {
+        "name": "MIROSLAV HONZÍK",
+        "email": "miroslav.honzik@evri2004.cz",
+        "id": "cd7e1413-66c1-499d-983f-500accc94b76"
+      },
+      "createdBy": {
+        "name": "MIROSLAV HONZÍK",
+        "email": "miroslav.honzik@evri2004.cz",
+        "id": "cd7e1413-66c1-499d-983f-500accc94b76"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T22:49:23+02:00",
+      "updatedAt": "2026-08-20T23:40:02+02:00"
+    },
+    {
+      "id": "f843646c-7fcd-4bd8-938c-36fee0f4b1d6",
+      "submissionVersion": "/api/submission_versions/3c703dbf-6dbe-4eeb-991a-de0be20d1f87",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b97ad938-0865-4cda-9e35-2ccd5a6ad5b6",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "63079763",
+            "nazev": "BARACOM a. s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00556220",
+            "nazev": "Obec Trnovany"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-sushco",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "sushco"
+        },
+        "nazevZakazky": "Dětská skupina Trnovany – novostavba zázemí",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T22:10:48+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-009315",
+        "datumUverejneniVvz": "2026-08-20T22:20:03+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Trnovany_Dodatek 4_38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-009315"
+      },
+      "dataHash": "a47c8d21c4cb9e7633c2780fe61b3cb56ba524f92fa864690c0aeaab0d973ff2",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045768",
+      "relatedId": "b7e66f41-416d-4c53-8b1d-75c7261838ca",
+      "publicId": "TxBf934sgHgS7PsoxASScyfXWQxdQjRz",
+      "copyFromSubmissionVersion": "/api/submission_versions/0e6fa2cb-b6ae-4b59-bb29-808eaea1a915",
+      "version": 5,
+      "validityPeriod": "2026-08-20T22:06:43+02:00/",
+      "owner": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "createdBy": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T22:06:43+02:00",
+      "updatedAt": "2026-08-20T22:20:03+02:00"
+    },
+    {
+      "id": "f276de2f-d33f-4311-bc10-54d256a217c6",
+      "submissionVersion": "/api/submission_versions/575354ec-a219-4830-bdce-58672c1a3a68",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b97ad938-0865-4cda-9e35-2ccd5a6ad5b6",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "27143121",
+            "nazev": "STAVOMAK s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00264555",
+            "nazev": "Obec Třebušín"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-sushco",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "sushco"
+        },
+        "nazevZakazky": "Dětská skupina Třebušín – novostavba zázemí III",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T21:58:26+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-026513",
+        "datumUverejneniVvz": "2026-08-20T22:00:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Třebušín - Dodatek 2: 38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-026513"
+      },
+      "dataHash": "8db536f121eb8d4c8125fb392eae75dda62eeafdeb8fde1bd99cb8b297809eb9",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045767",
+      "relatedId": "247a7adc-4ca5-4771-93fb-bb87748d4750",
+      "publicId": "HuICu8tCApcf5xEpf6hyRjgLb4KLk7Z9",
+      "copyFromSubmissionVersion": "/api/submission_versions/8819c159-b14d-4a0f-9e31-02f4cc0a1afa",
+      "version": 5,
+      "validityPeriod": "2026-08-20T21:55:16+02:00/",
+      "owner": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "createdBy": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T21:55:16+02:00",
+      "updatedAt": "2026-08-20T22:00:02+02:00"
+    },
+    {
+      "id": "8d68cc97-920c-4fbf-91b0-13d285929078",
+      "submissionVersion": "/api/submission_versions/0e6fa2cb-b6ae-4b59-bb29-808eaea1a915",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b97ad938-0865-4cda-9e35-2ccd5a6ad5b6",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "63079763",
+            "nazev": "BARACOM a. s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00556220",
+            "nazev": "Obec Trnovany"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-sushco",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "sushco"
+        },
+        "nazevZakazky": "Dětská skupina Trnovany – novostavba zázemí",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T21:52:06+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-009315",
+        "datumUverejneniVvz": "2026-08-20T22:00:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Trnovany_Dodatek 3_38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-009315"
+      },
+      "dataHash": "3eb859ead8e80f5268dab2a62c05ff6167ec1454d1ea9553f720f1b2d1069906",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045766",
+      "relatedId": "b7e66f41-416d-4c53-8b1d-75c7261838ca",
+      "publicId": "GJ1MnhyyjHtgCAx5vpMgvdeWHQtVhMSu",
+      "copyFromSubmissionVersion": "/api/submission_versions/e669cccd-cfa9-4426-b19e-1fc107f3e0a0",
+      "version": 5,
+      "validityPeriod": "2026-08-20T21:45:59+02:00/",
+      "owner": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "createdBy": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T21:45:59+02:00",
+      "updatedAt": "2026-08-20T22:00:02+02:00"
+    },
+    {
+      "id": "f5425d49-07ca-456a-9ad6-badbf31f83a5",
+      "submissionVersion": "/api/submission_versions/8819c159-b14d-4a0f-9e31-02f4cc0a1afa",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b97ad938-0865-4cda-9e35-2ccd5a6ad5b6",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "27143121",
+            "nazev": "STAVOMAK s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00264555",
+            "nazev": "Obec Třebušín"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-sushco",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "sushco"
+        },
+        "nazevZakazky": "Dětská skupina Třebušín – novostavba zázemí III",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T21:44:13+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-026513",
+        "datumUverejneniVvz": "2026-08-20T21:50:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-026513"
+      },
+      "dataHash": "9c1ae3a55150f8e8e6dac927327223cef917739aa47c1595d674ab66a93c010e",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045765",
+      "relatedId": "247a7adc-4ca5-4771-93fb-bb87748d4750",
+      "publicId": "DjLYHGM1iFbJsxO1tknQXxde0ooeDDg5",
+      "version": 5,
+      "validityPeriod": "2026-08-20T21:36:36+02:00/",
+      "owner": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "createdBy": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T21:36:36+02:00",
+      "updatedAt": "2026-08-20T21:50:02+02:00"
+    },
+    {
+      "id": "7733c8bd-a146-483d-a960-75d7b65e3db2",
+      "submissionVersion": "/api/submission_versions/e669cccd-cfa9-4426-b19e-1fc107f3e0a0",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/b97ad938-0865-4cda-9e35-2ccd5a6ad5b6",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "63079763",
+            "nazev": "BARACOM a. s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00556220",
+            "nazev": "Obec Trnovany"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-sushco",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "sushco"
+        },
+        "nazevZakazky": "Dětská skupina Trnovany – novostavba zázemí",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T21:31:33+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-009315",
+        "datumUverejneniVvz": "2026-08-20T21:40:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Trnovany_Dodatek 2_38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-009315"
+      },
+      "dataHash": "aa93d0a5418c521ba446921f1bf841870eb9d9ac550579e21750b01596161375",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045764",
+      "relatedId": "b7e66f41-416d-4c53-8b1d-75c7261838ca",
+      "publicId": "RPhJMiePuN898Y58SE1l0u6IEVR6gHda",
+      "copyFromSubmissionVersion": "/api/submission_versions/fbeabbcd-abf1-482a-99b6-e87d767ffcbc",
+      "version": 5,
+      "validityPeriod": "2026-08-20T21:24:48+02:00/",
+      "owner": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "createdBy": {
+        "name": "IVONA ŠTEFKOVÁ",
+        "email": "ivona.stefkova@gmail.com",
+        "id": "4a28b68b-4733-4884-b669-ffc9349159aa"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T21:24:48+02:00",
+      "updatedAt": "2026-08-20T21:40:02+02:00"
+    },
+    {
+      "id": "180ec351-ab8e-4cc4-997a-2bb2e64f9047",
+      "submissionVersion": "/api/submission_versions/7452cd52-27a8-4c2a-9c70-af4777f0727f",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/de44c481-4733-4d1a-bdba-796d6b0e9d54",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "zadavatele": [
+          {
+            "ico": "25239155",
+            "nazev": "Abydos Idea s.r.o."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-qzbbnq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "qzbbnq"
+        },
+        "nazevZakazky": "Multifunkční dům Americká 91/7 – stavební úpravy",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": true,
+        "datumPrijetiVvz": "2026-08-20T19:30:54+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-039142",
+        "datumUverejneniVvz": "2026-08-20T19:40:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-039142"
+      },
+      "dataHash": "d8077e21e70559d2f146bd5dfe1bda12520c988d95f007949c5d1257ce82d95e",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045760",
+      "relatedId": "fcb92733-0fbc-4aa1-bd2a-f592626be684",
+      "publicId": "9vE2SN6FfvnzvxEpoj7l2y0Z0PqDNw0k",
+      "version": 5,
+      "validityPeriod": "2026-08-20T19:29:01+02:00/",
+      "owner": {
+        "name": "DAVID FROLÍK",
+        "email": "frolik@navigaassistance.cz",
+        "id": "d8709f83-5853-4346-a375-22967fe5cea7"
+      },
+      "createdBy": {
+        "name": "DAVID FROLÍK",
+        "email": "frolik@navigaassistance.cz",
+        "id": "d8709f83-5853-4346-a375-22967fe5cea7"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T19:29:01+02:00",
+      "updatedAt": "2026-08-20T19:40:02+02:00"
+    },
+    {
+      "id": "f5c134d7-d82d-4c9b-9c4e-428363f6b076",
+      "submissionVersion": "/api/submission_versions/6e44374f-f79d-4f39-b480-1d58d0642ed2",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/bcfacd81-b6cb-4704-a0e2-9dfe836786d5",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "48035599",
+            "nazev": "SWIETELSKY stavební s.r.o."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "65993390",
+            "nazev": "Ředitelství silnic a dálnic s. p."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-shgkvh",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "shgkvh"
+        },
+        "nazevZakazky": "I/14 Bílý Újezd, oprava AB , Změna č. 3.4",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T16:35:22+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-000554",
+        "datumUverejneniVvz": "2026-08-20T16:40:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Oznámení o změně závazku ze smlouvy – I/14 Bílý Újezd, oprava AB, Dodatek č. 2 = Změna č. 3.4\t \t ",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-000554"
+      },
+      "dataHash": "b900e4784c9be2de6604573ba25120836d0ed0cb760b899def6ed7cac07b3da9",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045746",
+      "relatedId": "a97081fd-6397-471d-b363-62ddaf8e48c2",
+      "publicId": "L5WJ7JnLvszo02vSDDtkvtD6DQsZsfus",
+      "copyFromSubmissionVersion": "/api/submission_versions/f9abec2b-989d-4a7f-8475-762ded39279f",
+      "version": 5,
+      "validityPeriod": "2026-08-20T16:32:45+02:00/",
+      "owner": {
+        "name": "Bohumila Dohnálková",
+        "email": "bohumila.dohnalkova@rsd.cz",
+        "id": "987404ee-40ac-4412-b090-85885195b3c3"
+      },
+      "createdBy": {
+        "name": "Bohumila Dohnálková",
+        "email": "bohumila.dohnalkova@rsd.cz",
+        "id": "987404ee-40ac-4412-b090-85885195b3c3"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T16:32:45+02:00",
+      "updatedAt": "2026-08-20T16:40:02+02:00"
+    },
+    {
+      "id": "e2d7cc3f-79df-4fef-bd18-aa768dd4adc3",
+      "submissionVersion": "/api/submission_versions/6833ac70-beb4-4f07-85e6-e1fbefc99dcf",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/39d92b04-6b54-4710-881c-96f03faa516f",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "60838744",
+            "nazev": "STRABAG a.s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00267538",
+            "nazev": "Město Chotěboř"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-pgjzab",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "pgjzab"
+        },
+        "nazevZakazky": "ZTV Boží Muka IV. etapa - dokončení",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T16:24:43+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-056013",
+        "datumUverejneniVvz": "2026-08-20T16:30:02+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-056013"
+      },
+      "dataHash": "51f15e42167be6018ae12f48094395b6ac53ac962aee76dd92522055287314b2",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045741",
+      "relatedId": "3dfa5637-39b1-4fe1-9f1f-02452ca2e5cf",
+      "publicId": "PH9LRU8LWXP8EbGbkeA5noE45RlPJS9E",
+      "version": 5,
+      "validityPeriod": "2026-08-20T16:19:46+02:00/",
+      "owner": {
+        "name": "Václav Průša",
+        "email": "prusa@chotebor.cz",
+        "id": "f581660d-6d3c-4951-8d9e-3037eece6a08"
+      },
+      "createdBy": {
+        "name": "Václav Průša",
+        "email": "prusa@chotebor.cz",
+        "id": "f581660d-6d3c-4951-8d9e-3037eece6a08"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T16:19:46+02:00",
+      "updatedAt": "2026-08-20T16:30:02+02:00"
+    },
+    {
+      "id": "6e00a7e0-7943-4808-a700-84aa2f1e33cd",
+      "submissionVersion": "/api/submission_versions/9978dbec-72ba-483c-975f-e8c0faa483e9",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/39d92b04-6b54-4710-881c-96f03faa516f",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "60838744",
+            "nazev": "STRABAG a.s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00267538",
+            "nazev": "Město Chotěboř"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-pgjzab",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "pgjzab"
+        },
+        "nazevZakazky": "ZTV Boží Muka IV. etapa - dokončení",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "38",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T16:17:38+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-056013",
+        "datumUverejneniVvz": "2026-08-20T16:20:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "38 Oznámení o změně závazku ze smlouvy – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-056013"
+      },
+      "dataHash": "9a62cd272ceaa2b00735df7d8bda21788cd33d605ab5196607f9149f70acb1fb",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045737",
+      "relatedId": "3dfa5637-39b1-4fe1-9f1f-02452ca2e5cf",
+      "publicId": "SFBBPXifyK07WB7VTuR8Ys38jFBsBvwL",
+      "version": 5,
+      "validityPeriod": "2026-08-20T16:05:14+02:00/",
+      "owner": {
+        "name": "Václav Průša",
+        "email": "prusa@chotebor.cz",
+        "id": "f581660d-6d3c-4951-8d9e-3037eece6a08"
+      },
+      "createdBy": {
+        "name": "Václav Průša",
+        "email": "prusa@chotebor.cz",
+        "id": "f581660d-6d3c-4951-8d9e-3037eece6a08"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T16:05:14+02:00",
+      "updatedAt": "2026-08-20T16:20:02+02:00"
+    },
+    {
+      "id": "f28ea915-a133-4d51-a64f-d230b6f0c82b",
+      "submissionVersion": "/api/submission_versions/38a06818-e64c-4d30-bed0-aefe55c22f67",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/200a7539-1471-4a6a-acbe-b495f5ff01aa",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "70758425",
+            "nazev": "Mgr. Jiří Kučera, advokát"
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00262978",
+            "nazev": "STATUTÁRNÍ MĚSTO LIBEREC"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-pyaoqe",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "pyaoqe"
+        },
+        "nazevZakazky": "Komplexní administrace smluvních vztahů projektu „Energetické úspory metodou EPC pro statutární město Liberec – dotační část“",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T15:50:56+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-022095",
+        "datumUverejneniVvz": "2026-08-20T16:00:05+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-25T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-022095"
+      },
+      "dataHash": "79c739bfe5520c8bb2af8fde7e4dcc8e31036bec437a0011df44971ce721e423",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045731",
+      "relatedId": "155f43dd-28c1-4187-a973-f1b25c1ddf54",
+      "publicId": "OKx1l39E3OWpVUW0yRhVuZq9vctDKDA0",
+      "version": 6,
+      "validityPeriod": "2026-08-20T15:00:06+02:00/",
+      "owner": {
+        "name": "Štěpán Ovádek",
+        "email": "ovadek.stepan@magistrat.liberec.cz",
+        "id": "0cfd5e8d-aa7d-4442-a27e-87448947afd1"
+      },
+      "createdBy": {
+        "name": "Štěpán Ovádek",
+        "email": "ovadek.stepan@magistrat.liberec.cz",
+        "id": "0cfd5e8d-aa7d-4442-a27e-87448947afd1"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T15:00:06+02:00",
+      "updatedAt": "2026-08-20T16:00:05+02:00"
+    },
+    {
+      "id": "aebe6090-0d91-49bc-94c8-805786227cd9",
+      "submissionVersion": "/api/submission_versions/4511ea17-738e-43cf-a806-cd3dc8181483",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/5a515d03-61a3-4e93-b868-b97d73dbae15",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "17331099",
+            "nazev": "MI Roads a.s."
+          }
+        ],
+        "zadavatele": [
+          {
+            "ico": "00080837",
+            "nazev": "Správa a údržba silnic Ústeckého kraje, příspěvková organizace"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-tizewl",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "tizewl"
+        },
+        "nazevZakazky": "Oprava AB povrchu silnic č. II/607, III/25021 PZ – Triangl",
+        "uverejnitTed": false,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-21T08:48:36+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045793",
+        "datumUverejneniVvz": "2026-08-21T08:50:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniVvz": "2026-08-26T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka - Trinagl"
+      },
+      "dataHash": "240ac00f10553b96aa431c9676b211246fc762923a78f0429758283c68a5e480",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045793",
+      "relatedId": "19424e7c-d1b3-46f1-801c-285c101fbbd8",
+      "publicId": "cb2sArBADQJusAr1RIRYfFK4UMlk19Jd",
+      "version": 6,
+      "validityPeriod": "2026-08-20T14:54:39+02:00/",
+      "owner": {
+        "name": "JANA MALÁ",
+        "email": "mala.tp@susuk.cz",
+        "id": "553d154f-9f40-46a4-a4d2-393c31f51d1c"
+      },
+      "createdBy": {
+        "name": "JANA MALÁ",
+        "email": "mala.tp@susuk.cz",
+        "id": "553d154f-9f40-46a4-a4d2-393c31f51d1c"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:54:39+02:00",
+      "updatedAt": "2026-08-21T08:50:01+02:00"
+    },
+    {
+      "id": "26704361-93a2-4211-840b-8c2c87423d51",
+      "submissionVersion": "/api/submission_versions/3cbd261b-a5ad-4ace-adc9-91e35be56e75",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/bb9b9db5-0e61-4e9a-bb64-01fa78107f21",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "580865-2026",
+        "zadavatele": [
+          {
+            "ico": "61383082",
+            "nazev": "Ústřední vojenská nemocnice - Vojenská fakultní nemocnice Praha"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-xiybqv",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "xiybqv"
+        },
+        "nazevZakazky": "ÚVN-VoFN Praha - rekonstrukce Energocentra jih u Pavilonu CH3 - realizace ",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:55:45+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:55:49+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-035788",
+        "datumUverejneniTed": "2026-08-21T05:00:28+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:08+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-25T09:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-044077"
+      },
+      "dataHash": "0ae38a36fc8cc4e5525ba4fb91f808850bb7a3f1f4e5422861d7e48571398986",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045712",
+      "relatedId": "a0ec41e6-bddd-44ce-8dae-c3cdc1f8ab01",
+      "publicId": "ZKaqOfQxMip8cjIvevIHUPnZ1NKEosjO",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:53:34+02:00/",
+      "owner": {
+        "name": "RADEK SKŮRA",
+        "email": "verejnezakazky@uvn.cz",
+        "id": "5d45918f-3d0a-4a39-adab-32a24bc9b649"
+      },
+      "createdBy": {
+        "name": "RADEK SKŮRA",
+        "email": "verejnezakazky@uvn.cz",
+        "id": "5d45918f-3d0a-4a39-adab-32a24bc9b649"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:53:34+02:00",
+      "updatedAt": "2026-08-21T08:01:08+02:00"
+    },
+    {
+      "id": "fc6bf89b-2308-4609-bbe6-955b56c006b6",
+      "submissionVersion": "/api/submission_versions/c63cc97f-0080-4f53-bc29-7f4c4239c42e",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/75b3a6de-b14c-4ba4-957d-060e5f95df70",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "579468-2026",
+        "zadavatele": [
+          {
+            "ico": "00159816",
+            "nazev": "Fakultní nemocnice u sv. Anny v Brně"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-wtgpsb",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "wtgpsb"
+        },
+        "nazevZakazky": "Mytí oken",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:55:31+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:55:35+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045711",
+        "datumUverejneniTed": "2026-08-21T05:00:27+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:07+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-22T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "5a47ea4d24082cb13d48aa4585c17553040bf609156a8a48c5ebd197567ce6c7",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045711",
+      "relatedId": "c8ab23db-2fa8-4a5b-a267-0aad37abcf95",
+      "publicId": "qIkDkq8NEGDkAGK0eXEw6trlmx3OtJix",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:44:04+02:00/",
+      "owner": {
+        "name": "IVAN MRKVA",
+        "email": "ivan.mrkva@fnusa.cz",
+        "id": "43eb345f-fe9f-4a67-aac7-0d9feaa0763d"
+      },
+      "createdBy": {
+        "name": "IVAN MRKVA",
+        "email": "ivan.mrkva@fnusa.cz",
+        "id": "43eb345f-fe9f-4a67-aac7-0d9feaa0763d"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:44:04+02:00",
+      "updatedAt": "2026-08-21T08:01:07+02:00"
+    },
+    {
+      "id": "44ae281f-6cca-4eb7-a314-017bb21863fb",
+      "submissionVersion": "/api/submission_versions/aee75239-d555-4e7d-aa9a-49d74497c835",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/bc747add-e80c-4b36-a24e-ce8dc407ccdd",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "581139-2026",
+        "zadavatele": [
+          {
+            "ico": "45246858",
+            "nazev": "MČ Praha - Troja"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-lhdbmp",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "lhdbmp"
+        },
+        "nazevZakazky": "Dostavba Základní školy a Gymnázia Trojská",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:47:48+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:47:51+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-038008",
+        "datumUverejneniTed": "2026-08-21T05:00:27+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:00:51+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-08-31T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-041750"
+      },
+      "dataHash": "2062f1844f82f75e8be954445d918a08e1074e458e993b956c0613d9c91c3517",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045708",
+      "relatedId": "6cd2451b-b3e0-4460-aba5-964cd0766d6f",
+      "publicId": "XkVD8rwtftl3lqm8OqnEEDrIHxFxYi72",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:42:57+02:00/",
+      "owner": {
+        "name": "KATEŘINA ENGLEROVÁ",
+        "email": "katerina.englerova@karolas.cz",
+        "id": "2affdc32-0d11-47fc-8ad3-7c035b4378ee"
+      },
+      "createdBy": {
+        "name": "KATEŘINA ENGLEROVÁ",
+        "email": "katerina.englerova@karolas.cz",
+        "id": "2affdc32-0d11-47fc-8ad3-7c035b4378ee"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:42:57+02:00",
+      "updatedAt": "2026-08-21T08:00:51+02:00"
+    },
+    {
+      "id": "e30b3295-02c3-40bb-a163-cef8da8610f7",
+      "submissionVersion": "/api/submission_versions/3774070d-9adc-4eb3-aaf9-de8b042b398f",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/0cc0a54d-f254-44ae-859d-c25c40d695c8",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "578979-2026",
+        "zadavatele": [
+          {
+            "ico": "00098892",
+            "nazev": "Fakultní nemocnice Olomouc"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-sokmcq",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "sokmcq"
+        },
+        "nazevZakazky": "INTERFERON BETA-1A 2026",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:41:22+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:41:25+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-045121",
+        "datumUverejneniTed": "2026-08-21T05:00:27+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:00:53+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-24T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-045121"
+      },
+      "dataHash": "c410e31b05e2a0116040de5cc83450d08257c1c8a05cc00d0e7a0cda20424e21",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045705",
+      "relatedId": "cdc4f752-4d71-4bb8-be09-7e886589b8e8",
+      "publicId": "Lfq2nJ0F1juaoGtYBXG3aBagAlGFhx3c",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:39:28+02:00/",
+      "owner": {
+        "name": "Jana Hašková",
+        "email": "jana.haskova@fnol.cz",
+        "id": "2b5ab44e-2bee-4c4f-a1fd-051a0e6553e9"
+      },
+      "createdBy": {
+        "name": "Jana Hašková",
+        "email": "jana.haskova@fnol.cz",
+        "id": "2b5ab44e-2bee-4c4f-a1fd-051a0e6553e9"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:39:28+02:00",
+      "updatedAt": "2026-08-21T08:00:53+02:00"
+    },
+    {
+      "id": "e6c09a94-3c0b-4dcf-8782-f119a70df0b5",
+      "submissionVersion": "/api/submission_versions/2f60f4de-2d8a-4ccd-a85f-ec9a51c85e0b",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/f5ca66db-b345-42fd-98c2-45811e0c2aa5",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "26177005",
+            "nazev": "COLAS CZ, a.s."
+          },
+          {
+            "ico": "25317628",
+            "nazev": "FIRESTA-Fišer, rekonstrukce, stavby a.s."
+          }
+        ],
+        "evCisloTed": "579004-2026",
+        "zadavatele": [
+          {
+            "ico": "70932581",
+            "nazev": "Správa a údržba silnic Jihomoravského kraje, příspěvková organizace kraje"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-ikocvc",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "ikocvc"
+        },
+        "nazevZakazky": "RÁMCOVÁ DOHODA NA STAVBY NEINVESTIČNÍHO CHARAKTERU II/416 KŘENOVICE",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:56:28+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:56:30+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-015364",
+        "datumUverejneniTed": "2026-08-21T05:00:28+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:00:52+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-015364"
+      },
+      "dataHash": "7945d363add3d6f27ade439348a39c807bccc6bf415297c66e7ec83d53711caf",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045714",
+      "relatedId": "01a977fc-f153-4b3e-8539-adcd36f81c1e",
+      "publicId": "2w8Cti2yHXXkZjaKkcFORRQxjSJy32nT",
+      "copyFromSubmissionVersion": "/api/submission_versions/4986953a-6f90-4057-83e3-1d5dc9a2579d",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:38:40+02:00/",
+      "owner": {
+        "name": "Gabriela  Valentová ",
+        "email": "gabriela.valentova@susjmk.cz",
+        "id": "8adc20f7-1779-4792-baa2-ecf2eec0d1c1"
+      },
+      "createdBy": {
+        "name": "Gabriela  Valentová ",
+        "email": "gabriela.valentova@susjmk.cz",
+        "id": "8adc20f7-1779-4792-baa2-ecf2eec0d1c1"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:38:40+02:00",
+      "updatedAt": "2026-08-21T08:00:52+02:00"
+    },
+    {
+      "id": "41e55f25-dbc6-4d47-bcfa-a489e1011499",
+      "submissionVersion": "/api/submission_versions/9ec55c3d-1bf5-479f-95da-d56a1959e232",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/bcfacd81-b6cb-4704-a0e2-9dfe836786d5",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "25346784",
+            "nazev": "CONSULTEST s.r.o."
+          }
+        ],
+        "evCisloTed": "581014-2026",
+        "zadavatele": [
+          {
+            "ico": "65993390",
+            "nazev": "Ředitelství silnic a dálnic s. p."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-jspumc",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "jspumc"
+        },
+        "nazevZakazky": "Rámcová dohoda na diagnostiku vozovek 2022",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:58:42+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:58:45+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2022-025151",
+        "datumUverejneniTed": "2026-08-21T05:00:28+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:09+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2022-025151"
+      },
+      "dataHash": "c95c5f361afad9a458a5439ffab0699d3e68d9a124e0ac5a63080659a01e1293",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045717",
+      "relatedId": "bb7e84c2-d73f-405a-99ad-852fa31aa1b6",
+      "publicId": "24kB7JBpeUuYjwVAvwOO4r63UsOz1hEv",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:32:10+02:00/",
+      "owner": {
+        "name": "Barbora Szajdová",
+        "email": "barbora.szajdova@rsd.cz",
+        "id": "f08a0faa-8290-4637-a418-60a4e51e7cd1"
+      },
+      "createdBy": {
+        "name": "Barbora Szajdová",
+        "email": "barbora.szajdova@rsd.cz",
+        "id": "f08a0faa-8290-4637-a418-60a4e51e7cd1"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:32:10+02:00",
+      "updatedAt": "2026-08-21T08:01:09+02:00"
+    },
+    {
+      "id": "988475bb-415f-45b7-915c-04882ab5f315",
+      "submissionVersion": "/api/submission_versions/cf19006f-81af-4e6b-8977-b998fc63bb80",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/5a515d03-61a3-4e93-b868-b97d73dbae15",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "26177005",
+            "nazev": "COLAS CZ, a.s."
+          },
+          {
+            "ico": "05758734",
+            "nazev": "Silnice Topolany a.s."
+          }
+        ],
+        "evCisloTed": "579232-2026",
+        "zadavatele": [
+          {
+            "ico": "00080837",
+            "nazev": "Správa a údržba silnic Ústeckého kraje, příspěvková organizace"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-tuovey",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "tuovey"
+        },
+        "nazevZakazky": "Rámcová dohoda na zhotovitele souvislých oprav živičných povrchů silnic v majetku Ústeckého kraje",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:50:06+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:50:10+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2024-008170",
+        "datumUverejneniTed": "2026-08-21T05:00:27+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:09+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka - dílčí minitender - Tuchořice-Třeskonice",
+        "evCisloVvzSouvisejicihoFormulare": "F2024-008170"
+      },
+      "dataHash": "f2814f29ceca646d983f2f45ee0a9e1c9b98c8aca57fdf384f14531d3f334b72",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045709",
+      "relatedId": "e128b253-99b8-4828-842f-4785c0c6af45",
+      "publicId": "Hf2NCcaIBrcHLtZQaZ5reNNTGPnwJspl",
+      "copyFromSubmissionVersion": "/api/submission_versions/e9b26a74-b19d-431d-91ff-03e993a46959",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:27:52+02:00/",
+      "owner": {
+        "name": "Ilona Blínová",
+        "email": "puchmeltrova.tp@susuk.cz",
+        "id": "fd67b604-d4da-4b6d-befd-942bb050191d"
+      },
+      "createdBy": {
+        "name": "Ilona Blínová",
+        "email": "puchmeltrova.tp@susuk.cz",
+        "id": "fd67b604-d4da-4b6d-befd-942bb050191d"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:27:52+02:00",
+      "updatedAt": "2026-08-21T08:01:09+02:00"
+    },
+    {
+      "id": "b7429101-15b7-4f2f-8219-bd1eb51e3508",
+      "submissionVersion": "/api/submission_versions/0caa125f-64ed-4b0c-a4fd-7cfcd0d24edc",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/9b3f7b89-fe04-44c4-a9fe-5e4ea7d7c00e",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "578913-2026",
+        "zadavatele": [
+          {
+            "ico": "00020699",
+            "nazev": "Český hydrometeorologický ústav"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-cvcoga",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "cvcoga"
+        },
+        "nazevZakazky": "Smlouva na pozáruční servis a podporu srážkoměrné sítě CZRAD 2026-2031",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": true,
+        "datumPrijetiVvz": "2026-08-20T14:25:32+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:25:35+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2025-065443",
+        "datumUverejneniTed": "2026-08-21T05:00:26+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:07+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2025-071140"
+      },
+      "dataHash": "42e2e845faf0e66bbbc8e45a356de934fa5f7271619df0515879e644ba9b8a7a",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045699",
+      "relatedId": "c4f93e5d-4105-4577-a55d-87b59626fbc5",
+      "publicId": "V7LfxgRiG4Mi5BcPkj6SnVuIiPmkGQwL",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:23:31+02:00/",
+      "owner": {
+        "name": "ZUZANA SOŠKOVÁ",
+        "email": "zuzana.soskova@chmi.cz",
+        "id": "cd8236ad-ae20-4fad-94ec-e24cbec7b080"
+      },
+      "createdBy": {
+        "name": "ZUZANA SOŠKOVÁ",
+        "email": "zuzana.soskova@chmi.cz",
+        "id": "cd8236ad-ae20-4fad-94ec-e24cbec7b080"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:23:31+02:00",
+      "updatedAt": "2026-08-21T08:01:07+02:00"
+    },
+    {
+      "id": "631c58e7-a13a-4360-8ce6-591cfb96d1d0",
+      "submissionVersion": "/api/submission_versions/e8dc7050-036e-4f3c-8f7b-d93d05845937",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/d57573f9-3a54-45a6-b2c2-543f411b0259",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "579411-2026",
+        "zadavatele": [
+          {
+            "ico": "75158094",
+            "nazev": "Obec Želechovice nad Dřevnicí"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-voqogx",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "voqogx"
+        },
+        "nazevZakazky": "Poskytování energetických služeb metodou EPC v obci Želechovice nad Dřevnicí",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:35:41+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:35:45+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-038417",
+        "datumUverejneniTed": "2026-08-21T05:00:26+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:00:50+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-03T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-044120"
+      },
+      "dataHash": "1952749b5add8c2a9692496fe1b3a061a6532439fd93f85ce194884201e775d8",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045704",
+      "relatedId": "810de154-2cc3-4a55-9d11-cc2719a0c22e",
+      "publicId": "aOuIRRpQcXHCIl1hz887uXOHRF8zjuyX",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:19:29+02:00/",
+      "owner": {
+        "name": "PETR FRŐMEL",
+        "email": "petr.fromel@post.cz",
+        "id": "10240e54-4a69-4fde-a556-42df1d4f9c00"
+      },
+      "createdBy": {
+        "name": "PETR FRŐMEL",
+        "email": "petr.fromel@post.cz",
+        "id": "10240e54-4a69-4fde-a556-42df1d4f9c00"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:19:29+02:00",
+      "updatedAt": "2026-08-21T08:00:50+02:00"
+    },
+    {
+      "id": "ceba27c5-1748-4a4e-a76f-2675c66bd343",
+      "submissionVersion": "/api/submission_versions/e0e6b8d2-bc7d-4cac-a271-d1734fde23c6",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/35028dcf-fa73-4016-a1c5-64204d140c51",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "581119-2026",
+        "zadavatele": [
+          {
+            "ico": "26361078",
+            "nazev": "Domažlická nemocnice, a.s."
+          },
+          {
+            "ico": "26361086",
+            "nazev": "Stodská nemocnice, a.s."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-qtaiib",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "qtaiib"
+        },
+        "nazevZakazky": "NÁKUP 3 KS SANITNÍCH VOZIDEL PRO NEMOCNICE PK 2026 - II. VYHLÁŠENÍ",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:10:30+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:10:34+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-042104",
+        "datumUverejneniTed": "2026-08-21T05:00:25+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:05+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-21T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-042104"
+      },
+      "dataHash": "5a86da89ce30001ef7c2b61e0d2f446856b28c00ec9b33ff088d7c61aa7498d0",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045692",
+      "relatedId": "9e551993-18e8-4789-a89c-710a6c868fb8",
+      "publicId": "EiXFA9MYtLFrb4rSiWCyq6BVUe9CNqHR",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:07:30+02:00/",
+      "owner": {
+        "name": "Jan Kronďák",
+        "email": "jan.krondak@cnpk.cz",
+        "id": "7ccd347f-594f-439e-b484-5701d04708e2"
+      },
+      "createdBy": {
+        "name": "Jan Kronďák",
+        "email": "jan.krondak@cnpk.cz",
+        "id": "7ccd347f-594f-439e-b484-5701d04708e2"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:07:30+02:00",
+      "updatedAt": "2026-08-21T08:01:05+02:00"
+    },
+    {
+      "id": "03a141b1-ddef-4a2d-be80-c7f8b00cd794",
+      "submissionVersion": "/api/submission_versions/f2fd9453-803a-4fee-9721-453ad39f9c01",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/bcfacd81-b6cb-4704-a0e2-9dfe836786d5",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "dodavatele": [
+          {
+            "ico": "25346784",
+            "nazev": "CONSULTEST s.r.o."
+          }
+        ],
+        "evCisloTed": "579337-2026",
+        "zadavatele": [
+          {
+            "ico": "65993390",
+            "nazev": "Ředitelství silnic a dálnic s. p."
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-jspumc",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "jspumc"
+        },
+        "nazevZakazky": "Rámcová dohoda na diagnostiku vozovek 2022",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "29",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:29:58+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:30:02+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2022-025151",
+        "datumUverejneniTed": "2026-08-21T05:00:26+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:00:49+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "uzivatelskyNazevFormulare": "29 Oznámení o výsledku zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2022-025151"
+      },
+      "dataHash": "08fb459b91f95454c4e7985a0886092d83835a6f5c6aa2aff75fc38da8c6c77b",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045701",
+      "relatedId": "bb7e84c2-d73f-405a-99ad-852fa31aa1b6",
+      "publicId": "riuIPnDQ3QQ8Tt7aSc0ZQgjHwK3n50Gj",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:06:59+02:00/",
+      "owner": {
+        "name": "Barbora Szajdová",
+        "email": "barbora.szajdova@rsd.cz",
+        "id": "f08a0faa-8290-4637-a418-60a4e51e7cd1"
+      },
+      "createdBy": {
+        "name": "Barbora Szajdová",
+        "email": "barbora.szajdova@rsd.cz",
+        "id": "f08a0faa-8290-4637-a418-60a4e51e7cd1"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:06:59+02:00",
+      "updatedAt": "2026-08-21T08:00:50+02:00"
+    },
+    {
+      "id": "a2251958-6d5c-4ad5-9ce7-d6ca85362cfb",
+      "submissionVersion": "/api/submission_versions/c1ccc247-c484-4f0d-b875-581f26ce4c08",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/75b3a6de-b14c-4ba4-957d-060e5f95df70",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "579109-2026",
+        "zadavatele": [
+          {
+            "ico": "00159816",
+            "nazev": "Fakultní nemocnice u sv. Anny v Brně"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-wtgpsb",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "wtgpsb"
+        },
+        "nazevZakazky": "Kompenzační pomůcky pro pacienty s poruchou sluchu",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:10:35+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:10:39+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-041352",
+        "datumUverejneniTed": "2026-08-21T05:00:25+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:06+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-21T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-041352"
+      },
+      "dataHash": "8600392688e24dc491e47e9fae2c6ad2b6082399ec5e337f2f86dcc92cdeac63",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045693",
+      "relatedId": "2292917e-4f5e-4f2d-a50f-4a9e6be84f44",
+      "publicId": "4MjTdwqELCgptV5e1Ktu5I1E4asYBx3K",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:06:45+02:00/",
+      "owner": {
+        "name": "IVAN MRKVA",
+        "email": "ivan.mrkva@fnusa.cz",
+        "id": "43eb345f-fe9f-4a67-aac7-0d9feaa0763d"
+      },
+      "createdBy": {
+        "name": "IVAN MRKVA",
+        "email": "ivan.mrkva@fnusa.cz",
+        "id": "43eb345f-fe9f-4a67-aac7-0d9feaa0763d"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:06:45+02:00",
+      "updatedAt": "2026-08-21T08:01:06+02:00"
+    },
+    {
+      "id": "9d08e27f-ee95-4bf9-9708-a0b4df181549",
+      "submissionVersion": "/api/submission_versions/e4281b42-f88d-4225-91df-85e96be73124",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/4817a9c7-576c-44f2-986a-239bc56e51c2",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "579517-2026",
+        "zadavatele": [
+          {
+            "ico": "70986444",
+            "nazev": "Základní škola Mukařov"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-vlnhew",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "vlnhew"
+        },
+        "nazevZakazky": "Nový pavilon a tělocvična ZŠ Mukařov – projektové práce a související inženýrská činnost vč. autorského dozoru",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:43:11+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:43:14+02:00",
+        "formularOpravuje": false,
+        "evCisloZakazkyVvz": "Z2026-045706",
+        "datumUverejneniTed": "2026-08-21T05:00:27+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:00:32+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-21T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka"
+      },
+      "dataHash": "124d5ba64be851d14e3b4df963f0df84c96b3f674d77accb5590dde10fb443a8",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045706",
+      "relatedId": "5b56401f-6744-4fa0-8f2c-dd58a004f3be",
+      "publicId": "KAsJpAJYqU6nQNVWsvyJJfmb74malZn2",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:04:48+02:00/",
+      "owner": {
+        "name": "MATĚJ BÁRTA",
+        "email": "info@czech-tenders.cz",
+        "id": "5a5a07c8-d191-4eac-8682-5a9ad35a66f2"
+      },
+      "createdBy": {
+        "name": "MATĚJ BÁRTA",
+        "email": "info@czech-tenders.cz",
+        "id": "5a5a07c8-d191-4eac-8682-5a9ad35a66f2"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:04:48+02:00",
+      "updatedAt": "2026-08-21T08:00:32+02:00"
+    },
+    {
+      "id": "e8daff06-93ae-4e06-89a3-8ad7a98617fa",
+      "submissionVersion": "/api/submission_versions/bbe1fb65-6501-4286-a7b0-9f74c54ee841",
+      "form": "/api/forms/20100a01-c48f-4211-8242-7ec5104462fe",
+      "formSchemaVersion": "/api/form_schema_versions/23399c76-ee07-42f3-b28a-e0f22361eaf1",
+      "organization": "/api/organizations/f57eb5ef-ddd9-49bb-bfa3-8582715ebbc2",
+      "data": {
+        "verzeSdk": "1.13.2",
+        "evCisloTed": "578691-2026",
+        "zadavatele": [
+          {
+            "ico": "70892822",
+            "nazev": "Pardubický kraj"
+          }
+        ],
+        "zdrojPodani": {
+          "id": "WEB-ovzvqt",
+          "typ": "WEB",
+          "uzivatelVvzLogin": "ovzvqt"
+        },
+        "nazevZakazky": "Rehabilitační ústav Brandýs nad Orlicí, výstavba nové\nbudovy, KRANIOPROGRAM",
+        "uverejnitTed": true,
+        "uverejnitVvz": true,
+        "druhFormulare": "16",
+        "zakazkaZrusena": false,
+        "datumPrijetiVvz": "2026-08-20T14:02:35+02:00",
+        "datumOdeslaniTed": "2026-08-20T14:02:37+02:00",
+        "formularOpravuje": true,
+        "evCisloZakazkyVvz": "Z2026-038428",
+        "datumUverejneniTed": "2026-08-21T05:00:24+02:00",
+        "datumUverejneniVvz": "2026-08-21T08:01:01+02:00",
+        "formularZneplatnen": false,
+        "lhutaUverejneniTed": "2026-08-24T02:00:00+02:00",
+        "lhutaUverejneniVvz": "2026-08-21T23:59:00+02:00",
+        "lhutaNabidkyZadosti": "2026-09-09T10:00:00+02:00",
+        "uzivatelskyNazevFormulare": "16 Oznámení o zahájení zadávacího řízení – obecná veřejná zakázka",
+        "evCisloVvzSouvisejicihoFormulare": "F2026-043570"
+      },
+      "dataHash": "a2dab847fc0258c73ef39ea394e7854661f66a0772551b7ffc1983fa1ddd99b4",
+      "workflowPlaceCode": "UVEREJNENO_VVZ",
+      "variableId": "F2026-045686",
+      "relatedId": "ebe9ff2f-6684-4a72-84ae-12de43549e98",
+      "publicId": "F7NVen4PKS4HoGE40oIEx67b0ulKcZ18",
+      "version": 9,
+      "validityPeriod": "2026-08-20T14:01:23+02:00/",
+      "owner": {
+        "name": "ROBERT HEBKÝ",
+        "email": "advokat@hebky.cz",
+        "id": "eb52a466-d01d-4c3b-9a05-db387875992f"
+      },
+      "createdBy": {
+        "name": "ROBERT HEBKÝ",
+        "email": "advokat@hebky.cz",
+        "id": "eb52a466-d01d-4c3b-9a05-db387875992f"
+      },
+      "updatedBy": {
+        "name": "vvz-uloziste-formularu-bridge",
+        "id": "b6dee6f2-1d53-44e4-80c6-63e85e545649"
+      },
+      "createdAt": "2026-08-20T14:01:23+02:00",
+      "updatedAt": "2026-08-21T08:01:02+02:00"
+    }
+  ]
 }
