@@ -1,0 +1,126 @@
+name: TEMP Index Kadaň PeerTube archive from main
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-kadan-peertube-index-main.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out isolated research branch
+        uses: actions/checkout@v4
+        with:
+          ref: research/kadan-peertube-index-20260823
+          fetch-depth: 0
+
+      - name: Query public PeerTube APIs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests
+          rm -rf /tmp/kadan-peertube-index
+          mkdir -p /tmp/kadan-peertube-index
+          python <<'PY'
+          from __future__ import annotations
+          import json, pathlib, time, urllib.parse
+          import requests
+
+          out = pathlib.Path('/tmp/kadan-peertube-index')
+          s = requests.Session()
+          s.headers.update({'User-Agent': 'Mozilla/5.0 public-records-research/1.0'})
+
+          def get_json(label, url):
+              last = None
+              for attempt in range(4):
+                  try:
+                      r = s.get(url, timeout=120)
+                      (out / f'{label}.status.txt').write_text(f'{r.status_code}\n{r.url}\n', encoding='utf-8')
+                      r.raise_for_status()
+                      data = r.json()
+                      (out / f'{label}.json').write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+                      return data
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(2 ** attempt)
+              (out / f'{label}.error.txt').write_text(repr(last), encoding='utf-8')
+              return None
+
+          base = 'https://tv.pirati.cz'
+          calls = {
+              'channel_handle': f'{base}/api/v1/video-channels/kadansky_pirat/videos?start=0&count=100&sort=-publishedAt',
+              'channel_id': f'{base}/api/v1/video-channels/704/videos?start=0&count=100&sort=-publishedAt',
+              'account': f'{base}/api/v1/accounts/pavel.miltner/videos?start=0&count=100&sort=-publishedAt',
+          }
+          queries = ['Kadaň','Kadan','zastupitelstvo města Kadaň','zasedání zastupitelstva města Kadaň','zastupitelstva města Kadaň','Kadaň 2023','Kadaň 2024']
+          for i, q in enumerate(queries, 1):
+              calls[f'local_search_{i:02d}'] = f"{base}/api/v1/search/videos?" + urllib.parse.urlencode({'search': q, 'start': 0, 'count': 100, 'sort': '-publishedAt', 'searchTarget': 'local'})
+              calls[f'sepia_search_{i:02d}'] = 'https://search.joinpeertube.org/api/v1/search/videos?' + urllib.parse.urlencode({'search': q, 'start': 0, 'count': 100})
+
+          payloads = {label: get_json(label, url) for label, url in calls.items()}
+          videos = {}
+          def ingest(item, source):
+              if not isinstance(item, dict): return
+              ident = item.get('uuid') or item.get('shortUUID') or item.get('id')
+              if not ident: return
+              key = str(ident)
+              rec = videos.setdefault(key, {'uuid': item.get('uuid'), 'shortUUID': item.get('shortUUID'), 'id': item.get('id'), 'name': item.get('name') or item.get('title'), 'publishedAt': item.get('publishedAt') or item.get('createdAt'), 'duration': item.get('duration'), 'url': item.get('url'), 'channel': '', 'account': '', 'sources': []})
+              channel = item.get('channel') or item.get('videoChannel')
+              if isinstance(channel, dict): rec['channel'] = channel.get('displayName') or channel.get('name') or ''
+              elif channel: rec['channel'] = str(channel)
+              account = item.get('account')
+              if isinstance(account, dict): rec['account'] = account.get('displayName') or account.get('name') or ''
+              elif account: rec['account'] = str(account)
+              if source not in rec['sources']: rec['sources'].append(source)
+
+          for label, payload in payloads.items():
+              if isinstance(payload, dict):
+                  for item in payload.get('data') or []: ingest(item, label)
+
+          rows = sorted(videos.values(), key=lambda x: str(x.get('publishedAt') or ''), reverse=True)
+          header = ['publishedAt','name','uuid','shortUUID','duration','channel','account','url','sources']
+          def tsv(items, path):
+              lines = ['\t'.join(header)]
+              for r in items:
+                  vals = [r.get('publishedAt'),r.get('name'),r.get('uuid'),r.get('shortUUID'),r.get('duration'),r.get('channel'),r.get('account'),r.get('url'),','.join(r.get('sources') or [])]
+                  lines.append('\t'.join('' if v is None else str(v).replace('\t',' ') for v in vals))
+              path.write_text('\n'.join(lines)+'\n', encoding='utf-8')
+          (out/'all-videos.json').write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding='utf-8')
+          tsv(rows, out/'all-videos.tsv')
+          wanted = []
+          for r in rows:
+              text = f"{r.get('name','')} {r.get('publishedAt','')}".lower()
+              if ('zastupitel' in text or 'kadaň' in text or 'kadan' in text) and ('2023' in text or '2024' in text): wanted.append(r)
+          (out/'kadan-council-2023-2024.json').write_text(json.dumps(wanted, ensure_ascii=False, indent=2), encoding='utf-8')
+          tsv(wanted, out/'kadan-council-2023-2024.tsv')
+          (out/'summary.txt').write_text(f'api_calls={len(calls)}\nunique_videos={len(rows)}\nmatched_2023_2024={len(wanted)}\n', encoding='utf-8')
+          PY
+
+      - name: Publish index to research branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'kadan-vote-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          rm -rf research-output/kadan-peertube-index
+          mkdir -p research-output/kadan-peertube-index
+          cp -a /tmp/kadan-peertube-index/. research-output/kadan-peertube-index/
+          git add research-output/kadan-peertube-index
+          git commit -m 'research: index public Kadaň PeerTube records [skip ci]'
+          git push origin HEAD:research/kadan-peertube-index-20260823
+
+      - name: Upload index artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-peertube-index-2023-2024
+          path: /tmp/kadan-peertube-index/
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: error
