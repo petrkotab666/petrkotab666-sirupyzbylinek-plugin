@@ -98,12 +98,17 @@ jobs:
                   safe = re.sub(r"[^A-Za-z0-9_-]", "_", str(sid))
                   fetch(f"10_{idx:03d}_{safe}_submission", f"/api/submissions/{urllib.parse.quote(str(sid))}")
                   fetch(f"11_{idx:03d}_{safe}_children", "/api/submissions/children/search", {"submission": sid})
-                  fetch(f"12_{idx:03d}_{safe}_attachments", "/api/submission_attachments", {"submission": sid})
 
           with open(os.path.join(OUT, "01_summary.json"), "w", encoding="utf-8") as f:
               json.dump(summary, f, ensure_ascii=False, indent=2)
 
-          for form_no in ["F2026-018644", "F2026-033864", "F2026-040224"]:
+          versions = {
+              "F2026-040224": "b02f4507-eeda-4bbb-97e7-ddb60dc57941",
+              "F2026-033864": "c4efe7d3-7291-415a-9380-e4db5c83cacd",
+              "F2026-018644": "ac0421e1-f9e2-4a9d-9f5e-1aaee3dda77e",
+          }
+          for form_no, version_id in versions.items():
+              fetch("12_" + form_no + "_attachments", "/api/submission_attachments", {"submissionVersion": version_id})
               fetch("20_" + form_no, "/api/submissions/search", {
                   "page": 1,
                   "limit": 50,
