@@ -1,25 +1,24 @@
 {
   "schema": 1,
-  "version": "20260822-2136-akce-domino-runtime-guard",
+  "version": "20260823-2202-lastminuteslevy-ad-rotation",
   "files": [],
   "patches": [
     {
-      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
-      "old": "</body>",
-      "new": "<style data-nk-layout-guard-style=\"akce-domino-20260822\">main.article-shell{display:grid!important;grid-template-columns:minmax(0,790px) 280px!important;grid-template-areas:\"content sidebar\"!important;gap:28px!important;align-items:start!important}main.article-shell>.article{grid-area:content!important;grid-column:1!important;grid-row:1!important;width:100%!important;max-width:790px!important;display:block!important}main.article-shell>.sticky{grid-area:sidebar!important;grid-column:2!important;grid-row:1!important;display:block!important}main.article-shell>:not(.article):not(.sticky){display:none!important}@media(max-width:900px){main.article-shell{display:block!important}.article{max-width:none!important;width:100%!important}.sticky{position:static!important;margin-top:24px!important}}</style><script data-nk-layout-guard=\"akce-domino-20260822\">(function(){function clean(){var m=document.querySelector('main.article-shell');if(!m)return;Array.from(m.children).forEach(function(n){if(!n.classList.contains('article')&&!n.classList.contains('sticky'))n.remove();});}clean();document.addEventListener('DOMContentLoaded',clean);setTimeout(clean,0);setTimeout(clean,100);setTimeout(clean,500);setTimeout(clean,1500);var m=document.querySelector('main.article-shell');if(m&&window.MutationObserver){new MutationObserver(clean).observe(m,{childList:true});}})();</script>\n</body>",
+      "path": "reklamy.js",
+      "old": "/* ACTIVE_PROMOTIONS_END */",
+      "new": "  {id:'owned-lastminuteslevy-banner',title:'LastMinuteSlevy.cz',text:'Aktuální last minute nabídky s porovnáním podle ceny, termínu a slevy.',url:'https://www.lastminuteslevy.cz/',banner:'https://pojistime.to/assets/network-promos/lastminuteslevy-square-20260823.svg?v=20260823-1',wideBanner:'https://pojistime.to/assets/network-promos/lastminuteslevy-wide-20260823.svg?v=20260823-1',tag:'Náš web · dovolená',contexts:['home','travel','family','sidebar','general','local'],weight:9,fullBleed:true,runtimeVerified:true},\n/* ACTIVE_PROMOTIONS_END */",
       "count": 1
     }
   ],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
-    "https://www.nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html"
+    "https://nasekadan.cz/reklamy.js",
+    "https://www.nasekadan.cz/reklamy.js"
   ],
   "verify_present": [
-    "data-nk-layout-guard-style=\"akce-domino-20260822\"",
-    "main.article-shell>:not(.article):not(.sticky){display:none!important}",
-    "data-nk-layout-guard=\"akce-domino-20260822\"",
-    "MutationObserver(clean)"
+    "owned-lastminuteslevy-banner",
+    "lastminuteslevy-wide-20260823.svg",
+    "Aktuální last minute nabídky s porovnáním podle ceny, termínu a slevy."
   ],
   "verify_absent": []
 }
