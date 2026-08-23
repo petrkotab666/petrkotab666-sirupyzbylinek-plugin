@@ -1,0 +1,111 @@
+name: Temporary VVZ public API fetch
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-vvz-fetch.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-vvz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch public VVZ records
+        shell: bash
+        run: |
+          mkdir -p out
+          python3 - <<'PY'
+          import json, os, re, urllib.parse, urllib.request, urllib.error
+
+          BASE = "https://api.vvz.nipez.cz"
+          HEADERS = {
+              "Accept": "application/json, text/plain, */*",
+              "Accept-Language": "cs-CZ,cs;q=0.9,en;q=0.8",
+              "Origin": "https://vvz.nipez.cz",
+              "Referer": "https://vvz.nipez.cz/",
+              "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36",
+          }
+
+          def fetch(name, path, params=None):
+              url = BASE + path
+              if params:
+                  url += "?" + urllib.parse.urlencode(params, doseq=True)
+              req = urllib.request.Request(url, headers=HEADERS)
+              record = {"url": url}
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as r:
+                      raw = r.read()
+                      record["status"] = r.status
+                      record["content_type"] = r.headers.get("content-type")
+                      try:
+                          record["body"] = json.loads(raw.decode("utf-8"))
+                      except Exception:
+                          record["body_text"] = raw.decode("utf-8", errors="replace")
+              except Exception as e:
+                  record["error"] = repr(e)
+              with open(os.path.join("out", name + ".json"), "w", encoding="utf-8") as f:
+                  json.dump(record, f, ensure_ascii=False, indent=2)
+              return record.get("body")
+
+          params = {
+              "page": 1,
+              "limit": 200,
+              "form": "vz",
+              "workflowPlace": "UVEREJNENO_VVZ",
+              "data.evCisloZakazkyVvz": "Z2024-029445",
+              "order[data.datumUverejneniVvz]": "DESC",
+              "order[createdAt]": "DESC",
+          }
+          search = fetch("00_search_Z2024-029445", "/api/submissions/search", params)
+
+          if isinstance(search, list):
+              items = search
+          elif isinstance(search, dict):
+              items = search.get("items") or search.get("data") or search.get("results") or []
+              if isinstance(items, dict):
+                  items = items.get("items") or []
+          else:
+              items = []
+
+          summary = []
+          for idx, item in enumerate(items):
+              if not isinstance(item, dict):
+                  continue
+              text = json.dumps(item, ensure_ascii=False)
+              form_hits = re.findall(r"F2026-(?:018644|033864|040224)", text)
+              sid = item.get("id") or item.get("submissionId") or item.get("uuid")
+              summary.append({"index": idx, "id": sid, "form_hits": sorted(set(form_hits)), "item": item})
+              if sid:
+                  safe = re.sub(r"[^A-Za-z0-9_-]", "_", str(sid))
+                  fetch(f"10_{idx:03d}_{safe}_submission", f"/api/submissions/{urllib.parse.quote(str(sid))}")
+                  fetch(f"11_{idx:03d}_{safe}_children", "/api/submissions/children/search", {"submission": sid})
+                  fetch(f"12_{idx:03d}_{safe}_attachments", "/api/submission_attachments", {"submission": sid})
+
+          with open("out/01_summary.json", "w", encoding="utf-8") as f:
+              json.dump(summary, f, ensure_ascii=False, indent=2)
+
+          # Direct searches by form number as a fallback.
+          for form_no in ["F2026-018644", "F2026-033864", "F2026-040224"]:
+              fetch("20_" + form_no, "/api/submissions/search", {
+                  "page": 1,
+                  "limit": 50,
+                  "form": "vz",
+                  "workflowPlace": "UVEREJNENO_VVZ",
+                  "data.evCisloFormulareVvz": form_no,
+                  "order[createdAt]": "DESC",
+              })
+
+          print(json.dumps({"items": len(items), "ids": [x.get("id") for x in summary], "hits": [x.get("form_hits") for x in summary]}, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Upload API dump
+        uses: actions/upload-artifact@v4
+        with:
+          name: vvz-api-dump
+          path: out
+          retention-days: 1
+          if-no-files-found: error
