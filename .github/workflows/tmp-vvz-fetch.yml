@@ -1,9 +1,8 @@
 name: Temporary VVZ public API fetch
 
 on:
-  push:
-    paths:
-      - '.github/workflows/tmp-vvz-fetch.yml'
+  issues:
+    types: [opened]
   workflow_dispatch:
 
 permissions:
@@ -11,10 +10,13 @@ permissions:
 
 jobs:
   fetch-vvz:
+    if: github.event_name == 'workflow_dispatch' || github.event.issue.title == '[tmp-vvz-fetch-20260823]'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Fetch public VVZ records
         shell: bash
@@ -113,4 +115,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add tmp-vvz-api-output
           git commit -m "chore: temporary VVZ API dump" || exit 0
-          git push
+          git push origin HEAD:main
