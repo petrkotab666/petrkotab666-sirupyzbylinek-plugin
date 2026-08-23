@@ -1,24 +1,15 @@
 {
   "schema": 1,
-  "version": "20260823-2202-lastminuteslevy-ad-rotation",
+  "version": "20260823-2210-lastminuteslevy-reklamy-diagnostic",
   "files": [],
-  "patches": [
-    {
-      "path": "reklamy.js",
-      "old": "/* ACTIVE_PROMOTIONS_END */",
-      "new": "  {id:'owned-lastminuteslevy-banner',title:'LastMinuteSlevy.cz',text:'Aktuální last minute nabídky s porovnáním podle ceny, termínu a slevy.',url:'https://www.lastminuteslevy.cz/',banner:'https://pojistime.to/assets/network-promos/lastminuteslevy-square-20260823.svg?v=20260823-1',wideBanner:'https://pojistime.to/assets/network-promos/lastminuteslevy-wide-20260823.svg?v=20260823-1',tag:'Náš web · dovolená',contexts:['home','travel','family','sidebar','general','local'],weight:9,fullBleed:true,runtimeVerified:true},\n/* ACTIVE_PROMOTIONS_END */",
-      "count": 1
-    }
-  ],
+  "patches": [],
   "deletes": [],
   "verify_urls": [
     "https://nasekadan.cz/reklamy.js",
     "https://www.nasekadan.cz/reklamy.js"
   ],
   "verify_present": [
-    "owned-lastminuteslevy-banner",
-    "lastminuteslevy-wide-20260823.svg",
-    "Aktuální last minute nabídky s porovnáním podle ceny, termínu a slevy."
+    "const promoItems="
   ],
   "verify_absent": []
 }
