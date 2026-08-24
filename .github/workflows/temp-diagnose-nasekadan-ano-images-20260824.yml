@@ -24,7 +24,7 @@ jobs:
           python -m pip install --disable-pip-version-check requests beautifulsoup4 pillow
           python <<'PY'
           from pathlib import Path
-          from urllib.parse import urljoin, urlparse
+          from urllib.parse import urljoin
           import json, re, requests
           from bs4 import BeautifulSoup
           from PIL import Image
@@ -95,9 +95,14 @@ jobs:
                           snippet = text[max(0,pos-2500):pos+3500]
                           (out / f'{page_name}_{ua_name}_target_snippet.html').write_text(snippet, encoding='utf-8')
                           req['snippet_file'] = f'{page_name}_{ua_name}_target_snippet.html'
-                          for match in re.findall(r'https?://[^\"\'\s)]+|/[^\"\'\s)]+\.(?:png|jpe?g|webp)(?:\?[^\"\'\s)]*)?', snippet, re.I):
-                              if any(ext in match.lower() for ext in ('.png','.jpg','.jpeg','.webp')):
-                                  image_info(f'{page_name}_{ua_name}_snippet_{len(report["candidates"])}', urljoin(r.url, match), ua)
+                          patterns = [
+                              r'https?://[^\"\'\s)]+',
+                              r'/[^\"\'\s)]+\.(?:png|jpe?g|webp)(?:\?[^\"\'\s)]*)?',
+                          ]
+                          for pattern in patterns:
+                              for match in re.findall(pattern, snippet, re.I):
+                                  if any(ext in match.lower() for ext in ('.png','.jpg','.jpeg','.webp')):
+                                      image_info(f'{page_name}_{ua_name}_snippet_{len(report["candidates"])}', urljoin(r.url, match), ua)
                       for key in ('og:image','og:image:secure_url','twitter:image'):
                           if og.get(key):
                               image_info(f'{page_name}_{ua_name}_{key}', urljoin(r.url, og[key]), ua)
@@ -123,3 +128,5 @@ jobs:
           retention-days: 3
           compression-level: 0
           if-no-files-found: error
+
+# trigger 2
