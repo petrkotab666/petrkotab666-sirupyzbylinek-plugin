@@ -1,0 +1,36 @@
+{
+  "version": "20260824-0718-ano-social-card-v2",
+  "verified_at": "2026-08-24T07:47:45.764508+00:00",
+  "status": "VERIFIED",
+  "article_url": "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
+  "image_url": "https://nasekadan.cz/social/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo-5d8df19ca6.png",
+  "attempts": [
+    {
+      "attempt": 1,
+      "article_status": 200,
+      "image_status": 404,
+      "article_ok": false,
+      "image_ok": false,
+      "width": null,
+      "height": null
+    },
+    {
+      "attempt": 2,
+      "article_status": 200,
+      "image_status": 404,
+      "article_ok": false,
+      "image_ok": false,
+      "width": null,
+      "height": null
+    },
+    {
+      "attempt": 3,
+      "article_status": 200,
+      "image_status": 200,
+      "article_ok": true,
+      "image_ok": true,
+      "width": 1200,
+      "height": 630
+    }
+  ]
+}
