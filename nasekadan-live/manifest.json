@@ -1,22 +1,15 @@
 {
   "schema": 1,
-  "version": "20260824-1905-ano-questions-publish",
-  "files": [
-    {
-      "path": "clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
-      "sha256": "984eded3955349386df12ffa44ba5c247781a5df497b5d4909af1f433d39f803"
-    }
-  ],
+  "version": "20260824-1906-ano-listing-diagnostic",
+  "files": [],
   "patches": [],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
-    "https://www.nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html"
+    "https://nasekadan.cz/",
+    "https://nasekadan.cz/clanky/"
   ],
   "verify_present": [
-    "Ptejte se, vyzývá ANO. Když jsme se zeptali my, odpověď odmítlo",
-    "Deset otázek jsme poslali 15. srpna"
+    "ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html"
   ],
   "verify_absent": []
 }
