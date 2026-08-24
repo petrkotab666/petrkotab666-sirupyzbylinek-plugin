@@ -1,0 +1,264 @@
+name: Opravit Facebook obrázek článku ANO
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-nasekadan-ano-social-card-20260824.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nasekadan-ano-social-card-fix
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Nainstalovat Pillow a requests
+        run: python -m pip install --disable-pip-version-check Pillow requests
+
+      - name: Vytvořit správnou 1200×630 kartu, upravit metadata a manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from __future__ import annotations
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFilter, ImageFont
+          import hashlib, json, re, textwrap
+
+          VERSION = '20260824-0718-ano-social-card-v2'
+          SLUG = 'ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo'
+          TITLE = 'Ptejte se, vyzývá ANO. Když jsme se zeptali my, odpověď odmítlo'
+          CATEGORY = 'KOMUNÁLNÍ VOLBY 2026'
+          IMAGE_NAME = f'{SLUG}-5d8df19ca6.png'
+          ARTICLE_REL = f'clanky/{SLUG}.html'
+          IMAGE_REL = f'social/{IMAGE_NAME}'
+          BRIDGE_ROOT = Path('nasekadan-live/files')
+          ARTICLE_FILE = BRIDGE_ROOT / ARTICLE_REL
+          IMAGE_FILE = BRIDGE_ROOT / IMAGE_REL
+          MANIFEST_FILE = Path('nasekadan-live/manifest.json')
+          SITE = 'https://nasekadan.cz'
+          IMAGE_URL = f'{SITE}/{IMAGE_REL}'
+          SHARE_URL = f'{SITE}/{ARTICLE_REL}?fb={VERSION}'
+          WIDTH, HEIGHT = 1200, 630
+
+          def font(size: int, bold: bool = False):
+              paths = [
+                  '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf' if bold else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
+                  '/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf' if bold else '/usr/share/fonts/dejavu/DejaVuSans.ttf',
+              ]
+              for value in paths:
+                  if Path(value).exists():
+                      return ImageFont.truetype(value, size)
+              return ImageFont.load_default()
+
+          def fit_title(draw, value: str, max_width: int, max_lines: int = 4):
+              for size in range(58, 37, -2):
+                  current = font(size, True)
+                  lines, line = [], ''
+                  for word in value.split():
+                      candidate = f'{line} {word}'.strip()
+                      if draw.textbbox((0, 0), candidate, font=current)[2] <= max_width:
+                          line = candidate
+                      else:
+                          if line:
+                              lines.append(line)
+                          line = word
+                  if line:
+                      lines.append(line)
+                  if len(lines) <= max_lines:
+                      return lines, current
+              return textwrap.wrap(value, width=30)[:max_lines], font(38, True)
+
+          def fitted_badge(draw, x: int, y: int, value: str):
+              max_width, pad_x, pad_y = 535, 18, 8
+              selected = font(14, True)
+              bbox = draw.textbbox((0, 0), value, font=selected)
+              for size in range(23, 13, -1):
+                  candidate = font(size, True)
+                  current = draw.textbbox((0, 0), value, font=candidate)
+                  if current[2] - current[0] <= max_width - 2 * pad_x:
+                      selected, bbox = candidate, current
+                      break
+              tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+              bw, bh = min(max_width, tw + 2 * pad_x), max(45, th + 2 * pad_y)
+              draw.rounded_rectangle((x, y, x + bw, y + bh), radius=9, fill=(177, 36, 47, 255))
+              draw.text((x + (bw - tw) / 2 - bbox[0], y + (bh - th) / 2 - bbox[1]), value, font=selected, fill='white')
+
+          base, accent = (31, 32, 45), (119, 50, 75)
+          image = Image.new('RGBA', (WIDTH, HEIGHT), (*base, 255))
+          draw = ImageDraw.Draw(image)
+          for y in range(HEIGHT):
+              ratio = y / (HEIGHT - 1)
+              color = tuple(int(base[i] + (accent[i] - base[i]) * ratio * .22) for i in range(3))
+              draw.line((0, y, WIDTH, y), fill=(*color, 255))
+          glow = Image.new('RGBA', image.size, (0, 0, 0, 0))
+          gd = ImageDraw.Draw(glow)
+          gd.ellipse((660, -80, 1260, 530), fill=(*accent, 100))
+          image = Image.alpha_composite(image, glow.filter(ImageFilter.GaussianBlur(55)))
+          draw = ImageDraw.Draw(image)
+          for x in range(690, WIDTH, 48):
+              draw.line((x, 0, x, HEIGHT), fill=(*accent, 100), width=1)
+          for y in range(0, HEIGHT, 48):
+              draw.line((660, y, WIDTH, y), fill=(*accent, 100), width=1)
+          draw.polygon([(0, 0), (770, 0), (625, HEIGHT), (0, HEIGHT)], fill=(5, 18, 30, 238))
+          white = (226, 246, 252, 255)
+          draw.rounded_rectangle((790, 180, 1070, 490), radius=26, fill=(*accent, 235), outline=white, width=5)
+          draw.polygon([(760, 210), (930, 75), (1100, 210)], fill=white)
+          for x in (830, 910, 990):
+              draw.rectangle((x, 250, x + 45, 430), fill=white)
+          draw.rectangle((800, 430, 1060, 475), fill=white)
+          draw.text((70, 52), 'NAŠE KADAŇ', font=font(29, True), fill='white')
+          draw.rectangle((70, 98, 565, 106), fill=(177, 36, 47, 255))
+          fitted_badge(draw, 70, 130, CATEGORY)
+          lines, title_font = fit_title(draw, TITLE, 575)
+          y = 205
+          for line in lines:
+              draw.text((70, y), line, font=title_font, fill='white')
+              y += title_font.size + 9
+          draw.line((70, 520, 610, 520), fill=(129, 184, 205, 255), width=3)
+          badge = 'AKTUÁLNĚ NA NASEKADAN.CZ'
+          badge_font = font(22, True)
+          badge_width = draw.textbbox((0, 0), badge, font=badge_font)[2] + 38
+          draw.rounded_rectangle((70, 548, 70 + badge_width, 594), radius=8, fill=(232, 237, 240, 255))
+          draw.text((89, 557), badge, font=badge_font, fill=(27, 48, 60, 255))
+          draw.rounded_rectangle((1080, 545, 1145, 600), radius=10, fill=(177, 36, 47, 255))
+          draw.text((1092, 556), 'NK', font=font(23, True), fill='white')
+          IMAGE_FILE.parent.mkdir(parents=True, exist_ok=True)
+          image.convert('RGB').save(IMAGE_FILE, 'PNG', optimize=True)
+
+          html = ARTICLE_FILE.read_text(encoding='utf-8')
+          for prop in ('og:image:secure_url', 'og:image:type', 'og:image:width', 'og:image:height', 'og:image:alt'):
+              html = re.sub(rf'\s*<meta\b[^>]*property=["\']{re.escape(prop)}["\'][^>]*>\s*', '\n', html, flags=re.I)
+          image_meta = '\n'.join([
+              f'<meta property="og:image" content="{IMAGE_URL}">',
+              f'<meta property="og:image:secure_url" content="{IMAGE_URL}">',
+              '<meta property="og:image:type" content="image/png">',
+              '<meta property="og:image:width" content="1200">',
+              '<meta property="og:image:height" content="630">',
+              '<meta property="og:image:alt" content="Redakční grafika Naše Kadaň k článku o odpovědích hnutí ANO">',
+          ])
+          html, n1 = re.subn(r'<meta\b[^>]*property=["\']og:image["\'][^>]*>', image_meta, html, count=1, flags=re.I)
+          html, n2 = re.subn(r'<meta\b[^>]*name=["\']twitter:image["\'][^>]*>', f'<meta name="twitter:image" content="{IMAGE_URL}">', html, count=1, flags=re.I)
+          html, n3 = re.subn(r'<meta\b[^>]*property=["\']og:url["\'][^>]*>', f'<meta property="og:url" content="{SHARE_URL}">', html, count=1, flags=re.I)
+          html, n4 = re.subn(r'"image"\s*:\s*\[[^\]]*\]', f'"image":["{IMAGE_URL}"]', html, count=1)
+          if not all((n1, n2, n3, n4)):
+              raise SystemExit(f'Nepodařilo se upravit všechna metadata: og:image={n1}, twitter={n2}, og:url={n3}, jsonld={n4}')
+          ARTICLE_FILE.write_text(html, encoding='utf-8')
+
+          def sha256(path: Path) -> str:
+              return hashlib.sha256(path.read_bytes()).hexdigest()
+
+          raw_base = 'https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files'
+          manifest = {
+              'schema': 1,
+              'version': VERSION,
+              'files': [
+                  {'path': ARTICLE_REL, 'url': f'{raw_base}/{ARTICLE_REL}', 'sha256': sha256(ARTICLE_FILE)},
+                  {'path': IMAGE_REL, 'url': f'{raw_base}/{IMAGE_REL}', 'sha256': sha256(IMAGE_FILE)},
+              ],
+              'patches': [],
+              'deletes': [],
+              'verify_urls': [
+                  f'{SITE}/{ARTICLE_REL}',
+                  f'https://www.nasekadan.cz/{ARTICLE_REL}',
+              ],
+              'verify_present': [IMAGE_NAME, 'og:image:width', 'Ptejte se, vyzývá ANO. Když jsme se zeptali my, odpověď odmítlo'],
+              'verify_absent': ['content="https://nasekadan.cz/social-card.png"'],
+          }
+          MANIFEST_FILE.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('image', IMAGE_FILE, sha256(IMAGE_FILE))
+          print('article', ARTICLE_FILE, sha256(ARTICLE_FILE))
+          print('share_url', SHARE_URL)
+          PY
+
+      - name: Odeslat opravu do rychlé serverové brány
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Naše Kadaň opravný automat'
+          git config user.email 'actions@users.noreply.github.com'
+          git add nasekadan-live/files/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html \
+                  nasekadan-live/files/social/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo-5d8df19ca6.png \
+                  nasekadan-live/manifest.json
+          git commit -m 'Naše Kadaň: nasadit správný Facebook obrázek článku ANO [skip ci]'
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              break
+            fi
+            test "$attempt" -lt 5
+            sleep $((attempt * 2))
+          done
+
+      - name: Ověřit veřejný článek i obrázek
+        shell: bash
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          from io import BytesIO
+          import datetime, json, requests, time
+
+          version = '20260824-0718-ano-social-card-v2'
+          slug = 'ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo'
+          image_name = f'{slug}-5d8df19ca6.png'
+          article_url = f'https://nasekadan.cz/clanky/{slug}.html'
+          image_url = f'https://nasekadan.cz/social/{image_name}'
+          headers = {'User-Agent': 'facebookexternalhit/1.1 (+https://www.facebook.com/externalhit_uatext.php)'}
+          result = {'version': version, 'verified_at': None, 'status': 'FAILED', 'article_url': article_url, 'image_url': image_url, 'attempts': []}
+          for attempt in range(1, 31):
+              stamp = int(time.time())
+              try:
+                  article = requests.get(f'{article_url}?nkfix={version}-{stamp}', headers=headers, timeout=15)
+                  picture = requests.get(f'{image_url}?nkfix={version}-{stamp}', headers=headers, timeout=15)
+                  width = height = None
+                  if picture.ok:
+                      with Image.open(BytesIO(picture.content)) as im:
+                          width, height = im.size
+                  article_ok = article.status_code == 200 and image_name in article.text and 'og:image:width' in article.text and 'social-card.png' not in article.text
+                  image_ok = picture.status_code == 200 and picture.headers.get('content-type', '').lower().startswith('image/png') and (width, height) == (1200, 630)
+                  result['attempts'].append({'attempt': attempt, 'article_status': article.status_code, 'image_status': picture.status_code, 'article_ok': article_ok, 'image_ok': image_ok, 'width': width, 'height': height})
+                  if article_ok and image_ok:
+                      result['status'] = 'VERIFIED'
+                      break
+              except Exception as exc:
+                  result['attempts'].append({'attempt': attempt, 'error': repr(exc)})
+              time.sleep(4)
+          result['verified_at'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+          out = Path(f'nasekadan-live/verification/{version}.json')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(result, ensure_ascii=False, indent=2))
+          if result['status'] != 'VERIFIED':
+              raise SystemExit('Veřejná kontrola opravy neprošla.')
+          PY
+
+      - name: Uložit důkaz veřejné kontroly
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Naše Kadaň opravný automat'
+          git config user.email 'actions@users.noreply.github.com'
+          git pull --rebase origin main
+          git add nasekadan-live/verification/20260824-0718-ano-social-card-v2.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'Zapsat ověření Facebook obrázku článku ANO [skip ci]'
+            git push origin HEAD:main
+          fi
