@@ -1,0 +1,47 @@
+{
+  "version": "20260824-1906-ano-listing-diagnostic",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-08-24T04:53:09.152049+00:00",
+  "checks": {
+    "https://nasekadan.cz/": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/?nkbridgeverify=20260824-1906-ano-listing-diagnostic-1787547182",
+      "present": {
+        "ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html": false
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": "<div class=\"article-list\">\n<article class=\"article-card hospital\" data-auto-article=\"tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Tragická nehoda na Mostecku: Policie zadržela podezřelého, při střetu zemřeli dva lidé\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026-453fb524c6.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">23. 8. 2026 · 17:05 · AKTUALIZOVÁNO · NEHODA · MOSTECKO · MARIÁNSKÉ RADČICE</span><h3>Tragická nehoda na Mostecku: Policie zadržela podezřelého, při střetu zemřeli dva lidé</h3><p>Tragická nehoda mezi Mariánskými Radčicemi a Lomem má nový vývoj. Policie zadržela člověka podezřelého ze zavinění nehody. Dva lidé zemřeli a čtyři další se zranili.</p><a class=\"read-more\" href=\"/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html\">Přečíst článek →</a></div>\n    </article>\n    <!-- WEEKLY-EVENTS-START -->\n<article class=\"article-card hospital\" data-auto-article=\"kam-v-kadani-a-okoli-24-30-srpna-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Kam v Kadani a okolí od 24. do 30. srpna: 7 pádů, Food Day, Hněvín, Chomutov i Osek\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/kam-v-kadani-a-okoli-24-30-srpna-2026-8e10a854bd.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">23. 8. 2026 · 16:05 · KULTURA · VOLNÝ ČAS · KADAŇ A REGION · 24.–30. SRPNA 2026</span><h3>Kam v Kadani a okolí od 24. do 30. srpna: 7 pádů, Food Day, Hněvín, Chomutov i Osek</h3><p>Velký týdenní přehled akcí na 24.–30. srpna 2026 v Kadani, Klášterci, Chomutově, Mostě, Žatci, Podbořanech, Oseku a širším okolí.</p><a class=\"read-more\" href=\"/clanky/kam-v-kadani-a-okoli-24-30-srpna-2026.html\">Přečíst článek →</a></div>\n    </article>\n    <!-- WEEKLY-EVENTS-END -->\n<article class=\"article-card hospital\" data-auto-article=\"cernovice-tatran-kadan-nestemice-vyhra-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Černovice s Tatranem vezou z Neštěmic první výhru. Rozhodl Karban\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/cernovice-tatran-kadan-nestemice-vyhra-2026-d7a3ebc05c.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">23. 8. 2026 · 09:00 · FOTBAL · KADAŇ</span><h3>Černovice s Tatranem vezou z Neštěmic první výhru. Rozhodl Karban</h3><p>Spojený tým SK Černovice / FK Tatran Kadaň uspěl v sobotu 22. srpna ve 3. kole krajského přeboru na hřišti Českého Lva Neštěmice. Klub výsledek označil za první vítězství sezony; rozhodla jediná branka Karbana.</p><a class=\"read-more\" href=\"/clanky/cernovice-tatran-kadan-nestemice-vyhra-2026.html\">Přečíst článek →</a></div>\n    </article>\n<article class=\"article-card hospital\" data-auto-article=\"ods-kadan-odpovedi-nase-kadan-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Odpovědi ODS Kadaň: nemocnice, ARC-MED, Vinohrady, investice, transparentnost i koalice\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ods-kadan-odpovedi-nase-kadan-2026-8290480c0c.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">23. 8. 2026 · 06:30 · KOMUNÁLNÍ VOLBY 2026</span><h3>Odpovědi ODS Kadaň: nemocnice, ARC-MED, Vinohrady, investice, transparentnost i koalice</h3><p>ODS Kadaň odpověděla na deset otázek Naší Kadaně. Mluví o limitu 30 milionů korun ročně pro nemocnici od roku 2028, veřejném vlastnictví nemocnice, ARC-MED, Vinohradech, investicích a koalicích.</p><a class=\"read-more\" href=\"/clanky/ods-kadan-odpovedi-nase-kadan-2026.html\">Přečíst článek →</a></div>\n    </article>",
+        "ticker": "<div class=\"ticker\">\n  <div class=\"wrap\"><a href=\"/clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html\" style=\"display:block;color:inherit;text-decoration:none\"><b>DOPRAVNÍ UPOZORNĚNÍ:</b> Poslední srpnový blok nočních výluk vlaků mezi Kadaní, Kláštercem a Chomutovem začne v pondělí 24. srpna ve 21:15. Výlukový jízdní řád platí v nocích 24./25. až 30./31. srpna, vždy do 4:45. <strong style=\"text-decoration:underline\">Podrobnosti →</strong></a></div>\n</div>\n\n\n\n<main>\n  <section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" style=\"background-image:linear-gradient(90deg,rgba(7,23,34,.76),rgba(7,23,34,.14) 72%),url('https://nasekadan.cz/social/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026-cd2cf8480f.png');background-color:#0b202b;background-size:cover;background-position:center;background-repeat:no-repeat\"><span>DOPRAVA · PODBOŘANSKO A ŽATECKO · 24. SRPNA 2026 VE 4:00</span><strong>24. 8. 2026</strong></div>\n      <div class=\"copy\">\n        <small>DOPRAVA · PODBOŘANSKO A ŽATECKO · 24. SRPNA 2026 VE 4:00 · 24. 8. 2026 · 04:00</small>\n        <h1>Autobusy 743, 744 a 745 mají od 24. srpna nové jízdní řády. Linka 743 se vrací přes Červený hrádek</h1>\n        <p>Od pondělí 24. srpna 2026 platí nové jízdní řády linek DÚK 743, 744 a 745. Linka 743 se po dřívějším ukončení uzavírek vrací přes zastávku Žatec, Červený hrádek; linky 744 a 745 dál ovlivňují uzavírky u Milčevsi a v Petrohradu.</p>\n        <a class=\"btn\" href=\"/clanky/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"curre",
+        "article_shell": null,
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": false
+    },
+    "https://nasekadan.cz/clanky/": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/clanky/?nkbridgeverify=20260824-1906-ano-listing-diagnostic-1787547183",
+      "present": {
+        "ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html": false
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": false
+    }
+  }
+}
