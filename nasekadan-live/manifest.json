@@ -1,15 +1,30 @@
 {
   "schema": 1,
-  "version": "20260824-1906-ano-listing-diagnostic",
-  "files": [],
+  "version": "20260824-0718-ano-social-card-v2",
+  "files": [
+    {
+      "path": "clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
+      "sha256": "ad7c64ad252e61e87a986807ef7f45ce9c1c084f8128052bbb6d72b7888c63cc"
+    },
+    {
+      "path": "social/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo-5d8df19ca6.png",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo-5d8df19ca6.png",
+      "sha256": "0740029f0c91f3d9deec1440aceb2ee6241c524c889964569cfad3d5e3609d42"
+    }
+  ],
   "patches": [],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/",
-    "https://nasekadan.cz/clanky/"
+    "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
+    "https://www.nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html"
   ],
   "verify_present": [
-    "ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html"
+    "ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo-5d8df19ca6.png",
+    "og:image:width",
+    "Ptejte se, vyzývá ANO. Když jsme se zeptali my, odpověď odmítlo"
   ],
-  "verify_absent": []
+  "verify_absent": [
+    "content=\"https://nasekadan.cz/social-card.png\""
+  ]
 }
