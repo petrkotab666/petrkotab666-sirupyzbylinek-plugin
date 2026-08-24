@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/temp-diagnose-nasekadan-ano-images-20260824.yml'
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -129,4 +131,4 @@ jobs:
           compression-level: 0
           if-no-files-found: error
 
-# trigger 2
+# trigger 3
