@@ -1,0 +1,213 @@
+name: Naše Kadaň – finální oprava obrázku článku ANO v5
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nasekadan-ano-image-v5
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.title == 'RUN NASEKADAN ANO IMAGE V5'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Připravit přesnou opravu z aktuálního živého webu
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check requests pillow
+          python <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          from io import BytesIO
+          import hashlib, html, json, re, requests
+
+          version = '20260824-0830-ano-image-v5'
+          site = 'https://nasekadan.cz'
+          slug = 'ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo'
+          old_image = f'{site}/social/{slug}-5d8df19ca6.png'
+          image_name = f'{slug}-0740029f0c.png'
+          image_rel = f'social/{image_name}'
+          image_url = f'{site}/{image_rel}'
+          article_rel = f'clanky/{slug}.html'
+          share_url = f'{site}/{article_rel}?fb={version}'
+          root = Path('nasekadan-live/files')
+          headers = {'User-Agent':'Mozilla/5.0 NaseKadanLiveFix/1.0','Cache-Control':'no-cache'}
+
+          def fetch(url):
+              r=requests.get(url,params={'v':version},headers=headers,timeout=40,allow_redirects=True)
+              r.raise_for_status()
+              return r
+
+          pages={
+              'index.html':fetch(site+'/').text,
+              'clanky/index.html':fetch(site+'/clanky/').text,
+              article_rel:fetch(site+'/'+article_rel).text,
+          }
+          pic=fetch(old_image)
+          with Image.open(BytesIO(pic.content)) as im:
+              assert im.size==(1200,630),im.size
+              assert im.format=='PNG',im.format
+
+          def replace_target(text,pattern,label):
+              m=re.search(pattern,text,re.I|re.S)
+              if not m: raise RuntimeError(label+' nenalezen')
+              block=m.group(0)
+              block=block.replace(site+'/social-card.png',image_url)
+              block=block.replace('https://www.nasekadan.cz/social-card.png',image_url)
+              block=re.sub(rf'https://(?:www\.)?nasekadan\.cz/social/{re.escape(slug)}-[A-Za-z0-9_-]+\.png(?:\?[^"\')\s]*)?',image_url,block)
+              if image_name not in block: raise RuntimeError(label+' nebyl opraven')
+              return text[:m.start()]+block+text[m.end():]
+
+          pages['index.html']=replace_target(
+              pages['index.html'],
+              rf'<section\b[^>]*data-latest-article-href=["\']/clanky/{re.escape(slug)}\.html["\'][^>]*>.*?</section>',
+              'Hlavní karta')
+          pages['clanky/index.html']=replace_target(
+              pages['clanky/index.html'],
+              rf'<article\b[^>]*data-auto-article=["\']{re.escape(slug)}["\'][^>]*>.*?</article>',
+              'Archivní karta')
+
+          def meta(text,key,value,prop=True):
+              attr='property' if prop else 'name'
+              pat=re.compile(rf'<meta\b[^>]*{attr}=["\']{re.escape(key)}["\'][^>]*>',re.I)
+              tag=f'<meta {attr}="{key}" content="{html.escape(value,quote=True)}">'
+              if pat.search(text): return pat.sub(tag,text,count=1)
+              pos=text.lower().find('</head>')
+              if pos<0: raise RuntimeError('Chybí </head>')
+              return text[:pos]+tag+'\n'+text[pos:]
+
+          article=pages[article_rel]
+          for key,value in [
+              ('og:url',share_url),('og:image',image_url),('og:image:secure_url',image_url),
+              ('og:image:type','image/png'),('og:image:width','1200'),('og:image:height','630'),
+              ('og:image:alt','Redakční grafika Naše Kadaň k článku o odpovědích hnutí ANO')]:
+              article=meta(article,key,value)
+          article=meta(article,'twitter:image',image_url,False)
+          article=meta(article,'nasekadan:social-card','custom',False)
+          article=re.sub(r'"image"\s*:\s*\[[^\]]*\]',f'"image":["{image_url}"]',article,count=1)
+          pages[article_rel]=article
+
+          for rel,text in pages.items():
+              p=root/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text,encoding='utf-8')
+          image_path=root/image_rel;image_path.parent.mkdir(parents=True,exist_ok=True);image_path.write_bytes(pic.content)
+
+          raw='https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files'
+          rels=['index.html','clanky/index.html',article_rel,image_rel]
+          files=[]
+          for rel in rels:
+              p=root/rel
+              files.append({'path':rel,'url':raw+'/'+rel,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+          manifest={
+              'schema':1,'version':version,'files':files,'patches':[],'deletes':[],
+              'verify_urls':[site+'/',site+'/clanky/',site+'/'+article_rel,'https://www.nasekadan.cz/'+article_rel],
+              'verify_present':[image_name],'verify_absent':[]}
+          Path('nasekadan-live/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(manifest,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Publikovat přes rychlou OVH bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Naše Kadaň opravný automat'
+          git config user.email 'actions@users.noreply.github.com'
+          git add nasekadan-live/files/index.html \
+                  nasekadan-live/files/clanky/index.html \
+                  nasekadan-live/files/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html \
+                  nasekadan-live/files/social/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo-0740029f0c.png \
+                  nasekadan-live/manifest.json
+          git commit -m 'Naše Kadaň: finálně opravit obrázek článku ANO v5 [skip ci]'
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then break; fi
+            test "$attempt" -lt 5
+            sleep $((attempt*2))
+          done
+
+      - name: Ověřit živý web běžným i Facebook crawlerem
+        shell: bash
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          from io import BytesIO
+          import json,re,requests,time
+
+          version='20260824-0830-ano-image-v5'
+          site='https://nasekadan.cz'
+          slug='ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo'
+          image_name=f'{slug}-0740029f0c.png'
+          image_url=f'{site}/social/{image_name}'
+          article_url=f'{site}/clanky/{slug}.html'
+          browser='Mozilla/5.0 (Linux; Android 15) Chrome/139 Mobile Safari/537.36'
+          facebook='facebookexternalhit/1.1 (+https://www.facebook.com/externalhit_uatext.php)'
+          result={'version':version,'status':'FAILED','attempts':[]}
+
+          def get(url,ua,nonce):
+              return requests.get(url,params={'verify':nonce},headers={'User-Agent':ua,'Cache-Control':'no-cache'},timeout=35,allow_redirects=True)
+          def block(text,pattern):
+              m=re.search(pattern,text,re.I|re.S);return m.group(0) if m else ''
+          def getmeta(text,key,prop=True):
+              attr='property' if prop else 'name'
+              m=re.search(rf'<meta\b[^>]*{attr}=["\']{re.escape(key)}["\'][^>]*content=["\']([^"\']+)',text,re.I)
+              if not m:
+                  m=re.search(rf'<meta\b[^>]*content=["\']([^"\']+)["\'][^>]*{attr}=["\']{re.escape(key)}["\']',text,re.I)
+              return m.group(1) if m else ''
+
+          for attempt in range(1,26):
+              nonce=f'{version}-{attempt}-{int(time.time())}'
+              row={'attempt':attempt}
+              try:
+                  home=get(site+'/',browser,nonce)
+                  archive=get(site+'/clanky/',browser,nonce)
+                  article=get(article_url,facebook,nonce)
+                  article_www=get('https://www.nasekadan.cz/clanky/'+slug+'.html',facebook,nonce)
+                  pic=get(image_url,facebook,nonce)
+                  hb=block(home.text,rf'<section\b[^>]*data-latest-article-href=["\']/clanky/{re.escape(slug)}\.html["\'][^>]*>.*?</section>')
+                  ab=block(archive.text,rf'<article\b[^>]*data-auto-article=["\']{re.escape(slug)}["\'][^>]*>.*?</article>')
+                  size=None
+                  if pic.ok:
+                      with Image.open(BytesIO(pic.content)) as im:size=im.size
+                  checks={
+                      'home':home.status_code==200 and image_name in hb and 'social-card.png' not in hb,
+                      'archive':archive.status_code==200 and image_name in ab and 'social-card.png' not in ab,
+                      'article':article.status_code==200 and getmeta(article.text,'og:image')==image_url and getmeta(article.text,'og:image:secure_url')==image_url and getmeta(article.text,'twitter:image',False)==image_url and getmeta(article.text,'og:image:width')=='1200' and getmeta(article.text,'og:image:height')=='630',
+                      'article_www':article_www.status_code==200 and getmeta(article_www.text,'og:image')==image_url,
+                      'image':pic.status_code==200 and (pic.headers.get('content-type') or '').lower().startswith('image/png') and size==(1200,630)}
+                  row={'attempt':attempt,'checks':checks,'image_size':size,'og_image':getmeta(article.text,'og:image'),'og_url':getmeta(article.text,'og:url')}
+                  result['attempts'].append(row)
+                  if all(checks.values()):result['status']='VERIFIED';break
+              except Exception as exc:
+                  row['error']=repr(exc);result['attempts'].append(row)
+              time.sleep(4)
+          Path('/tmp/nasekadan-ano-image-v5.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(result,ensure_ascii=False,indent=2))
+          if result['status']!='VERIFIED':raise SystemExit('Oprava na živém webu nebyla potvrzena.')
+          PY
+
+      - name: Upload ověřovacího protokolu
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nasekadan-ano-image-v5-verification
+          path: /tmp/nasekadan-ano-image-v5.json
+          retention-days: 7
+          if-no-files-found: warn
