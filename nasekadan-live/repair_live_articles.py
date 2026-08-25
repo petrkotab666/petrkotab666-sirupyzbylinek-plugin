@@ -12,7 +12,7 @@ from pathlib import Path
 
 BASE = "https://nasekadan.cz"
 RAW_BASE = "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/"
-UA = "NaseKadanLiveRepair/1.1"
+UA = "NaseKadanLiveRepair/1.2"
 REPORT = Path("nasekadan-live/live-audit-report.json")
 OUT = Path("nasekadan-live/files/clanky")
 MANIFEST = Path("nasekadan-live/manifest.json")
@@ -55,25 +55,34 @@ def norm_img(url: str) -> str:
     return p.path
 
 
-def is_title_figure(block: str) -> bool:
-    im = re.search(r"<img\b[^>]*>", block, re.I | re.S)
-    if not im:
-        return False
-    src = attr(im.group(0), "src") or ""
+def is_title_img(tag: str) -> bool:
+    src = attr(tag, "src") or ""
     try:
         path = norm_img(src)
     except Exception:
         return False
-    low = block.lower()
-    w = attr(im.group(0), "width")
-    h = attr(im.group(0), "height")
-    return path.startswith("/social/") and (
+    if not path.startswith("/social/"):
+        return False
+    low = tag.lower()
+    w = attr(tag, "width")
+    h = attr(tag, "height")
+    cls = (attr(tag, "class") or "").lower()
+    alt = (attr(tag, "alt") or "").lower()
+    return (
         (w == "1200" and h == "630")
-        or "redakční grafika" in low
-        or "titulní grafika" in low
-        or "data-nk-title-figure" in low
-        or "article-photo" in low
+        or "hero-image" in cls
+        or "article-photo" in cls
+        or "redakční grafika" in alt
+        or "titulní grafika" in alt
     )
+
+
+def is_title_figure(block: str) -> bool:
+    im = re.search(r"<img\b[^>]*>", block, re.I | re.S)
+    if not im:
+        return False
+    low = block.lower()
+    return is_title_img(im.group(0)) or "data-nk-title-figure" in low
 
 
 def figure_markup(src: str, title: str) -> str:
@@ -85,18 +94,12 @@ def figure_markup(src: str, title: str) -> str:
     )
 
 
-def repair(body: str, url: str) -> str:
-    og = meta(body, "og:image")
-    if not og:
-        raise RuntimeError(f"{url}: chybí og:image")
-    og_path = norm_img(og)
-    if not og_path.startswith("/social/"):
-        raise RuntimeError(f"{url}: og:image není /social/: {og_path}")
-
-    parts = []
+def remove_old_title_art(body: str) -> str:
+    # 1) Odstranit staré titulní <figure class=article-figure>.
+    figure_pattern = re.compile(r"<figure\b[^>]*class=[\"'][^\"']*\barticle-figure\b[^\"']*[\"'][^>]*>.*?</figure>", re.I | re.S)
+    parts: list[str] = []
     cursor = 0
-    pattern = re.compile(r"<figure\b[^>]*class=[\"'][^\"']*\barticle-figure\b[^\"']*[\"'][^>]*>.*?</figure>", re.I | re.S)
-    for m in pattern.finditer(body):
+    for m in figure_pattern.finditer(body):
         parts.append(body[cursor:m.start()])
         block = m.group(0)
         if not is_title_figure(block):
@@ -105,12 +108,36 @@ def repair(body: str, url: str) -> str:
     parts.append(body[cursor:])
     body = "".join(parts)
 
+    # 2) Starší články často mají titulní grafiku jako samostatný <img class=hero-image>
+    # bez <figure>. Po serverové normalizaci pak zůstávala pod novou figurou jako
+    # druhá nebo dokonce rozbitá grafika. Odstraňujeme pouze lokální /social/ titulní
+    # obrázky; dokumentačních fotografií a obrázků mimo /social/ se nedotýkáme.
+    img_pattern = re.compile(r"<img\b[^>]*>", re.I | re.S)
+    body = img_pattern.sub(lambda m: "" if is_title_img(m.group(0)) else m.group(0), body)
+    return body
+
+
+def repair(body: str, url: str) -> str:
+    og = meta(body, "og:image")
+    if not og:
+        raise RuntimeError(f"{url}: chybí og:image")
+    og_path = norm_img(og)
+    if not og_path.startswith("/social/"):
+        raise RuntimeError(f"{url}: og:image není /social/: {og_path}")
+
+    body = remove_old_title_art(body)
+
+    # Standardní i historická článková šablona. Pokud article nemá class="article",
+    # použijeme jediný obecný <article> bez změny jeho layoutu.
     article = re.search(r'<article\b[^>]*class=["\'][^"\']*\barticle\b[^"\']*["\'][^>]*>', body, re.I)
     if not article:
-        raise RuntimeError(f"{url}: nenalezen <article class=article>")
+        article = re.search(r"<article\b[^>]*>", body, re.I)
+    if not article:
+        raise RuntimeError(f"{url}: nenalezen <article>")
+
     start = article.end()
     tail = body[start:]
-    lead = re.search(r'<p\b[^>]*class=["\'][^"\']*\blead\b[^"\']*["\'][^>]*>.*?</p>', tail, re.I | re.S)
+    lead = re.search(r'<p\b[^>]*class=["\'][^"\']*\b(?:lead|leadtext)\b[^"\']*["\'][^>]*>.*?</p>', tail, re.I | re.S)
     if lead:
         at = start + lead.end()
     else:
@@ -126,17 +153,30 @@ def repair(body: str, url: str) -> str:
     body = body.replace('href="https://nasekadan.cz/akce/"', 'href="https://nasekadan.cz/#akce"')
     body = body.replace('href="https://www.nasekadan.cz/akce/"', 'href="https://nasekadan.cz/#akce"')
 
-    title_blocks = [m.group(0) for m in pattern.finditer(body) if is_title_figure(m.group(0))]
+    figure_pattern = re.compile(r"<figure\b[^>]*class=[\"'][^\"']*\barticle-figure\b[^\"']*[\"'][^>]*>.*?</figure>", re.I | re.S)
+    title_blocks = [m.group(0) for m in figure_pattern.finditer(body) if is_title_figure(m.group(0))]
     if len(title_blocks) != 1:
         raise RuntimeError(f"{url}: po opravě počet titulních figur {len(title_blocks)}")
     if og_path not in title_blocks[0]:
         raise RuntimeError(f"{url}: finální figura neodpovídá og:image")
+    # Po normalizaci nesmí mimo jedinou figuru zůstat další titulní /social/ img.
+    without_figure = figure_pattern.sub("", body)
+    leftovers = [m.group(0) for m in re.finditer(r"<img\b[^>]*>", without_figure, re.I | re.S) if is_title_img(m.group(0))]
+    if leftovers:
+        raise RuntimeError(f"{url}: po opravě zůstalo {len(leftovers)} starých titulních img")
     return body
 
 
 def main() -> int:
     report = json.loads(REPORT.read_text(encoding="utf-8"))
-    targets = set()
+    # Projít všechny skutečné článkové stránky z posledního živého auditu, ne jen
+    # ty, které už audit označil jako missing/duplicate. Tím zachytíme i kombinaci
+    # „nová figura + starý rozbitý hero-image“ (např. ODS).
+    targets: set[str] = set()
+    for page in report.get("page_results", []):
+        url = str(page.get("url", ""))
+        if "/clanky/" in url and page.get("published") and url.endswith(".html"):
+            targets.add(url)
     for e in report.get("errors", []):
         if e.get("type") in {"missing_visible_title_figure", "duplicate_title_figures"} and "/clanky/" in str(e.get("url", "")):
             targets.add(e["url"])
@@ -165,7 +205,7 @@ def main() -> int:
 
     manifest = {
         "schema": 1,
-        "version": "20260825-sitewide-title-figure-repair-safe1",
+        "version": "20260825-sitewide-title-figure-repair-safe2",
         "files": files,
         "patches": [],
         "deletes": [],
@@ -178,7 +218,6 @@ def main() -> int:
     print(json.dumps({"targets": len(targets), "generated": len(files), "failures": len(failures)}, ensure_ascii=False))
     for item in failures:
         print(item)
-    # Bezpečně připravené články se nasadí i když existuje jednotlivá atypická výjimka.
     return 0
 
 
