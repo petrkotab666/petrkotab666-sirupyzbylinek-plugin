@@ -1,0 +1,54 @@
+{
+  "version": "20260825-2036-cheb-kadan-4-1",
+  "status": "WEB_OK",
+  "verified_at": "2026-08-25T18:43:34.164833+00:00",
+  "attempt": 1,
+  "checks": {
+    "https://nasekadan.cz/clanky/kadan-cheb-1-4-priprava-2026.html": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/clanky/kadan-cheb-1-4-priprava-2026.html?nkbridgeverify=20260825-2036-cheb-kadan-4-1-1787683412",
+      "present": {
+        "Kadaň v Chebu vedla, ale další gól už nepřidala. Přípravu prohrála 1:4": true,
+        "HC Stadion Cheb": true,
+        "František Hynek": true,
+        "289": true
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": "<main class=\"wrap article-shell\" data-article-template=\"unified-v1\">\n<article class=\"article\">\n<p class=\"tag\">SPORT · HOKEJ · SK KADAŇ · 25. SRPNA 2026 · 20:36</p>\n<h1>Kadaň v Chebu vedla, ale další gól už nepřidala. Přípravu prohrála 1:4</h1>\n<p class=\"lead\"><strong>Hokejisté SK Kadaň ve třetím přípravném utkání před sezonou 2026/27 neuspěli. Na ledě HC Stadion Cheb sice od 13. minuty vedli po gólu Františka Hynka, domácí ale ještě před první přestávkou vyrovnali a ve druhé a třetí části přidali další tři branky. Cheb zvítězil 4:1.</strong></p>\n<div class=\"score\" aria-label=\"Konečný výsledek HC Stadion Cheb 4, SK Kadaň 1\"><div class=\"team\">HC Stadion Cheb<small>1:1 · 1:0 · 2:0</small></div><div class=\"result\">4:1</div><div class=\"team\">SK Kadaň<small>gól: František Hynek</small></div></div>\n<div class=\"facts\"><div class=\"fact\"><b>4:1</b><span>Konečný výsledek v Chebu</span></div><div class=\"fact\"><b>13. minuta</b><span>Hynek poslal Kadaň do vedení</span></div><div class=\"fact\"><b>289</b><span>diváků na zimním stadionu v Chebu</span></div></div>\n<h2>Kadaň šla do vedení, Cheb odpověděl ještě v první třetině</h2>\n<p>Skóre otevřeli hosté. Ve 13. minutě se prosadil <strong>František Hynek</strong>, kterému asistovali <strong>Vladislav Vrtek a Matěj Matai</strong>. Kadaň tak vedla 1:0, náskok ale do přestávky neudržela. V 18. minutě vyrovnal domácí <strong>Zeman</strong> po přihrávkách Proška a Majera.</p>\n<h2>Rozhodla druhá a třetí část</h2>\n<p>Ve druhé třetině se Cheb dostal poprvé do vedení. Ve 34. minutě skóroval <strong>Švík</strong> po asistenci Kořána. Po druhé přestávce domácí náskok ještě navýšili: ve 45. minutě přidal svůj druhý gól <strong>Zeman</strong> a v 52. minutě uzavřel skóre na 4:1 <strong>Vachovec</strong> po přihrávce Rozhona.</p>\n<p>Kadaň už na úvodní Hynkův zásah nenavázala. Zápis utkání uvádí poměr vyloučení 4:6 a využití přesilových her 0:1 z pohledu domácího Chebu. V oslabení se ani jeden tým neprosadil.</p>\n<h2>Branky zápasu</h2>\n<ul class=\"timeline\">\n<li><time>13.</time><span><strong>0:1 František Hynek</strong> (Vrtek, Matai)</span></li>\n<li><time>18.</time><span><strong>1:1 Zeman</strong> (Prošek, Majer)</span></li>\n<li><time>34.</time><span><strong>2:1 Švík</strong> (Kořán)</span></li>\n<li><time>45.</time><span><strong>3:1 Zeman</strong></span></li>\n<li><time>52.</time><span><strong>4:1 Vachovec</strong> (Rozhon)</span></li>\n</ul>\n<h2>Sestava SK Kadaň</h2>\n<div class=\"lineup\"><p><strong>Brankáři:</strong> Štěrba (Běhula)</p><p><strong>Obránci:</strong> Hřebíček, Strunz, Pokorný, Rykl, Hynek, Týr, Cestr (C)</p><p><strong>Útočníci:</strong> Novotný, Rindoš, Starý – Vostiňák, Chamrád, Matai – Šmejc, Hrdlička, Hlaváček – Vrtek</p><p><strong>Trenér:</strong> Roland Wágner</p></div>\n<section class=\"sources\"><h2>Zdroje a poznámka redakce</h2><ul><li>Online zápis přípravného utkání HC Stadion Cheb – SK Kadaň, 25. 8. 2026.</li></ul><p>Výsledek, střelci, asistence, sestavy a základní statistiky odpovídají zápisu po skončení utkání.</p></section>\n</article>\n<aside class=\"sticky\"><div class=\"sidebox\"><h3>Rychlý přehled</h3><p><strong>Cheb – Kadaň 4:1</strong><br>Po třetinách 1:1, 1:0, 2:0<br>Gól Kadaně: František Hynek</p></div><div class=\"sidebox\"><h3>Příprava SK Kadaň</h3><p>Po výhře 5:4 v Kralupech přišla v Chebu porážka 1:4.</p></div><div data-promos data-context=\"sidebar\"></div></aside>\n</main>\n<script src=\"/site.js\" defer></script>\n<script src=\"/reklamy.js?v=20260823-lastminuteslevy-1\"></script>\n<script src=\"/ad-spacing-guard.js?v=20260730-pojistime-rotation-4\" defer></script>\n<script src=\"/obsah-doplnky.js?v=20260730-pojistime-rotation-4\"></script>\n<script src=\"/article-share.js?v=20260815-1\" defer></script>\n</body></html>",
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": true
+    },
+    "https://www.nasekadan.cz/clanky/kadan-cheb-1-4-priprava-2026.html": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/clanky/kadan-cheb-1-4-priprava-2026.html?nkbridgeverify=20260825-2036-cheb-kadan-4-1-1787683413",
+      "present": {
+        "Kadaň v Chebu vedla, ale další gól už nepřidala. Přípravu prohrála 1:4": true,
+        "HC Stadion Cheb": true,
+        "František Hynek": true,
+        "289": true
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": "<main class=\"wrap article-shell\" data-article-template=\"unified-v1\">\n<article class=\"article\">\n<p class=\"tag\">SPORT · HOKEJ · SK KADAŇ · 25. SRPNA 2026 · 20:36</p>\n<h1>Kadaň v Chebu vedla, ale další gól už nepřidala. Přípravu prohrála 1:4</h1>\n<p class=\"lead\"><strong>Hokejisté SK Kadaň ve třetím přípravném utkání před sezonou 2026/27 neuspěli. Na ledě HC Stadion Cheb sice od 13. minuty vedli po gólu Františka Hynka, domácí ale ještě před první přestávkou vyrovnali a ve druhé a třetí části přidali další tři branky. Cheb zvítězil 4:1.</strong></p>\n<div class=\"score\" aria-label=\"Konečný výsledek HC Stadion Cheb 4, SK Kadaň 1\"><div class=\"team\">HC Stadion Cheb<small>1:1 · 1:0 · 2:0</small></div><div class=\"result\">4:1</div><div class=\"team\">SK Kadaň<small>gól: František Hynek</small></div></div>\n<div class=\"facts\"><div class=\"fact\"><b>4:1</b><span>Konečný výsledek v Chebu</span></div><div class=\"fact\"><b>13. minuta</b><span>Hynek poslal Kadaň do vedení</span></div><div class=\"fact\"><b>289</b><span>diváků na zimním stadionu v Chebu</span></div></div>\n<h2>Kadaň šla do vedení, Cheb odpověděl ještě v první třetině</h2>\n<p>Skóre otevřeli hosté. Ve 13. minutě se prosadil <strong>František Hynek</strong>, kterému asistovali <strong>Vladislav Vrtek a Matěj Matai</strong>. Kadaň tak vedla 1:0, náskok ale do přestávky neudržela. V 18. minutě vyrovnal domácí <strong>Zeman</strong> po přihrávkách Proška a Majera.</p>\n<h2>Rozhodla druhá a třetí část</h2>\n<p>Ve druhé třetině se Cheb dostal poprvé do vedení. Ve 34. minutě skóroval <strong>Švík</strong> po asistenci Kořána. Po druhé přestávce domácí náskok ještě navýšili: ve 45. minutě přidal svůj druhý gól <strong>Zeman</strong> a v 52. minutě uzavřel skóre na 4:1 <strong>Vachovec</strong> po přihrávce Rozhona.</p>\n<p>Kadaň už na úvodní Hynkův zásah nenavázala. Zápis utkání uvádí poměr vyloučení 4:6 a využití přesilových her 0:1 z pohledu domácího Chebu. V oslabení se ani jeden tým neprosadil.</p>\n<h2>Branky zápasu</h2>\n<ul class=\"timeline\">\n<li><time>13.</time><span><strong>0:1 František Hynek</strong> (Vrtek, Matai)</span></li>\n<li><time>18.</time><span><strong>1:1 Zeman</strong> (Prošek, Majer)</span></li>\n<li><time>34.</time><span><strong>2:1 Švík</strong> (Kořán)</span></li>\n<li><time>45.</time><span><strong>3:1 Zeman</strong></span></li>\n<li><time>52.</time><span><strong>4:1 Vachovec</strong> (Rozhon)</span></li>\n</ul>\n<h2>Sestava SK Kadaň</h2>\n<div class=\"lineup\"><p><strong>Brankáři:</strong> Štěrba (Běhula)</p><p><strong>Obránci:</strong> Hřebíček, Strunz, Pokorný, Rykl, Hynek, Týr, Cestr (C)</p><p><strong>Útočníci:</strong> Novotný, Rindoš, Starý – Vostiňák, Chamrád, Matai – Šmejc, Hrdlička, Hlaváček – Vrtek</p><p><strong>Trenér:</strong> Roland Wágner</p></div>\n<section class=\"sources\"><h2>Zdroje a poznámka redakce</h2><ul><li>Online zápis přípravného utkání HC Stadion Cheb – SK Kadaň, 25. 8. 2026.</li></ul><p>Výsledek, střelci, asistence, sestavy a základní statistiky odpovídají zápisu po skončení utkání.</p></section>\n</article>\n<aside class=\"sticky\"><div class=\"sidebox\"><h3>Rychlý přehled</h3><p><strong>Cheb – Kadaň 4:1</strong><br>Po třetinách 1:1, 1:0, 2:0<br>Gól Kadaně: František Hynek</p></div><div class=\"sidebox\"><h3>Příprava SK Kadaň</h3><p>Po výhře 5:4 v Kralupech přišla v Chebu porážka 1:4.</p></div><div data-promos data-context=\"sidebar\"></div></aside>\n</main>\n<script src=\"/site.js\" defer></script>\n<script src=\"/reklamy.js?v=20260823-lastminuteslevy-1\"></script>\n<script src=\"/ad-spacing-guard.js?v=20260730-pojistime-rotation-4\" defer></script>\n<script src=\"/obsah-doplnky.js?v=20260730-pojistime-rotation-4\"></script>\n<script src=\"/article-share.js?v=20260815-1\" defer></script>\n</body></html>",
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": true
+    }
+  }
+}
