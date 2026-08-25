@@ -14,17 +14,31 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 BASE="https://nasekadan.cz"
-UA="NaseKadanSportCardRepair/1.0"
+UA="NaseKadanSportCardRepair/1.1"
 OUT_ART=Path("nasekadan-live/files/clanky")
 OUT_SOC=Path("nasekadan-live/files/social")
 MANIFEST=Path("nasekadan-live/manifest.json")
 RAW="https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/"
+BASELINE_REF="25fb80d10b89806da10e6298c402935e57a28e96"
+BASELINE_RAW=f"https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/{BASELINE_REF}/nasekadan-live/files/clanky/"
+FALSE_SPORT_SLUGS={
+    "alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
+    "cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
+    "srpen-kadanske-galerie-vystavy-workshop-2026.html",
+}
+FALSE_SPORT_IMAGES={
+    "/social/alzbetinsky-klaster-kadan-pacienti-lecebna-1966-7fc3dea464.png",
+    "/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-bc174fe955.png",
+    "/social/srpen-kadanske-galerie-vystavy-workshop-2026-f9e3888650.png",
+}
 W,H=1200,630
 
 
-def fetch(url:str)->str:
-    sep='&' if '?' in url else '?'
-    req=urllib.request.Request(url+sep+'nksport='+str(int(dt.datetime.now(dt.timezone.utc).timestamp())),headers={'User-Agent':UA,'Cache-Control':'no-cache'})
+def fetch(url:str,bust=True)->str:
+    if bust and "raw.githubusercontent.com" not in url:
+        sep='&' if '?' in url else '?'
+        url=url+sep+'nksport='+str(int(dt.datetime.now(dt.timezone.utc).timestamp()))
+    req=urllib.request.Request(url,headers={'User-Agent':UA,'Cache-Control':'no-cache'})
     with urllib.request.urlopen(req,timeout=30) as r:
         return r.read().decode('utf-8','replace')
 
@@ -67,11 +81,23 @@ def tag_text(body:str)->str:
 
 
 def sport_kind(body:str)->tuple[str,str]|None:
-    t=tag_text(body); ttl=title(body).lower(); combined=(t+' '+ttl.upper())
-    if 'HOKEJ' in combined or 'SK KADAŇ' in combined.upper(): return ('SPORT · HOKEJ','hockey')
-    if 'FOTBAL' in combined or 'TATRAN' in combined.upper(): return ('SPORT · FOTBAL','football')
-    keys=('SPORT','PLAVC','GYMNAST','TYČKAŘ','ATLET','BĚH','CYKLIST','HÁZEN','VOLEJBAL','BASKET')
-    if any(k in combined for k in keys): return ('SPORT','sport')
+    """Konzervativní detekce: primárně rubrika, sekundárně celá sportovní slova.
+
+    Nepoužívat volné substringy typu BĚH, protože pak se jako sport označí PŘÍBĚH.
+    """
+    tag=tag_text(body)
+    ttl=title(body).upper()
+    if re.search(r'(^|\W)HOKEJ($|\W)',tag) or re.search(r'(^|\W)HOKEJ($|\W)',ttl):
+        return ('SPORT · HOKEJ','hockey')
+    if re.search(r'(^|\W)FOTBAL($|\W)',tag) or re.search(r'(^|\W)FOTBAL($|\W)',ttl):
+        return ('SPORT · FOTBAL','football')
+    if re.search(r'(^|\W)SPORT($|\W)',tag):
+        return ('SPORT','sport')
+    # Starší sportovní články nemusí mít jednotný SPORT tag.
+    if re.search(r'\b(PLAVCI|PLAVÁNÍ|GYMNASTIKA|GYMNASTÉ|TYČKAŘKA|TYČKAŘ|ATLETKA|ATLET|VOLEJBAL|BASKETBAL|HÁZENÁ)\b',ttl):
+        return ('SPORT','sport')
+    if 'TATRAN KADAŇ' in ttl or 'FK TATRAN' in ttl:
+        return ('SPORT · FOTBAL','football')
     return None
 
 
@@ -131,13 +157,10 @@ def card(title_text,category,kind,path):
 
 def update_article(body,new_abs,new_rel):
     body=replace_meta(body,'og:image',new_abs,True); body=replace_meta(body,'og:image:type','image/png',True); body=replace_meta(body,'og:image:width','1200',True); body=replace_meta(body,'og:image:height','630',True); body=replace_meta(body,'twitter:image',new_abs,False)
-    # JSON-LD image: nahradit první /social/ URL uvnitř NewsArticle, pokud existuje.
     body=re.sub(r'("image"\s*:\s*\[?\s*")https://nasekadan\.cz/social/[^"\]]+',lambda m:m.group(1)+new_abs,body,count=1)
-    # Jediná normalizovaná titulní figura už na webu existuje po předchozím auditu.
     fig=re.compile(r'(<figure\b[^>]*data-nk-title-figure=["\']1["\'][^>]*>.*?<img\b[^>]*src=["\'])([^"\']+)',re.I|re.S)
     if fig.search(body): body=fig.sub(lambda m:m.group(1)+new_rel,body,count=1)
     else:
-        # fallback na první article-figure
         fig2=re.compile(r'(<figure\b[^>]*class=["\'][^"\']*article-figure[^"\']*["\'][^>]*>.*?<img\b[^>]*src=["\'])([^"\']+)',re.I|re.S)
         if fig2.search(body): body=fig2.sub(lambda m:m.group(1)+new_rel,body,count=1)
     return body
@@ -147,12 +170,25 @@ def main():
     sitemap=fetch(BASE+'/sitemap.xml'); urls=re.findall(r'<loc>(https://nasekadan\.cz/clanky/[^<]+\.html)</loc>',sitemap)
     OUT_ART.mkdir(parents=True,exist_ok=True); OUT_SOC.mkdir(parents=True,exist_ok=True)
     files=[]; verify=[]; repaired=[]
+
+    # Nejprve vrátit tři nesportovní články přesně do bezpečné normalizované verze
+    # z okamžiku před chybnou sportovní dávkou.
+    for slug in sorted(FALSE_SPORT_SLUGS):
+        body=fetch(BASELINE_RAW+urllib.parse.quote(slug),bust=False)
+        article=OUT_ART/slug; article.write_text(body,encoding='utf-8',newline='\n')
+        rawpath='clanky/'+slug
+        files.append({'path':rawpath,'url':RAW+rawpath,'sha256':hashlib.sha256(article.read_bytes()).hexdigest()})
+        verify.append(BASE+'/clanky/'+slug)
+
     for url in urls:
+        slug=urllib.parse.urlsplit(url).path.rsplit('/',1)[-1]
+        if slug in FALSE_SPORT_SLUGS:
+            continue
         try: body=fetch(url)
         except Exception: continue
         kind=sport_kind(body)
         if not kind: continue
-        category,icon=kind; ttl=title(body); desc=description(body); slug=urllib.parse.urlsplit(url).path.rsplit('/',1)[-1]; stem=slug[:-5]
+        category,icon=kind; ttl=title(body); desc=description(body); stem=slug[:-5]
         digest=hashlib.sha256(f'{stem}|{ttl}|{desc}|{category}'.encode()).hexdigest()[:10]
         name=f'{stem}-{digest}.png'; rel='/social/'+name; absurl=BASE+rel
         social=OUT_SOC/name; card(ttl,category,icon,social)
@@ -160,8 +196,15 @@ def main():
         for path,rawpath in ((article,'clanky/'+slug),(social,'social/'+name)):
             files.append({'path':rawpath,'url':RAW+rawpath,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
         verify.append(url); repaired.append({'url':url,'category':category,'image':rel})
-    MANIFEST.write_text(json.dumps({'schema':1,'version':'20260825-sport-cards-v2','files':files,'patches':[],'deletes':[],'verify_urls':verify,'verify_present':['data-nk-title-figure="1"'],'verify_absent':[]},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    Path('nasekadan-live/sport-card-summary.json').write_text(json.dumps({'count':len(repaired),'items':repaired},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps({'sports_repaired':len(repaired)},ensure_ascii=False))
+
+    MANIFEST.write_text(json.dumps({
+        'schema':1,'version':'20260825-sport-cards-v3',
+        'files':files,'patches':[],'deletes':[],
+        'verify_urls':sorted(set(verify)),
+        'verify_present':['data-nk-title-figure="1"'],
+        'verify_absent':sorted(FALSE_SPORT_IMAGES),
+    },ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    Path('nasekadan-live/sport-card-summary.json').write_text(json.dumps({'count':len(repaired),'restored_non_sport':sorted(FALSE_SPORT_SLUGS),'items':repaired},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps({'sports_repaired':len(repaired),'non_sport_restored':len(FALSE_SPORT_SLUGS)},ensure_ascii=False))
 
 if __name__=='__main__': main()
