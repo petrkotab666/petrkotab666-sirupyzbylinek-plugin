@@ -1,0 +1,44 @@
+name: Naše Kadaň – hromadná oprava živých článků
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nasekadan-live/repair_live_articles.py'
+      - 'nasekadan-live/live-repair-trigger.txt'
+      - '.github/workflows/nasekadan-live-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nasekadan-sitewide-live-repair
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ověřit syntaxi
+        run: python -m py_compile nasekadan-live/repair_live_articles.py
+      - name: Připravit opravené články z aktuální produkce
+        run: python nasekadan-live/repair_live_articles.py
+      - name: Uložit transportní balík pro OVH bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add nasekadan-live/files/clanky/ nasekadan-live/manifest.json nasekadan-live/live-repair-summary.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Připravit hromadnou opravu grafik Naše Kadaň [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
