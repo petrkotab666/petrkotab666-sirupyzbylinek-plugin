@@ -1,0 +1,44 @@
+name: Naše Kadaň – opravit sportovní grafiky
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nasekadan-live/repair_sport_cards.py'
+      - 'nasekadan-live/sport-card-trigger.txt'
+      - '.github/workflows/nasekadan-sport-card-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nasekadan-sport-card-repair
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Nainstalovat Pillow
+        run: python -m pip install --disable-pip-version-check Pillow
+      - name: Přegenerovat sportovní karty z živých článků
+        run: python nasekadan-live/repair_sport_cards.py
+      - name: Uložit sportovní transport pro OVH bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add nasekadan-live/files/clanky/ nasekadan-live/files/social/ nasekadan-live/manifest.json nasekadan-live/sport-card-summary.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Připravit opravené sportovní grafiky Naše Kadaň [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
