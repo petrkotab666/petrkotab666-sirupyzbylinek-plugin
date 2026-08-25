@@ -1,2 +1,2 @@
-Spustit nezávislý živý audit po hromadné opravě grafik a sportovních motivů.
-2026-08-25T21:54:00+02:00
+Spustit nezávislý živý audit po nasazení hromadné normalizace 132 článků.
+2026-08-25T21:56:00+02:00
