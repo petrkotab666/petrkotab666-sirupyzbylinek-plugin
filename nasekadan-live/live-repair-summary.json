@@ -1,10 +1,5 @@
 {
-  "targets": 116,
-  "generated": 115,
-  "failures": [
-    {
-      "url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
-      "error": "RuntimeError('https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html: nenalezen <article class=article>')"
-    }
-  ]
+  "targets": 132,
+  "generated": 132,
+  "failures": []
 }
