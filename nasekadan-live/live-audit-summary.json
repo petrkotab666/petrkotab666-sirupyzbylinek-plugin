@@ -1,0 +1,794 @@
+{
+  "status": "FAILED",
+  "started_at": "2026-08-25T20:10:19.414544+00:00",
+  "finished_at": "2026-08-25T20:10:42.350647+00:00",
+  "sitemap_urls": 144,
+  "html_pages_checked": 144,
+  "article_pages_checked": 132,
+  "images_checked": 81,
+  "internal_links_checked": 162,
+  "error_count": 124,
+  "warning_count": 50,
+  "error_types": {
+    "missing_visible_title_figure": 103,
+    "duplicate_title_figures": 10,
+    "broken_image": 9,
+    "broken_internal_link": 2
+  },
+  "warning_types": {
+    "nonstandard_footer": 38,
+    "nonstandard_header": 12
+  },
+  "errors": [
+    {
+      "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-dominikanky-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/ano-kritizuje-termin-mimoradneho-zastupitelstva-nemocnice-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/ano-mimoradne-zastupitelstvo-nemocnice-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/arc-med-nemocnice-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/avies-nemocnice-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-historie-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/cyklostezka-prunerov-cernovice-vetrovsky-opravy-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/d7-sporice-omezeni-18-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/dame-kadani-novou-sanci-odpovedi-nase-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/dopravni-nehoda-se-zranenim-kadan-24-cervence-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/epetice-nemocnice-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/eso-market-rafanda-kadan-24-7.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/festpout-polaky-zvlastni-vlaky-z-kadane-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/fve-epr-letiste-bess-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/gymnastika-kadan-treneri-prosinec-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/gymnathlon-kadan-kurzy-deti-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/hasici-kadan-vycvik-zachrana-voda-nechranice.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/historicky-hurvinek-kadan-prunerov-vejprty-16-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/hlubany-podborany-havarie-vodovodu-24-srpna-2026-b3f6456a63.png",
+        "https://nasekadan.cz/social/hlubany-podborany-havarie-vodovodu-24-srpna-2026.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/horni-halze-loucna-uzavirka-23-srpna-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/horni-halze-loucna-uzavirka-23-srpna-2026-af82386e16.png",
+        "https://nasekadan.cz/social/horni-halze-loucna-uzavirka-23-srpna-2026.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/hotel-svoboda-dostupne-bydleni-knihovna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/interni-ambulance-nemocnice-kadan-uzavrena-cervenec-srpen-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/ippv-kadan-psychologicke-pracoviste-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/jaderne-tusimice-smr-voda-doprava-eia-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/jak-se-kadan-stara-o-hriste-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/jezerka-kadan-prevod-investice-309-milionu-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/jezero-most-patrani-dva-lide-bourka-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/josef-suchy-klasterec-u18-kanada-hlinka-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-hasici-pozarni-technika-zht-vito-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-sukova-vezni-klasterni-schody-vodovod-kanalizace-rizeni-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-tropicke-dny-koupaliste-cervenec-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-usti-prvni-priprava-8-3-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-da4a0ef2f5.png",
+        "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-c0553cecc3.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadansky-klaster-agent-cerich.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/kadansky-klaster-agent-cerich-83f224cabf.png",
+        "https://nasekadan.cz/social/kadansky-klaster-agent-cerich.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadansti-plavacci-zapis-podzim-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/kam-v-kadani-a-okoli-17-23-srpna-2026-824d0b22de.png",
+        "https://nasekadan.cz/social/kam-v-kadani-a-okoli-17-23-srpna-2026.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-24-30-srpna-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/kam-v-kadani-a-okoli-24-30-srpna-2026-8e10a854bd.png",
+        "https://nasekadan.cz/social/kam-v-kadani-a-okoli-24-30-srpna-2026.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-27-cervence-2-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-3-9-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kandidatni-listiny-kadan-komunalni-volby-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/klasterec-hasici-novy-dopravni-automobil-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/klasterec-hasici-novy-dopravni-automobil-2026-10f8b7f8da.png",
+        "https://nasekadan.cz/social/klasterec-hasici-novy-dopravni-automobil-2026.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/klasterec-ochlazeni-zimni-stadion-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kolobezky-hriste-detektor-kovu-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/komunalni-volby-kadan-historie-1990-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/komunalni-volby-kadan-kandidaty-lhuta-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/koupaliste-kadan-pozemky-skluzavka-provoz-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kulturni-zarizeni-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/martin-kadlec-navrat-hokej-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/mestska-policie-kadan-fakta-diskuse-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/mestske-byty-kadan-nabidka-srpen-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/mimoradne-zastupitelstvo-nemocnice-kadan-17-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/mladez-tatranu-kadan-uspesna-sezona-nabor-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/mve-hradiste-nova-vodni-elektrarna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nebezpeci-pozaru-ustecky-kraj-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-darovala-82-luzek-ukrajine.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-kriticky-nedostatek-krve-0-rh-minus-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-nove-vedeni-pavel-marek-jiri-vlas.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-odmenovani-vedeni-masek-hossner-krusina-marek-vlas-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-profil-sluzby-budoucnost.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-software-kyberbezpecnost.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026-26c641c535.png",
+        "https://nasekadan.cz/social/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026-cd1e24f552.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nova-revmatologicka-ambulance-kadan-podzim-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/novy-hrbitov-kadan-architektonicka-studie-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/od-hlubin-k-nebi-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/od-sousedu-chmel-docesna-zatec-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/odstavky-elektriny-autokemp-prunerov-srpen-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/omezeni-i13-chomutov-17-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/petice-nemocnice-kadan-podana-24-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/petice-nemocnice-kadan-podpisova-mista-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/petice-nemocnice-kadan-zmena-modelu-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/petice-nemocnice-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/plan-uses-kadan-krajina-zakazky-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/plavani-pro-deti-kadan-radka.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026-89d6b393cd.png",
+        "https://nasekadan.cz/social/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/prakticti-lekari-nemocnice-kadan-srpen-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/pretekajici-kose-kadan-technicke-sluzby-ridici.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/prijezd-cisare-kadan-1367-hra.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/radka-kurzy-corrency-1000-korun-zari-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/sekani-travniku-kadan-spravci-vysky-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/silnice-zatec-kadan-prejezd-uzavirka-srpen-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/slovan-druhy-pokus.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/starosta-losenicky-nemocnice-slovan-nepedagogove.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/strikacky-vchody-drogy-kadan.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/technicke-sluzby-kadan-kdo-uklizi-mesto-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/vinohrady-jihovychodni-predpoli-kadan-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/vyluka-vlaky-kadan-chomutov-klasterec-srpen-rijen-2026.html",
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/vyluka-vlaky-kadan-chomutov-klasterec-srpen-rijen-2026-49aa7af28c.png",
+        "https://nasekadan.cz/social/vyluka-vlaky-kadan-chomutov-klasterec-srpen-rijen-2026-fixed.png"
+      ]
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/vyluka-zatec-blatno-do-24-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/vypadek-internetu-kadan-kradez-kabelu.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zakaz-odberu-povrchovych-vod-kadansko-cervenec-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zaregistrovala-se-v-kadani-darovala-krvetvorne-bunky-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zasahy-hasici-policie-kadan-okoli-10-14-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zive-mimoradne-zastupitelstvo-kadan-nemocnice-17-srpna-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zs-chomutovska-kadan-stravne-zari-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zzs-kadan-garaz-mycka-2026.html",
+      "type": "missing_visible_title_figure"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/hlubany-podborany-havarie-vodovodu-24-srpna-2026.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/horni-halze-loucna-uzavirka-23-srpna-2026.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/kadansky-klaster-agent-cerich.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/kam-v-kadani-a-okoli-17-23-srpna-2026.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/kam-v-kadani-a-okoli-24-30-srpna-2026.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/klasterec-hasici-novy-dopravni-automobil-2026.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/ods-kadan-odpovedi-nase-kadan-2026.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_image",
+      "url": "https://nasekadan.cz/social/vyluka-vlaky-kadan-chomutov-klasterec-srpen-rijen-2026-fixed.png",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_internal_link",
+      "url": "https://nasekadan.cz/'+h+'",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "type": "broken_internal_link",
+      "url": "https://nasekadan.cz/akce/",
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    }
+  ],
+  "warnings": [
+    {
+      "url": "https://nasekadan.cz/clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-jak-probehl.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-jak-probehl.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-program-doprava.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-program-doprava.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/d7-sporice-omezeni-18-srpna-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/d7-sporice-omezeni-18-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/historicky-hurvinek-kadan-prunerov-vejprty-16-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/horni-halze-loucna-uzavirka-23-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/jezerka-kadan-prevod-investice-309-milionu-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadansky-klaster-agent-cerich.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadansky-klaster-agent-cerich.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kandidatky-kadan-2026-prvni-tri-pod-lupou.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kandidatky-kadan-registrace-komunalni-volby-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/ods-kadan-odpovedi-nase-kadan-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/omezeni-i13-chomutov-17-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/sts-prunerov-konkurs-dluhy-drazba-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/technicke-sluzby-kadan-kdo-uklizi-mesto-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
+      "type": "nonstandard_header"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zasahy-hasici-policie-kadan-okoli-10-14-srpna-2026.html",
+      "type": "nonstandard_footer"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/zive-mimoradne-zastupitelstvo-kadan-nemocnice-17-srpna-2026.html",
+      "type": "nonstandard_footer"
+    }
+  ]
+}
