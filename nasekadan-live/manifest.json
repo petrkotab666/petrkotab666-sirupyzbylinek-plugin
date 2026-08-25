@@ -1,15 +1,25 @@
 {
   "schema": 1,
-  "version": "20260825-2105-cheb-duplicate-figure-diagnostic",
+  "version": "20260825-2108-cheb-remove-second-title-figure",
   "files": [],
-  "patches": [],
+  "patches": [
+    {
+      "path": "clanky/kadan-cheb-prohra-1-4-priprava-2026.html",
+      "old": "<figure class=\"article-figure\"><img src=\"/social/kadan-cheb-prohra-1-4-priprava-2026-1b83dc10a1.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika k přípravnému utkání HC Stadion Cheb – SK Kadaň 4:1\"><figcaption>Kadaň ve třetím přípravném utkání prohrála v Chebu 1:4. Redakční grafika Naše Kadaň.</figcaption></figure>",
+      "new": "",
+      "count": 1
+    }
+  ],
   "deletes": [],
   "verify_urls": [
     "https://nasekadan.cz/clanky/kadan-cheb-prohra-1-4-priprava-2026.html",
     "https://www.nasekadan.cz/clanky/kadan-cheb-prohra-1-4-priprava-2026.html"
   ],
   "verify_present": [
-    "Kadaň v Chebu nestačila. Ve třetí přípravě prohrála 1:4"
+    "Kadaň v Chebu nestačila. Ve třetí přípravě prohrála 1:4",
+    "/social/kadan-cheb-prohra-1-4-priprava-2026-0fadbf5c39.png"
   ],
-  "verify_absent": []
+  "verify_absent": [
+    "/social/kadan-cheb-prohra-1-4-priprava-2026-1b83dc10a1.png"
+  ]
 }
