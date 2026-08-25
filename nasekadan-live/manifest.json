@@ -1,24 +1,18 @@
 {
   "schema": 1,
-  "version": "20260825-2036-cheb-kadan-4-1",
-  "files": [
-    {
-      "path": "clanky/kadan-cheb-1-4-priprava-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/kadan-cheb-1-4-priprava-2026.html",
-      "sha256": "12b37cf666dda86c1d9507cf8e484f953f0492276543c7f3b216ca7a30a154f3"
-    }
-  ],
+  "version": "20260825-2045-cheb-kadan-home-archive-check",
+  "files": [],
   "patches": [],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/kadan-cheb-1-4-priprava-2026.html",
-    "https://www.nasekadan.cz/clanky/kadan-cheb-1-4-priprava-2026.html"
+    "https://nasekadan.cz/",
+    "https://www.nasekadan.cz/",
+    "https://nasekadan.cz/clanky/",
+    "https://www.nasekadan.cz/clanky/"
   ],
   "verify_present": [
     "Kadaň v Chebu vedla, ale další gól už nepřidala. Přípravu prohrála 1:4",
-    "HC Stadion Cheb",
-    "František Hynek",
-    "289"
+    "/clanky/kadan-cheb-1-4-priprava-2026.html"
   ],
   "verify_absent": []
 }
