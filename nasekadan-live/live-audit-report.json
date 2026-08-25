@@ -1,6 +1,6 @@
 {
   "version": "20260825-1",
-  "started_at": "2026-08-25T20:10:19.414544+00:00",
+  "started_at": "2026-08-25T20:12:19.626094+00:00",
   "status": "FAILED",
   "errors": [
     {
@@ -774,7 +774,7 @@
       "type": "nonstandard_footer"
     }
   ],
-  "finished_at": "2026-08-25T20:10:42.350647+00:00",
+  "finished_at": "2026-08-25T20:12:51.441338+00:00",
   "sitemap_urls": 144,
   "html_pages_checked": 144,
   "article_pages_checked": 132,
