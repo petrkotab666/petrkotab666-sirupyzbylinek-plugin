@@ -31,15 +31,49 @@ jobs:
         run: python -m py_compile nasekadan-live/audit_live_site.py
       - name: Projít skutečný veřejný web
         run: python nasekadan-live/audit_live_site.py
+      - name: Vytvořit kompaktní souhrn
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          src=Path('nasekadan-live/live-audit-report.json')
+          if not src.exists():
+              raise SystemExit('Chybí live-audit-report.json')
+          report=json.loads(src.read_text(encoding='utf-8'))
+          errors=report.get('errors') or []
+          warnings=report.get('warnings') or []
+          summary={
+              'status':report.get('status'),
+              'started_at':report.get('started_at'),
+              'finished_at':report.get('finished_at'),
+              'sitemap_urls':report.get('sitemap_urls'),
+              'html_pages_checked':report.get('html_pages_checked'),
+              'article_pages_checked':report.get('article_pages_checked'),
+              'images_checked':report.get('images_checked'),
+              'internal_links_checked':report.get('internal_links_checked'),
+              'error_count':len(errors),
+              'warning_count':len(warnings),
+              'error_types':dict(Counter(str(x.get('type')) for x in errors)),
+              'warning_types':dict(Counter(str(x.get('type')) for x in warnings)),
+              'errors':errors,
+              'warnings':warnings,
+          }
+          Path('nasekadan-live/live-audit-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({k:summary[k] for k in ('status','error_count','warning_count','error_types','warning_types')},ensure_ascii=False,indent=2))
+          PY
       - name: Uložit auditní report
         if: always()
         shell: bash
         run: |
           set -euo pipefail
           test -s nasekadan-live/live-audit-report.json || exit 1
+          test -s nasekadan-live/live-audit-summary.json || exit 1
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add nasekadan-live/live-audit-report.json
+          git add nasekadan-live/live-audit-report.json nasekadan-live/live-audit-summary.json
           git diff --cached --quiet && exit 0
           git commit -m 'Aktualizovat nezávislý audit Naše Kadaň [skip ci]'
           git pull --rebase origin main
