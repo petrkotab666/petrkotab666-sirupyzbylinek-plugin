@@ -1,21 +1,15 @@
 {
   "schema": 1,
-  "version": "20260825-2048-remove-duplicate-cheb-kadan",
+  "version": "20260825-2105-cheb-duplicate-figure-diagnostic",
   "files": [],
   "patches": [],
-  "deletes": [
-    "clanky/kadan-cheb-1-4-priprava-2026.html"
-  ],
+  "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/",
-    "https://www.nasekadan.cz/"
+    "https://nasekadan.cz/clanky/kadan-cheb-prohra-1-4-priprava-2026.html",
+    "https://www.nasekadan.cz/clanky/kadan-cheb-prohra-1-4-priprava-2026.html"
   ],
   "verify_present": [
-    "Kadaň v Chebu nestačila. Ve třetí přípravě prohrála 1:4",
-    "/clanky/kadan-cheb-prohra-1-4-priprava-2026.html",
-    "Poslední srpnový blok nočních výluk vlaků"
+    "Kadaň v Chebu nestačila. Ve třetí přípravě prohrála 1:4"
   ],
-  "verify_absent": [
-    "/clanky/kadan-cheb-1-4-priprava-2026.html"
-  ]
+  "verify_absent": []
 }
