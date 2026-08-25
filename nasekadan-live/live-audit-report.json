@@ -1,14 +1,10 @@
 {
   "version": "20260825-1",
-  "started_at": "2026-08-25T19:57:55.368867+00:00",
+  "started_at": "2026-08-25T20:06:41.760407+00:00",
   "status": "FAILED",
   "errors": [
     {
       "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-dominikanky-kadan-2026.html",
-      "type": "missing_visible_title_figure"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
       "type": "missing_visible_title_figure"
     },
     {
@@ -37,10 +33,6 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-historie-2026.html",
-      "type": "missing_visible_title_figure"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
       "type": "missing_visible_title_figure"
     },
     {
@@ -178,7 +170,7 @@
       "type": "duplicate_title_figures",
       "count": 2,
       "sources": [
-        "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-05df0f4b68.png",
+        "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-da4a0ef2f5.png",
         "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-c0553cecc3.png"
       ]
     },
@@ -450,10 +442,6 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
-      "type": "missing_visible_title_figure"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
       "type": "missing_visible_title_figure"
     },
     {
@@ -786,11 +774,11 @@
       "type": "nonstandard_footer"
     }
   ],
-  "finished_at": "2026-08-25T19:58:18.955178+00:00",
+  "finished_at": "2026-08-25T20:07:03.821908+00:00",
   "sitemap_urls": 144,
   "html_pages_checked": 144,
   "article_pages_checked": 132,
-  "images_checked": 80,
+  "images_checked": 81,
   "internal_links_checked": 162,
   "page_results": [
     {
@@ -957,11 +945,7 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
-      "errors": [
-        {
-          "type": "missing_visible_title_figure"
-        }
-      ],
+      "errors": [],
       "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
@@ -969,7 +953,12 @@
       "canonical": "https://nasekadan.cz/clanky/alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
       "h1": "Kam odešli poslední pacienti? Skrytý příběh kadaňského kláštera",
       "og_image": "https://nasekadan.cz/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png",
-      "title_figures": [],
+      "title_figures": [
+        {
+          "src": "https://nasekadan.cz/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png",
+          "html": "<figure class=\"article-figure\" data-nk-title-figure=\"1\"><img class=\"article-photo\" src=\"/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Kam odešli poslední pacienti? Skrytý příběh kadaňského kláštera\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        }
+      ],
       "published": "2026-08-03T04:00:00+02:00",
       "images": [
         "https://nasekadan.cz/social/alzbetinsky-klaster-kadan-pacienti-20260803-badgefix-08cb975f25.png"
@@ -1146,7 +1135,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
       "h1": "Kadaňská tyčkařka Apolena Švábíková míří na první seniorské ME. Kvalifikaci má v úterý večer",
-      "og_image": "https://nasekadan.cz/social/apolena-svabikova-mistrovstvi-evropy-birmingham-2026-3f6c997a60.png",
+      "og_image": "https://nasekadan.cz/social/apolena-svabikova-mistrovstvi-evropy-birmingham-2026-93038c0dd5.png",
       "title_figures": [],
       "published": "2026-08-06T19:24:00+02:00",
       "images": [
@@ -1306,16 +1295,16 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/cernovice-tatran-kadan-nestemice-vyhra-2026.html",
       "h1": "Černovice s Tatranem vezou z Neštěmic první výhru. Rozhodl Karban",
-      "og_image": "https://nasekadan.cz/social/cernovice-tatran-kadan-nestemice-vyhra-2026-d7a3ebc05c.png",
+      "og_image": "https://nasekadan.cz/social/cernovice-tatran-kadan-nestemice-vyhra-2026-c354895ff1.png",
       "title_figures": [
         {
-          "src": "https://nasekadan.cz/social/cernovice-tatran-kadan-nestemice-vyhra-2026-d7a3ebc05c.png",
-          "html": "<figure class=\"article-figure\"><img src=\"/social/cernovice-tatran-kadan-nestemice-vyhra-2026-d7a3ebc05c.png\" width=\"1200\" height=\"630\" alt=\"Fotbal – první vítězství SK Černovice / FK Tatran Kadaň v nové sezoně\"><figcaption>Spojený tým Černovic a Tatranu Kadaň získal první vítězství sezony.</figcaption></figure>"
+          "src": "https://nasekadan.cz/social/cernovice-tatran-kadan-nestemice-vyhra-2026-c354895ff1.png",
+          "html": "<figure class=\"article-figure\"><img src=\"/social/cernovice-tatran-kadan-nestemice-vyhra-2026-c354895ff1.png\" width=\"1200\" height=\"630\" alt=\"Fotbal – první vítězství SK Černovice / FK Tatran Kadaň v nové sezoně\"><figcaption>Spojený tým Černovic a Tatranu Kadaň získal první vítězství sezony.</figcaption></figure>"
         }
       ],
       "published": "2026-08-23T09:00:00+02:00",
       "images": [
-        "https://nasekadan.cz/social/cernovice-tatran-kadan-nestemice-vyhra-2026-d7a3ebc05c.png"
+        "https://nasekadan.cz/social/cernovice-tatran-kadan-nestemice-vyhra-2026-c354895ff1.png"
       ],
       "hrefs": [
         "https://nasekadan.cz/",
@@ -1448,11 +1437,7 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
-      "errors": [
-        {
-          "type": "missing_visible_title_figure"
-        }
-      ],
+      "errors": [],
       "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
@@ -1460,10 +1445,15 @@
       "canonical": "https://nasekadan.cz/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
       "h1": "U dopravního hřiště v Kadani vznikne cyklomyčka a pítko. Hotovo má být do konce srpna",
       "og_image": "https://nasekadan.cz/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-94144de035.png",
-      "title_figures": [],
+      "title_figures": [
+        {
+          "src": "https://nasekadan.cz/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-94144de035.png",
+          "html": "<figure class=\"article-figure\" data-nk-title-figure=\"1\"><img class=\"article-photo\" src=\"/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-94144de035.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku U dopravního hřiště v Kadani vznikne cyklomyčka a pítko. Hotovo má být do konce srpna\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        }
+      ],
       "published": "2026-08-10T18:06:00+02:00",
       "images": [
-        "https://nasekadan.cz/social/cyklomycka-pitko-dopravni-hriste-kadan-2026.png"
+        "https://nasekadan.cz/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-94144de035.png"
       ],
       "hrefs": [
         "https://nasekadan.cz/",
@@ -1879,7 +1869,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/gymnastika-kadan-treneri-prosinec-2026.html",
       "h1": "Gymnastice v Kadani chybějí trenéři. Jedna skupina má skončit, další fungování je nejisté",
-      "og_image": "https://nasekadan.cz/social/gymnastika-kadan-treneri-prosinec-2026-0890637633.png",
+      "og_image": "https://nasekadan.cz/social/gymnastika-kadan-treneri-prosinec-2026-0bc62a5a97.png",
       "title_figures": [],
       "published": "2026-08-06T21:36:00+02:00",
       "images": [
@@ -1926,7 +1916,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/gymnathlon-kadan-kurzy-deti-2026.html",
       "h1": "Gymnathlon míří do Kadaně. Kurzy pro děti od 2,5 do 6 let začnou 23. září",
-      "og_image": "https://nasekadan.cz/social/gymnathlon-kadan-kurzy-deti-2026-d161e3f2ed.png",
+      "og_image": "https://nasekadan.cz/social/gymnathlon-kadan-kurzy-deti-2026-fcced67b31.png",
       "title_figures": [],
       "published": "2026-08-08T22:00:00+02:00",
       "images": [
@@ -2511,7 +2501,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/josef-suchy-klasterec-u18-kanada-hlinka-2026.html",
       "h1": "Klášterecký Josef Suchý skóroval Kanadě už po 103 sekundách",
-      "og_image": "https://nasekadan.cz/social/josef-suchy-klasterec-u18-kanada-hlinka-2026-1c6ad621f3.png",
+      "og_image": "https://nasekadan.cz/social/josef-suchy-klasterec-u18-kanada-hlinka-2026-d5fe096c64.png",
       "title_figures": [],
       "published": "2026-08-04T12:10:00+02:00",
       "images": [
@@ -2555,16 +2545,16 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/kadan-cheb-prohra-1-4-priprava-2026.html",
       "h1": "Kadaň v Chebu nestačila. Ve třetí přípravě prohrála 1:4",
-      "og_image": "https://nasekadan.cz/social/kadan-cheb-prohra-1-4-priprava-2026-0fadbf5c39.png",
+      "og_image": "https://nasekadan.cz/social/kadan-cheb-prohra-1-4-priprava-2026-c29b94d237.png",
       "title_figures": [
         {
-          "src": "https://nasekadan.cz/social/kadan-cheb-prohra-1-4-priprava-2026-0fadbf5c39.png",
-          "html": "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/kadan-cheb-prohra-1-4-priprava-2026-0fadbf5c39.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Kadaň v Chebu nestačila. Ve třetí přípravě prohrála 1:4\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+          "src": "https://nasekadan.cz/social/kadan-cheb-prohra-1-4-priprava-2026-c29b94d237.png",
+          "html": "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/kadan-cheb-prohra-1-4-priprava-2026-c29b94d237.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Kadaň v Chebu nestačila. Ve třetí přípravě prohrála 1:4\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
         }
       ],
       "published": "2026-08-25T20:27:00+02:00",
       "images": [
-        "https://nasekadan.cz/social/kadan-cheb-prohra-1-4-priprava-2026-0fadbf5c39.png"
+        "https://nasekadan.cz/social/kadan-cheb-prohra-1-4-priprava-2026-c29b94d237.png"
       ],
       "hrefs": [
         "https://nasekadan.cz/",
@@ -2724,7 +2714,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/kadan-usti-prvni-priprava-8-3-2026.html",
       "h1": "První test nevyšel. Kadaň padla v Ústí 3:8, skórovali Hynek, Vostiňák a Vrtek",
-      "og_image": "https://nasekadan.cz/social/kadan-usti-prvni-priprava-8-3-2026-48c91a1422.png",
+      "og_image": "https://nasekadan.cz/social/kadan-usti-prvni-priprava-8-3-2026-d92fbbb0ba.png",
       "title_figures": [],
       "published": "2026-08-19T19:42:00+02:00",
       "images": [
@@ -2757,7 +2747,7 @@
           "type": "duplicate_title_figures",
           "count": 2,
           "sources": [
-            "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-05df0f4b68.png",
+            "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-da4a0ef2f5.png",
             "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-c0553cecc3.png"
           ]
         }
@@ -2772,11 +2762,11 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
       "h1": "Kadaň urvala první výhru v přípravě. V Kralupech zvítězila 5:4",
-      "og_image": "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-05df0f4b68.png",
+      "og_image": "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-da4a0ef2f5.png",
       "title_figures": [
         {
-          "src": "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-05df0f4b68.png",
-          "html": "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/kadan-vyhrala-kralupy-5-4-priprava-2026-05df0f4b68.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Kadaň urvala první výhru v přípravě. V Kralupech zvítězila 5:4\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+          "src": "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-da4a0ef2f5.png",
+          "html": "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/kadan-vyhrala-kralupy-5-4-priprava-2026-da4a0ef2f5.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Kadaň urvala první výhru v přípravě. V Kralupech zvítězila 5:4\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
         },
         {
           "src": "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-c0553cecc3.png",
@@ -2785,7 +2775,7 @@
       ],
       "published": "2026-08-20T21:23:00+02:00",
       "images": [
-        "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-05df0f4b68.png",
+        "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-da4a0ef2f5.png",
         "https://nasekadan.cz/social/kadan-vyhrala-kralupy-5-4-priprava-2026-c0553cecc3.png"
       ],
       "hrefs": [
@@ -3703,7 +3693,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/martin-kadlec-navrat-hokej-kadan-2026.html",
       "h1": "Velký návrat do Kadaně. Martin Kadlec po deseti letech znovu oblékne dres mateřského klubu",
-      "og_image": "https://nasekadan.cz/social/martin-kadlec-navrat-hokej-kadan-2026-14ae617ecc.png",
+      "og_image": "https://nasekadan.cz/social/martin-kadlec-navrat-hokej-kadan-2026-90604d4c7f.png",
       "title_figures": [],
       "published": "2026-07-30T14:20:00+02:00",
       "images": [],
@@ -3894,7 +3884,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/mladez-tatranu-kadan-uspesna-sezona-nabor-2026.html",
       "h1": "Mládež Tatranu Kadaň má za sebou úspěšnou sezonu. V září klub otevře nábor",
-      "og_image": "https://nasekadan.cz/social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-703fefd20a.png",
+      "og_image": "https://nasekadan.cz/social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-d1ada47b7a.png",
       "title_figures": [],
       "published": "2026-08-06T10:50:00+02:00",
       "images": [
@@ -5193,7 +5183,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/plavani-pro-deti-kadan-radka.html",
       "h1": "Plavání pro nejmenší v Kadani: RADKA nabízí lekce už od tří měsíců",
-      "og_image": "https://nasekadan.cz/social/plavani-pro-deti-kadan-radka-2ecf301081.png",
+      "og_image": "https://nasekadan.cz/social/plavani-pro-deti-kadan-radka-0c46c0fe2d.png",
       "title_figures": [],
       "published": "2026-08-17T20:39:00+02:00",
       "images": [
@@ -5587,7 +5577,7 @@
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
       "h1": "Dětští plavci získali potřebné body. Slávie Kadaň teď čeká na příspěvek 120 tisíc",
-      "og_image": "https://nasekadan.cz/social/slavie-kadan-epp-plavci-120-tisic-2026-fb-final-20260807.png",
+      "og_image": "https://nasekadan.cz/social/slavie-kadan-epp-plavci-120-tisic-2026-9ed6d85ad5.png",
       "title_figures": [],
       "published": "2026-08-07T17:45:00+02:00",
       "images": [],
@@ -5757,11 +5747,7 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
-      "errors": [
-        {
-          "type": "missing_visible_title_figure"
-        }
-      ],
+      "errors": [],
       "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
@@ -5769,9 +5755,16 @@
       "canonical": "https://nasekadan.cz/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
       "h1": "Srpen v kadaňských galeriích nabídne houby, podmořský svět, fotografické příběhy i filatelii",
       "og_image": "https://nasekadan.cz/social/srpen-kadanske-galerie-vystavy-workshop-2026-073155934d.png",
-      "title_figures": [],
+      "title_figures": [
+        {
+          "src": "https://nasekadan.cz/social/srpen-kadanske-galerie-vystavy-workshop-2026-073155934d.png",
+          "html": "<figure class=\"article-figure\" data-nk-title-figure=\"1\"><img class=\"article-photo\" src=\"/social/srpen-kadanske-galerie-vystavy-workshop-2026-073155934d.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Srpen v kadaňských galeriích nabídne houby, podmořský svět, fotografické příběhy i filatelii\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        }
+      ],
       "published": "2026-07-31T17:28:00+02:00",
-      "images": [],
+      "images": [
+        "https://nasekadan.cz/social/srpen-kadanske-galerie-vystavy-workshop-2026-073155934d.png"
+      ],
       "hrefs": [
         "https://nasekadan.cz/",
         "https://nasekadan.cz/clanky/",
