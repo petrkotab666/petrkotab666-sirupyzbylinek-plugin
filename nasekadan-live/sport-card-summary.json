@@ -1,11 +1,11 @@
 {
-  "count": 15,
+  "count": 12,
+  "restored_non_sport": [
+    "alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
+    "cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
+    "srpen-kadanske-galerie-vystavy-workshop-2026.html"
+  ],
   "items": [
-    {
-      "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
-      "category": "SPORT",
-      "image": "/social/alzbetinsky-klaster-kadan-pacienti-lecebna-1966-7fc3dea464.png"
-    },
     {
       "url": "https://nasekadan.cz/clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
       "category": "SPORT",
@@ -20,16 +20,6 @@
       "url": "https://nasekadan.cz/clanky/cernovice-tatran-kadan-nestemice-vyhra-2026.html",
       "category": "SPORT · FOTBAL",
       "image": "/social/cernovice-tatran-kadan-nestemice-vyhra-2026-c354895ff1.png"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
-      "category": "SPORT",
-      "image": "/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-bc174fe955.png"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/gymnastika-kadan-treneri-prosinec-2026.html",
-      "category": "SPORT",
-      "image": "/social/gymnastika-kadan-treneri-prosinec-2026-0bc62a5a97.png"
     },
     {
       "url": "https://nasekadan.cz/clanky/gymnathlon-kadan-kurzy-deti-2026.html",
@@ -63,18 +53,18 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/mladez-tatranu-kadan-uspesna-sezona-nabor-2026.html",
-      "category": "SPORT · FOTBAL",
-      "image": "/social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-87ac2fb6e6.png"
+      "category": "SPORT",
+      "image": "/social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-d1ada47b7a.png"
+    },
+    {
+      "url": "https://nasekadan.cz/clanky/plavani-pro-deti-kadan-radka.html",
+      "category": "SPORT",
+      "image": "/social/plavani-pro-deti-kadan-radka-0c46c0fe2d.png"
     },
     {
       "url": "https://nasekadan.cz/clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
       "category": "SPORT",
       "image": "/social/slavie-kadan-epp-plavci-120-tisic-2026-9ed6d85ad5.png"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
-      "category": "SPORT",
-      "image": "/social/srpen-kadanske-galerie-vystavy-workshop-2026-f9e3888650.png"
     }
   ]
 }

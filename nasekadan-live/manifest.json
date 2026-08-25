@@ -1,16 +1,21 @@
 {
   "schema": 1,
-  "version": "20260825-sport-cards-v2",
+  "version": "20260825-sport-cards-v3",
   "files": [
     {
       "path": "clanky/alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
       "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/alzbetinsky-klaster-kadan-pacienti-lecebna-1966.html",
-      "sha256": "4333d84f3f649b02ebe163e4b18b11be8881a647ebe27930ee9891b1ccfea37e"
+      "sha256": "7f705fd3913af73866d34d115374f3b6b04c9d756635d0550a0b09c6ef8990e1"
     },
     {
-      "path": "social/alzbetinsky-klaster-kadan-pacienti-lecebna-1966-7fc3dea464.png",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/alzbetinsky-klaster-kadan-pacienti-lecebna-1966-7fc3dea464.png",
-      "sha256": "6608e30d870270b4ad1494911bd5fd00b786caeae796f9095bf4c20e337f2daf"
+      "path": "clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
+      "sha256": "b028f70c1d1af98eeb012928624b7cbb9582122117bebed084cd6ec1ebf43eb4"
+    },
+    {
+      "path": "clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
+      "sha256": "780e1176111b330e5805e32af374df5ed2c3a0d5209176db4d2f66204f639bbd"
     },
     {
       "path": "clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
@@ -41,26 +46,6 @@
       "path": "social/cernovice-tatran-kadan-nestemice-vyhra-2026-c354895ff1.png",
       "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/cernovice-tatran-kadan-nestemice-vyhra-2026-c354895ff1.png",
       "sha256": "1252d5a84c3af87a17067a9d72e9997747cd0032489fcc15ee305bce9b50acc0"
-    },
-    {
-      "path": "clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
-      "sha256": "eccf4005105d693703bddc043c09c20760772ab4a2236d4c0b15f81579a587b0"
-    },
-    {
-      "path": "social/cyklomycka-pitko-dopravni-hriste-kadan-2026-bc174fe955.png",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-bc174fe955.png",
-      "sha256": "d6621268b6b54c157ec4b3624d28ea2cb368902411c3d8c8138494c068008329"
-    },
-    {
-      "path": "clanky/gymnastika-kadan-treneri-prosinec-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/gymnastika-kadan-treneri-prosinec-2026.html",
-      "sha256": "f62239870e9713f6ef4c5d23fda1990a054397b40ba34a347276130adbc7f1f4"
-    },
-    {
-      "path": "social/gymnastika-kadan-treneri-prosinec-2026-0bc62a5a97.png",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/gymnastika-kadan-treneri-prosinec-2026-0bc62a5a97.png",
-      "sha256": "c6305ddadf0ce37a7603608804a2097d6887cdbb68bce963b6c93dc259902b6b"
     },
     {
       "path": "clanky/gymnathlon-kadan-kurzy-deti-2026.html",
@@ -125,12 +110,22 @@
     {
       "path": "clanky/mladez-tatranu-kadan-uspesna-sezona-nabor-2026.html",
       "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/mladez-tatranu-kadan-uspesna-sezona-nabor-2026.html",
-      "sha256": "8ffb031430fbbaabedcbaa95fa34d13fa273cc05d6860c1d2b505425f6206e7b"
+      "sha256": "000d0f16570011ab4c5e2997efc1358dd352d854815eeb7574d14931c5d687ec"
     },
     {
-      "path": "social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-87ac2fb6e6.png",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-87ac2fb6e6.png",
-      "sha256": "e0aa8d1fe0010b56e4190365b3e01d11e6bec5f32106e1fcbec1ce83da5189e4"
+      "path": "social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-d1ada47b7a.png",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/mladez-tatranu-kadan-uspesna-sezona-nabor-2026-d1ada47b7a.png",
+      "sha256": "9f30ce9256819f32d8d5931a187d33a257399b7644c15bba37943eaa23d55d3e"
+    },
+    {
+      "path": "clanky/plavani-pro-deti-kadan-radka.html",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/plavani-pro-deti-kadan-radka.html",
+      "sha256": "fa345016cfe9edcacd799592a6d708be3c1cca204c7bc46aa0ecdcfa760ab69e"
+    },
+    {
+      "path": "social/plavani-pro-deti-kadan-radka-0c46c0fe2d.png",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/plavani-pro-deti-kadan-radka-0c46c0fe2d.png",
+      "sha256": "d08150bb141b06ddbb837147579be141d98086d45331b8dc079a11f38c5d2454"
     },
     {
       "path": "clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
@@ -141,16 +136,6 @@
       "path": "social/slavie-kadan-epp-plavci-120-tisic-2026-9ed6d85ad5.png",
       "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/slavie-kadan-epp-plavci-120-tisic-2026-9ed6d85ad5.png",
       "sha256": "bf35de5753e19d605c78990169f7b0edfe111ba936524cce778cb1bf1916076f"
-    },
-    {
-      "path": "clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
-      "sha256": "845928168118baef6b057e87bf03c96134d7543b9d1a244cba9811979a36087f"
-    },
-    {
-      "path": "social/srpen-kadanske-galerie-vystavy-workshop-2026-f9e3888650.png",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/srpen-kadanske-galerie-vystavy-workshop-2026-f9e3888650.png",
-      "sha256": "bb0fea28c2886e3199194756a41b3031dba946d3932014e3aef9259ce0ad9fe3"
     }
   ],
   "patches": [],
@@ -161,7 +146,6 @@
     "https://nasekadan.cz/clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
     "https://nasekadan.cz/clanky/cernovice-tatran-kadan-nestemice-vyhra-2026.html",
     "https://nasekadan.cz/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html",
-    "https://nasekadan.cz/clanky/gymnastika-kadan-treneri-prosinec-2026.html",
     "https://nasekadan.cz/clanky/gymnathlon-kadan-kurzy-deti-2026.html",
     "https://nasekadan.cz/clanky/josef-suchy-klasterec-u18-kanada-hlinka-2026.html",
     "https://nasekadan.cz/clanky/kadan-cheb-prohra-1-4-priprava-2026.html",
@@ -169,11 +153,16 @@
     "https://nasekadan.cz/clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
     "https://nasekadan.cz/clanky/martin-kadlec-navrat-hokej-kadan-2026.html",
     "https://nasekadan.cz/clanky/mladez-tatranu-kadan-uspesna-sezona-nabor-2026.html",
+    "https://nasekadan.cz/clanky/plavani-pro-deti-kadan-radka.html",
     "https://nasekadan.cz/clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
     "https://nasekadan.cz/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html"
   ],
   "verify_present": [
     "data-nk-title-figure=\"1\""
   ],
-  "verify_absent": []
+  "verify_absent": [
+    "/social/alzbetinsky-klaster-kadan-pacienti-lecebna-1966-7fc3dea464.png",
+    "/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-bc174fe955.png",
+    "/social/srpen-kadanske-galerie-vystavy-workshop-2026-f9e3888650.png"
+  ]
 }
