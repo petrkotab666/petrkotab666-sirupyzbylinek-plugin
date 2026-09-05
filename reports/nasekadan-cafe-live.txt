@@ -1,5 +1,6 @@
-checked_at=2026-09-05T04:52:27Z
+checked_at=2026-09-05T04:53:54Z
 dns_ipv4=57.129.43.215
+ssh_tcp_22=open
 cafe_lingua_live=no
 slunce_live=no
 --- response-headers ---
@@ -14,7 +15,7 @@ pragma: no-cache
 server: Caddy
 vary: Accept-Encoding
 content-length: 25465
-date: Sat, 05 Sep 2026 04:52:25 GMT
+date: Sat, 05 Sep 2026 04:53:53 GMT
 
 --- deployment-health ---
 site=nasekadan.cz
