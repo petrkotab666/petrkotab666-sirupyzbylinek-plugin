@@ -1,5 +1,5 @@
-issue_runner_started=2026-09-05T11:57:43Z
-issue=70
+issue_runner_started=2026-09-05T12:00:15Z
+issue=71
 
 === TARGET ===
 http=200
@@ -44,7 +44,7 @@ rendered_ad_excerpt=ejich historii, překlady, knihy z cyklostylu, práci s roms
 === infra-health.json ===
 {
   "status": "ok",
-  "checked_at": "2026-09-05T11:57:38.025287+00:00",
+  "checked_at": "2026-09-05T11:59:43.562233+00:00",
   "public_web_ok": true,
   "active_runner_services": 15,
   "runner_service_files": 15,
