@@ -1,19 +1,26 @@
-issue_runner_started=2026-09-05T07:07:27Z
-issue=67
+issue_runner_started=2026-09-05T07:26:46Z
+issue=68
 
 === TARGET ===
-http=404
+http=200
+Klášter prý od roku 1961 zůstal prázdný. Za zdmi ale žilo 95 dominikánek
+marker_ok=95 dominikánek
+marker_ok=přešly sestry do Střelic u Brna
+marker_ok=Přesný den posledního stěhování
+marker_ok=Co stále nevíme a v článku to nepředstíráme
+canonical_missing
+newsarticle_ok
 
 === server-publish-health.json ===
 {
   "status": "ok",
-  "request_id": "srsni-boren-hzs-20260904-1158",
-  "started_at": "2026-09-04T10:03:36.462825+00:00",
-  "completed_at": "2026-09-04T10:03:38.840869+00:00",
+  "request_id": "alzbetinsky-klaster-dominikanky-5-dil-20260905-retry-4",
+  "started_at": "2026-09-05T07:25:14.127741+00:00",
+  "completed_at": "2026-09-05T07:25:16.603241+00:00",
   "articles": [
-    "srsni-boren-bilina-hzs-varovani-2026.html"
+    "alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html"
   ],
-  "backup": "/var/backups/nasekadan-publish/20260904T100337Z-srsni-boren-hzs-20260904-1158",
+  "backup": "/var/backups/nasekadan-publish/20260905T072515Z-alzbetinsky-klaster-dominikanky-5-dil-20260905-retry-4",
   "server_first": true,
   "marker": "NASEKADAN_SERVER_FIRST_LIVE_OK"
 }
@@ -21,7 +28,7 @@ http=404
 === infra-health.json ===
 {
   "status": "ok",
-  "checked_at": "2026-09-05T07:06:43.200873+00:00",
+  "checked_at": "2026-09-05T07:26:30.953713+00:00",
   "public_web_ok": true,
   "active_runner_services": 15,
   "runner_service_files": 15,
@@ -33,14 +40,14 @@ http=404
 }
 
 === rss.xml ===
-slug_missing
+slug_present
 
 === sitemap.xml ===
-slug_missing
+slug_present
 
 === news-sitemap.xml ===
-slug_missing
+slug_present
 
 === clanky/ ===
-slug_missing
+slug_present
 
