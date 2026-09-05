@@ -1,5 +1,5 @@
-issue_runner_started=2026-09-05T07:26:46Z
-issue=68
+issue_runner_started=2026-09-05T07:28:21Z
+issue=69
 
 === TARGET ===
 http=200
@@ -8,8 +8,14 @@ marker_ok=95 dominikánek
 marker_ok=přešly sestry do Střelic u Brna
 marker_ok=Přesný den posledního stěhování
 marker_ok=Co stále nevíme a v článku to nepředstíráme
-canonical_missing
 newsarticle_ok
+canonical=https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html
+canonical_ok
+og_image=https://nasekadan.cz/social/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999-22a366f29d.png
+article_figure_count=1
+home_link_count=0
+hero_fetch=200|image/png
+hero_png=1200x630
 
 === server-publish-health.json ===
 {
@@ -28,7 +34,7 @@ newsarticle_ok
 === infra-health.json ===
 {
   "status": "ok",
-  "checked_at": "2026-09-05T07:26:30.953713+00:00",
+  "checked_at": "2026-09-05T07:27:32.576155+00:00",
   "public_web_ok": true,
   "active_runner_services": 15,
   "runner_service_files": 15,
