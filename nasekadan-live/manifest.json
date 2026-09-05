@@ -1,13 +1,26 @@
 {
   "schema": 1,
-  "version": "20260904-smr-tusimice-health-0123",
-  "files": [
+  "version": "20260905-alzbetinsky-klaster-reklamy-live-1340-v1",
+  "files": [],
+  "patches": [
     {
-      "path": "clanky/smr-tusimice-studie-zdravi-obyvatel-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/smr-tusimice-studie-zdravi-obyvatel-2026.html",
-      "sha256": "cd1e0304016549c77ca48f77aa39492df2f2437b606abf6f93d30d9118f5a673"
+      "path": "footer.css",
+      "old": "main.article-shell [data-promos],\nmain.article-shell .article-ad-auto{display:none!important}",
+      "new": "main.article-shell:has(.static-article-ads) [data-promos],\nmain.article-shell:has(.static-article-ads) .article-ad-auto{display:none!important}",
+      "count": 1
+    },
+    {
+      "path": "clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
+      "old": "</div></aside>\n</main>",
+      "new": "</div><div data-promos data-context=\"sidebar\"></div></aside>\n</main>",
+      "count": 1
+    },
+    {
+      "path": "clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
+      "old": "<footer class=\"footer\">Naše Kadaň · místní zprávy, dokumenty a souvislosti</footer>\n</body>",
+      "new": "<footer class=\"footer\">Naše Kadaň · místní zprávy, dokumenty a souvislosti</footer>\n<script src=\"/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3\"></script>\n<script src=\"/reklamy-sidebar.js?v=20260728-adstream-4\"></script>\n<script src=\"/reklamy-oprava-obrazku.js?v=20260728-dynamic-2\"></script>\n<script src=\"/obsah-doplnky.js?v=20260728-dynamic-2\"></script>\n</body>",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": []
 }
