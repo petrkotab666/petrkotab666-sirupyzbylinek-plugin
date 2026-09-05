@@ -13,13 +13,28 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Commit marker
+      - name: Změřit veřejný health OVH Naše Kadaň
+        shell: bash
         run: |
           set -Eeuo pipefail
           mkdir -p tmp/kadan-votes-2023
-          printf 'issue_runner_started=%s\nissue=%s\n' "$(date -u +%FT%TZ)" "${{ github.event.issue.number }}" > tmp/kadan-votes-2023/issue-probe.txt
+          OUT=tmp/kadan-votes-2023/issue-probe.txt
+          {
+            echo "issue_runner_started=$(date -u +%FT%TZ)"
+            echo "issue=${{ github.event.issue.number }}"
+            echo
+            for path in deployment-health.txt server-maintenance-health.json server-publish-health.json infra-health.json; do
+              echo "=== $path ==="
+              curl -4 -kfsS --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/$path?probe=${{ github.run_id }}-$(date +%s%N)" || echo 'FETCH_FAILED'
+              echo
+            done
+            echo '=== PORTS ==='
+            timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/22' && echo 'ssh22=open' || echo 'ssh22=closed'
+            timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/443' && echo 'https443=open' || echo 'https443=closed'
+          } > "$OUT"
+          cat "$OUT"
           git config user.name research-bot
           git config user.email research-bot@users.noreply.github.com
-          git add tmp/kadan-votes-2023/issue-probe.txt
-          git commit -m 'temp: issue runner marker [skip ci]'
+          git add "$OUT"
+          git commit -m 'temp: OVH Naše Kadaň health probe [skip ci]' || exit 0
           git push origin HEAD:main
