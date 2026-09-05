@@ -1,40 +1,50 @@
-issue_runner_started=2026-09-05T07:28:21Z
-issue=69
+issue_runner_started=2026-09-05T11:57:43Z
+issue=70
 
 === TARGET ===
 http=200
 Klášter prý od roku 1961 zůstal prázdný. Za zdmi ale žilo 95 dominikánek
 marker_ok=95 dominikánek
 marker_ok=přešly sestry do Střelic u Brna
-marker_ok=Přesný den posledního stěhování
 marker_ok=Co stále nevíme a v článku to nepředstíráme
 newsarticle_ok
+ad_reklamy_js_ok
+ad_doplnky_js_missing
+ad_sidebar_slot_ok
 canonical=https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html
 canonical_ok
-og_image=https://nasekadan.cz/social/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999-22a366f29d.png
 article_figure_count=1
-home_link_count=0
 hero_fetch=200|image/png
 hero_png=1200x630
 
+=== FOOTER CSS ===
+ad_css_conditional_missing
+ad_css_old_hide_present
+
+=== MOBILE RENDER ===
+browser=/usr/bin/google-chrome
+rendered_bytes=50149
+rendered_ad_card_ok
+rendered_ad_text_ok
+rendered_ad_excerpt=ejich historii, překlady, knihy z cyklostylu, práci s romskými dětmi, kolem dvou set pohřbených sester – a nově i to, kam komunita v roce 1999 odešla.</p><div class="meta"><span><b>Naše Kadaň</b></span><span>Historická rešerše</span><span>5. díl série</span><span>Doba čtení: přibližně 13 minut</span><span>Zveřejněno: 5. září 2026</span></div></div></section> <main class="wrap article-shell" data-article-template="unified-v1"><section class="featured-cleaning-ad featured-rotating-ad" aria-label="Reklama: Atis.cz"><div class="promo-label">REKLAMA</div><a class="promo-card promo-card-wide promo-card-full-image" href="https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&amp;a_bid=49886ce2" target="_blank" rel="nofollow sponsored noopener noreferrer"><span class="promo-wide-copy"><small>Dovolená a pobyty</small><strong>Atis.cz</strong><b>Zjistit více →</b></span></a></section><div class="layout"><article class="article"> <div class="series"><span class="series-label">Po čtyřech dílech o léčebně a Akci Domino</span><p>První díl sledoval nemocnici a plicní léčebnu. Druhý rekonstruoval razii roku 1981, třetí agenta Čeřicha a čtvrtý hledal rozhodovací řetězec, který vedl k vyslání desítek příslušníků do kláštera. Tentokrát se vracíme k něčemu, co policejní spisy snadno zakryjí: <strong>jak se za zdmi kláštera skutečně žilo</strong>.</p></div> <p class="lead">Na turistickém webu města se dodnes dočteme, že po odchodu posledních alžbětinek v roce 1961 zůstal celý klášterní komplex prázdný. Jenže ve stejném roce zde podle odborné studie založené na kongregačních archivech žilo už 95 dominikánek. A ještě v roce 1989 patřila Kadaň podle samotné kongregace mezi její tři velké konventy.</p> <figure class="article-figure"><img class="article-photo" src="/social/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999-22a366f29d.png" width="1200" height="630" alt="Redakční grafika Naše Kadaň k článku Klášter prý od roku 1961 zůstal prázdný. Za zdmi ale žilo 95 dominikánek" fetchpriority="high" decoding="async"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure> <p>Nejde o drobnou nepřesnost v jednom letopočtu. Mezi rokem 1961 a odchodem dominikánek na jaře 1999 leží téměř
+
 === server-publish-health.json ===
 {
-  "status": "ok",
-  "request_id": "alzbetinsky-klaster-dominikanky-5-dil-20260905-retry-4",
-  "started_at": "2026-09-05T07:25:14.127741+00:00",
-  "completed_at": "2026-09-05T07:25:16.603241+00:00",
+  "status": "failed",
+  "request_id": "alzbetinsky-klaster-reklamy-oprava-20260905-1334-staging-fix-1",
+  "started_at": "2026-09-05T11:42:58.927721+00:00",
+  "failed_at": "2026-09-05T11:42:59.135892+00:00",
   "articles": [
     "alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html"
   ],
-  "backup": "/var/backups/nasekadan-publish/20260905T072515Z-alzbetinsky-klaster-dominikanky-5-dil-20260905-retry-4",
-  "server_first": true,
-  "marker": "NASEKADAN_SERVER_FIRST_LIVE_OK"
+  "error": "alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html: chybí standardní PNG /tmp/nasekadan-stage-7jjbk7j1/social/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999-7d2654641a.png",
+  "server_first": true
 }
 
 === infra-health.json ===
 {
   "status": "ok",
-  "checked_at": "2026-09-05T07:27:32.576155+00:00",
+  "checked_at": "2026-09-05T11:57:38.025287+00:00",
   "public_web_ok": true,
   "active_runner_services": 15,
   "runner_service_files": 15,
