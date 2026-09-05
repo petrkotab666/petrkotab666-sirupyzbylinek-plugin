@@ -1,24 +1,12 @@
 {
   "schema": 1,
-  "version": "20260905-alzbetinsky-klaster-reklamy-live-1340-v1",
+  "version": "20260905-alzbetinsky-klaster-static-top-reklama-1418-v1",
   "files": [],
   "patches": [
     {
-      "path": "footer.css",
-      "old": "main.article-shell [data-promos],\nmain.article-shell .article-ad-auto{display:none!important}",
-      "new": "main.article-shell:has(.static-article-ads) [data-promos],\nmain.article-shell:has(.static-article-ads) .article-ad-auto{display:none!important}",
-      "count": 1
-    },
-    {
       "path": "clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
-      "old": "</div></aside>\n</main>",
-      "new": "</div><div data-promos data-context=\"sidebar\"></div></aside>\n</main>",
-      "count": 1
-    },
-    {
-      "path": "clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
-      "old": "<footer class=\"footer\">Naše Kadaň · místní zprávy, dokumenty a souvislosti</footer>\n</body>",
-      "new": "<footer class=\"footer\">Naše Kadaň · místní zprávy, dokumenty a souvislosti</footer>\n<script src=\"/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3\"></script>\n<script src=\"/reklamy-sidebar.js?v=20260728-adstream-4\"></script>\n<script src=\"/reklamy-oprava-obrazku.js?v=20260728-dynamic-2\"></script>\n<script src=\"/obsah-doplnky.js?v=20260728-dynamic-2\"></script>\n</body>",
+      "old": "<main class=\"wrap article-shell\" data-article-template=\"unified-v1\"><div class=\"layout\">",
+      "new": "<main class=\"wrap article-shell\" data-article-template=\"unified-v1\"><section class=\"featured-cleaning-ad featured-rotating-ad\" data-nk-static-top-ad=\"1\" aria-label=\"Reklama: Atis.cz\" style=\"display:block!important;grid-column:1/-1;width:100%;max-width:1180px;margin:0 0 26px;padding:0 0 22px;border-bottom:1px solid #d8e0e4\"><div style=\"margin:0 0 10px;color:#738087;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase\">REKLAMA</div><a href=\"https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&amp;a_bid=49886ce2\" target=\"_blank\" rel=\"nofollow sponsored noopener noreferrer\" style=\"display:flex!important;align-items:center;justify-content:space-between;gap:18px;width:100%;padding:18px 20px;background:#fff;border:1px solid #d8e0e4;border-radius:18px;box-shadow:0 10px 28px rgba(18,35,45,.10);color:#172832!important;text-decoration:none!important;box-sizing:border-box\"><span style=\"display:block\"><small style=\"display:block;margin-bottom:3px;color:#68777f;font-size:12px\">Dovolená a pobyty</small><strong style=\"display:block;color:#172832;font:800 23px/1.2 Georgia,serif\">Atis.cz</strong></span><b style=\"display:inline-block;padding:10px 14px;border-radius:999px;background:#9f2626;color:#fff;font-size:13px;white-space:nowrap\">Zjistit více →</b></a></section><div class=\"layout\">",
       "count": 1
     }
   ],
