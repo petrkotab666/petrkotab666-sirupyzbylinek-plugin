@@ -1,2 +1,3 @@
 Naše Kadaň fast bridge active
-version=20260811-2233
+version=20260905-owned-ads-5050-live-v3
+payload=20260905-owned-ads-5050-live-v2
