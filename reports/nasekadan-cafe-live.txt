@@ -1,21 +1,25 @@
-checked_at=2026-08-11T19:30:53Z
+checked_at=2026-09-05T04:52:27Z
 dns_ipv4=57.129.43.215
 cafe_lingua_live=no
 slunce_live=no
 --- response-headers ---
 HTTP/2 200 
 accept-ranges: bytes
+cache-control: no-cache, max-age=0, must-revalidate
 content-type: text/html; charset=utf-8
-etag: "dklk8puvju15hgk"
-last-modified: Mon, 10 Aug 2026 20:53:03 GMT
+etag: "dkt7sqwdxeegjnd"
+expires: 0
+last-modified: Wed, 19 Aug 2026 20:49:18 GMT
+pragma: no-cache
 server: Caddy
 vary: Accept-Encoding
-content-length: 22628
-date: Tue, 11 Aug 2026 19:30:52 GMT
+content-length: 25465
+date: Sat, 05 Sep 2026 04:52:25 GMT
 
 --- deployment-health ---
 site=nasekadan.cz
 status=ok
-source=c3a1d596503458d23a13bdd5f1f8851811f2adc1
-generated=2026-08-10T20:53:04Z
-mode=monotonic-static-restore
+source=bridge:20260825-sport-cards-v3
+bridge_commit=1e86ea2727a7848938fb4db261e7133acf0b5581
+generated=2026-08-25T20:04:54.255702+00:00
+mode=fast-bridge
