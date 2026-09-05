@@ -13,28 +13,44 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Změřit veřejný health OVH Naše Kadaň
+      - name: Ověřit živou publikaci 5. dílu kláštera
         shell: bash
         run: |
           set -Eeuo pipefail
           mkdir -p tmp/kadan-votes-2023
           OUT=tmp/kadan-votes-2023/issue-probe.txt
+          SLUG='alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html'
+          URL="https://nasekadan.cz/clanky/$SLUG"
           {
             echo "issue_runner_started=$(date -u +%FT%TZ)"
             echo "issue=${{ github.event.issue.number }}"
             echo
-            for path in deployment-health.txt server-maintenance-health.json server-publish-health.json infra-health.json; do
+            echo '=== TARGET ==='
+            code=$(curl -4 -kLsS --max-time 25 -o /tmp/target.html -w '%{http_code}' -H 'Cache-Control: no-cache' "$URL?probe=${{ github.run_id }}-$(date +%s%N)" || true)
+            echo "http=$code"
+            if [ "$code" = 200 ]; then
+              grep -oPm1 '(?<=<h1>).*?(?=</h1>)' /tmp/target.html || true
+              for marker in '95 dominikánek' 'přešly sestry do Střelic u Brna' 'Přesný den posledního stěhování' 'Co stále nevíme a v článku to nepředstíráme'; do
+                grep -Fq "$marker" /tmp/target.html && echo "marker_ok=$marker" || echo "marker_missing=$marker"
+              done
+              grep -Fq "rel=\"canonical\" href=\"https://nasekadan.cz/clanky/$SLUG\"" /tmp/target.html && echo canonical_ok || echo canonical_missing
+              grep -Fq 'NewsArticle' /tmp/target.html && echo newsarticle_ok || echo newsarticle_missing
+            fi
+            echo
+            for path in server-publish-health.json infra-health.json rss.xml sitemap.xml news-sitemap.xml clanky/; do
               echo "=== $path ==="
-              curl -4 -kfsS --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/$path?probe=${{ github.run_id }}-$(date +%s%N)" || echo 'FETCH_FAILED'
+              curl -4 -kfsS --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/$path?probe=${{ github.run_id }}-$(date +%s%N)" -o /tmp/check || { echo FETCH_FAILED; continue; }
+              if [ "$path" = rss.xml ] || [ "$path" = sitemap.xml ] || [ "$path" = news-sitemap.xml ] || [ "$path" = clanky/ ]; then
+                grep -Fq "$SLUG" /tmp/check && echo "slug_present" || echo "slug_missing"
+              else
+                cat /tmp/check
+              fi
               echo
             done
-            echo '=== PORTS ==='
-            timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/22' && echo 'ssh22=open' || echo 'ssh22=closed'
-            timeout 8 bash -c 'cat < /dev/null > /dev/tcp/57.129.43.215/443' && echo 'https443=open' || echo 'https443=closed'
           } > "$OUT"
           cat "$OUT"
           git config user.name research-bot
           git config user.email research-bot@users.noreply.github.com
           git add "$OUT"
-          git commit -m 'temp: OVH Naše Kadaň health probe [skip ci]' || exit 0
+          git commit -m 'temp: ověřit 5. díl kláštera na webu [skip ci]' || exit 0
           git push origin HEAD:main
