@@ -1,0 +1,51 @@
+{
+  "version": "20260905-owned-ads-5050-live-v3",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-09-05T20:57:31.222523+00:00",
+  "checks": {
+    "https://www.nasekadan.cz/levnevyklidime-ads.js": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/levnevyklidime-ads.js?nkbridgeverify=20260905-owned-ads-5050-live-v3-1788641845",
+      "present": {
+        "20260905-owned-ads-5050-live-v2": false
+      },
+      "absent": {
+        "20260808-levnevyklidime-1": false
+      },
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": false
+    },
+    "https://www.nasekadan.cz/bridge-health.txt": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/bridge-health.txt?nkbridgeverify=20260905-owned-ads-5050-live-v3-1788641845",
+      "present": {
+        "20260905-owned-ads-5050-live-v2": false
+      },
+      "absent": {
+        "20260808-levnevyklidime-1": true
+      },
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": false
+    }
+  }
+}
