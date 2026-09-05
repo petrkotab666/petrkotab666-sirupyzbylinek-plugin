@@ -1,55 +1,16 @@
 {
   "schema": 1,
-  "version": "20260905-owned-ads-5050-live-v2",
+  "version": "20260905-owned-ads-5050-live-v3",
   "files": [
     {
       "path": "levnevyklidime-ads.js",
       "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/levnevyklidime-ads.js",
       "sha256": "a502c1d55af7200528a205bca0ffc9bb8ab72726d4f9c715ac71598a175a388e"
-    }
-  ],
-  "patches": [
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
-      "old": "2026-09-04T09:51:34+02:00",
-      "new": "2026-09-05T06:00:00+02:00",
-      "count": 2
-    },
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
-      "old": "Publikováno 29. srpna 2026 v 18:57 · aktualizováno 4. září v 09:51",
-      "new": "Publikováno 29. srpna 2026 v 18:57 · aktualizováno 5. září v 6:00",
-      "count": 1
-    },
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
-      "old": "<div class=\"event\"><time>SOBOTA 5. 9. · 10:00–17:00</time><p class=\"distance\">MUZEUM NA KOČIČÁKU · BLATNO–HRÁDEČNÁ</p><h3>Prohlídky pevností Na Kočičáku</h3><p>Venkovní muzeum československého opevnění bude podle aktuálního městského kalendáře v sobotu přístupné od 10 do 17 hodin.</p></div>\n<div class=\"event\"><time>SOBOTA 5. 9. · 13:00–22:00</time><p class=\"distance\">NÁMĚSTÍ 1. MÁJE · CHOMUTOV</p><h3>Chomutovský festival vína</h3><p>Festival vína na náměstí, podle pořadatele se vstupem zdarma.</p></div>",
-      "new": "<div class=\"event\"><time>SOBOTA 5. 9. · 10:00–17:00</time><p class=\"distance\">MUZEUM NA KOČIČÁKU · BLATNO–HRÁDEČNÁ</p><h3>Prohlídky pevností Na Kočičáku</h3><p>Venkovní muzeum československého opevnění bude podle aktuálního městského kalendáře v sobotu přístupné od 10 do 17 hodin.</p></div>\n<div class=\"event\" data-event-id=\"zoopark-chomutov-zpatky-do-skoly-20260905-06\"><time>SOBOTA–NEDĚLE 5.–6. 9. · 9:00–18:00</time><p class=\"distance\">ZOOPARK CHOMUTOV</p><h3>Děti do 15 let za 1 Kč</h3><p>Zoopark potvrzuje víkendovou nabídku „Zpátky do školy“: v sobotu 5. a v neděli 6. září mají všechny děti do 15 let vstup za symbolickou 1 Kč.</p></div>\n<div class=\"event\"><time>SOBOTA 5. 9. · 13:00–22:00</time><p class=\"distance\">NÁMĚSTÍ 1. MÁJE · CHOMUTOV</p><h3>Chomutovský festival vína</h3><p>Festival vína na náměstí, podle pořadatele se vstupem zdarma.</p></div>",
-      "count": 1
-    },
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
-      "old": "<div class=\"event\"><time>PÁTEK 4. 9. · 17:00</time><p class=\"distance\">AREÁL BENEDIKT · MOST</p><h3>Mostík</h3><p>Rodinné odpoledne plné zábavy s programem mosteckých neziskových organizací. Aktuální oficiální kalendář města potvrzuje začátek v 17:00 a vstup zdarma.</p></div>\n<div class=\"event\" data-event-id=\"most-historicke-autobusy-mhd-20260905-06\"><time>SOBOTA–NEDĚLE 5.–6. 9. · ODJEZDY 10:00, 11:00, 14:00 A 15:00</time><p class=\"distance\">OD OBLASTNÍHO MUZEA · MOST</p><h3>Speciální jízdy historickými autobusy</h3><p>V sobotu vyjede Karosa ŠL 11, v neděli Škoda RTO. Bezplatná okružní trasa začíná i končí u zastávky Muzeum a vede přes OD Prior, 1. náměstí, Dopravní podnik a Kahan. Jízdy připomínají 125 let MHD na Mostecku a navazují na stejnojmennou muzejní výstavu, která byla prodloužena do 27. září.</p></div>",
-      "new": "<div class=\"event\"><time>PÁTEK 4. 9. · 17:00</time><p class=\"distance\">AREÁL BENEDIKT · MOST</p><h3>Mostík</h3><p>Rodinné odpoledne plné zábavy s programem mosteckých neziskových organizací. Aktuální oficiální kalendář města potvrzuje začátek v 17:00 a vstup zdarma.</p></div>\n<div class=\"event\" data-event-id=\"most-hraj-discgolf-tour-20260905\"><time>SOBOTA 5. 9. · REGISTRACE 9:00 · START 10:00</time><p class=\"distance\">DISCGOLF MOST · PARK ŠIBENÍK</p><h3>Hraj Discgolf Tour 2026</h3><p>Jednodenní turnaj je určený hlavně začínajícím hráčům. Sportovní areály Most potvrzují sobotní termín; pořadatel navíc nabízí hráčům, pro které jde o první turnaj v životě, disc zdarma.</p></div>\n<div class=\"event\" data-event-id=\"most-verejne-brusleni-20260905\"><time>SOBOTA 5. 9. · 9:45–11:00</time><p class=\"distance\">ZIMNÍ STADION · MOST</p><h3>Veřejné bruslení se vrací</h3><p>První veřejné bruslení nové sezony. Sportovní areály Most potvrzují čas 9:45–11:00; ve stejném čase má bruslení pokračovat každou sobotu po zbytek září.</p></div>\n<div class=\"event\" data-event-id=\"most-historicke-autobusy-mhd-20260905-06\"><time>SOBOTA–NEDĚLE 5.–6. 9. · ODJEZDY 10:00, 11:00, 14:00 A 15:00</time><p class=\"distance\">OD OBLASTNÍHO MUZEA · MOST</p><h3>Speciální jízdy historickými autobusy</h3><p>V sobotu vyjede Karosa ŠL 11, v neděli Škoda RTO. Bezplatná okružní trasa začíná i končí u zastávky Muzeum a vede přes OD Prior, 1. náměstí, Dopravní podnik a Kahan. Jízdy připomínají 125 let MHD na Mostecku a navazují na stejnojmennou muzejní výstavu, která byla prodloužena do 27. září.</p></div>",
-      "count": 1
-    },
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
-      "old": "<div class=\"event\" data-event-id=\"most-historicke-autobusy-mhd-20260905-06\"><time>SOBOTA–NEDĚLE 5.–6. 9. · ODJEZDY 10:00, 11:00, 14:00 A 15:00</time><p class=\"distance\">OD OBLASTNÍHO MUZEA · MOST</p><h3>Speciální jízdy historickými autobusy</h3><p>V sobotu vyjede Karosa ŠL 11, v neděli Škoda RTO. Bezplatná okružní trasa začíná i končí u zastávky Muzeum a vede přes OD Prior, 1. náměstí, Dopravní podnik a Kahan. Jízdy připomínají 125 let MHD na Mostecku a navazují na stejnojmennou muzejní výstavu, která byla prodloužena do 27. září.</p></div>\n<div class=\"event\"><time>2.–8. 9.</time><p class=\"distance\">JEZERO MOST</p><h3>Mistrovství světa v DPP</h3><p>Velká sportovní akce na Jezeře Most. Denní harmonogram doporučujeme ověřit před cestou u pořadatele.</p></div>",
-      "new": "<div class=\"event\" data-event-id=\"most-historicke-autobusy-mhd-20260905-06\"><time>SOBOTA–NEDĚLE 5.–6. 9. · ODJEZDY 10:00, 11:00, 14:00 A 15:00</time><p class=\"distance\">OD OBLASTNÍHO MUZEA · MOST</p><h3>Speciální jízdy historickými autobusy</h3><p>V sobotu vyjede Karosa ŠL 11, v neděli Škoda RTO. Bezplatná okružní trasa začíná i končí u zastávky Muzeum a vede přes OD Prior, 1. náměstí, Dopravní podnik a Kahan. Jízdy připomínají 125 let MHD na Mostecku a navazují na stejnojmennou muzejní výstavu, která byla prodloužena do 27. září.</p></div>\n<div class=\"event\" data-event-id=\"most-mimoradne-verejne-brusleni-20260906\"><time>NEDĚLE 6. 9. · 11:00–12:30</time><p class=\"distance\">ZIMNÍ STADION · MOST</p><h3>Mimořádné veřejné bruslení</h3><p>Sportovní areály Most přidaly na neděli mimořádný termín veřejného bruslení od 11:00 do 12:30.</p></div>\n<div class=\"event\"><time>2.–8. 9.</time><p class=\"distance\">JEZERO MOST</p><h3>Mistrovství světa v DPP</h3><p>Velká sportovní akce na Jezeře Most. Denní harmonogram doporučujeme ověřit před cestou u pořadatele.</p></div>",
-      "count": 1
-    },
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
-      "old": "<h2>Karlovarsko, Ostrov a Jáchymov</h2>\n<div class=\"event\"><time>STŘEDA–NEDĚLE 2.–6. 9.</time><p class=\"distance\">KARLOVY VARY · CCA 55–65 MIN</p><h3>31. Karlovarský folklorní festival</h3><p>Velký mezinárodní festival folkloru probíhá pět dní na více místech. Ve středu a čtvrtek je před hlavní poštou a ve Smetanových sadech jarmark lidových řemesel 10:00–18:00, ve čtvrtek večer navazuje zahajovací koncert v hotelu Imperial. Další program pokračuje do neděle.</p></div>",
-      "new": "<h2>Karlovarsko, Ostrov a Jáchymov</h2>\n<div class=\"event\" data-event-id=\"cinovy-dul-jeronym-archeologicke-leto-20260905\"><time>SOBOTA 5. 9. · 13:00</time><p class=\"distance\">CÍNOVÝ DŮL JERONÝM · KARLOVARSKO</p><h3>Speciální prohlídka s montánním archeologem</h3><p>Národní památkový ústav potvrzuje speciální prohlídku vstupního objektu Cínového dolu Jeroným v rámci Archeologického léta. Začíná ve 13:00 a je nutná rezervace pro jednotlivce i skupiny. Prohlídku vede montánní archeolog; před cestou doporučujeme zkontrolovat aktuální kapacitu rezervací.</p></div>\n<div class=\"event\"><time>STŘEDA–NEDĚLE 2.–6. 9.</time><p class=\"distance\">KARLOVY VARY · CCA 55–65 MIN</p><h3>31. Karlovarský folklorní festival</h3><p>Velký mezinárodní festival folkloru probíhá pět dní na více místech. Ve středu a čtvrtek je před hlavní poštou a ve Smetanových sadech jarmark lidových řemesel 10:00–18:00, ve čtvrtek večer navazuje zahajovací koncert v hotelu Imperial. Další program pokračuje do neděle.</p></div>",
-      "count": 1
     },
     {
       "path": "bridge-health.txt",
-      "old": "version=20260818-1611",
-      "new": "version=20260905-owned-ads-5050-live-v2",
-      "count": 1
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/bridge-health.txt",
+      "sha256": "0354c666a8fe893fbc020ca493ee5daeebd031dcee801ee5f82a81616cd242d6"
     }
   ],
   "deletes": [],
