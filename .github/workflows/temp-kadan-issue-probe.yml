@@ -13,7 +13,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Ověřit živou publikaci 5. dílu kláštera
+      - name: Ověřit živou publikaci a reklamy 5. dílu kláštera
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -30,38 +30,34 @@ jobs:
             echo "http=$code"
             if [ "$code" = 200 ]; then
               grep -oPm1 '(?<=<h1>).*?(?=</h1>)' /tmp/target.html || true
-              for marker in '95 dominikánek' 'přešly sestry do Střelic u Brna' 'Přesný den posledního stěhování' 'Co stále nevíme a v článku to nepředstíráme'; do
+              for marker in '95 dominikánek' 'přešly sestry do Střelic u Brna' 'Co stále nevíme a v článku to nepředstíráme'; do
                 grep -Fq "$marker" /tmp/target.html && echo "marker_ok=$marker" || echo "marker_missing=$marker"
               done
               grep -Fq 'NewsArticle' /tmp/target.html && echo newsarticle_ok || echo newsarticle_missing
+              grep -Fq '/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3' /tmp/target.html && echo ad_reklamy_js_ok || echo ad_reklamy_js_missing
+              grep -Fq '/obsah-doplnky.js?v=20260728-dynamic-2' /tmp/target.html && echo ad_doplnky_js_ok || echo ad_doplnky_js_missing
+              grep -Fq 'data-promos data-context="sidebar"' /tmp/target.html && echo ad_sidebar_slot_ok || echo ad_sidebar_slot_missing
               python3 - <<'PY'
           from html.parser import HTMLParser
           from urllib.parse import urljoin
           from pathlib import Path
-          import json,re,subprocess,struct
-
+          import subprocess,struct
           base='https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html'
           text=Path('/tmp/target.html').read_text('utf-8',errors='replace')
           class P(HTMLParser):
               def __init__(self):
-                  super().__init__(); self.canonical=[]; self.og=[]; self.figures=0; self.imgs=[]; self.home_links=0
+                  super().__init__(); self.canonical=[]; self.og=[]; self.figures=0; self.imgs=[]
               def handle_starttag(self,tag,attrs):
                   d={k:v for k,v in attrs if k}
                   if tag=='link' and 'canonical' in (d.get('rel') or '').lower(): self.canonical.append(d.get('href',''))
                   if tag=='meta' and (d.get('property') or '').lower()=='og:image': self.og.append(d.get('content',''))
                   if tag=='figure' and 'article-figure' in (d.get('class') or '').split(): self.figures+=1
                   if tag=='img' and d.get('src'): self.imgs.append(d['src'])
-                  if tag=='a' and d.get('href')=='/': self.home_links+=1
           p=P(); p.feed(text)
           print('canonical=' + ('|'.join(p.canonical) if p.canonical else 'MISSING'))
-          expected=base
-          print('canonical_ok' if expected in p.canonical else 'canonical_bad')
-          print('og_image=' + ('|'.join(p.og) if p.og else 'MISSING'))
+          print('canonical_ok' if base in p.canonical else 'canonical_bad')
           print(f'article_figure_count={p.figures}')
-          print(f'home_link_count={p.home_links}')
-          image=''
-          if p.og: image=urljoin(base,p.og[0])
-          elif p.imgs: image=urljoin(base,p.imgs[0])
+          image=urljoin(base,p.og[0] if p.og else (p.imgs[0] if p.imgs else ''))
           if image:
               cp=subprocess.run(['curl','-4','-kLsS','--max-time','25','-o','/tmp/hero','-w','%{http_code}|%{content_type}',image],capture_output=True,text=True)
               print('hero_fetch='+cp.stdout.strip())
@@ -69,7 +65,28 @@ jobs:
               if len(b)>=24 and b[:8]==b'\x89PNG\r\n\x1a\n':
                   w,h=struct.unpack('>II',b[16:24]); print(f'hero_png={w}x{h}')
               else: print('hero_png=NO')
-          else: print('hero_fetch=MISSING')
+          PY
+            fi
+            echo
+            echo '=== FOOTER CSS ==='
+            curl -4 -kLsS --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/footer.css?probe=${{ github.run_id }}-$(date +%s%N)" -o /tmp/footer.css || true
+            grep -Fq 'main.article-shell:has(.static-article-ads) [data-promos]' /tmp/footer.css && echo ad_css_conditional_ok || echo ad_css_conditional_missing
+            if grep -Fq $'main.article-shell [data-promos],\nmain.article-shell .article-ad-auto{display:none!important}' /tmp/footer.css; then echo ad_css_old_hide_present; else echo ad_css_old_hide_absent; fi
+            echo
+            echo '=== MOBILE RENDER ==='
+            browser=$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)
+            echo "browser=$browser"
+            if [ -n "$browser" ]; then
+              timeout 60s "$browser" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=430,1800 --virtual-time-budget=12000 --dump-dom "$URL?render_ads=${{ github.run_id }}-$(date +%s%N)" > /tmp/rendered.html 2>/tmp/browser.err || true
+              echo "rendered_bytes=$(wc -c < /tmp/rendered.html 2>/dev/null || echo 0)"
+              if grep -Eq 'nk-doplnek-karta|promo-card|article-rail-card|owned-site-card' /tmp/rendered.html; then echo rendered_ad_card_ok; else echo rendered_ad_card_missing; fi
+              if grep -Eq 'VašeUklízečka|VYKLIDIME|RealityKadan|Pojistime|Telly\.cz|E\.ON\.cz|Invia\.cz|Atis\.cz' /tmp/rendered.html; then echo rendered_ad_text_ok; else echo rendered_ad_text_missing; fi
+              python3 - <<'PY'
+          from pathlib import Path
+          import re
+          t=Path('/tmp/rendered.html').read_text('utf-8',errors='replace') if Path('/tmp/rendered.html').exists() else ''
+          m=re.search(r'(.{0,500}REKLAMA.{0,1800})',t,re.I|re.S)
+          print('rendered_ad_excerpt='+(re.sub(r'\s+',' ',m.group(1))[:2200] if m else 'MISSING'))
           PY
             fi
             echo
@@ -77,7 +94,7 @@ jobs:
               echo "=== $path ==="
               curl -4 -kfsS --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/$path?probe=${{ github.run_id }}-$(date +%s%N)" -o /tmp/check || { echo FETCH_FAILED; continue; }
               if [ "$path" = rss.xml ] || [ "$path" = sitemap.xml ] || [ "$path" = news-sitemap.xml ] || [ "$path" = clanky/ ]; then
-                grep -Fq "$SLUG" /tmp/check && echo "slug_present" || echo "slug_missing"
+                grep -Fq "$SLUG" /tmp/check && echo slug_present || echo slug_missing
               else
                 cat /tmp/check
               fi
@@ -88,5 +105,5 @@ jobs:
           git config user.name research-bot
           git config user.email research-bot@users.noreply.github.com
           git add "$OUT"
-          git commit -m 'temp: finálně ověřit 5. díl kláštera na webu [skip ci]' || exit 0
+          git commit -m 'temp: ověřit reklamy 5. dílu kláštera [skip ci]' || exit 0
           git push origin HEAD:main
