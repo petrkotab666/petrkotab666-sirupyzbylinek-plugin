@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Ověřit kulturní přehled a stav nasazení
+      - name: Ověřit veřejný web, DNS a dostupnost SSH
         shell: bash
         run: |
           set -euo pipefail
@@ -24,6 +24,8 @@ jobs:
           url='https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html'
           stamp="${GITHUB_RUN_ID}-$(date +%s)"
           dns="$(getent ahostsv4 nasekadan.cz 2>/dev/null | awk '{print $1}' | sort -u | paste -sd, - || true)"
+          ssh_tcp=closed
+          if timeout 8 bash -c '</dev/tcp/57.129.43.215/22' 2>/dev/null; then ssh_tcp=open; fi
           curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' -D /tmp/kultura.headers "$url?probe=$stamp" -o /tmp/kultura.html || true
           curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?probe=$stamp" -o /tmp/health.txt || true
           curl -4 -kfsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html?probe=$stamp" -o /tmp/slunce.html || true
@@ -34,6 +36,7 @@ jobs:
           {
             echo "checked_at=$(date -u +%FT%TZ)"
             echo "dns_ipv4=$dns"
+            echo "ssh_tcp_22=$ssh_tcp"
             echo "cafe_lingua_live=$cafe"
             echo "slunce_live=$slunce"
             echo '--- response-headers ---'
@@ -49,6 +52,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add reports/nasekadan-cafe-live.txt
-          git commit -m 'Zapsat kontrolu Cafe Lingua na Naše Kadaň [skip ci]' || exit 0
+          git commit -m 'Zapsat diagnostiku Naše Kadaň [skip ci]' || exit 0
           git pull --rebase origin main
           git push origin HEAD:main
