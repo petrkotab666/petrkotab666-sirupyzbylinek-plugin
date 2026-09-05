@@ -1,4 +1,4 @@
-name: Ověřit živou rychlou bránu Naše Kadaň 2238
+name: Jednorázově ověřit nativní OVH bridge Naše Kadaň
 
 on:
   push:
@@ -13,22 +13,29 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 4
     steps:
-      - name: Ověřit veřejný server zvenčí po textovém patchi
+      - name: Ověřit bridge health a kulturní recovery přímo na živém webu
         shell: bash
         run: |
-          set -euo pipefail
-          for n in $(seq 1 10); do
+          set -Eeuo pipefail
+          expected='20260905-priority-cultural-recovery-2109-v1'
+          article='https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html'
+          for n in $(seq 1 20); do
             stamp="${GITHUB_RUN_ID}-$n-$(date +%s)"
-            body="$(curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' "https://nasekadan.cz/bridge-health.txt?check=$stamp" || true)"
-            echo "$body"
-            if grep -Fq 'version=20260811-2238' <<<"$body"; then
-              echo 'FAST_BRIDGE_PATCH_EXTERNAL_OK'
+            health="$(curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' "https://nasekadan.cz/bridge-health.txt?check=$stamp" || true)"
+            body="$(curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' "$article?check=$stamp" || true)"
+            printf '%s\n' '--- BRIDGE HEALTH ---' "$health"
+            if grep -Fq "version=$expected" <<<"$health" \
+              && grep -Fq 'cinovy-dul-jeronym-archeologicke-leto-20260905' <<<"$body" \
+              && grep -Fq 'zoopark-chomutov-zpatky-do-skoly-20260905-06' <<<"$body" \
+              && grep -Fq 'most-hraj-discgolf-tour-20260905' <<<"$body" \
+              && grep -Fq 'most-verejne-brusleni-20260905' <<<"$body" \
+              && grep -Fq 'most-mimoradne-verejne-brusleni-20260906' <<<"$body"; then
+              echo 'NASEKADAN_NATIVE_BRIDGE_CULTURE_WEB_OK'
               exit 0
             fi
-            sleep 3
+            sleep 5
           done
+          echo 'NASEKADAN_NATIVE_BRIDGE_CULTURE_WEB_NOT_OK' >&2
           exit 1
-
-# safe preflight retrigger 2026-08-12T01:08+02:00
