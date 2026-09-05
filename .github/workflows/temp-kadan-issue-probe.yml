@@ -33,8 +33,44 @@ jobs:
               for marker in '95 dominikánek' 'přešly sestry do Střelic u Brna' 'Přesný den posledního stěhování' 'Co stále nevíme a v článku to nepředstíráme'; do
                 grep -Fq "$marker" /tmp/target.html && echo "marker_ok=$marker" || echo "marker_missing=$marker"
               done
-              grep -Fq "rel=\"canonical\" href=\"https://nasekadan.cz/clanky/$SLUG\"" /tmp/target.html && echo canonical_ok || echo canonical_missing
               grep -Fq 'NewsArticle' /tmp/target.html && echo newsarticle_ok || echo newsarticle_missing
+              python3 - <<'PY'
+          from html.parser import HTMLParser
+          from urllib.parse import urljoin
+          from pathlib import Path
+          import json,re,subprocess,struct
+
+          base='https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html'
+          text=Path('/tmp/target.html').read_text('utf-8',errors='replace')
+          class P(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.canonical=[]; self.og=[]; self.figures=0; self.imgs=[]; self.home_links=0
+              def handle_starttag(self,tag,attrs):
+                  d={k:v for k,v in attrs if k}
+                  if tag=='link' and 'canonical' in (d.get('rel') or '').lower(): self.canonical.append(d.get('href',''))
+                  if tag=='meta' and (d.get('property') or '').lower()=='og:image': self.og.append(d.get('content',''))
+                  if tag=='figure' and 'article-figure' in (d.get('class') or '').split(): self.figures+=1
+                  if tag=='img' and d.get('src'): self.imgs.append(d['src'])
+                  if tag=='a' and d.get('href')=='/': self.home_links+=1
+          p=P(); p.feed(text)
+          print('canonical=' + ('|'.join(p.canonical) if p.canonical else 'MISSING'))
+          expected=base
+          print('canonical_ok' if expected in p.canonical else 'canonical_bad')
+          print('og_image=' + ('|'.join(p.og) if p.og else 'MISSING'))
+          print(f'article_figure_count={p.figures}')
+          print(f'home_link_count={p.home_links}')
+          image=''
+          if p.og: image=urljoin(base,p.og[0])
+          elif p.imgs: image=urljoin(base,p.imgs[0])
+          if image:
+              cp=subprocess.run(['curl','-4','-kLsS','--max-time','25','-o','/tmp/hero','-w','%{http_code}|%{content_type}',image],capture_output=True,text=True)
+              print('hero_fetch='+cp.stdout.strip())
+              b=Path('/tmp/hero').read_bytes() if Path('/tmp/hero').exists() else b''
+              if len(b)>=24 and b[:8]==b'\x89PNG\r\n\x1a\n':
+                  w,h=struct.unpack('>II',b[16:24]); print(f'hero_png={w}x{h}')
+              else: print('hero_png=NO')
+          else: print('hero_fetch=MISSING')
+          PY
             fi
             echo
             for path in server-publish-health.json infra-health.json rss.xml sitemap.xml news-sitemap.xml clanky/; do
@@ -52,5 +88,5 @@ jobs:
           git config user.name research-bot
           git config user.email research-bot@users.noreply.github.com
           git add "$OUT"
-          git commit -m 'temp: ověřit 5. díl kláštera na webu [skip ci]' || exit 0
+          git commit -m 'temp: finálně ověřit 5. díl kláštera na webu [skip ci]' || exit 0
           git push origin HEAD:main
