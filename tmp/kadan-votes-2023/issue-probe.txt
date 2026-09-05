@@ -1,16 +1,8 @@
-issue_runner_started=2026-09-05T05:39:03Z
-issue=64
+issue_runner_started=2026-09-05T06:55:15Z
+issue=65
 
-=== deployment-health.txt ===
-site=nasekadan.cz
-status=ok
-source=bridge:20260825-sport-cards-v3
-bridge_commit=1e86ea2727a7848938fb4db261e7133acf0b5581
-generated=2026-08-25T20:04:54.255702+00:00
-mode=fast-bridge
-
-=== server-maintenance-health.json ===
-FETCH_FAILED
+=== TARGET ===
+http=404
 
 === server-publish-health.json ===
 {
@@ -29,7 +21,7 @@ FETCH_FAILED
 === infra-health.json ===
 {
   "status": "ok",
-  "checked_at": "2026-09-05T05:38:45.963069+00:00",
+  "checked_at": "2026-09-05T06:54:28.378146+00:00",
   "public_web_ok": true,
   "active_runner_services": 15,
   "runner_service_files": 15,
@@ -40,6 +32,15 @@ FETCH_FAILED
   "marker": "NASEKADAN_INFRA_WATCHDOG_OK"
 }
 
-=== PORTS ===
-ssh22=open
-https443=open
+=== rss.xml ===
+slug_missing
+
+=== sitemap.xml ===
+slug_missing
+
+=== news-sitemap.xml ===
+slug_missing
+
+=== clanky/ ===
+slug_missing
+
