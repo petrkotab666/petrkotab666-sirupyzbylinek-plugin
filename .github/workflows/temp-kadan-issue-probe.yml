@@ -13,7 +13,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Ověřit živou publikaci a reklamy 5. dílu kláštera
+      - name: Ověřit živou publikaci a přesný reklamní slot
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -24,86 +24,37 @@ jobs:
           {
             echo "issue_runner_started=$(date -u +%FT%TZ)"
             echo "issue=${{ github.event.issue.number }}"
-            echo
-            echo '=== TARGET ==='
             code=$(curl -4 -kLsS --max-time 25 -o /tmp/target.html -w '%{http_code}' -H 'Cache-Control: no-cache' "$URL?probe=${{ github.run_id }}-$(date +%s%N)" || true)
             echo "http=$code"
-            if [ "$code" = 200 ]; then
-              grep -oPm1 '(?<=<h1>).*?(?=</h1>)' /tmp/target.html || true
-              for marker in '95 dominikánek' 'přešly sestry do Střelic u Brna' 'Co stále nevíme a v článku to nepředstíráme'; do
-                grep -Fq "$marker" /tmp/target.html && echo "marker_ok=$marker" || echo "marker_missing=$marker"
-              done
-              grep -Fq 'NewsArticle' /tmp/target.html && echo newsarticle_ok || echo newsarticle_missing
-              grep -Fq '/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3' /tmp/target.html && echo ad_reklamy_js_ok || echo ad_reklamy_js_missing
-              grep -Fq '/obsah-doplnky.js?v=20260728-dynamic-2' /tmp/target.html && echo ad_doplnky_js_ok || echo ad_doplnky_js_missing
-              grep -Fq 'data-promos data-context="sidebar"' /tmp/target.html && echo ad_sidebar_slot_ok || echo ad_sidebar_slot_missing
-              python3 - <<'PY'
-          from html.parser import HTMLParser
-          from urllib.parse import urljoin
+            python3 - <<'PY'
           from pathlib import Path
-          import subprocess,struct
-          base='https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html'
-          text=Path('/tmp/target.html').read_text('utf-8',errors='replace')
-          class P(HTMLParser):
-              def __init__(self):
-                  super().__init__(); self.canonical=[]; self.og=[]; self.figures=0; self.imgs=[]
-              def handle_starttag(self,tag,attrs):
-                  d={k:v for k,v in attrs if k}
-                  if tag=='link' and 'canonical' in (d.get('rel') or '').lower(): self.canonical.append(d.get('href',''))
-                  if tag=='meta' and (d.get('property') or '').lower()=='og:image': self.og.append(d.get('content',''))
-                  if tag=='figure' and 'article-figure' in (d.get('class') or '').split(): self.figures+=1
-                  if tag=='img' and d.get('src'): self.imgs.append(d['src'])
-          p=P(); p.feed(text)
-          print('canonical=' + ('|'.join(p.canonical) if p.canonical else 'MISSING'))
-          print('canonical_ok' if base in p.canonical else 'canonical_bad')
-          print(f'article_figure_count={p.figures}')
-          image=urljoin(base,p.og[0] if p.og else (p.imgs[0] if p.imgs else ''))
-          if image:
-              cp=subprocess.run(['curl','-4','-kLsS','--max-time','25','-o','/tmp/hero','-w','%{http_code}|%{content_type}',image],capture_output=True,text=True)
-              print('hero_fetch='+cp.stdout.strip())
-              b=Path('/tmp/hero').read_bytes() if Path('/tmp/hero').exists() else b''
-              if len(b)>=24 and b[:8]==b'\x89PNG\r\n\x1a\n':
-                  w,h=struct.unpack('>II',b[16:24]); print(f'hero_png={w}x{h}')
-              else: print('hero_png=NO')
+          import re
+          t=Path('/tmp/target.html').read_text('utf-8',errors='replace') if Path('/tmp/target.html').exists() else ''
+          for pat,name in [(r'<main\b[^>]*article-shell[^>]*>','main_tag'),(r'</section>\s*<main\b[^>]*article-shell[^>]*>','hero_to_main')]:
+              m=re.search(pat,t,re.I|re.S)
+              print(name+'='+(re.sub(r'\s+',' ',m.group(0)) if m else 'MISSING'))
+          m=re.search(r'(.{0,500}<main\b[^>]*article-shell[^>]*>.{0,1200})',t,re.I|re.S)
+          print('raw_main_excerpt='+(re.sub(r'\s+',' ',m.group(1))[:1700] if m else 'MISSING'))
+          print('static_top_ad_present=' + ('YES' if 'data-nk-static-top-ad="1"' in t else 'NO'))
+          print('reklamy_js_present=' + ('YES' if '/reklamy.js' in t else 'NO'))
           PY
-            fi
-            echo
-            echo '=== FOOTER CSS ==='
-            curl -4 -kLsS --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/footer.css?probe=${{ github.run_id }}-$(date +%s%N)" -o /tmp/footer.css || true
-            grep -Fq 'main.article-shell:has(.static-article-ads) [data-promos]' /tmp/footer.css && echo ad_css_conditional_ok || echo ad_css_conditional_missing
-            if grep -Fq $'main.article-shell [data-promos],\nmain.article-shell .article-ad-auto{display:none!important}' /tmp/footer.css; then echo ad_css_old_hide_present; else echo ad_css_old_hide_absent; fi
-            echo
-            echo '=== MOBILE RENDER ==='
             browser=$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)
             echo "browser=$browser"
             if [ -n "$browser" ]; then
               timeout 60s "$browser" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --window-size=430,1800 --virtual-time-budget=12000 --dump-dom "$URL?render_ads=${{ github.run_id }}-$(date +%s%N)" > /tmp/rendered.html 2>/tmp/browser.err || true
-              echo "rendered_bytes=$(wc -c < /tmp/rendered.html 2>/dev/null || echo 0)"
-              if grep -Eq 'nk-doplnek-karta|promo-card|article-rail-card|owned-site-card' /tmp/rendered.html; then echo rendered_ad_card_ok; else echo rendered_ad_card_missing; fi
-              if grep -Eq 'VašeUklízečka|VYKLIDIME|RealityKadan|Pojistime|Telly\.cz|E\.ON\.cz|Invia\.cz|Atis\.cz' /tmp/rendered.html; then echo rendered_ad_text_ok; else echo rendered_ad_text_missing; fi
               python3 - <<'PY'
           from pathlib import Path
           import re
           t=Path('/tmp/rendered.html').read_text('utf-8',errors='replace') if Path('/tmp/rendered.html').exists() else ''
-          m=re.search(r'(.{0,500}REKLAMA.{0,1800})',t,re.I|re.S)
-          print('rendered_ad_excerpt='+(re.sub(r'\s+',' ',m.group(1))[:2200] if m else 'MISSING'))
+          print('render_static_top_ad=' + ('YES' if 'data-nk-static-top-ad="1"' in t else 'NO'))
+          m=re.search(r'(.{0,300}REKLAMA.{0,1400})',t,re.I|re.S)
+          print('rendered_ad_excerpt='+(re.sub(r'\s+',' ',m.group(1))[:1700] if m else 'MISSING'))
           PY
             fi
-            echo
-            for path in server-publish-health.json infra-health.json rss.xml sitemap.xml news-sitemap.xml clanky/; do
-              echo "=== $path ==="
-              curl -4 -kfsS --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/$path?probe=${{ github.run_id }}-$(date +%s%N)" -o /tmp/check || { echo FETCH_FAILED; continue; }
-              if [ "$path" = rss.xml ] || [ "$path" = sitemap.xml ] || [ "$path" = news-sitemap.xml ] || [ "$path" = clanky/ ]; then
-                grep -Fq "$SLUG" /tmp/check && echo slug_present || echo slug_missing
-              else
-                cat /tmp/check
-              fi
-              echo
-            done
           } > "$OUT"
           cat "$OUT"
           git config user.name research-bot
           git config user.email research-bot@users.noreply.github.com
           git add "$OUT"
-          git commit -m 'temp: ověřit reklamy 5. dílu kláštera [skip ci]' || exit 0
+          git commit -m 'temp: zjistit přesný reklamní slot 5. dílu [skip ci]' || exit 0
           git push origin HEAD:main
