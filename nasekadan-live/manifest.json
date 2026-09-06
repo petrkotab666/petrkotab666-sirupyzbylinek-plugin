@@ -1,17 +1,23 @@
 {
   "schema": 1,
-  "version": "20260906-excursia-hardblock-sitejs-v1",
+  "version": "20260906-excursia-hardblock-sitejs-v2",
   "files": [
     {
       "path": "bridge-health.txt",
-      "sha256": "59120ff42ac7678b627afc2e3ff0293ec270e63e7f774d17cde5f9dcafb8b822"
+      "sha256": "d838b92990890d523213e1db93c68fc56053868906f0a67af6cc91cbb045dbe1"
     }
   ],
   "patches": [
     {
       "path": "site.js",
-      "old": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\ndocument.addEventListener('DOMContentLoaded', () => {",
-      "new": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\n\n// EXCURSIA_HARDBLOCK_20260906_V1\n(() => {\n  'use strict';\n  const blocked = /(?:excursia(?:\\.cz)?|2e6a0944|76c9b39c|1ef717c8|27bb200a|2ae526f8|368140a3|3ad1c473|42c81f52|5950833c|6312aab5|80cbf20d|993000bf|b39d7f2a|c9a10c7f|cc734358|dac71170|e3c0d4ee|f92543ca)/i;\n  const selector = [\n    'a.promo-card',\n    'a.article-rail-card',\n    '.featured-rotating-ad a',\n    '.featured-seasonal-ad a',\n    '.article-aside-adstream a',\n    '[data-promos] a',\n    '.promo-wrap a',\n    '.article-ad-auto a',\n    '.article-ad-rail a',\n    '.nk-home-lms a',\n    'img[src*=\"2e6a0944\"]',\n    'img[src*=\"excursia\"]'\n  ].join(',');\n\n  const signature = (node) => {\n    if (!(node instanceof Element)) return '';\n    const href = node.getAttribute('href') || '';\n    const src = node.getAttribute('src') || '';\n    return `${href} ${src} ${node.textContent || ''} ${node.innerHTML || ''}`;\n  };\n\n  const removeBlocked = (node) => {\n    if (!(node instanceof Element) || !blocked.test(signature(node))) return;\n    const card =\n      node.closest('a.promo-card,a.article-rail-card') ||\n      node.closest('.featured-rotating-ad,.featured-seasonal-ad') ||\n      node.closest('.article-ad-auto,.article-ad-rail') ||\n      node.closest('a') ||\n      node;\n    card.remove();\n  };\n\n  const purge = (root = document) => {\n    if (!root || typeof root.querySelectorAll !== 'function') return;\n    root.querySelectorAll(selector).forEach(removeBlocked);\n  };\n\n  const start = () => {\n    purge();\n    if (!document.documentElement) return;\n    const observer = new MutationObserver((mutations) => {\n      for (const mutation of mutations) {\n        for (const added of mutation.addedNodes) {\n          if (!(added instanceof Element)) continue;\n          if (added.matches && added.matches(selector)) removeBlocked(added);\n          purge(added);\n        }\n      }\n    });\n    observer.observe(document.documentElement, {childList: true, subtree: true});\n    [250, 800, 1800, 3500, 7000].forEach((delay) => setTimeout(purge, delay));\n  };\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start, {once: true});\n  } else {\n    start();\n  }\n\n  document.addEventListener('click', (event) => {\n    const anchor = event.target instanceof Element ? event.target.closest('a') : null;\n    if (!anchor || !blocked.test(signature(anchor))) return;\n    event.preventDefault();\n    event.stopImmediatePropagation();\n    removeBlocked(anchor);\n  }, true);\n})();\n\ndocument.addEventListener('DOMContentLoaded', () => {",
+      "old": "// EXCURSIA_HARDBLOCK_20260906_V1",
+      "new": "// EXCURSIA_HARDBLOCK_20260906_V2",
+      "count": 1
+    },
+    {
+      "path": "site.js",
+      "old": "  const signature = (node) => {\n    if (!(node instanceof Element)) return '';\n    const href = node.getAttribute('href') || '';\n    const src = node.getAttribute('src') || '';\n    return `${href} ${src} ${node.textContent || ''} ${node.innerHTML || ''}`;\n  };\n\n  const removeBlocked = (node) => {\n    if (!(node instanceof Element) || !blocked.test(signature(node))) return;\n    const card =\n      node.closest('a.promo-card,a.article-rail-card') ||\n      node.closest('.featured-rotating-ad,.featured-seasonal-ad') ||\n      node.closest('.article-ad-auto,.article-ad-rail') ||\n      node.closest('a') ||\n      node;\n    card.remove();\n  };",
+      "new": "  const replacement = {\n    title: 'České Kormidlo',\n    text: 'Last minute, pobytové a poznávací zájezdy od aktivního affiliate partnera.',\n    tag: 'Last minute a zájezdy',\n    url: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=b880f187',\n    image: 'https://doc.ehub.cz/b/3babee44/7ac23a04.jpg'\n  };\n\n  const signature = (node) => {\n    if (!(node instanceof Element)) return '';\n    const anchor = node.matches('a') ? node : node.closest('a');\n    const image = node.matches('img') ? node : node.querySelector?.('img');\n    return [\n      node.getAttribute('href') || '',\n      node.getAttribute('src') || '',\n      node.getAttribute('data-id') || '',\n      node.getAttribute('data-partner') || '',\n      anchor?.getAttribute('href') || '',\n      anchor?.getAttribute('aria-label') || '',\n      image?.getAttribute('src') || '',\n      node.textContent || ''\n    ].join(' ');\n  };\n\n  // Název funkce zůstává kvůli návaznosti observeru, ale karta se už nemaže.\n  // Mrtvá Excursia se na místě přepíše na aktivní affiliate reklamu.\n  const removeBlocked = (node) => {\n    if (!(node instanceof Element)) return;\n    const anchor = node.matches('a') ? node : node.closest('a');\n    if (!anchor || anchor.dataset.excursiaReplacement === '1') return;\n    if (!blocked.test(`${signature(node)} ${signature(anchor)}`)) return;\n\n    anchor.dataset.excursiaReplacement = '1';\n    anchor.href = replacement.url;\n    anchor.target = '_blank';\n    anchor.rel = 'nofollow sponsored noopener noreferrer';\n    anchor.setAttribute('aria-label', `Reklama: ${replacement.title}`);\n    anchor.classList.remove('is-image-error');\n\n    for (const attr of Array.from(anchor.attributes)) {\n      if (['href','class','target','rel','aria-label','style','data-excursia-replacement'].includes(attr.name)) continue;\n      if (blocked.test(attr.value || '')) anchor.removeAttribute(attr.name);\n    }\n\n    anchor.querySelectorAll('img').forEach((img) => {\n      img.src = replacement.image;\n      img.alt = replacement.title;\n      img.removeAttribute('srcset');\n    });\n\n    const label = anchor.querySelector('.promo-label,.article-rail-label,[data-ad-label]');\n    if (label) label.textContent = 'REKLAMA';\n    const fallback = anchor.querySelector('.article-rail-fallback');\n    if (fallback) fallback.textContent = replacement.title;\n    const strong = anchor.querySelector('strong');\n    if (strong) strong.textContent = replacement.title;\n    const small = anchor.querySelector('small');\n    if (small) small.textContent = replacement.tag;\n    const call = anchor.querySelector(':scope > b');\n    if (call) call.textContent = 'Zjistit více →';\n\n    const copy = Array.from(anchor.querySelectorAll(':scope > span')).find((el) =>\n      !el.classList.contains('promo-banner') &&\n      !el.classList.contains('article-rail-label') &&\n      !el.classList.contains('article-rail-tower-picture') &&\n      !el.classList.contains('article-rail-fallback') &&\n      !el.classList.contains('article-rail-visual')\n    );\n    if (copy) copy.textContent = replacement.text;\n\n    // Pokud starší typ karty ukrýval název Excursie v nestandardním HTML,\n    // přestavíme jen tento jediný anchor; nikdy ne celý reklamní slot.\n    if (blocked.test(anchor.textContent || '')) {\n      anchor.innerHTML = `<span class=\"promo-label\">REKLAMA</span><strong>${replacement.title}</strong><span>${replacement.text}</span><b>Zjistit více →</b>`;\n    }\n  };",
       "count": 1
     }
   ],
@@ -21,8 +27,11 @@
     "https://www.nasekadan.cz/bridge-health.txt"
   ],
   "verify_present": [
-    "EXCURSIA_HARDBLOCK_20260906_V1",
-    "version=20260906-excursia-hardblock-sitejs-v1"
+    "EXCURSIA_HARDBLOCK_20260906_V2",
+    "version=20260906-excursia-hardblock-sitejs-v2"
   ],
-  "verify_absent": []
+  "verify_absent": [
+    "EXCURSIA_HARDBLOCK_20260906_V1",
+    "node.closest('.article-ad-auto,.article-ad-rail')"
+  ]
 }
