@@ -1,27 +1,28 @@
 {
   "schema": 1,
-  "version": "20260905-owned-ads-5050-live-v3",
+  "version": "20260906-excursia-hardblock-sitejs-v1",
   "files": [
     {
-      "path": "levnevyklidime-ads.js",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/levnevyklidime-ads.js",
-      "sha256": "a502c1d55af7200528a205bca0ffc9bb8ab72726d4f9c715ac71598a175a388e"
-    },
-    {
       "path": "bridge-health.txt",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/bridge-health.txt",
-      "sha256": "0354c666a8fe893fbc020ca493ee5daeebd031dcee801ee5f82a81616cd242d6"
+      "sha256": "59120ff42ac7678b627afc2e3ff0293ec270e63e7f774d17cde5f9dcafb8b822"
+    }
+  ],
+  "patches": [
+    {
+      "path": "site.js",
+      "old": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\ndocument.addEventListener('DOMContentLoaded', () => {",
+      "new": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\n\n// EXCURSIA_HARDBLOCK_20260906_V1\n(() => {\n  'use strict';\n  const blocked = /(?:excursia(?:\\.cz)?|2e6a0944|76c9b39c|1ef717c8|27bb200a|2ae526f8|368140a3|3ad1c473|42c81f52|5950833c|6312aab5|80cbf20d|993000bf|b39d7f2a|c9a10c7f|cc734358|dac71170|e3c0d4ee|f92543ca)/i;\n  const selector = [\n    'a.promo-card',\n    'a.article-rail-card',\n    '.featured-rotating-ad a',\n    '.featured-seasonal-ad a',\n    '.article-aside-adstream a',\n    '[data-promos] a',\n    '.promo-wrap a',\n    '.article-ad-auto a',\n    '.article-ad-rail a',\n    '.nk-home-lms a',\n    'img[src*=\"2e6a0944\"]',\n    'img[src*=\"excursia\"]'\n  ].join(',');\n\n  const signature = (node) => {\n    if (!(node instanceof Element)) return '';\n    const href = node.getAttribute('href') || '';\n    const src = node.getAttribute('src') || '';\n    return `${href} ${src} ${node.textContent || ''} ${node.innerHTML || ''}`;\n  };\n\n  const removeBlocked = (node) => {\n    if (!(node instanceof Element) || !blocked.test(signature(node))) return;\n    const card =\n      node.closest('a.promo-card,a.article-rail-card') ||\n      node.closest('.featured-rotating-ad,.featured-seasonal-ad') ||\n      node.closest('.article-ad-auto,.article-ad-rail') ||\n      node.closest('a') ||\n      node;\n    card.remove();\n  };\n\n  const purge = (root = document) => {\n    if (!root || typeof root.querySelectorAll !== 'function') return;\n    root.querySelectorAll(selector).forEach(removeBlocked);\n  };\n\n  const start = () => {\n    purge();\n    if (!document.documentElement) return;\n    const observer = new MutationObserver((mutations) => {\n      for (const mutation of mutations) {\n        for (const added of mutation.addedNodes) {\n          if (!(added instanceof Element)) continue;\n          if (added.matches && added.matches(selector)) removeBlocked(added);\n          purge(added);\n        }\n      }\n    });\n    observer.observe(document.documentElement, {childList: true, subtree: true});\n    [250, 800, 1800, 3500, 7000].forEach((delay) => setTimeout(purge, delay));\n  };\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start, {once: true});\n  } else {\n    start();\n  }\n\n  document.addEventListener('click', (event) => {\n    const anchor = event.target instanceof Element ? event.target.closest('a') : null;\n    if (!anchor || !blocked.test(signature(anchor))) return;\n    event.preventDefault();\n    event.stopImmediatePropagation();\n    removeBlocked(anchor);\n  }, true);\n})();\n\ndocument.addEventListener('DOMContentLoaded', () => {",
+      "count": 1
     }
   ],
   "deletes": [],
   "verify_urls": [
-    "https://www.nasekadan.cz/levnevyklidime-ads.js",
+    "https://www.nasekadan.cz/site.js",
     "https://www.nasekadan.cz/bridge-health.txt"
   ],
   "verify_present": [
-    "20260905-owned-ads-5050-live-v2"
+    "EXCURSIA_HARDBLOCK_20260906_V1",
+    "version=20260906-excursia-hardblock-sitejs-v1"
   ],
-  "verify_absent": [
-    "20260808-levnevyklidime-1"
-  ]
+  "verify_absent": []
 }
