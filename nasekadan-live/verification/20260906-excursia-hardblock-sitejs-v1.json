@@ -1,0 +1,49 @@
+{
+  "version": "20260906-excursia-hardblock-sitejs-v1",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-09-06T19:20:18.736298+00:00",
+  "checks": {
+    "https://www.nasekadan.cz/site.js": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/site.js?nkbridgeverify=20260906-excursia-hardblock-sitejs-v1-1788722412",
+      "present": {
+        "EXCURSIA_HARDBLOCK_20260906_V1": true,
+        "version=20260906-excursia-hardblock-sitejs-v1": false
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": false
+    },
+    "https://www.nasekadan.cz/bridge-health.txt": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/bridge-health.txt?nkbridgeverify=20260906-excursia-hardblock-sitejs-v1-1788722413",
+      "present": {
+        "EXCURSIA_HARDBLOCK_20260906_V1": true,
+        "version=20260906-excursia-hardblock-sitejs-v1": true
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": null,
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": true
+    }
+  }
+}
