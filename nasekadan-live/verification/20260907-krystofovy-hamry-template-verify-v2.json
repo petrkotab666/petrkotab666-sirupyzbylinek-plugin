@@ -1,0 +1,31 @@
+{
+  "version": "20260907-krystofovy-hamry-template-verify-v2",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-09-07T18:56:06.306306+00:00",
+  "checks": {
+    "https://nasekadan.cz/clanky/krystofovy-hamry-pozar-lesni-porost-7-zari-2026.html": {
+      "status": 200,
+      "final_url": "https://nasekadan.cz/clanky/krystofovy-hamry-pozar-lesni-porost-7-zari-2026.html?nkbridgeverify=20260907-krystofovy-hamry-template-verify-v2-1788807360",
+      "present": {
+        "NK_ARTICLE_TEMPLATE_STANDARD_FIX_20260907": false
+      },
+      "absent": {},
+      "diagnostics": {
+        "special_box": null,
+        "article_list": null,
+        "ticker": null,
+        "article_shell": "<main class=\"wrap article-shell\" data-article-template=\"unified-v1\"><article class=\"article approved-article\">\n<p class=\"tag\">AKTUALIZOVÁNO · KRYŠTOFOVY HAMRY · 7. ZÁŘÍ 2026 V 18:00</p>\n<h1>Zásah u požáru lesního porostu v Kryštofových Hamrech skončil v 16:40</h1>\n<p class=\"leadtext\"><strong>AKTUALIZACE: Oficiální Portál krizového řízení Ústeckého kraje už vede dnešní požár lesního porostu v Kryštofových Hamrech jako ukončený. Událost byla ohlášena ve 14:56 a zásah je v přehledu ukončen časem 16:40:02.</strong></p>\n<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/krystofovy-hamry-pozar-lesni-porost-7-zari-2026-0244b31959.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Zásah u požáru lesního porostu v Kryštofových Hamrech skončil v 16:40\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>\n<!-- NASEKADAN_IMAGE_POLICY_SERVER_GENERATED -->\n<div class=\"facts\"><div class=\"fact\"><small>Ohlášení</small><strong>14:56</strong></div><div class=\"fact\"><small>Ukončení</small><strong>16:40</strong></div><div class=\"fact\"><small>Stav</small><strong>stav ukončená</strong></div></div>\n<div class=\"notice\"><strong>Zásah skončil; rozsah a příčina ale z veřejného záznamu nevyplývají.</strong><p>Krajský portál u této události nezveřejňuje velikost zasažené plochy, příčinu požáru ani údaj o případných zraněních. Naše Kadaň proto tyto informace bez dalšího autoritativního podkladu nedoplňuje.</p></div>\n<h2>Stav se změnil oproti odpolední zprávě</h2>\n<p>Při prvním zveřejnění byl zásah v oficiálním přehledu ještě veden jako probíhající. V podvečer krajský krizový portál záznam změnil na <strong>ukončenou událost</strong> a uvádí čas 16:40:02. Proto aktualizujeme tentýž článek, místo abychom vytvářeli novou zprávu ke stejné události.</p>\n<p>Portál zároveň upozorňuje, že data o zásazích jednotek požární ochrany mohou být zveřejňována se zpožděním.</p>\n<div class=\"source-list\"><h2>Zdroj</h2><ul><li><a href=\"https://pkr.kr-ustecky.cz/pkr/\" target=\"_blank\" rel=\"noopener\">Portál krizového řízení Ústeckého kraje – aktuální zásahy JPO</a>, kontrola 7. září 2026 v podvečer: požár lesního porostu v Kryštofových Hamrech, ohlášení 14:56, čas ukončení 16:40:02, stav „ukončená“.</li></ul></div>\n</article><aside class=\"sticky\"><div class=\"sidebox\"><h3>Kde</h3><p>Kryštofovy Hamry<br>okres Chomutov</p></div><div class=\"sidebox\"><h3>Ohlášeno</h3><p>7. září ve 14:56</p></div><div class=\"sidebox\"><h3>Stav</h3><p>ukončeno v 16:40</p></div>\n  <div data-promos data-context=\"sidebar\"></div>\n</aside></main>\n<footer class=\"site-footer\" data-site-footer=\"v1\"><div class=\"wrap footer-grid\"><div class=\"footer-brand\"><a class=\"logo\" href=\"/\"><span class=\"logo-mark\">NK</span><span>NAŠE <b>KADAŇ</b></span></a><p>Nezávislé informace, události a příběhy města.</p></div><div class=\"footer-column\"><strong>Obsah webu</strong><a href=\"/\">Úvod</a><a href=\"/clanky/\">Naše články</a><a href=\"/#akce\">Akce</a><a href=\"/pruvodce/\">Průvodce</a></div><div class=\"footer-column\"><strong>Praktické a kontakt</strong><a href=\"/prakticke/\">Praktická Kadaň</a><a href=\"/doprava/\">Doprava</a><a href=\"/zapojte-se/\">Zapojte se</a><a href=\"mailto:info@nasekadan.cz\">info@nasekadan.cz</a></div></div><div class=\"footer-legal\"><span>© 2026 Naše Kadaň</span><a href=\"/o-webu/\">O webu</a><a href=\"/ochrana-osobnich-udaju/\">Ochrana osobních údajů</a><a href=\"/cookies/\">Cookies</a><a href=\"/provozovatel/\">Provozovatel</a></div><div class=\"wrap footer-legal\"><span class=\"legal-links\"><a href=\"/o-webu/\">O webu</a> · <a href=\"/ochrana-osobnich-udaju/\">Ochrana osobních údajů</a> · <a href=\"/navstevnost/\">Návštěvnost</a></span></div></footer>\n<script src=\"/site.js\" defer></script>\n<script src=\"/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3\"></script>\n<script src=\"/ad-spacing-guard.js?v=20260730-pojistime-rotation-4\" defer></script>\n<script src=\"/reklamy-oprava-obrazku.js?v=20260730-pojistime-rotation-4\"></script>\n<script src=\"/obsah-doplnky.js?v=20260730-pojistime-rotation-4\"></script>\n<script src=\"/analytics.js\" defer></script></body>\n</html>\n",
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [
+          "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/krystofovy-hamry-pozar-lesni-porost-7-zari-2026-0244b31959.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Zásah u požáru lesního porostu v Kryštofových Hamrech skončil v 16:40\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        ],
+        "images": [
+          "<img class=\"article-photo\" src=\"/social/krystofovy-hamry-pozar-lesni-porost-7-zari-2026-0244b31959.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Zásah u požáru lesního porostu v Kryštofových Hamrech skončil v 16:40\" fetchpriority=\"high\" decoding=\"async\">"
+        ]
+      },
+      "ok": false
+    }
+  }
+}
