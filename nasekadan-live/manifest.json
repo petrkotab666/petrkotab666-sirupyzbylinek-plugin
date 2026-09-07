@@ -1,25 +1,24 @@
 {
   "schema": 1,
-  "version": "20260907-mhd-kadan-home-v3",
+  "version": "20260908-slovan-financovani-v1",
   "files": [
-    {"path":"clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html","sha256":"e0b29372767feea59da681789e51ac04cd0497b24f5b90703f79626c63c91076"},
-    {"path":"clanky/mhdplus-article-2026.css","sha256":"a93fc89d6eb94ebb650200627436096080bf2afe8b13b00ff1f0bd669e9233a6"},
-    {"path":"clanky/mhdplus-render-2026.js","sha256":"df6ba54af79d9239c65d9f1fca575181e424dedc57b174a4d4ec53c46d87ed46"},
-    {"path":"clanky/mhdplus-578-2026.js","sha256":"27df0b1f9bc61e00ee6de78b5cf47c23f48ec805163f161e1b71c66f5c229b29"},
-    {"path":"clanky/mhdplus-580-2026.js","sha256":"ec94c78dc12b6ec15ce0e227131e19ff2c1b5fb8147ecb6bf958c1d7e9e79b87"},
-    {"path":"clanky/mhdplus-590-2026.js","sha256":"ccce843a0d6ff27ae7b4b8576cf73fcab8307145dae7d93cfe6e4eb503f2eacc"},
-    {"path":"clanky/mhdplus-591-2026.js","sha256":"e76977c0d04a44a59e12fceeb5917f83c0572f6ea2b7853b794363e2f6e07d83"},
-    {"path":"clanky/mhdplus-593-2026.js","sha256":"4ba945f893e40c3b2378c1db45af0c564d7ecbecdd377fcbd61071e36a6244ce"}
+    {
+      "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
+      "sha256": "0e791f9291ae746a6cc4a61844560725f22edd21d5a5e40e2c575d26bce4343b"
+    }
   ],
-  "patches": [
-    {"path":"index.html","old":"/clanky/svetlo-kadan-generace-pod-tlakem-konference-2026.html","new":"/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html","count":1},
-    {"path":"index.html","old":"Světlo Kadaň chystá bezplatnou konferenci o duševním zdraví mladých","new":"Kadaň platí za MHD přes pět milionů ročně. Vytáhli jsme i další jízdní řády po městě, které v běžném přehledu MHD nenajdete","count":1},
-    {"path":"index.html","old":"Konference Generace pod tlakem se uskuteční 8. října 2026 v KD Střelnice v Kadani. Účast je zdarma, předchozí registrace je nutná; při naplnění 80 míst se další zájemci stávají náhradníky.","new":"Prověřili jsme cenu, tarif a jízdní řády kadaňské MHD a vytáhli i kompletní časy regionálních linek 578, 580, 590, 591 a 593 použitelných po městě.","count":1},
-    {"path":"index.html","old":"KADAŇ · DUŠEVNÍ ZDRAVÍ · KONFERENCE · 7. 9. 2026 · 00:35","new":"DOPRAVA · MHD · KADAŇ · OVĚŘUJEME · 7. 9. 2026 · 06:47","count":1},
-    {"path":"index.html","old":"KADAŇ · DUŠEVNÍ ZDRAVÍ · KONFERENCE 7. 9. 2026","new":"DOPRAVA · MHD · KADAŇ · OVĚŘUJEME 7. 9. 2026","count":1}
-  ],
+  "patches": [],
   "deletes": [],
-  "verify_urls": ["https://nasekadan.cz/","https://nasekadan.cz/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html"],
-  "verify_present": ["Kadaň platí za MHD přes pět milionů ročně","/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html","22:42"],
-  "verify_absent": []
+  "verify_urls": [
+    "https://nasekadan.cz/clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html"
+  ],
+  "verify_present": [
+    "Slovan podruhé: první pokus skončil po 26 milionech",
+    "26 049 145,21 Kč bez DPH",
+    "nezávazném úvěrovém příslibu Národní rozvojové banky až do výše 97,5 milionu korun",
+    "16. února 2027"
+  ],
+  "verify_absent": [
+    "Kadaň prošvihla 17. září"
+  ]
 }
