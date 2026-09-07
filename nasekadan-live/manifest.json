@@ -1,37 +1,60 @@
 {
   "schema": 1,
-  "version": "20260906-excursia-hardblock-sitejs-v2",
+  "version": "20260907-mhd-kadan-publish-v1",
   "files": [
-    {
-      "path": "bridge-health.txt",
-      "sha256": "d838b92990890d523213e1db93c68fc56053868906f0a67af6cc91cbb045dbe1"
-    }
+    {"path":"clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html","sha256":"e0b29372767feea59da681789e51ac04cd0497b24f5b90703f79626c63c91076"},
+    {"path":"clanky/mhdplus-article-2026.css","sha256":"a93fc89d6eb94ebb650200627436096080bf2afe8b13b00ff1f0bd669e9233a6"},
+    {"path":"clanky/mhdplus-render-2026.js","sha256":"df6ba54af79d9239c65d9f1fca575181e424dedc57b174a4d4ec53c46d87ed46"},
+    {"path":"clanky/mhdplus-578-2026.js","sha256":"27df0b1f9bc61e00ee6de78b5cf47c23f48ec805163f161e1b71c66f5c229b29"},
+    {"path":"clanky/mhdplus-580-2026.js","sha256":"ec94c78dc12b6ec15ce0e227131e19ff2c1b5fb8147ecb6bf958c1d7e9e79b87"},
+    {"path":"clanky/mhdplus-590-2026.js","sha256":"ccce843a0d6ff27ae7b4b8576cf73fcab8307145dae7d93cfe6e4eb503f2eacc"},
+    {"path":"clanky/mhdplus-591-2026.js","sha256":"e76977c0d04a44a59e12fceeb5917f83c0572f6ea2b7853b794363e2f6e07d83"},
+    {"path":"clanky/mhdplus-593-2026.js","sha256":"4ba945f893e40c3b2378c1db45af0c564d7ecbecdd377fcbd61071e36a6244ce"}
   ],
   "patches": [
     {
-      "path": "site.js",
-      "old": "// EXCURSIA_HARDBLOCK_20260906_V1",
-      "new": "// EXCURSIA_HARDBLOCK_20260906_V2",
-      "count": 1
+      "path":"index.html",
+      "old":"/clanky/svetlo-kadan-generace-pod-tlakem-konference-2026.html",
+      "new":"/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html",
+      "count":1
     },
     {
-      "path": "site.js",
-      "old": "  const signature = (node) => {\n    if (!(node instanceof Element)) return '';\n    const href = node.getAttribute('href') || '';\n    const src = node.getAttribute('src') || '';\n    return `${href} ${src} ${node.textContent || ''} ${node.innerHTML || ''}`;\n  };\n\n  const removeBlocked = (node) => {\n    if (!(node instanceof Element) || !blocked.test(signature(node))) return;\n    const card =\n      node.closest('a.promo-card,a.article-rail-card') ||\n      node.closest('.featured-rotating-ad,.featured-seasonal-ad') ||\n      node.closest('.article-ad-auto,.article-ad-rail') ||\n      node.closest('a') ||\n      node;\n    card.remove();\n  };",
-      "new": "  const replacement = {\n    title: 'České Kormidlo',\n    text: 'Last minute, pobytové a poznávací zájezdy od aktivního affiliate partnera.',\n    tag: 'Last minute a zájezdy',\n    url: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=b880f187',\n    image: 'https://doc.ehub.cz/b/3babee44/7ac23a04.jpg'\n  };\n\n  const signature = (node) => {\n    if (!(node instanceof Element)) return '';\n    const anchor = node.matches('a') ? node : node.closest('a');\n    const image = node.matches('img') ? node : node.querySelector?.('img');\n    return [\n      node.getAttribute('href') || '',\n      node.getAttribute('src') || '',\n      node.getAttribute('data-id') || '',\n      node.getAttribute('data-partner') || '',\n      anchor?.getAttribute('href') || '',\n      anchor?.getAttribute('aria-label') || '',\n      image?.getAttribute('src') || '',\n      node.textContent || ''\n    ].join(' ');\n  };\n\n  // Název funkce zůstává kvůli návaznosti observeru, ale karta se už nemaže.\n  // Mrtvá Excursia se na místě přepíše na aktivní affiliate reklamu.\n  const removeBlocked = (node) => {\n    if (!(node instanceof Element)) return;\n    const anchor = node.matches('a') ? node : node.closest('a');\n    if (!anchor || anchor.dataset.excursiaReplacement === '1') return;\n    if (!blocked.test(`${signature(node)} ${signature(anchor)}`)) return;\n\n    anchor.dataset.excursiaReplacement = '1';\n    anchor.href = replacement.url;\n    anchor.target = '_blank';\n    anchor.rel = 'nofollow sponsored noopener noreferrer';\n    anchor.setAttribute('aria-label', `Reklama: ${replacement.title}`);\n    anchor.classList.remove('is-image-error');\n\n    for (const attr of Array.from(anchor.attributes)) {\n      if (['href','class','target','rel','aria-label','style','data-excursia-replacement'].includes(attr.name)) continue;\n      if (blocked.test(attr.value || '')) anchor.removeAttribute(attr.name);\n    }\n\n    anchor.querySelectorAll('img').forEach((img) => {\n      img.src = replacement.image;\n      img.alt = replacement.title;\n      img.removeAttribute('srcset');\n    });\n\n    const label = anchor.querySelector('.promo-label,.article-rail-label,[data-ad-label]');\n    if (label) label.textContent = 'REKLAMA';\n    const fallback = anchor.querySelector('.article-rail-fallback');\n    if (fallback) fallback.textContent = replacement.title;\n    const strong = anchor.querySelector('strong');\n    if (strong) strong.textContent = replacement.title;\n    const small = anchor.querySelector('small');\n    if (small) small.textContent = replacement.tag;\n    const call = anchor.querySelector(':scope > b');\n    if (call) call.textContent = 'Zjistit více →';\n\n    const copy = Array.from(anchor.querySelectorAll(':scope > span')).find((el) =>\n      !el.classList.contains('promo-banner') &&\n      !el.classList.contains('article-rail-label') &&\n      !el.classList.contains('article-rail-tower-picture') &&\n      !el.classList.contains('article-rail-fallback') &&\n      !el.classList.contains('article-rail-visual')\n    );\n    if (copy) copy.textContent = replacement.text;\n\n    // Pokud starší typ karty ukrýval název Excursie v nestandardním HTML,\n    // přestavíme jen tento jediný anchor; nikdy ne celý reklamní slot.\n    if (blocked.test(anchor.textContent || '')) {\n      anchor.innerHTML = `<span class=\"promo-label\">REKLAMA</span><strong>${replacement.title}</strong><span>${replacement.text}</span><b>Zjistit více →</b>`;\n    }\n  };",
-      "count": 1
+      "path":"index.html",
+      "old":"Světlo Kadaň chystá bezplatnou konferenci o duševním zdraví mladých",
+      "new":"Kadaň platí za MHD přes pět milionů ročně. Vytáhli jsme i další jízdní řády po městě, které v běžném přehledu MHD nenajdete",
+      "count":1
+    },
+    {
+      "path":"index.html",
+      "old":"Konference Generace pod tlakem se uskuteční 8. října 2026 v KD Střelnice v Kadani. Účast je zdarma, předchozí registrace je nutná; při naplnění 80 míst se další zájemci stávají náhradníky.",
+      "new":"Prověřili jsme cenu, tarif a jízdní řády kadaňské MHD a vytáhli i kompletní časy regionálních linek 578, 580, 590, 591 a 593 použitelných po městě.",
+      "count":1
+    },
+    {
+      "path":"index.html",
+      "old":"KADAŇ · DUŠEVNÍ ZDRAVÍ · KONFERENCE · 7. 9. 2026 · 00:35",
+      "new":"DOPRAVA · MHD · KADAŇ · OVĚŘUJEME · 7. 9. 2026 · 06:47",
+      "count":1
+    },
+    {
+      "path":"index.html",
+      "old":"KADAŇ · DUŠEVNÍ ZDRAVÍ · KONFERENCE 7. 9. 2026",
+      "new":"DOPRAVA · MHD · KADAŇ · OVĚŘUJEME 7. 9. 2026",
+      "count":1
     }
   ],
   "deletes": [],
   "verify_urls": [
-    "https://www.nasekadan.cz/site.js",
-    "https://www.nasekadan.cz/bridge-health.txt"
+    "https://www.nasekadan.cz/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html",
+    "https://www.nasekadan.cz/clanky/mhdplus-578-2026.js",
+    "https://www.nasekadan.cz/"
   ],
   "verify_present": [
-    "EXCURSIA_HARDBLOCK_20260906_V2",
-    "version=20260906-excursia-hardblock-sitejs-v2"
+    "Kadaň platí za MHD přes pět milionů ročně",
+    "22:42",
+    "/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html"
   ],
   "verify_absent": [
-    "EXCURSIA_HARDBLOCK_20260906_V1",
-    "node.closest('.article-ad-auto,.article-ad-rail')"
+    "Světlo Kadaň chystá bezplatnou konferenci o duševním zdraví mladých"
   ]
 }
