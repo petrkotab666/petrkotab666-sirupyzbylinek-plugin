@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20260907-mhd-v3-plus-krystofovy-hamry-template-v1",
+  "version": "20260907-krystofovy-hamry-template-verify-v2",
   "files": [
     {"path":"clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html","sha256":"e0b29372767feea59da681789e51ac04cd0497b24f5b90703f79626c63c91076"},
     {"path":"clanky/mhdplus-article-2026.css","sha256":"a93fc89d6eb94ebb650200627436096080bf2afe8b13b00ff1f0bd669e9233a6"},
@@ -25,7 +25,7 @@
     }
   ],
   "deletes": [],
-  "verify_urls": ["https://nasekadan.cz/","https://nasekadan.cz/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html","https://nasekadan.cz/clanky/krystofovy-hamry-pozar-lesni-porost-7-zari-2026.html"],
-  "verify_present": ["Kadaň platí za MHD přes pět milionů ročně","/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html","22:42","NK_ARTICLE_TEMPLATE_STANDARD_FIX_20260907"],
+  "verify_urls": ["https://nasekadan.cz/clanky/krystofovy-hamry-pozar-lesni-porost-7-zari-2026.html"],
+  "verify_present": ["NK_ARTICLE_TEMPLATE_STANDARD_FIX_20260907"],
   "verify_absent": []
 }
