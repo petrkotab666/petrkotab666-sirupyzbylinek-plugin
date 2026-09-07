@@ -1,0 +1,39 @@
+{
+  "version": "20260907-mhd-kadan-publish-v1",
+  "status": "VERIFICATION_FAILED",
+  "verified_at": "2026-09-07T05:10:33.768401+00:00",
+  "checks": {
+    "https://www.nasekadan.cz/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html": {
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    "https://www.nasekadan.cz/clanky/mhdplus-578-2026.js": {
+      "ok": false,
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    "https://www.nasekadan.cz/": {
+      "status": 200,
+      "final_url": "https://www.nasekadan.cz/?nkbridgeverify=20260907-mhd-kadan-publish-v1-1788757828",
+      "present": {
+        "Kadaň platí za MHD přes pět milionů ročně": false,
+        "22:42": false,
+        "/clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html": false
+      },
+      "absent": {
+        "Světlo Kadaň chystá bezplatnou konferenci o duševním zdraví mladých": false
+      },
+      "diagnostics": {
+        "special_box": null,
+        "article_list": "<div class=\"article-list\">\n<article class=\"article-card hospital\" data-auto-article=\"nechranice-hraz-uplna-uzavirka-7-11-zari-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Hráz Nechranic bude v pondělí i v pátek čtyři hodiny neprůjezdná. Silnice III/22512 se úplně uzavře\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nechranice-hraz-uplna-uzavirka-7-11-zari-2026-ad2fd23492.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">7. 9. 2026 · 04:05 · DOPRAVA · NECHRANICE</span><h3>Hráz Nechranic bude v pondělí i v pátek čtyři hodiny neprůjezdná. Silnice III/22512 se úplně uzavře</h3><p>Silnice III/22512 na hrázi vodního díla Nechranice bude 7. a 11. září 2026 vždy od 8:00 do 12:00 úplně uzavřena.</p><a class=\"read-more\" href=\"/clanky/nechranice-hraz-uplna-uzavirka-7-11-zari-2026.html\">Přečíst článek →</a></div>\n    </article>\n<article class=\"article-card hospital\" data-auto-article=\"svetlo-kadan-generace-pod-tlakem-konference-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Světlo Kadaň chystá bezplatnou konferenci o duševním zdraví mladých\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/svetlo-kadan-generace-pod-tlakem-konference-2026-84a560ed4f.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">7. 9. 2026 · 00:35 · KADAŇ · DUŠEVNÍ ZDRAVÍ · KONFERENCE</span><h3>Světlo Kadaň chystá bezplatnou konferenci o duševním zdraví mladých</h3><p>Konference Generace pod tlakem se uskuteční 8. října 2026 v KD Střelnice v Kadani. Účast je zdarma, předchozí registrace je nutná; při naplnění 80 míst se další zájemci stávají náhradníky.</p><a class=\"read-more\" href=\"/clanky/svetlo-kadan-generace-pod-tlakem-konference-2026.html\">Přečíst článek →</a></div>\n    </article>\n<article class=\"article-card hospital\" data-auto-article=\"jirkov-dopravni-omezeni-zari-rijen-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Jirkov čekají týdny dopravních omezení. Od úterý se přidá Vinařická a další čtyři ulice\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/jirkov-dopravni-omezeni-zari-rijen-2026-a3b72cfe75.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">6. 9. 2026 · 21:58 · DOPRAVA · JIRKOV</span><h3>Jirkov čekají týdny dopravních omezení. Od úterý se přidá Vinařická a další čtyři ulice</h3><p>V Jirkově platí a přibývají dlouhodobé přechodné úpravy provozu. Stavební práce zasáhnou sedm ulic do 10. října, od 8. září se kvůli kanalizaci přidá dalších pět ulic.</p><a class=\"read-more\" href=\"/clanky/jirkov-dopravni-omezeni-zari-rijen-2026.html\">Přečíst článek →</a></div>\n    </article>\n<article class=\"article-card hospital\" data-auto-article=\"odstavky-vody-udlice-strupcice-zari-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"V Údlicích a Strupčicích nepoteče příští týden několik hodin voda. Cisterny nebudou\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/odstavky-vody-udlice-strupcice-zari-2026-e75b385145.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">6. 9. 2026 · 17:03 · SERVIS · VODA · ÚDLICE · STRUPČICE</span><h3>V Údlicích a Strupčicích nepoteče příští týden několik hodin voda. Cisterny nebudou</h3><p>V úterý 8. září 2026 bude od 8:00 do 11:00 přerušena dodávka vody v části Údlic a Přečapel. V pátek 11. září od 8:00 do 12:00 se odstávka dotkne ulice Pod Tratí ve Strupčicích. Náhradní zásobování nebude zajištěno.</p><a class=\"read-more\" href=\"/clanky/odstavky-vody-udlice-strupcice-zari-2026.html\">Přečíst článek →</a></div>\n    </article>\n    <!-- WEEKLY-EVENTS-START -->\n<article class=\"article-card hospital\" dat",
+        "ticker": "<div class=\"ticker\"><div class=\"wrap\"><a href=\"/clanky/vyluka-vlaky-kadan-chomutov-klasterec-srpen-rijen-2026.html\" style=\"display:block;color:inherit;text-decoration:none\"><b>DOPRAVNÍ UPOZORNĚNÍ:</b> Od 31. srpna od 03:20 platí hlavní železniční výluka mezi Chomutovem, Kadaň-Prunéřovem a Kláštercem nad Ohří. Linka U1 je ve všední dny odkloněna do Klášterce a pro cestu do Kadaně slouží náhradní autobus XU1. <strong style=\"text-decoration:underline\">Podrobnosti →</strong></a></div></div>\n\n\n\n<main>\n  <section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/zatec-zizkova-uplna-uzavirka-zari-rijen-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" style=\"background-image:linear-gradient(90deg,rgba(7,23,34,.76),rgba(7,23,34,.14) 72%),url('https://nasekadan.cz/social/zatec-zizkova-uplna-uzavirka-zari-rijen-2026-8b2519c932.png');background-color:#0b202b;background-size:cover;background-position:center;background-repeat:no-repeat\"><span>DOPRAVA · ŽATEC</span><strong>7. 9. 2026</strong></div>\n      <div class=\"copy\">\n        <small>DOPRAVA · ŽATEC · 7. 9. 2026 · 05:57</small>\n        <h1>V Žatci se od 7. září úplně zavírá část Žižkovy ulice. Omezení potrvá do 16. října</h1>\n        <p>V dolní části Žižkovy ulice v Žatci začíná 7. září 2026 úplná uzavírka kvůli rekonstrukci vodovodu. Povolená je do 16. října. Další omezení se připravuje v ulici Ostrov.</p>\n        <a class=\"btn\" href=\"/clanky/zatec-zizkova-uplna-uzavirka-zari-rijen-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">7. 9. 2026 v 04:59</p>\n      <h2>V Lubenci, Ležkách, Drahonicích, Řepanech a Libyni nepoteče 7. září čtyři hodi",
+        "article_shell": null,
+        "promo_items": null,
+        "active_promotions_end": null,
+        "owned_pojistime": null,
+        "figures": [],
+        "images": []
+      },
+      "ok": false
+    }
+  }
+}
