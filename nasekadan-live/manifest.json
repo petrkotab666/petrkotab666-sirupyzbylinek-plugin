@@ -1,24 +1,28 @@
 {
   "schema": 1,
-  "version": "20260908-slovan-financovani-v1",
+  "version": "20260908-slovan-financovani-v2",
   "files": [
     {
       "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
       "sha256": "0e791f9291ae746a6cc4a61844560725f22edd21d5a5e40e2c575d26bce4343b"
     }
   ],
-  "patches": [],
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "<main>",
+      "new": "<main>\n<div class=\"wrap\" data-fast-publish-highlight=\"slovan-20260908\" style=\"padding-top:18px\"><a href=\"/clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html\" style=\"display:block;padding:16px 20px;border-radius:14px;background:#fff;border:1px solid #d9e0e3;color:#182832;text-decoration:none;box-shadow:0 10px 24px rgba(22,36,45,.08)\"><strong style=\"color:#9f2626\">NOVÝ ČLÁNEK:</strong> Slovan podruhé: první pokus skončil po 26 milionech, nový projekt stále hledá cestu k evropským penězům</a></div>",
+      "count": 1
+    }
+  ],
   "deletes": [],
   "verify_urls": [
+    "https://nasekadan.cz/",
     "https://nasekadan.cz/clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html"
   ],
   "verify_present": [
     "Slovan podruhé: první pokus skončil po 26 milionech",
-    "26 049 145,21 Kč bez DPH",
-    "nezávazném úvěrovém příslibu Národní rozvojové banky až do výše 97,5 milionu korun",
-    "16. února 2027"
+    "/clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html"
   ],
-  "verify_absent": [
-    "Kadaň prošvihla 17. září"
-  ]
+  "verify_absent": []
 }
