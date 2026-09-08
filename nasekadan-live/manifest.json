@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "20260908-slovan-odstranit-duplicitni-hero-v3",
+  "version": "20260908-slovan-odstranit-duplicitni-hero-v4",
   "files": [],
   "patches": [
     {
       "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
-      "old": "  <img class=\"hero-image\" src=\"/social/slovan-druhy-pokus-e2e4356bbb.png\" width=\"1200\" height=\"630\" alt=\"Slovan v Kadani – místo připravovaného nového bytového domu\" loading=\"eager\" fetchpriority=\"high\">",
+      "old": "<img class=\"hero-image\" src=\"/social/slovan-druhy-pokus-e2e4356bbb.png\" width=\"1200\" height=\"630\" alt=\"Slovan v Kadani – místo připravovaného nového bytového domu\">",
       "new": "",
       "count": 1
     }
