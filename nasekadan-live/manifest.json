@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "version": "20260908-slovan-odstranit-duplicitni-hero-v4",
+  "version": "20260908-slovan-skryt-duplicitni-hero-v5",
   "files": [],
   "patches": [
     {
       "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
-      "old": "<img class=\"hero-image\" src=\"/social/slovan-druhy-pokus-e2e4356bbb.png\" width=\"1200\" height=\"630\" alt=\"Slovan v Kadani – místo připravovaného nového bytového domu\">",
-      "new": "",
+      "old": "class=\"hero-image\"",
+      "new": "class=\"hero-image\" hidden",
       "count": 1
     }
   ],
@@ -16,9 +16,8 @@
   ],
   "verify_present": [
     "Slovan podruhé: první pokus skončil po 26 milionech",
-    "Redakční grafika Naše Kadaň."
+    "Redakční grafika Naše Kadaň.",
+    "class=\"hero-image\" hidden"
   ],
-  "verify_absent": [
-    "Slovan v Kadani – místo připravovaného nového bytového domu"
-  ]
+  "verify_absent": []
 }
