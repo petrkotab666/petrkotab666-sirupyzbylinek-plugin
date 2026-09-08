@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "version": "20260908-slovan-skryt-duplicitni-hero-v5",
+  "version": "20260908-slovan-skryt-duplicitni-hero-v6",
   "files": [],
   "patches": [
     {
       "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
       "old": "class=\"hero-image\"",
-      "new": "class=\"hero-image\" hidden",
+      "new": "class=\"hero-image\" style=\"display:none!important\"",
       "count": 1
     }
   ],
@@ -17,7 +17,7 @@
   "verify_present": [
     "Slovan podruhé: první pokus skončil po 26 milionech",
     "Redakční grafika Naše Kadaň.",
-    "class=\"hero-image\" hidden"
+    "style=\"display:none!important\""
   ],
   "verify_absent": []
 }
