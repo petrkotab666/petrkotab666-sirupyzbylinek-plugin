@@ -1,3 +1,3 @@
 Naše Kadaň fast bridge active
-version=20260908-global-ad-fallback-v2
-payload=NK_AD_FALLBACK_CONTRACT_20260908_V2
+version=20260909-ad-runtime-emergency-v1
+payload=NK_AD_RUNTIME_EMERGENCY_20260909_V1
