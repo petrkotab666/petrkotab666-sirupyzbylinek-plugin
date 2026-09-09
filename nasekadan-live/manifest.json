@@ -1,23 +1,21 @@
 {
   "schema": 1,
-  "version": "20260908-global-ad-fallback-v2",
+  "version": "20260909-ad-runtime-emergency-v1",
   "files": [
     {
       "path": "bridge-health.txt",
-      "sha256": "35f6f49aa18e27ec5e651770303f8eae5334931af88dbb1d1ceec5cee45d5103"
+      "sha256": "4cc1f13f6e3627bdfc36f2bf3f4097b885502961a228ac05455d59006dbad508"
+    },
+    {
+      "path": "images/nk-ad-runtime-20260909-v1.js",
+      "sha256": "6f565a007d7235a9195d8c8edcc5f7b8c31a5d52f8f658fad6c936bff79ff158"
     }
   ],
   "patches": [
     {
-      "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
-      "old": "class=\"hero-image\"",
-      "new": "class=\"hero-image\" style=\"display:none!important\"",
-      "count": 1
-    },
-    {
       "path": "site.js",
-      "old": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\n",
-      "new": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\n\n// NK_AD_FALLBACK_CONTRACT_20260908_V2\n// Každá široká reklama s generovaným fallbackem se mění na čitelnou textovou kartu.\n(() => {\n  'use strict';\n  const styleId='nk-ad-fallback-contract-style-v2';\n  const installStyle=()=>{\n    if(document.getElementById(styleId))return;\n    const style=document.createElement('style');\n    style.id=styleId;\n    style.textContent=`\n      html body .nk-ad-generated-card.promo-card-wide{display:block!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;overflow:hidden!important;background:#fff!important;border:1px solid #d9e1e5!important;border-radius:18px!important;box-shadow:0 10px 28px rgba(18,35,45,.10)!important}\n      html body .nk-ad-generated-card.promo-card-wide .promo-banner,html body .nk-ad-generated-card.promo-card-wide>.nk-ad-generated-visual,html body .nk-ad-generated-card.promo-card-wide .promo-banner .nk-ad-generated-visual{display:none!important;height:0!important;min-height:0!important;max-height:0!important;aspect-ratio:auto!important;overflow:hidden!important}\n      html body .nk-ad-generated-card.promo-card-wide .promo-wide-copy,html body .nk-ad-generated-card.promo-card-wide .nk-ad-safe-copy{display:flex!important;visibility:visible!important;opacity:1!important;flex-direction:column!important;justify-content:center!important;align-items:flex-start!important;gap:7px!important;min-height:150px!important;height:auto!important;padding:22px 26px!important;box-sizing:border-box!important;background:#fff!important;color:#17242d!important;text-align:left!important}\n      html body .nk-ad-generated-card .promo-wide-copy small,html body .nk-ad-generated-card .nk-ad-safe-copy small{display:block!important;color:#6c7780!important;font-size:12px!important;font-weight:900!important;letter-spacing:.07em!important;text-transform:uppercase!important}\n      html body .nk-ad-generated-card .promo-wide-copy strong,html body .nk-ad-generated-card .nk-ad-safe-copy strong{display:block!important;color:#17242d!important;font:900 24px/1.18 Georgia,serif!important}\n      html body .nk-ad-generated-card .promo-wide-copy .promo-description,html body .nk-ad-generated-card .nk-ad-safe-copy .promo-description{display:block!important;color:#52616a!important;font-size:15px!important;line-height:1.5!important}\n      html body .nk-ad-generated-card .promo-wide-copy b,html body .nk-ad-generated-card .nk-ad-safe-copy b{display:inline-block!important;margin-top:4px!important;padding:9px 13px!important;border-radius:999px!important;background:#9f2626!important;color:#fff!important;font-size:13px!important;line-height:1.2!important}\n      html body .nk-ad-generated-card.article-rail-card .article-rail-fallback,html body .nk-ad-generated-card.article-rail-card .article-rail-copy{display:block!important;visibility:visible!important;opacity:1!important}\n      @media(max-width:700px){html body .nk-ad-generated-card.promo-card-wide .promo-wide-copy,html body .nk-ad-generated-card.promo-card-wide .nk-ad-safe-copy{min-height:132px!important;padding:18px 19px!important}html body .nk-ad-generated-card .promo-wide-copy strong,html body .nk-ad-generated-card .nk-ad-safe-copy strong{font-size:21px!important}}\n    `;\n    (document.head||document.documentElement).appendChild(style);\n  };\n  const safeTitle=(card)=>{\n    const existing=card.querySelector('strong,h3,.ad-title,.article-rail-fallback');\n    const text=existing&&String(existing.textContent||'').trim();\n    if(text&&!/^reklama$/i.test(text))return text;\n    const aria=String(card.getAttribute('aria-label')||'').replace(/^reklama:\\s*/i,'').trim();\n    if(aria)return aria;\n    try{const host=new URL(card.getAttribute('href')||'',location.href).hostname.replace(/^www\\./,'');return host||'Nabídka partnera';}catch(_){return 'Nabídka partnera';}\n  };\n  const ensureCopy=(card)=>{\n    if(!(card instanceof Element)||!card.classList.contains('nk-ad-generated-card'))return;\n    if(card.matches('a.promo-card')&&!card.querySelector('.promo-wide-copy,.nk-ad-safe-copy')){\n      const copy=document.createElement('span');copy.className='nk-ad-safe-copy';\n      const tag=document.createElement('small');tag.textContent='REKLAMA';\n      const strong=document.createElement('strong');strong.textContent=safeTitle(card);\n      const desc=document.createElement('span');desc.className='promo-description';desc.textContent='Aktuální nabídku a podmínky najdete po kliknutí u partnera.';\n      const cta=document.createElement('b');cta.textContent='Zjistit více →';\n      copy.append(tag,strong,desc,cta);card.appendChild(copy);\n    }\n    if(card.matches('a.article-rail-card')&&!card.querySelector('.article-rail-fallback,.article-rail-copy,strong,h3')){\n      const fallback=document.createElement('span');fallback.className='article-rail-fallback';fallback.textContent=safeTitle(card);card.appendChild(fallback);\n    }\n  };\n  const repair=(root=document)=>{\n    if(!root||typeof root.querySelectorAll!=='function')return;\n    if(root instanceof Element&&root.classList.contains('nk-ad-generated-card'))ensureCopy(root);\n    root.querySelectorAll('.nk-ad-generated-card').forEach(ensureCopy);\n  };\n  const start=()=>{installStyle();repair();if(!document.documentElement)return;new MutationObserver((mutations)=>{for(const mutation of mutations){if(mutation.type==='attributes'&&mutation.target instanceof Element)ensureCopy(mutation.target);for(const node of mutation.addedNodes)if(node instanceof Element)repair(node);}}).observe(document.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:['class']});[250,800,1800,3500].forEach((delay)=>setTimeout(()=>repair(),delay));};\n  const delayed=()=>setTimeout(start,50);\n  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',delayed,{once:true});else delayed();\n})();\n",
+      "old": "document.addEventListener('DOMContentLoaded', () => {\n",
+      "new": "// NK_AD_RUNTIME_LOADER_20260909_V1\n(()=>{\n  if(document.querySelector('script[data-nk-ad-runtime-emergency]'))return;\n  const script=document.createElement('script');\n  script.src='/images/nk-ad-runtime-20260909-v1.js?v=20260909-1';\n  script.async=true;\n  script.setAttribute('data-nk-ad-runtime-emergency','1');\n  (document.head||document.documentElement).appendChild(script);\n})();\ndocument.addEventListener(\"DOMContentLoaded\",()=>{\n",
       "count": 1
     }
   ],
@@ -26,7 +24,7 @@
     "https://nasekadan.cz/site.js"
   ],
   "verify_present": [
-    "NK_AD_FALLBACK_CONTRACT_20260908_V2"
+    "NK_AD_RUNTIME_LOADER_20260909_V1"
   ],
   "verify_absent": []
 }
