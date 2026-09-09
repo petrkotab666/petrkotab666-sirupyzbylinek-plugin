@@ -1,34 +1,17 @@
 {
   "schema": 1,
-  "version": "20260909-hospital-hero-repair-v2-isolated",
+  "version": "20260909-hospital-facebook-png-v1",
   "files": [
-    {
-      "path": "social/nemocnice-kadan-dohra-20260909.svg",
-      "sha256": "b517825b1f933267a271f32cc28df1ac11f995026164258d34909ba77d485ab0"
-    }
+    {"path": "social/nemocnice-kadan-dohra-facebook-20260909.png", "sha256": "8c23d83ddde4cf510264fc5aa06bf9b3377a93770334c7e891668792577cdf68"},
+    {"path": "social/nasekadan-bomb-threat-minimal.png", "sha256": "8c23d83ddde4cf510264fc5aa06bf9b3377a93770334c7e891668792577cdf68"}
   ],
   "patches": [
     {
       "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
-      "old": "src=\"/social/nasekadan-bomb-threat-minimal.png\"",
-      "new": "src=\"/social/nemocnice-kadan-dohra-20260909.svg\" data-nk-hospital-hero-repair=\"20260909-v1\"",
-      "count": 1
-    },
-    {
-      "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
-      "old": "</head>",
-      "new": "<style id=\"nk-hospital-hero-layout-20260909\">img[data-nk-hospital-hero-repair]{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important}</style>\n<script id=\"nk-hospital-hero-fallback-20260909\">(()=>{function hideFailedHero(img){if(!img||img.tagName!=='IMG'||!img.hasAttribute('data-nk-hospital-hero-repair'))return;const figure=img.closest('figure');(figure||img).style.setProperty('display','none','important');}window.addEventListener('error',event=>hideFailedHero(event.target),true);document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('img[data-nk-hospital-hero-repair]').forEach(img=>{if(img.complete&&!img.naturalWidth)hideFailedHero(img);});});})();</script>\n</HEAD>",
+      "old": "<head>",
+      "new": "<head data-nk-share-image=\"20260909-png-v1\">\n<!-- Primary raster image for social crawlers; independent of the article's SVG hero. -->\n<meta property=\"og:image\" content=\"https://nasekadan.cz/social/nemocnice-kadan-dohra-facebook-20260909.png\">\n<meta property=\"og:image:secure_url\" content=\"https://nasekadan.cz/social/nemocnice-kadan-dohra-facebook-20260909.png\">\n<meta property=\"og:image:type\" content=\"image/png\">\n<meta property=\"og:image:width\" content=\"600\">\n<meta property=\"og:image:height\" content=\"315\">\n<meta property=\"og:image:alt\" content=\"Redakční ilustrace: bombová výhrůžka v Nemocnici Kadaň, symbol varovného e-mailu.\">",
       "count": 1
     }
   ],
-  "deletes": [],
-  "verify_urls": [
-    "https://nasekadan.cz/clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html"
-  ],
-  "verify_present": [
-    "data-nk-hospital-hero-repair=\"20260909-v1\""
-  ],
-  "verify_absent": [
-    "src=\"/social/nasekadan-bomb-threat-minimal.png\""
-  ]
+  "deletes": []
 }
