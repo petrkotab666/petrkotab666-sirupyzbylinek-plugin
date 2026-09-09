@@ -1,27 +1,13 @@
 {
   "schema": 1,
-  "version": "20260909-hospital-hero-repair-v1",
+  "version": "20260909-hospital-hero-repair-v2-isolated",
   "files": [
-    {
-      "path": "bridge-health.txt",
-      "sha256": "4cc1f13f6e3627bdfc36f2bf3f4097b885502961a228ac05455d59006dbad508"
-    },
-    {
-      "path": "images/nk-ad-runtime-20260909-v1.js",
-      "sha256": "6f565a007d7235a9195d8c8edcc5f7b8c31a5d52f8f658fad6c936bff79ff158"
-    },
     {
       "path": "social/nemocnice-kadan-dohra-20260909.svg",
       "sha256": "b517825b1f933267a271f32cc28df1ac11f995026164258d34909ba77d485ab0"
     }
   ],
   "patches": [
-    {
-      "path": "site.js",
-      "old": "document.addEventListener('DOMContentLoaded', () => {\n",
-      "new": "// NK_AD_RUNTIME_LOADER_20260909_V1\n(()=>{\n  if(document.querySelector('script[data-nk-ad-runtime-emergency]'))return;\n  const script=document.createElement('script');\n  script.src='/images/nk-ad-runtime-20260909-v1.js?v=20260909-1';\n  script.async=true;\n  script.setAttribute('data-nk-ad-runtime-emergency','1');\n  (document.head||document.documentElement).appendChild(script);\n})();\ndocument.addEventListener(\"DOMContentLoaded\",()=>{\n",
-      "count": 1
-    },
     {
       "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
       "old": "src=\"/social/nasekadan-bomb-threat-minimal.png\"",
@@ -37,16 +23,12 @@
   ],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/site.js"
+    "https://nasekadan.cz/clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html"
   ],
   "verify_present": [
-    "NK_AD_RUNTIME_LOADER_20260909_V1"
+    "data-nk-hospital-hero-repair=\"20260909-v1\""
   ],
-  "verify_absent": [],
-  "article_verification": {
-    "url": "https://nasekadan.cz/clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
-    "expected_image": "/social/nemocnice-kadan-dohra-20260909.svg",
-    "expected_marker": "data-nk-hospital-hero-repair=\"20260909-v1\"",
-    "forbidden_img_src": "/social/nasekadan-bomb-threat-minimal.png"
-  }
+  "verify_absent": [
+    "src=\"/social/nasekadan-bomb-threat-minimal.png\""
+  ]
 }
