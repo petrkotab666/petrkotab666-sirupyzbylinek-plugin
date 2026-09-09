@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20260909-ad-runtime-emergency-v1",
+  "version": "20260909-hospital-hero-repair-v1",
   "files": [
     {
       "path": "bridge-health.txt",
@@ -9,6 +9,10 @@
     {
       "path": "images/nk-ad-runtime-20260909-v1.js",
       "sha256": "6f565a007d7235a9195d8c8edcc5f7b8c31a5d52f8f658fad6c936bff79ff158"
+    },
+    {
+      "path": "social/nemocnice-kadan-dohra-20260909.svg",
+      "sha256": "b517825b1f933267a271f32cc28df1ac11f995026164258d34909ba77d485ab0"
     }
   ],
   "patches": [
@@ -16,6 +20,18 @@
       "path": "site.js",
       "old": "document.addEventListener('DOMContentLoaded', () => {\n",
       "new": "// NK_AD_RUNTIME_LOADER_20260909_V1\n(()=>{\n  if(document.querySelector('script[data-nk-ad-runtime-emergency]'))return;\n  const script=document.createElement('script');\n  script.src='/images/nk-ad-runtime-20260909-v1.js?v=20260909-1';\n  script.async=true;\n  script.setAttribute('data-nk-ad-runtime-emergency','1');\n  (document.head||document.documentElement).appendChild(script);\n})();\ndocument.addEventListener(\"DOMContentLoaded\",()=>{\n",
+      "count": 1
+    },
+    {
+      "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
+      "old": "src=\"/social/nasekadan-bomb-threat-minimal.png\"",
+      "new": "src=\"/social/nemocnice-kadan-dohra-20260909.svg\" data-nk-hospital-hero-repair=\"20260909-v1\"",
+      "count": 1
+    },
+    {
+      "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
+      "old": "</head>",
+      "new": "<style id=\"nk-hospital-hero-layout-20260909\">img[data-nk-hospital-hero-repair]{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important}</style>\n<script id=\"nk-hospital-hero-fallback-20260909\">(()=>{function hideFailedHero(img){if(!img||img.tagName!=='IMG'||!img.hasAttribute('data-nk-hospital-hero-repair'))return;const figure=img.closest('figure');(figure||img).style.setProperty('display','none','important');}window.addEventListener('error',event=>hideFailedHero(event.target),true);document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('img[data-nk-hospital-hero-repair]').forEach(img=>{if(img.complete&&!img.naturalWidth)hideFailedHero(img);});});})();</script>\n</HEAD>",
       "count": 1
     }
   ],
@@ -26,5 +42,11 @@
   "verify_present": [
     "NK_AD_RUNTIME_LOADER_20260909_V1"
   ],
-  "verify_absent": []
+  "verify_absent": [],
+  "article_verification": {
+    "url": "https://nasekadan.cz/clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
+    "expected_image": "/social/nemocnice-kadan-dohra-20260909.svg",
+    "expected_marker": "data-nk-hospital-hero-repair=\"20260909-v1\"",
+    "forbidden_img_src": "/social/nasekadan-bomb-threat-minimal.png"
+  }
 }
