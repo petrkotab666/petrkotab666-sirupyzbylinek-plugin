@@ -1,10 +1,14 @@
 {
   "schema": 1,
-  "version": "20260910-ad-real-copy-v4-590febf4",
+  "version": "20260910-ad-real-copy-v4-native-probe-1a1b550e",
   "files": [
     {
       "path": "ad-fallback-fix.js",
       "sha256": "590febf4219dee8aec81a97c469516d9bd6a2296750dd2de73a2f08d10e3414e"
+    },
+    {
+      "path": "bridge-health.txt",
+      "sha256": "718aca9381f6e5c67a60af352d0e923f0965bf0ed3fb7b04df14f3793d052a36"
     }
   ],
   "patches": [],
