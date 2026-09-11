@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20260911-bomb-series-hero-integrity-v2",
+  "version": "20260911-bomb-series-dohra-preview-restored-v3",
   "files": [],
   "patches": [
     {
@@ -14,6 +14,24 @@
       "old": "/social/nasekadan-bomb-threat-minimal.png",
       "new": "/social/vyhruzka-bombou-nemocnice-kadan-8-zari-2026-d12d5e66d2.png",
       "count": 1
+    },
+    {
+      "path": "index.html",
+      "old": "nasekadan-bomb-threat-minimal.png",
+      "new": "co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026-unified-20260910.png",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "nasekadan-bomb-threat-minimal.png",
+      "new": "co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026-unified-20260910.png",
+      "count": 1
+    },
+    {
+      "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
+      "old": "nasekadan-bomb-threat-minimal.png",
+      "new": "co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026-unified-20260910.png",
+      "count": 4
     }
   ],
   "deletes": []
