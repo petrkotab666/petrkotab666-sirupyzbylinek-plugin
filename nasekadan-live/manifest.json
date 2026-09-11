@@ -1,34 +1,16 @@
 {
   "schema": 1,
-  "version": "20260911-homepage-article-dedupe-v1",
+  "version": "20260911-bily-kun-245-tisic-v1",
   "files": [
     {
-      "path": "bridge-health.txt",
-      "sha256": "aa09a37bfecd1d231a6896ea2b8331a4f07ad7a505951286ea72181e2decd12e"
+      "path": "clanky/bily-kun-245-tisic-kadan-policie-2026.html",
+      "sha256": "04e492ab8efdaa6f1523824e125337b8082bb44b5e3481fdff83a5c25552b2f2"
     },
     {
-      "path": "images/homepage-dedupe-20260911.js",
-      "sha256": "301692c1eccbd6849a4e2f6ba0118cf88f98311d9347da82190c6c90a70ddb7b"
+      "path": "social/bily-kun-245-tisic-kadan-policie-2026-e5e04d5896.png",
+      "sha256": "9ac4cf67f9038557104e25c851849ddbae3762c86d5f87b2c3b5e65cd6947f43"
     }
   ],
-  "patches": [
-    {
-      "path": "site.js",
-      "old": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\n",
-      "new": "// Společné bezpečné chování webu. Tento soubor nesmí měnit pořadí článků,\n// titulní hero ani redakční texty.\n\n// HOMEPAGE_ARTICLE_DEDUPE_LOADER_20260911_V1\n(() => {\n  if (document.querySelector('script[data-nk-homepage-dedupe]')) return;\n  const script = document.createElement('script');\n  script.src = '/images/homepage-dedupe-20260911.js?v=20260911-1';\n  script.defer = true;\n  script.dataset.nkHomepageDedupe = '1';\n  (document.head || document.documentElement).appendChild(script);\n})();\n",
-      "count": 1
-    }
-  ],
-  "deletes": [],
-  "verify_urls": [
-    "https://nasekadan.cz/site.js",
-    "https://nasekadan.cz/images/homepage-dedupe-20260911.js",
-    "https://nasekadan.cz/bridge-health.txt"
-  ],
-  "verify_present": [
-    "HOMEPAGE_ARTICLE_DEDUPE_LOADER_20260911_V1",
-    "HOMEPAGE_ARTICLE_DEDUPE_20260911_V1",
-    "homepage_dedupe=HOMEPAGE_ARTICLE_DEDUPE_20260911_V1"
-  ],
-  "verify_absent": []
+  "patches": [],
+  "deletes": []
 }
