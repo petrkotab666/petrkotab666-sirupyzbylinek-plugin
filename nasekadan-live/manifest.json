@@ -1,36 +1,18 @@
 {
   "schema": 1,
-  "version": "20260911-bomb-series-hero-integrity-v1",
+  "version": "20260911-bomb-series-hero-integrity-v2",
   "files": [],
   "patches": [
     {
       "path": "clanky/vyhruzka-bombou-nemocnice-kadan-8-zari-2026.html",
-      "old": "https://nasekadan.cz/social/nemocnice-kadan-363f87ff7a.png",
-      "new": "https://nasekadan.cz/social/nasekadan-bomb-threat-minimal.png",
+      "old": "https://nasekadan.cz/social/nasekadan-bomb-threat-minimal.png",
+      "new": "https://nasekadan.cz/social/vyhruzka-bombou-nemocnice-kadan-8-zari-2026-d12d5e66d2.png",
       "count": 3
     },
     {
       "path": "clanky/vyhruzka-bombou-nemocnice-kadan-8-zari-2026.html",
-      "old": "/social/nemocnice-kadan-363f87ff7a.png",
-      "new": "/social/nasekadan-bomb-threat-minimal.png",
-      "count": 1
-    },
-    {
-      "path": "clanky/bomba-nebyla-nasledky-ano-nemocnice-kadan-8-zari-2026.html",
-      "old": "/social/nemocnice-kadan-363f87ff7a.png",
-      "new": "/social/bomba-nebyla-nasledky-ano-nemocnice-kadan-8-zari-2026-95f700a96e.png",
-      "count": 1
-    },
-    {
-      "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
-      "old": "https://nasekadan.cz/social/nemocnice-kadan-dohra-20260909.svg",
-      "new": "https://nasekadan.cz/social/nasekadan-bomb-threat-minimal.png",
-      "count": 3
-    },
-    {
-      "path": "clanky/co-hrozi-autorovi-bomboveho-emailu-nemocnice-kadan-9-zari-2026.html",
-      "old": "/social/nemocnice-kadan-dohra-20260909.svg",
-      "new": "/social/nasekadan-bomb-threat-minimal.png",
+      "old": "/social/nasekadan-bomb-threat-minimal.png",
+      "new": "/social/vyhruzka-bombou-nemocnice-kadan-8-zari-2026-d12d5e66d2.png",
       "count": 1
     }
   ],
