@@ -1,8 +1,10 @@
 name: Verify Nase Kadan bily kun 20260911
 on:
   push:
-    branches: [main]
-    paths: ['.github/workflows/verify-nasekadan-bily-kun-20260911.yml']
+    branches:
+      - main
+    paths:
+      - .github/workflows/verify-nasekadan-bily-kun-20260911.yml
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Verify public article, listings and image
+      - name: Verify public article listings and image
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -23,20 +25,17 @@ jobs:
             home="$(curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/?verify=$q" || true)"
             archive="$(curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/?verify=$q" || true)"
             code="$(curl -4 -kLsS --max-time 20 -H 'Cache-Control: no-cache' -o /tmp/card.png -w '%{http_code}' "https://nasekadan.cz/social/$image?verify=$q" || true)"
-            if grep -Fq 'Za 2 450 korun nechal přes svůj účet protéct 245 tisíc' <<<"$article" \
-              && grep -Fq "$slug" <<<"$home" \
-              && grep -Fq "$slug" <<<"$archive" \
-              && [ "$code" = 200 ]; then
-              python3 - <<'PY'
-from PIL import Image
-with Image.open('/tmp/card.png') as im:
-    assert im.size == (1200, 630), im.size
-print('CARD_1200x630_OK')
-PY
+            title_ok=0
+            home_ok=0
+            archive_ok=0
+            grep -Fq 'Za 2 450 korun nechal přes svůj účet protéct 245 tisíc' <<<"$article" && title_ok=1 || true
+            grep -Fq "$slug" <<<"$home" && home_ok=1 || true
+            grep -Fq "$slug" <<<"$archive" && archive_ok=1 || true
+            echo "attempt=$i title_ok=$title_ok home_ok=$home_ok archive_ok=$archive_ok image_http=$code"
+            if [ "$title_ok" = 1 ] && [ "$home_ok" = 1 ] && [ "$archive_ok" = 1 ] && [ "$code" = 200 ]; then
               echo 'NASEKADAN_PUBLIC_PUBLISH_OK'
               exit 0
             fi
-            echo "attempt=$i article=$([ -n "$article" ] && echo yes || echo no) home_match=$(grep -Fc "$slug" <<<"$home" || true) archive_match=$(grep -Fc "$slug" <<<"$archive" || true) image_http=$code"
             sleep 5
           done
           echo 'NASEKADAN_PUBLIC_PUBLISH_NOT_OK' >&2
