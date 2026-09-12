@@ -1,0 +1,42 @@
+name: Attendance HLS audio transcript
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+    paths:
+      - '.github/workflows/research-attendance-audio.yml'
+permissions:
+  contents: write
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-attendance-view-20241106
+      - name: Install transcriber
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          python -m pip install -q faster-whisper
+      - name: Extract audio directly from HLS and transcribe
+        shell: bash
+        run: |
+          set -euxo pipefail
+          HLS='https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/4596793a-66a9-4cf5-b40e-0bb973996508-master.m3u8'
+          ffmpeg -hide_banner -loglevel warning -y -ss 180 -i "$HLS" -t 900 -vn -ar 16000 -ac 1 -c:a pcm_s16le /tmp/audio.wav
+          python - <<'PY'
+          from faster_whisper import WhisperModel
+          model=WhisperModel('base',device='cpu',compute_type='int8')
+          segs,info=model.transcribe('/tmp/audio.wav',language='cs',beam_size=5,vad_filter=True,word_timestamps=False)
+          with open('tmp/attendance_audio_transcript.txt','w',encoding='utf-8') as f:
+              f.write(f'language={info.language} probability={info.language_probability} offset_video_sec=180\n')
+              for s in segs:
+                  f.write(f'[{s.start+180:07.2f}-{s.end+180:07.2f}] {s.text.strip()}\n')
+          PY
+      - name: Save transcript
+        run: |
+          git config user.name 'attendance-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add tmp/attendance_audio_transcript.txt
+          git commit -m 'Audio přepis prezence ZM 6. 11. 2024' || exit 0
+          git push origin HEAD:tmp-attendance-view-20241106
