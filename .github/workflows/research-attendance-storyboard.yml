@@ -1,0 +1,58 @@
+name: Locate meeting from storyboard
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+    paths:
+      - '.github/workflows/research-attendance-storyboard.yml'
+permissions:
+  contents: write
+jobs:
+  storyboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-attendance-view-20241106
+      - name: Analyze storyboard
+        shell: bash
+        run: |
+          set -euxo pipefail
+          python -m pip install -q pillow
+          curl -fsSL 'https://tv.pirati.cz/lazy-static/storyboards/3ec4b1a8-d659-442a-8e59-6bb3d32b1e32.jpg' -o /tmp/story.jpg
+          python - <<'PY'
+          from PIL import Image,ImageStat,ImageChops
+          im=Image.open('/tmp/story.jpg').convert('RGB')
+          cols=11; rows=11
+          tw=im.width//cols; th=im.height//rows
+          tiles=[]
+          for i in range(cols*rows):
+              x=(i%cols)*tw; y=(i//cols)*th
+              t=im.crop((x,y,x+tw,y+th))
+              tiles.append(t)
+          base=tiles[0]
+          lines=[f'size={im.width}x{im.height} tile={tw}x{th} count={len(tiles)}']
+          for i,t in enumerate(tiles):
+              d=ImageChops.difference(base,t)
+              stat=ImageStat.Stat(d)
+              mean=sum(stat.mean)/3
+              rms=(sum(x*x for x in stat.rms)/3)**0.5
+              lines.append(f'index={i:03d} approx_sec={i*34:04d} mean_diff={mean:.3f} rms={rms:.3f}')
+              if i<15 or mean>35:
+                  t.resize((tw*4,th*4)).save(f'/tmp/tile_{i:03d}.png')
+          open('tmp/attendance_storyboard_diff.txt','w').write('\n'.join(lines)+'\n')
+          # save strongest-change tiles as base64-free PNGs not committed; OCR if tesseract exists later optional
+          PY
+          if ! command -v tesseract >/dev/null; then sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-ces; fi
+          : > tmp/attendance_storyboard_ocr.txt
+          for f in /tmp/tile_*.png; do
+            printf '\n===== %s =====\n' "$(basename "$f")" >> tmp/attendance_storyboard_ocr.txt
+            tesseract "$f" stdout -l ces+eng --psm 11 2>/dev/null >> tmp/attendance_storyboard_ocr.txt || true
+          done
+      - name: Save storyboard analysis
+        run: |
+          git config user.name 'attendance-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add tmp/attendance_storyboard_diff.txt tmp/attendance_storyboard_ocr.txt
+          git commit -m 'Analýza storyboardu ZM 6. 11. 2024' || exit 0
+          git push origin HEAD:tmp-attendance-view-20241106
