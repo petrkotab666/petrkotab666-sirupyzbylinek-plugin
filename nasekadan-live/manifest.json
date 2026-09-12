@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20260912-ohre-new-readable-v3",
+  "version": "20260912-ohre-new-readable-files-v4",
   "files": [
     {
       "path": "clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html",
@@ -15,13 +15,6 @@
       "sha256": "ac7513519a9acd9f3f694a1274d1d2324bb525f000ae90d596f511240dd3708c"
     }
   ],
-  "patches": [
-    {
-      "path": "index.html",
-      "old": "<article class=\"article-card service\" data-auto-article=\"ohre-kadan-hydrologicke-sucho-srpen-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Ohře v Kadani zůstává pod hranicí hydrologického sucha\" style=\"background:linear-gradient(180deg,#b9dfe7 0 42%,#759b72 42% 55%,#4f9bb1 55% 67%,#2d778f 67% 100%);background-color:#2d778f\"><strong>27–29 cm · hranice sucha 34 cm</strong></div>\n      <div class=\"article-body\"><span class=\"meta\">12. 9. 2026 · 20:29 · AKTUALIZOVÁNO · VODA · OHŘE</span><h3>Ohře v Kadani zůstává pod hranicí hydrologického sucha. Zákazy odběrů dál platí</h3><p>Poslední ověřená data ČHMÚ ukazovala 27 až 29 cm při hranici sucha 34 cm. Na úřední desce města dál zůstávají dvě opatření o zákazu odběru povrchových vod do odvolání.</p><a class=\"read-more\" href=\"/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html\">Přečíst aktualizovaný článek →</a></div>\n    </article>",
-      "new": "<article class=\"article-card service\" data-auto-article=\"ohre-kadan-sucho-zakazy-odberu-zari-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Ohře v Kadani je pořád pod hranicí sucha\" style=\"background-image:url('/social/ohre-kadan-sucho-zakazy-odberu-zari-2026.svg');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">12. 9. 2026 · 20:35 · KADAŇ · OHŘE · SUCHO</span><h3>Ohře v Kadani je pořád pod hranicí sucha. Zákazy odběrů z menších toků dál platí</h3><p>Léto končí, problém s nízkou vodou ale ne. Ohře měla večer 29 cm při hranici sucha 34 cm a omezení odběrů z vyjmenovaných toků dál platí do odvolání.</p><a class=\"read-more\" href=\"/clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html\">Přečíst nový článek →</a></div>\n    </article>",
-      "count": 1
-    }
-  ],
+  "patches": [],
   "deletes": []
 }
