@@ -1,0 +1,17 @@
+name: Attendance HLS info
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+    paths: ['.github/workflows/research-attendance-hls-info.yml']
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print HLS playlists
+        shell: bash
+        run: |
+          set -e
+          MASTER='https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/4596793a-66a9-4cf5-b40e-0bb973996508-master.m3u8'
+          echo '=== MASTER ==='
+          curl -fsSL "$MASTER"
+          echo '=== END MASTER ==='
