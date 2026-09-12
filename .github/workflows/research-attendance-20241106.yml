@@ -19,37 +19,28 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg jq tesseract-ocr tesseract-ocr-ces
+          sudo apt-get install -y -qq ffmpeg tesseract-ocr tesseract-ocr-ces
           python -m pip install -q faster-whisper
-      - name: Fetch first three minutes
+      - name: Fetch meeting segment after waiting slate
         shell: bash
         run: |
           set -euxo pipefail
-          mkdir -p tmp/attendance_frames
-          curl -fsSL 'https://tv.pirati.cz/api/v1/videos/2egmcxfuaLggVdcyZ1EhYr' -o /tmp/meta.json
-          python - <<'PY'
-          import json
-          d=json.load(open('/tmp/meta.json'))
-          out={k:d.get(k) for k in ['uuid','shortUUID','name','duration','publishedAt','originallyPublishedAt']}
-          out['files']=[{'resolution':f.get('resolution'),'size':f.get('size'),'fileUrl':f.get('fileUrl')} for f in d.get('files',[])]
-          out['streamingPlaylists']=[{'playlistUrl':p.get('playlistUrl'),'files':[{'resolution':f.get('resolution'),'fileUrl':f.get('fileUrl')} for f in p.get('files',[])]} for p in d.get('streamingPlaylists',[])]
-          open('tmp/attendance_video_meta.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
-          PY
-          URL=$(jq -r '.streamingPlaylists[0].playlistUrl // .files[-1].fileUrl' /tmp/meta.json)
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/8eb2d167-1697-4d2e-878c-2858c5234d0b-480-fragmented.mp4'
           echo "$URL" > tmp/attendance_stream_url.txt
-          ffmpeg -hide_banner -loglevel warning -y -i "$URL" -t 180 -c copy /tmp/intro.mp4
-          ffmpeg -hide_banner -loglevel warning -y -i /tmp/intro.mp4 -vf fps=1 /tmp/frame_%04d.jpg
-          ffmpeg -hide_banner -loglevel warning -y -i /tmp/intro.mp4 -vn -ar 16000 -ac 1 /tmp/audio.wav
-      - name: OCR frames
+          ffmpeg -hide_banner -loglevel warning -y -ss 180 -i "$URL" -t 720 -c copy /tmp/meeting.mp4
+          ffmpeg -hide_banner -loglevel warning -y -i /tmp/meeting.mp4 -vf fps=1/5 /tmp/frame_%04d.jpg
+          ffmpeg -hide_banner -loglevel warning -y -i /tmp/meeting.mp4 -vn -ar 16000 -ac 1 /tmp/audio.wav
+      - name: OCR sampled frames
         shell: bash
         run: |
           set -euo pipefail
-          : > tmp/attendance_ocr.txt
+          : > tmp/attendance_ocr_later.txt
+          i=0
           for f in /tmp/frame_*.jpg; do
-            n=$(basename "$f")
+            i=$((i+1)); sec=$((180+i*5)); n=$(basename "$f")
             txt=$(tesseract "$f" stdout -l ces+eng --psm 11 2>/dev/null || true)
             if [ -n "${txt//[[:space:]]/}" ]; then
-              printf '\n===== %s =====\n%s\n' "$n" "$txt" >> tmp/attendance_ocr.txt
+              printf '\n===== %s approx_video_sec=%s =====\n%s\n' "$n" "$sec" "$txt" >> tmp/attendance_ocr_later.txt
             fi
           done
       - name: Czech speech transcript
@@ -58,15 +49,15 @@ jobs:
           from faster_whisper import WhisperModel
           model=WhisperModel('base',device='cpu',compute_type='int8')
           segs,info=model.transcribe('/tmp/audio.wav',language='cs',beam_size=5,vad_filter=True)
-          with open('tmp/attendance_transcript.txt','w',encoding='utf-8') as f:
-              f.write(f'language={info.language} probability={info.language_probability}\n')
+          with open('tmp/attendance_transcript_later.txt','w',encoding='utf-8') as f:
+              f.write(f'language={info.language} probability={info.language_probability} offset_video_sec=180\n')
               for s in segs:
-                  f.write(f'[{s.start:07.2f}-{s.end:07.2f}] {s.text.strip()}\n')
+                  f.write(f'[{s.start+180:07.2f}-{s.end+180:07.2f}] {s.text.strip()}\n')
           PY
       - name: Save research outputs
         run: |
           git config user.name 'attendance-research-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add tmp/attendance_video_meta.json tmp/attendance_stream_url.txt tmp/attendance_ocr.txt tmp/attendance_transcript.txt
-          git commit -m 'Výsledek výzkumu prezence ZM 6. 11. 2024' || exit 0
+          git add tmp/attendance_stream_url.txt tmp/attendance_ocr_later.txt tmp/attendance_transcript_later.txt
+          git commit -m 'Výsledek posunutého výzkumu prezence ZM 6. 11. 2024' || exit 0
           git push origin HEAD:tmp-attendance-view-20241106
