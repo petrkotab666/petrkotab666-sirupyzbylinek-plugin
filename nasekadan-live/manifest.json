@@ -1,72 +1,25 @@
 {
   "schema": 1,
-  "version": "20260912-hossner-full-answers-v1",
-  "files": [],
+  "version": "20260912-ohre-update-hockey-canonical-v1",
+  "files": [
+    {
+      "path": "bridge-health.txt",
+      "sha256": "295a44d5554acea96c75e01a5675e18edce0822654c1f826e0724aaff7bf4c24"
+    },
+    {
+      "path": "clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
+      "sha256": "b121561fe68f949a0f1bf6fada549b6a23dd7451e2527546092738d888bc8959"
+    },
+    {
+      "path": "clanky/kadan-decin-2-5-posledni-priprava-10-zari-2026.html",
+      "sha256": "f19968c23e534727184d86e8cd38ad8628e9b9233e216a3c2be1eabd8b8f05e4"
+    }
+  ],
   "patches": [
     {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<p class=\"lead\">Bývalý ředitel a jednatel Nemocnice Kadaň Petr Hossner odpověděl Naší Kadani na dvanáct konkrétních otázek. Jeho odpovědi zveřejňujeme celé. Před nimi shrnujeme, co z jeho nové verze podporují dokumenty a co zatím zůstává pouze jeho tvrzením.</p>",
-      "new": "<p class=\"lead\">Bývalý ředitel a jednatel Nemocnice Kadaň Petr Hossner odpověděl Naší Kadani na dvanáct konkrétních otázek. Níže zveřejňujeme plné znění jeho odpovědí bez obsahového krácení. Jako podklad redakci poskytl také zápis z 63. jednání dozorčí rady.</p>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<div class=\"box\"><strong>Stejný prostor jsme dali také starostovi Janu Losenickému.</strong><br>Doplňující otázky jsme mu poslali 3. září 2026. Ještě téhož dne jsme po další veřejné diskusi poslali krátké doplnění. K 10. září 2026 večer jsme od Jana Losenického na tyto dotazy e-mailovou odpověď neobdrželi.</div>",
-      "new": "<div class=\"box\"><strong>Aktualizace 12. září 2026:</strong><br>Doplňující otázky jsme starostovi Janu Losenickému poslali 3. září 2026. Odpověď redakci následně dorazila 11. září 2026 a v dalším zpracování série ji zohledňujeme.</div>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "Samotný zápis ale neobsahuje jmenný rozpis hlasování.",
-      "new": "Samotný zápis neobsahuje jmenný rozpis hlasování.",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<p>Odpovědi dorazily redakci 9. září 2026. Obsahově je nekrátíme.</p>",
-      "new": "<p>Odpovědi dorazily redakci 9. září 2026. Níže jsou zveřejněny bez obsahového krácení; upraveno je pouze typografické zalomení do odstavců.</p>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<section class=\"qa\"><h3>7. Víte, kdo byl přítomen při jednání dozorčí rady, kde byla za rok 2022 schválena odměna ve výši 200 % roční mzdy? Bylo rozhodnutí jednomyslné?</h3><div class=\"answer\"><p>Ano, rozhodnutí bylo jednomyslné. Takto to bylo i po uzavřeném hlasování konstatováno a byl jsem pochválen. Přítomni byli všichni členové dozorčí rady. Stejně tak jako při předcházejících schvalováních odměn za předcházející roky 2016 – 2021, kdy bylo hlasování jednotné.</p><p>Zápis z 63. jednání dozorčí rady nemocnice přikládám v příloze.</p><p>Jen pro úplnost zmiňuji, že pokud by někdo hlasoval proti nebo se zdržel hlasování, zápis by podle zákona musel tuto informaci obsahovat. Zápisy z jednání dozorčí rady však tuto informaci neobsahují. To znamená, že všichni přítomní členové dozorčí rady hlasovali pro, včetně starosty Losenického. Zápisy z jednání dozorčí rady její předseda vždy svým podpisem schválil.</p></div></section>",
-      "new": "<section class=\"qa\"><h3>7. Víte, kdo byl přítomen při jednání dozorčí rady, kde byla za rok 2022 schválena odměna ve výši 200 % roční mzdy? Bylo rozhodnutí jednomyslné?</h3><div class=\"answer\"><p>Ano, rozhodnutí bylo jednomyslné. Takto to bylo i po uzavřeném hlasování konstatováno a byl jsem pochválen. Přítomni byli všichni členové dozorčí rady. Stejně tak jako při předcházejících schvalováních odměn za předcházející roky 2016 – 2021, kdy bylo hlasování jednotné.</p><p>Zápis z 63. jednání dozorčí rady nemocnice přikládám v příloze.</p><p>Jen pro úplnost zmiňuji, že pokud by někdo hlasoval proti nebo se zdržel hlasování, zápis by podle zákona musel tuto informaci obsahovat. Zápisy z jednání dozorčí rady však tuto informaci neobsahují. To znamená, že všichni přítomní členové dozorčí rady hlasovali pro, včetně starosty Losenického. Zápisy z jednání dozorčí rady její předseda vždy svým podpisem schválil.</p><p>V zápise je mimo jiné zaznamenáno, že v nemocnici probíhají rekonstrukce za provozu, nakupují se nové přístroje a nemocnice byla v zisku a navyšovala výnosy od zdravotních pojišťoven.</p></div></section>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<section class=\"qa\"><h3>8. Máte dokument, který ukazuje, jak a kým byla Vaše pravidelná ředitelská mzda postupně zvýšena z původních 140 000 Kč na 270 000 Kč?</h3><div class=\"answer\"><p>Dokumenty mám, ale z důvodu probíhajícího soudního řízení je v tuto chvíli nemohu poskytnout. Smlouva jednatele nicméně zněla na 1 000 Kč měsíčně a byla podepsána mnou a starostou města. Nebyla od roku 2016 valorizována.</p><p>Smlouvu ředitele s jednatelem jsem podepsal jak na straně ředitele, tak na straně jednatele dle legislativy platné v roce 2016, po odsouhlasení částky starostou města. Stejnou smlouvu měl i můj předchůdce.</p><p>Mzdu ředitele jsem navyšoval jako jednatel dvakrát, a to vždy po navýšení a zajištění financí pro zaměstnance nemocnice a po souhlasu starosty. Její výše byla vždy v souladu s nejlépe odměňovanými vedoucími, primáři oddělení.</p></div></section>",
-      "new": "<section class=\"qa\"><h3>8. Máte dokument, který ukazuje, jak a kým byla Vaše pravidelná ředitelská mzda postupně zvýšena z původních 140 000 Kč na 270 000 Kč?</h3><div class=\"answer\"><p>Dokumenty mám, ale z důvodu probíhajícího soudního řízení je v tuto chvíli nemohu poskytnout. Smlouva jednatele nicméně zněla na 1 000 Kč měsíčně a byla podepsána mnou a starostou města. Nebyla od roku 2016 valorizována.</p><p>Smlouvu ředitele s jednatelem jsem podepsal jak na straně ředitele, tak na straně jednatele dle legislativy platné v roce 2016, po odsouhlasení částky starostou města. Stejnou smlouvu měl i můj předchůdce.</p><p>Mzdu ředitele jsem navyšoval jako jednatel dvakrát, a to vždy po navýšení a zajištění financí pro zaměstnance nemocnice a po souhlasu starosty. Její výše byla vždy v souladu s nejlépe odměňovanými vedoucími, primáři oddělení. Tyto informace již máte k dispozici.</p><p>Navyšování mezd zaměstnancům probíhalo v letech 2016 – 2024 obvykle jednou až dvakrát za rok, vždy až po zajištění finančních zdrojů na mzdy, tzn. po podepsání úhradových dodatků se zdravotními pojišťovnami, které je garantovaly. Mzda i odměny vedoucích pracovníků nemocnice vycházely vždy z množství ošetřených pacientů a výnosů od pojišťoven.</p><p>Jako ředitel nebo jednatel jsem sám sobě mimořádné odměny neschvaloval. Stejně tak jsem nepoužíval služební vůz ani náhrady za pohonné hmoty, služební telefon nebo notebook, i když jsem na vše měl podle jednatelské smlouvy nárok.</p></div></section>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<section class=\"qa\"><h3>9. V aktuální veřejné diskusi zaznělo tvrzení, že Jan Perout byl v den Vašeho odvolání přítomen při následném vyklízení Vaší kanceláře. Byl tam podle Vás skutečně?</h3><div class=\"answer\"><p>Mám informaci od lidí, kteří tomu byli přítomni. Poté, co jsem opustil nemocnici, měl přijít pan Perout s dvěma svými zaměstnanci a vyměnil zámky v kanceláři.</p></div></section>",
-      "new": "<section class=\"qa\"><h3>9. V aktuální veřejné diskusi zaznělo tvrzení, že Jan Perout byl v den Vašeho odvolání přítomen při následném vyklízení Vaší kanceláře. Byl tam podle Vás skutečně?</h3><div class=\"answer\"><p>Mám informaci od lidí, kteří tomu byli přítomni. Poté, co jsem opustil nemocnici, měl přijít pan Perout s dvěma svými zaměstnanci a vyměnil zámky v kanceláři.</p><p>Doplním, že firma HP Stav pana Perouta podle mých informací v té době neměla s nemocnicí žádný smluvní vztah. Není mi ani známo, že by takový smluvní vztah vznikl bezprostředně po nástupu pana Krušiny do funkce.</p></div></section>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<section class=\"qa\"><h3>10. Kdo další byl při této události přítomen a existuje k tomu svědek, fotografie, záznam nebo jiný podklad?</h3><div class=\"answer\"><p>Oznámení o mém odvolání proběhlo velmi nečekaně a krátce v nemocnici v ředitelně. Starosta Losenický přišel v doprovodu právníka města. Dále pan Krušina, ten v doprovodu dvou v tmavých barvách oblečených mužů, kteří se mi nepředstavili. Starosta mi oznámil, že mě valná hromada odvolala, a představil mi nového jednatele pana Krušinu. Ten mi na mé vyzvání oznámil, že dva pánové, kteří jej doprovází, jsou jeho ochranka.</p></div></section>",
-      "new": "<section class=\"qa\"><h3>10. Kdo další byl při této události přítomen a existuje k tomu svědek, fotografie, záznam nebo jiný podklad?</h3><div class=\"answer\"><p>Oznámení o mém odvolání proběhlo velmi nečekaně a krátce v nemocnici v ředitelně. Starosta Losenický přišel v doprovodu právníka města. Dále pan Krušina, ten v doprovodu dvou v tmavých barvách oblečených mužů, kteří se mi nepředstavili.</p><p>Starosta mi oznámil, že mě valná hromada odvolala, a představil mi nového jednatele pana Krušinu. Ten mi na mé vyzvání oznámil, že dva pánové, kteří jej doprovází, jsou jeho ochranka. Poté mě vyzval, ať mu předám klíče a okamžitě opustím kancelář, a že ochranka mě vyprovodí ke vchodu nemocnice.</p><p>Stihl jsem tedy jen podat ruku své sekretářce a bez předání agendy a bez rozloučení opustil po 8 letech prosperující nemocnici.</p></div></section>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<section class=\"qa\"><h3>11. Jakou roli podle Vás Jan Perout sehrál při událostech kolem Vašeho odvolání, pokud nějakou?</h3><div class=\"answer\"><p>Pan Perout hraje poslední 4 roky významnou roli v Kadani a hrál ji i při mém odvolání. Panu Krušinovi dal již 5 měsíců před mým odvoláním nabídku na práci jednatele Nemocnice Kadaň. Sám jej pak přivedl na radnici v Kadani v den jeho jmenování jednatelem.</p></div></section>",
-      "new": "<section class=\"qa\"><h3>11. Jakou roli podle Vás Jan Perout sehrál při událostech kolem Vašeho odvolání, pokud nějakou?</h3><div class=\"answer\"><p>Pan Perout hraje poslední 4 roky významnou roli v Kadani a hrál ji i při mém odvolání. Panu Krušinovi dal již 5 měsíců před mým odvoláním nabídku na práci jednatele Nemocnice Kadaň. Sám jej pak přivedl na radnici v Kadani v den jeho jmenování jednatelem.</p><p>Poté, co začal starostovat pan Losenický, mě pan Perout několikrát navštívil v nemocnici jako podnikatel, lobbista, poté jako člen ODS v Kadani. Vždy naznačoval svůj vliv a požadoval věci, které nikdo jiný nepraktikoval. Nikdy však pro nemocnici minimálně do okamžiku mého odvolání v září 2024 nepracoval ani nemocnici neposkytoval žádné služby.</p><p>Odkazoval jsem jej vždy na výběrová řízení, kde nabízel podle mé zkušenosti v rámci výběrových řízení předražené služby.</p></div></section>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<section class=\"qa\"><h3>12. Je něco v dosavadních článcích Naše Kadaň, co podle Vás stále vytváří nepřesný nebo neúplný obraz celé věci a co byste chtěl doložit jinými dokumenty?</h3><div class=\"answer\"><p>Mrzí mě, že se v médiích a na sociálních sítích prakticky veškerá pozornost soustředí na moji mzdu a odměny, zatímco výsledky nemocnice a širší souvislosti zůstávají stranou. Přitom jsou veřejně dohledatelné i další údaje.</p><p>Například pan Krušina pobíral stejnou měsíční odměnu jako já a současné vedení nemocnice stojí podle zveřejněných informací přibližně 400 000 Kč měsíčně. Stejně tak se veřejně diskutuje o tom, že při svém odchodu měl pan Krušina obdržet více než 1 milion Kč.</p><p>Nemocnice byla v roce 2016 připravována mým předchůdcem k prodeji. Za 8 let se vypracovala na nejrychleji rozvíjející se nemocnici v Čechách, která otevírala své ordinace nejen v Kadani, Klášterci nad Ohří, Vejprtech, Žatci, ale i v Chomutově.</p></div></section>",
-      "new": "<section class=\"qa\"><h3>12. Je něco v dosavadních článcích Naše Kadaň, co podle Vás stále vytváří nepřesný nebo neúplný obraz celé věci a co byste chtěl doložit jinými dokumenty?</h3><div class=\"answer\"><p>Mrzí mě, že se v médiích a na sociálních sítích prakticky veškerá pozornost soustředí na moji mzdu a odměny, zatímco výsledky nemocnice a širší souvislosti zůstávají stranou. Přitom jsou veřejně dohledatelné i další údaje.</p><p>Například pan Krušina pobíral stejnou měsíční odměnu jako já a současné vedení nemocnice stojí podle zveřejněných informací přibližně 400 000 Kč měsíčně. Stejně tak se veřejně diskutuje o tom, že při svém odchodu měl pan Krušina obdržet více než 1 milion Kč. Přesto se debata dlouhodobě vede téměř výhradně o mém odměňování, nikoli o výsledcích nemocnice, jejím hospodaření a vývoji v jednotlivých obdobích.</p><p>Zajímalo by mne, zda se v případě pana Krušiny uplatní stejný metr a nemocnice provede hloubkový audit na období, kdy nemocnici vedl on, když na pochybení v hospodaření pana Krušiny pod dohledem pana starosty bylo několikrát z více stran upozorněno. Celá situace kolem nemocnice mi přijde nešťastná. Mám nicméně za to, že je to především důsledek politického rozhodnutí starosty Losenického a radních, kteří jmenovali pana Krušinu, kterého zase po 22 měsících odvolali.</p><p>Nemocnice byla v roce 2016 připravována mým předchůdcem k prodeji. Za 8 let se vypracovala na nejrychleji rozvíjející se nemocnici v Čechách (lze ověřit z veřejných zdrojů, např.: z výročních zpráv nemocnic ČR, UZISu apod), která otevírala své ordinace nejen v Kadani, Klášterci nad Ohří, Vejprtech, Žatci, ale i v Chomutově. Opravovala svoji budovu a připravovala se na stavbu parkovacího domu a stavbu rodinných domů v Pokuticích. Od města měla po celou dobu stejnou podporu ve výši 20 mil. Kč ročně, ale sama každý rok zvyšovala příjem od zdravotních pojišťoven o 50 mil. Kč. Vše financovala tak, aby byla schopná samostatného fungování. Na účtech měla před 2 roky 100 mil. Kč vlastních prostředků. Na to by se zapomenout nemělo.</p><p>Vzpomínám si také na prohlášení člena dozorčí rady, když jsem informoval na jednání, že na konci roku mám v plánu vyplatit mimořádné odměny zaměstnancům ve výši 16 mil. Kč: „Když na ně máme, tak proč ne?!“ A tehdy byla nemocnice v takové kondici, že na takové odměny prostředky měla.</p></div></section>",
-      "count": 1
-    },
-    {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "old": "<p><strong>Naše Kadaň bude dál oddělovat, co dokazují dokumenty, co tvrdí jednotliví aktéři a co teprve čeká na další ověření nebo rozhodnutí soudu.</strong></p>",
-      "new": "<div class=\"box\"><strong>Redakční poznámka:</strong> Odpovědi výše jsou stanoviskem Petra Hossnera. Tam, kde popisuje jednání dalších osob nebo skutečnosti, které redakce samostatně neověřila, je třeba je číst jako jeho tvrzení. Zápis dozorčí rady máme k dispozici jako podklad, který redakci poskytl.</div>",
+      "path": "index.html",
+      "old": "    <div class=\"article-list\">\n",
+      "new": "    <div class=\"article-list\">\n<article class=\"article-card service\" data-auto-article=\"ohre-kadan-hydrologicke-sucho-srpen-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Ohře v Kadani zůstává pod hranicí hydrologického sucha\" style=\"background:linear-gradient(180deg,#b9dfe7 0 42%,#759b72 42% 55%,#4f9bb1 55% 67%,#2d778f 67% 100%);background-color:#2d778f\"><strong>27–29 cm · hranice sucha 34 cm</strong></div>\n      <div class=\"article-body\"><span class=\"meta\">12. 9. 2026 · 20:29 · AKTUALIZOVÁNO · VODA · OHŘE</span><h3>Ohře v Kadani zůstává pod hranicí hydrologického sucha. Zákazy odběrů dál platí</h3><p>Poslední ověřená data ČHMÚ ukazovala 27 až 29 cm při hranici sucha 34 cm. Na úřední desce města dál zůstávají dvě opatření o zákazu odběru povrchových vod do odvolání.</p><a class=\"read-more\" href=\"/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html\">Přečíst aktualizovaný článek →</a></div>\n    </article>\n",
       "count": 1
     }
   ],
