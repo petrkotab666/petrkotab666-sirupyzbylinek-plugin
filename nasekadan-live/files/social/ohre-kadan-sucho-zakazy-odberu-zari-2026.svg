@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cce8ef"/><stop offset=".58" stop-color="#edf5f3"/><stop offset="1" stop-color="#f5e8cf"/></linearGradient>
+  <linearGradient id="river" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4e9bb0"/><stop offset="1" stop-color="#24647c"/></linearGradient>
+  <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0c2937" stop-opacity=".93"/><stop offset=".64" stop-color="#0c2937" stop-opacity=".65"/><stop offset="1" stop-color="#0c2937" stop-opacity=".08"/></linearGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<path d="M0 330 C130 292 225 322 350 300 C480 278 610 310 730 286 C850 260 990 278 1200 240 L1200 630 L0 630Z" fill="#6f9368"/>
+<path d="M0 402 C150 380 260 408 392 385 C545 358 650 402 790 370 C935 336 1055 372 1200 350 L1200 630 L0 630Z" fill="url(#river)"/>
+<path d="M0 505 C150 475 250 530 395 498 C545 465 680 520 830 486 C990 450 1085 482 1200 468 L1200 630 L0 630Z" fill="#d0c0a0" opacity=".75"/>
+<g fill="#d8d0bd"><circle cx="905" cy="505" r="12"/><circle cx="948" cy="523" r="18"/><circle cx="1010" cy="497" r="10"/><circle cx="1088" cy="538" r="22"/><circle cx="1140" cy="507" r="14"/></g>
+<g fill="#f3eadc" stroke="#bda98b" stroke-width="2"><rect x="765" y="210" width="105" height="72"/><polygon points="755,210 817,170 880,210" fill="#9d4b3c"/><rect x="930" y="190" width="130" height="84"/><polygon points="918,190 995,150 1072,190" fill="#9d4b3c"/></g>
+<rect x="0" y="0" width="1200" height="630" fill="url(#shade)"/>
+<rect x="55" y="52" rx="22" ry="22" width="320" height="48" fill="#9f2626"/>
+<text x="78" y="84" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="800" fill="#fff">NAŠE KADAŇ · VODA</text>
+<text x="55" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="58" font-weight="900" fill="#fff">OHŘE JE STÁLE</text>
+<text x="55" y="250" font-family="Arial,DejaVu Sans,sans-serif" font-size="58" font-weight="900" fill="#fff">POD HRANICÍ SUCHA</text>
+<rect x="55" y="304" rx="18" ry="18" width="480" height="126" fill="#fff" opacity=".96"/>
+<text x="80" y="386" font-family="Arial,DejaVu Sans,sans-serif" font-size="72" font-weight="900" fill="#a9232b">29 cm</text>
+<text x="300" y="357" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" fill="#173947">hranice sucha 34 cm</text>
+<text x="300" y="394" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" fill="#173947">12. 9. 2026 · Kadaň</text>
+<text x="55" y="527" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" font-weight="800" fill="#fff">Zákazy odběrů z vybraných toků dál platí do odvolání</text>
+<text x="55" y="580" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="800" fill="#d8edf2">NASEKADAN.CZ</text>
+</svg>
