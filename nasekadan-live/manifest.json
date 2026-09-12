@@ -1,25 +1,12 @@
 {
   "schema": 1,
-  "version": "20260912-ohre-update-hockey-canonical-v1",
-  "files": [
-    {
-      "path": "bridge-health.txt",
-      "sha256": "295a44d5554acea96c75e01a5675e18edce0822654c1f826e0724aaff7bf4c24"
-    },
-    {
-      "path": "clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
-      "sha256": "b121561fe68f949a0f1bf6fada549b6a23dd7451e2527546092738d888bc8959"
-    },
-    {
-      "path": "clanky/kadan-decin-2-5-posledni-priprava-10-zari-2026.html",
-      "sha256": "f19968c23e534727184d86e8cd38ad8628e9b9233e216a3c2be1eabd8b8f05e4"
-    }
-  ],
+  "version": "20260912-hossner-dr-pdf-link-v1",
+  "files": [],
   "patches": [
     {
-      "path": "index.html",
-      "old": "    <div class=\"article-list\">\n",
-      "new": "    <div class=\"article-list\">\n<article class=\"article-card service\" data-auto-article=\"ohre-kadan-hydrologicke-sucho-srpen-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Ohře v Kadani zůstává pod hranicí hydrologického sucha\" style=\"background:linear-gradient(180deg,#b9dfe7 0 42%,#759b72 42% 55%,#4f9bb1 55% 67%,#2d778f 67% 100%);background-color:#2d778f\"><strong>27–29 cm · hranice sucha 34 cm</strong></div>\n      <div class=\"article-body\"><span class=\"meta\">12. 9. 2026 · 20:29 · AKTUALIZOVÁNO · VODA · OHŘE</span><h3>Ohře v Kadani zůstává pod hranicí hydrologického sucha. Zákazy odběrů dál platí</h3><p>Poslední ověřená data ČHMÚ ukazovala 27 až 29 cm při hranici sucha 34 cm. Na úřední desce města dál zůstávají dvě opatření o zákazu odběru povrchových vod do odvolání.</p><a class=\"read-more\" href=\"/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html\">Přečíst aktualizovaný článek →</a></div>\n    </article>\n",
+      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
+      "old": "<p>Zápis z 63. jednání dozorčí rady ze 16. května 2023 výslovně zachycuje schválení odměny ředitele za rok 2022 ve výši 200 % roční mzdy podle stanovených kritérií. Jan Losenický je v zápisu mezi přítomnými členy. Samotný zápis ale neobsahuje jmenný rozpis hlasování.</p>",
+      "new": "<p>Zápis z 63. jednání dozorčí rady ze 16. května 2023 výslovně zachycuje schválení odměny ředitele za rok 2022 ve výši 200 % roční mzdy podle stanovených kritérií. Jan Losenický je v zápisu mezi přítomnými členy. Samotný zápis ale neobsahuje jmenný rozpis hlasování.</p><div class=\"box\"><strong>Dokument poskytnutý Petrem Hossnerem</strong><p>Zápis z 63. jednání Dozorčí rady Nemocnice Kadaň s.r.o. ze 16. května 2023. Zveřejňujeme originální PDF, které Petr Hossner přiložil ke svým odpovědím.</p><p><a href=\"/clanky/zapis-63-jednani-dozorci-rady-nemocnice-kadan-2023.pdf\" target=\"_blank\" rel=\"noopener\"><strong>Otevřít celý zápis dozorčí rady v PDF →</strong></a></p></div>",
       "count": 1
     }
   ],
