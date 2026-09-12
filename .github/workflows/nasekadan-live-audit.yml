@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: nasekadan-independent-live-audit
@@ -19,72 +19,43 @@ concurrency:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 5
     steps:
-      - name: Ověřit nasazení opravy reklam
+      - name: Diagnostika veřejného CSS reklam
         shell: bash
         run: |
           set -Eeuo pipefail
-          health="$(curl -fsSL --max-time 20 'https://nasekadan.cz/deployment-health.txt?audit=adfix-20260912')"
-          css="$(curl -fsSL --max-time 20 'https://nasekadan.cz/style.css?audit=adfix-20260912')"
-          printf '%s\n' "$health"
-          grep -Fq 'source=bridge:20260912-ad-blank-visual-guard-v1' <<<"$health"
-          grep -Fq 'NK_AD_BLANK_VISUAL_GUARD_20260912' <<<"$css"
-          echo 'PUBLIC_AD_VISUAL_FIX_OK'
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Ověřit syntaxi
-        run: python -m py_compile nasekadan-live/audit_live_site.py
-      - name: Projít skutečný veřejný web
-        run: python nasekadan-live/audit_live_site.py
-      - name: Vytvořit kompaktní souhrn
-        if: always()
-        shell: bash
-        run: |
+          curl -fsSL --max-time 20 'https://nasekadan.cz/deployment-health.txt?audit=adcss-20260912' -o /tmp/health.txt
+          curl -fsSL --max-time 20 'https://nasekadan.cz/style.css?audit=adcss-20260912' -o /tmp/style.css
+          curl -fsSL --max-time 20 'https://nasekadan.cz/ad-fallback-fix.js?audit=adcss-20260912' -o /tmp/ad-fallback-fix.js
+          echo '--- HEALTH ---'
+          cat /tmp/health.txt
+          echo '--- CSS SIZE ---'
+          wc -c /tmp/style.css
+          echo '--- AD JS SIZE ---'
+          wc -c /tmp/ad-fallback-fix.js
           python - <<'PY'
-          import json
-          from collections import Counter
           from pathlib import Path
-          src=Path('nasekadan-live/live-audit-report.json')
-          if not src.exists():
-              raise SystemExit('Chybí live-audit-report.json')
-          report=json.loads(src.read_text(encoding='utf-8'))
-          errors=report.get('errors') or []
-          warnings=report.get('warnings') or []
-          summary={
-              'status':report.get('status'),
-              'started_at':report.get('started_at'),
-              'finished_at':report.get('finished_at'),
-              'sitemap_urls':report.get('sitemap_urls'),
-              'html_pages_checked':report.get('html_pages_checked'),
-              'article_pages_checked':report.get('article_pages_checked'),
-              'images_checked':report.get('images_checked'),
-              'internal_links_checked':report.get('internal_links_checked'),
-              'error_count':len(errors),
-              'warning_count':len(warnings),
-              'error_types':dict(Counter(str(x.get('type')) for x in errors)),
-              'warning_types':dict(Counter(str(x.get('type')) for x in warnings)),
-              'errors':errors,
-              'warnings':warnings,
-          }
-          Path('nasekadan-live/live-audit-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          print(json.dumps({k:summary[k] for k in ('status','error_count','warning_count','error_types','warning_types')},ensure_ascii=False,indent=2))
+          css=Path('/tmp/style.css').read_text(encoding='utf-8',errors='replace')
+          js=Path('/tmp/ad-fallback-fix.js').read_text(encoding='utf-8',errors='replace')
+          needles=[
+            '.promo-card:not(:has(.promo-banner))::before',
+            '.promo-card-wide.promo-card-full-image:not(:has(.promo-banner img))::before',
+            'radial-gradient(circle at 25% 78%',
+            'NK_AD_BLANK_VISUAL_GUARD_20260912',
+          ]
+          for needle in needles:
+            print('\n--- NEEDLE',needle,'---')
+            start=0
+            hits=[]
+            while True:
+              i=css.find(needle,start)
+              if i<0: break
+              hits.append(i); start=i+1
+            print('hits=',hits[:20], 'count=',len(hits))
+            for i in hits[:5]:
+              print(css[max(0,i-500):min(len(css),i+1400)])
+          print('\n--- JS MARKERS ---')
+          for needle in ['NK_AD_REAL_COPY_V4_20260910','function inspect(card)','promo-banner-fallback']:
+            print(needle, js.find(needle))
           PY
-      - name: Uložit auditní report
-        if: always()
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -s nasekadan-live/live-audit-report.json || exit 1
-          test -s nasekadan-live/live-audit-summary.json || exit 1
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add nasekadan-live/live-audit-report.json nasekadan-live/live-audit-summary.json
-          git diff --cached --quiet && exit 0
-          git commit -m 'Aktualizovat nezávislý audit Naše Kadaň [skip ci]'
-          git pull --rebase origin main
-          git push origin HEAD:main
