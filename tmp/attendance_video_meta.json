@@ -1,0 +1,30 @@
+{
+  "uuid": "09f34430-d077-4c19-b932-41005e402f19",
+  "shortUUID": "2egmcxfuaLggVdcyZ1EhYr",
+  "name": "Mimořádné zasedání zastupitelstva města Kadaně - 6.11.2024",
+  "duration": 4049,
+  "publishedAt": "2024-11-07T17:48:43.076Z",
+  "originallyPublishedAt": null,
+  "files": [],
+  "streamingPlaylists": [
+    {
+      "playlistUrl": "https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/4596793a-66a9-4cf5-b40e-0bb973996508-master.m3u8",
+      "files": [
+        {
+          "resolution": {
+            "id": 720,
+            "label": "720p"
+          },
+          "fileUrl": "https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/a1a2a001-6aa2-41be-9022-8651538d2d93-720-fragmented.mp4"
+        },
+        {
+          "resolution": {
+            "id": 480,
+            "label": "480p"
+          },
+          "fileUrl": "https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/8eb2d167-1697-4d2e-878c-2858c5234d0b-480-fragmented.mp4"
+        }
+      ]
+    }
+  ]
+}
