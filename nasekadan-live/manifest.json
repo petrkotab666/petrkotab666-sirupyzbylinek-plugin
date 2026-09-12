@@ -1,20 +1,44 @@
 {
   "schema": 1,
-  "version": "20260912-ohre-new-readable-files-v4",
-  "files": [
+  "version": "20260912-ohre-home-hero-v5",
+  "files": [],
+  "patches": [
     {
-      "path": "clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html",
-      "sha256": "3a9312352c7ba41248d41f746a44b648fa25ef55c44e2133d949dac8c05345ac"
+      "path": "index.html",
+      "old": "data-latest-article-href=\"/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html\"",
+      "new": "data-latest-article-href=\"/clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html\"",
+      "count": 1
     },
     {
-      "path": "social/ohre-kadan-sucho-zakazy-odberu-zari-2026.svg",
-      "sha256": "973e0c311f876e8c68134329eed5d1e7e4c51a0f30e2243577c14afbf2e83458"
+      "path": "index.html",
+      "old": "<div class=\"photo\" role=\"img\" aria-label=\"Ohře v Kadani zůstává pod hranicí hydrologického sucha. Zákazy odběrů dál platí\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
+      "new": "<div class=\"photo\" role=\"img\" aria-label=\"Ohře v Kadani je pořád pod hranicí sucha\" style=\"background-image:url('https://nasekadan.cz/social/ohre-kadan-sucho-zakazy-odberu-zari-2026.svg');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
+      "count": 1
     },
     {
-      "path": "clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
-      "sha256": "ac7513519a9acd9f3f694a1274d1d2324bb525f000ae90d596f511240dd3708c"
+      "path": "index.html",
+      "old": "<small>AKTUÁLNĚ · VODA · OHŘE · KADAŇ · 12. 9. 2026 · 20:29</small>",
+      "new": "<small>KADAŇ · OHŘE · SUCHO · 12. 9. 2026 · 20:35</small>",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "old": "<h1>Ohře v Kadani zůstává pod hranicí hydrologického sucha. Zákazy odběrů dál platí</h1>",
+      "new": "<h1>Ohře v Kadani je pořád pod hranicí sucha. Zákazy odběrů z menších toků dál platí</h1>",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "old": "<p>Poslední veřejně dostupná data ČHMÚ ukazovala na profilu Kadaň 11. září odpoledne 27 až 29 cm při hranici hydrologického sucha 34 cm. Na úřední desce města dál zůstávají dva zákazy odběru povrchových vod s platností do odvolání.</p>",
+      "new": "<p>Léto pomalu končí, problém s nízkou vodou ale ne. Ohře měla v sobotu večer 29 cm při hranici sucha 34 cm a omezení odběrů z vyjmenovaných menších toků dál platí do odvolání.</p>",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "old": "<a class=\"btn\" href=\"/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html\">Přečíst nejnovější článek →</a>",
+      "new": "<a class=\"btn\" href=\"/clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html\">Přečíst nejnovější článek →</a>",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": []
 }
