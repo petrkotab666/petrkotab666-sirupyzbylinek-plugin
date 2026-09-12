@@ -26,7 +26,7 @@ jobs:
         run: |
           set -euxo pipefail
           mkdir -p tmp/attendance_frames
-          curl -fsSL 'https://tv.pirati.cz/api/v1/videos/3ec4b1a8-d659-442a-8e59-6bb3d32b1e32' -o /tmp/meta.json
+          curl -fsSL 'https://tv.pirati.cz/api/v1/videos/2egmcxfuaLggVdcyZ1EhYr' -o /tmp/meta.json
           python - <<'PY'
           import json
           d=json.load(open('/tmp/meta.json'))
