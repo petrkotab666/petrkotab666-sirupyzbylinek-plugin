@@ -21,6 +21,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      - name: Ověřit nasazení opravy reklam
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          health="$(curl -fsSL --max-time 20 'https://nasekadan.cz/deployment-health.txt?audit=adfix-20260912')"
+          css="$(curl -fsSL --max-time 20 'https://nasekadan.cz/style.css?audit=adfix-20260912')"
+          printf '%s\n' "$health"
+          grep -Fq 'source=bridge:20260912-ad-blank-visual-guard-v1' <<<"$health"
+          grep -Fq 'NK_AD_BLANK_VISUAL_GUARD_20260912' <<<"$css"
+          echo 'PUBLIC_AD_VISUAL_FIX_OK'
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
