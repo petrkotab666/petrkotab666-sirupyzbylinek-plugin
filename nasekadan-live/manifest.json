@@ -1,42 +1,12 @@
 {
   "schema": 1,
-  "version": "20260912-ohre-home-hero-v5",
+  "version": "20260912-ad-blank-visual-guard-v1",
   "files": [],
   "patches": [
     {
-      "path": "index.html",
-      "old": "data-latest-article-href=\"/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html\"",
-      "new": "data-latest-article-href=\"/clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html\"",
-      "count": 1
-    },
-    {
-      "path": "index.html",
-      "old": "<div class=\"photo\" role=\"img\" aria-label=\"Ohře v Kadani zůstává pod hranicí hydrologického sucha. Zákazy odběrů dál platí\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
-      "new": "<div class=\"photo\" role=\"img\" aria-label=\"Ohře v Kadani je pořád pod hranicí sucha\" style=\"background-image:url('https://nasekadan.cz/social/ohre-kadan-sucho-zakazy-odberu-zari-2026.svg');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
-      "count": 1
-    },
-    {
-      "path": "index.html",
-      "old": "<small>AKTUÁLNĚ · VODA · OHŘE · KADAŇ · 12. 9. 2026 · 20:29</small>",
-      "new": "<small>KADAŇ · OHŘE · SUCHO · 12. 9. 2026 · 20:35</small>",
-      "count": 1
-    },
-    {
-      "path": "index.html",
-      "old": "<h1>Ohře v Kadani zůstává pod hranicí hydrologického sucha. Zákazy odběrů dál platí</h1>",
-      "new": "<h1>Ohře v Kadani je pořád pod hranicí sucha. Zákazy odběrů z menších toků dál platí</h1>",
-      "count": 1
-    },
-    {
-      "path": "index.html",
-      "old": "<p>Poslední veřejně dostupná data ČHMÚ ukazovala na profilu Kadaň 11. září odpoledne 27 až 29 cm při hranici hydrologického sucha 34 cm. Na úřední desce města dál zůstávají dva zákazy odběru povrchových vod s platností do odvolání.</p>",
-      "new": "<p>Léto pomalu končí, problém s nízkou vodou ale ne. Ohře měla v sobotu večer 29 cm při hranici sucha 34 cm a omezení odběrů z vyjmenovaných menších toků dál platí do odvolání.</p>",
-      "count": 1
-    },
-    {
-      "path": "index.html",
-      "old": "<a class=\"btn\" href=\"/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html\">Přečíst nejnovější článek →</a>",
-      "new": "<a class=\"btn\" href=\"/clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html\">Přečíst nejnovější článek →</a>",
+      "path": "style.css",
+      "old": ".article-shell .article > .event > time{\n  display:inline-block!important;\n  height:auto!important;\n  max-width:100%!important;\n  white-space:normal!important;\n}",
+      "new": ".article-shell .article > .event > time{\n  display:inline-block!important;\n  height:auto!important;\n  max-width:100%!important;\n  white-space:normal!important;\n}\n\n/* NK_AD_BLANK_VISUAL_GUARD_20260912\n   Pokud reklama nema skutecny obrazek, nevyrabime dekorativni gradient ani obri prazdnou plochu. */\nhtml body .article-shell[data-article-template=\"unified-v1\"] .featured-cleaning-ad a.promo-card-wide.promo-card-full-image:not(:has(.promo-banner img))::before,\nhtml body .article-shell[data-article-template=\"unified-v1\"] .featured-rotating-ad a.promo-card-wide.promo-card-full-image:not(:has(.promo-banner img))::before,\nhtml body .article-shell[data-article-template=\"unified-v1\"] > .article a.promo-card-wide.promo-card-full-image:not(:has(.promo-banner img))::before,\nhtml body a.promo-card-wide:not(:has(.promo-banner img))::before,\nhtml body a.promo-card:not(:has(.promo-banner img))::before,\nhtml body a.article-rail-card.is-image-error::before,\nhtml body a.article-rail-card:not(:has(img))::before{\n  content:none!important;\n  display:none!important;\n  width:0!important;\n  height:0!important;\n  min-height:0!important;\n  margin:0!important;\n  background:none!important;\n  box-shadow:none!important;\n}\nhtml body a.promo-card-wide:not(:has(.promo-banner img)){\n  height:auto!important;\n  min-height:0!important;\n  aspect-ratio:auto!important;\n  overflow:hidden!important;\n}\nhtml body a.promo-card-wide:not(:has(.promo-banner img)) > .promo-banner-fallback{\n  display:none!important;\n  height:0!important;\n  min-height:0!important;\n  margin:0!important;\n  padding:0!important;\n}\nhtml body a.promo-card-wide:not(:has(.promo-banner img)) > .promo-wide-copy{\n  display:flex!important;\n  position:static!important;\n  flex-direction:column!important;\n  gap:7px!important;\n  min-height:0!important;\n  padding:18px 24px 22px!important;\n  background:#fff!important;\n  color:#17242d!important;\n}\nhtml body a.article-rail-card.is-image-error .article-rail-fallback{display:none!important}\nhtml body a.article-rail-card.is-image-error .article-rail-copy{display:flex!important}",
       "count": 1
     }
   ],
