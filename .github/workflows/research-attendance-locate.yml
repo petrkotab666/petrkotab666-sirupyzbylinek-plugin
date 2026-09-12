@@ -1,0 +1,73 @@
+name: Locate attendance meeting start
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+    paths:
+      - '.github/workflows/research-attendance-locate.yml'
+permissions:
+  contents: write
+jobs:
+  locate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-attendance-view-20241106
+      - name: Prepare
+        run: |
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          command -v tesseract >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-ces)
+      - name: Locate start from HLS segments
+        shell: bash
+        run: |
+          set -euo pipefail
+          MASTER='https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/4596793a-66a9-4cf5-b40e-0bb973996508-master.m3u8'
+          mkdir -p /tmp/loc
+          curl -fsSL "$MASTER" -o /tmp/master.m3u8
+          python - <<'PY'
+          import urllib.request, urllib.parse, re, os, subprocess
+          master='https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/4596793a-66a9-4cf5-b40e-0bb973996508-master.m3u8'
+          txt=open('/tmp/master.m3u8').read().splitlines()
+          variants=[]
+          for i,l in enumerate(txt):
+              if l.startswith('#EXT-X-STREAM-INF') and i+1<len(txt):
+                  bw=int(re.search(r'BANDWIDTH=(\d+)',l).group(1)) if 'BANDWIDTH=' in l else 0
+                  variants.append((bw, urllib.parse.urljoin(master,txt[i+1].strip())))
+          variants.sort()
+          var=variants[0][1]
+          vtxt=urllib.request.urlopen(var).read().decode().splitlines()
+          segs=[]; dur=None; t=0.0
+          for l in vtxt:
+              if l.startswith('#EXTINF:'):
+                  dur=float(l.split(':',1)[1].split(',')[0])
+              elif l and not l.startswith('#') and dur is not None:
+                  segs.append((t,dur,urllib.parse.urljoin(var,l.strip())))
+                  t+=dur; dur=None
+          targets=list(range(180,901,30))
+          rows=[]
+          for target in targets:
+              s=next((x for x in segs if x[0] <= target < x[0]+x[1]),None)
+              if not s: continue
+              start,d,u=s
+              fn=f'/tmp/loc/{target:04d}.ts'
+              urllib.request.urlretrieve(u,fn)
+              jpg=f'/tmp/loc/{target:04d}.jpg'
+              subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',fn,'-frames:v','1',jpg],check=False)
+              try:
+                  o=subprocess.check_output(['tesseract',jpg,'stdout','-l','ces+eng','--psm','11'],stderr=subprocess.DEVNULL,text=True)
+              except Exception:
+                  o=''
+              rows.append((target,start,u,o.replace('\n',' | ')))
+          with open('tmp/attendance_locator.txt','w',encoding='utf-8') as f:
+              f.write('variant='+var+'\n')
+              for r in rows:
+                  f.write(f'target={r[0]} segstart={r[1]:.3f} url={r[2]} OCR={r[3]}\n')
+          PY
+      - name: Save locator
+        run: |
+          git config user.name 'attendance-research-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add tmp/attendance_locator.txt
+          git commit -m 'Lokátor začátku jednání 6. 11. 2024' || exit 0
+          git push origin HEAD:tmp-attendance-view-20241106
