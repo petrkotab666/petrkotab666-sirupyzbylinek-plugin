@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'nasekadan-live/audit_live_site.py'
+      - 'nasekadan-live/visual_browser_audit.py'
       - 'nasekadan-live/live-audit-trigger.txt'
       - '.github/workflows/nasekadan-live-audit.yml'
   workflow_dispatch:
@@ -27,7 +28,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Ověřit vizuální hotfix a pořídit desktop screenshot
+
+      - name: Ověřit vizuální hotfix a pořídit kontrolní screenshot
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -50,11 +52,22 @@ jobs:
             --screenshot=nasekadan-live/visual-target-after.png \
             "https://nasekadan.cz/clanky/kadansky-klaster-vratte-nam-knihy-1986.html?visual_check=${GITHUB_RUN_ID}-$(date +%s)"
           test -s nasekadan-live/visual-target-after.png
-      - name: Ověřit syntaxi
-        run: python -m py_compile nasekadan-live/audit_live_site.py
-      - name: Projít skutečný veřejný web
+
+      - name: Nainstalovat nástroje pro skutečný browserový audit
+        run: python -m pip install --quiet playwright
+
+      - name: Ověřit syntaxi auditů
+        run: |
+          python -m py_compile nasekadan-live/audit_live_site.py
+          python -m py_compile nasekadan-live/visual_browser_audit.py
+
+      - name: Projít celý veřejný web v reálném browseru
+        run: python nasekadan-live/visual_browser_audit.py
+
+      - name: Projít celý veřejný web technickým auditem
         run: python nasekadan-live/audit_live_site.py
-      - name: Vytvořit kompaktní souhrn
+
+      - name: Vytvořit kompaktní technický souhrn
         if: always()
         shell: bash
         run: |
@@ -87,23 +100,29 @@ jobs:
           Path('nasekadan-live/live-audit-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print(json.dumps({k:summary[k] for k in ('status','error_count','warning_count','error_types','warning_types')},ensure_ascii=False,indent=2))
           PY
-      - name: Uložit auditní report
+
+      - name: Uložit auditní reporty
         if: always()
         shell: bash
         run: |
           set -euo pipefail
           test -s nasekadan-live/live-audit-report.json || exit 1
           test -s nasekadan-live/live-audit-summary.json || exit 1
+          test -s nasekadan-live/visual-browser-audit.json || exit 1
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add nasekadan-live/live-audit-report.json nasekadan-live/live-audit-summary.json
+          git add nasekadan-live/live-audit-report.json nasekadan-live/live-audit-summary.json nasekadan-live/visual-browser-audit.json
           git diff --cached --quiet && exit 0
-          git commit -m 'Aktualizovat nezávislý audit Naše Kadaň [skip ci]'
+          git commit -m 'Aktualizovat technický a browserový vizuální audit Naše Kadaň [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: nasekadan-visual-target-after
-          path: nasekadan-live/visual-target-after.png
+          name: nasekadan-full-visual-browser-audit
+          path: |
+            nasekadan-live/visual-target-after.png
+            nasekadan-live/visual-browser-audit.json
+            nasekadan-live/visual-findings/*.png
           if-no-files-found: ignore
