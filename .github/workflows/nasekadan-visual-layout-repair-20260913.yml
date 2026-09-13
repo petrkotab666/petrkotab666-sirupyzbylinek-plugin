@@ -1,0 +1,182 @@
+name: Naše Kadaň – vizuální oprava článků 2026-09-13
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/nasekadan-visual-layout-repair-20260913.yml'
+
+permissions:
+  contents: write
+
+env:
+  TARGET: https://nasekadan.cz/clanky/kadansky-klaster-vratte-nam-knihy-1986.html
+  VERSION: 20260913-visual-layout-isolation-v1
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Stáhnout živou stránku a globální CSS
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          mkdir -p nasekadan-live/files/clanky
+          curl -4 -fsSL --retry 5 --retry-all-errors --max-time 30 -H 'Cache-Control: no-cache' \
+            "${TARGET}?visual_source=${GITHUB_RUN_ID}-$(date +%s)" \
+            -o /tmp/article.html
+          curl -4 -fsSL --retry 5 --retry-all-errors --max-time 30 -H 'Cache-Control: no-cache' \
+            "https://nasekadan.cz/style.css?visual_source=${GITHUB_RUN_ID}-$(date +%s)" \
+            -o /tmp/style.css
+          grep -Fq '<header class="hero">' /tmp/article.html
+          grep -Fq '.hero{display:grid;grid-template-columns:minmax(0,2fr)' /tmp/style.css
+
+      - name: Izolovat domovský CSS od článků a opravit titulkový blok
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,re
+
+          version='20260913-visual-layout-isolation-v1'
+          target_rel='clanky/kadansky-klaster-vratte-nam-knihy-1986.html'
+
+          css=Path('/tmp/style.css').read_text(encoding='utf-8')
+          marker='/* NK_VISUAL_ISOLATION_20260913 */'
+          fix=r'''
+/* NK_VISUAL_ISOLATION_20260913 */
+/* Homepage styly nesmí měnit vnitřní hlavičky, hero bloky a postranní sloupce článků. */
+main.article-shell header:not([data-site-header="v1"]){position:static;top:auto;z-index:auto;backdrop-filter:none;background:transparent;border-bottom:0}
+main.article-shell .hero{display:block;grid-template-columns:none;gap:0}
+main.article-shell>aside{padding:0;background:transparent;border:0;box-shadow:none;border-radius:0}
+'''.lstrip()
+          if marker not in css:
+              css=css.rstrip()+"\n\n"+fix
+          Path('nasekadan-live/files/style.css').write_text(css,encoding='utf-8',newline='\n')
+
+          a=Path('/tmp/article.html').read_text(encoding='utf-8')
+          # oddělit redakční hero od homepage třídy .hero
+          a=a.replace('.hero{max-width:1000px;', '.article-hero{max-width:1000px;',1)
+          a=a.replace('.hero{padding:37px 22px 25px}', '.article-hero{padding:37px 22px 25px}',1)
+          a=a.replace('.hero{padding:24px 0 18px}', '.article-hero{padding:24px 0 18px}',1)
+          a=a.replace('.article>.hero{', '.article>.article-hero{',1)
+          a=a.replace('.article>.hero h1{', '.article>.article-hero h1{',1)
+          a=a.replace('<header class="hero">','<header class="article-hero">',1)
+          a=a.replace('h1{font-size:clamp(35px,4.8vw,60px);line-height:1.11;letter-spacing:-.035em;font-weight:700;margin:0 0 27px;max-width:940px}',
+                      'h1{font-size:clamp(38px,4vw,56px);line-height:1.08;letter-spacing:-.035em;font-weight:700;margin:0 0 24px;max-width:790px}',1)
+          a=a.replace('.article>.article-hero{padding:0 0 28px;margin:0;max-width:none}',
+                      '.article>.article-hero{display:block;position:static;top:auto;z-index:auto;backdrop-filter:none;border:0;background:transparent;grid-template-columns:none;gap:0;padding:0 0 28px;margin:0;max-width:none}',1)
+          # cache-bust nové globální CSS na opravované stránce
+          a=a.replace('href="/style.css"','href="/style.css?v=20260913-visual-v1"',1)
+          if '<header class="article-hero">' not in a:
+              raise SystemExit('ARTICLE_HERO_RENAME_FAILED')
+          if 'NK_VISUAL_ISOLATION_20260913' not in css:
+              raise SystemExit('GLOBAL_VISUAL_GUARD_FAILED')
+          out=Path('nasekadan-live/files')/target_rel
+          out.write_text(a,encoding='utf-8',newline='\n')
+
+          files=[]
+          for rel in ('style.css',target_rel):
+              p=Path('nasekadan-live/files')/rel
+              files.append({'path':rel,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+          manifest={'schema':1,'version':version,'files':files,'patches':[],'deletes':[]}
+          Path('nasekadan-live/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(manifest,ensure_ascii=False))
+          PY
+
+      - name: Vizuální rizikový audit živých článků
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python - <<'PY'
+          import json,re,urllib.request,urllib.parse,xml.etree.ElementTree as ET
+          UA='NaseKadanVisualAudit/20260913'
+          def get(url):
+              req=urllib.request.Request(url,headers={'User-Agent':UA,'Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=25) as r: return r.read().decode('utf-8','ignore')
+          sm=get('https://nasekadan.cz/sitemap.xml')
+          urls=[e.text.strip() for e in ET.fromstring(sm).iter() if e.tag.endswith('loc') and e.text and '/clanky/' in e.text]
+          findings=[]
+          for url in urls:
+              try: t=get(url+'?visual_audit=20260913')
+              except Exception as e:
+                  findings.append({'url':url,'risk':'fetch_error','detail':str(e)[:160]}); continue
+              if '/style.css' not in t: continue
+              risks=[]
+              # Vnitřní hero/header + globální CSS bylo příčinou rozpadlého titulku ze screenshotu.
+              if re.search(r'<header\b(?![^>]*data-site-header=)[^>]*class=["\'][^"\']*\bhero\b',t,re.I): risks.append('nested_header_hero')
+              if re.search(r'<main\b[^>]*article-shell[^>]*>.*?<aside\b',t,re.I|re.S): risks.append('article_shell_aside')
+              if re.search(r'class=["\'][^"\']*\bphoto\b',t,re.I): risks.append('generic_photo')
+              if re.search(r'class=["\'][^"\']*\bcopy\b',t,re.I): risks.append('generic_copy')
+              if risks: findings.append({'url':url,'risks':risks})
+          report={'article_urls_checked':len(urls),'risk_pattern_pages':len(findings),'findings':findings}
+          open('nasekadan-live/visual-layout-audit-20260913.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({'checked':len(urls),'risk_pages':len(findings)},ensure_ascii=False))
+          PY
+
+      - name: Commitnout payload a manifest
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name 'Naše Kadaň visual repair bot'
+          git config user.email 'info@nasekadan.cz'
+          git add nasekadan-live/manifest.json nasekadan-live/files/style.css \
+            nasekadan-live/files/clanky/kadansky-klaster-vratte-nam-knihy-1986.html \
+            nasekadan-live/visual-layout-audit-20260913.json
+          git commit -m 'Opravit rozpad článkového hero a CSS kolize [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Počkat na nativní bridge a ověřit veřejný web
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          for attempt in $(seq 1 36); do
+            sleep 5
+            q="${GITHUB_RUN_ID}-${attempt}-$(date +%s)"
+            health="$(curl -4 -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?visual=$q" || true)"
+            printf '%s\n' "$health"
+            if grep -Fq "source=bridge:${VERSION}" <<<"$health"; then
+              css="$(curl -4 -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/style.css?visual=$q")"
+              art="$(curl -4 -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${TARGET}?visual=$q")"
+              grep -Fq 'NK_VISUAL_ISOLATION_20260913' <<<"$css"
+              grep -Fq 'class="article-hero"' <<<"$art"
+              grep -Fq 'style.css?v=20260913-visual-v1' <<<"$art"
+              echo VISUAL_LAYOUT_PUBLIC_OK
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Udělat desktop screenshot po opravě
+        if: success()
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$CHROME" ]; then
+            echo 'Chrome není na runneru, screenshot přeskočen.'
+            exit 0
+          fi
+          "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars \
+            --window-size=1600,1000 --screenshot=nasekadan-live/visual-after-1600.png \
+            "${TARGET}?visual_screenshot=${GITHUB_RUN_ID}-$(date +%s)" || true
+          test ! -f nasekadan-live/visual-after-1600.png || file nasekadan-live/visual-after-1600.png
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nasekadan-visual-layout-after
+          path: |
+            nasekadan-live/visual-after-1600.png
+            nasekadan-live/visual-layout-audit-20260913.json
+          if-no-files-found: ignore
