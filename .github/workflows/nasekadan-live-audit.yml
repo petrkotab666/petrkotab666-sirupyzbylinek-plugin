@@ -27,6 +27,130 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Počkat na vizuální hotfix
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          for i in $(seq 1 36); do
+            q="${GITHUB_RUN_ID}-$i-$(date +%s)"
+            health="$(curl -4 -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?visual_audit=$q" || true)"
+            css="$(curl -4 -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/style.css?visual_audit=$q" || true)"
+            if grep -Fq 'NK_VISUAL_LAYOUT_GUARD_20260913' <<<"$css"; then
+              echo 'VISUAL_HOTFIX_PUBLIC_OK'
+              printf '%s\n' "$health"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo 'Vizuální hotfix se nepropsal na veřejný web.' >&2
+          exit 1
+
+      - name: Nainstalovat browserový audit
+        run: python -m pip install --quiet playwright
+
+      - name: Vizuální audit skutečně vykresleného webu
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json, shutil, urllib.request, xml.etree.ElementTree as ET
+          from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+
+          ROOT='https://nasekadan.cz'
+          TARGET=ROOT+'/clanky/kadansky-klaster-vratte-nam-knihy-1986.html'
+          chrome=(shutil.which('google-chrome') or shutil.which('chromium') or shutil.which('chromium-browser'))
+          if not chrome:
+              raise SystemExit('CHROME_NOT_FOUND')
+
+          req=urllib.request.Request(ROOT+'/sitemap.xml?visual=20260913',headers={'User-Agent':'NaseKadanVisualAudit/20260913','Cache-Control':'no-cache'})
+          with urllib.request.urlopen(req,timeout=30) as r:
+              xml=r.read()
+          urls=[]
+          for el in ET.fromstring(xml).iter():
+              if el.tag.endswith('loc') and el.text and el.text.strip().startswith(ROOT):
+                  urls.append(el.text.strip())
+          urls=list(dict.fromkeys(urls))
+
+          findings=[]
+          metrics=[]
+          with sync_playwright() as p:
+              browser=p.chromium.launch(executable_path=chrome,headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
+              context=browser.new_context(viewport={'width':1600,'height':1000},device_scale_factor=1)
+              page=context.new_page()
+              page.set_default_timeout(12000)
+              for idx,url in enumerate(urls,1):
+                  try:
+                      page.goto(url+'?visual_browser=20260913',wait_until='domcontentloaded',timeout=20000)
+                      page.wait_for_timeout(120)
+                      data=page.evaluate('''() => {
+                        const visible = el => {
+                          if (!el) return false;
+                          const s=getComputedStyle(el), r=el.getBoundingClientRect();
+                          return s.display!=='none' && s.visibility!=='hidden' && r.width>1 && r.height>1;
+                        };
+                        const h1=document.querySelector('h1');
+                        let h1m=null;
+                        if (h1 && visible(h1)) {
+                          const r=h1.getBoundingClientRect(), s=getComputedStyle(h1);
+                          const lh=parseFloat(s.lineHeight) || parseFloat(s.fontSize)*1.15;
+                          h1m={width:Math.round(r.width),height:Math.round(r.height),fontSize:parseFloat(s.fontSize),lineHeight:lh,lines:Math.max(1,Math.round(r.height/lh)),text:(h1.textContent||'').trim().slice(0,220)};
+                        }
+                        const nested=[...document.querySelectorAll('main.article-shell header:not([data-site-header])')].filter(visible).map(el=>{
+                          const s=getComputedStyle(el),r=el.getBoundingClientRect();
+                          return {className:el.className,display:s.display,position:s.position,width:Math.round(r.width),height:Math.round(r.height),gridTemplateColumns:s.gridTemplateColumns};
+                        });
+                        const broken=[...document.images].filter(i=>visible(i) && i.complete && i.naturalWidth===0).map(i=>i.currentSrc||i.src).slice(0,20);
+                        const ads=[...document.querySelectorAll('.promo-card,.article-rail-card,.featured-cleaning-ad a,.featured-rotating-ad a')].filter(visible).map(el=>{
+                          const r=el.getBoundingClientRect();
+                          return {w:Math.round(r.width),h:Math.round(r.height),imgs:el.querySelectorAll('img').length,text:(el.textContent||'').trim().replace(/\\s+/g,' ').slice(0,100)};
+                        });
+                        return {
+                          title:document.title,
+                          viewport:innerWidth,
+                          scrollWidth:document.documentElement.scrollWidth,
+                          overflowX:Math.max(0,document.documentElement.scrollWidth-innerWidth),
+                          h1:h1m,
+                          nestedHeaders:nested,
+                          brokenImages:broken,
+                          hugeAds:ads.filter(a=>a.h>520 || (a.w>0 && a.h/a.w>2.5)),
+                          bodyText:(document.body.innerText||'').length
+                        };
+                      }''')
+                  except Exception as exc:
+                      findings.append({'url':url,'type':'render_error','detail':str(exc)[:240]})
+                      continue
+
+                  if data['overflowX']>8:
+                      findings.append({'url':url,'type':'horizontal_overflow','px':data['overflowX']})
+                  if data['brokenImages']:
+                      findings.append({'url':url,'type':'rendered_broken_images','sources':data['brokenImages']})
+                  if '/clanky/' in url and data.get('h1') and data['h1']['lines']>5:
+                      findings.append({'url':url,'type':'desktop_h1_too_many_lines','h1':data['h1']})
+                  for nh in data['nestedHeaders']:
+                      if nh['position'] in ('sticky','fixed') or nh['display'] in ('grid','inline-grid'):
+                          findings.append({'url':url,'type':'article_nested_header_layout_collision','header':nh})
+                  if data['hugeAds']:
+                      findings.append({'url':url,'type':'oversized_ad_render','ads':data['hugeAds']})
+                  if url==TARGET:
+                      metrics.append({'url':url,'target':data})
+                      page.screenshot(path='nasekadan-live/visual-target-after.png',full_page=False)
+
+              browser.close()
+
+          report={
+            'status':'PASSED' if not findings else 'REVIEW',
+            'viewport':{'width':1600,'height':1000},
+            'urls_checked':len(urls),
+            'finding_count':len(findings),
+            'findings':findings,
+            'target_metrics':metrics,
+          }
+          Path('nasekadan-live/visual-browser-audit.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({'status':report['status'],'urls_checked':report['urls_checked'],'finding_count':report['finding_count'],'target_metrics':metrics},ensure_ascii=False,indent=2))
+          PY
+
       - name: Ověřit syntaxi
         run: python -m py_compile nasekadan-live/audit_live_site.py
       - name: Projít skutečný veřejný web
@@ -74,7 +198,17 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add nasekadan-live/live-audit-report.json nasekadan-live/live-audit-summary.json
+          test ! -s nasekadan-live/visual-browser-audit.json || git add nasekadan-live/visual-browser-audit.json
           git diff --cached --quiet && exit 0
-          git commit -m 'Aktualizovat nezávislý audit Naše Kadaň [skip ci]'
+          git commit -m 'Aktualizovat technický a vizuální audit Naše Kadaň [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nasekadan-visual-browser-audit
+          path: |
+            nasekadan-live/visual-target-after.png
+            nasekadan-live/visual-browser-audit.json
+          if-no-files-found: ignore
