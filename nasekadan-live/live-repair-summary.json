@@ -1,5 +1,10 @@
 {
-  "targets": 132,
-  "generated": 132,
-  "failures": []
+  "targets": 210,
+  "generated": 209,
+  "failures": [
+    {
+      "url": "https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
+      "error": "RuntimeError('https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html: og:image není /social/: /social-card.png')"
+    }
+  ]
 }
