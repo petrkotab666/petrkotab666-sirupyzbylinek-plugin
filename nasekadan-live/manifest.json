@@ -1,12 +1,14 @@
 {
   "schema": 1,
-  "version": "20260913-last-duplicate-title-fix-v1",
-  "files": [
+  "version": "20260913-visual-layout-guard-v1",
+  "files": [],
+  "patches": [
     {
-      "path": "clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
-      "sha256": "8bd9f87d134f8bdd29d290f27fa3c3abd56cb74413fc19a3b1d949d14b05a719"
+      "path": "style.css",
+      "old": "/* /Titulní obrázek: MHD Kadaň */",
+      "new": "/* /Titulní obrázek: MHD Kadaň */\n\n/* NK_VISUAL_LAYOUT_GUARD_20260913 */\nmain.article-shell header.hero{position:static!important;top:auto!important;z-index:auto!important;backdrop-filter:none!important;background:transparent!important;border-bottom:0!important;display:block!important;grid-template-columns:none!important;gap:0!important;padding:0 0 28px!important;margin:0!important;max-width:none!important}\nmain.article-shell header.hero h1{max-width:790px!important;font-size:clamp(38px,4vw,56px)!important;line-height:1.08!important}\nmain.article-shell>aside.sticky{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}\n/* /NK_VISUAL_LAYOUT_GUARD_20260913 */",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": []
 }
