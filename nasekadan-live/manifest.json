@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "version": "20260913-visual-layout-guard-v2",
+  "version": "20260913-hospital-home-image-guard-v1",
   "files": [],
   "patches": [
     {
       "path": "style.css",
-      "old": ":root{--red:#a9232b;--red2:#7f1720;",
-      "new": "/* NK_VISUAL_LAYOUT_GUARD_20260913 */\nmain.article-shell header.hero{position:static!important;top:auto!important;z-index:auto!important;backdrop-filter:none!important;background:transparent!important;border-bottom:0!important;display:block!important;grid-template-columns:none!important;gap:0!important;padding:0 0 28px!important;margin:0!important;max-width:none!important}\nmain.article-shell header.hero h1{max-width:790px!important;font-size:clamp(38px,4vw,56px)!important;line-height:1.08!important}\nmain.article-shell>aside.sticky{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}\n/* /NK_VISUAL_LAYOUT_GUARD_20260913 */\n:root{--red:#a9232b;--red2:#7f1720;",
+      "old": "/* /NK_VISUAL_LAYOUT_GUARD_20260913 */\n:root{--red:#a9232b;--red2:#7f1720;",
+      "new": "/* /NK_VISUAL_LAYOUT_GUARD_20260913 */\n/* NK_HOSPITAL_HOME_IMAGE_GUARD_20260913 */\n.article-card[data-auto-article=\"vyhruzka-bombou-nemocnice-kadan-8-zari-2026\"] .visual,.article-card:has(a[href=\"/clanky/vyhruzka-bombou-nemocnice-kadan-8-zari-2026.html\"]) .visual{background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('/social/nemocnice-kadan-363f87ff7a.png')!important;background-color:#0b202b!important;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important}\n/* /NK_HOSPITAL_HOME_IMAGE_GUARD_20260913 */\n:root{--red:#a9232b;--red2:#7f1720;",
       "count": 1
     }
   ],
