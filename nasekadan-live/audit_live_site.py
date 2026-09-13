@@ -105,14 +105,11 @@ def title_figures(body: str, page_url: str) -> list[dict]:
         height = attr(im.group(0), "height")
         low = block.lower()
         is_title = (
-            urllib.parse.urlsplit(srcn).path.startswith("/social/")
-            and (
-                (width == "1200" and height == "630")
-                or "redakční grafika" in low
-                or "titulní grafika" in low
-                or "data-nk-title-figure" in low
-                or "article-photo" in low
-            )
+            (width == "1200" and height == "630")
+            or "redakční grafika" in low
+            or "titulní grafika" in low
+            or "data-nk-title-figure" in low
+            or "article-photo" in low
         )
         if is_title:
             result.append({"src": srcn, "html": block[:700]})
@@ -123,7 +120,7 @@ def image_refs(body: str, page_url: str) -> list[str]:
     out = []
     for tag in re.findall(r"<img\b[^>]*>", body, re.I | re.S):
         src = attr(tag, "src")
-        if src:
+        if src and not src.lower().startswith("data:"):
             u = norm(src, page_url)
             if internal(u):
                 out.append(u)

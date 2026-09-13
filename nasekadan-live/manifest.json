@@ -1,251 +1,242 @@
 {
   "schema": 1,
-  "version": "20260913-sitewide-repair-batch-3-of-3-final",
+  "version": "20260913-final-audit-repair-v1",
   "files": [
     {
-      "path": "clanky/prijezd-cisare-kadan-1367-hra.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/prijezd-cisare-kadan-1367-hra.html",
-      "sha256": "b40416825745025a42667c18d656953ff3a5a4974ed8b003f95c9ee42c90b400"
+      "path": "clanky/1-zari-kadan-skoly-vyluka-ohre-2026.html",
+      "sha256": "f25a53af4a2a208ea0874018421390759584e8fdbe48105e5d2911bec10c52de"
+    },
+    {
+      "path": "clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
+      "sha256": "738e982da9c757e3b0b8cd8c8ba0a41d0a6adac92be6f182d2892eca1e19132c"
+    },
+    {
+      "path": "clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
+      "sha256": "d2702608bdcf23b9e7bb4981a73803c8f3174f950dbb6d5c8adf7d343ed854b7"
+    },
+    {
+      "path": "clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
+      "sha256": "830db79b50dd9655ea141004967ecda5eca2d7d742767d1432523adddf0a090a"
+    },
+    {
+      "path": "clanky/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026.html",
+      "sha256": "630bb658cefc1031af72a412e93485c295312ca251eb2ec588e6f1dafed0d7a0"
+    },
+    {
+      "path": "clanky/bily-kun-245-tisic-kadan-policie-2026.html",
+      "sha256": "a47c3672c2f154c1b7297a1aaef8b2ea4254f5bf3c445084e5ee7755468270a3"
+    },
+    {
+      "path": "clanky/bomba-nebyla-nasledky-ano-nemocnice-kadan-8-zari-2026.html",
+      "sha256": "ba5336b0a61f578c5a0f08f9e423339c089c182e6d0c140046083950ec90cc2a"
+    },
+    {
+      "path": "clanky/cisarsky-den-kadan-2026-jak-probehl.html",
+      "sha256": "d6b54a48784eae57e47d3e92ed30650996ac820959393e603d4dae7d03e09c70"
+    },
+    {
+      "path": "clanky/cisarsky-den-kadan-2026-program-doprava.html",
+      "sha256": "88bd006621b36b98f24e3475e78689564ba7ce4440748883623a8c021e388107"
+    },
+    {
+      "path": "clanky/d7-sporice-omezeni-18-srpna-2026.html",
+      "sha256": "37dae5ce2c57743247e74f66c9bb8457b5b95380fee3022e0303d03840a45ed4"
+    },
+    {
+      "path": "clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
+      "sha256": "adf77aeb483e8b39f6adec3278af6720f52ac6ca73ca72d3f2aaea08925a93ed"
+    },
+    {
+      "path": "clanky/historicky-hurvinek-kadan-prunerov-vejprty-16-srpna-2026.html",
+      "sha256": "3a2830e66f7f2b90de56405c14083c4e4554104181174db3e744b5e680e225d1"
+    },
+    {
+      "path": "clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
+      "sha256": "69b10e0fa0bf641a9663efd1e6f6c4516378712c4e864f6cb0fcb4355c3f080a"
+    },
+    {
+      "path": "clanky/horni-halze-loucna-uzavirka-23-srpna-2026.html",
+      "sha256": "fe6bceb6c7a6ff6e43b071b2900f02e2cfe085ba8bf020f1f63b2939753aaea3"
+    },
+    {
+      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
+      "sha256": "ab9d2eeaa43b887232a1da9838b20eae661ceabeb0cdc231e486f61617df5019"
+    },
+    {
+      "path": "clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html",
+      "sha256": "c1c8dc893e71bb8ce953a1181a09ec2ec70568e1be18b4efb4448e4bb02575d6"
+    },
+    {
+      "path": "clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html",
+      "sha256": "b13540871a098aa25ba1a3db2ce0088e6c89743f2d369df2bacccd3db2b358a0"
+    },
+    {
+      "path": "clanky/jezerka-kadan-prevod-investice-309-milionu-2026.html",
+      "sha256": "bef03c4c5c2381b8484cfb64cd4f4941595858545cc41a2c6b8a7ea55c1a1e21"
+    },
+    {
+      "path": "clanky/kadan-cheb-vyhra-5-2-priprava-2026.html",
+      "sha256": "e7e8d05435d0e3c69bbcab8bbd55079377aaa9be7fe41bec78ea6ca9e14b40c1"
+    },
+    {
+      "path": "clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
+      "sha256": "8da9685080fcc7316098162e5a93775a4346bcff7032b4e80de41360e07a7b1e"
+    },
+    {
+      "path": "clanky/kadan-turismus-potencial-analyza-2026.html",
+      "sha256": "7b1ac8e45bfe97f2f811b33a17c2f3943cb524823a15aceac04029330a13f6f9"
+    },
+    {
+      "path": "clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
+      "sha256": "75d8eeacf910a076105f87a902e361406b40af4a72a1a3bed908bf7d41d0597a"
+    },
+    {
+      "path": "clanky/kadansky-klaster-agent-cerich.html",
+      "sha256": "9f7ea28358a8795b28bc95bdbcf0de8c02eb3482b1453a178bd13228462f90f9"
+    },
+    {
+      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
+      "sha256": "1fec79c0bef3fd299de409ec5a3ecab7105fb0b30e49f688f226344149c55900"
+    },
+    {
+      "path": "clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
+      "sha256": "9ccc4460d64970d8773afac48707315fce27ea889628b9926152372e941cd947"
+    },
+    {
+      "path": "clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
+      "sha256": "c6cb72a06003580afe8cec840a00d9673594cef34ef33a26d5ac62d7c8e0d714"
+    },
+    {
+      "path": "clanky/kam-v-kadani-a-okoli-7-13-zari-2026.html",
+      "sha256": "10cba9f044d5f2540ccd7465f22ab6c4cac89e0cad6156676a08e16f959b968e"
+    },
+    {
+      "path": "clanky/kandidatky-kadan-2026-druhe-tri-pod-lupou.html",
+      "sha256": "075d1e50d5b089c50a852925b410ab1996b087d988270453fb946783980b848d"
+    },
+    {
+      "path": "clanky/kandidatky-kadan-2026-prvni-tri-pod-lupou.html",
+      "sha256": "b8ffac7be67ab9b0ddbcdc0cb8f3d4756719b372c441ed0ea21fde82c8718885"
+    },
+    {
+      "path": "clanky/kandidatky-kadan-registrace-komunalni-volby-2026.html",
+      "sha256": "1110623f5802ecec4e007fde7ea251441dc24e055c0e360abe716d69ef424417"
+    },
+    {
+      "path": "clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
+      "sha256": "567a4d8fffec3ca0f899dcd7e2084f7ccc25d9bdac5b791ef2dd691be4c60f10"
+    },
+    {
+      "path": "clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
+      "sha256": "0d24497b37732b0f64f62da8b3c150e70384dc45cababd1804c2353be01ccb9f"
+    },
+    {
+      "path": "clanky/nehoda-nova-kolonie-kadan-ctyri-auta-28-srpna-2026.html",
+      "sha256": "a20e5644c6856db98911b83080c570fdfbb03953a5b950360805fe01d3de68ab"
+    },
+    {
+      "path": "clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html",
+      "sha256": "755ab9b8f3423d58bc70f913d59feb4b9ea127a1a81d113977633c89620b41e3"
+    },
+    {
+      "path": "clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
+      "sha256": "fbfc588f3787a9d88be61ca92e333aabd2c2a606dad5088630385ff0352d76ef"
+    },
+    {
+      "path": "clanky/neurologie-nemocnice-kadan-uzavrena-4-11-zari-2026.html",
+      "sha256": "7a73e8573313a09e5d66dca9b7af455fea80aa95ae107b991e75e4cc6f0e5d7c"
+    },
+    {
+      "path": "clanky/ods-kadan-odpovedi-nase-kadan-2026.html",
+      "sha256": "2b8f77a321d25c5bd28dcbf8e0dc683ccc3535de08b64629c8a4a9f36f8cf81e"
+    },
+    {
+      "path": "clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
+      "sha256": "53899c562fdefdd72024cb454822db08ae695a0f035872ef4f3e642959e866d2"
+    },
+    {
+      "path": "clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
+      "sha256": "133d665bcafb8c547a921cffa5af1ea687409baff152d34d0ee5ecaaec87cfd8"
+    },
+    {
+      "path": "clanky/omezeni-i13-chomutov-17-srpna-2026.html",
+      "sha256": "8981e1c9530489571f612c74d489e20e5f6d2e37ffaa03f046ec10aa191accbd"
+    },
+    {
+      "path": "clanky/ozveny-kadanskeho-pohadkoveho-festivalu-2026.html",
+      "sha256": "995351aa0b1b63c5f2b34c00edb7ef7c425fe3458d69022224bfd542ab292b2b"
+    },
+    {
+      "path": "clanky/posledni-test-pred-ligou-kadan-decin-10-zari-2026.html",
+      "sha256": "67cf4ad6c5239e959681d1a529f446c6476d801ca7255097887e6a759da112cf"
+    },
+    {
+      "path": "clanky/pozar-trafostanice-kadan-4-zari-2026.html",
+      "sha256": "9039db9a38ceab85c79ac3ebca276b8522abae73fac6701a4c0a074e8b774b3a"
+    },
+    {
+      "path": "clanky/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.html",
+      "sha256": "bbf22e611a72e69d12ef68c26d379c89121c2eee657e2a849086a645e1f9489d"
     },
     {
       "path": "clanky/pro-kadan-a-okoli-odpovedi-nase-kadan-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/pro-kadan-a-okoli-odpovedi-nase-kadan-2026.html",
-      "sha256": "25e53e2d7a238bc0f84482cad6042b05e30ffd5fdc07f399df39d9a43178f484"
+      "sha256": "4b71de6ef2f9796fa84a1109ac1f273864c1dafb13db504c9b034bd5dfb7c18d"
     },
     {
       "path": "clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
-      "sha256": "488739b086cc3043a73000045eba06a00b1f2fc1444730a46127324502029683"
-    },
-    {
-      "path": "clanky/radka-kurzy-corrency-1000-korun-zari-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/radka-kurzy-corrency-1000-korun-zari-2026.html",
-      "sha256": "6c699e96003e8a708550fe47f2babbd1e07f18d8c5c25d1bb0b4503166963eaa"
-    },
-    {
-      "path": "clanky/replika-granatu-policie-kadan-vejprtsko-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/replika-granatu-policie-kadan-vejprtsko-2026.html",
-      "sha256": "aaaaf1aba9d5460f79b0618be017384efd2a6ebffec2341d1b9b2a7aef2c595f"
-    },
-    {
-      "path": "clanky/sekani-travniku-kadan-spravci-vysky-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/sekani-travniku-kadan-spravci-vysky-2026.html",
-      "sha256": "ee51150383b3adcc5eab4fb321fd38d7c9c7eff045410eb45bf7f5dc5db23621"
-    },
-    {
-      "path": "clanky/silnice-zatec-kadan-prejezd-uzavirka-srpen-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/silnice-zatec-kadan-prejezd-uzavirka-srpen-2026.html",
-      "sha256": "3f191d5837a5edb80d8b77bf43f110f2aab16cf8ac573733944ed9b23bf413a8"
-    },
-    {
-      "path": "clanky/skola-zacina-1-zari-2026-kadan-prehled-prvnich-dnu.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/skola-zacina-1-zari-2026-kadan-prehled-prvnich-dnu.html",
-      "sha256": "707b77064079cb156fa451f74d240e8ac58d4a6764a2cd971f4d60aedc812c1e"
-    },
-    {
-      "path": "clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
-      "sha256": "41b7bda1ad23daeb59bec313f433a58974f2b15ccca213860428784faa336f3b"
-    },
-    {
-      "path": "clanky/slovan-druhy-pokus.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/slovan-druhy-pokus.html",
-      "sha256": "3949b03db66c191ffec2735ff2a86aa9bcbca5ebcc8a1d70bdc3bfb42adbb769"
-    },
-    {
-      "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
-      "sha256": "7e5589ce546064f45ceb1680e3e7639383818fd26d52dbf22827cfb1f8d9624a"
-    },
-    {
-      "path": "clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html",
-      "sha256": "dde0135a83a1c59037061133af0869b75e359a837e685ccc0433b7917a5d0888"
-    },
-    {
-      "path": "clanky/slunce-kadan-seste-kolo-najemce-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/slunce-kadan-seste-kolo-najemce-2026.html",
-      "sha256": "d3b2b35c6c4203ba8cb64c4ef8b2a2f64bdf7d46031ce91810bb6cd03caf6010"
-    },
-    {
-      "path": "clanky/smr-tusimice-studie-zdravi-obyvatel-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/smr-tusimice-studie-zdravi-obyvatel-2026.html",
-      "sha256": "1e58de2f0371be77e164484c57e698f99960594a846673152bec94d933b88f67"
+      "sha256": "34e534a10cc26993db83aa44d103fa83df69357c66768e4dcbadc979518962ab"
     },
     {
       "path": "clanky/spojeni-pro-zmenu-odpovedi-nase-kadan-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/spojeni-pro-zmenu-odpovedi-nase-kadan-2026.html",
-      "sha256": "b24580950bda0fadc0fd31fa743e555cbd4d6d996adefc6605460d8d5fdbc9c4"
+      "sha256": "5459526373adc39f7c0d6e8c6c2d7a4bdf65fd55ed464bd7218bdda0377ef139"
     },
     {
       "path": "clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
-      "sha256": "3d610813b7509acb6a968b2fe8218e5a3de7efd03213a6ef3891ac8f7eb3dbea"
+      "sha256": "51233a09d7e5fe0306cc93a9631737b596dd1233f8f214f317dcbf324a60c617"
     },
     {
       "path": "clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
-      "sha256": "6c5f7fe310dba648ef4e1115afcedbef86bb8bafb5e5647ba86e74d094cd3455"
-    },
-    {
-      "path": "clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
-      "sha256": "724bde4657384f41f450bebbaf9dfc84688338311c6a52b76d642d4f31b2d531"
+      "sha256": "f8753a6ff0d1cb42393d3aaf666eda5107197f5340123deb99a821511bf3dbd8"
     },
     {
       "path": "clanky/srsni-boren-bilina-hzs-varovani-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/srsni-boren-bilina-hzs-varovani-2026.html",
-      "sha256": "acc58766481b8fbded2dd7d7de423ccbf6521ac203ba1e2686b2e38c6013682b"
-    },
-    {
-      "path": "clanky/starosta-losenicky-nemocnice-slovan-nepedagogove.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/starosta-losenicky-nemocnice-slovan-nepedagogove.html",
-      "sha256": "539f267c32e133babc768168aa1757cd691c1101a33e2c516f3ee4364d9eb628"
-    },
-    {
-      "path": "clanky/strikacky-vchody-drogy-kadan.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/strikacky-vchody-drogy-kadan.html",
-      "sha256": "dd48d6700bbd8359290258535477873a7e041338f350f60d4785cb6a7880ce67"
+      "sha256": "adce8f931a93cc76ebaf177a51c8b22f9659f10e89337dbd6f5823defb1ac43d"
     },
     {
       "path": "clanky/sts-prunerov-konkurs-dluhy-drazba-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/sts-prunerov-konkurs-dluhy-drazba-2026.html",
-      "sha256": "30f4902708710d5ef5a69c2311a7e8351369b57072a16e33a3e30876d5ac6532"
+      "sha256": "de44d78d634c54b5b70993a68e33de117951f684fed8bb93234969edca673369"
     },
     {
       "path": "clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html",
-      "sha256": "cea93caa0d78faf40faa043a45f50f46cd2a57c55d1db641cc8c9062b1e5642d"
-    },
-    {
-      "path": "clanky/svetlo-kadan-generace-pod-tlakem-konference-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/svetlo-kadan-generace-pod-tlakem-konference-2026.html",
-      "sha256": "71006caa2a11f164e1800902ffc6e9ade8d243ca5adf23aacd019841df6cd9a4"
+      "sha256": "ed06b361ab1b7b234e9139662432f76a19c1e92b50931bf3f139fdef726030f4"
     },
     {
       "path": "clanky/technicke-sluzby-kadan-kdo-uklizi-mesto-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/technicke-sluzby-kadan-kdo-uklizi-mesto-2026.html",
-      "sha256": "5674f14f5fae5ce56457bf3735f47281bc6027791b72462b80088f2b164482e0"
+      "sha256": "00f56fe6372bb902ae614983475395ce34a29ee948834eb19259ba7105ae74f7"
     },
     {
       "path": "clanky/teplo-kadan-cenova-pojistka.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/teplo-kadan-cenova-pojistka.html",
-      "sha256": "7dcca9bf7ee08e56704216a183f46d5f0f7f1afc06a451ee7f90f94023f1e8b2"
+      "sha256": "3a9e25d02715cce590b61f2d256f2778b3b20c9e102729a610a1746f8178bf8f"
     },
     {
       "path": "clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
-      "sha256": "b371571c9177fb26e81e4f93fe3f530bc0cc8c3a6d59513f83dd505ad368fd64"
+      "sha256": "ffaf839c7359e0f18b4c32c688900a4950761cdf29ee83917b4550f0e021b9f3"
     },
     {
       "path": "clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
-      "sha256": "c7b56e9ae22dde83c9c837c31d46db579a953ce51cfe15a532c0bb21b7b99146"
-    },
-    {
-      "path": "clanky/trampoliny-skatepark-rodice-ostraha-starosta-kadan-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/trampoliny-skatepark-rodice-ostraha-starosta-kadan-2026.html",
-      "sha256": "c12420af5361984ac95886c9e10d6f48e79b530210f835b844a5f950e4ada3b4"
-    },
-    {
-      "path": "clanky/uced-elektrarna-chomutov-odvolaci-rizeni-mpo-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/uced-elektrarna-chomutov-odvolaci-rizeni-mpo-2026.html",
-      "sha256": "424c70caa8e7d57b7c01a85a5e2c282fcaefcea0896d153d8bee3d821db8e11b"
-    },
-    {
-      "path": "clanky/uhostany-clonovy-odstrel-1-zari-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/uhostany-clonovy-odstrel-1-zari-2026.html",
-      "sha256": "cdd32bb64a8da746e105cad6436919bca0f418b3df802a4db740ca936473bafb"
+      "sha256": "3873b992680169e8dbe6c615c1321546fca2f7f81e1ce862fd1c15c59040d0d2"
     },
     {
       "path": "clanky/urad-prace-odstavka-online-volna-mista-srpen-zari-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/urad-prace-odstavka-online-volna-mista-srpen-zari-2026.html",
-      "sha256": "6d909ab5c966631b6add3ef277ee540f00434a27871781e52cb06afc39fe67b8"
-    },
-    {
-      "path": "clanky/verejne-podekovani-milan-horvath-kino-kadan-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/verejne-podekovani-milan-horvath-kino-kadan-2026.html",
-      "sha256": "379133bb26a9ef747addf22024a7353a9b6f20f4228962b81d00e9418b9b1239"
-    },
-    {
-      "path": "clanky/vinohrady-jihovychodni-predpoli-kadan-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/vinohrady-jihovychodni-predpoli-kadan-2026.html",
-      "sha256": "b3c07952a103db4003af17dd64c0e30c556e6dc3316c315d55a348032f6797b6"
-    },
-    {
-      "path": "clanky/vyhruzka-bombou-nemocnice-kadan-8-zari-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/vyhruzka-bombou-nemocnice-kadan-8-zari-2026.html",
-      "sha256": "a2c6fad9659eee32fa07d6edf3d568a334d8f0e8d9daf885094d42c27b64bdcb"
-    },
-    {
-      "path": "clanky/vyluka-vlaky-kadan-chomutov-klasterec-srpen-rijen-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/vyluka-vlaky-kadan-chomutov-klasterec-srpen-rijen-2026.html",
-      "sha256": "5f172b4e3679f161f3992633c2d32d77c2254f385aa6a6a947242ba91c8da706"
-    },
-    {
-      "path": "clanky/vyluka-zatec-blatno-do-24-srpna-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/vyluka-zatec-blatno-do-24-srpna-2026.html",
-      "sha256": "e380bf4b857dd116dd2befc034dce532d6640aad990c3c284c836e247178db85"
-    },
-    {
-      "path": "clanky/vypadek-internetu-kadan-kradez-kabelu.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/vypadek-internetu-kadan-kradez-kabelu.html",
-      "sha256": "017baa7cd963e92a0a9a450922766d2e76e4fa4b16392cd7562e1122fa81cdd3"
-    },
-    {
-      "path": "clanky/vystraha-silne-bourky-kadan-28-srpna-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/vystraha-silne-bourky-kadan-28-srpna-2026.html",
-      "sha256": "2262ceabd93dde154b797857172600631eda00f903a2d441a5b5d77fac74b699"
-    },
-    {
-      "path": "clanky/vystraha-silny-vitr-kadan-4-zari-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/vystraha-silny-vitr-kadan-4-zari-2026.html",
-      "sha256": "b9fa29527526f13ceb054c9954d7c37b9a7ba0940ff12d79e73f46c53f5c7a52"
-    },
-    {
-      "path": "clanky/zakaz-odberu-povrchovych-vod-kadansko-cervenec-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zakaz-odberu-povrchovych-vod-kadansko-cervenec-2026.html",
-      "sha256": "ea1b1d6ce2965adf1b864573449d56e1c8fcbc751471331b8da9b7ec19402397"
-    },
-    {
-      "path": "clanky/zaregistrovala-se-v-kadani-darovala-krvetvorne-bunky-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zaregistrovala-se-v-kadani-darovala-krvetvorne-bunky-2026.html",
-      "sha256": "399e9ce7213f37403c5f087a60a0e30499c3ebfb98b8423cfc366d319c534917"
+      "sha256": "fac7a01888be211b0eb510195a2a28060ebeaba17644ef4aad62d9ff18af016b"
     },
     {
       "path": "clanky/zasahy-hasici-policie-kadan-okoli-10-14-srpna-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zasahy-hasici-policie-kadan-okoli-10-14-srpna-2026.html",
-      "sha256": "0afa323699114866c8e3c25baa09c1f1b73203d8f3e39bb456b2d5cc062305e1"
-    },
-    {
-      "path": "clanky/zatec-zizkova-uplna-uzavirka-zari-rijen-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zatec-zizkova-uplna-uzavirka-zari-rijen-2026.html",
-      "sha256": "f358fa366fd63f5f52955771c31a42e02b2df146c47d5c141323668677d8b0af"
+      "sha256": "dc0bac814408999cfd609cabd2c6ef7ee2b6c0f0f9895ecf6d8f0b93ce56a016"
     },
     {
       "path": "clanky/zive-mimoradne-zastupitelstvo-kadan-nemocnice-17-srpna-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zive-mimoradne-zastupitelstvo-kadan-nemocnice-17-srpna-2026.html",
-      "sha256": "2fa668e2b521094a1ce821c6511d441729d3a48a09e018cce8934ccfa5e562fb"
-    },
-    {
-      "path": "clanky/zs-chomutovska-kadan-stravne-zari-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zs-chomutovska-kadan-stravne-zari-2026.html",
-      "sha256": "05b5f82be9df93e21a817fcaa4391aa42967b65239cc389530ed82655d1ffded"
-    },
-    {
-      "path": "clanky/zs-kratka-klasterec-nova-reditelka-zdenka-horska-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zs-kratka-klasterec-nova-reditelka-zdenka-horska-2026.html",
-      "sha256": "dbb8932fa095496b309b10218c90eded00703517e7e77907fc56a7e6ee3f44e4"
-    },
-    {
-      "path": "clanky/zus-dvorakova-podkrovi-treti-dodatek-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zus-dvorakova-podkrovi-treti-dodatek-2026.html",
-      "sha256": "134e9ce734061e87b22be2dcd663f55cea7662c512d8f25a46e4434a71d8a5b6"
-    },
-    {
-      "path": "clanky/zzs-kadan-garaz-mycka-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/zzs-kadan-garaz-mycka-2026.html",
-      "sha256": "67102c290a21cd8f885c8b3aee423c0c03ed7a66fd97894f921328ed4fa80639"
+      "sha256": "a8dc51c9c44460372ad65bb9452cc0d914cf4278f50d1d0ef2f6bd87fa6359ee"
     }
   ],
   "patches": [],
