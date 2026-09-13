@@ -1,0 +1,87 @@
+name: Naše Kadaň – dávkové nasazení hromadné opravy 2026-09-13
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/nasekadan-live-repair-batched-20260913.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nasekadan-batched-live-repair-20260913
+  cancel-in-progress: false
+
+jobs:
+  deploy-batches:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Rozdělit velký manifest a po dávkách ověřit živé nasazení
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name 'Naše Kadaň bridge bot'
+          git config user.email 'info@nasekadan.cz'
+          cp nasekadan-live/manifest.json /tmp/full-manifest.json
+          python - <<'PY'
+          import json
+          m=json.load(open('/tmp/full-manifest.json',encoding='utf-8'))
+          files=m.get('files') or []
+          assert len(files)>100, f'Očekáván velký manifest, nalezeno {len(files)} souborů'
+          assert not (m.get('patches') or []), 'Tento dávkovač očekává manifest bez patchů'
+          assert not (m.get('deletes') or []), 'Tento dávkovač očekává manifest bez mazání'
+          print('FULL_MANIFEST_FILES',len(files))
+          PY
+          total="$(python - <<'PY'
+          import json,math
+          n=len(json.load(open('/tmp/full-manifest.json',encoding='utf-8')).get('files') or [])
+          print(math.ceil(n/80))
+          PY
+          )"
+          for idx in $(seq 1 "$total"); do
+            git pull --rebase origin main
+            IDX="$idx" TOTAL="$total" python - <<'PY'
+          import json,os
+          from pathlib import Path
+          src=json.load(open('/tmp/full-manifest.json',encoding='utf-8'))
+          files=src.get('files') or []
+          idx=int(os.environ['IDX']); total=int(os.environ['TOTAL']); size=80
+          batch=files[(idx-1)*size:idx*size]
+          version=f"20260913-sitewide-repair-batch-{idx}-of-{total}"
+          out={
+            'schema':1,
+            'version':version,
+            'files':batch,
+            'patches':[],
+            'deletes':[],
+            'verify_urls':[],
+            'verify_present':[],
+            'verify_absent':[],
+          }
+          Path('nasekadan-live/manifest.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('WROTE_BATCH',idx,'of',total,'files',len(batch),'version',version)
+          PY
+            version="20260913-sitewide-repair-batch-${idx}-of-${total}"
+            git add nasekadan-live/manifest.json
+            git commit -m "Nasadit dávku ${idx}/${total} plošné opravy Naše Kadaň [skip ci]"
+            git push origin HEAD:main
+            ok=0
+            for attempt in $(seq 1 36); do
+              sleep 5
+              stamp="$(date +%s)-${idx}-${attempt}"
+              health="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?batch=$stamp" || true)"
+              printf '%s\n' "$health"
+              if grep -Fq "source=bridge:${version}" <<<"$health"; then
+                echo "BATCH_${idx}_PUBLIC_OK ${version}"
+                ok=1
+                break
+              fi
+            done
+            test "$ok" -eq 1
+          done
+          echo 'ALL_SITEWIDE_REPAIR_BATCHES_PUBLIC_OK'
