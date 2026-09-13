@@ -30,12 +30,15 @@ jobs:
           set -Eeuo pipefail
           git config user.name 'Naše Kadaň bridge bot'
           git config user.email 'info@nasekadan.cz'
-          cp nasekadan-live/manifest.json /tmp/full-manifest.json
+          FULL_SHA='f0c7e9dc87e3d3876bcbfdd7f522a7cf633bdd66'
+          curl -fsSL --max-time 30 \
+            "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/${FULL_SHA}/nasekadan-live/manifest.json" \
+            -o /tmp/full-manifest.json
           count="$(python - <<'PY'
           import json
           m=json.load(open('/tmp/full-manifest.json',encoding='utf-8'))
           files=m.get('files') or []
-          assert len(files)>100, f'Očekáván velký manifest, nalezeno {len(files)}'
+          assert len(files)==209, f'Očekáváno 209 souborů, nalezeno {len(files)}'
           assert not (m.get('patches') or []) and not (m.get('deletes') or [])
           print(len(files))
           PY
@@ -50,14 +53,14 @@ jobs:
           src=json.load(open('/tmp/full-manifest.json',encoding='utf-8'))
           files=src['files']; idx=int(os.environ['IDX']); total=int(os.environ['TOTAL']); size=80
           batch=files[(idx-1)*size:idx*size]
-          version=f'20260913-sitewide-repair-batch-{idx}-of-{total}'
+          version=f'20260913-sitewide-repair-batch-{idx}-of-{total}-final'
           out={'schema':1,'version':version,'files':batch,'patches':[],'deletes':[]}
           Path('nasekadan-live/manifest.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print('WROTE',version,'FILES',len(batch))
           PY
-            version="20260913-sitewide-repair-batch-${idx}-of-${total}"
+            version="20260913-sitewide-repair-batch-${idx}-of-${total}-final"
             git add nasekadan-live/manifest.json
-            git commit -m "Nasadit dávku ${idx}/${total} plošné opravy Naše Kadaň [skip ci]"
+            git commit -m "Nasadit finální dávku ${idx}/${total} plošné opravy Naše Kadaň [skip ci]"
             git push origin HEAD:main
             ok=0
             for attempt in $(seq 1 36); do
