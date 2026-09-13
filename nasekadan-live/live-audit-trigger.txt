@@ -1,2 +1,2 @@
-Kompletní vizuální i technický audit Naše Kadaň po opravě globálního článkového layoutu.
-2026-09-13T22:48:00+02:00
+Kontrolní technický audit celého Naše Kadaň po vizuálním hotfixu článkového layoutu.
+2026-09-13T22:53:00+02:00
