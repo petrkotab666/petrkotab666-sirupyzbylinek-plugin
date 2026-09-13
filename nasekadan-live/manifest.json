@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "version": "20260913-visual-layout-guard-v1",
+  "version": "20260913-visual-layout-guard-v2",
   "files": [],
   "patches": [
     {
       "path": "style.css",
-      "old": "/* /Titulní obrázek: MHD Kadaň */",
-      "new": "/* /Titulní obrázek: MHD Kadaň */\n\n/* NK_VISUAL_LAYOUT_GUARD_20260913 */\nmain.article-shell header.hero{position:static!important;top:auto!important;z-index:auto!important;backdrop-filter:none!important;background:transparent!important;border-bottom:0!important;display:block!important;grid-template-columns:none!important;gap:0!important;padding:0 0 28px!important;margin:0!important;max-width:none!important}\nmain.article-shell header.hero h1{max-width:790px!important;font-size:clamp(38px,4vw,56px)!important;line-height:1.08!important}\nmain.article-shell>aside.sticky{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}\n/* /NK_VISUAL_LAYOUT_GUARD_20260913 */",
+      "old": ":root{--red:#a9232b;--red2:#7f1720;",
+      "new": "/* NK_VISUAL_LAYOUT_GUARD_20260913 */\nmain.article-shell header.hero{position:static!important;top:auto!important;z-index:auto!important;backdrop-filter:none!important;background:transparent!important;border-bottom:0!important;display:block!important;grid-template-columns:none!important;gap:0!important;padding:0 0 28px!important;margin:0!important;max-width:none!important}\nmain.article-shell header.hero h1{max-width:790px!important;font-size:clamp(38px,4vw,56px)!important;line-height:1.08!important}\nmain.article-shell>aside.sticky{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}\n/* /NK_VISUAL_LAYOUT_GUARD_20260913 */\n:root{--red:#a9232b;--red2:#7f1720;",
       "count": 1
     }
   ],
