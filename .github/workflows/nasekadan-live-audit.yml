@@ -27,6 +27,29 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Ověřit vizuální hotfix a pořídit desktop screenshot
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ok=0
+          for i in $(seq 1 24); do
+            q="${GITHUB_RUN_ID}-$i-$(date +%s)"
+            css="$(curl -4 -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/style.css?visual_check=$q" || true)"
+            if grep -Fq 'NK_VISUAL_LAYOUT_GUARD_20260913' <<<"$css"; then
+              echo 'VISUAL_HOTFIX_PUBLIC_OK'
+              ok=1
+              break
+            fi
+            sleep 5
+          done
+          test "$ok" = 1
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$CHROME"
+          mkdir -p nasekadan-live
+          "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1600,1000 \
+            --screenshot=nasekadan-live/visual-target-after.png \
+            "https://nasekadan.cz/clanky/kadansky-klaster-vratte-nam-knihy-1986.html?visual_check=${GITHUB_RUN_ID}-$(date +%s)"
+          test -s nasekadan-live/visual-target-after.png
       - name: Ověřit syntaxi
         run: python -m py_compile nasekadan-live/audit_live_site.py
       - name: Projít skutečný veřejný web
@@ -78,3 +101,9 @@ jobs:
           git commit -m 'Aktualizovat nezávislý audit Naše Kadaň [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nasekadan-visual-target-after
+          path: nasekadan-live/visual-target-after.png
+          if-no-files-found: ignore
