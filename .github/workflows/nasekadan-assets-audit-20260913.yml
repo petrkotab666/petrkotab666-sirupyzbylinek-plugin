@@ -1,4 +1,5 @@
 name: Naše Kadaň – audit veřejných assetů 2026-09-13
+# trigger 2026-09-13 21:17 CEST
 
 on:
   push:
