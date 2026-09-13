@@ -1,0 +1,39 @@
+name: Ověřit mobilní opravu Naše Kadaň
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-nasekadan-klaster-mobile-20260913.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Počkat na bridge a ověřit veřejný web
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          version='20260913-klaster-mobile-render-fix-v1'
+          article_url='https://nasekadan.cz/clanky/kadansky-klaster-vratte-nam-knihy-1986.html'
+          health_url='https://nasekadan.cz/deployment-health.txt'
+          ok=0
+          for i in $(seq 1 18); do
+            q="verify-${GITHUB_RUN_ID}-${i}-$(date +%s%N)"
+            health="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${health_url}?${q}" || true)"
+            article="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "${article_url}?${q}" || true)"
+            if grep -Fq "source=bridge:${version}" <<<"$health" \
+              && grep -Fq 'nk-mobile-klaster-fix-20260913' <<<"$article" \
+              && grep -Fq 'nk-mobile-klaster-adfix-20260913' <<<"$article" \
+              && grep -Fq 'Vraťte nám knihy. Spor po kadaňské razii pokračoval i v roce 1986' <<<"$article" \
+              && grep -Fq '17 titulů' <<<"$article"; then
+              echo "$health"
+              echo 'KLASTER_MOBILE_FIX_PUBLIC_OK'
+              ok=1
+              break
+            fi
+            sleep 5
+          done
+          test "$ok" = 1
