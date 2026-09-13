@@ -1,28 +1,16 @@
 {
-  "status": "FAILED",
-  "started_at": "2026-09-13T19:34:25.000106+00:00",
-  "finished_at": "2026-09-13T19:35:18.439068+00:00",
+  "status": "PASSED",
+  "started_at": "2026-09-13T19:46:23.947280+00:00",
+  "finished_at": "2026-09-13T19:47:18.673071+00:00",
   "sitemap_urls": 229,
   "html_pages_checked": 229,
   "article_pages_checked": 210,
   "images_checked": 219,
   "internal_links_checked": 245,
-  "error_count": 1,
+  "error_count": 0,
   "warning_count": 0,
-  "error_types": {
-    "duplicate_title_figures": 1
-  },
+  "error_types": {},
   "warning_types": {},
-  "errors": [
-    {
-      "url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
-      "type": "duplicate_title_figures",
-      "count": 2,
-      "sources": [
-        "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
-        "https://nasekadan.cz/social-card.png"
-      ]
-    }
-  ],
+  "errors": [],
   "warnings": []
 }

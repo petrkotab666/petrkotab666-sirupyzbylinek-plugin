@@ -1,20 +1,10 @@
 {
   "version": "20260825-1",
-  "started_at": "2026-09-13T19:34:25.000106+00:00",
-  "status": "FAILED",
-  "errors": [
-    {
-      "url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
-      "type": "duplicate_title_figures",
-      "count": 2,
-      "sources": [
-        "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
-        "https://nasekadan.cz/social-card.png"
-      ]
-    }
-  ],
+  "started_at": "2026-09-13T19:46:23.947280+00:00",
+  "status": "PASSED",
+  "errors": [],
   "warnings": [],
-  "finished_at": "2026-09-13T19:35:18.439068+00:00",
+  "finished_at": "2026-09-13T19:47:18.673071+00:00",
   "sitemap_urls": 229,
   "html_pages_checked": 229,
   "article_pages_checked": 210,
@@ -3762,16 +3752,7 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
-      "errors": [
-        {
-          "type": "duplicate_title_figures",
-          "count": 2,
-          "sources": [
-            "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
-            "https://nasekadan.cz/social-card.png"
-          ]
-        }
-      ],
+      "errors": [],
       "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
@@ -3783,16 +3764,11 @@
         {
           "src": "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
           "html": "<figure class=\"article-figure\" data-nk-title-figure=\"1\"><img class=\"article-photo\" src=\"/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Stát zlevnil 14 tisíc metrů u Ohře na 273 tisíc. Součástí je ale nestabilní skalní masiv\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
-        },
-        {
-          "src": "https://nasekadan.cz/social-card.png",
-          "html": "<figure class=\"article-figure\"><img src=\"/social-card.png\" width=\"1200\" height=\"630\" alt=\"Aukce státního pozemku v Klášterci nad Ohří\"><figcaption>Elektronickou aukci vyhlásil Úřad pro zastupování státu ve věcech majetkových.</figcaption></figure>"
         }
       ],
       "published": "2026-08-23T20:42:00+02:00",
       "images": [
-        "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
-        "https://nasekadan.cz/social-card.png"
+        "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png"
       ],
       "hrefs": [
         "https://nasekadan.cz/",
