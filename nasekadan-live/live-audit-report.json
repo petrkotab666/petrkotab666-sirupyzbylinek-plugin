@@ -1,338 +1,24 @@
 {
   "version": "20260825-1",
-  "started_at": "2026-09-13T19:28:21.463772+00:00",
+  "started_at": "2026-09-13T19:34:25.000106+00:00",
   "status": "FAILED",
   "errors": [
     {
-      "url": "https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
-      "type": "missing_visible_title_figure"
-    },
-    {
-      "type": "broken_image",
-      "url": "https:image/jpeg;base64,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",
-      "ok": false,
-      "error": "URLError('no host given')"
-    }
-  ],
-  "warnings": [
-    {
-      "url": "https://nasekadan.cz/clanky/1-zari-kadan-skoly-vyluka-ohre-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/bily-kun-245-tisic-kadan-policie-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/bily-kun-245-tisic-kadan-policie-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/bomba-nebyla-nasledky-ano-nemocnice-kadan-8-zari-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-jak-probehl.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-jak-probehl.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-program-doprava.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-program-doprava.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/d7-sporice-omezeni-18-srpna-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/d7-sporice-omezeni-18-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/historicky-hurvinek-kadan-prunerov-vejprty-16-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/horni-halze-loucna-uzavirka-23-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/hossner-12-otazek-nase-kadan-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/jezerka-kadan-prevod-investice-309-milionu-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadan-cheb-vyhra-5-2-priprava-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadan-turismus-potencial-analyza-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadansky-klaster-agent-cerich.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadansky-klaster-agent-cerich.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-7-13-zari-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kandidatky-kadan-2026-druhe-tri-pod-lupou.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kandidatky-kadan-2026-prvni-tri-pod-lupou.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kandidatky-kadan-registrace-komunalni-volby-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
       "url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/nehoda-nova-kolonie-kadan-ctyri-auta-28-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/neurologie-nemocnice-kadan-uzavrena-4-11-zari-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/ods-kadan-odpovedi-nase-kadan-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
-      "type": "missing_newsarticle_schema"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/omezeni-i13-chomutov-17-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/ozveny-kadanskeho-pohadkoveho-festivalu-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/ozveny-kadanskeho-pohadkoveho-festivalu-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/posledni-test-pred-ligou-kadan-decin-10-zari-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/pozar-trafostanice-kadan-4-zari-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/pro-kadan-a-okoli-odpovedi-nase-kadan-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/pro-kadan-a-okoli-odpovedi-nase-kadan-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-odpovedi-nase-kadan-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-odpovedi-nase-kadan-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/srsni-boren-bilina-hzs-varovani-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/sts-prunerov-konkurs-dluhy-drazba-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/technicke-sluzby-kadan-kdo-uklizi-mesto-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/teplo-kadan-cenova-pojistka.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/teplo-kadan-cenova-pojistka.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
-      "type": "nonstandard_header"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/urad-prace-odstavka-online-volna-mista-srpen-zari-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/zasahy-hasici-policie-kadan-okoli-10-14-srpna-2026.html",
-      "type": "nonstandard_footer"
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/zive-mimoradne-zastupitelstvo-kadan-nemocnice-17-srpna-2026.html",
-      "type": "nonstandard_footer"
+      "type": "duplicate_title_figures",
+      "count": 2,
+      "sources": [
+        "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
+        "https://nasekadan.cz/social-card.png"
+      ]
     }
   ],
-  "finished_at": "2026-09-13T19:29:08.836857+00:00",
+  "warnings": [],
+  "finished_at": "2026-09-13T19:35:18.439068+00:00",
   "sitemap_urls": 229,
   "html_pages_checked": 229,
   "article_pages_checked": 210,
-  "images_checked": 220,
+  "images_checked": 219,
   "internal_links_checked": 245,
   "page_results": [
     {
@@ -485,11 +171,7 @@
     {
       "url": "https://nasekadan.cz/clanky/1-zari-kadan-skoly-vyluka-ohre-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/1-zari-kadan-skoly-vyluka-ohre-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -553,14 +235,7 @@
     {
       "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -771,11 +446,7 @@
     {
       "url": "https://nasekadan.cz/clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/apolena-svabikova-me-birmingham-25-misto-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -806,11 +477,7 @@
     {
       "url": "https://nasekadan.cz/clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/apolena-svabikova-mistrovstvi-evropy-birmingham-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -895,11 +562,7 @@
     {
       "url": "https://nasekadan.cz/clanky/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/autobusy-743-744-745-zatec-podborany-jizdni-rady-24-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -981,14 +644,7 @@
     {
       "url": "https://nasekadan.cz/clanky/bily-kun-245-tisic-kadan-policie-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/bily-kun-245-tisic-kadan-policie-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -1067,11 +723,7 @@
     {
       "url": "https://nasekadan.cz/clanky/bomba-nebyla-nasledky-ano-nemocnice-kadan-8-zari-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/bomba-nebyla-nasledky-ano-nemocnice-kadan-8-zari-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -1217,14 +869,7 @@
     {
       "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-jak-probehl.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-jak-probehl.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -1254,14 +899,7 @@
     {
       "url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-program-doprava.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/cisarsky-den-kadan-2026-program-doprava.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -1451,14 +1089,7 @@
     {
       "url": "https://nasekadan.cz/clanky/d7-sporice-omezeni-18-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/d7-sporice-omezeni-18-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -1639,14 +1270,7 @@
     {
       "url": "https://nasekadan.cz/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2143,11 +1767,7 @@
     {
       "url": "https://nasekadan.cz/clanky/historicky-hurvinek-kadan-prunerov-vejprty-16-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/historicky-hurvinek-kadan-prunerov-vejprty-16-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2178,11 +1798,7 @@
     {
       "url": "https://nasekadan.cz/clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2258,11 +1874,7 @@
     {
       "url": "https://nasekadan.cz/clanky/horni-halze-loucna-uzavirka-23-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/horni-halze-loucna-uzavirka-23-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2290,11 +1902,7 @@
     {
       "url": "https://nasekadan.cz/clanky/hossner-12-otazek-nase-kadan-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/hossner-12-otazek-nase-kadan-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2467,11 +2075,7 @@
     {
       "url": "https://nasekadan.cz/clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2687,11 +2291,7 @@
     {
       "url": "https://nasekadan.cz/clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2722,11 +2322,7 @@
     {
       "url": "https://nasekadan.cz/clanky/jezerka-kadan-prevod-investice-309-milionu-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/jezerka-kadan-prevod-investice-309-milionu-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -2931,11 +2527,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kadan-cheb-vyhra-5-2-priprava-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kadan-cheb-vyhra-5-2-priprava-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3078,14 +2670,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kadan-klasterec-odpady-2030-memorandum-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3217,11 +2802,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kadan-turismus-potencial-analyza-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kadan-turismus-potencial-analyza-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3292,11 +2873,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3400,14 +2977,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kadansky-klaster-agent-cerich.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kadansky-klaster-agent-cerich.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3432,14 +3002,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kadansky-klaster-akce-domino-1981.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3464,14 +3027,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3683,11 +3239,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3897,11 +3449,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-7-13-zari-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-7-13-zari-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3933,11 +3481,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kandidatky-kadan-2026-druhe-tri-pod-lupou.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kandidatky-kadan-2026-druhe-tri-pod-lupou.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -3970,11 +3514,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kandidatky-kadan-2026-prvni-tri-pod-lupou.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kandidatky-kadan-2026-prvni-tri-pod-lupou.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -4006,11 +3546,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kandidatky-kadan-registrace-komunalni-volby-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kandidatky-kadan-registrace-komunalni-volby-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -4117,14 +3653,7 @@
     {
       "url": "https://nasekadan.cz/clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -4233,12 +3762,17 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
-      "errors": [],
-      "warnings": [
+      "errors": [
         {
-          "type": "nonstandard_footer"
+          "type": "duplicate_title_figures",
+          "count": 2,
+          "sources": [
+            "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
+            "https://nasekadan.cz/social-card.png"
+          ]
         }
       ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -4249,6 +3783,10 @@
         {
           "src": "https://nasekadan.cz/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png",
           "html": "<figure class=\"article-figure\" data-nk-title-figure=\"1\"><img class=\"article-photo\" src=\"/social/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026-6adf7c353c.png\" width=\"1200\" height=\"630\" alt=\"Redakční grafika Naše Kadaň k článku Stát zlevnil 14 tisíc metrů u Ohře na 273 tisíc. Součástí je ale nestabilní skalní masiv\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        },
+        {
+          "src": "https://nasekadan.cz/social-card.png",
+          "html": "<figure class=\"article-figure\"><img src=\"/social-card.png\" width=\"1200\" height=\"630\" alt=\"Aukce státního pozemku v Klášterci nad Ohří\"><figcaption>Elektronickou aukci vyhlásil Úřad pro zastupování státu ve věcech majetkových.</figcaption></figure>"
         }
       ],
       "published": "2026-08-23T20:42:00+02:00",
@@ -5305,11 +4843,7 @@
     {
       "url": "https://nasekadan.cz/clanky/nehoda-nova-kolonie-kadan-ctyri-auta-28-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/nehoda-nova-kolonie-kadan-ctyri-auta-28-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -5388,11 +4922,7 @@
     {
       "url": "https://nasekadan.cz/clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -5646,14 +5176,7 @@
     {
       "url": "https://nasekadan.cz/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -5939,11 +5462,7 @@
     {
       "url": "https://nasekadan.cz/clanky/neurologie-nemocnice-kadan-uzavrena-4-11-zari-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/neurologie-nemocnice-kadan-uzavrena-4-11-zari-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -6197,11 +5716,7 @@
     {
       "url": "https://nasekadan.cz/clanky/ods-kadan-odpovedi-nase-kadan-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/ods-kadan-odpovedi-nase-kadan-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -6405,14 +5920,7 @@
     {
       "url": "https://nasekadan.cz/clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -6566,25 +6074,24 @@
     },
     {
       "url": "https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
-      "errors": [
-        {
-          "type": "missing_visible_title_figure"
-        }
-      ],
-      "warnings": [
-        {
-          "type": "missing_newsarticle_schema"
-        }
-      ],
+      "errors": [],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
       "canonical": "https://nasekadan.cz/clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
       "h1": "Ohře v Kadani je pod hranicí hydrologického sucha. Večer klesla na 27 cm",
       "og_image": "https://nasekadan.cz/social-card.png",
-      "title_figures": [],
+      "title_figures": [
+        {
+          "src": "https://nasekadan.cz/social-card.png",
+          "html": "<figure class=\"article-figure\" data-nk-title-figure=\"1\"><img class=\"article-photo\" src=\"https://nasekadan.cz/social-card.png\" width=\"1200\" height=\"630\" alt=\"Ohře v Kadani pod hranicí hydrologického sucha – Naše Kadaň\" fetchpriority=\"high\" decoding=\"async\"><figcaption>Redakční grafika Naše Kadaň.</figcaption></figure>"
+        }
+      ],
       "published": "2026-08-14T10:44:00+02:00",
-      "images": [],
+      "images": [
+        "https://nasekadan.cz/social-card.png"
+      ],
       "hrefs": [
         "https://nasekadan.cz/",
         "https://nasekadan.cz/clanky/",
@@ -6636,11 +6143,7 @@
     {
       "url": "https://nasekadan.cz/clanky/omezeni-i13-chomutov-17-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/omezeni-i13-chomutov-17-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -6702,14 +6205,7 @@
     {
       "url": "https://nasekadan.cz/clanky/ozveny-kadanskeho-pohadkoveho-festivalu-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/ozveny-kadanskeho-pohadkoveho-festivalu-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7068,11 +6564,7 @@
     {
       "url": "https://nasekadan.cz/clanky/posledni-test-pred-ligou-kadan-decin-10-zari-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/posledni-test-pred-ligou-kadan-decin-10-zari-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7103,11 +6595,7 @@
     {
       "url": "https://nasekadan.cz/clanky/pozar-trafostanice-kadan-4-zari-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/pozar-trafostanice-kadan-4-zari-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7138,11 +6626,7 @@
     {
       "url": "https://nasekadan.cz/clanky/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7322,14 +6806,7 @@
     {
       "url": "https://nasekadan.cz/clanky/pro-kadan-a-okoli-odpovedi-nase-kadan-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/pro-kadan-a-okoli-odpovedi-nase-kadan-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7359,11 +6836,7 @@
     {
       "url": "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7865,14 +7338,7 @@
     {
       "url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-odpovedi-nase-kadan-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-odpovedi-nase-kadan-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7902,11 +7368,7 @@
     {
       "url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -7939,11 +7401,7 @@
     {
       "url": "https://nasekadan.cz/clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -8022,11 +7480,7 @@
     {
       "url": "https://nasekadan.cz/clanky/srsni-boren-bilina-hzs-varovani-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/srsni-boren-bilina-hzs-varovani-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9320,11 +8774,7 @@
     {
       "url": "https://nasekadan.cz/clanky/sts-prunerov-konkurs-dluhy-drazba-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/sts-prunerov-konkurs-dluhy-drazba-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9352,11 +8802,7 @@
     {
       "url": "https://nasekadan.cz/clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9430,11 +8876,7 @@
     {
       "url": "https://nasekadan.cz/clanky/technicke-sluzby-kadan-kdo-uklizi-mesto-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/technicke-sluzby-kadan-kdo-uklizi-mesto-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9466,14 +8908,7 @@
     {
       "url": "https://nasekadan.cz/clanky/teplo-kadan-cenova-pojistka.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/teplo-kadan-cenova-pojistka.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9500,14 +8935,7 @@
     {
       "url": "https://nasekadan.cz/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9536,14 +8964,7 @@
     {
       "url": "https://nasekadan.cz/clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_header"
-        },
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9684,11 +9105,7 @@
     {
       "url": "https://nasekadan.cz/clanky/urad-prace-odstavka-online-volna-mista-srpen-zari-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/urad-prace-odstavka-online-volna-mista-srpen-zari-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -9805,7 +9222,6 @@
       ],
       "published": "2026-09-08T08:39:00+02:00",
       "images": [
-        "https:image/jpeg;base64,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",
         "https://nasekadan.cz/social/nasekadan-bomb-threat-minimal.png"
       ],
       "hrefs": [
@@ -10136,11 +9552,7 @@
     {
       "url": "https://nasekadan.cz/clanky/zasahy-hasici-policie-kadan-okoli-10-14-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/zasahy-hasici-policie-kadan-okoli-10-14-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -10219,11 +9631,7 @@
     {
       "url": "https://nasekadan.cz/clanky/zive-mimoradne-zastupitelstvo-kadan-nemocnice-17-srpna-2026.html",
       "errors": [],
-      "warnings": [
-        {
-          "type": "nonstandard_footer"
-        }
-      ],
+      "warnings": [],
       "status": 200,
       "final_url": "https://nasekadan.cz/clanky/zive-mimoradne-zastupitelstvo-kadan-nemocnice-17-srpna-2026.html",
       "cache_control": "no-cache, max-age=0, must-revalidate",
@@ -10445,13 +9853,7 @@
       ]
     }
   ],
-  "broken_images": [
-    {
-      "url": "https:image/jpeg;base64,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",
-      "ok": false,
-      "error": "URLError('no host given')"
-    }
-  ],
+  "broken_images": [],
   "broken_links": [],
   "missing_archive": [],
   "missing_rss": [],
