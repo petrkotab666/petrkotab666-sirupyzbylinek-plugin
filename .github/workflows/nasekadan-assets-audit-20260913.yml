@@ -1,0 +1,54 @@
+name: Naše Kadaň – audit veřejných assetů 2026-09-13
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/nasekadan-assets-audit-20260913.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit-assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Prověřit klíčové veřejné soubory a reklamní runtime
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          urls=(
+            'https://nasekadan.cz/'
+            'https://nasekadan.cz/clanky/'
+            'https://nasekadan.cz/style.css'
+            'https://nasekadan.cz/footer.css'
+            'https://nasekadan.cz/mobile.css'
+            'https://nasekadan.cz/article-standard.css'
+            'https://nasekadan.cz/article-layout-fixes.css'
+            'https://nasekadan.cz/site.js'
+            'https://nasekadan.cz/reklamy.js'
+            'https://nasekadan.cz/reklamy-oprava-obrazku.js'
+            'https://nasekadan.cz/levnevyklidime-ads.js'
+            'https://nasekadan.cz/ad-fallback-fix.js'
+            'https://nasekadan.cz/ad-spacing-guard.js'
+            'https://nasekadan.cz/obsah-doplnky.js'
+            'https://nasekadan.cz/article-share.js'
+            'https://nasekadan.cz/sitemap.xml'
+            'https://nasekadan.cz/rss.xml'
+            'https://nasekadan.cz/news-sitemap.xml'
+          )
+          for u in "${urls[@]}"; do
+            out="$(mktemp)"
+            meta="$(curl -L -sS --max-time 25 -H 'Cache-Control: no-cache' -o "$out" -w '%{http_code}|%{content_type}|%{size_download}|%{url_effective}' "$u" || true)"
+            printf '%s|%s\n' "$u" "$meta"
+            rm -f "$out"
+          done
+          echo '--- MARKERS ---'
+          curl -fsSL --max-time 25 -H 'Cache-Control: no-cache' 'https://nasekadan.cz/ad-fallback-fix.js?audit=20260913' -o /tmp/ad.js
+          grep -Eo 'NK_AD_REAL_COPY_V[0-9]+_[0-9]+' /tmp/ad.js | head -n1 || true
+          grep -F "missingVisual" /tmp/ad.js || true
+          curl -fsSL --max-time 25 -H 'Cache-Control: no-cache' 'https://nasekadan.cz/style.css?audit=20260913' -o /tmp/style.css
+          if grep -Fq 'radial-gradient(circle at 25% 78%' /tmp/style.css; then echo 'BAD_FAKE_AD_GRADIENT_PRESENT'; else echo 'NO_FAKE_AD_GRADIENT_IN_STYLE'; fi
+          echo '--- DEPLOYMENT HEALTH ---'
+          curl -fsSL --max-time 25 -H 'Cache-Control: no-cache' 'https://nasekadan.cz/deployment-health.txt?audit=20260913' || true
