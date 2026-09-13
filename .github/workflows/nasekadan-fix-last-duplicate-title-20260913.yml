@@ -1,0 +1,55 @@
+name: Naše Kadaň – opravit poslední duplicitní titulní obrázek 2026-09-13
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/nasekadan-fix-last-duplicate-title-20260913.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Odstranit druhou generickou titulní grafiku a nasadit
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,re
+          rel='clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html'
+          p=Path('nasekadan-live/files')/rel
+          t=p.read_text(encoding='utf-8')
+          pat=re.compile(r'<figure class="article-figure"><img src="/social-card\.png" width="1200" height="630" alt="Aukce státního pozemku v Klášterci nad Ohří"><figcaption>Elektronickou aukci vyhlásil Úřad pro zastupování státu ve věcech majetkových\.</figcaption></figure>\s*',re.S)
+          t2,n=pat.subn('',t,count=1)
+          if n!=1:
+              raise SystemExit(f'Očekávaný duplicitní blok nalezen {n}x')
+          p.write_text(t2,encoding='utf-8')
+          blob=p.read_bytes()
+          manifest={'schema':1,'version':'20260913-last-duplicate-title-fix-v1','files':[{'path':rel,'sha256':hashlib.sha256(blob).hexdigest()}],'patches':[],'deletes':[]}
+          Path('nasekadan-live/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('LAST_DUPLICATE_TITLE_PREPARED')
+          PY
+          git config user.name 'Naše Kadaň bridge bot'
+          git config user.email 'info@nasekadan.cz'
+          git add nasekadan-live/files/clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html nasekadan-live/manifest.json
+          git commit -m 'Odstranit poslední duplicitní titulní grafiku [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          for attempt in $(seq 1 30); do
+            sleep 5
+            h="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?lastdup=$attempt-$(date +%s)" || true)"
+            printf '%s\n' "$h"
+            if grep -Fq 'source=bridge:20260913-last-duplicate-title-fix-v1' <<<"$h"; then
+              echo LAST_DUPLICATE_TITLE_PUBLIC_OK
+              exit 0
+            fi
+          done
+          exit 1
