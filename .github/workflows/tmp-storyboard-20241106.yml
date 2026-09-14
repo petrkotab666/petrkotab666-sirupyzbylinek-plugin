@@ -11,16 +11,22 @@ jobs:
         run: |
           mkdir -p out/frames
           curl -L --fail --retry 3 'https://tv.pirati.cz/lazy-static/storyboards/3ec4b1a8-d659-442a-8e59-6bb3d32b1e32.jpg' -o out/storyboard.jpg
-          ffprobe -v error -show_entries stream=width,height -of csv=p=0:s=x out/storyboard.jpg
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from PIL import Image
+          im=Image.open('out/storyboard.jpg')
+          print('SIZE', im.size)
+          W,H=im.size
+          cw,ch=192,108
           n=0
-          for row in $(seq 0 10); do
-            for col in $(seq 0 10); do
-              x=$((col*192)); y=$((row*108));
-              ffmpeg -hide_banner -loglevel error -i out/storyboard.jpg -vf "crop=192:108:${x}:${y},scale=1536:864:flags=neighbor" -frames:v 1 "out/frames/frame_$(printf '%03d' $n).png"
-              n=$((n+1))
-            done
-          done
-          echo "FRAMES=$n"
+          for y in range(0,H,ch):
+            for x in range(0,W,cw):
+              if x+cw<=W and y+ch<=H:
+                crop=im.crop((x,y,x+cw,y+ch)).resize((1536,864))
+                crop.save(f'out/frames/frame_{n:03d}.png')
+                n+=1
+          print('FRAMES',n)
+          PY
       - name: Upload storyboard frames
         uses: actions/upload-artifact@v4
         with:
