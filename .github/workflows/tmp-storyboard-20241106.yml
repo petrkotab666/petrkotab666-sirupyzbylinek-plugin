@@ -1,0 +1,34 @@
+name: tmp-storyboard-20241106
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and split storyboard
+        run: |
+          mkdir -p out/frames
+          curl -L --fail --retry 3 'https://tv.pirati.cz/lazy-static/storyboards/3ec4b1a8-d659-442a-8e59-6bb3d32b1e32.jpg' -o out/storyboard.jpg
+          python3 - <<'PY'
+          from PIL import Image,ImageDraw
+          im=Image.open('out/storyboard.jpg')
+          print('SIZE',im.size)
+          W,H=im.size
+          cw,ch=192,108
+          n=0
+          for y in range(0,H,ch):
+            for x in range(0,W,cw):
+              if x+cw<=W and y+ch<=H:
+                crop=im.crop((x,y,x+cw,y+ch)).resize((1536,864))
+                crop.save(f'out/frames/frame_{n:03d}.png')
+                n+=1
+          print('FRAMES',n)
+          PY
+      - name: Upload storyboard frames
+        uses: actions/upload-artifact@v4
+        with:
+          name: storyboard-frames-20241106
+          path: out/
+          retention-days: 1
