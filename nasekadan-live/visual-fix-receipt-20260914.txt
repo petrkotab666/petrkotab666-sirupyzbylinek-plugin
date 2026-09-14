@@ -1,0 +1,6 @@
+status=ok
+bridge_version=20260914-visual-article-layout-fix-v1
+article_hero=article-hero
+homepage_hero=scoped
+header=scoped
+verified_at=2026-09-14T18:58:32Z
