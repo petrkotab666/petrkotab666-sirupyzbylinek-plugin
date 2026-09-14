@@ -7,21 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download 720p and extract likely vote screens
+      - name: Download 720p and extract first vote screen
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
-          mkdir -p out
+          mkdir -p out/firstvote
           URL='https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/a1a2a001-6aa2-41be-9022-8651538d2d93-720-fragmented.mp4'
           curl -L --fail --retry 3 "$URL" -o out/video720.mp4
-          for spec in '1460 120 vote24' '2220 120 vote37' '2860 120 vote48'; do
-            set -- $spec; START=$1; DUR=$2; NAME=$3
-            mkdir -p out/$NAME
-            ffmpeg -hide_banner -loglevel error -ss $START -t $DUR -i out/video720.mp4 -vf 'fps=1,scale=1280:-2' -q:v 2 out/$NAME/frame_%03d.jpg
-          done
+          ffmpeg -hide_banner -loglevel error -ss 130 -t 50 -i out/video720.mp4 -vf 'fps=2,scale=1280:-2' -q:v 2 out/firstvote/frame_%03d.jpg
       - name: Upload HD frames
         uses: actions/upload-artifact@v4
         with:
-          name: hd-vote-frames-20241106
-          path: out/vote*/
+          name: first-vote-frames-20241106
+          path: out/firstvote/
           retention-days: 1
