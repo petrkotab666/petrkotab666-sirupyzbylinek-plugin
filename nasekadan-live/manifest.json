@@ -1,12 +1,96 @@
 {
   "schema": 1,
-  "version": "20260913-hospital-home-image-guard-v1",
+  "version": "20260914-visual-article-layout-fix-v1",
   "files": [],
   "patches": [
     {
       "path": "style.css",
-      "old": "/* /NK_VISUAL_LAYOUT_GUARD_20260913 */\n:root{--red:#a9232b;--red2:#7f1720;",
-      "new": "/* /NK_VISUAL_LAYOUT_GUARD_20260913 */\n/* NK_HOSPITAL_HOME_IMAGE_GUARD_20260913 */\n.article-card[data-auto-article=\"vyhruzka-bombou-nemocnice-kadan-8-zari-2026\"] .visual,.article-card:has(a[href=\"/clanky/vyhruzka-bombou-nemocnice-kadan-8-zari-2026.html\"]) .visual{background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('/social/nemocnice-kadan-363f87ff7a.png')!important;background-color:#0b202b!important;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important}\n/* /NK_HOSPITAL_HOME_IMAGE_GUARD_20260913 */\n:root{--red:#a9232b;--red2:#7f1720;",
+      "old": "header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}",
+      "new": "header[data-site-header=\"v1\"]{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": "nav{display:flex;gap:25px;font-weight:750;font-size:15px}nav a:hover{color:var(--red)}",
+      "new": ".head nav{display:flex;gap:25px;font-weight:750;font-size:15px}.head nav a:hover{color:var(--red)}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": ".hero{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:28px;padding:42px 0}",
+      "new": ".hero[data-auto-latest-hero=\"1\"]{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:28px;padding:42px 0}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": ".lead,aside,.cards article{background:#fff;box-shadow:var(--shadow);border:1px solid rgba(19,35,45,.05)}",
+      "new": ".hero[data-auto-latest-hero=\"1\"]>.lead,.hero[data-auto-latest-hero=\"1\"]>aside,.cards article{background:#fff;box-shadow:var(--shadow);border:1px solid rgba(19,35,45,.05)}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": ".lead{border-radius:20px;overflow:hidden}",
+      "new": ".hero[data-auto-latest-hero=\"1\"]>.lead{border-radius:20px;overflow:hidden}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": ".copy{padding:32px}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .copy{padding:32px}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": ".copy h1{font-size:48px;margin:.3em 0}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .copy h1{font-size:48px;margin:.3em 0}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": ".copy p{font-size:18px;color:#42525b}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .copy p{font-size:18px;color:#42525b}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": "aside{padding:26px;background:var(--cream);border-radius:20px}aside h2{font-size:32px;margin-top:0}aside a{display:block;padding:18px 0;border-top:1px solid #d5cec2;font-weight:750;line-height:1.4}aside a:hover{color:var(--red)}",
+      "new": ".hero[data-auto-latest-hero=\"1\"]>aside{padding:26px;background:var(--cream);border-radius:20px}.hero[data-auto-latest-hero=\"1\"]>aside h2{font-size:32px;margin-top:0}.hero[data-auto-latest-hero=\"1\"]>aside a{display:block;padding:18px 0;border-top:1px solid #d5cec2;font-weight:750;line-height:1.4}.hero[data-auto-latest-hero=\"1\"]>aside a:hover{color:var(--red)}",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": "@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr}",
+      "new": "@media(max-width:850px){.head nav{display:none}.hero[data-auto-latest-hero=\"1\"]{grid-template-columns:1fr}",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
+      "old": "<header class=\"hero\">",
+      "new": "<header class=\"article-hero\">",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
+      "old": ".hero{max-width:1000px;",
+      "new": ".article-hero{max-width:1000px;",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
+      "old": ".article>.hero{padding:0 0 28px;margin:0;max-width:none}",
+      "new": ".article>.article-hero{display:block;position:static;top:auto;z-index:auto;backdrop-filter:none;border:0;background:transparent;grid-template-columns:none;gap:0;padding:0 0 28px;margin:0;max-width:none}",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
+      "old": ".article>.hero h1{margin-top:0}",
+      "new": ".article>.article-hero h1{margin-top:0}",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
+      "old": "h1{font-size:clamp(35px,4.8vw,60px);line-height:1.11;letter-spacing:-.035em;font-weight:700;margin:0 0 27px;max-width:940px}",
+      "new": "h1{font-size:clamp(38px,4vw,56px);line-height:1.08;letter-spacing:-.035em;font-weight:700;margin:0 0 24px;max-width:790px}",
       "count": 1
     }
   ],
