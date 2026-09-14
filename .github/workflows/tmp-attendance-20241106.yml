@@ -1,0 +1,46 @@
+name: tmp-attendance-20241106
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch PeerTube metadata
+        run: |
+          mkdir -p out
+          curl -L --fail --retry 3 'https://tv.pirati.cz/api/v1/videos/2egmcxfuaLggVdcyZ1EhYr' -o out/video.json
+          python3 - <<'PY'
+          import json
+          j=json.load(open('out/video.json'))
+          print('name=',j.get('name'))
+          print('duration=',j.get('duration'))
+          for f in j.get('files',[]): print('FILE',f.get('resolution',{}).get('label'),f.get('fileUrl'))
+          for p in j.get('streamingPlaylists',[]):
+              print('PLAYLIST',p.get('playlistUrl'))
+              for f in p.get('files',[]): print('STREAMFILE',f.get('resolution',{}).get('label'),f.get('fileUrl'))
+          PY
+      - name: Download low-res video and extract first frames
+        run: |
+          python3 - <<'PY' > out/url.txt
+          import json
+          j=json.load(open('out/video.json'))
+          fs=[]
+          for f in j.get('files',[]): fs.append(f)
+          for p in j.get('streamingPlaylists',[]): fs += p.get('files',[])
+          fs=[f for f in fs if f.get('fileUrl')]
+          fs.sort(key=lambda f: (f.get('resolution',{}).get('id') or 9999))
+          print(fs[0]['fileUrl'])
+          PY
+          URL=$(cat out/url.txt)
+          echo "$URL"
+          curl -L --fail --retry 3 "$URL" -o out/video.mp4
+          ffmpeg -hide_banner -loglevel error -ss 0 -t 240 -i out/video.mp4 -vf 'fps=1/5,scale=1280:-2' -q:v 2 out/frame_%03d.jpg
+          ffmpeg -hide_banner -loglevel error -ss 0 -t 240 -i out/video.mp4 -vn -ac 1 -ar 16000 out/intro.wav
+      - name: Upload research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: attendance-20241106
+          path: out/
+          retention-days: 1
