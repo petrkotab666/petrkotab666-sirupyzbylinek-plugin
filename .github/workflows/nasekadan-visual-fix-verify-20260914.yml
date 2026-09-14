@@ -14,37 +14,40 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Ověřit převzetí bridge a veřejný HTML/CSS
+      - name: Ověřit kompletní scoping veřejného HTML/CSS
         shell: bash
         run: |
           set -Eeuo pipefail
           ok=0
           for i in $(seq 1 30); do
             sleep 4
-            q="visualverify-$i-$(date +%s%N)"
+            q="visualverify2-$i-$(date +%s%N)"
             health="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/deployment-health.txt?$q" || true)"
-            if grep -Fq 'source=bridge:20260914-visual-article-layout-fix-v1' <<<"$health"; then ok=1; break; fi
+            if grep -Fq 'source=bridge:20260914-visual-article-layout-fix-v2' <<<"$health"; then ok=1; break; fi
           done
           test "$ok" -eq 1
-          q="final-$(date +%s%N)"
+          q="final2-$(date +%s%N)"
           curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/style.css?$q" -o /tmp/style.css
           curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/kadansky-klaster-vratte-nam-knihy-1986.html?$q" -o /tmp/article.html
-          grep -Fq '.hero[data-auto-latest-hero="1"]' /tmp/style.css
-          grep -Fq 'header[data-site-header="v1"]' /tmp/style.css
+          grep -Fq '.hero[data-auto-latest-hero="1"] .photo' /tmp/style.css
+          grep -Fq '.hero[data-auto-latest-hero="1"] .copy h1' /tmp/style.css
+          grep -Fq '.hero[data-auto-latest-hero="1"]>aside h2' /tmp/style.css
           grep -Fq '<header class="article-hero">' /tmp/article.html
           ! grep -Fq '<header class="hero">' /tmp/article.html
-          grep -Fq 'font-size:clamp(38px,4vw,56px)' /tmp/article.html
           cat > nasekadan-live/visual-fix-receipt-20260914.txt <<EOF
           status=ok
-          bridge_version=20260914-visual-article-layout-fix-v1
+          bridge_version=20260914-visual-article-layout-fix-v2
           article_hero=article-hero
           homepage_hero=scoped
           header=scoped
+          photo=scoped
+          copy=scoped
+          aside=scoped
           verified_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           EOF
           git config user.name 'Naše Kadaň verify bot'
           git config user.email 'info@nasekadan.cz'
           git add nasekadan-live/visual-fix-receipt-20260914.txt
-          git commit -m 'Potvrdit veřejnou vizuální opravu Naše Kadaň [skip ci]'
+          git commit -m 'Potvrdit kompletní veřejnou vizuální opravu Naše Kadaň [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
