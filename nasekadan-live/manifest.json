@@ -1,96 +1,48 @@
 {
   "schema": 1,
-  "version": "20260914-visual-article-layout-fix-v1",
+  "version": "20260914-visual-article-layout-fix-v2",
   "files": [],
   "patches": [
     {
       "path": "style.css",
-      "old": "header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}",
-      "new": "header[data-site-header=\"v1\"]{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(10px)}",
+      "old": ".photo{height:360px;background:radial-gradient(circle at 75% 20%,rgba(255,255,255,.22),transparent 28%),linear-gradient(135deg,#142d3c,#6d8795);display:flex;align-items:center;justify-content:center;position:relative}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .photo{height:360px;background:radial-gradient(circle at 75% 20%,rgba(255,255,255,.22),transparent 28%),linear-gradient(135deg,#142d3c,#6d8795);display:flex;align-items:center;justify-content:center;position:relative}",
       "count": 1
     },
     {
       "path": "style.css",
-      "old": "nav{display:flex;gap:25px;font-weight:750;font-size:15px}nav a:hover{color:var(--red)}",
-      "new": ".head nav{display:flex;gap:25px;font-weight:750;font-size:15px}.head nav a:hover{color:var(--red)}",
+      "old": ".photo:after{content:'';position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.42))}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .photo:after{content:'';position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.42))}",
       "count": 1
     },
     {
       "path": "style.css",
-      "old": ".hero{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:28px;padding:42px 0}",
-      "new": ".hero[data-auto-latest-hero=\"1\"]{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:28px;padding:42px 0}",
+      "old": ".photo span{position:absolute;left:24px;top:24px;background:var(--red);color:#fff;padding:8px 12px;font-size:12px;font-weight:850;letter-spacing:.06em;border-radius:999px}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .photo span{position:absolute;left:24px;top:24px;background:var(--red);color:#fff;padding:8px 12px;font-size:12px;font-weight:850;letter-spacing:.06em;border-radius:999px}",
       "count": 1
     },
     {
       "path": "style.css",
-      "old": ".lead,aside,.cards article{background:#fff;box-shadow:var(--shadow);border:1px solid rgba(19,35,45,.05)}",
-      "new": ".hero[data-auto-latest-hero=\"1\"]>.lead,.hero[data-auto-latest-hero=\"1\"]>aside,.cards article{background:#fff;box-shadow:var(--shadow);border:1px solid rgba(19,35,45,.05)}",
+      "old": ".photo strong{font:900 94px Georgia,serif;color:#ffffff17;letter-spacing:8px}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .photo strong{font:900 94px Georgia,serif;color:#ffffff17;letter-spacing:8px}",
       "count": 1
     },
     {
       "path": "style.css",
-      "old": ".lead{border-radius:20px;overflow:hidden}",
-      "new": ".hero[data-auto-latest-hero=\"1\"]>.lead{border-radius:20px;overflow:hidden}",
+      "old": ".copy small,.tag{color:var(--red);font-weight:850;letter-spacing:.08em;text-transform:uppercase}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .copy small,.tag{color:var(--red);font-weight:850;letter-spacing:.08em;text-transform:uppercase}",
       "count": 1
     },
     {
       "path": "style.css",
-      "old": ".copy{padding:32px}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .copy{padding:32px}",
+      "old": ".copy h1,.section h2,aside h2{font-family:Georgia,serif;line-height:1.08}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .copy h1,.section h2,.hero[data-auto-latest-hero=\"1\"]>aside h2{font-family:Georgia,serif;line-height:1.08}",
       "count": 1
     },
     {
       "path": "style.css",
-      "old": ".copy h1{font-size:48px;margin:.3em 0}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .copy h1{font-size:48px;margin:.3em 0}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": ".copy p{font-size:18px;color:#42525b}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .copy p{font-size:18px;color:#42525b}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": "aside{padding:26px;background:var(--cream);border-radius:20px}aside h2{font-size:32px;margin-top:0}aside a{display:block;padding:18px 0;border-top:1px solid #d5cec2;font-weight:750;line-height:1.4}aside a:hover{color:var(--red)}",
-      "new": ".hero[data-auto-latest-hero=\"1\"]>aside{padding:26px;background:var(--cream);border-radius:20px}.hero[data-auto-latest-hero=\"1\"]>aside h2{font-size:32px;margin-top:0}.hero[data-auto-latest-hero=\"1\"]>aside a{display:block;padding:18px 0;border-top:1px solid #d5cec2;font-weight:750;line-height:1.4}.hero[data-auto-latest-hero=\"1\"]>aside a:hover{color:var(--red)}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": "@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr}",
-      "new": "@media(max-width:850px){.head nav{display:none}.hero[data-auto-latest-hero=\"1\"]{grid-template-columns:1fr}",
-      "count": 1
-    },
-    {
-      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
-      "old": "<header class=\"hero\">",
-      "new": "<header class=\"article-hero\">",
-      "count": 1
-    },
-    {
-      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
-      "old": ".hero{max-width:1000px;",
-      "new": ".article-hero{max-width:1000px;",
-      "count": 1
-    },
-    {
-      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
-      "old": ".article>.hero{padding:0 0 28px;margin:0;max-width:none}",
-      "new": ".article>.article-hero{display:block;position:static;top:auto;z-index:auto;backdrop-filter:none;border:0;background:transparent;grid-template-columns:none;gap:0;padding:0 0 28px;margin:0;max-width:none}",
-      "count": 1
-    },
-    {
-      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
-      "old": ".article>.hero h1{margin-top:0}",
-      "new": ".article>.article-hero h1{margin-top:0}",
-      "count": 1
-    },
-    {
-      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
-      "old": "h1{font-size:clamp(35px,4.8vw,60px);line-height:1.11;letter-spacing:-.035em;font-weight:700;margin:0 0 27px;max-width:940px}",
-      "new": "h1{font-size:clamp(38px,4vw,56px);line-height:1.08;letter-spacing:-.035em;font-weight:700;margin:0 0 24px;max-width:790px}",
+      "old": ".photo{height:240px}.copy h1{font-size:36px}.photo strong{font-size:50px}",
+      "new": ".hero[data-auto-latest-hero=\"1\"] .photo{height:240px}.hero[data-auto-latest-hero=\"1\"] .copy h1{font-size:36px}.hero[data-auto-latest-hero=\"1\"] .photo strong{font-size:50px}",
       "count": 1
     }
   ],
