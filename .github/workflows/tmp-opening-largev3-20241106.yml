@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Extract and enhance opening audio
+      - name: Fast independent transcription of opening
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
@@ -19,21 +19,19 @@ jobs:
           python3 - <<'PY'
           from faster_whisper import WhisperModel
           import os
-          names='''Tomáš Oršulák, Stanislav Hakl, Petr Hossner, Alena Benešová, Jiří Kulhánek, Jan Losenický, Radek Oswald, Jiří Jerie, Adam Studený, Josef Steiner, Jan Vaic, Michal Voltr, Aleš Padrta, Zdeněk Hosman, Martina Matoušková Faldusová, Pavel Neprášek, Stanislava Pardubská, Miloš Wendl, Pavel Zárybnický, Jana Demjanová, Jan Lazarčík, Miroslav Novotný, Miloslav Straka, Jiří Švec, Jindra Zalabáková, Radek Jára, Jan Zach'''
-          prompt='Mimořádné zasedání Zastupitelstva města Kadaně 6. listopadu 2024. Přítomno 26 zastupitelů, jeden omluven. Možná jména: '+names+'. Přepiš přesně, nevymýšlej.'
+          model=WhisperModel('medium', device='cpu', compute_type='int8')
           for audio in ['out/raw.wav','out/enhanced.wav']:
-            for modelname in ['large-v3','distil-large-v3']:
-              model=WhisperModel(modelname, device='cpu', compute_type='int8')
-              segs,info=model.transcribe(audio, language='cs', beam_size=10, vad_filter=False, condition_on_previous_text=False, initial_prompt=prompt, temperature=0.0, no_speech_threshold=0.95, log_prob_threshold=-2.0, compression_ratio_threshold=3.0, word_timestamps=True)
-              path=f"out/{os.path.basename(audio)}.{modelname}.txt"
+            for vad in [False,True]:
+              segs,info=model.transcribe(audio, language='cs', beam_size=5, vad_filter=vad, condition_on_previous_text=False, temperature=0.0, no_speech_threshold=0.9, log_prob_threshold=-2.0, compression_ratio_threshold=3.0, word_timestamps=True)
+              path=f"out/{os.path.basename(audio)}.medium.vad{int(vad)}.txt"
               with open(path,'w',encoding='utf-8') as f:
                 for s in segs:
                   line=f'[{s.start:06.2f}-{s.end:06.2f}] {s.text.strip()}'
-                  print(audio, modelname, line)
+                  print(audio, vad, line)
                   f.write(line+'\n')
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: opening-largev3-20241106
+          name: opening-medium-20241106
           path: out/*.txt
           retention-days: 1
