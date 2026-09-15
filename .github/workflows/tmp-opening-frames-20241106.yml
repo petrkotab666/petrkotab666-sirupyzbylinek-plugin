@@ -2,6 +2,7 @@ name: tmp-opening-frames-20241106
 on:
   push:
     branches: [tmp-attendance-view-20241106]
+# trigger 2026-09-15
 jobs:
   frames:
     runs-on: ubuntu-latest
