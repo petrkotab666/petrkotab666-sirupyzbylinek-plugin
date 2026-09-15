@@ -1,0 +1,37 @@
+name: tmp-scan-kadan-files-20241106
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan nearby city PDFs and Wayback
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils jq
+          mkdir -p out/pdfs
+          : > out/hits.txt
+          seq 4006200 4007100 | xargs -P24 -I{} bash -c '
+            u="https://www.mesto-kadan.cz/filemanager/files/{}.pdf"
+            code=$(curl -L -s -o /tmp/{}.pdf -w "%{http_code}" --max-time 12 "$u" || true)
+            if [ "$code" = "200" ] && [ -s /tmp/{}.pdf ]; then
+              if file /tmp/{}.pdf | grep -qi PDF; then
+                pdftotext -layout /tmp/{}.pdf /tmp/{}.txt 2>/dev/null || true
+                if grep -Eiq "6[.] ?11[.] ?2024|6[.] listopadu 2024|mimořádn.*zastupitel|Nemocnic.*Kadaň" /tmp/{}.txt; then
+                  cp /tmp/{}.pdf out/pdfs/{}.pdf
+                  echo "===== {} =====" >> out/hits.txt
+                  grep -Ein -C 8 "6[.] ?11[.] ?2024|6[.] listopadu 2024|mimořádn.*zastupitel|Nemocnic.*Kadaň|přítomn|omluven" /tmp/{}.txt | head -160 >> out/hits.txt || true
+                fi
+              fi
+            fi
+          '
+          echo '--- WAYBACK ---' >> out/hits.txt
+          curl -s 'https://web.archive.org/cdx/search/cdx?url=www.mesto-kadan.cz/filemanager/files/*.pdf&from=2024&to=2024&filter=timestamp:202411&output=json&fl=timestamp,original,statuscode,digest&filter=statuscode:200&collapse=urlkey' > out/wayback.json || true
+          cat out/wayback.json >> out/hits.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scan-kadan-files-20241106
+          path: out/
+          retention-days: 1
