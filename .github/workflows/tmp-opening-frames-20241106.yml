@@ -1,0 +1,21 @@
+name: tmp-opening-frames-20241106
+on:
+  push:
+    branches: [tmp-attendance-view-20241106]
+jobs:
+  frames:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract opening frames from HLS
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          mkdir -p out
+          HLS='https://tv.pirati.cz/static/streaming-playlists/hls/09f34430-d077-4c19-b932-41005e402f19/4596793a-66a9-4cf5-b40e-0bb973996508-master.m3u8'
+          ffmpeg -hide_banner -loglevel error -ss 0 -t 70 -i "$HLS" -vf 'fps=2,scale=1280:-2' -q:v 2 out/frame_%04d.jpg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opening-frames-20241106
+          path: out/
+          retention-days: 1
