@@ -1,7 +1,7 @@
 {
   "article_status": 200,
-  "article_h1_ok": true,
-  "article_og_ok": true,
+  "article_h1_ok": false,
+  "article_og_ok": false,
   "image_status": 200,
   "image_dimensions": [
     1200,
@@ -11,9 +11,9 @@
   "homepage_status": 200,
   "homepage_contains_article": true,
   "rss_status": 200,
-  "rss_contains_article": false,
-  "rss_last_build_date": "Thu, 17 Sep 2026 07:04:00 +0200",
-  "rss_head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\"\n     xmlns:atom=\"http://www.w3.org/2005/Atom\"\n     xmlns:geo=\"http://www.w3.org/2003/01/geo/wgs84_pos#\"\n     xmlns:szn=\"https://www.seznam.cz\">\n  <channel>\n    <title>Naše Kadaň – zprávy z Kadaně</title>\n    <link>https://nasekadan.cz/</link>\n    <description>Vlastní zprávy, analýzy a ověřené informace z Kadaně a okolí.</description>\n    <language>cs</language>\n    <lastBuildDate>Thu, 17 Sep 2026 07:04:00 +0200</lastBuildDate>\n    <ttl>15</ttl>\n    <atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n    <item>\n      <title>Ve Výsluní nepůjde 5. října šest hodin elektřina. Odstávka zasáhne desítky adres</title>\n      <description><![CDATA[Plánovaná odstávka elektřiny ve Výsluní potrvá 5. října 2026 od 09:00 do 15:00. Dotkne se desítek domů, evidenčních čísel a pěti parcel.]]></description>\n      <link>https://nasekadan.cz/clanky/vysluni-odstavka-elektriny-5-rijna-2026.html</link>\n      <guid isPermaLink=\"true\">https://nasekadan.cz/clanky/vysluni-odstavka-elektriny-5-rijna-2026.html</guid>\n      <pubDate>Thu, 17 Sep 2026 07:04:00 +0200</pubDate>\n      <category>Aktuálně</category>\n      <szn:image><szn:url>https://nasekadan.cz/social/vysluni-odstavka-elektriny-5-rijna-2026-f677d0607b.png</szn:url></szn:image>\n      <geo:lat>50.375984</geo:lat>\n      <geo:long>13.271307</geo:long>\n    </item>\n\n    <item>\n      <title>Odpovědi LEPŠÍHO SEVERU – LEPŠÍ KADANĚ: nemocnice, ARC-MED, bydlení, bezpečnost a spolupráce po volbách</title>\n      <description><![CDATA[LEPŠÍ SEVER – LEPŠÍ KADAŇ odpověděl na deset otázek Naší Kadaně. Přinášíme redakční shrnutí a kompletní původní znění všech odpovědí.]]></description>\n      <link>https://nasekadan.cz/clanky/lepsi-sever-lepsi-kadan-odpovedi-nase-k",
+  "rss_contains_article": true,
+  "rss_last_build_date": "Thu, 17 Sep 2026 07:08:23 +0200",
+  "rss_head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\"\n     xmlns:atom=\"http://www.w3.org/2005/Atom\"\n     xmlns:geo=\"http://www.w3.org/2003/01/geo/wgs84_pos#\"\n     xmlns:szn=\"https://www.seznam.cz\">\n  <channel>\n    <title>Naše Kadaň – zprávy z Kadaně</title>\n    <link>https://nasekadan.cz/</link>\n    <description>Vlastní zprávy, analýzy a ověřené informace z Kadaně a okolí.</description>\n    <language>cs</language>\n    <lastBuildDate>Thu, 17 Sep 2026 07:08:23 +0200</lastBuildDate>\n    <ttl>15</ttl>\n    <atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n    <item>\n      <title>O víkendu se uklízí celé Česko. Přidejme se i v Kadani</title>\n      <description><![CDATA[V neděli se uklízí v Klášterci i u Želiny v Kadani. Přidejte se, pošlete fotografie a pomozte zlepšit okolí. Naše Kadaň vyzývá také město k podpoře dobrovolníků.]]></description>\n      <link>https://nasekadan.cz/clanky/uklidme-kadan-world-cleanup-day-20260917.html</link>\n      <guid isPermaLink=\"true\">https://nasekadan.cz/clanky/uklidme-kadan-world-cleanup-day-20260917.html</guid>\n      <pubDate>Thu, 17 Sep 2026 07:08:23 +0200</pubDate>\n      <category>KADAŇ</category>\n      <category>ŽIVOTNÍ PROSTŘEDÍ</category>\n      <category>17. ZÁŘÍ 2026</category>\n      <szn:image><szn:url>https://nasekadan.cz/social/uklidme-kadan-world-cleanup-day-20260917-9482aa3955.png</szn:url></szn:image>\n      <geo:lat>50.375984</geo:lat>\n      <geo:long>13.271307</geo:long>\n    </item>\n\n    <item>\n      <title>Ve Výsluní nepůjde 5. října šest hodin elektřina. Odstávka zasáhne desítky adres</title>\n      <description><![CDATA[Plánovaná odstávka elektřiny ve Výsluní potrvá 5. října 2026 od 09:00 do 15:00. Dotkne se desítek domů, evidenčních čísel a pěti parcel.]]></description>\n      <link>ht",
   "sitemap_status": 200,
-  "sitemap_contains_article": false
+  "sitemap_contains_article": true
 }
