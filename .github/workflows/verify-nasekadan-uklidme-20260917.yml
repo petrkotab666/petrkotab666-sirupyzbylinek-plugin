@@ -1,0 +1,97 @@
+name: Naše Kadaň – ověření Ukliďme Kadaň 2026
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nasekadan-live/verify-uklidme-trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Počkat na nativní OVH publikaci a ověřit veřejný web
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 - <<'PY'
+          import json, time, urllib.request, urllib.error, struct, hashlib
+          from pathlib import Path
+          base='https://nasekadan.cz'
+          article='/clanky/uklidme-kadan-world-cleanup-day-20260917.html'
+          image='/social/uklidme-kadan-world-cleanup-day-20260917.png'
+          expected_h1='O víkendu se uklízí celé Česko. Přidá se i Kadaň?'
+          expected_og=base+image
+          report={}
+
+          def fetch(path, binary=False):
+              req=urllib.request.Request(base+path,headers={'User-Agent':'NaseKadanPublicVerifier/20260917','Cache-Control':'no-cache'})
+              try:
+                  with urllib.request.urlopen(req,timeout=25) as r:
+                      body=r.read()
+                      return r.status, dict(r.headers), body if binary else body.decode('utf-8','replace')
+              except urllib.error.HTTPError as e:
+                  body=e.read()
+                  return e.code, dict(e.headers), body if binary else body.decode('utf-8','replace')
+              except Exception as e:
+                  return 0, {'error':repr(e)}, b'' if binary else ''
+
+          for attempt in range(1,25):
+              ac,ah,ab=fetch(article)
+              ic,ih,ib=fetch(image,True)
+              hc,hh,hb=fetch('/')
+              rc,rh,rb=fetch('/rss.xml')
+              sc,sh,sb=fetch('/sitemap.xml')
+              article_ok=ac==200 and f'<h1>{expected_h1}</h1>' in ab and expected_og in ab
+              image_ok=False; dims=None
+              if ic==200 and len(ib)>24 and ib[:8]==b'\x89PNG\r\n\x1a\n':
+                  dims=struct.unpack('>II',ib[16:24]); image_ok=dims==(1200,630)
+              home_ok=hc==200 and article in hb
+              rss_ok=rc==200 and article in rb
+              sitemap_ok=sc==200 and article in sb
+              report={
+                  'attempt':attempt,
+                  'article_status':ac,
+                  'article_h1_ok':f'<h1>{expected_h1}</h1>' in ab,
+                  'article_og_ok':expected_og in ab,
+                  'image_status':ic,
+                  'image_content_type':ih.get('Content-Type',''),
+                  'image_dimensions':list(dims) if dims else None,
+                  'image_sha256':hashlib.sha256(ib).hexdigest() if ib else None,
+                  'homepage_status':hc,
+                  'homepage_contains_article':home_ok,
+                  'rss_status':rc,
+                  'rss_contains_article':rss_ok,
+                  'rss_last_build_date':None,
+                  'sitemap_status':sc,
+                  'sitemap_contains_article':sitemap_ok,
+                  'article_ok':article_ok,
+                  'image_ok':image_ok,
+                  'all_ok':article_ok and image_ok and home_ok and rss_ok and sitemap_ok,
+              }
+              import re
+              m=re.search(r'<lastBuildDate>(.*?)</lastBuildDate>',rb,re.I|re.S)
+              if m: report['rss_last_build_date']=m.group(1).strip()
+              if report['all_ok']:
+                  break
+              time.sleep(15)
+          Path('nasekadan-live/verify-uklidme.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(report,ensure_ascii=False))
+          PY
+      - name: Uložit výsledek veřejného ověření
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name 'nasekadan-public-verifier'
+          git config user.email 'info@nasekadan.cz'
+          git add nasekadan-live/verify-uklidme.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Naše Kadaň: veřejná kontrola Ukliďme Kadaň [skip ci]'
+            git push origin HEAD:main
+          fi
