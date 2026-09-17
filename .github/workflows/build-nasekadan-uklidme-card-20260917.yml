@@ -1,0 +1,88 @@
+name: Naše Kadaň – OG karta Ukliďme Kadaň 2026
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-nasekadan-uklidme-card-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vygenerovat kartu 1200x630
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 -m pip install --quiet pillow==11.3.0
+          python3 - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          from pathlib import Path
+          import hashlib
+
+          W,H=1200,630
+          navy=(2,25,37); navy2=(3,31,45); teal=(6,58,70); grid=(13,84,96)
+          red=(194,31,48); pale=(211,236,231); muted=(166,195,202); green=(72,154,111)
+          img=Image.new('RGB',(W,H),navy); d=ImageDraw.Draw(img)
+          for y in range(H):
+              t=y/(H-1); col=tuple(int(navy[i]*(1-t)+navy2[i]*t) for i in range(3)); d.line((0,y,760,y),fill=col)
+          d.polygon([(760,0),(1200,0),(1200,H),(650,H)],fill=teal)
+          for x in range(760,1201,44): d.line((x,0,x,H),fill=grid,width=1)
+          for y in range(20,H,44): d.line((700,y,1200,y),fill=grid,width=1)
+          bold='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'; reg='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          fb=lambda n: ImageFont.truetype(bold,n); fr=lambda n: ImageFont.truetype(reg,n)
+          d.text((54,48),'NAŠE KADAŇ',font=fb(28),fill='white')
+          d.rectangle((54,91,430,95),fill=red)
+          d.rounded_rectangle((54,119,230,153),radius=5,fill=green)
+          d.text((72,127),'UKLIĎME KADAŇ',font=fb(16),fill='white')
+          y=186
+          for line in ('O víkendu se uklízí','celé Česko.','Přidá se i Kadaň?'):
+              d.text((54,y),line,font=fb(42),fill='white'); y+=54
+          d.text((54,372),'World Cleanup Day · 20. září 2026',font=fr(24),fill=muted)
+          d.line((54,430,580,430),fill=(115,170,182),width=2)
+          d.rounded_rectangle((54,455,465,492),radius=5,fill=(206,229,235))
+          d.text((73,463),'AKTUÁLNĚ NA NASEKADAN.CZ',font=fb(16),fill=(3,28,42))
+
+          # Stylizovaný pytel, rukavice a listy – jednoduchá redakční ilustrace.
+          d.ellipse((850,182,1080,405),fill=(198,229,220),outline=(232,247,242),width=6)
+          d.polygon([(882,225),(1046,225),(1080,520),(838,520)],fill=(198,229,220))
+          d.rounded_rectangle((866,198,1056,246),radius=20,fill=(142,202,178))
+          d.line((902,226,892,177,930,210,960,168,982,211,1020,178,1018,226),fill=(237,249,245),width=9)
+          # Rukavice
+          d.rounded_rectangle((774,390,855,516),radius=28,fill=(244,198,66))
+          for i,x in enumerate((782,800,818,836)):
+              d.rounded_rectangle((x,338+i%2*6,x+14,420),radius=7,fill=(244,198,66))
+          d.rounded_rectangle((1080,388,1155,510),radius=28,fill=(244,198,66))
+          for i,x in enumerate((1084,1102,1120,1138)):
+              d.rounded_rectangle((x,342+(i%2)*7,x+13,418),radius=7,fill=(244,198,66))
+          # Listy
+          for cx,cy,ang in ((814,190,0),(1110,224,0),(1100,535,0),(790,540,0)):
+              d.ellipse((cx-24,cy-12,cx+24,cy+12),fill=(116,195,133))
+              d.line((cx-18,cy,cx+18,cy),fill=(65,131,88),width=3)
+          d.rounded_rectangle((1151,579,1184,612),radius=4,fill=red)
+          d.text((1159,586),'NK',font=fb(13),fill='white')
+
+          out=Path('nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png')
+          out.parent.mkdir(parents=True,exist_ok=True)
+          img.save(out,format='PNG',optimize=True)
+          digest=hashlib.sha256(out.read_bytes()).hexdigest()
+          Path(str(out)+'.sha256').write_text(digest+'\n',encoding='utf-8')
+          print(digest)
+          PY
+      - name: Uložit kartu do transportu
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name 'nasekadan-bridge-assets'
+          git config user.email 'info@nasekadan.cz'
+          git add nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png.sha256
+          if ! git diff --cached --quiet; then
+            git commit -m 'Naše Kadaň: OG karta Ukliďme Kadaň [skip ci]'
+            git push origin HEAD:main
+          fi
