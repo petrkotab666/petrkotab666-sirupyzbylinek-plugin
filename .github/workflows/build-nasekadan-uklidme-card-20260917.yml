@@ -66,16 +66,20 @@ jobs:
           img.save(out,format='PNG',optimize=True)
           digest=hashlib.sha256(out.read_bytes()).hexdigest()
           Path(str(out)+'.sha256').write_text(digest+'\n',encoding='utf-8')
+          article=Path('nasekadan-live/files/clanky/uklidme-kadan-world-cleanup-day-20260917.html')
+          Path(str(article)+'.sha256').write_text(hashlib.sha256(article.read_bytes()).hexdigest()+'\n',encoding='utf-8')
           print(digest)
           PY
-      - name: Uložit kartu do transportu
+      - name: Uložit kartu a checksumy do transportu
         shell: bash
         run: |
           set -Eeuo pipefail
           git config user.name 'nasekadan-bridge-assets'
           git config user.email 'info@nasekadan.cz'
-          git add nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png.sha256
+          git add nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png \
+                  nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png.sha256 \
+                  nasekadan-live/files/clanky/uklidme-kadan-world-cleanup-day-20260917.html.sha256
           if ! git diff --cached --quiet; then
-            git commit -m 'Naše Kadaň: OG karta Ukliďme Kadaň [skip ci]'
+            git commit -m 'Naše Kadaň: OG karta a checksumy Ukliďme Kadaň [skip ci]'
             git push origin HEAD:main
           fi
