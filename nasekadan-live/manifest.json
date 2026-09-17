@@ -1,16 +1,14 @@
 {
   "schema": 1,
-  "version": "20260917-0700-uklidme-kadan-v1",
-  "files": [
+  "version": "20260917-0717-uklidme-kadan-og-v1",
+  "files": [],
+  "patches": [
     {
       "path": "clanky/uklidme-kadan-world-cleanup-day-20260917.html",
-      "sha256": "93182dfb7f92759b781a09068cdd2cdb6b2b941c7324b0389c3598f835979ab7"
-    },
-    {
-      "path": "social/uklidme-kadan-world-cleanup-day-20260917.png",
-      "sha256": "b5d0644c0c9ce3d32bcc3d54bab8efef9bb8ad4d4c9a9dd173ffd1c8f06ef2e9"
+      "old": "<meta property=\"og:url\" content=\"https://nasekadan.cz/clanky/uklidme-kadan-world-cleanup-day-20260917.html\"><meta name=\"twitter:card\" content=\"summary_large_image\">",
+      "new": "<meta property=\"og:url\" content=\"https://nasekadan.cz/clanky/uklidme-kadan-world-cleanup-day-20260917.html\"><meta property=\"og:image\" content=\"https://nasekadan.cz/social/uklidme-kadan-world-cleanup-day-20260917.png\"><meta property=\"og:image:type\" content=\"image/png\"><meta property=\"og:image:width\" content=\"1200\"><meta property=\"og:image:height\" content=\"630\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:image\" content=\"https://nasekadan.cz/social/uklidme-kadan-world-cleanup-day-20260917.png\">",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": []
 }
