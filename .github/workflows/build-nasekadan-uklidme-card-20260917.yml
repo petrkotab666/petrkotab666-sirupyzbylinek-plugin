@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Vygenerovat kartu 1200x630
+      - name: Vygenerovat kartu 1200x630 a checksumy
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -26,7 +26,6 @@ jobs:
           from PIL import Image, ImageDraw, ImageFont
           from pathlib import Path
           import hashlib
-
           W,H=1200,630
           navy=(2,25,37); navy2=(3,31,45); teal=(6,58,70); grid=(13,84,96)
           red=(194,31,48); muted=(166,195,202); green=(72,154,111)
@@ -64,13 +63,35 @@ jobs:
           out=Path('nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png')
           out.parent.mkdir(parents=True,exist_ok=True)
           img.save(out,format='PNG',optimize=True)
-          digest=hashlib.sha256(out.read_bytes()).hexdigest()
-          Path(str(out)+'.sha256').write_text(digest+'\n',encoding='utf-8')
+          Path(str(out)+'.sha256').write_text(hashlib.sha256(out.read_bytes()).hexdigest()+'\n',encoding='utf-8')
           article=Path('nasekadan-live/files/clanky/uklidme-kadan-world-cleanup-day-20260917.html')
           Path(str(article)+'.sha256').write_text(hashlib.sha256(article.read_bytes()).hexdigest()+'\n',encoding='utf-8')
-          print(digest)
           PY
-      - name: Uložit kartu a checksumy do transportu
+      - name: Veřejný probe Naše Kadaň
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python3 - <<'PY'
+          import json,urllib.request,urllib.error,re,struct,hashlib
+          from pathlib import Path
+          base='https://nasekadan.cz'; slug='/clanky/uklidme-kadan-world-cleanup-day-20260917.html'; img='/social/uklidme-kadan-world-cleanup-day-20260917.png'
+          def get(path,binary=False):
+              req=urllib.request.Request(base+path,headers={'User-Agent':'NaseKadanPublicProbe/20260917','Cache-Control':'no-cache'})
+              try:
+                  with urllib.request.urlopen(req,timeout=25) as r:
+                      b=r.read(); return r.status,dict(r.headers),b if binary else b.decode('utf-8','replace')
+              except urllib.error.HTTPError as e:
+                  b=e.read(); return e.code,dict(e.headers),b if binary else b.decode('utf-8','replace')
+              except Exception as e: return 0,{'error':repr(e)},b'' if binary else ''
+          ac,ah,ab=get(slug); ic,ih,ib=get(img,True); hc,hh,hb=get('/'); rc,rh,rb=get('/rss.xml'); sc,sh,sb=get('/sitemap.xml')
+          dims=None
+          if ic==200 and len(ib)>24 and ib[:8]==b'\x89PNG\r\n\x1a\n': dims=list(struct.unpack('>II',ib[16:24]))
+          lm=re.search(r'<lastBuildDate>(.*?)</lastBuildDate>',rb,re.I|re.S)
+          rep={'article_status':ac,'article_h1_ok':'<h1>O víkendu se uklízí celé Česko. Přidá se i Kadaň?</h1>' in ab,'article_og_ok':base+img in ab,'image_status':ic,'image_dimensions':dims,'image_sha256':hashlib.sha256(ib).hexdigest() if ib else None,'homepage_status':hc,'homepage_contains_article':slug in hb,'rss_status':rc,'rss_contains_article':slug in rb,'rss_last_build_date':lm.group(1).strip() if lm else None,'rss_head':rb[:1800],'sitemap_status':sc,'sitemap_contains_article':slug in sb}
+          Path('nasekadan-live/live-probe.json').write_text(json.dumps(rep,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(rep,ensure_ascii=False))
+          PY
+      - name: Uložit kartu, checksumy a probe
         shell: bash
         run: |
           set -Eeuo pipefail
@@ -78,8 +99,9 @@ jobs:
           git config user.email 'info@nasekadan.cz'
           git add nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png \
                   nasekadan-live/files/social/uklidme-kadan-world-cleanup-day-20260917.png.sha256 \
-                  nasekadan-live/files/clanky/uklidme-kadan-world-cleanup-day-20260917.html.sha256
+                  nasekadan-live/files/clanky/uklidme-kadan-world-cleanup-day-20260917.html.sha256 \
+                  nasekadan-live/live-probe.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Naše Kadaň: OG karta a checksumy Ukliďme Kadaň [skip ci]'
+            git commit -m 'Naše Kadaň: OG karta, checksumy a veřejný probe Ukliďme Kadaň [skip ci]'
             git push origin HEAD:main
           fi
