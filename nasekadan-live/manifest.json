@@ -1,50 +1,16 @@
 {
   "schema": 1,
-  "version": "20260914-visual-article-layout-fix-v2",
-  "files": [],
-  "patches": [
+  "version": "20260917-0700-uklidme-kadan-v1",
+  "files": [
     {
-      "path": "style.css",
-      "old": ".photo{height:360px;background:radial-gradient(circle at 75% 20%,rgba(255,255,255,.22),transparent 28%),linear-gradient(135deg,#142d3c,#6d8795);display:flex;align-items:center;justify-content:center;position:relative}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .photo{height:360px;background:radial-gradient(circle at 75% 20%,rgba(255,255,255,.22),transparent 28%),linear-gradient(135deg,#142d3c,#6d8795);display:flex;align-items:center;justify-content:center;position:relative}",
-      "count": 1
+      "path": "clanky/uklidme-kadan-world-cleanup-day-20260917.html",
+      "sha256": "93182dfb7f92759b781a09068cdd2cdb6b2b941c7324b0389c3598f835979ab7"
     },
     {
-      "path": "style.css",
-      "old": ".photo:after{content:'';position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.42))}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .photo:after{content:'';position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.42))}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": ".photo span{position:absolute;left:24px;top:24px;background:var(--red);color:#fff;padding:8px 12px;font-size:12px;font-weight:850;letter-spacing:.06em;border-radius:999px}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .photo span{position:absolute;left:24px;top:24px;background:var(--red);color:#fff;padding:8px 12px;font-size:12px;font-weight:850;letter-spacing:.06em;border-radius:999px}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": ".photo strong{font:900 94px Georgia,serif;color:#ffffff17;letter-spacing:8px}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .photo strong{font:900 94px Georgia,serif;color:#ffffff17;letter-spacing:8px}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": ".copy small,.tag{color:var(--red);font-weight:850;letter-spacing:.08em;text-transform:uppercase}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .copy small,.tag{color:var(--red);font-weight:850;letter-spacing:.08em;text-transform:uppercase}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": ".copy h1,.section h2,aside h2{font-family:Georgia,serif;line-height:1.08}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .copy h1,.section h2,.hero[data-auto-latest-hero=\"1\"]>aside h2{font-family:Georgia,serif;line-height:1.08}",
-      "count": 1
-    },
-    {
-      "path": "style.css",
-      "old": ".photo{height:240px}.copy h1{font-size:36px}.photo strong{font-size:50px}",
-      "new": ".hero[data-auto-latest-hero=\"1\"] .photo{height:240px}.hero[data-auto-latest-hero=\"1\"] .copy h1{font-size:36px}.hero[data-auto-latest-hero=\"1\"] .photo strong{font-size:50px}",
-      "count": 1
+      "path": "social/uklidme-kadan-world-cleanup-day-20260917.png",
+      "sha256": "b5d0644c0c9ce3d32bcc3d54bab8efef9bb8ad4d4c9a9dd173ffd1c8f06ef2e9"
     }
   ],
+  "patches": [],
   "deletes": []
 }
