@@ -75,6 +75,7 @@ jobs:
           import json,urllib.request,urllib.error,re,struct,hashlib
           from pathlib import Path
           base='https://nasekadan.cz'; slug='/clanky/uklidme-kadan-world-cleanup-day-20260917.html'; img='/social/uklidme-kadan-world-cleanup-day-20260917.png'
+          expected_h1='O víkendu se uklízí celé Česko. Přidejme se i v Kadani'
           def get(path,binary=False):
               req=urllib.request.Request(base+path,headers={'User-Agent':'NaseKadanPublicProbe/20260917','Cache-Control':'no-cache'})
               try:
@@ -87,7 +88,12 @@ jobs:
           dims=None
           if ic==200 and len(ib)>24 and ib[:8]==b'\x89PNG\r\n\x1a\n': dims=list(struct.unpack('>II',ib[16:24]))
           lm=re.search(r'<lastBuildDate>(.*?)</lastBuildDate>',rb,re.I|re.S)
-          rep={'article_status':ac,'article_h1_ok':'<h1>O víkendu se uklízí celé Česko. Přidá se i Kadaň?</h1>' in ab,'article_og_ok':base+img in ab,'image_status':ic,'image_dimensions':dims,'image_sha256':hashlib.sha256(ib).hexdigest() if ib else None,'homepage_status':hc,'homepage_contains_article':slug in hb,'rss_status':rc,'rss_contains_article':slug in rb,'rss_last_build_date':lm.group(1).strip() if lm else None,'rss_head':rb[:1800],'sitemap_status':sc,'sitemap_contains_article':slug in sb}
+          h1m=re.search(r'<h1[^>]*>(.*?)</h1>',ab,re.I|re.S)
+          actual_h1=re.sub(r'<[^>]+>','',h1m.group(1)).strip() if h1m else None
+          ogm=re.search(r'<meta\s+property=["\']og:image["\']\s+content=["\']([^"\']+)',ab,re.I)
+          actual_og=ogm.group(1) if ogm else None
+          rep={'article_status':ac,'article_h1':actual_h1,'article_h1_ok':actual_h1==expected_h1,'article_og_image':actual_og,'article_og_ok':actual_og==base+img,'image_status':ic,'image_dimensions':dims,'image_sha256':hashlib.sha256(ib).hexdigest() if ib else None,'homepage_status':hc,'homepage_contains_article':slug in hb,'rss_status':rc,'rss_contains_article':slug in rb,'rss_last_build_date':lm.group(1).strip() if lm else None,'rss_head':rb[:1800],'sitemap_status':sc,'sitemap_contains_article':slug in sb}
+          rep['all_ok']=rep['article_status']==200 and rep['article_h1_ok'] and rep['article_og_ok'] and rep['image_status']==200 and rep['image_dimensions']==[1200,630] and rep['homepage_contains_article'] and rep['rss_contains_article'] and rep['sitemap_contains_article']
           Path('nasekadan-live/live-probe.json').write_text(json.dumps(rep,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print(json.dumps(rep,ensure_ascii=False))
           PY
