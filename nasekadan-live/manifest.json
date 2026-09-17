@@ -1,12 +1,41 @@
 {
   "schema": 1,
-  "version": "20260917-0717-uklidme-kadan-og-v1",
-  "files": [],
+  "version": "20260918-0102-rumburk-kadan-v1",
+  "files": [
+    {
+      "path": "clanky/rumburk-nemocnice-kadan-budoucnost-2026.html",
+      "sha256": "bb0a65eaaeea7ce9ebfb1812e012d2e912b8fcf2ad19a4180eee13f2ec78202d"
+    }
+  ],
   "patches": [
     {
-      "path": "clanky/uklidme-kadan-world-cleanup-day-20260917.html",
-      "old": "<meta property=\"og:url\" content=\"https://nasekadan.cz/clanky/uklidme-kadan-world-cleanup-day-20260917.html\"><meta name=\"twitter:card\" content=\"summary_large_image\">",
-      "new": "<meta property=\"og:url\" content=\"https://nasekadan.cz/clanky/uklidme-kadan-world-cleanup-day-20260917.html\"><meta property=\"og:image\" content=\"https://nasekadan.cz/social/uklidme-kadan-world-cleanup-day-20260917.png\"><meta property=\"og:image:type\" content=\"image/png\"><meta property=\"og:image:width\" content=\"1200\"><meta property=\"og:image:height\" content=\"630\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:image\" content=\"https://nasekadan.cz/social/uklidme-kadan-world-cleanup-day-20260917.png\">",
+      "path": "index.html",
+      "old": "<div class=\"article-list\">",
+      "new": "<div class=\"article-list\">\n    <article class=\"article-card hospital\" data-auto-article=\"rumburk-nemocnice-kadan-budoucnost-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nemocnice-kadan-363f87ff7a.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">18. 9. 2026 · 00:05 · ZDRAVOTNICTVÍ · ANALÝZA</span><h3>Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani</h3><p>Hloubková rešerše vývoje Nemocnice Rumburk a srovnání s aktuální situací Nemocnice Kadaň.</p><a class=\"read-more\" href=\"/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html\">Přečíst článek →</a></div>\n    </article>",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">",
+      "new": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n    <article class=\"article-card hospital\" data-auto-article=\"rumburk-nemocnice-kadan-budoucnost-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nemocnice-kadan-363f87ff7a.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">18. 9. 2026 · 00:05 · ZDRAVOTNICTVÍ · ANALÝZA</span><h3>Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani</h3><p>Hloubková rešerše vývoje Nemocnice Rumburk a srovnání s aktuální situací Nemocnice Kadaň.</p><a class=\"read-more\" href=\"/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html\">Přečíst článek →</a></div>\n    </article>",
+      "count": 1
+    },
+    {
+      "path": "rss.xml",
+      "old": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />",
+      "new": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n    <item>\n      <title>Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani</title>\n      <description><![CDATA[Hloubková rešerše vývoje Nemocnice Rumburk a srovnání s aktuální situací Nemocnice Kadaň.]]></description>\n      <link>https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</link>\n      <guid isPermaLink=\"true\">https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</guid>\n      <pubDate>Fri, 18 Sep 2026 00:05:00 +0200</pubDate>\n      <category>Zdravotnictví</category><category>Analýza</category><category>Nemocnice Kadaň</category><category>Nemocnice Rumburk</category>\n      <szn:image><szn:url>https://nasekadan.cz/social/nemocnice-kadan-363f87ff7a.png</szn:url></szn:image>\n    </item>",
+      "count": 1
+    },
+    {
+      "path": "sitemap.xml",
+      "old": "</urlset>",
+      "new": "  <url><loc>https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</loc><lastmod>2026-09-18</lastmod></url>\n</urlset>",
+      "count": 1
+    },
+    {
+      "path": "news-sitemap.xml",
+      "old": "</urlset>",
+      "new": "  <url>\n    <loc>https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</loc>\n    <news:news>\n      <news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication>\n      <news:publication_date>2026-09-18T00:05:00+02:00</news:publication_date>\n      <news:title>Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani</news:title>\n    </news:news>\n  </url>\n</urlset>",
       "count": 1
     }
   ],
