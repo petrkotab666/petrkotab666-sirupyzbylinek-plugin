@@ -1,0 +1,34 @@
+{
+  "attempt": 1,
+  "article_status": 200,
+  "article_h1": "O víkendu se uklízí celé Česko. Přidejme se i v Kadani",
+  "article_h1_ok": true,
+  "article_og_image": "https://nasekadan.cz/social/uklidme-kadan-world-cleanup-day-20260917.png",
+  "article_og_ok": true,
+  "image_status": 200,
+  "image_content_type": "image/png",
+  "image_dimensions": [
+    1200,
+    630
+  ],
+  "image_sha256": "b5d0644c0c9ce3d32bcc3d54bab8efef9bb8ad4d4c9a9dd173ffd1c8f06ef2e9",
+  "homepage_status": 200,
+  "homepage_contains_article": true,
+  "rss_status": 200,
+  "rss_contains_article": true,
+  "rss_last_build_date": "Thu, 17 Sep 2026 07:08:23 +0200",
+  "sitemap_status": 200,
+  "sitemap_contains_article": true,
+  "event_url": "https://www.uklidmecesko.cz/event/56837",
+  "event_status": 200,
+  "event_markers": {
+    "id_56837": true,
+    "kadan": true,
+    "zelina": true,
+    "palarcikova": true,
+    "nine_oclock": true
+  },
+  "article_ok": true,
+  "image_ok": true,
+  "all_ok": true
+}
