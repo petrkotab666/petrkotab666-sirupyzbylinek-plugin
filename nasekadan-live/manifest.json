@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "version": "20260918-0603-rumburk-mobile-gap-hotfix-1",
+  "version": "20260918-0624-rumburk-correct-image-1",
   "files": [
     {
       "path": "clanky/rumburk-nemocnice-kadan-budoucnost-2026.html",
-      "sha256": "9fa2cf0a96815287a38b4af679d35a2d30924d5bd94866dd33a0b35e1ecd4a7c"
+      "sha256": "5f07dee679f6b9aa5bf776811a895df0b51fc42efb909a33eede2148f42f59ca"
     }
   ],
   "patches": [],
