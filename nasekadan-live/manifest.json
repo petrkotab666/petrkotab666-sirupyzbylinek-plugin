@@ -1,14 +1,12 @@
 {
   "schema": 1,
-  "version": "20260918-0631-rumburk-rss-image-1",
-  "files": [],
-  "patches": [
+  "version": "20260918-0708-slam-poetry-weekly-1",
+  "files": [
     {
-      "path": "rss.xml",
-      "old": "    <item>\n      <title>Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani</title>\n      <description><![CDATA[Hloubková rešerše vývoje Nemocnice Rumburk a srovnání s aktuální situací Nemocnice Kadaň.]]></description>\n      <link>https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</link>\n      <guid isPermaLink=\"true\">https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</guid>\n      <pubDate>Fri, 18 Sep 2026 00:05:00 +0200</pubDate>\n      <category>Zdravotnictví</category><category>Analýza</category><category>Nemocnice Kadaň</category><category>Nemocnice Rumburk</category>\n      <szn:image><szn:url>https://nasekadan.cz/social/nemocnice-kadan-363f87ff7a.png</szn:url></szn:image>\n    </item>",
-      "new": "    <item>\n      <title>Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani</title>\n      <description><![CDATA[Hloubková rešerše vývoje Nemocnice Rumburk a srovnání s aktuální situací Nemocnice Kadaň.]]></description>\n      <link>https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</link>\n      <guid isPermaLink=\"true\">https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html</guid>\n      <pubDate>Fri, 18 Sep 2026 00:05:00 +0200</pubDate>\n      <category>Zdravotnictví</category><category>Analýza</category><category>Nemocnice Kadaň</category><category>Nemocnice Rumburk</category>\n      <szn:image><szn:url>https://nasekadan.cz/social/rumburk-nemocnice-kadan-budoucnost-2026-71e19cb603.png</szn:url></szn:image>\n    </item>",
-      "count": 1
+      "path": "clanky/kam-v-kadani-a-okoli-14-20-zari-2026.html",
+      "sha256": "16dc441d0b2899b7067ec88b4bc2bf18217bcdfe45e8bc06143780a7db53c5cb"
     }
   ],
+  "patches": [],
   "deletes": []
 }
