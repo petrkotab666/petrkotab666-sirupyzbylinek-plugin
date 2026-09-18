@@ -17,6 +17,14 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Před dvěma lety plán za 1,5 miliardy a nový urgent. Teď Rumburk přijde o dětská lůžka. Co jeho příběh ukazuje Kadani","description":"Hloubková rešerše vývoje Nemocnice Rumburk a srovnání s aktuální situací Nemocnice Kadaň.","datePublished":"2026-09-18T00:05:00+02:00","dateModified":"2026-09-18T00:05:00+02:00","image":"https://nasekadan.cz/social/nemocnice-kadan-363f87ff7a.png","author":{"@type":"Organization","name":"Naše Kadaň","url":"https://nasekadan.cz/o-webu/"},"publisher":{"@type":"Organization","name":"Naše Kadaň","url":"https://nasekadan.cz/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://nasekadan.cz/clanky/rumburk-nemocnice-kadan-budoucnost-2026.html"},"inLanguage":"cs-CZ","isAccessibleForFree":true}</script>
 <style>
 .article .metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:30px 0}.article .metric{border:1px solid var(--line);border-top:5px solid #9f2626;border-radius:14px;padding:18px;background:#f8fafb}.article .metric strong{display:block;font-size:29px;line-height:1.1;margin-bottom:8px}.article .metric span{font-size:14px;color:#56636b}.article .caveat{border-left:6px solid #b28a2b;background:#fff8e7;padding:20px 22px;border-radius:0 16px 16px 0;margin:30px 0}.article .pull{font:700 27px/1.35 Georgia,serif;border-top:1px solid #bbb;border-bottom:1px solid #bbb;padding:22px 0;margin:38px 0}.article .timeline{background:#16232d;color:#fff;border-radius:18px;padding:24px;margin:36px 0}.article .timeline h2{color:#fff;margin-top:0}.article .timeline-row{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:14px 0;border-top:1px solid #ffffff26}.article .timeline-row:first-of-type{border-top:0}.article .timeline-row strong{color:#ff8d94}.article .timeline-row p{font-size:16px;margin:0}.article .factbox{background:#fff8e7;border:1px solid #ecd9a6;padding:22px;border-radius:16px;margin:30px 0}.article .compare{width:100%;border-collapse:collapse;margin:26px 0 36px;font-size:15px}.article .compare th,.article .compare td{border:1px solid var(--line);padding:12px;vertical-align:top;text-align:left}.article .compare th{background:#222831;color:#fff}.article .compare td:first-child{font-weight:800;width:24%}.article .checkgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:34px 0}.article .check{padding:20px;border:1px solid var(--line);border-radius:16px}.article .check.yes{background:#eef8f3}.article .check.no{background:#fff2f2}.article .source-list{background:#eef3f5;padding:24px;border-radius:18px;margin-top:44px}.article .source-list li{font-size:15px;margin-bottom:10px}.article-figure{margin:28px 0}.article-figure img{display:block;width:100%;height:auto;border-radius:18px}.article-figure figcaption{font-size:14px;color:#667;margin-top:8px}@media(max-width:700px){.article .metrics,.article .checkgrid{grid-template-columns:1fr}.article .timeline-row{grid-template-columns:80px 1fr}.article .compare{display:block;overflow-x:auto}}
+/* MOBILE_GAP_FAILSAFE_20260918: legacy ad nodes must never reserve space after the new supplement layer takes ownership. */
+@media(max-width:980px){
+  html[data-nk-doplnky="1"] .approved-article[data-monitoring-fingerprint="rumburk-kadan-hospital-20260918"] > .article-ad-auto,
+  html[data-nk-doplnky="1"] .approved-article[data-monitoring-fingerprint="rumburk-kadan-hospital-20260918"] > .featured-cleaning-ad,
+  html[data-nk-doplnky="1"] .approved-article[data-monitoring-fingerprint="rumburk-kadan-hospital-20260918"] > [data-promos]{
+    display:none!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important;overflow:hidden!important;
+  }
+}
 </style>
 <script defer src="https://nasekadan.cz/_nkstats/tracker.js?v=20260730-1" data-nkstats="1"></script>
 </head>
@@ -93,5 +101,19 @@
 </ol></section>
 </article><aside class="sticky"><div class="sidebox"><h3>Reklama</h3><div data-promos data-context="sidebar"></div></div></aside></main>
 <footer class="site-footer" data-site-footer="v1"><div class="wrap footer-grid"><div class="footer-brand"><a class="logo" href="/" aria-label="Naše Kadaň – úvodní stránka"><span class="logo-mark">NK</span><span>NAŠE <b>KADAŇ</b></span></a><p>Nezávislé informace, události a příběhy města.</p></div><div><strong>Naše Kadaň</strong><p><a href="/clanky/">Články</a><br><a href="/o-webu/">O webu</a><br><a href="/zapojte-se/">Poslat tip</a></p></div></div></footer>
-<script src="/site.js"></script><script src="/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3"></script><script src="/reklamy-sidebar.js?v=20260728-adstream-4"></script><script src="/reklamy-oprava-obrazku.js?v=20260728-dynamic-2"></script><script src="/obsah-doplnky.js"></script>
+<script src="/site.js"></script><script src="/reklamy.js?v=20260918-mobile-gap-hotfix-1"></script><script src="/reklamy-sidebar.js?v=20260728-adstream-4"></script><script src="/reklamy-oprava-obrazku.js?v=20260728-dynamic-2"></script><script src="/obsah-doplnky.js?v=20260918-mobile-gap-hotfix-1"></script>
+<script>
+/* ARTICLE_MOBILE_GAP_GUARD_20260918 */
+(()=>{
+  const article=document.querySelector('article.approved-article[data-monitoring-fingerprint="rumburk-kadan-hospital-20260918"]');
+  if(!article)return;
+  const selector='.article-ad-auto,.featured-cleaning-ad,.article-aside-tower,.article-aside-adstream,[data-promos]';
+  const clean=()=>{
+    if(document.documentElement.dataset.nkDoplnky!=='1')return;
+    article.querySelectorAll(selector).forEach(node=>node.remove());
+  };
+  new MutationObserver(clean).observe(article,{childList:true,subtree:true});
+  [100,500,1500,3000,6000].forEach(delay=>setTimeout(clean,delay));
+})();
+</script>
 </body></html>
