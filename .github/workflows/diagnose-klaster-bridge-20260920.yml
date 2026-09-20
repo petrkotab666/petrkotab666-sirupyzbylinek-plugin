@@ -1,0 +1,31 @@
+name: Diagnostika bridge klášter obrázek
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-klaster-bridge-20260920.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Vypsat aktuální veřejný stav
+        shell: bash
+        run: |
+          set +e
+          stamp="${GITHUB_RUN_ID}-$(date +%s)"
+          echo '=== HEALTH ==='
+          curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/bridge-health.txt?x=$stamp"
+          echo
+          echo '=== ARTICLE MATCHES ==='
+          body="$(curl -4 -kfsSL --max-time 20 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/kadansky-klaster-ctyri-umrti-listopad-1981.html?x=$stamp")"
+          printf '%s' "$body" | grep -o 'src="[^"]*kadansky-klaster[^"]*"' | head -20
+          echo "figure_count=$(printf '%s' "$body" | grep -o 'article-figure' | wc -l | tr -d ' ')"
+          echo "old_broken_count=$(printf '%s' "$body" | grep -o '/social/kadansky-klaster-ctyri-umrti-listopad-1981.png' | wc -l | tr -d ' ')"
+          echo 'DIAG_DONE'
