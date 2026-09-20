@@ -1,19 +1,12 @@
 {
   "schema": 1,
-  "version": "20260920-0738-klaster-duplicate-broken-figure",
+  "version": "20260920-2031-repair-truncated-suspect-article",
   "files": [
     {
-      "path": "levnevyklidime-ads.js",
-      "sha256": "60edfd5903c4dab7defd87e4e2b4e6506ca1f292bd59faae2b787a351ef777b2"
+      "path": "clanky/policie-zadrzela-muze-vyhruzne-emaily-nemocnice-kadan-2026.html",
+      "sha256": "c49b591fec46da199436965f8e3c37b32869e31682077861997e4d30ae59703b"
     }
   ],
-  "patches": [
-    {
-      "path": "clanky/kadansky-klaster-ctyri-umrti-listopad-1981.html",
-      "old": "<figure class=\"article-figure\"><img class=\"article-photo\" src=\"/social/kadansky-klaster-ctyri-umrti-listopad-1981.png\" width=\"1200\" height=\"630\" loading=\"eager\" decoding=\"async\" alt=\"Čtyři úmrtí během jediného listopadu — sedmý díl série Příběh kadaňského kláštera\"><figcaption>Sedmý díl série se vrací k týdnům po razii v kadaňském klášteře a k neobvyklému počtu úmrtí v listopadu 1981. Redakční grafika Naše Kadaň.</figcaption></figure>",
-      "new": "",
-      "count": 1
-    }
-  ],
+  "patches": [],
   "deletes": []
 }
