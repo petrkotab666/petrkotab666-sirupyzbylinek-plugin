@@ -1,12 +1,19 @@
 {
   "schema": 1,
-  "version": "20260918-0708-slam-poetry-weekly-1",
+  "version": "20260920-0715-ad-integrity-1",
   "files": [
     {
-      "path": "clanky/kam-v-kadani-a-okoli-14-20-zari-2026.html",
-      "sha256": "16dc441d0b2899b7067ec88b4bc2bf18217bcdfe45e8bc06143780a7db53c5cb"
+      "path": "levnevyklidime-ads.js",
+      "sha256": "60edfd5903c4dab7defd87e4e2b4e6506ca1f292bd59faae2b787a351ef777b2"
     }
   ],
-  "patches": [],
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "/levnevyklidime-ads.js?v=20260808-levnevyklidime-1",
+      "new": "/levnevyklidime-ads.js?v=20260920-ad-integrity-1",
+      "count": 1
+    }
+  ],
   "deletes": []
 }
