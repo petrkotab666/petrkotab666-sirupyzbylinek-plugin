@@ -1,12 +1,14 @@
 {
   "schema": 1,
-  "version": "20260920-2031-repair-truncated-suspect-article",
-  "files": [
+  "version": "20260920-2046-klaster-timeline-layout-fix",
+  "files": [],
+  "patches": [
     {
-      "path": "clanky/policie-zadrzela-muze-vyhruzne-emaily-nemocnice-kadan-2026.html",
-      "sha256": "c49b591fec46da199436965f8e3c37b32869e31682077861997e4d30ae59703b"
+      "path": "clanky/kadansky-klaster-ctyri-umrti-listopad-1981.html",
+      "old": ".timeline{border-left:3px solid #d5c8b8;padding-left:25px;margin:30px 0 38px}.event{position:relative;padding:0 0 23px}.event:before{content:\"\";position:absolute;left:-33px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px var(--paper)}.event time{display:block;font:800 13px/1.5 var(--sans);color:var(--red);margin-bottom:4px}",
+      "new": ".timeline{border-left:3px solid #d5c8b8;padding-left:25px;margin:30px 0 38px}.timeline>.event{display:block!important;grid-template-columns:none!important;grid-auto-columns:auto!important;grid-auto-flow:initial!important;gap:0!important;min-height:0!important;width:100%!important;position:relative;padding:0 0 23px}.timeline>.event>*{grid-column:auto!important;width:auto!important;max-width:none!important;min-width:0!important}.timeline>.event:before{content:\"\";position:absolute;left:-33px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px var(--paper)}.timeline>.event time{display:block!important;height:auto!important;max-width:100%!important;white-space:normal!important;font:800 13px/1.5 var(--sans);color:var(--red);margin-bottom:4px}.timeline>.event strong{display:block!important;overflow-wrap:normal!important;word-break:normal!important}",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": []
 }
