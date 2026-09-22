@@ -1,7 +1,13 @@
 {
   "schema": 1,
-  "version": "20260920-2046-klaster-timeline-layout-fix",
-  "files": [],
+  "version": "20260922-0645-nemocnice-hodnoceni-odmeny",
+  "files": [
+    {
+      "path": "clanky/nemocnice-kadan-hodnoceni-reditele-odmeny-hossner-krusina-2026.html",
+      "source": "nasekadan-live/files/clanky/nemocnice-kadan-hodnoceni-reditele-odmeny-hossner-krusina-2026.html",
+      "sha256": "4fc9dfa1d9bc7f54dec2890bcdbff2e1663c94648b12ecabe2e3ac09deba70d9"
+    }
+  ],
   "patches": [
     {
       "path": "clanky/kadansky-klaster-ctyri-umrti-listopad-1981.html",
