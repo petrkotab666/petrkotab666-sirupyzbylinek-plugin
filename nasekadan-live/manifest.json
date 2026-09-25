@@ -1,12 +1,25 @@
 {
   "schema": 1,
-  "version": "20260925-tskadan-mhd-service-v1",
+  "version": "20260925-tskadan-mhd-service-v2",
   "files": [
     {
       "path": "clanky/web-technickych-sluzeb-kadan-nefunguje-jizdni-rady-mhd-2026.html",
       "sha256": "c8c0039bf252c33cae8ed28346613b550e75437aa19c2ca0aa29f1fc446abe33"
     }
   ],
-  "patches": [],
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "<div class=\"article-list\">\n<article class=\"article-card service\" data-auto-article=\"chomutovska-1240-1243-kadan-neporadek-strikacky-reseni-2026\">",
+      "new": "<div class=\"article-list\">\n<article class=\"article-card service\" data-auto-article=\"web-technickych-sluzeb-kadan-nefunguje-jizdni-rady-mhd-2026\">\n  <div class=\"visual\" role=\"img\" aria-label=\"Web Technických služeb Kadaň momentálně nefunguje. Jízdní řády MHD proto zveřejňujeme znovu\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/mhd-kadan-20260907.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n  <div class=\"article-body\"><span class=\"meta\">25. 9. 2026 · 18:30 · DOPRAVA · MHD · KADAŇ</span><h3>Web Technických služeb Kadaň momentálně nefunguje. Jízdní řády MHD proto zveřejňujeme znovu</h3><p>Web Technických služeb je momentálně nedostupný. Proto znovu zveřejňujeme přehled městské MHD i regionálních autobusů použitelných po Kadani.</p><a class=\"read-more\" href=\"/clanky/web-technickych-sluzeb-kadan-nefunguje-jizdni-rady-mhd-2026.html\">Přečíst článek →</a></div>\n</article>\n<article class=\"article-card service\" data-auto-article=\"chomutovska-1240-1243-kadan-neporadek-strikacky-reseni-2026\">",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n<article class=\"article-card service\" data-auto-article=\"chomutovska-1240-1243-kadan-neporadek-strikacky-reseni-2026\">",
+      "new": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n<article class=\"article-card service\" data-auto-article=\"web-technickych-sluzeb-kadan-nefunguje-jizdni-rady-mhd-2026\">\n  <div class=\"visual\" role=\"img\" aria-label=\"Web Technických služeb Kadaň momentálně nefunguje. Jízdní řády MHD proto zveřejňujeme znovu\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/mhd-kadan-20260907.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n  <div class=\"article-body\"><span class=\"meta\">25. 9. 2026 · 18:30 · DOPRAVA · MHD · KADAŇ</span><h3>Web Technických služeb Kadaň momentálně nefunguje. Jízdní řády MHD proto zveřejňujeme znovu</h3><p>Web Technických služeb je momentálně nedostupný. Proto znovu zveřejňujeme přehled městské MHD i regionálních autobusů použitelných po Kadani.</p><a class=\"read-more\" href=\"/clanky/web-technickych-sluzeb-kadan-nefunguje-jizdni-rady-mhd-2026.html\">Přečíst článek →</a></div>\n</article>\n<article class=\"article-card service\" data-auto-article=\"chomutovska-1240-1243-kadan-neporadek-strikacky-reseni-2026\">",
+      "count": 1
+    }
+  ],
   "deletes": []
 }
