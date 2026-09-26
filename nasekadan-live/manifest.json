@@ -1,31 +1,16 @@
 {
   "schema": 1,
-  "version": "20260926-full-rollback-before-drones-v1",
+  "version": "20260926-restore-drones-richter-safe-v1",
   "files": [
-    {
-      "path": "index.html",
-      "sha256": "33b3e88f20ea1d4366c6278d4f5f9beda09ce567f74a4324e522bc377bb81636"
-    },
-    {
-      "path": "clanky/index.html",
-      "sha256": "7c5659af9e1c72b5f8fd59bd9c8accfdc05d5e7cf3603e7fd87f3942a2ebf004"
-    },
-    {
-      "path": "rss.xml",
-      "sha256": "8f4c508c4a8c79dd3c89a24e8073656a18196eae33d93165134fdac3c56e1097"
-    },
-    {
-      "path": "sitemap.xml",
-      "sha256": "9bbd0e2fba08b5620ba1d1d6d70ec0b9916acde0460e40799430ce47f1086aac"
-    },
-    {
-      "path": "news-sitemap.xml",
-      "sha256": "16951f0f102cea6ac9f772a49e4161bc1e34e43ea0e87494033127bf1010b755"
-    }
+    {"path":"clanky/drony-kadan-kontrola-vedeni-rijen-2026.html","sha256":"0848f53ace8620072abacfb593a32a11d1a1ec8d058376f7598caefb901cdc38"},
+    {"path":"social/drony-kadan-kontrola-vedeni-rijen-2026.svg","sha256":"e6634b223cbee937f78a1707988eeb0a62e18f84cdaede68f9a411610a56585b"},
+    {"path":"clanky/richterova-tovarna-kadan-jan-perout-2026.html","sha256":"aead6bf92d3c4107b71aa89677e6e65f317ce3edb3c1eefebc609cc15e403ea7"},
+    {"path":"index.html","sha256":"d929de8330f3d0ce606dc2bafa85fa574aa3484f1d21a0e9fbdb9999aa8cfbbf"},
+    {"path":"clanky/index.html","sha256":"fb984173a0b301b530ace0343c46e4918064792bd68081b650c27f7336f0e572"},
+    {"path":"rss.xml","sha256":"d6c04256adeef96a844d53dc6a0ce51fe5fc3a8405783712d7edae27951611a6"},
+    {"path":"sitemap.xml","sha256":"9e4b6b00154285c30116432d1ece424b795d9c8f9aee578a322f2d59dd4de4d3"},
+    {"path":"news-sitemap.xml","sha256":"ecf577a406fad15892a86238707d46887781fb07896e82567e103996acbfb3e6"}
   ],
   "patches": [],
-  "deletes": [
-    "clanky/drony-kadan-kontrola-vedeni-rijen-2026.html",
-    "social/drony-kadan-kontrola-vedeni-rijen-2026.svg"
-  ]
+  "deletes": []
 }
