@@ -1,18 +1,18 @@
 {
   "schema": 1,
-  "version": "20260926-home-richter-fix-v1",
+  "version": "20260926-drony-image-fix-v1",
   "files": [
     {
+      "path": "social/drony-kadan-kontrola-vedeni-rijen-2026.svg",
+      "sha256": "e6634b223cbee937f78a1707988eeb0a62e18f84cdaede68f9a411610a56585b"
+    },
+    {
+      "path": "clanky/drony-kadan-kontrola-vedeni-rijen-2026.html",
+      "sha256": "0848f53ace8620072abacfb593a32a11d1a1ec8d058376f7598caefb901cdc38"
+    },
+    {
       "path": "index.html",
-      "sha256": "d6c917aea95a5e3021aa02948d5d4c8de1ee4a8ea67a89e58703a3ec65cc9f43"
-    },
-    {
-      "path": "clanky/index.html",
-      "sha256": "c0026db3dac1fd3b3917a33d717544d59d8fd6020290521fd6bef8b71cb90b42"
-    },
-    {
-      "path": "clanky/richterova-tovarna-kadan-jan-perout-2026.html",
-      "sha256": "aead6bf92d3c4107b71aa89677e6e65f317ce3edb3c1eefebc609cc15e403ea7"
+      "sha256": "201699d580f89eb7540a25cf21fe2e3ee34861b163a6b6fc890e4f6d1ee075f3"
     }
   ],
   "patches": [],
