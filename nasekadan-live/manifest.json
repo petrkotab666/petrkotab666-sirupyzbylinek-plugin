@@ -1,16 +1,31 @@
 {
   "schema": 1,
-  "version": "20260926-restore-headlines-images-v1",
+  "version": "20260926-full-rollback-before-drones-v1",
   "files": [
     {
       "path": "index.html",
-      "sha256": "c9a4e91c4813d9e97b98fca59d9ad84dc7f7d0b239cea65afd6ad2ac50a743aa"
+      "sha256": "33b3e88f20ea1d4366c6278d4f5f9beda09ce567f74a4324e522bc377bb81636"
     },
     {
       "path": "clanky/index.html",
-      "sha256": "52d6304a25f10f7d981843f9735b001d5da7c7b09a456da2eea37d7ac5da8586"
+      "sha256": "7c5659af9e1c72b5f8fd59bd9c8accfdc05d5e7cf3603e7fd87f3942a2ebf004"
+    },
+    {
+      "path": "rss.xml",
+      "sha256": "8f4c508c4a8c79dd3c89a24e8073656a18196eae33d93165134fdac3c56e1097"
+    },
+    {
+      "path": "sitemap.xml",
+      "sha256": "9bbd0e2fba08b5620ba1d1d6d70ec0b9916acde0460e40799430ce47f1086aac"
+    },
+    {
+      "path": "news-sitemap.xml",
+      "sha256": "16951f0f102cea6ac9f772a49e4161bc1e34e43ea0e87494033127bf1010b755"
     }
   ],
   "patches": [],
-  "deletes": []
+  "deletes": [
+    "clanky/drony-kadan-kontrola-vedeni-rijen-2026.html",
+    "social/drony-kadan-kontrola-vedeni-rijen-2026.svg"
+  ]
 }
