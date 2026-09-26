@@ -1,15 +1,23 @@
 {
   "schema": 1,
-  "version": "20260926-restore-drones-richter-safe-v1",
+  "version": "20260926-richter-image-fb-ads-v1",
   "files": [
-    {"path":"clanky/drony-kadan-kontrola-vedeni-rijen-2026.html","sha256":"0848f53ace8620072abacfb593a32a11d1a1ec8d058376f7598caefb901cdc38"},
-    {"path":"social/drony-kadan-kontrola-vedeni-rijen-2026.svg","sha256":"e6634b223cbee937f78a1707988eeb0a62e18f84cdaede68f9a411610a56585b"},
-    {"path":"clanky/richterova-tovarna-kadan-jan-perout-2026.html","sha256":"aead6bf92d3c4107b71aa89677e6e65f317ce3edb3c1eefebc609cc15e403ea7"},
-    {"path":"index.html","sha256":"d929de8330f3d0ce606dc2bafa85fa574aa3484f1d21a0e9fbdb9999aa8cfbbf"},
-    {"path":"clanky/index.html","sha256":"fb984173a0b301b530ace0343c46e4918064792bd68081b650c27f7336f0e572"},
-    {"path":"rss.xml","sha256":"d6c04256adeef96a844d53dc6a0ce51fe5fc3a8405783712d7edae27951611a6"},
-    {"path":"sitemap.xml","sha256":"9e4b6b00154285c30116432d1ece424b795d9c8f9aee578a322f2d59dd4de4d3"},
-    {"path":"news-sitemap.xml","sha256":"ecf577a406fad15892a86238707d46887781fb07896e82567e103996acbfb3e6"}
+    {
+      "path": "clanky/richterova-tovarna-kadan-jan-perout-2026.html",
+      "sha256": "6310ecc38e9c6429926ee7fe5398729ea9c90a43ed06eb962a17b1846a329ee5"
+    },
+    {
+      "path": "social/richterova-tovarna-kadan-jan-perout-2026.svg",
+      "sha256": "50a89c0a12589f8b75e7d8b2e7ed7428094782a901efd7f14c2e08bbb8854c87"
+    },
+    {
+      "path": "index.html",
+      "sha256": "8610e387b0a7bfce1e59534db85bdbb651aba713c112316e0c332f2e3799fcb2"
+    },
+    {
+      "path": "clanky/index.html",
+      "sha256": "856d1dab76f0fea82b2d5c14bc42b617d28524547c51dabf6f7ac24aaef506e0"
+    }
   ],
   "patches": [],
   "deletes": []
