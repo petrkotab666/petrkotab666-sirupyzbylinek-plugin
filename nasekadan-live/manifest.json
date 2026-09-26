@@ -1,18 +1,14 @@
 {
   "schema": 1,
-  "version": "20260926-drony-image-fix-v1",
+  "version": "20260926-restore-headlines-images-v1",
   "files": [
     {
-      "path": "social/drony-kadan-kontrola-vedeni-rijen-2026.svg",
-      "sha256": "e6634b223cbee937f78a1707988eeb0a62e18f84cdaede68f9a411610a56585b"
-    },
-    {
-      "path": "clanky/drony-kadan-kontrola-vedeni-rijen-2026.html",
-      "sha256": "0848f53ace8620072abacfb593a32a11d1a1ec8d058376f7598caefb901cdc38"
-    },
-    {
       "path": "index.html",
-      "sha256": "201699d580f89eb7540a25cf21fe2e3ee34861b163a6b6fc890e4f6d1ee075f3"
+      "sha256": "c9a4e91c4813d9e97b98fca59d9ad84dc7f7d0b239cea65afd6ad2ac50a743aa"
+    },
+    {
+      "path": "clanky/index.html",
+      "sha256": "52d6304a25f10f7d981843f9735b001d5da7c7b09a456da2eea37d7ac5da8586"
     }
   ],
   "patches": [],
