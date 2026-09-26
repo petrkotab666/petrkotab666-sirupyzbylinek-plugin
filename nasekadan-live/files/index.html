@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Naše Kadaň – vlastní články, akce a průvodce městem</title>
+  <meta name="description" content="Hlavní stránka portálu Naše Kadaň: aktuální vlastní články a analýzy, kulturní akce, praktické informace a podrobný průvodce městem.">
+
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .current-aside{display:flex;flex-direction:column;background:#fff}
+    .current-aside .aside-label{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;margin:0 0 7px}
+    .current-aside h2{font-size:31px;margin:0 0 13px}
+    .current-aside p{color:#52616a;margin:0 0 18px}
+    .current-aside .aside-date{font-size:13px;font-weight:850;color:var(--muted);margin-bottom:10px}
+    .current-aside .aside-button{display:inline-flex;width:max-content;padding:12px 16px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;font-weight:850}
+    .current-aside .aside-links{margin-top:auto;padding-top:24px}
+    .current-aside .aside-links a{padding:14px 0}
+    .home-articles{padding-top:28px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}
+    .section-head h2{margin:.15em 0 0}
+    .section-head .btn{white-space:nowrap}
+    .article-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .article-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+    .article-card .visual{height:240px;display:flex;align-items:flex-end;padding:24px 22px;color:#fff;position:relative;overflow:hidden}
+    .article-card .visual:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.58))}
+    .article-card .visual strong{position:relative;z-index:1;max-width:100%;font:900 clamp(24px,1.8vw,29px)/1.06 Georgia,serif;overflow-wrap:anywhere;hyphens:auto}
+    .article-card.transport .visual{background:linear-gradient(135deg,#162b37,#405f70 58%,#ad5b23)}
+    .article-card.service .visual{background:linear-gradient(135deg,#173044,#47778a 58%,#a9232b)}
+    .article-card.accident .visual{background:linear-gradient(135deg,#152630,#355d70 58%,#b04724)}
+    .article-card.outage .visual{background:linear-gradient(135deg,#13242e,#355c70 62%,#a9232b)}
+    .article-card.hospital .visual{background:linear-gradient(135deg,#163143,#4f7487 62%,#7f1720)}
+    .article-card .article-body{padding:23px;display:flex;flex-direction:column;flex:1}
+    .article-card .meta{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .article-card h3{font:800 25px/1.16 Georgia,serif;margin:8px 0 10px}
+    .article-card p{color:#58666e;margin:0 0 20px}
+    .article-card .read-more{margin-top:auto;color:var(--red);font-weight:900}
+    .archive-note{margin-top:22px;color:var(--muted)}
+    @media(max-width:1050px){.article-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:850px){.article-list{grid-template-columns:1fr}.article-card .visual{height:auto;min-height:165px}.article-card .visual strong{font-size:27px}.section-head{display:block}.section-head .btn{margin-top:18px}.current-aside .aside-button{width:100%;justify-content:center}}
+  
+    /* CARD-PREVIEW-FIX-20260803 */
+    .article-card .visual{background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;background-color:#0b202b!important}
+    .article-card .visual:after{display:none!important}
+    /* ARTICLE-PAGINATION-20260803 */
+    .article-pagination{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:38px 0 5px}
+    .article-pagination a,.article-pagination span{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#273b45;text-decoration:none;font-weight:850}
+    .article-pagination a:hover{border-color:var(--red);color:var(--red)}
+    .article-pagination .is-current{background:var(--red);border-color:var(--red);color:#fff}
+    .article-pagination .pagination__edge{min-width:132px}
+    .article-pagination .is-disabled{opacity:.45}
+  </style>
+  <link rel="canonical" href="https://nasekadan.cz/">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Naše Kadaň">
+  <meta property="og:title" content="Naše Kadaň – vlastní články, akce a průvodce městem">
+  <meta property="og:description" content="Aktuální zprávy, vlastní analýzy, akce a průvodce Kadaní.">
+  <meta property="og:url" content="https://nasekadan.cz/">
+  <meta property="og:image" content="https://nasekadan.cz/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+<link data-nasekadan-discovery="1" rel="alternate" type="application/rss+xml" title="Naše Kadaň – zprávy z Kadaně" href="https://nasekadan.cz/rss.xml"><link rel="alternate" type="text/plain" title="Naše Kadaň pro AI" href="https://nasekadan.cz/llms.txt"><meta name="geo.region" content="CZ-42"><meta name="geo.placename" content="Kadaň"><meta name="geo.position" content="50.375984;13.271307"><meta name="ICBM" content="50.375984, 13.271307"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","NewsMediaOrganization"],"@id":"https://nasekadan.cz/#organization","name":"Naše Kadaň","url":"https://nasekadan.cz/","email":"info@nasekadan.cz","description":"Místní zpravodajský a informační web s vlastními články, ověřováním veřejných dokumentů, přehledem akcí a průvodcem Kadaní.","logo":{"@type":"ImageObject","url":"https://nasekadan.cz/favicon.svg","width":64,"height":64},"image":"https://nasekadan.cz/social-card.png","areaServed":{"@type":"City","name":"Kadaň","sameAs":"https://www.wikidata.org/wiki/Q158274"},"publishingPrinciples":"https://nasekadan.cz/o-webu/"},{"@type":"WebSite","@id":"https://nasekadan.cz/#website","url":"https://nasekadan.cz/","name":"Naše Kadaň","inLanguage":"cs-CZ","publisher":{"@id":"https://nasekadan.cz/#organization"}}]}</script>
+<meta name="twitter:title" content="Naše Kadaň – vlastní články, akce a průvodce městem"><meta name="twitter:description" content="Hlavní stránka portálu Naše Kadaň: aktuální vlastní články a analýzy, kulturní akce, praktické informace a podrobný průvodce městem."><meta name="twitter:image" content="https://nasekadan.cz/social-preview.png">
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    <link data-nasekadan-favicon="primary" rel="icon" href="/favicon.svg?v=20260801-2" type="image/svg+xml" sizes="any">
+  <link data-nasekadan-favicon="shortcut" rel="shortcut icon" href="/favicon.svg?v=20260801-2" type="image/svg+xml">
+  <meta name="theme-color" content="#9f2626">
+  <link rel="stylesheet" href="/footer.css?v=20260805-event-hotfix-3">
+</head>
+<body>
+<header data-site-header="v1">
+  <div class="wrap head">
+    <a class="logo" href="/"><span class="logo-mark">NK</span><span>NAŠE <b>KADAŇ</b></span></a>
+    <nav aria-label="Hlavní navigace"><a href="/clanky/">Články</a><a href="/#akce">Akce</a><a href="/pruvodce/">Průvodce</a><a href="/zapojte-se/">Poslat tip</a></nav>
+  </div>
+</header>
+
+<!-- NK_HOMEPAGE_NO_ACTIVE_ALERT_20260923 -->
+
+<main>
+  <section class="wrap hero" id="clanky" data-auto-latest-hero="1" data-latest-article-href="/clanky/den-vezi-rozhleden-kadan-28-zari-2026.html">
+    <article class="lead">
+      <div class="photo" style="background:linear-gradient(135deg,#173044,#47778a 58%,#9f7a2b)"><span>DEN VĚŽÍ A ROZHLEDEN · KADAŇ</span><strong>28. 9. 2026</strong></div>
+      <div class="copy">
+        <small>KADAŇ · AKCE · 25. 9. 2026 · 21:05</small>
+        <h1>Na Kadaň se v pondělí podíváte z výšky. Radniční věž i Mikulovická brána budou zdarma</h1>
+        <p>V pondělí 28. září budou Radniční věž a Mikulovická brána přístupné s průvodcem každou celou hodinu od 10 do 17 hodin. Vstup je zdarma.</p>
+        <a class="btn" href="/clanky/den-vezi-rozhleden-kadan-28-zari-2026.html">Přečíst článek →</a>
+      </div>
+    </article>
+    <aside class="current-aside">
+      <p class="aside-label">NEJBLIŽŠÍ AKCE</p>
+      <p class="aside-date">Pondělí 28. září</p>
+      <h2>Den věží a rozhleden</h2>
+      <p>Dvě kadaňské dominanty, prohlídky každou celou hodinu od 10 do 17 hodin a vstup zdarma.</p>
+      <a class="aside-button" href="/clanky/den-vezi-rozhleden-kadan-28-zari-2026.html">Podrobnosti</a>
+    </aside>
+  </section>
+
+  <section class="wrap section home-articles">
+    <div class="section-head">
+      <div>
+        <p class="tag">AKTUÁLNÍ ČLÁNKY</p>
+        <h2>Nejnovější vlastní zpracování</h2>
+      </div>
+      <a class="btn btn-secondary" href="/clanky/">Otevřít archiv článků →</a>
+    </div>
+    <p class="section-intro">Na úvodní stránce zůstává vždy několik nejnovějších článků. Nové texty se řadí od nejnovějšího a starší se přesouvají do přehledného archivu, takže žádný článek nezmizí.</p>
+
+    <div class="article-list">
+<article class="article-card service" data-auto-article="drony-kadan-kontrola-vedeni-rijen-2026">
+  <div class="visual" role="img" aria-label="Drony budou létat i přímo nad Kadaní. Kontrola vedení potrvá do poloviny října" style="background:linear-gradient(135deg,#173044,#47778a 58%,#2f7556)"><strong>Inspekční drony nad Kadaní</strong></div>
+  <div class="article-body"><span class="meta">26. 9. 2026 · 12:50 · KADAŇ · ENERGETIKA · DRONY</span><h3>Drony budou létat i přímo nad Kadaní. Kontrola vedení potrvá do poloviny října</h3><p>Inspekční lety dronů se nově týkají přímo Kadaně, Pokutic, Úhošťan, Tušimic, Mikulovic u Vernéřova a Rokle. Probíhat mají do 16. října.</p><a class="read-more" href="/clanky/drony-kadan-kontrola-vedeni-rijen-2026.html">Přečíst článek →</a></div>
+</article>
+
+<article class="article-card service" data-auto-article="den-vezi-rozhleden-kadan-28-zari-2026">
+  <div class="visual" role="img" aria-label="Na Kadaň se v pondělí podíváte z výšky. Radniční věž i Mikulovická brána budou zdarma" style="background:linear-gradient(135deg,#173044,#47778a 58%,#9f7a2b)"><strong>Den věží a rozhleden</strong></div>
+  <div class="article-body"><span class="meta">25. 9. 2026 · 21:05 · KADAŇ · AKCE · PAMÁTKY</span><h3>Na Kadaň se v pondělí podíváte z výšky. Radniční věž i Mikulovická brána budou zdarma</h3><p>V pondělí 28. září budou Radniční věž a Mikulovická brána přístupné s průvodcem každou celou hodinu od 10 do 17 hodin. Vstup je zdarma.</p><a class="read-more" href="/clanky/den-vezi-rozhleden-kadan-28-zari-2026.html">Přečíst článek →</a></div>
+</article>
+
+<article class="article-card service" data-auto-article="web-technickych-sluzeb-kadan-nefunguje-jizdni-rady-mhd-2026">
+  <div class="visual" role="img" aria-label="Web Technických služeb Kadaň momentálně nefunguje. Jízdní řády MHD proto zveřejňujeme znovu" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/mhd-kadan-20260907.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+  <div class="article-body"><span class="meta">25. 9. 2026 · 18:30 · DOPRAVA · MHD · KADAŇ</span><h3>Web Technických služeb Kadaň momentálně nefunguje. Jízdní řády MHD proto zveřejňujeme znovu</h3><p>Web Technických služeb je momentálně nedostupný. Proto znovu zveřejňujeme přehled městské MHD i regionálních autobusů použitelných po Kadani.</p><a class="read-more" href="/clanky/web-technickych-sluzeb-kadan-nefunguje-jizdni-rady-mhd-2026.html">Přečíst článek →</a></div>
+</article>
+<article class="article-card service" data-auto-article="chomutovska-1240-1243-kadan-neporadek-strikacky-reseni-2026">
+  <div class="visual" role="img" aria-label="Chomutovská 1240–1243: úklid nestačil. Co může pomoci proti stříkačkám, nepořádku a ničení domu" style="background:linear-gradient(135deg,#162b37,#405f70 58%,#ad5b23)"></div>
+  <div class="article-body"><span class="meta">25. 9. 2026 · KADAŇ · BYDLENÍ · BEZPEČNOST</span><h3>Chomutovská 1240–1243: úklid nestačil. Co může pomoci proti stříkačkám, nepořádku a ničení domu</h3><p>Po velkém úklidu se podle obyvatel znovu objevují stříkačky, znečištění a poškozování společných prostor. Přinášíme konkrétní možnosti řešení.</p><a class="read-more" href="/clanky/chomutovska-1240-1243-kadan-neporadek-strikacky-reseni-2026.html">Přečíst článek →</a></div>
+</article>
+<article class="article-card hospital" data-auto-article="kabat-chomutov-koncert-reportaz-2026">
+      <div class="visual" role="img" aria-label="Kabát v Chomutově: hala zpívala s kapelou, při Corridě jela mexická vlna" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/media/kabat-chomutov-2026-01.jpg');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">22. 9. 2026 · 22:05 · REPORTÁŽ · HUDBA · CHOMUTOV · KABÁT</span><h3>Kabát v Chomutově: hala zpívala s kapelou, při Corridě jela mexická vlna</h3><p>Reportáž přímo z chomutovského koncertu Kabátu: mexická vlna při Corridě, zpívající publikum, atmosféra, občerstvení a zaznamenaný setlist.</p><a class="read-more" href="/clanky/kabat-chomutov-koncert-reportaz-2026.html">Přečíst článek →</a></div>
+    </article>
+
+<article class="article-card hospital" data-auto-article="nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026">
+      <div class="visual" role="img" aria-label="Nemocnice Kadaň získala 591 tisíc na nový web, náborové video a vizuální identitu" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026-f6bafe1a90.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">13. 8. 2026 · 12:14 · NEMOCNICE KADAŇ · DOTACE · 13. SRPNA 2026 VE 12:14</span><h3>Nemocnice Kadaň získala 591 tisíc na nový web, náborové video a vizuální identitu</h3><p>Nemocnice Kadaň oznámila tři kreativní projekty. Na redesign webu, náborové video a novou vizuální identitu získala z programu Ústeckého kraje celkem 591 360 Kč.</p><a class="read-more" href="/clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="vinohrady-jihovychodni-predpoli-kadan-2026">
+      <div class="visual" role="img" aria-label="Vinohrady se nezastavily. Projektovalo se dál. Proč tedy stále nejsou sítě?" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/vinohrady-jihovychodni-predpoli-kadan-2026-4e4bae7858.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">13. 8. 2026 · 04:00 · KADAŇ · BYDLENÍ · VINOHRADY</span><h3>Vinohrady se nezastavily. Projektovalo se dál. Proč tedy stále nejsou sítě?</h3><p>Dáme Kadani novou šanci tvrdí, že se příprava bydlení ve městě na čtyři roky zadrhla. Dokumenty ale ukazují pokračující projektovou přípravu, řešení sítí i změny regulačního plánu. Výsledek v podobě hotových sítí přesto stále chybí.</p><a class="read-more" href="/clanky/vinohrady-jihovychodni-predpoli-kadan-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026">
+      <div class="visual" role="img" aria-label="Na Svatém Kopečku se kácí rizikové stromy. Město varuje návštěvníky" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026-c629334bac.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">12. 8. 2026 · 22:59 · KADAŇ · SVATÝ KOPEČEK · 12. SRPNA 2026 VE 22:59</span><h3>Na Svatém Kopečku se kácí rizikové stromy. Město varuje návštěvníky</h3><p>Na Svatém Kopečku v Kadani probíhá postupné odstraňování rizikových a suchých stromů. Město žádá návštěvníky o zvýšenou opatrnost v místech, kde se právě pracuje.</p><a class="read-more" href="/clanky/svaty-kopecek-kadan-kaceni-rizikovych-stromu-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026">
+      <div class="visual" role="img" aria-label="Dnes večer nad Kadaní: částečné zatmění Slunce a Perseidy" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026-f165faf3ea.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">12. 8. 2026 · 12:35 · KADAŇ · ASTRONOMIE · DNES</span><h3>Dnes večer nad Kadaní: částečné zatmění Slunce a Perseidy</h3><p>Observatoř Kadaň zve dnes 12. srpna 2026 na pozorování částečného zatmění Slunce od 19:00 a večer od 22:00 na Perseidy. Přinášíme časy, program a bezpečnostní upozornění.</p><a class="read-more" href="/clanky/dnes-kadan-zatmeni-slunce-perseidy-observator-12-srpna-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026">
+      <div class="visual" role="img" aria-label="Nemocnice Kadaň versus Petr Hossner: 26 milionů u soudu, neúspěšné smíry a další právní větve" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026-c067569dd0.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">12. 8. 2026 · 04:00 · ZDRAVOTNICTVÍ · NEMOCNICE KADAŇ · SOUDY A VEŘEJNÉ PENÍZE</span><h3>Nemocnice Kadaň versus Petr Hossner: 26 milionů u soudu, neúspěšné smíry a další právní větve</h3><p>Protože se spor Petra Hossnera s Nemocnicí Kadaň stále veřejně řeší, připravili jsme souhrn dvou civilních řízení, žaloby na 25,98 milionu, smírů, nákladů právníků, předběžných opatření a trestní větve ARC-MED.</p><a class="read-more" href="/clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="slunce-kadan-posledni-tyden-pronajem-292-korun-2026">
+      <div class="visual" role="img" aria-label="Poslední týden pro Slunce. Kadaň hledá nájemce popáté, minimum je 292 korun měsíčně" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/slunce-kadan-posledni-tyden-pronajem-292-korun-2026-8fad9a22f0.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">11. 8. 2026 · 21:11 · KADAŇ · MAJETEK MĚSTA · PODNIKÁNÍ</span><h3>Poslední týden pro Slunce. Kadaň hledá nájemce popáté, minimum je 292 korun měsíčně</h3><p>Zájemci o provozovnu Slunce v centru Kadaně mají čas do 17. srpna. Minimální nájem klesl z 17 544 na 292,40 Kč měsíčně, projekt a stavební úpravy vyšly téměř na 3,4 milionu.</p><a class="read-more" href="/clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="nemocnice-kadan-odmenovani-vedeni-masek-hossner-krusina-marek-vlas-2026">
+      <div class="visual" role="img" aria-label="Kolik stálo vedení Nemocnice Kadaň: od Maška přes Hossnera až k tandemu Marek–Vlas" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nemocnice-kadan-odmenovani-vedeni-2026.png?fb=20260811-final');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">11. 8. 2026 · 03:00 · ZDRAVOTNICTVÍ · NEMOCNICE KADAŇ · 11. SRPNA 2026 V 03:00 · AKTUALIZOVÁNO 17:32</span><h3>Kolik stálo vedení Nemocnice Kadaň: od Maška přes Hossnera až k tandemu Marek–Vlas</h3><p>Porovnali jsme dochované smlouvy a skutečně vyplacené částky vedení Nemocnice Kadaň. Mašek, Hossner, Krušina i současná dvojice Marek–Vlas v jednom přehledu.</p><a class="read-more" href="/clanky/nemocnice-kadan-odmenovani-vedeni-masek-hossner-krusina-marek-vlas-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="hvezdarna-kadan-upravy-okoli-lavicky-kose-2026">
+      <div class="visual" role="img" aria-label="Okolí kadaňské hvězdárny čekají další úpravy. Přibudou lavičky, koše i upravený terén" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/hvezdarna-kadan-upravy-okoli-2026.png?fb=20260811-final');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">11. 8. 2026 · 02:00 · KADAŇ · PROSTŘEDNÍ VRCH</span><h3>Okolí kadaňské hvězdárny čekají další úpravy. Přibudou lavičky, koše i upravený terén</h3><p>Město objednalo další úpravy okolí kadaňské hvězdárny na Prostředním vrchu. Terén, lavičky a koše mají stát 115 703 korun bez DPH.</p><a class="read-more" href="/clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="jednotny-vzhled-map-orientacnich-tabuli-kadan-2026">
+      <div class="visual" role="img" aria-label="Kadaň sjednotí vzhled map a orientačních tabulí. Zakázka stojí 65 tisíc korun" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.png?fb=20260811-final');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">11. 8. 2026 · 01:00 · KADAŇ · VEŘEJNÝ PROSTOR</span><h3>Kadaň sjednotí vzhled map a orientačních tabulí. Zakázka stojí 65 tisíc korun</h3><p>Kadaň si objednala jednotný vizuální styl městských map a orientačních tabulí za 65 tisíc korun včetně DPH. Nejde o nové logo města, ale o další část stávající vizuální identity.</p><a class="read-more" href="/clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="ano-kritizuje-termin-mimoradneho-zastupitelstva-nemocnice-2026">
+      <div class="visual" role="img" aria-label="ANO se hlásí ke svolání mimořádného zastupitelstva. Termín v pondělí v 8:00 kritizuje" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ano-kritizuje-termin-mimoradneho-zastupitelstva-nemocnice-2026-7238beaa41.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">10. 8. 2026 · 20:10 · KOMUNÁLNÍ POLITIKA · NEMOCNICE KADAŇ · ANO</span><h3>ANO se hlásí ke svolání mimořádného zastupitelstva. Termín v pondělí v 8:00 kritizuje</h3><p>Místní ANO po zveřejnění oficiální pozvánky připomnělo, že právě jeho zastupitelé iniciovali mimořádné jednání kvůli Nemocnici Kadaň. Kritizuje pondělní termín 17. srpna v 8:00. Ověřujeme, co z jeho tvrzení lze doložit.</p><a class="read-more" href="/clanky/ano-kritizuje-termin-mimoradneho-zastupitelstva-nemocnice-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="cyklomycka-pitko-dopravni-hriste-kadan-2026">
+      <div class="visual" role="img" aria-label="U dopravního hřiště v Kadani vznikne cyklomyčka a pítko. Hotovo má být do konce srpna" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/cyklomycka-pitko-dopravni-hriste-kadan-2026-94144de035.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">10. 8. 2026 · 18:06 · KADAŇ · CYKLISTIKA · VEŘEJNÝ PROSTOR</span><h3>U dopravního hřiště v Kadani vznikne cyklomyčka a pítko. Hotovo má být do konce srpna</h3><p>Kadaň objednala vodovodní přípojku, cyklomyčku a pítko u dopravního hřiště v Topolové ulici. Celý soubor prací má stát nejvýše 304 745,76 Kč včetně DPH a dokončen má být do 31. srpna 2026.</p><a class="read-more" href="/clanky/cyklomycka-pitko-dopravni-hriste-kadan-2026.html">Přečíst článek →</a></div>
+    </article>
+<article class="article-card hospital" data-auto-article="mimoradne-zastupitelstvo-nemocnice-kadan-17-srpna-2026">
+      <div class="visual" role="img" aria-label="Potvrzeno: mimořádné zastupitelstvo kvůli nemocnici bude 17. srpna od 8:00" style="background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/mimoradne-zastupitelstvo-nemocnice-kadan-17-srpna-2026-905cd67fcc.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat"></div>
+      <div class="article-body"><span class="meta">10. 8. 2026 · 13:13 · MIMOŘÁDNÁ ZPRÁVA · NEMOCNICE KADAŇ · ZASTUPITELSTVO</span><h3>Potvrzeno: mimořádné zastupitelstvo kvůli nemocnici bude 17. srpna od 8:00</h3><p>Město Kadaň oficiálně potvrdilo mimořádné zastupitelstvo na 17. srpna 2026 od 8:00. Jediným věcným bodem je Nemocnice Kadaň a přizván je jednatel Pavel Marek. Naše Kadaň stejný termín přinesla už 30. července jako neoficiální informaci.</p><a class="read-more" href="/clanky/mimoradne-zastupitelstvo-nemocnice-kadan-17-srpna-2026.html">Přečíst článek →</a></div>
+    </article>
+    </div>
+<nav class="article-pagination" aria-label="Stránkování článků"><span class="pagination__edge is-disabled">← Novější</span><span class="is-current" aria-current="page">1</span><a href="/clanky/strana-2.html" aria-label="Strana 2">2</a><a href="/clanky/strana-3.html" aria-label="Strana 3">3</a><a href="/clanky/strana-4.html" aria-label="Strana 4">4</a><a href="/clanky/strana-5.html" aria-label="Strana 5">5</a><a href="/clanky/strana-6.html" aria-label="Strana 6">6</a><a href="/clanky/strana-7.html" aria-label="Strana 7">7</a><a href="/clanky/strana-8.html" aria-label="Strana 8">8</a><a class="pagination__edge" rel="next" href="/clanky/strana-2.html">Starší články →</a></nav>
+    <p class="archive-note">Na titulní straně je 14 nejnovějších článků. Starší texty najdete na dalších stránkách archivu.</p>
+  </section>
+
+  <section class="wrap promo-wrap" data-promos data-count="3"></section>
+
+  <section class="wrap section">
+    <p class="tag">VEDLEJŠÍ INFORMAČNÍ SLUŽBA</p>
+    <h2>Přehled z veřejných zdrojů</h2>
+    <p class="section-intro">Automatický monitoring webu města a místních organizací slouží hlavně jako rychlý rozcestník a zdroj námětů. Nejde o vlastní články Naše Kadaň.</p>
+    <a class="btn btn-secondary" href="/prehled-zdroju/">Otevřít přehled veřejných zdrojů →</a>
+  </section>
+
+  <section class="wrap section" id="akce">
+    <p class="tag">KAM V KADANI</p>
+    <h2>Nejbližší akce</h2>
+    <p class="section-intro">Kulturní, sportovní a rodinné události s místem, časem a přímým odkazem na pořadatele.</p>
+    <div class="cards" id="events"></div>
+  </section>
+
+  <section class="history" id="historie">
+    <div class="wrap section">
+      <p class="tag">PRŮVODCE MĚSTEM</p>
+      <h2>Kadaň krok za krokem</h2>
+      <p class="section-intro" style="color:#c7d5dc">Naše vlastní zpracování památek, příběhů, tras, rodinných cílů a výletů do okolí.</p>
+      <div class="cards">
+        <article>
+          <div class="icon">🏰</div>
+          <h3>Kadaňský hrad</h3>
+          <p>Královský hrad nad Ohří, jeho návštěvníci, obranná funkce a proměny.</p>
+          <a class="btn" href="/pruvodce/kadansky-hrad.html">Číst průvodce</a>
+        </article>
+        <article>
+          <div class="icon">⛪</div>
+          <h3>Františkánský klášter</h3>
+          <p>Národní kulturní památka, klášterní zahrady a historie poutního místa.</p>
+          <a class="btn" href="/pruvodce/frantiskansky-klaster.html">Číst průvodce</a>
+        </article>
+        <article>
+          <div class="icon">🧱</div>
+          <h3>Katova ulička a hradby</h3>
+          <p>Nejužší pojmenovaná ulice v Česku a cesta městským opevněním.</p>
+          <a class="btn" href="/pruvodce/katova-ulicka.html">Číst průvodce</a>
+        </article>
+      </div>
+      <a class="guide-link" href="/pruvodce/">Otevřít celý průvodce →</a>
+    </div>
+  </section>
+
+  <section class="wrap promo-wrap" data-promos data-count="3"></section>
+
+  <section class="wrap section" id="tip">
+    <div class="tip-box">
+      <div>
+        <p class="tag">VÍTE O NĚČEM?</p>
+        <h2>Pošlete nám tip na vlastní článek</h2>
+        <p>Problém ve městě, zajímavý člověk, dokument, stará fotografie nebo příběh, který stojí za ověření.</p>
+        <a class="btn" href="/zapojte-se/">Poslat tip</a>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <p><a href="mailto:info@nasekadan.cz">info@nasekadan.cz</a></p>
+        <p>Podněty se nezveřejňují automaticky. Nejdřív je ověříme a teprve potom zpracujeme.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" data-site-footer="v1">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="/" aria-label="Naše Kadaň – úvodní stránka"><span class="logo-mark">NK</span><span>NAŠE <b>KADAŇ</b></span></a>
+      <p>Nezávislé informace, události a příběhy města.</p>
+    </div>
+    <div class="footer-column">
+      <strong>Obsah webu</strong>
+      <a href="/">Úvod</a>
+      <a href="/clanky/">Naše články</a>
+      <a href="/#akce">Akce</a>
+      <a href="/pruvodce/">Průvodce</a>
+      <a href="/prehled-zdroju/">Přehled zdrojů</a>
+    </div>
+    <div class="footer-column">
+      <strong>Praktické a kontakt</strong>
+      <a href="/prakticke/">Praktická Kadaň</a>
+      <a href="/doprava/">Doprava</a>
+      <a href="/organizace/">Organizace</a>
+      <a href="/zapojte-se/">Zapojte se</a>
+      <a href="/inzerce/"><b>Inzerce a ceník</b></a>
+      <a href="mailto:info@nasekadan.cz">info@nasekadan.cz</a>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <span>© 2026 Naše Kadaň</span>
+    <a href="/o-webu/">O webu</a>
+    <a href="/inzerce/">Inzerce</a>
+    <a href="/ochrana-osobnich-udaju/">Ochrana osobních údajů</a>
+    <a href="/cookies/">Cookies</a>
+    <a href="/provozovatel/">Provozovatel</a>
+    <a href="/cookies/#nastaveni" data-open-privacy-settings>Nastavení soukromí</a>
+    <a href="mailto:info@nasekadan.cz">Kontakt</a>
+  </div>
+</footer>
+<script src="/app.js"></script>
+<script src="/site.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script data-nk-weather-direct="1" data-nk-weather="direct" src="/pocasi.js?v=20260803-weather-live-refresh-3" defer></script>
+<script src="/levnevyklidime-ads.js?v=20260920-ad-integrity-1"></script>
+<script src="/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3"></script>
+<script src="/ad-spacing-guard.js?v=20260920-ad-integrity-1" defer></script>
+<script src="/reklamy-oprava-obrazku.js?v=20260920-ad-integrity-1"></script>
+<script src="/obsah-doplnky.js?v=20260730-pojistime-rotation-4"></script>
+<script src="/ad-fallback-fix.js?v=20260920-ad-integrity-1" defer></script>
+</body>
+</html>
