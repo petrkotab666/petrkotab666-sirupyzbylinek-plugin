@@ -1,30 +1,18 @@
 {
   "schema": 1,
-  "version": "20260926-drony-kadan-live-v1",
+  "version": "20260926-home-richter-fix-v1",
   "files": [
     {
-      "path": "clanky/drony-kadan-kontrola-vedeni-rijen-2026.html",
-      "sha256": "b1002813555b431fbdb917d2742fd1600b01f6874e144524692e5b03fa4819ad"
-    },
-    {
       "path": "index.html",
-      "sha256": "3f7bf3c80cd07789ac9bbc58c8a9d59939ffe5af14f690a2946db32e4f5f0999"
+      "sha256": "d6c917aea95a5e3021aa02948d5d4c8de1ee4a8ea67a89e58703a3ec65cc9f43"
     },
     {
       "path": "clanky/index.html",
-      "sha256": "3137e0fc5d21539e24b52bfa0b87386f8c0b092e71f5367ec1baadf644b024ef"
+      "sha256": "c0026db3dac1fd3b3917a33d717544d59d8fd6020290521fd6bef8b71cb90b42"
     },
     {
-      "path": "rss.xml",
-      "sha256": "b98f3a56469420bdf6b53188ed1970e8904154ea0b00300b2062c79c86df540d"
-    },
-    {
-      "path": "sitemap.xml",
-      "sha256": "ec5c2ded1702c362ac2b359fc75448089e1b837aa1c5a3c9a7366895e535a7aa"
-    },
-    {
-      "path": "news-sitemap.xml",
-      "sha256": "0c127888b9f49ce6e6eeb069a2b1950264bdc98cfc7c1ba833eaa7d9671fc55e"
+      "path": "clanky/richterova-tovarna-kadan-jan-perout-2026.html",
+      "sha256": "aead6bf92d3c4107b71aa89677e6e65f317ce3edb3c1eefebc609cc15e403ea7"
     }
   ],
   "patches": [],
