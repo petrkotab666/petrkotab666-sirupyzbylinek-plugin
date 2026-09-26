@@ -1,0 +1,85 @@
+name: Publikovat Naše Kadaň - drony 26.9.2026
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-nasekadan-drony-live-20260926.yml'
+      - 'nasekadan-live/drony-publish-trigger.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      K1: ${{ secrets.OVH_SSH_PRIVATE_KEY }}
+      K2: ${{ secrets.OVH_SSH_KEY }}
+      K3: ${{ secrets.SSH_PRIVATE_KEY }}
+      K4: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+      K5: ${{ secrets.VPS_SSH_KEY }}
+    steps:
+      - name: Vybrat SSH klíč
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          umask 077
+          key=''
+          for n in K1 K2 K3 K4 K5; do
+            v="${!n:-}"
+            if [ -n "$v" ]; then key="$v"; break; fi
+          done
+          test -n "$key"
+          printf '%s\n' "$key" | tr -d '\r' > /tmp/nk-key
+          chmod 600 /tmp/nk-key
+      - name: Publikovat manifest přímo na OVH
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ssh -i /tmp/nk-key -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 ubuntu@57.129.43.215 'sudo bash -s' <<'REMOTE'
+          set -Eeuo pipefail
+          ROOT=/var/www/nasekadan
+          BASE=https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live
+          curl -4 -fsSL --max-time 30 "$BASE/manifest.json?x=$(date +%s)" -o /tmp/nk-manifest.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('/tmp/nk-manifest.json',encoding='utf-8'))
+          assert d.get('version')=='20260926-drony-kadan-live-v1', d.get('version')
+          PY
+          python3 - <<'PY' > /tmp/nk-files.tsv
+          import json
+          d=json.load(open('/tmp/nk-manifest.json',encoding='utf-8'))
+          for f in d.get('files',[]): print(f["path"]+"\t"+f["sha256"])
+          PY
+          while IFS=$'\t' read -r path sha; do
+            [ -n "$path" ] || continue
+            tmp="/tmp/nk-publish-$(echo "$path" | tr '/ ' '__')"
+            curl -4 -fsSL --max-time 30 "$BASE/files/$path?x=$(date +%s)" -o "$tmp"
+            echo "$sha  $tmp" | sha256sum -c -
+            install -d -m 0755 "$(dirname "$ROOT/$path")"
+            install -m 0644 "$tmp" "$ROOT/$path"
+            if docker inspect nasekadan-web >/dev/null 2>&1; then
+              docker exec nasekadan-web mkdir -p "/usr/share/nginx/html/$(dirname "$path")"
+              docker cp "$tmp" "nasekadan-web:/usr/share/nginx/html/$path"
+            fi
+            rm -f "$tmp"
+          done < /tmp/nk-files.tsv
+          grep -Fq 'Drony budou létat i přímo nad Kadaní' "$ROOT/clanky/drony-kadan-kontrola-vedeni-rijen-2026.html"
+          grep -Fq 'drony-kadan-kontrola-vedeni-rijen-2026.html' "$ROOT/index.html"
+          echo DRONY_DIRECT_OVH_OK
+          REMOTE
+      - name: Ověřit veřejný web
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          for i in $(seq 1 15); do
+            q="${GITHUB_RUN_ID}-$i-$(date +%s)"
+            a="$(curl -4 -kfsSL --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/clanky/drony-kadan-kontrola-vedeni-rijen-2026.html?v=$q" || true)"
+            h="$(curl -4 -kfsSL --max-time 25 -H 'Cache-Control: no-cache' "https://nasekadan.cz/?v=$q" || true)"
+            if grep -Fq 'Drony budou létat i přímo nad Kadaní' <<<"$a" && grep -Fq 'drony-kadan-kontrola-vedeni-rijen-2026.html' <<<"$h"; then
+              echo DRONY_WEB_OK
+              exit 0
+            fi
+            sleep 3
+          done
+          exit 1
