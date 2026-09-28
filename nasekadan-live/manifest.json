@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20260928-tatran-oldrichov-result-v1",
+  "version": "20260928-event-address-search-console-v2",
   "files": [],
   "patches": [
     {
@@ -13,6 +13,12 @@
       "path": "clanky/sportovni-vikend-kadan-26-27-zari-2026.html",
       "old": "<tr><td><strong>Ne 27. 9. · 15:00</strong></td><td>FK Tatran Kadaň – TJ Oldřichov</td><td>fotbal · krajský přebor</td></tr>",
       "new": "<tr><td><strong>Ne 27. 9. · 15:00</strong></td><td>FK Tatran Kadaň – TJ Oldřichov <strong>0:1</strong></td><td>fotbal · krajský přebor</td></tr>",
+      "count": 1
+    },
+    {
+      "path": "clanky/den-vezi-rozhleden-kadan-28-zari-2026.html",
+      "old": "\"about\":[{\"@type\":\"Event\",\"name\":\"Den věží a rozhleden v Kadani\",\"startDate\":\"2026-09-28T10:00:00+02:00\",\"endDate\":\"2026-09-28T17:00:00+02:00\",\"location\":{\"@type\":\"City\",\"name\":\"Kadaň\"}}]",
+      "new": "\"about\":[{\"@type\":\"Event\",\"name\":\"Den věží a rozhleden v Kadani – Radniční věž\",\"startDate\":\"2026-09-28T10:00:00+02:00\",\"endDate\":\"2026-09-28T17:00:00+02:00\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"location\":{\"@type\":\"Place\",\"name\":\"Radniční věž\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Mírové náměstí 1\",\"postalCode\":\"432 01\",\"addressLocality\":\"Kadaň\",\"addressCountry\":\"CZ\"}}},{\"@type\":\"Event\",\"name\":\"Den věží a rozhleden v Kadani – Mikulovická brána\",\"startDate\":\"2026-09-28T10:00:00+02:00\",\"endDate\":\"2026-09-28T17:00:00+02:00\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"location\":{\"@type\":\"Place\",\"name\":\"Mikulovická brána\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Jana Švermy 18\",\"postalCode\":\"432 01\",\"addressLocality\":\"Kadaň\",\"addressCountry\":\"CZ\"}}}]",
       "count": 1
     }
   ],
