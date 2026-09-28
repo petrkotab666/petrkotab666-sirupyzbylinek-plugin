@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20260928-tusimice-eia-article-v1",
+  "version": "20260928-tusimice-eia-visible-v2",
   "files": [
     {
       "path": "clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html",
@@ -42,6 +42,42 @@
       "path": "style.css",
       "old": "html body .promo-grid>a.promo-card:not(.promo-card-wide)>b{margin-top:12px!important}.promo-banner{",
       "new": "html body .promo-grid>a.promo-card:not(.promo-card-wide)>b{margin-top:12px!important}/* NK_AD_DIRECT_MAIN_WIDTH_GUARD_20260928: starší články někdy vkládají sezónní banner přímo pod main; musí zabrat celý řádek, ne úzký gridový sloupec. */html body main>.featured-cleaning-ad,html body main>.featured-rotating-ad{display:block!important;grid-column:1/-1!important;width:min(1180px,calc(100% - 32px))!important;min-width:0!important;max-width:1180px!important;margin:28px auto 48px!important;padding:0 20px!important;box-sizing:border-box!important}html body main>.featured-cleaning-ad>a,html body main>.featured-rotating-ad>a{width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box!important}.promo-banner{",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "old": "  <section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/hrbitov-kadan-sekani-travy-dokumenty-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Kdo má na kadaňském hřbitově sekat trávu? Vysvětlujeme spor krok za krokem\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/hrbitov-kadan-sekani-travy-dokumenty-2026-572b7444ac.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\">\n        <small>AKTUÁLNĚ · 28. 9. 2026 · 00:03</small>\n        <h1>Kdo má na kadaňském hřbitově sekat trávu? Vysvětlujeme spor krok za krokem</h1>\n        <p>Facebooková kritika zarostlého kadaňského hřbitova, odpověď města, deník údržby a rozpočtové doklady: co už lze doložit a co stále nevíme.</p>\n        <a class=\"btn\" href=\"/clanky/hrbitov-kadan-sekani-travy-dokumenty-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">27. 9. 2026 v 20:51</p>\n      <h2>Sportovní týden v Kadani: dvě výhry hokejistů, pohárový úspěch Panthers i večer se Spartou</h2>\n      <p>Týdenní souhrn sportovního dění v Kadani od 21. do 27. září 2026: hokej, florbal, hokejbal, kuželky, kanoistika, ženy, mládež i nejasnosti ve výsledkových systémech.</p>\n      <a class=\"aside-button\" href=\"/clanky/sportovni-tyden-kadan-21-27-zari-2026.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
+      "new": "  <section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Do Tušimic může mířit více odpadu. Severočeské doly chtějí navýšit kapacitu zařízení v lomu\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\">\n        <small>KADAŇ · TUŠIMICE · ŽIVOTNÍ PROSTŘEDÍ · 28. 9. 2026 · 14:15</small>\n        <h1>Do Tušimic může mířit více odpadu. Severočeské doly chtějí navýšit kapacitu zařízení v lomu</h1>\n        <p>Severočeské doly chtějí zvýšit kapacitu zařízení pro využívání vybraných odpadů k zasypávání v Dole Nástup Tušimice. Současný provozní řád uvádí 200 tisíc tun ročně. Vysvětlujeme, co to znamená.</p>\n        <a class=\"btn\" href=\"/clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">28. 9. 2026 v 00:03</p>\n      <h2>Kdo má na kadaňském hřbitově sekat trávu? Vysvětlujeme spor krok za krokem</h2>\n      <p>Facebooková kritika zarostlého kadaňského hřbitova, odpověď města, deník údržby a rozpočtové doklady: co už lze doložit a co stále nevíme.</p>\n      <a class=\"aside-button\" href=\"/clanky/hrbitov-kadan-sekani-travy-dokumenty-2026.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "old": "<div class=\"article-list\">",
+      "new": "<div class=\"article-list\">\\n    <article class=\"article-card hospital\" data-auto-article=\"sportovni-tyden-kadan-21-27-zari-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Sportovní týden v Kadani: dvě výhry hokejistů, pohárový úspěch Panthers i večer se Spartou\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/sportovni-tyden-kadan-21-27-zari-2026-v2.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">27. 9. 2026 · 20:51 · SPORT · TÝDENNÍ SOUHRN · KADAŇ</span><h3>Sportovní týden v Kadani: dvě výhry hokejistů, pohárový úspěch Panthers i večer se Spartou</h3><p>Týdenní souhrn sportovního dění v Kadani od 21. do 27. září 2026: hokej, florbal, hokejbal, kuželky, kanoistika, ženy, mládež i nejasnosti ve výsledkových systémech.</p><a class=\"read-more\" href=\"/clanky/sportovni-tyden-kadan-21-27-zari-2026.html\">Přečíst článek →</a></div>\n    </article>",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">",
+      "new": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\\n    <article class=\"article-card hospital\" data-auto-article=\"tusimice-navyseni-kapacity-odpady-eia-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Do Tušimic může mířit více odpadu. Severočeské doly chtějí navýšit kapacitu zařízení v lomu\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">28. 9. 2026 · 14:15 · KADAŇ · TUŠIMICE · ŽIVOTNÍ PROSTŘEDÍ</span><h3>Do Tušimic může mířit více odpadu. Severočeské doly chtějí navýšit kapacitu zařízení v lomu</h3><p>Severočeské doly chtějí zvýšit kapacitu zařízení pro využívání vybraných odpadů k zasypávání v Dole Nástup Tušimice. Současný provozní řád uvádí 200 tisíc tun ročně.</p><a class=\"read-more\" href=\"/clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html\">Přečíst článek →</a></div>\n    </article>",
+      "count": 1
+    },
+    {
+      "path": "rss.xml",
+      "old": "</channel>",
+      "new": "  <item><title>Do Tušimic může mířit více odpadu. Severočeské doly chtějí navýšit kapacitu zařízení v lomu</title><link>https://nasekadan.cz/clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html</link><guid isPermaLink=\"true\">https://nasekadan.cz/clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html</guid><pubDate>Mon, 28 Sep 2026 12:15:00 +0000</pubDate><description>Severočeské doly chtějí zvýšit kapacitu zařízení pro využívání vybraných odpadů k zasypávání v Dole Nástup Tušimice. Současný provozní řád uvádí 200 tisíc tun ročně.</description></item>\n</channel>",
+      "count": 1
+    },
+    {
+      "path": "sitemap.xml",
+      "old": "</urlset>",
+      "new": "  <url><loc>https://nasekadan.cz/clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html</loc><lastmod>2026-09-28</lastmod></url>\n</urlset>",
+      "count": 1
+    },
+    {
+      "path": "news-sitemap.xml",
+      "old": "</urlset>",
+      "new": "  <url><loc>https://nasekadan.cz/clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html</loc><news:news><news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication><news:publication_date>2026-09-28T14:15:00+02:00</news:publication_date><news:title>Do Tušimic může mířit více odpadu. Severočeské doly chtějí navýšit kapacitu zařízení v lomu</news:title></news:news></url>\n</urlset>",
       "count": 1
     }
   ],
