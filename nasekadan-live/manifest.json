@@ -1,7 +1,12 @@
 {
   "schema": 1,
-  "version": "20260928-permanent-ad-card-layout-v3",
-  "files": [],
+  "version": "20260928-tusimice-eia-article-v1",
+  "files": [
+    {
+      "path": "clanky/tusimice-navyseni-kapacity-odpady-eia-2026.html",
+      "sha256": "dc6e00ba862d172bd76880b1957a98ce27e89b14ff6bbeb7bac04166d776afaa"
+    }
+  ],
   "patches": [
     {
       "path": "clanky/sportovni-vikend-kadan-26-27-zari-2026.html",
