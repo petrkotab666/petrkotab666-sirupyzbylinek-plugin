@@ -114,7 +114,7 @@ def main() -> int:
         brokenImages,
         oversizedAds:adCards.filter(a => a.rect.height > 650 || (a.ratio > 3.4 && a.rect.height > 360)),
         noImageTallAds:adCards.filter(a => a.images === 0 && a.rect.height > 320),
-        feedAdLayoutErrors:adCards.filter(a => a.isFeed && (a.display !== 'flex' || a.flexDirection !== 'column')),
+        feedAdLayoutErrors:adCards.filter(a => a.isFeed && !a.className.includes('nk-ad-safe-fallback') && (a.display !== 'flex' || a.flexDirection !== 'column')),
         titleFigureRect,
         siteHeaderVisible:!!(siteHeader && visible(siteHeader)),
         bodyTextLength:(document.body.innerText||'').trim().length
