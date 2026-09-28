@@ -5,13 +5,11 @@
     "height": 1000
   },
   "urls_checked": 304,
-  "finding_count": 12,
+  "finding_count": 8,
   "finding_types": {
     "desktop_h1_too_large": 3,
     "desktop_h1_too_many_lines": 2,
-    "oversized_ad_render": 3,
-    "collapsed_feed_ad_layout": 2,
-    "tall_ad_without_image": 1,
+    "oversized_ad_render": 2,
     "rendered_broken_images": 1
   },
   "target_metrics": {
@@ -74,7 +72,7 @@
     "siteHeaderVisible": true,
     "bodyTextLength": 10486
   },
-  "screenshots_saved": 11,
+  "screenshots_saved": 9,
   "findings": [
     {
       "url": "https://nasekadan.cz/clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
@@ -155,11 +153,28 @@
         {
           "rect": {
             "x": 1071,
-            "y": 1437,
+            "y": 393,
+            "width": 270,
+            "height": 670,
+            "right": 1341,
+            "bottom": 1063
+          },
+          "ratio": 2.4810185185185185,
+          "images": 1,
+          "text": "Reklamae 1095 Aviváž s kondicionérem Pure 1000ml229 Kč · Přednosti a vlastnosti: Dlouhotrvající parfemace a měkkost. Neo",
+          "className": "article-rail-card article-rail-card-custom article-rail-card-product",
+          "display": "flex",
+          "flexDirection": "column",
+          "isFeed": false
+        },
+        {
+          "rect": {
+            "x": 1071,
+            "y": 1767,
             "width": 270,
             "height": 742,
             "right": 1341,
-            "bottom": 2180
+            "bottom": 2510
           },
           "ratio": 2.7494791666666667,
           "images": 1,
@@ -195,29 +210,6 @@
       ]
     },
     {
-      "url": "https://nasekadan.cz/clanky/ozveny-kadanskeho-pohadkoveho-festivalu-2026.html",
-      "type": "collapsed_feed_ad_layout",
-      "ads": [
-        {
-          "rect": {
-            "x": 1157,
-            "y": 2148,
-            "width": 260,
-            "height": 195,
-            "right": 1417,
-            "bottom": 2342
-          },
-          "ratio": 0.7493990384615384,
-          "images": 0,
-          "text": "Léto a ochlazeníProalergiky.czZjistit více →Proalergiky.czNabídka produktů nebo služeb od Proalergiky.cz.Prohlédnout nab",
-          "className": "promo-card promo-card-full-image nk-ad-safe-fallback",
-          "display": "block",
-          "flexDirection": "row",
-          "isFeed": true
-        }
-      ]
-    },
-    {
       "url": "https://nasekadan.cz/clanky/pro-kadan-pred-hvezdou-metlicky-maxipes-fik-milota-2026.html",
       "type": "desktop_h1_too_many_lines",
       "h1": {
@@ -234,75 +226,6 @@
         "lines": 7,
         "text": "PRO Kadaň a okolí oslovovalo voliče před Hvězdou. Kandiduje i pedagog a divadelník Miroslav Metlický a Jan Milota, dlouholetý představitel Karla IV."
       }
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/teplo-kadan-cenova-pojistka.html",
-      "type": "oversized_ad_render",
-      "ads": [
-        {
-          "rect": {
-            "x": 1207,
-            "y": 222,
-            "width": 58,
-            "height": 1036,
-            "right": 1265,
-            "bottom": 1258
-          },
-          "ratio": 17.73568753344034,
-          "images": 0,
-          "text": "Léto a ochlazeníConcept.czZjistit více →Concept.czNabídka produktů nebo služeb od Concept.cz.Prohlédnout nabídku →",
-          "className": "promo-card promo-card-wide promo-card-full-image nk-ad-safe-fallback",
-          "display": "block",
-          "flexDirection": "row",
-          "isFeed": false
-        }
-      ]
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/teplo-kadan-cenova-pojistka.html",
-      "type": "tall_ad_without_image",
-      "ads": [
-        {
-          "rect": {
-            "x": 1207,
-            "y": 222,
-            "width": 58,
-            "height": 1036,
-            "right": 1265,
-            "bottom": 1258
-          },
-          "ratio": 17.73568753344034,
-          "images": 0,
-          "text": "Léto a ochlazeníConcept.czZjistit více →Concept.czNabídka produktů nebo služeb od Concept.cz.Prohlédnout nabídku →",
-          "className": "promo-card promo-card-wide promo-card-full-image nk-ad-safe-fallback",
-          "display": "block",
-          "flexDirection": "row",
-          "isFeed": false
-        }
-      ]
-    },
-    {
-      "url": "https://nasekadan.cz/clanky/teplo-kadan-cenova-pojistka.html",
-      "type": "collapsed_feed_ad_layout",
-      "ads": [
-        {
-          "rect": {
-            "x": 1159,
-            "y": 2742,
-            "width": 260,
-            "height": 195,
-            "right": 1419,
-            "bottom": 2937
-          },
-          "ratio": 0.7493990384615384,
-          "images": 0,
-          "text": "Léto a ochlazeníProalergiky.czZjistit více →Proalergiky.czNabídka produktů nebo služeb od Proalergiky.cz.Prohlédnout nab",
-          "className": "promo-card promo-card-full-image nk-ad-safe-fallback",
-          "display": "block",
-          "flexDirection": "row",
-          "isFeed": true
-        }
-      ]
     },
     {
       "url": "https://nasekadan.cz/clanky/vyhruzka-bombou-nemocnice-kadan-8-zari-2026.html",
