@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20260928-permanent-ad-card-layout-v2",
+  "version": "20260928-permanent-ad-card-layout-v3",
   "files": [],
   "patches": [
     {
@@ -31,6 +31,12 @@
       "path": "reklamy-oprava-obrazku.js",
       "old": "  function normalizeCard(card){\n    if(!(card instanceof Element))return;\n\n    // NK_AD_FULLBLEED_DOM_RECOVERY_20260920_V2:",
       "new": "  function normalizeCard(card){\n    if(!(card instanceof Element))return;\n\n    // NK_AD_FEED_CARD_STRUCTURE_RECOVERY_20260928:\n    // Běžná produktová/feed karta musí zůstat svislá i tehdy, když selže externí\n    // obrázek nebo starší fallback omylem přidá full-image/text-safe stav.\n    if(card.classList.contains('promo-card')&&!card.classList.contains('promo-card-wide')){\n      card.classList.remove('promo-card-full-image');\n      const compact=Boolean(card.closest('.promo-grid-compact'));\n      card.style.setProperty('display','flex','important');\n      card.style.setProperty('flex-direction','column','important');\n      card.style.setProperty('align-items','stretch','important');\n      card.style.setProperty('grid-template-columns','none','important');\n      card.style.setProperty('padding',compact?'16px':'20px','important');\n      card.style.setProperty('height','auto','important');\n      card.style.setProperty('min-height',compact?'0':'170px','important');\n      card.style.setProperty('max-height','none','important');\n      card.querySelectorAll(':scope > small,:scope > strong,:scope > span:not(.promo-banner),:scope > b').forEach(node=>{\n        node.style.setProperty('display','block','important');\n        node.style.setProperty('position','static','important');\n        node.style.setProperty('width','auto','important');\n        node.style.setProperty('max-width','100%','important');\n        node.style.setProperty('white-space','normal','important');\n        node.style.setProperty('overflow','visible','important');\n        node.style.setProperty('text-overflow','clip','important');\n        node.style.setProperty('overflow-wrap','anywhere','important');\n      });\n      const titleNode=card.querySelector(':scope > strong');\n      if(titleNode)titleNode.style.setProperty('margin','6px 0','important');\n      const descriptionNode=card.querySelector(':scope > span:not(.promo-banner)');\n      if(descriptionNode)descriptionNode.style.setProperty('flex','1 1 auto','important');\n      const ctaNode=card.querySelector(':scope > b');\n      if(ctaNode)ctaNode.style.setProperty('margin-top','12px','important');\n      card.dataset.nkFeedCardStructure='20260928';\n    }\n\n    // NK_AD_FULLBLEED_DOM_RECOVERY_20260920_V2:",
+      "count": 1
+    },
+    {
+      "path": "style.css",
+      "old": "html body .promo-grid>a.promo-card:not(.promo-card-wide)>b{margin-top:12px!important}.promo-banner{",
+      "new": "html body .promo-grid>a.promo-card:not(.promo-card-wide)>b{margin-top:12px!important}/* NK_AD_DIRECT_MAIN_WIDTH_GUARD_20260928: starší články někdy vkládají sezónní banner přímo pod main; musí zabrat celý řádek, ne úzký gridový sloupec. */html body main>.featured-cleaning-ad,html body main>.featured-rotating-ad{display:block!important;grid-column:1/-1!important;width:min(1180px,calc(100% - 32px))!important;min-width:0!important;max-width:1180px!important;margin:28px auto 48px!important;padding:0 20px!important;box-sizing:border-box!important}html body main>.featured-cleaning-ad>a,html body main>.featured-rotating-ad>a{width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box!important}.promo-banner{",
       "count": 1
     }
   ],
