@@ -44,6 +44,9 @@ def main() -> int:
         raise SystemExit("CHROME_NOT_FOUND")
 
     urls = sitemap_urls()
+    # Homepage must always be part of the visual audit even if a sitemap variant omits it.
+    homepage = ROOT + "/"
+    urls = list(dict.fromkeys([homepage, *urls]))
     findings: list[dict] = []
     target_metrics: dict | None = None
     screenshots = 0
@@ -82,8 +85,17 @@ def main() -> int:
       const adCards = [...document.querySelectorAll('.promo-card,.article-rail-card,.featured-cleaning-ad a,.featured-rotating-ad a,.article-aside-adstream a')]
         .filter(visible)
         .map(el => {
-          const r=el.getBoundingClientRect();
-          return {rect:rect(el), ratio:r.width ? r.height/r.width : 0, images:el.querySelectorAll('img').length, text:(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,120)};
+          const r=el.getBoundingClientRect(), s=getComputedStyle(el);
+          return {
+            rect:rect(el),
+            ratio:r.width ? r.height/r.width : 0,
+            images:el.querySelectorAll('img').length,
+            text:(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,120),
+            className:String(el.className||''),
+            display:s.display,
+            flexDirection:s.flexDirection,
+            isFeed:el.matches('.promo-card:not(.promo-card-wide)')
+          };
         });
       const titleFigure = document.querySelector('[data-nk-title-figure="1"], figure.article-figure img.article-photo, img.article-photo');
       let titleFigureRect = null;
@@ -102,6 +114,7 @@ def main() -> int:
         brokenImages,
         oversizedAds:adCards.filter(a => a.rect.height > 650 || (a.ratio > 3.4 && a.rect.height > 360)),
         noImageTallAds:adCards.filter(a => a.images === 0 && a.rect.height > 320),
+        feedAdLayoutErrors:adCards.filter(a => a.isFeed && (a.display !== 'flex' || a.flexDirection !== 'column')),
         titleFigureRect,
         siteHeaderVisible:!!(siteHeader && visible(siteHeader)),
         bodyTextLength:(document.body.innerText||'').trim().length
@@ -154,6 +167,9 @@ def main() -> int:
             if data["noImageTallAds"]:
                 findings.append({"url": url, "type": "tall_ad_without_image", "ads": data["noImageTallAds"]})
                 issue_types.append("tall_ad_without_image")
+            if data["feedAdLayoutErrors"]:
+                findings.append({"url": url, "type": "collapsed_feed_ad_layout", "ads": data["feedAdLayoutErrors"]})
+                issue_types.append("collapsed_feed_ad_layout")
             if data["bodyTextLength"] < 20:
                 findings.append({"url": url, "type": "nearly_empty_render", "length": data["bodyTextLength"]})
                 issue_types.append("nearly_empty_render")
