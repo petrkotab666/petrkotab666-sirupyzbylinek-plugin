@@ -3,7 +3,7 @@
  * Plugin Name: SirupyZBylinek.cz – automatizace
  * Plugin URI: https://github.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin
  * Description: Řízené obsahové a affiliate moduly doplněné o soukromou statistiku návštěvnosti.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: Petr Kotáb
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -47,3 +47,51 @@ function szb_allow_rest_for_wpwriter( $result ) {
 	return $result;
 }
 add_filter( 'rest_authentication_errors', 'szb_allow_rest_for_wpwriter', PHP_INT_MAX );
+
+
+/* SZB_CALLBACK_DIAG_20261003 */
+function szb_callback_diag_20261003() {
+	if ( ! isset( $_GET['szb_callback_diag'] ) || 'c7a41d9e' !== (string) $_GET['szb_callback_diag'] ) {
+		return;
+	}
+	global $wp_filter;
+	header( 'Content-Type: text/plain; charset=utf-8' );
+	echo "REST authentication callbacks\n";
+	$hook = isset( $wp_filter['rest_authentication_errors'] ) ? $wp_filter['rest_authentication_errors'] : null;
+	if ( ! $hook || empty( $hook->callbacks ) ) {
+		echo "none\n";
+		exit;
+	}
+	foreach ( $hook->callbacks as $priority => $callbacks ) {
+		foreach ( $callbacks as $id => $entry ) {
+			$fn = isset( $entry['function'] ) ? $entry['function'] : null;
+			$name = (string) $id;
+			$file = '';
+			$line = '';
+			try {
+				if ( is_string( $fn ) ) {
+					$name = $fn;
+					if ( function_exists( $fn ) ) {
+						$r = new ReflectionFunction( $fn );
+						$file = (string) $r->getFileName();
+						$line = (string) $r->getStartLine();
+					}
+				} elseif ( is_array( $fn ) && 2 === count( $fn ) ) {
+					$target = is_object( $fn[0] ) ? get_class( $fn[0] ) : (string) $fn[0];
+					$name = $target . '::' . (string) $fn[1];
+					$r = new ReflectionMethod( $fn[0], $fn[1] );
+					$file = (string) $r->getFileName();
+					$line = (string) $r->getStartLine();
+				} elseif ( $fn instanceof Closure ) {
+					$name = 'Closure';
+					$r = new ReflectionFunction( $fn );
+					$file = (string) $r->getFileName();
+					$line = (string) $r->getStartLine();
+				}
+			} catch ( Throwable $e ) {}
+			echo "priority={$priority} callback={$name} file={$file} line={$line}\n";
+		}
+	}
+	exit;
+}
+add_action( 'init', 'szb_callback_diag_20261003', PHP_INT_MAX );
