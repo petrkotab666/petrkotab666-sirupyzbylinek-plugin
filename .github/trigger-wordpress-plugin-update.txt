@@ -1,1 +1,2 @@
 Vyvolání WordPress cron aktualizace: 2026-07-30
+2026-10-03 REST diagnostic deploy
