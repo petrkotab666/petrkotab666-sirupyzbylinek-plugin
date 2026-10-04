@@ -1,0 +1,87 @@
+name: Research Kadaň visual overview
+
+on:
+  push:
+    branches:
+      - research/kadan-votes-video-2023
+    paths:
+      - .github/workflows/research-kadan-visual-overview.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build-overview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          fetch-depth: 1
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pillow
+
+      - name: Sample public recording every 30 seconds
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          rm -rf /tmp/kadan-overview
+          mkdir -p /tmp/kadan-overview/frames
+          ffmpeg -hide_banner -loglevel error -i "$URL" \
+            -vf "fps=1/30,scale=320:-2,drawtext=text='%{pts\\:hms}':x=5:y=h-th-5:fontsize=16:fontcolor=white:box=1:boxcolor=black@0.75" \
+            -q:v 3 /tmp/kadan-overview/frames/frame_%04d.jpg
+
+      - name: Tile frames and encode images as text chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT='research-output/kadan-votes-2023/visual-overview'
+          rm -rf "$OUT"
+          mkdir -p "$OUT/base64"
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps, ImageDraw
+
+          frames = sorted(Path('/tmp/kadan-overview/frames').glob('frame_*.jpg'))
+          out = Path('research-output/kadan-votes-2023/visual-overview')
+          per_sheet = 49
+          cols = 7
+          cell_w, cell_h = 320, 180
+          for page, start in enumerate(range(0, len(frames), per_sheet), 1):
+              subset = frames[start:start+per_sheet]
+              rows = (len(subset) + cols - 1) // cols
+              canvas = Image.new('RGB', (cols * cell_w, rows * cell_h), 'black')
+              for i, fp in enumerate(subset):
+                  im = Image.open(fp).convert('RGB')
+                  im = ImageOps.fit(im, (cell_w, cell_h))
+                  x = (i % cols) * cell_w
+                  y = (i // cols) * cell_h
+                  canvas.paste(im, (x, y))
+              canvas.save(out / f'overview_{page:02d}.jpg', quality=72, optimize=True)
+          (out / 'index.txt').write_text(
+              f'frame_interval_seconds=30\nframes={len(frames)}\nsheets={(len(frames)+per_sheet-1)//per_sheet}\n'
+              'Each sheet has 7 columns x up to 7 rows, chronological left-to-right and top-to-bottom.\n',
+              encoding='utf-8'
+          )
+          PY
+          for IMG in "$OUT"/overview_*.jpg; do
+            NAME="$(basename "$IMG" .jpg)"
+            base64 -w0 "$IMG" | split -b 60000 - "$OUT/base64/${NAME}.b64.part."
+          done
+          find "$OUT" -maxdepth 2 -type f -printf '%P\t%s\n' | sort > "$OUT/files.txt"
+
+      - name: Commit visual overview
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'research-bot'
+          git config user.email 'research-bot@users.noreply.github.com'
+          git add research-output/kadan-votes-2023/visual-overview
+          git commit -m 'research: add 30-second visual overview [skip ci]'
+          git push origin HEAD:research/kadan-votes-video-2023

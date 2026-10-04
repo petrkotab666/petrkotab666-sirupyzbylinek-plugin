@@ -1,0 +1,154 @@
+name: Research Kadaň vote screen OCR
+
+on:
+  push:
+    branches:
+      - research/kadan-votes-video-2023
+    paths:
+      - .github/workflows/research-kadan-vote-ocr.yml
+
+permissions:
+  contents: write
+
+jobs:
+  ocr-vote-screens:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/kadan-votes-video-2023
+          fetch-depth: 0
+
+      - name: Install OCR and media tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg tesseract-ocr tesseract-ocr-ces tesseract-ocr-eng
+          python -m pip install --upgrade pillow
+
+      - name: Extract frames from priority meeting sections
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://tv.pirati.cz/static/streaming-playlists/hls/41cfc6bd-8e46-42a2-9730-23444b0ffd8c/7f297545-f26b-477c-a174-96cd650c0f7b-720-fragmented.mp4'
+          rm -rf /tmp/kadan-ocr
+          mkdir -p /tmp/kadan-ocr/early /tmp/kadan-ocr/late
+          # Opening through financial/dotation/property blocks.
+          ffmpeg -hide_banner -loglevel error -ss 0 -t 2400 -i "$URL" \
+            -vf 'fps=1/5,scale=1280:720' -q:v 2 /tmp/kadan-ocr/early/frame_%05d.jpg
+          # Closing part including reports and extraordinary remuneration.
+          ffmpeg -hide_banner -loglevel error -ss 3900 -t 1897 -i "$URL" \
+            -vf 'fps=1/5,scale=1280:720' -q:v 2 /tmp/kadan-ocr/late/frame_%05d.jpg
+
+      - name: OCR all sampled frames and preserve keyword candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT='research-output/kadan-votes-2023/ocr'
+          rm -rf "$OUT"
+          mkdir -p "$OUT/candidate-base64"
+          python - <<'PY'
+          import concurrent.futures
+          import re
+          import subprocess
+          from pathlib import Path
+          from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+
+          jobs = []
+          for folder, start in [('early', 0), ('late', 3900)]:
+              for fp in sorted((Path('/tmp/kadan-ocr') / folder).glob('frame_*.jpg')):
+                  idx = int(fp.stem.split('_')[-1])
+                  sec = start + (idx - 1) * 5
+                  jobs.append((fp, sec))
+
+          keywords = re.compile(
+              r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|starost|m[ií]stostar|'
+              r'27\s*mil|27\s*000|wendl|z[aá]rybn|demjan|lazar[cč]|novotn|straka|'
+              r'[sš]vec|zalab[aá]k|j[aá]ra|zach', re.I
+          )
+
+          def stamp(sec):
+              h, rem = divmod(sec, 3600)
+              m, s = divmod(rem, 60)
+              return f'{h:02d}:{m:02d}:{s:02d}'
+
+          def one(item):
+              fp, sec = item
+              im = Image.open(fp).convert('L')
+              im = ImageOps.autocontrast(im)
+              im = ImageEnhance.Contrast(im).enhance(1.6)
+              im = im.resize((2560, 1440))
+              im = im.filter(ImageFilter.SHARPEN)
+              tmp = Path('/tmp/kadan-ocr') / f'prep_{sec:05d}.png'
+              im.save(tmp)
+              try:
+                  cp = subprocess.run(
+                      ['tesseract', str(tmp), 'stdout', '-l', 'ces+eng', '--psm', '11'],
+                      text=True, capture_output=True, timeout=45
+                  )
+                  text = ' '.join(cp.stdout.split())
+              except Exception as exc:
+                  text = f'OCR_ERROR {exc}'
+              tmp.unlink(missing_ok=True)
+              return fp, sec, text
+
+          rows = []
+          hits = []
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+              for fp, sec, text in ex.map(one, jobs):
+                  rows.append((sec, fp, text))
+                  if keywords.search(text):
+                      hits.append((sec, fp, text))
+
+          rows.sort()
+          hits.sort()
+          out = Path('research-output/kadan-votes-2023/ocr')
+          (out / 'ocr_all.tsv').write_text(
+              'seconds\ttime\tframe\ttext\n' + '\n'.join(
+                  f'{sec}\t{stamp(sec)}\t{fp.name}\t{text}' for sec, fp, text in rows
+              ), encoding='utf-8'
+          )
+          (out / 'ocr_hits.tsv').write_text(
+              'seconds\ttime\tframe\ttext\n' + '\n'.join(
+                  f'{sec}\t{stamp(sec)}\t{fp.name}\t{text}' for sec, fp, text in hits
+              ), encoding='utf-8'
+          )
+
+          # Keep up to 40 strongest candidate frames. Encode each as small text chunks
+          # so the investigation client can reconstruct and inspect the exact image.
+          scored = []
+          strong = re.compile(r'hlasov|proti|zdr[zž]|nemoc|odm[eě]n|losen|vaic|27\s*mil|27\s*000', re.I)
+          for sec, fp, text in hits:
+              score = len(strong.findall(text)) * 10 + len(keywords.findall(text))
+              scored.append((score, sec, fp, text))
+          selected = sorted(scored, reverse=True)[:40]
+          manifest = []
+          import base64
+          for rank, (score, sec, fp, text) in enumerate(sorted(selected, key=lambda x: x[1]), 1):
+              name = f'{rank:02d}_{sec:05d}_{stamp(sec).replace(":", "-")}.jpg'
+              data = fp.read_bytes()
+              encoded = base64.b64encode(data).decode('ascii')
+              chunk_dir = out / 'candidate-base64' / name
+              chunk_dir.mkdir(parents=True, exist_ok=True)
+              for i in range(0, len(encoded), 60000):
+                  (chunk_dir / f'part_{i//60000:03d}.txt').write_text(encoded[i:i+60000], encoding='ascii')
+              manifest.append(f'{name}\t{sec}\t{stamp(sec)}\tscore={score}\t{text}')
+          (out / 'candidate_manifest.tsv').write_text(
+              'image\tseconds\ttime\tscore\tocr\n' + '\n'.join(manifest), encoding='utf-8'
+          )
+          (out / 'summary.txt').write_text(
+              f'sampled_frames={len(rows)}\nkeyword_hits={len(hits)}\nencoded_candidates={len(selected)}\n',
+              encoding='utf-8'
+          )
+          PY
+
+      - name: Commit OCR evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'research-bot'
+          git config user.email 'research-bot@users.noreply.github.com'
+          git pull --rebase origin research/kadan-votes-video-2023
+          git add research-output/kadan-votes-2023/ocr
+          git commit -m 'research: add OCR evidence for 2023 voting screens [skip ci]'
+          git push origin HEAD:research/kadan-votes-video-2023

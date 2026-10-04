@@ -1,0 +1,1 @@
+Trigger for isolated pull-request evidence extraction of the public Kadaň council recording.
