@@ -1,0 +1,125 @@
+name: Kadan public video PR fetch
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install -q --upgrade yt-dlp requests
+
+      - name: Download public recordings and metadata
+        shell: bash
+        run: |
+          set -u
+          mkdir -p out
+          date -u > out/run_utc.txt
+          for year_url in \
+            '2023|https://tv.pirati.cz/w/98mdJ8nsSL8hnM1UuuLAE9' \
+            '2024|https://tv.pirati.cz/videos/embed/6fcaaab7-aeb8-465f-848c-b857895e3e5e'; do
+            year="${year_url%%|*}"
+            url="${year_url#*|}"
+            yt-dlp --no-warnings --dump-single-json --skip-download "$url" > "out/${year}_metadata.json" 2> "out/${year}_metadata_error.txt" || true
+            yt-dlp --no-warnings --socket-timeout 60 --retries 3 -f 'worst[ext=mp4]/worst' -o "out/${year}_video.%(ext)s" "$url" > "out/${year}_download.log" 2>&1 || true
+          done
+
+          python <<'PY'
+          import json, pathlib, requests, traceback, urllib.parse
+          out = pathlib.Path('out')
+          s = requests.Session()
+          s.headers['User-Agent'] = 'Mozilla/5.0 public-records-research/1.0'
+          targets = {
+              '2023': ('98mdJ8nsSL8hnM1UuuLAE9', '13.9.2023'),
+              '2024': ('6fcaaab7-aeb8-465f-848c-b857895e3e5e', '14.3.2024'),
+          }
+          def save(path, data):
+              p = out / path
+              if isinstance(data, bytes): p.write_bytes(data)
+              elif isinstance(data, (dict, list)): p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+              else: p.write_text(str(data), encoding='utf-8')
+          for year, (ident, meeting_date) in targets.items():
+              for label, url in {
+                  'api': f'https://tv.pirati.cz/api/v1/videos/{ident}',
+                  'captions': f'https://tv.pirati.cz/api/v1/videos/{ident}/captions',
+                  'watch': f'https://tv.pirati.cz/w/{ident}',
+                  'embed': f'https://tv.pirati.cz/videos/embed/{ident}',
+              }.items():
+                  try:
+                      r = s.get(url, timeout=60, allow_redirects=True)
+                      save(f'{year}_{label}_status.txt', f'{r.status_code}\n{r.url}\n{dict(r.headers)}')
+                      save(f'{year}_{label}.bin', r.content)
+                      try: save(f'{year}_{label}.json', r.json())
+                      except Exception: pass
+                  except Exception: save(f'{year}_{label}_error.txt', traceback.format_exc())
+              for label, query in [('uuid', ident), ('date', f'zastupitelstvo Kadaň {meeting_date}')]:
+                  try:
+                      url = 'https://search.joinpeertube.org/api/v1/search/videos?' + urllib.parse.urlencode({'search': query, 'start': 0, 'count': 100})
+                      r = s.get(url, timeout=60)
+                      save(f'{year}_sepia_{label}_status.txt', f'{r.status_code}\n{r.url}')
+                      try: save(f'{year}_sepia_{label}.json', r.json())
+                      except Exception: save(f'{year}_sepia_{label}.bin', r.content)
+                  except Exception: save(f'{year}_sepia_{label}_error.txt', traceback.format_exc())
+          PY
+
+      - name: Build ten-second contact sheets and audio
+        shell: bash
+        run: |
+          for year in 2023 2024; do
+            file="$(find out -maxdepth 1 -type f -name "${year}_video.*" | head -n1)"
+            if [ -n "$file" ] && [ -s "$file" ]; then
+              ffprobe -v error -show_format -show_streams -of json "$file" > "out/${year}_ffprobe.json"
+              mkdir -p "out/${year}_contacts"
+              ffmpeg -hide_banner -loglevel warning -i "$file" \
+                -vf 'fps=1/10,scale=640:-2,tile=4x4:padding=4:margin=4' -q:v 4 \
+                "out/${year}_contacts/contact_%03d.jpg"
+              ffmpeg -hide_banner -loglevel warning -i "$file" -vn -ac 1 -ar 16000 -b:a 24k \
+                "out/${year}_audio.mp3"
+            fi
+          done
+          find out -type f -printf '%p\t%s bytes\n' | sort > out/inventory.txt
+          cat out/inventory.txt
+
+      - name: Upload analytical package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-analysis-metadata
+          path: |
+            out/**
+            !out/2023_video.*
+            !out/2024_video.*
+          retention-days: 3
+          compression-level: 6
+          if-no-files-found: warn
+
+      - name: Upload 2023 video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-video-2023
+          path: out/2023_video.*
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: warn
+
+      - name: Upload 2024 video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kadan-video-2024
+          path: out/2024_video.*
+          retention-days: 3
+          compression-level: 0
+          if-no-files-found: warn
