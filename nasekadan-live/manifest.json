@@ -1,31 +1,8 @@
 {
   "schema": 1,
-  "version": "20261007-kino-hvezda-listings-v2",
-  "files": [
-    {
-      "path": "clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html",
-      "sha256": "f3dd1ea07047f7622463b23c72a1cbbfa82e2efbd0052d058971d353d9db51b6"
-    }
-  ],
+  "version": "20261007-kino-hvezda-listings-v3",
+  "files": [],
   "patches": [
-    {
-      "path": "rss.xml",
-      "old": "</channel>",
-      "new": "  <item><title>Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy</title><link>https://nasekadan.cz/clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html</link><guid isPermaLink=\"true\">https://nasekadan.cz/clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html</guid><pubDate>Tue, 06 Oct 2026 22:15:00 +0000</pubDate><description>Kadaňské Kino Hvězda dnes není jen místem filmových projekcí. Nabízí festivaly, programy pro školy, děti i seniory, kinokavárnu a další aktivity.</description></item>\n</channel>",
-      "count": 1
-    },
-    {
-      "path": "sitemap.xml",
-      "old": "</urlset>",
-      "new": "  <url><loc>https://nasekadan.cz/clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html</loc><lastmod>2026-10-07</lastmod></url>\n</urlset>",
-      "count": 1
-    },
-    {
-      "path": "news-sitemap.xml",
-      "old": "</urlset>",
-      "new": "  <url><loc>https://nasekadan.cz/clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html</loc><news:news><news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication><news:publication_date>2026-10-07T00:15:00+02:00</news:publication_date><news:title>Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy</news:title></news:news></url>\n</urlset>",
-      "count": 1
-    },
     {
       "path": "index.html",
       "old": "<div class=\"article-list\">",
