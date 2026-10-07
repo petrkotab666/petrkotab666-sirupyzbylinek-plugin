@@ -1,12 +1,14 @@
 {
   "schema": 1,
-  "version": "20261007-disk-recovery-native-receipt",
-  "files": [
+  "version": "20261007-oswald-euro-distribuce-tip-v1",
+  "files": [],
+  "patches": [
     {
-      "path": "bridge-health.txt",
-      "sha256": "e3f458c28ce00743b183c354039962b100b49fc618e614f403616356ce502775"
+      "path": "clanky/oswald-euro-nemocnice-avies-odpovednost-2026.html",
+      "old": "Naše Kadaň v tuto chvíli nemá ověřený podklad o tom, kdo případnou distribuci článku organizoval, kolik domácností ji skutečně obdrželo ani kdo ji zaplatil. Nemáme tedy podklad pro tvrzení, že šlo o aktivitu některé politické strany nebo kandidátky. Stejně tak nic neprokazuje, že samotný článek Eura vznikl na politickou objednávku.",
+      "new": "Naše Kadaň obdržela tip od čtenáře, podle něhož měl být 6. října v provozovně společnosti DEFT design v Sadové ulici v Klášterci nad Ohří spatřen Jan Perout při vyzvedávání tiskovin spojovaných s následnou distribucí článku „Kadaňská schizofrenie“ do schránek v Kadani. Stejnou informaci nám následně telefonicky potvrdil další, na původním zdroji nezávislý zdroj. Přímo od tiskárny však tuto informaci ověřenou nemáme.</p>\n<p>Tyto informace samy o sobě neprokazují, kdo tiskoviny objednal, zaplatil nebo rozhodl o jejich distribuci. Nemáme tedy podklad pro tvrzení, že šlo o aktivitu některé politické strany nebo kandidátky. Stejně tak nic neprokazuje, že samotný článek Eura vznikl na politickou objednávku.",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": []
 }
