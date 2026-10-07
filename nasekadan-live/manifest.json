@@ -1,12 +1,20 @@
 {
   "schema": 1,
-  "version": "20261007-kino-hvezda-final-prepared-v15",
-  "files": [
+  "version": "20261007-kino-voltr-photo-live-v16",
+  "files": [],
+  "patches": [
     {
-      "path": "clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html",
-      "sha256": "01a1c9a089af2c5731a55a004e5e7fd5e67ed8e82b53768fe0e1b8b2ab229882"
+      "path": "index.html",
+      "old": "<div class=\"photo\" style=\"background-image:linear-gradient(rgba(7,23,34,.06),rgba(7,23,34,.16)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>",
+      "new": "<div class=\"photo\" style=\"background-image:linear-gradient(rgba(7,23,34,.06),rgba(7,23,34,.16)),url('https://d48-a.sdn.cz/d_48/c_img_H_D/gBzFxx.jpeg?fl=res%2C1200%2C900%2C1');background-color:#0b202b;background-size:cover;background-position:center;background-repeat:no-repeat\"></div>",
+      "count": 2
+    },
+    {
+      "path": "index.html",
+      "old": "<div class=\"visual\" role=\"img\" aria-label=\"Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy\" style=\"background-image:url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>",
+      "new": "<div class=\"visual\" role=\"img\" aria-label=\"Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy\" style=\"background-image:url('https://d48-a.sdn.cz/d_48/c_img_H_D/gBzFxx.jpeg?fl=res%2C1200%2C900%2C1');background-color:#0b202b;background-size:cover;background-position:center;background-repeat:no-repeat\"></div>",
+      "count": 2
     }
   ],
-  "patches": [],
   "deletes": []
 }
