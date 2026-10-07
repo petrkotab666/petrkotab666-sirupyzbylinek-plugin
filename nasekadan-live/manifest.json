@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20261007-kino-hvezda-michal-voltr-v1",
+  "version": "20261007-kino-hvezda-listings-v2",
   "files": [
     {
       "path": "clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html",
@@ -24,6 +24,18 @@
       "path": "news-sitemap.xml",
       "old": "</urlset>",
       "new": "  <url><loc>https://nasekadan.cz/clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html</loc><news:news><news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication><news:publication_date>2026-10-07T00:15:00+02:00</news:publication_date><news:title>Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy</news:title></news:news></url>\n</urlset>",
+      "count": 1
+    },
+    {
+      "path": "index.html",
+      "old": "<div class=\"article-list\">",
+      "new": "<div class=\"article-list\">\\n    <!-- NK_KINO_HVEZDA_20261007_LISTING_CARD -->\n    <article class=\"article-card hospital\" data-auto-article=\"kino-hvezda-kadan-vic-nez-filmy-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">7. 10. 2026 · 00:15 · KULTURA · KINO · TIP PRO KADAŇÁKY</span><h3>Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy</h3><p>Kadaňské Kino Hvězda dnes není jen místem filmových projekcí. Nabízí festivaly, programy pro školy, děti i seniory, kinokavárnu a další aktivity. Michal Voltr v rozhovoru popisuje, kam se Hvězda posunula a co chystá dál.</p><a class=\"read-more\" href=\"/clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html\">Přečíst článek →</a></div>\n    </article>",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">",
+      "new": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\\n    <!-- NK_KINO_HVEZDA_20261007_LISTING_CARD -->\n    <article class=\"article-card hospital\" data-auto-article=\"kino-hvezda-kadan-vic-nez-filmy-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">7. 10. 2026 · 00:15 · KULTURA · KINO · TIP PRO KADAŇÁKY</span><h3>Hvězda, která znovu svítí. Kadaňské kino nabízí mnohem víc než jen filmy</h3><p>Kadaňské Kino Hvězda dnes není jen místem filmových projekcí. Nabízí festivaly, programy pro školy, děti i seniory, kinokavárnu a další aktivity. Michal Voltr v rozhovoru popisuje, kam se Hvězda posunula a co chystá dál.</p><a class=\"read-more\" href=\"/clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html\">Přečíst článek →</a></div>\n    </article>",
       "count": 1
     }
   ],
