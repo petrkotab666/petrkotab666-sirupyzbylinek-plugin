@@ -109,7 +109,10 @@ html body a[data-nk-ad-unavailable="true"]{display:none!important;}
     done.set(card, href);
   }
   function inspect(card) {
-    if (card.classList.contains('nk-ad-safe-fallback') || card.classList.contains('nk-ad-generated-card') || card.classList.contains('is-image-error') || card.querySelector('.nk-ad-generated-visual,.promo-banner-fallback') || [...card.querySelectorAll('img')].some(i => i.complete && i.naturalWidth === 0)) mark(card);
+    const images = [...card.querySelectorAll('img')];
+    const brokenImage = images.some(i => i.complete && i.naturalWidth === 0);
+    const missingVisual = (card.classList.contains('promo-card') || card.classList.contains('article-rail-card')) && images.length === 0;
+    if (card.classList.contains('nk-ad-safe-fallback') || card.classList.contains('nk-ad-generated-card') || card.classList.contains('is-image-error') || card.querySelector('.nk-ad-generated-visual,.promo-banner-fallback') || brokenImage || missingVisual) mark(card);
   }
   function scan(root) { if (!(root instanceof Element || root === document)) return; if (root instanceof Element && root.matches(SELECTOR)) inspect(root); root.querySelectorAll(SELECTOR).forEach(inspect); }
   function start() {
@@ -125,4 +128,114 @@ html body a[data-nk-ad-unavailable="true"]{display:none!important;}
     [100,350,800,1600,3200].forEach(ms => setTimeout(() => scan(document), ms));
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true}); else start();
+})();
+
+/* NK_UKLIZECKA_THREE_SERVICES_20261008_V1 */
+(() => {
+  'use strict';
+  if (window.__nkUklizeckaThreeServices) return;
+  window.__nkUklizeckaThreeServices = true;
+  const VERSION = '20261008-v1';
+  const offers = [
+    {key:'cisteni', label:'Čištění', title:'Čisté koberce, sedačky a čalounění', text:'Dopřejte svému domovu svěží pocit. Vyčistíme koberce, sedací soupravy i čalouněný nábytek.', cta:'Poptat čištění', icon:'<path d="M20 46V29c0-12 56-12 56 0v17M15 42h66v22H15zM22 64v7m52-7v7M48 25v18M88 14v12m-6-6h12M9 10v8m-4-4h8"/>'},
+    {key:'uklid', label:'Úklid', title:'Úklid domácností i bytových domů', text:'Pravidelný i jednorázový úklid domácností a společných prostor bytových domů. Čisté chodby, schodiště i váš domov.', cta:'Domluvit úklid', icon:'<path d="M8 36 36 12l28 24M16 32v42h40V32M29 74V48h14v26M66 36V16h24v58H66M73 25h4m6 0h3M73 38h4m6 0h3M73 51h4m6 0h3"/>'},
+    {key:'okna', label:'Mytí oken', title:'Čistá okna. Více světla doma.', text:'Mytí oken pro váš domov i bytový dům. Nechte práci na nás a užijte si čistý výhled.', cta:'Poptat mytí oken', icon:'<path d="M16 12h60v64H16zM46 12v64M16 44h60M84 8v14m-7-7h14M26 25l10-8M56 63l10-8M8 57v12m-6-6h12"/>'}
+  ];
+  const escape = text => String(text).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let index = 0;
+  try {
+    index = Math.abs(Number(sessionStorage.getItem('nk-uklizecka-slide')) || 0) % offers.length;
+    sessionStorage.setItem('nk-uklizecka-slide', String((index+1)%offers.length));
+  } catch (_) {}
+  let section = null, paused = reduced.matches, hovered = false, focused = false, visible = true, mountTimer = 0;
+  let intersection = null;
+  function url(offer) {
+    return 'https://www.vaseuklizecka.cz/?utm_source=nasekadan&utm_medium=display&utm_campaign=sluzby_20261008&utm_content='+offer.key;
+  }
+  function styles() {
+    if(document.getElementById('nk-uklizecka-three-style')) return;
+    const style=document.createElement('style'); style.id='nk-uklizecka-three-style';
+    style.textContent=`
+    html body .nk-uklizecka-rotation{max-width:1180px;margin:28px auto 38px;padding:0 20px;box-sizing:border-box}
+    html body article.article>.nk-uklizecka-rotation{margin:28px 0 38px;padding:0;max-width:none}
+    html body .nk-uklizecka-box{background:#103b38;color:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 30px #103b3818;font-family:Arial,sans-serif}
+    html body .nk-uklizecka-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 28px 0;font-size:13px;color:#c3e3dc}
+    html body .nk-uklizecka-top strong{font-size:17px;color:#fff}
+    html body .nk-uklizecka-offer{display:grid!important;grid-template-columns:minmax(0,1fr) 150px;gap:28px;align-items:center;min-height:205px;padding:24px 28px;box-sizing:border-box;color:#fff!important;text-decoration:none!important;max-width:none!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+    html body .nk-uklizecka-offer h3{font-size:clamp(23px,3vw,34px);line-height:1.14;margin:0 0 13px;color:#fff;letter-spacing:-.025em;max-width:760px}
+    html body .nk-uklizecka-offer p{font-size:16px;line-height:1.55;margin:0 0 19px;color:#dbefea;max-width:700px}
+    html body .nk-uklizecka-cta{display:inline-block;background:#d7f59c;color:#19382b;padding:12px 19px;border-radius:9px;font-size:14px;font-weight:700}
+    html body .nk-uklizecka-offer:hover .nk-uklizecka-cta{text-decoration:underline}
+    html body .nk-uklizecka-icon{width:124px;height:124px;padding:12px;box-sizing:border-box;border-radius:50%;background:#ffffff0a;color:#d7f59c;justify-self:center}
+    html body .nk-uklizecka-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;border-top:1px solid #ffffff20;padding:13px 28px 17px}
+    html body .nk-uklizecka-controls button{font:600 12px/1.4 Arial,sans-serif;cursor:pointer;border:1px solid #ffffff40;border-radius:20px;background:transparent;color:#fff;padding:8px 12px}
+    html body .nk-uklizecka-controls button[aria-pressed="true"]{background:#d7f59c;border-color:#d7f59c;color:#19382b}
+    html body .nk-uklizecka-controls .nk-uklizecka-pause{margin-left:auto}
+    html body .nk-uklizecka-box a:focus-visible,html body .nk-uklizecka-box button:focus-visible{outline:3px solid #d7f59c;outline-offset:-3px}
+    @media(max-width:600px){html body .nk-uklizecka-top{padding:17px 20px 0;flex-wrap:wrap;gap:5px}html body .nk-uklizecka-offer{padding:22px 20px;grid-template-columns:minmax(0,1fr);gap:0;min-height:267px}html body .nk-uklizecka-offer p{font-size:14px;line-height:1.5}html body .nk-uklizecka-icon{display:none}html body .nk-uklizecka-controls{padding:12px 20px 17px;gap:6px}html body .nk-uklizecka-controls button{font-size:11px;padding:7px 10px}html body .nk-uklizecka-controls .nk-uklizecka-pause{margin-left:0}}
+    `;
+    document.head.appendChild(style);
+  }
+  function paint() {
+    if (!section?.isConnected) return;
+    const offer=offers[index];
+    const link=section.querySelector('.nk-uklizecka-offer');
+    link.href=url(offer);
+    link.setAttribute('aria-label',offer.title+' — VašeUklízečka.cz');
+    link.dataset.service=offer.key;
+    link.innerHTML='<div><h3>'+escape(offer.title)+'</h3><p>'+escape(offer.text)+'</p><span class="nk-uklizecka-cta">'+escape(offer.cta)+' →</span></div><svg class="nk-uklizecka-icon" viewBox="0 0 100 90" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">'+offer.icon+'</svg>';
+    section.querySelectorAll('[data-nk-service]').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+    const pause=section.querySelector('.nk-uklizecka-pause');
+    pause.textContent=paused?'Spustit střídání':'Pozastavit';
+    pause.setAttribute('aria-label',paused?'Spustit střídání reklam':'Pozastavit střídání reklam');
+    section.dataset.nkUklizeckaVersion=VERSION;
+    section.setAttribute('aria-label','Reklama: VašeUklízečka.cz');
+  }
+  function mount() {
+    if(document.documentElement.dataset.nkDoplnky==='1')return;
+    if(section?.isConnected)return;
+    const main=document.querySelector('main');
+    if(!main)return;
+    styles();
+    section=document.querySelector('.featured-cleaning-ad')||document.createElement('section');
+    section.className='featured-cleaning-ad nk-uklizecka-rotation';
+    section.innerHTML='<div class="promo-label">REKLAMA</div><div class="nk-uklizecka-box"><div class="nk-uklizecka-top"><strong>VašeUklízečka.cz</strong><span>Kadaň a okolí</span></div><a class="nk-uklizecka-offer" target="_blank" rel="sponsored noopener noreferrer"></a><div class="nk-uklizecka-controls" aria-label="Výběr služby">'+offers.map((o,i)=>'<button type="button" data-nk-service="'+i+'" aria-label="Zobrazit reklamu: '+escape(o.label)+'">'+escape(o.label)+'</button>').join('')+'<button type="button" class="nk-uklizecka-pause"></button></div></div>';
+    if(!section.isConnected){
+      const article=document.querySelector('article.article');
+      const anchor=article?.querySelector('.hero-visual,.leadtext,h1')||main.querySelector('.hero');
+      if(anchor)anchor.after(section);else (article||main).prepend(section);
+    }
+    section.addEventListener('click',event=>{
+      const button=event.target.closest('button');if(!button)return;
+      if(button.hasAttribute('data-nk-service')){index=Number(button.dataset.nkService);paused=true;paint();}
+      else if(button.classList.contains('nk-uklizecka-pause')){paused=!paused;paint();}
+    });
+    section.addEventListener('mouseenter',()=>hovered=true);
+    section.addEventListener('mouseleave',()=>hovered=false);
+    section.addEventListener('focusin',()=>focused=true);
+    section.addEventListener('focusout',event=>focused=section.contains(event.relatedTarget));
+    if('IntersectionObserver' in window){
+      intersection?.disconnect();
+      intersection=new IntersectionObserver(rows=>visible=rows[0].isIntersecting);
+      intersection.observe(section);
+    }
+    paint();
+  }
+  function start(){
+    mount();
+    [100,700,2000].forEach(ms=>setTimeout(mount,ms));
+    // Reattach after the existing asynchronous ad layout pass, without adding extra slots.
+    new MutationObserver(()=>{
+      if(section?.isConnected||mountTimer)return;
+      mountTimer=setTimeout(()=>{mountTimer=0;mount();},100);
+    }).observe(document.body,{childList:true,subtree:true});
+    setInterval(()=>{
+      if(paused||hovered||focused||!visible||document.hidden||!section?.isConnected)return;
+      index=(index+1)%offers.length;paint();
+    },12000);
+    reduced.addEventListener?.('change',()=>{if(reduced.matches){paused=true;paint();}});
+    document.documentElement.dataset.nkUklizeckaRotation=VERSION;
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
