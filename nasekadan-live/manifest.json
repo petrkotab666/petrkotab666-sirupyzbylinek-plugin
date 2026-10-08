@@ -1,12 +1,25 @@
 {
   "schema": 1,
-  "version": "20261008-uklizecka-three-services-v3",
+  "version": "20261008-uklizecka-three-services-v4",
   "files": [
     {
       "path": "ad-fallback-fix.js",
       "sha256": "c4882acf509f7281d76fed621d5a9e66aad40b64b9a80c30552fe31bd9baaf26"
     }
   ],
-  "patches": [],
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "/ad-fallback-fix.js?v=20260920-ad-integrity-1",
+      "new": "/ad-fallback-fix.js?v=20261008-uklizecka-3",
+      "count": 1
+    },
+    {
+      "path": "clanky/jan-losenicky-bilance-rozhovor-trestni-oznameni-volby-2026.html",
+      "old": "<script src=\"/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3\">",
+      "new": "<script src=\"/ad-fallback-fix.js?v=20261008-uklizecka-3\" defer></script>\n<script src=\"/reklamy.js?v=20260728-vaseuklizecka-guaranteed-3\">",
+      "count": 1
+    }
+  ],
   "deletes": []
 }
