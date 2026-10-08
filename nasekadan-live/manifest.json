@@ -1,14 +1,8 @@
 {
   "schema": 1,
-  "version": "20261008-uklizecka-three-services-v1",
+  "version": "20261008-uklizecka-three-services-v2",
   "files": [],
   "patches": [
-    {
-      "path": "clanky/oswald-euro-nemocnice-avies-odpovednost-2026.html",
-      "old": "Naše Kadaň v tuto chvíli nemá ověřený podklad o tom, kdo případnou distribuci článku organizoval, kolik domácností ji skutečně obdrželo ani kdo ji zaplatil. Nemáme tedy podklad pro tvrzení, že šlo o aktivitu některé politické strany nebo kandidátky. Stejně tak nic neprokazuje, že samotný článek Eura vznikl na politickou objednávku.",
-      "new": "Naše Kadaň obdržela tip od čtenáře, podle něhož měl být 6. října v provozovně společnosti DEFT design v Sadové ulici v Klášterci nad Ohří spatřen Jan Perout při vyzvedávání tiskovin spojovaných s následnou distribucí článku „Kadaňská schizofrenie“ do schránek v Kadani. Stejnou informaci nám následně telefonicky potvrdil další, na původním zdroji nezávislý zdroj. Přímo od tiskárny však tuto informaci ověřenou nemáme.</p>\n<p>Tyto informace samy o sobě neprokazují, kdo tiskoviny objednal, zaplatil nebo rozhodl o jejich distribuci. Nemáme tedy podklad pro tvrzení, že šlo o aktivitu některé politické strany nebo kandidátky. Stejně tak nic neprokazuje, že samotný článek Eura vznikl na politickou objednávku.",
-      "count": 1
-    },
     {
       "path": "ad-fallback-fix.js",
       "old": "  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true}); else start();\n})();",
