@@ -1,304 +1,364 @@
 {
   "schema": 1,
-  "version": "20261009-adrop-absolute-4",
+  "version": "20261009-adrop-absolute-5",
   "files": [],
   "patches": [
     {
-      "path": "clanky/kadan-vrchlabi-3-0-druha-vyhra-vikend-2026.html",
+      "path": "clanky/malkov-liden-vysoka-uzavirka-iii-22321-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-vrchlabi-4-1-prvni-domaci-vyhra-2026.html",
+      "path": "clanky/martin-kadlec-navrat-hokej-kadan-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
+      "path": "clanky/mestska-policie-kadan-fakta-diskuse-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-zije-sportem-5-zari-2026.html",
+      "path": "clanky/mestske-byty-kadan-nabidka-srpen-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadanacci-hrou-kadan-hriste-2026.html",
+      "path": "clanky/mestske-byty-kadan-nabidka-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadansky-klaster-agent-cerich.html",
+      "path": "clanky/mhd-kadan-dalsi-spoje-jizdni-rady-duk-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
+      "path": "clanky/milionove-odmeny-petra-hossnera-dozorci-rada-zakladatelske-listiny-zakon-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadansky-klaster-ctyri-umrti-listopad-1981.html",
+      "path": "clanky/mimoradna-odstavka-teple-vody-kadan-23-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
+      "path": "clanky/mimoradne-zastupitelstvo-nemocnice-kadan-17-srpna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
+      "path": "clanky/mladez-tatranu-kadan-uspesna-sezona-nabor-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadansti-plavacci-zapis-podzim-2026.html",
+      "path": "clanky/mve-hradiste-nova-vodni-elektrarna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html",
+      "path": "clanky/nebezpeci-pozaru-ustecky-kraj-kadan-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-14-20-zari-2026.html",
+      "path": "clanky/nechranice-hraz-uplna-uzavirka-7-11-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
+      "path": "clanky/nehoda-dvou-dodavek-cechova-kadan-5-rijna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-21-27-zari-2026.html",
+      "path": "clanky/nehoda-nova-kolonie-kadan-ctyri-auta-28-srpna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-24-30-srpna-2026.html",
+      "path": "clanky/nemocnice-kadan-145-milionu-fr00586-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-27-cervence-2-srpna-2026.html",
+      "path": "clanky/nemocnice-kadan-48-milionu-strategie-2027-zastupitelstvo-24-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-28-zari-4-rijna-2026.html",
+      "path": "clanky/nemocnice-kadan-darovala-82-luzek-ukrajine.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-3-9-srpna-2026.html",
+      "path": "clanky/nemocnice-kadan-hodnoceni-reditele-odmeny-hossner-krusina-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
+      "path": "clanky/nemocnice-kadan-kreativni-vouchery-web-video-vizualni-identita-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-5-11-rijna-2026.html",
+      "path": "clanky/nemocnice-kadan-kriticky-nedostatek-krve-0-rh-minus-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kam-v-kadani-a-okoli-7-13-zari-2026.html",
+      "path": "clanky/nemocnice-kadan-kritika-od-2018-hladova-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kandidatky-kadan-2026-druhe-tri-pod-lupou.html",
+      "path": "clanky/nemocnice-kadan-krize-premena-marek-zakaz-konkurence-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kandidatky-kadan-2026-prvni-tri-pod-lupou.html",
+      "path": "clanky/nemocnice-kadan-krusina-odchodove-plneni-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kandidatky-kadan-registrace-komunalni-volby-2026.html",
+      "path": "clanky/nemocnice-kadan-lekar-ortopedie-naborovy-prispevek-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kandidatni-listiny-kadan-komunalni-volby-2026.html",
+      "path": "clanky/nemocnice-kadan-nove-vedeni-pavel-marek-jiri-vlas.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kati-kadan-sparta-praha-pohar-2026.html",
+      "path": "clanky/nemocnice-kadan-novy-cenik-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kaufland-retail-park-mcdrive-klasterec.html",
+      "path": "clanky/nemocnice-kadan-ockovani-chripka-efluelda-seniori-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
+      "path": "clanky/nemocnice-kadan-odmenovani-vedeni-masek-hossner-krusina-marek-vlas-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html",
+      "path": "clanky/nemocnice-kadan-osetreni-zubu-celkova-anestezie-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/klasterec-hasici-novy-dopravni-automobil-2026.html",
+      "path": "clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/klasterec-ochlazeni-zimni-stadion-kadan-2026.html",
+      "path": "clanky/nemocnice-kadan-pravni-proverka-deloitte-odmitnuti-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
+      "path": "clanky/nemocnice-kadan-profil-sluzby-budoucnost.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/klasterec-upozorneni-deti-mobilni-telefon-autobusova-zastavka-8-zari-2026.html",
+      "path": "clanky/nemocnice-kadan-prvni-mesic-noveho-vedeni-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kolobezky-hriste-detektor-kovu-kadan.html",
+      "path": "clanky/nemocnice-kadan-software-kyberbezpecnost.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/komunalni-volby-kadan-2026-volebni-pruvodce.html",
+      "path": "clanky/nemocnice-kadan-strategie-2027-2036-tri-scenare.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/komunalni-volby-kadan-historie-1990-2026.html",
+      "path": "clanky/nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/komunalni-volby-kadan-kandidaty-lhuta-2026.html",
+      "path": "clanky/nemocnice-kadan-vrchni-sestra-chirurgie-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/koupaliste-kadan-pozemky-skluzavka-provoz-2026.html",
+      "path": "clanky/nemocnice-kadan-vycerpala-80milionovy-uver-5-8-milionu-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kovarska-nabrezni-medenecka-uzavirka-kanalizace-zari-2026.html",
+      "path": "clanky/nemocnice-kadan-vypomoc-5-8-milionu-interoperabilita-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kralupy-kadan-9-0-debakl-2026.html",
+      "path": "clanky/nemocnice-kadan.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/krystofovy-hamry-pozar-lesni-porost-7-zari-2026.html",
+      "path": "clanky/neurologie-nemocnice-kadan-uzavrena-4-11-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/ktk-kadan-vypadky-internetu-televize-5-rijna-2026.html",
+      "path": "clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kulturni-zarizeni-kadan.html",
+      "path": "clanky/nova-revmatologicka-ambulance-kadan-podzim-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kzk-zdrazeni-vstupne-pronajmy-2026.html",
+      "path": "clanky/novy-hrbitov-kadan-architektonicka-studie-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/lepsi-sever-lepsi-kadan-odpovedi-nase-kadan-2026.html",
+      "path": "clanky/obce-prispivaji-nemocnice-kadan-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/lithium-prunerov-vzduch-kadan-2026.html",
+      "path": "clanky/od-hlubin-k-nebi-kadan.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/losenicky-hossner-soud-policie-vyhruzky-nemocnice-kadan-2026.html",
+      "path": "clanky/od-sousedu-chmel-docesna-zatec-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/losenicky-odpoved-hossner-smlouvy-policie-krusina-11-zari-2026.html",
+      "path": "clanky/odpady-technicke-sluzby-kadan-zmeny-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/lubenec-voda-havarie-7-zari-2026.html",
+      "path": "clanky/ods-kadan-kaufland-kampan-23-zari-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/ods-kadan-odpovedi-nase-kadan-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/ods-kadan-program-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavka-elektriny-bilence-7-zari-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavka-elektriny-mezilesi-24-zari-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavka-elektriny-prunerov-nova-viska-10-zari-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavka-elektriny-tusimice-21-zari-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavky-elektriny-autokemp-prunerov-srpen-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavky-elektriny-kadan-26-srpna-2-zari-2026.html",
+      "old": "src=\"/site.js?",
+      "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
+      "count": 1
+    },
+    {
+      "path": "clanky/odstavky-vody-udlice-strupcice-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
