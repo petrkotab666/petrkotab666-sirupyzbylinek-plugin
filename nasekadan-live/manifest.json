@@ -1,364 +1,364 @@
 {
   "schema": 1,
-  "version": "20261009-adrop-independent-3",
+  "version": "20261009-adrop-independent-4",
   "files": [],
   "patches": [
     {
-      "path": "clanky/nemocnice-kadan-odmenovani-vedeni-masek-hossner-krusina-marek-vlas-2026.html",
+      "path": "clanky/pretekajici-kose-kadan-technicke-sluzby-ridici.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-osetreni-zubu-celkova-anestezie-2026.html",
+      "path": "clanky/prezident-petr-pavel-kadan-radka-16-zari-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-petr-hossner-soudy-pravni-spory-2026.html",
+      "path": "clanky/prijezd-cisare-kadan-1367-hra.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-pravni-proverka-deloitte-odmitnuti-2026.html",
+      "path": "clanky/pro-kadan-a-okoli-odpovedi-nase-kadan-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-profil-sluzby-budoucnost.html",
+      "path": "clanky/pro-kadan-pred-hvezdou-metlicky-maxipes-fik-milota-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-prvni-mesic-noveho-vedeni-2026.html",
+      "path": "clanky/prunerov-ii-demolice-komina-hluk-pred-sestou-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-software-kyberbezpecnost.html",
+      "path": "clanky/prunerov-nova-viska-odstavka-elektriny-30-zari-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-strategie-2027-2036-tri-scenare.html",
+      "path": "clanky/prunerov-stat-prodej-pozemku-aukce-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-strukturalni-deficit-cash-flow-2026.html",
+      "path": "clanky/psi-exkrementy-kadan-problem-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-vrchni-sestra-chirurgie-2026.html",
+      "path": "clanky/radka-kurzy-corrency-1000-korun-zari-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-vycerpala-80milionovy-uver-5-8-milionu-2026.html",
+      "path": "clanky/regulace-cen-benzinu-nafty-rijen-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan-vypomoc-5-8-milionu-interoperabilita-2026.html",
+      "path": "clanky/rekonstrukce-zimni-stadion-kadan-povoleni-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nemocnice-kadan.html",
+      "path": "clanky/replika-granatu-policie-kadan-vejprtsko-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/neurologie-nemocnice-kadan-uzavrena-4-11-zari-2026.html",
+      "path": "clanky/richterova-tovarna-kadan-jan-perout-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nocni-vyluky-vlaku-kadan-klasterec-chomutov-cervenec-srpen-2026.html",
+      "path": "clanky/rumburk-nemocnice-kadan-budoucnost-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/nova-revmatologicka-ambulance-kadan-podzim-2026.html",
+      "path": "clanky/sekani-travniku-kadan-spravci-vysky-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/novy-hrbitov-kadan-architektonicka-studie-2026.html",
+      "path": "clanky/silnice-zatec-kadan-prejezd-uzavirka-srpen-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/obce-prispivaji-nemocnice-kadan-2026.html",
+      "path": "clanky/sk-kadan-start-sezony-milevsko-vrchlabi-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/od-hlubin-k-nebi-kadan.html",
+      "path": "clanky/skola-zacina-1-zari-2026-kadan-prehled-prvnich-dnu.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/od-sousedu-chmel-docesna-zatec-2026.html",
+      "path": "clanky/slavie-kadan-epp-plavci-120-tisic-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odpady-technicke-sluzby-kadan-zmeny-2026.html",
+      "path": "clanky/slovan-druhy-pokus.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ods-kadan-kaufland-kampan-23-zari-2026.html",
+      "path": "clanky/slovan-prvni-pokus-26-milionu-evropske-penize-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ods-kadan-odpovedi-nase-kadan-2026.html",
+      "path": "clanky/slunce-kadan-posledni-tyden-pronajem-292-korun-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ods-kadan-program-2026.html",
+      "path": "clanky/slunce-kadan-seste-kolo-najemce-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavka-elektriny-bilence-7-zari-2026.html",
+      "path": "clanky/smetanovy-sady-poskozeny-mobiliar-vandalismus-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavka-elektriny-mezilesi-24-zari-2026.html",
+      "path": "clanky/smr-tusimice-studie-zdravi-obyvatel-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavka-elektriny-prunerov-nova-viska-10-zari-2026.html",
+      "path": "clanky/spojeni-pro-zmenu-odpovedi-nase-kadan-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavka-elektriny-tusimice-21-zari-2026.html",
+      "path": "clanky/spojeni-pro-zmenu-pirati-kadan-volby-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavka-teple-vody-kadan-31-srpna-2026.html",
+      "path": "clanky/sporice-d7-i13-i7-omezeni-19-srpna-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavky-elektriny-autokemp-prunerov-srpen-2026.html",
+      "path": "clanky/sportovni-souhrn-kadan-28-zari-4-rijna-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavky-elektriny-kadan-26-srpna-2-zari-2026.html",
+      "path": "clanky/sportovni-tyden-kadan-21-27-zari-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/odstavky-vody-udlice-strupcice-zari-2026.html",
+      "path": "clanky/sportovni-vikend-kadan-19-20-zari-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ohre-kadan-hydrologicke-sucho-srpen-2026.html",
+      "path": "clanky/sportovni-vikend-kadan-26-27-zari-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ohre-kadan-sucho-zakazy-odberu-zari-2026.html",
+      "path": "clanky/sportovni-vikend-kadan-3-4-rijna-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/omezeni-i13-chomutov-17-srpna-2026.html",
+      "path": "clanky/srpen-kadanske-galerie-vystavy-workshop-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/omezeni-ii568-kadan-vernerov-7-rijna-2026.html",
+      "path": "clanky/srsni-boren-bilina-hzs-varovani-2026.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/omezeni-jana-svermy-kadan-zari-listopad-2026.html",
+      "path": "clanky/starosta-losenicky-nemocnice-slovan-nepedagogove.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ordinace-mudr-kurakove-kadan-uzavrena-rijen-2026.html",
+      "path": "clanky/strana-10.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/oswald-euro-nemocnice-avies-odpovednost-2026.html",
+      "path": "clanky/strana-11.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ozveny-kadanskeho-pohadkoveho-festivalu-2026.html",
+      "path": "clanky/strana-12.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ozveny-pohadkoveho-festivalu-reportaz-cellar-band-2026.html",
+      "path": "clanky/strana-13.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/ozveny-pohadkoveho-festivalu-zacinaji-program-2026.html",
+      "path": "clanky/strana-14.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/patrani-petr-malcek-kadan-2026.html",
+      "path": "clanky/strana-15.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/pet-kandidatu-podcast-ano-ucast-odmitlo-kadan-volby-2026.html",
+      "path": "clanky/strana-16.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/petice-nemocnice-kadan-podana-24-srpna-2026.html",
+      "path": "clanky/strana-17.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/petice-nemocnice-kadan-podpisova-mista-2026.html",
+      "path": "clanky/strana-18.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/petice-nemocnice-kadan-zmena-modelu-2026.html",
+      "path": "clanky/strana-19.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/petice-nemocnice-kadan.html",
+      "path": "clanky/strana-2.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/petipsy-rokle-ii224-uplna-uzavirka-zari-rijen-2026.html",
+      "path": "clanky/strana-20.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/plan-uses-kadan-krajina-zakazky-2026.html",
+      "path": "clanky/strana-21.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/plavani-pro-deti-kadan-radka.html",
+      "path": "clanky/strana-22.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/plavecka-hala-kadan-sanitarni-den-2-rijna-2026.html",
+      "path": "clanky/strana-23.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/policie-klasterec-valka-gangu-20260922.html",
+      "path": "clanky/strana-24.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/policie-zadrzela-muze-vyhruzne-emaily-nemocnice-kadan-2026.html",
+      "path": "clanky/strana-25.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/posledni-test-pred-ligou-kadan-decin-10-zari-2026.html",
+      "path": "clanky/strana-26.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/pozar-dopravniho-prostredku-okounov-7-rijna-2026.html",
+      "path": "clanky/strana-27.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/pozar-puda-rodinny-dum-kotvina-okounov-5-rijna-2026.html",
+      "path": "clanky/strana-3.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/pozar-trafostanice-kadan-4-zari-2026.html",
+      "path": "clanky/strana-4.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/prakticky-lekar-kadan-sindelar-dovolena-zastup-2026.html",
+      "path": "clanky/strana-5.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
     },
     {
-      "path": "clanky/prakticti-lekari-nemocnice-kadan-srpen-2026.html",
+      "path": "clanky/strana-6.html",
       "old": "</body>",
       "new": "<script src=\"/images/adrop-pre-black-friday-20261009.js\" defer></script>\n</body>",
       "count": 1
