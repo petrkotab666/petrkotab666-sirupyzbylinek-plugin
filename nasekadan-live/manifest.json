@@ -1,304 +1,304 @@
 {
   "schema": 1,
-  "version": "20261009-adrop-absolute-3",
+  "version": "20261009-adrop-absolute-4",
   "files": [],
   "patches": [
     {
-      "path": "clanky/hasici-chomutovska-kadan-vstup-do-bytu-23-zari-2026.html",
+      "path": "clanky/kadan-vrchlabi-3-0-druha-vyhra-vikend-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hasici-kadan-unik-latky-ovzdusi-4-rijna-2026.html",
+      "path": "clanky/kadan-vrchlabi-4-1-prvni-domaci-vyhra-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hasici-kadan-unik-nebezpecne-latky-silnice-23-zari-2026.html",
+      "path": "clanky/kadan-vyhrala-kralupy-5-4-priprava-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hasici-kadan-vycvik-zachrana-voda-nechranice.html",
+      "path": "clanky/kadan-zije-sportem-5-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hasici-nocni-zasah-vyskova-budova-kadan-20-zari-2026.html",
+      "path": "clanky/kadanacci-hrou-kadan-hriste-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/historicky-hurvinek-kadan-prunerov-vejprty-16-srpna-2026.html",
+      "path": "clanky/kadansky-klaster-agent-cerich.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
+      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hora-svateho-sebestiana-prechod-uzavren-nehoda-nemecko-7-zari-2026.html",
+      "path": "clanky/kadansky-klaster-ctyri-umrti-listopad-1981.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/horni-halze-loucna-uzavirka-23-srpna-2026.html",
+      "path": "clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hossner-12-otazek-nase-kadan-2026.html",
+      "path": "clanky/kadansky-klaster-vratte-nam-knihy-1986.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hossner-750-tisic-mesicne-fact-check-zari-2026.html",
+      "path": "clanky/kadansti-plavacci-zapis-podzim-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hossner-kritika-vedeni-nemocnice-kadan-jaro-2024.html",
+      "path": "clanky/kam-v-kadani-a-okoli-10-16-srpna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hotel-svoboda-dostupne-bydleni-knihovna-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-14-20-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hradiste-vojensky-vycvik-rijen-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-17-23-srpna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hradiste-vojensky-vycvik-zari-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-21-27-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hrbitov-kadan-sekani-travy-dokumenty-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-24-30-srpna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/hvezdarna-kadan-upravy-okoli-lavicky-kose-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-27-cervence-2-srpna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/interni-ambulance-nemocnice-kadan-uzavrena-6-8-rijna-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-28-zari-4-rijna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/interni-ambulance-nemocnice-kadan-uzavrena-cervenec-srpen-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-3-9-srpna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/ippv-kadan-psychologicke-pracoviste-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-31-srpna-6-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jaderne-tusimice-smr-voda-doprava-eia-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-5-11-rijna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jak-se-kadan-stara-o-hriste-2026.html",
+      "path": "clanky/kam-v-kadani-a-okoli-7-13-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jan-losenicky-bilance-rozhovor-trestni-oznameni-volby-2026.html",
+      "path": "clanky/kandidatky-kadan-2026-druhe-tri-pod-lupou.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jednotny-vzhled-map-orientacnich-tabuli-kadan-2026.html",
+      "path": "clanky/kandidatky-kadan-2026-prvni-tri-pod-lupou.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jezerka-kadan-prevod-investice-309-milionu-2026.html",
+      "path": "clanky/kandidatky-kadan-registrace-komunalni-volby-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jezero-most-patrani-dva-lide-bourka-2026.html",
+      "path": "clanky/kandidatni-listiny-kadan-komunalni-volby-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jirkov-dopravni-omezeni-zari-rijen-2026.html",
+      "path": "clanky/kati-kadan-sparta-praha-pohar-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/josef-suchy-klasterec-u18-kanada-hlinka-2026.html",
+      "path": "clanky/kaufland-retail-park-mcdrive-klasterec.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/jungmannova-ulice-kadan-uplna-uzavirka-rijen-2026.html",
+      "path": "clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kabat-chomutov-reportaz-turne-2026.html",
+      "path": "clanky/kino-hvezda-kadan-vic-nez-filmy-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-benatky-obrat-4-3-prodlouzeni-2026.html",
+      "path": "clanky/klasterec-hasici-novy-dopravni-automobil-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-cheb-prohra-1-4-priprava-2026.html",
+      "path": "clanky/klasterec-ochlazeni-zimni-stadion-kadan-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-cheb-vyhra-5-2-priprava-2026.html",
+      "path": "clanky/klasterec-pozemek-aukce-273-tisic-nestabilni-skala-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-decin-3-2-prodlouzeni-7-rijna-2026.html",
+      "path": "clanky/klasterec-upozorneni-deti-mobilni-telefon-autobusova-zastavka-8-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-decin-prohra-5-6-priprava-2026.html",
+      "path": "clanky/kolobezky-hriste-detektor-kovu-kadan.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-hasici-pozarni-technika-zht-vito-2026.html",
+      "path": "clanky/komunalni-volby-kadan-2026-volebni-pruvodce.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-hlasovaci-listky-oznaceni-schranek-2026.html",
+      "path": "clanky/komunalni-volby-kadan-historie-1990-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-kralupy-prohra-1-2-najezdy-priprava-2026.html",
+      "path": "clanky/komunalni-volby-kadan-kandidaty-lhuta-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-milevsko-vyhra-5-3-2-liga-2026.html",
+      "path": "clanky/koupaliste-kadan-pozemky-skluzavka-provoz-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-most-prohra-3-4-2-liga-2026.html",
+      "path": "clanky/kovarska-nabrezni-medenecka-uzavirka-kanalizace-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-na-podlesi-havarie-vody-29-zari-2026.html",
+      "path": "clanky/kralupy-kadan-9-0-debakl-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-opravy-bytovych-domu-golovinova-2026.html",
+      "path": "clanky/krystofovy-hamry-pozar-lesni-porost-7-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-sber-nebezpecneho-odpadu-26-zari-2026.html",
+      "path": "clanky/ktk-kadan-vypadky-internetu-televize-5-rijna-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-sukova-vezni-klasterni-schody-vodovod-kanalizace-rizeni-2026.html",
+      "path": "clanky/kulturni-zarizeni-kadan.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-tropicke-dny-koupaliste-cervenec-2026.html",
+      "path": "clanky/kzk-zdrazeni-vstupne-pronajmy-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-turismus-potencial-analyza-2026.html",
+      "path": "clanky/lepsi-sever-lepsi-kadan-odpovedi-nase-kadan-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-usti-prvni-priprava-8-3-2026.html",
+      "path": "clanky/lithium-prunerov-vzduch-kadan-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-v-nedeli-uhasi-leto-20-zari-2026.html",
+      "path": "clanky/losenicky-hossner-soud-policie-vyhruzky-nemocnice-kadan-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-vinobrani-zakaz-zastaveni-frantiskansky-klaster-2026.html",
+      "path": "clanky/losenicky-odpoved-hossner-smlouvy-policie-krusina-11-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
     },
     {
-      "path": "clanky/kadan-volebni-mistnosti-komunalni-volby-2026.html",
+      "path": "clanky/lubenec-voda-havarie-7-zari-2026.html",
       "old": "src=\"/site.js?",
       "new": "src=\"https://nasekadan.cz/site.js?adrop=20261009&",
       "count": 1
