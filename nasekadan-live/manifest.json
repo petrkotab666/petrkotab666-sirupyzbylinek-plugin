@@ -1,21 +1,7 @@
 {
   "schema": 1,
-  "version": "20261019-kino-hvezda-filmovy-kviz-pridani-v1",
+  "version": "20261019-kino-kviz-server-first-verified-cleared",
   "files": [],
-  "patches": [
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-19-25-rijna-2026.html",
-      "old": "Začátek týdne: podívejte se na aktuální program Kina Hvězda.",
-      "new": "Filmový kvíz – Harry Potter v Kině Hvězda (program kina uvádí 16:00).",
-      "count": 1,
-      "sha256_before": "fa8440791d252a1c091a24bd33cfc84ad1048683c8255585a5738dfe18c91dd4"
-    },
-    {
-      "path": "clanky/kam-v-kadani-a-okoli-19-25-rijna-2026.html",
-      "old": "<h2>Kino Hvězda: pozor na změnu filmu</h2>",
-      "new": "<h2>Kino Hvězda: filmový kvíz a změna filmu</h2>\n<div class=\"event\"><time>PONDĚLÍ 19. 10. · 16:00 PODLE PROGRAMU KINA</time><h3>Filmový kvíz – Harry Potter</h3><p class=\"mini\"><strong>Kino Hvězda, Kpt. Jaroše 1477, Kadaň</strong></p><p>V pondělí se v Kině Hvězda koná filmový kvíz věnovaný světu Harryho Pottera. Program kina uvádí začátek v <strong>16:00</strong>. Protože se v jiném kalendáři objevil odlišný čas, doporučujeme před cestou ověřit aktuální údaj přímo u provozovatele.</p><p class=\"mini\"><a href=\"https://www.kinokadan.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Aktuální program a informace pořadatele →</a></p></div>",
-      "count": 1
-    }
-  ],
+  "patches": [],
   "deletes": []
 }
