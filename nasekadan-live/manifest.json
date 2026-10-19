@@ -1,7 +1,238 @@
 {
   "schema": 1,
-  "version": "20261019-unemployment-switch-off-stale-bridge-manifest-1792410653705",
+  "version": "withdraw-okounov-20261019-f98c27a-a0bcfae",
   "files": [],
-  "patches": [],
-  "deletes": []
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "  <section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Na silnici III/1987 v Okounově se stala nehoda se zraněním\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\">\n        <small>OKOUNOV · DOPRAVNÍ NEHODA · IZS · 19. 10. 2026 · 14:15</small>\n        <h1>Na silnici III/1987 v Okounově se stala nehoda se zraněním</h1>\n        <p>Úřední dopravní přehled evidoval 19. října na silnici III/1987 v Okounově dopravní nehodu se zraněním. Záznam byl veden od 12:50 do 13:20.</p>\n        <a class=\"btn\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">19. 10. 2026 v 11:42</p>\n      <h2>Nezaměstnanost v Kadani klesla na 7,85 procenta. Proti republice zůstává vysoko</h2>\n      <p>V září 2026 dosáhl podíl nezaměstnaných v Kadani 7,85 %. Srovnání s Chomutovem, Žatcem, Kláštercem i Českou republikou a vysvětlení dat.</p>\n      <a class=\"aside-button\" href=\"/clanky/nezamestnanost-kadan-zari-2026-srovnani-mest.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
+      "new": "  <section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/nezamestnanost-kadan-zari-2026-srovnani-mest.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Nezaměstnanost v Kadani klesla na 7,85 procenta. Proti republice zůstává vysoko\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/nezamestnanost-kadan-zari-2026-srovnani-mest.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\">\n        <small>KADAŇ · TRH PRÁCE · ANALÝZA DAT · 19. 10. 2026 · 11:42</small>\n        <h1>Nezaměstnanost v Kadani klesla na 7,85 procenta. Proti republice zůstává vysoko</h1>\n        <p>V září 2026 dosáhl podíl nezaměstnaných v Kadani 7,85 %. Srovnání s Chomutovem, Žatcem, Kláštercem i Českou republikou a vysvětlení dat.</p>\n        <a class=\"btn\" href=\"/clanky/nezamestnanost-kadan-zari-2026-srovnani-mest.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">18. 10. 2026 v 17:22</p>\n      <h2>Kam v Kadani a okolí od 19. do 25. října: Baťův zázrak, Bach, oldies a blues</h2>\n      <p>Tipy na týden 19.–25. října 2026: farmářské trhy v Kadani, divadlo Baťův zázrak, oldies, koncert Bacha, výstavy, rodinný program i žatecká hudba a kino.</p>\n      <a class=\"aside-button\" href=\"/clanky/kam-v-kadani-a-okoli-19-25-rijna-2026.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "<script data-nk-archive-schema=\"1\" type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"name\": \"Články Naše Kadaň – strana 1\", \"numberOfItems\": 372, \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://nasekadan.cz/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\", \"name\": \"Na silnici III/1987 v Okounově se stala nehoda se zraněním\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://nasekadan.cz/clanky/nezamestnanost-kadan-zari-2026-srovnani-mest.html\", \"name\": \"Nezaměstnanost v Kadani klesla na 7,85 procenta. Proti republice zůstává vysoko\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://nasekadan.cz/clanky/bilence-auto-strom-nehoda-18-rijna-2026.html\", \"name\": \"U Bílenic narazilo osobní auto do stromu. Nehoda je vedená se zraněním\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://nasekadan.cz/clanky/chomutov-auto-trolejbus-palackeho-nehoda-18-rijna-2026.html\", \"name\": \"V Chomutově se srazilo auto s trolejbusem. Hasiči zasahovali u vyprošťování osob\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-19-25-rijna-2026.html\", \"name\": \"Kam v Kadani a okolí od 19. do 25. října: Baťův zázrak, Bach, oldies a blues\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://nasekadan.cz/clanky/nemocnice-kadan-georgievova-ambulance-uzavrena-9-18-listopadu-2026.html\", \"name\": \"Ambulance MUDr. Georgievové v Kadani bude od 9. do 18. listopadu uzavřena\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://nasekadan.cz/clanky/sbirka-pro-hanku-19-rijna-2026.html\", \"name\": \"Sbírka pro Hanku končí v pondělí 19. října. Její manžel prosí o pomoc\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://nasekadan.cz/clanky/dalsi-vyluky-vlaku-kadan-chomutov-klasterec-rijen-prosinec-2026.html\", \"name\": \"Další výluky vlaků kolem Kadaně až do prosince. Od 19. října znovu pojedou autobusy\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://nasekadan.cz/clanky/kadan-gymnaste-me-teamgym-espoo-vysledky-2026.html\", \"name\": \"Z Kadaně až na mistrovství Evropy. Dva reprezentanti ukázali sílu místní gymnastiky, její budoucnost je ale nejistá\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://nasekadan.cz/clanky/sk-kadan-kobra-praha-3-6-17-rijna-2026.html\", \"name\": \"Kadaň na Kobře smazala dvougólovou ztrátu. Z Prahy ale po porážce 3:6 odjíždí bez bodů\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://nasekadan.cz/clanky/den-archeologie-kadan-frantiskansky-klaster-17-rijna-2026.html\", \"name\": \"Ve františkánské zahradě ožila dávná řemesla. Den archeologie ukázal, jak vznikaly šperky našich předků\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://nasekadan.cz/clanky/nemocnice-kadan-ortopedicka-ambulance-uzavrena-19-rijna-2026.html\", \"name\": \"Ortopedická ambulance č. 1 v Kadani bude v pondělí uzavřena\"}]}</script>",
+      "new": "<script data-nk-archive-schema=\"1\" type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"name\": \"Články Naše Kadaň – strana 1\", \"numberOfItems\": 371, \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://nasekadan.cz/clanky/nezamestnanost-kadan-zari-2026-srovnani-mest.html\", \"name\": \"Nezaměstnanost v Kadani klesla na 7,85 procenta. Proti republice zůstává vysoko\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://nasekadan.cz/clanky/bilence-auto-strom-nehoda-18-rijna-2026.html\", \"name\": \"U Bílenic narazilo osobní auto do stromu. Nehoda je vedená se zraněním\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://nasekadan.cz/clanky/chomutov-auto-trolejbus-palackeho-nehoda-18-rijna-2026.html\", \"name\": \"V Chomutově se srazilo auto s trolejbusem. Hasiči zasahovali u vyprošťování osob\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-19-25-rijna-2026.html\", \"name\": \"Kam v Kadani a okolí od 19. do 25. října: Baťův zázrak, Bach, oldies a blues\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://nasekadan.cz/clanky/nemocnice-kadan-georgievova-ambulance-uzavrena-9-18-listopadu-2026.html\", \"name\": \"Ambulance MUDr. Georgievové v Kadani bude od 9. do 18. listopadu uzavřena\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://nasekadan.cz/clanky/sbirka-pro-hanku-19-rijna-2026.html\", \"name\": \"Sbírka pro Hanku končí v pondělí 19. října. Její manžel prosí o pomoc\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://nasekadan.cz/clanky/dalsi-vyluky-vlaku-kadan-chomutov-klasterec-rijen-prosinec-2026.html\", \"name\": \"Další výluky vlaků kolem Kadaně až do prosince. Od 19. října znovu pojedou autobusy\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://nasekadan.cz/clanky/kadan-gymnaste-me-teamgym-espoo-vysledky-2026.html\", \"name\": \"Z Kadaně až na mistrovství Evropy. Dva reprezentanti ukázali sílu místní gymnastiky, její budoucnost je ale nejistá\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://nasekadan.cz/clanky/sk-kadan-kobra-praha-3-6-17-rijna-2026.html\", \"name\": \"Kadaň na Kobře smazala dvougólovou ztrátu. Z Prahy ale po porážce 3:6 odjíždí bez bodů\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://nasekadan.cz/clanky/den-archeologie-kadan-frantiskansky-klaster-17-rijna-2026.html\", \"name\": \"Ve františkánské zahradě ožila dávná řemesla. Den archeologie ukázal, jak vznikaly šperky našich předků\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://nasekadan.cz/clanky/nemocnice-kadan-ortopedicka-ambulance-uzavrena-19-rijna-2026.html\", \"name\": \"Ortopedická ambulance č. 1 v Kadani bude v pondělí uzavřena\"}]}</script>",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "\n    <article class=\"article-card hospital\" data-auto-article=\"okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Na silnici III/1987 v Okounově se stala nehoda se zraněním\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">19. 10. 2026 · 14:15 · OKOUNOV · DOPRAVNÍ NEHODA · IZS</span><h3>Na silnici III/1987 v Okounově se stala nehoda se zraněním</h3><p>Úřední dopravní přehled evidoval 19. října na silnici III/1987 v Okounově dopravní nehodu se zraněním. Záznam byl veden od 12:50 do 13:20.</p><a class=\"read-more\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\">Přečíst článek →</a></div>\n    </article>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "rss.xml",
+      "old": "\n    <item>\n      <title>Na silnici III/1987 v Okounově se stala nehoda se zraněním</title>\n      <description><![CDATA[Úřední dopravní přehled evidoval 19. října na silnici III/1987 v Okounově dopravní nehodu se zraněním. Záznam byl veden od 12:50 do 13:20.]]></description>\n      <link>https://nasekadan.cz/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html</link>\n      <guid isPermaLink=\"true\">https://nasekadan.cz/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html</guid>\n      <pubDate>Mon, 19 Oct 2026 14:15:17 +0200</pubDate>\n      <category>OKOUNOV</category>\n      <category>DOPRAVNÍ NEHODA</category>\n      <category>IZS</category>\n      <szn:image><szn:url>https://nasekadan.cz/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png</szn:url></szn:image>\n      <geo:lat>50.375984</geo:lat>\n      <geo:long>13.271307</geo:long>\n    </item>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "sitemap.xml",
+      "old": "\n  <url><loc>https://nasekadan.cz/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html</loc></url>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "news-sitemap.xml",
+      "old": "\n  <url>\n    <loc>https://nasekadan.cz/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html</loc>\n    <news:news>\n      <news:publication>\n        <news:name>Naše Kadaň</news:name>\n        <news:language>cs</news:language>\n      </news:publication>\n      <news:publication_date>2026-10-19T14:15:17+02:00</news:publication_date>\n      <news:title>Na silnici III/1987 v Okounově se stala nehoda se zraněním</news:title>\n    </news:news>\n  </url>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/jan-milota-cena-hejtmana-usteckeho-kraje-2025-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/sk-kadan-kobra-praha-3-6-17-rijna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/omezeni-ii568-kadan-vernerov-7-rijna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/tri-zavodnice-tjvs-kadan-olympijske-nadeje-bratislava-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/tragicka-nehoda-petipsy-auto-autobus-tri-mrtvi-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/den-archeologie-kadan-frantiskansky-klaster-17-rijna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/hora-svateho-sebestiana-prechod-uzavren-nehoda-nemecko-7-zari-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadan-kralupy-prohra-1-2-najezdy-priprava-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/alzbetinsky-klaster-95-dominikanek-kadan-1961-1999.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadan-decin-prohra-5-6-priprava-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/hlubany-podborany-havarie-vodovodu-24-srpna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/gymnathlon-kadan-kurzy-deti-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-agent-cerich.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/pozar-puda-rodinny-dum-kotvina-okounov-5-rijna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadan-turismus-potencial-analyza-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/posledni-test-pred-ligou-kadan-decin-10-zari-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kdyby-karel-iv-prijel-do-kadane-dnes-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/eso-market-rafanda-kadan-24-7.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/bilence-auto-strom-nehoda-18-rijna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/replika-granatu-policie-kadan-vejprtsko-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/tragicka-nehoda-marianske-radcice-lom-dva-mrtvi-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/dopravni-nehoda-se-zranenim-kadan-24-cervence-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/nehoda-dvou-dodavek-cechova-kadan-5-rijna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/mestska-policie-kadan-fakta-diskuse-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadan-v-nedeli-uhasi-leto-20-zari-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/ptejte-se-vyzyva-ano-kdyz-jsme-se-zeptali-my-odpoved-odmitlo.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-akce-domino-1981.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/dopravni-nehoda-se-zranenim-nezabylice-13-rijna-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/josef-suchy-klasterec-u18-kanada-hlinka-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/kadansky-klaster-kdo-spustil-akci-domino-1981.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/prezident-petr-pavel-kadan-radka-16-zari-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    },
+    {
+      "path": "clanky/blatno-kamion-uzavirka-silnice-2521-7-zari-2026.html",
+      "old": "<a class=\"nk-read-next-card\" href=\"/clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html\"><span class=\"nk-read-next-image\"><img src=\"/social/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026-d023d6385b.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"630\"></span><span class=\"nk-read-next-title\">Na silnici III/1987 v Okounově se stala nehoda se zraněním</span><span class=\"nk-read-next-action\">Přečíst článek →</span></a>",
+      "new": "",
+      "count": 1
+    }
+  ],
+  "deletes": [
+    "clanky/okounov-silnice-iii-1987-nehoda-zraneni-19-rijna-2026.html"
+  ]
 }
