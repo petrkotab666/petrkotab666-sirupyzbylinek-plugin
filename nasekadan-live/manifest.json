@@ -1,7 +1,14 @@
 {
   "schema": 1,
-  "version": "20261019-okounov-confirmed-withdrawn-clear-stale-bridge",
+  "version": "20261020-rss-namespace-repair-2026-10-20",
   "files": [],
-  "patches": [],
+  "patches": [
+    {
+      "path": "rss.xml",
+      "old": "<rss xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ns0=\"http://www.w3.org/2005/Atom\" xmlns:ns1=\"https://www.seznam.cz\" xmlns:ns2=\"http://www.w3.org/2003/01/geo/wgs84_pos#\" version=\"2.0\">",
+      "new": "<rss xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ns0=\"http://www.w3.org/2005/Atom\" xmlns:ns1=\"https://www.seznam.cz\" xmlns:ns2=\"http://www.w3.org/2003/01/geo/wgs84_pos#\" version=\"2.0\" xmlns:szn=\"https://www.seznam.cz\" xmlns:geo=\"http://www.w3.org/2003/01/geo/wgs84_pos#\">",
+      "count": 1
+    }
+  ],
   "deletes": []
 }
