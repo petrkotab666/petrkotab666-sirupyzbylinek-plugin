@@ -74,13 +74,6 @@ const campaigns = {
     href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=759c16de',
     cta: 'Vybrat přírodní péči',
   },
-  naturprodukt: {
-    icon: '🍃',
-    title: 'Přírodní produkty a bylinná inspirace',
-    text: 'Další výběr bylinných produktů, čajů a přírodní domácí péče.',
-    href: 'https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=d72003c9',
-    cta: 'Otevřít nabídku',
-  },
 };
 
 type CampaignKey = keyof typeof campaigns;
@@ -100,17 +93,17 @@ const primaryByTopic: Record<string, CampaignKey[]> = {
 };
 
 const secondaryByTopic: Record<string, CampaignKey[]> = {
-  recepty: ['drpopov', 'nadeje', 'naturprodukt'],
-  napoje: ['naturprodukt', 'drpopov', 'nadeje'],
-  zavarovani: ['naturprodukt', 'drpopov', 'vivaco'],
-  sber: ['drpopov', 'nadeje', 'naturprodukt'],
-  pestovani: ['nadeje', 'naturprodukt', 'drpopov'],
-  zdravi: ['drpopov', 'nadeje', 'naturprodukt'],
-  vyziva: ['naturprodukt', 'drpopov', 'nadeje'],
-  krasa: ['vivaco', 'drpopov', 'naturprodukt'],
-  zvirata: ['naturprodukt', 'drpopov', 'nadeje'],
-  repelenty: ['vivaco', 'naturprodukt', 'drpopov'],
-  bylinky: ['drpopov', 'nadeje', 'naturprodukt'],
+  recepty: ['drpopov', 'nadeje', 'vivaco'],
+  napoje: ['vivaco', 'drpopov', 'nadeje'],
+  zavarovani: ['nadeje', 'drpopov', 'vivaco'],
+  sber: ['drpopov', 'nadeje', 'vivaco'],
+  pestovani: ['nadeje', 'vivaco', 'drpopov'],
+  zdravi: ['drpopov', 'nadeje', 'vivaco'],
+  vyziva: ['vivaco', 'drpopov', 'nadeje'],
+  krasa: ['vivaco', 'drpopov', 'nadeje'],
+  zvirata: ['vivaco', 'drpopov', 'nadeje'],
+  repelenty: ['vivaco', 'nadeje', 'drpopov'],
+  bylinky: ['drpopov', 'nadeje', 'vivaco'],
 };
 
 const selectedKeys = placement === 'secondary'
