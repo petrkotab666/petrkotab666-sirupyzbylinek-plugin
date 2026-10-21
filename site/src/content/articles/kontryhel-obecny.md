@@ -143,16 +143,6 @@ Nejčastější domácí použití je čaj z kontryhele. Připravuje se jednodu�
 
 Chuť čaje můžete zjemnit meduňkou, maliníkem, měsíčkem nebo šípkem. Pokud s bylinkami začínáte, držte se jednoduchých směsí a nepřidávejte zbytečně mnoho druhů najednou.
 
-Reklama
-
-[![Přírodní produkty – Naturprodukt](/media/imported/kontryhel-obecny/d72003c9-ebf32f81.png)](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=d72003c9)
-
-**Přírodní produkty pro domácí péči**
-
-Prohlédněte si další inspiraci z oblasti bylin a přírodní péče.
-
-[Otevřít nabídku](https://ehub.cz/system/scripts/click.php?a_aid=6926a50f&a_bid=d72003c9)
-
 ## 7 rad pro kontryhel obecný v domácím bylinkářství
 
 1.  Sbírejte jen rostlinu, kterou bezpečně poznáte.
