@@ -1,12 +1,21 @@
 {
   "schema": 1,
-  "version": "20261029-ptactvo-nebeske-kadan-article-1",
+  "version": "20261029-ptactvo-nebeske-kadan-article-2",
   "files": [
     {
       "path": "clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html",
-      "sha256": "0d9f52a7e9c2a89d569542a30a1522d36c9105b594f29ea4f2d40c961f162636"
+      "sha256": "0d9f52a7e9c2a89d569542a30a1522d36c9105b594f29ea4f2d40c961f162636",
+      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html"
     }
   ],
   "patches": [],
-  "deletes": []
+  "deletes": [],
+  "verify_urls": [
+    "https://nasekadan.cz/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html"
+  ],
+  "verify_present": [
+    "Od vrabce po orla mořského",
+    "Ptactvo nebeské"
+  ],
+  "verify_absent": []
 }
