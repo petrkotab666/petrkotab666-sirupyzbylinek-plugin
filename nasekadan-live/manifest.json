@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "20261029-ptactvo-nebeske-kadan-article-2",
+  "version": "20261029-ptactvo-nebeske-kadan-article-index-3",
   "files": [
     {
       "path": "clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html",
@@ -8,14 +8,26 @@
       "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html"
     }
   ],
-  "patches": [],
+  "patches": [
+    {
+      "path": "index.html",
+      "old": "<div class=\"article-list\">\n",
+      "new": "<div class=\"article-list\">\n    <article class=\"article-card hospital\" data-auto-article=\"od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026\"><div class=\"visual\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div><div class=\"article-body\"><span class=\"meta\">29. 10. 2026 · KADAŇ · KULTURA · VÝSTAVA</span><h3>Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků</h3><p>Výstava Ptactvo nebeské ve Františkánském klášteře: preparáty z Loun a Teplic, kresby a fotografie ptáků.</p><a class=\"read-more\" href=\"/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html\">Přečíst článek →</a></div></article>\n",
+      "count": 1
+    },
+    {
+      "path": "clanky/index.html",
+      "old": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n",
+      "new": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n    <article class=\"article-card hospital\" data-auto-article=\"od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026\"><div class=\"visual\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div><div class=\"article-body\"><span class=\"meta\">29. 10. 2026 · KADAŇ · KULTURA · VÝSTAVA</span><h3>Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků</h3><p>Výstava Ptactvo nebeské ve Františkánském klášteře: preparáty z Loun a Teplic, kresby a fotografie ptáků.</p><a class=\"read-more\" href=\"/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html\">Přečíst článek →</a></div></article>\n",
+      "count": 1
+    }
+  ],
   "deletes": [],
   "verify_urls": [
     "https://nasekadan.cz/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html"
   ],
   "verify_present": [
-    "Od vrabce po orla mořského",
-    "Ptactvo nebeské"
+    "Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků"
   ],
   "verify_absent": []
 }
