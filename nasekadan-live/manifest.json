@@ -1,14 +1,12 @@
 {
   "schema": 1,
-  "version": "20261020-rss-namespace-repair-2026-10-20",
-  "files": [],
-  "patches": [
+  "version": "20261029-ptactvo-nebeske-kadan-article-1",
+  "files": [
     {
-      "path": "rss.xml",
-      "old": "<rss xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ns0=\"http://www.w3.org/2005/Atom\" xmlns:ns1=\"https://www.seznam.cz\" xmlns:ns2=\"http://www.w3.org/2003/01/geo/wgs84_pos#\" version=\"2.0\">",
-      "new": "<rss xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ns0=\"http://www.w3.org/2005/Atom\" xmlns:ns1=\"https://www.seznam.cz\" xmlns:ns2=\"http://www.w3.org/2003/01/geo/wgs84_pos#\" version=\"2.0\" xmlns:szn=\"https://www.seznam.cz\" xmlns:geo=\"http://www.w3.org/2003/01/geo/wgs84_pos#\">",
-      "count": 1
+      "path": "clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html",
+      "sha256": "0d9f52a7e9c2a89d569542a30a1522d36c9105b594f29ea4f2d40c961f162636"
     }
   ],
+  "patches": [],
   "deletes": []
 }
