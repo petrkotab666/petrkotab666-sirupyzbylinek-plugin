@@ -1,27 +1,29 @@
 {
   "schema": 1,
-  "version": "20261029-ptactvo-nebeske-original-cover-v4",
-  "files": [
+  "version": "20261029-ptactvo-nebeske-visual-home-archive-v5",
+  "files": [],
+  "patches": [
     {
-      "path": "social/ptactvo-nebeske-kadan-20261029.png",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/social/ptactvo-nebeske-kadan-20261029.png",
-      "sha256": "25a18b16c3c7b5192343f3081e3707e54d77b903992b2218c8dca42b6730113d"
+      "path": "index.html",
+      "old": "<div class=\"photo\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
+      "new": "<div class=\"photo\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ptactvo-nebeske-kadan-20261029.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
+      "count": 1
     },
     {
-      "path": "clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html",
-      "url": "https://raw.githubusercontent.com/petrkotab666/petrkotab666-sirupyzbylinek-plugin/main/nasekadan-live/files/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html",
-      "sha256": "6791ac180a9e79596f572b9902c04132b2c57b34fbc110d0ca73d53c1a65964b"
+      "path": "clanky/index.html",
+      "old": "<div class=\"visual\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>",
+      "new": "<div class=\"visual\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ptactvo-nebeske-kadan-20261029.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": [],
   "verify_urls": [
     "https://nasekadan.cz/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html",
-    "https://nasekadan.cz/social/ptactvo-nebeske-kadan-20261029.png"
+    "https://nasekadan.cz/",
+    "https://nasekadan.cz/clanky/"
   ],
   "verify_present": [
-    "Od vrabce po orla mořského",
-    "data-nk-title-figure"
+    "ptactvo-nebeske-kadan-20261029.png"
   ],
   "verify_absent": []
 }
