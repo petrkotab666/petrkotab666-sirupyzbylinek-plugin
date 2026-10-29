@@ -1,29 +1,58 @@
 {
   "schema": 1,
-  "version": "20261029-ptactvo-nebeske-visual-home-archive-v5",
-  "files": [],
+  "version": "20261029-ano-povolebni-1918",
+  "files": [
+    {
+      "path": "clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html",
+      "sha256": "0d1be384b8cb91df491d03328ceda3e08452357a7b176430453eb45355db04e5"
+    },
+    {
+      "path": "social/ano-povolebni-komunikace-kadan-29-rijna-2026.png",
+      "sha256": "b72e554c807c37e73203e8fd108604d4256c728727750d19d2387e166337d6eb"
+    }
+  ],
   "patches": [
     {
       "path": "index.html",
-      "old": "<div class=\"photo\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
-      "new": "<div class=\"photo\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ptactvo-nebeske-kadan-20261029.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>",
+      "old": "<section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/dealer-chomutovsko-ujizdel-policistum-srazil-policistu-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Dealer z Chomutovska ujížděl policistům. Při útěku srazil jednoho z nich\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/dealer-chomutovsko-ujizdel-policistum-srazil-policistu-2026-a1414ea7ad.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\">\n        <small>KRIMI · CHOMUTOVSKO · POLICIE · 29. 10. 2026 · 16:08</small>\n        <h1>Dealer z Chomutovska ujížděl policistům. Při útěku srazil jednoho z nich</h1>\n        <p>Šestadvacetiletý muž podezřelý z distribuce pervitinu na Chomutovsku podle policie ujížděl hlídce, srazil policistu a řídil navzdory zákazu.</p>\n        <a class=\"btn\" href=\"/clanky/dealer-chomutovsko-ujizdel-policistum-srazil-policistu-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">29. 10. 2026 v 06:00</p>\n      <h2>Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků</h2>\n      <p>Ve Františkánském klášteře v Kadani začala výstava Ptactvo nebeské. Od vrabců a sojek po orla mořského představuje preparáty, kresby i fotografie ptáků.</p>\n      <a class=\"aside-button\" href=\"/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
+      "new": "<section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html\"><article class=\"lead\"><div class=\"photo\" role=\"img\" aria-label=\"ANO kritizuje povolební komunikaci. Na otázky redakce přitom neodpovědělo\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ano-povolebni-komunikace-kadan-29-rijna-2026.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div><div class=\"copy\"><small>KOMUNÁLNÍ POLITIKA · KADAŇ · 29. 10. 2026 · 19:18</small><h1>ANO kritizuje povolební komunikaci. Na otázky redakce přitom neodpovědělo</h1><p>Hnutí ANO si stěžuje, že nebylo pozváno k povolebnímu jednání. Na tři otázky redakce Naše Kadaň ale dosud neodpovědělo.</p><a class=\"btn\" href=\"/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html\">Přečíst nejnovější článek →</a></div></article><aside class=\"current-aside\"><p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p><p class=\"aside-date\">29. 10. 2026 v 16:08</p><h2>Dealer z Chomutovska ujížděl policistům. Při útěku srazil jednoho z nich</h2><p>Šestadvacetiletý muž podezřelý z distribuce pervitinu na Chomutovsku podle policie ujížděl hlídce, srazil policistu a řídil navzdory zákazu.</p><a class=\"aside-button\" href=\"/clanky/dealer-chomutovsko-ujizdel-policistum-srazil-policistu-2026.html\">Přečíst článek →</a><div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div></aside></section>",
       "count": 1
     },
     {
       "path": "clanky/index.html",
-      "old": "<div class=\"visual\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social-card.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>",
-      "new": "<div class=\"visual\" role=\"img\" aria-label=\"Od vrabce po orla mořského. Kadaňský klášter představuje fascinující svět ptáků\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ptactvo-nebeske-kadan-20261029.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>",
+      "old": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">",
+      "new": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n<article class=\"article-card hospital\" data-auto-article=\"ano-povolebni-komunikace-kadan-29-rijna-2026\"><div class=\"visual\" role=\"img\" aria-label=\"ANO kritizuje povolební komunikaci. Na otázky redakce přitom neodpovědělo\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/ano-povolebni-komunikace-kadan-29-rijna-2026.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div><div class=\"article-body\"><span class=\"meta\">29. 10. 2026 · 19:18 · KOMUNÁLNÍ POLITIKA · KADAŇ</span><h3>ANO kritizuje povolební komunikaci. Na otázky redakce přitom neodpovědělo</h3><p>Hnutí ANO si stěžuje, že nebylo pozváno k povolebnímu jednání. Na tři otázky redakce Naše Kadaň ale dosud neodpovědělo.</p><a class=\"read-more\" href=\"/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html\">Přečíst článek →</a></div></article>",
+      "count": 1
+    },
+    {
+      "path": "rss.xml",
+      "old": "<channel>",
+      "new": "<channel>\n<item><title>ANO kritizuje povolební komunikaci. Na otázky redakce přitom neodpovědělo</title><link>https://nasekadan.cz/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html</link><guid isPermaLink=\"true\">https://nasekadan.cz/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html</guid><pubDate>Thu, 29 Oct 2026 19:18:32 +0100</pubDate><description>Hnutí ANO si stěžuje, že nebylo pozváno k povolebnímu jednání. Na tři otázky redakce Naše Kadaň ale dosud neodpovědělo.</description><category>Kadaň</category><category>Komunální politika</category><enclosure url=\"https://nasekadan.cz/social/ano-povolebni-komunikace-kadan-29-rijna-2026.png\" type=\"image/png\" length=\"32112\"/></item>",
+      "count": 1
+    },
+    {
+      "path": "sitemap.xml",
+      "old": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">",
+      "new": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url><loc>https://nasekadan.cz/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html</loc><lastmod>2026-10-29</lastmod></url>",
+      "count": 1
+    },
+    {
+      "path": "news-sitemap.xml",
+      "old": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">",
+      "new": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">\n<url><loc>https://nasekadan.cz/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html</loc><news:news><news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication><news:publication_date>2026-10-29T19:18:32+01:00</news:publication_date><news:title>ANO kritizuje povolební komunikaci. Na otázky redakce přitom neodpovědělo</news:title></news:news></url>",
       "count": 1
     }
   ],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/od-vrabce-po-orla-morskeho-ptactvo-nebeske-kadan-2026.html",
+    "https://nasekadan.cz/clanky/ano-povolebni-komunikace-kadan-29-rijna-2026.html",
+    "https://nasekadan.cz/social/ano-povolebni-komunikace-kadan-29-rijna-2026.png",
     "https://nasekadan.cz/",
     "https://nasekadan.cz/clanky/"
   ],
   "verify_present": [
-    "ptactvo-nebeske-kadan-20261029.png"
+    "ano-povolebni-komunikace-kadan-29-rijna-2026",
+    "ANO kritizuje povolební komunikaci. Na otázky redakce přitom neodpovědělo"
   ],
   "verify_absent": []
 }
