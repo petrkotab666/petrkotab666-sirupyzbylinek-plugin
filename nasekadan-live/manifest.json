@@ -1,43 +1,55 @@
 {
   "schema": 1,
-  "version": "20261106-chomutovska-nehoda-oprava-1443-001",
+  "version": "20261106-chomutovska-nehoda-zraneny-1450-002",
   "files": [],
   "patches": [
     {
       "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "<p>Z veřejného dopravního záznamu nelze určit příčinu nehody ani počet či stav případných zraněných. Přítomnost sanitky sama o sobě neprokazuje, že byl někdo zraněn nebo převezen do nemocnice.</p>",
-      "new": "<section data-news-update=\"kadan-chomutovska-20261106-verified\"><h2>Poškozený zaparkovaný automobil a informace hasičů</h2><p>Při páteční ranní nehodě v Chomutovské ulici se podle dopravního přehledu střet týkal <strong>tří osobních automobilů</strong>. Poškozen byl také <strong>zaparkovaný vůz</strong>.</p><p>Hasiči událost v 8:12 ohlásili jako <strong>dopravní nehodu se zraněním</strong>. Na místě zasahovala také zdravotnická záchranná služba. Přesný počet zraněných ani závažnost jejich poranění zatím nejsou potvrzeny. Příčinu nehody dostupné úřední záznamy neupřesňují.</p></section>",
+      "old": "<h2>Příčina ani údaje o zraněných zatím nejsou potvrzené</h2>",
+      "new": "<h2>Jedna lehce zraněná osoba převezena do nemocnice</h2>",
       "count": 1,
-      "sha256_before": "f6a7ab20d16eeeb50252def5f98cc1590a1ff768ec8a3cc170aa915b6f04ecd5"
+      "sha256_before": "f06d78fbe3fda214c24d470767ce3b7b88d92256ac7572cdde4799cde4b4806a"
     },
     {
       "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody. Přítomnost sanitky sama o sobě nepotvrzuje zranění.",
-      "new": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody. Podle oznámení hasičů byla událost ohlášena se zraněním, podrobnější údaje o účastnících však zatím nejsou známy.",
+      "old": "Hasiči událost v 8:12 ohlásili jako <strong>dopravní nehodu se zraněním</strong>. Na místě zasahovala také zdravotnická záchranná služba. Přesný počet zraněných ani závažnost jejich poranění zatím nejsou potvrzeny. Příčinu nehody dostupné úřední záznamy neupřesňují.",
+      "new": "Hasiči v ranním hlášení událost vedli jako <strong>dopravní nehodu se zraněním</strong>. Podle vyjádření mluvčího Zdravotnické záchranné služby Ústeckého kraje Patrika Christiana Cmoreje převzali záchranáři <strong>jednu osobu s lehkým zraněním</strong> a převezli ji do nemocnice v Kadani. Příčinu střetu nadále prověřují dopravní policisté.",
       "count": 1
     },
     {
       "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "Příčina ani údaje o zraněných nebyly v době vydání veřejně potvrzené.",
-      "new": "Hasiči událost ohlásili se zraněním. Počet zraněných ani příčina nehody zatím nebyly upřesněny.",
+      "old": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody. Podle oznámení hasičů byla událost ohlášena se zraněním, podrobnější údaje o účastnících však zatím nejsou známy.",
+      "new": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody, při které jedna osoba utrpěla lehké zranění a byla převezena do kadaňské nemocnice.",
       "count": 1
     },
     {
       "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "<li>Vlastní fotografie, video a informace redakce Naše Kadaň z místa nehody.</li>",
-      "new": "<li>Vlastní fotografie, video a informace redakce Naše Kadaň z místa nehody.</li><li>Hasičský záchranný sbor Ústeckého kraje – hlášení dopravní nehody se zraněním z 6. listopadu 2026, 8:12.</li>",
+      "old": "Hasiči událost ohlásili se zraněním. Počet zraněných ani příčina nehody zatím nebyly upřesněny.",
+      "new": "Záchranáři převezli jednoho lehce zraněného účastníka do nemocnice v Kadani. Přesná příčina nehody zůstává předmětem šetření.",
       "count": 1
     },
     {
       "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "<meta property=\"article:modified_time\" content=\"2026-11-06T09:20:09+01:00\">",
-      "new": "<meta property=\"article:modified_time\" content=\"2026-11-06T14:42:53+01:00\">",
+      "old": "<li>Hasičský záchranný sbor Ústeckého kraje – hlášení dopravní nehody se zraněním z 6. listopadu 2026, 8:12.</li>",
+      "new": "<li>Hasičský záchranný sbor Ústeckého kraje – hlášení dopravní nehody se zraněním z 6. listopadu 2026, 8:12.</li><li>Vyjádření mluvčího Zdravotnické záchranné služby Ústeckého kraje Patrika Christiana Cmoreje k lehce zraněnému účastníkovi převezenému do kadaňské nemocnice.</li>",
       "count": 1
     },
     {
       "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "\"dateModified\":\"2026-11-06T09:06:00+01:00\"",
-      "new": "\"dateModified\":\"2026-11-06T14:42:53+01:00\"",
+      "old": "<meta property=\"article:modified_time\" content=\"2026-11-06T14:42:53+01:00\">",
+      "new": "<meta property=\"article:modified_time\" content=\"2026-11-06T14:49:55+01:00\">",
+      "count": 1
+    },
+    {
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "\"dateModified\":\"2026-11-06T14:42:53+01:00\"",
+      "new": "\"dateModified\":\"2026-11-06T14:49:55+01:00\"",
+      "count": 1
+    },
+    {
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "Dopravní nehoda tří osobních aut omezila v pátek ráno provoz v Chomutovské ulici v Kadani. Podle krajského dopravního přehledu zůstala na vozovce překážka a místem se projíždělo se zvýšenou opatrností.",
+      "new": "Dopravní nehoda tří osobních aut omezila v pátek ráno provoz v Chomutovské ulici v Kadani. Jedna osoba utrpěla lehké zranění a záchranáři ji převezli do kadaňské nemocnice. Podle krajského dopravního přehledu zůstala na vozovce překážka a místem se projíždělo se zvýšenou opatrností.",
       "count": 1
     }
   ],
@@ -46,11 +58,13 @@
     "https://nasekadan.cz/clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html"
   ],
   "verify_present": [
-    "kadan-chomutovska-20261106-verified",
-    "Poškozený zaparkovaný automobil a informace hasičů",
-    "dopravní nehodu se zraněním"
+    "Jedna lehce zraněná osoba převezena do nemocnice",
+    "jednu osobu s lehkým zraněním",
+    "Patrika Christiana Cmoreje",
+    "zaparkovaný vůz"
   ],
   "verify_absent": [
-    "Přítomnost sanitky sama o sobě nepotvrzuje zranění."
+    "Přesný počet zraněných ani závažnost jejich poranění zatím nejsou potvrzeny.",
+    "Počet zraněných ani příčina nehody zatím nebyly upřesněny."
   ]
 }
