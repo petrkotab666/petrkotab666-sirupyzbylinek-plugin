@@ -1,63 +1,56 @@
 {
   "schema": 1,
-  "version": "20261102-reditelske-volno-kadan-001",
-  "files": [
-    {
-      "path": "clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html",
-      "sha256": "2ff22e6c06ded58b0a188d207bb0406719c6c0f1098ade779c8f9a326b7cef1d"
-    },
-    {
-      "path": "social/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.png",
-      "sha256": "23ea990ab1cb72a55bcf3f7387b77b0bdb8454e403f8175324193eeee6561a19"
-    }
-  ],
+  "version": "20261106-chomutovska-nehoda-oprava-1443-001",
+  "files": [],
   "patches": [
     {
-      "path": "index.html",
-      "old": "<section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/sportovni-tyden-kadan-26-rijna-1-listopadu-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Sportovní týden v Kadani: Panthers zvítězili, hokejisté padli pošesté v řadě\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/sportovni-tyden-kadan-26-rijna-1-listopadu-2026-cb958a8f00.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\">\n        <small>SPORT · 26. ŘÍJNA – 1. LISTOPADU 2026 · 1. 11. 2026 · 20:28</small>\n        <h1>Sportovní týden v Kadani: Panthers zvítězili, hokejisté padli pošesté v řadě</h1>\n        <p>Šestá porážka hokejistů SK Kadaň, vítězství hokejbalistů Panthers v Litoměřicích a těsná fotbalová dohrávka Tatranu. Ověřené výsledky kadaňského sportovního týdne.</p>\n        <a class=\"btn\" href=\"/clanky/sportovni-tyden-kadan-26-rijna-1-listopadu-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">1. 11. 2026 v 13:06</p>\n      <h2>ČEZ chystá 19. listopadu odstávku v Kadani. Zasáhne pět domů v ulici Boženy Němcové</h2>\n      <p>Plánovaná odstávka elektřiny v Kadani potrvá ve čtvrtek 19. listopadu 2026 od 7:30 do 15:00. Týká se pěti domů v ulici Boženy Němcové.</p>\n      <a class=\"aside-button\" href=\"/clanky/odstavka-elektriny-kadan-bozeny-nemcove-19-listopadu-2026.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
-      "new": "<section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html\">\n    <article class=\"lead\"><div class=\"photo\" role=\"img\" aria-label=\"Dvě kadaňské školy oznámily ředitelské volno. Na Podlesí zavřou i družinu a jídelnu\" style=\"background-image:url('https://nasekadan.cz/social/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.png');background-color:#10283d;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n    <div class=\"copy\"><small>KADAŇ · ŠKOLSTVÍ · 2. 11. 2026 · 00:22</small><h1>Dvě kadaňské školy oznámily ředitelské volno. Na Podlesí zavřou i družinu a jídelnu</h1><p>Pondělí 16. listopadu 2026 bude pro žáky ZŠ Na Podlesí volným dnem. Kvůli školení pedagogů se nebude vyučovat a mimo provoz zůstanou školní družina i jídelna. Ředitelské volno má v plánu také kadaňská stavební průmyslovka a obchodní akademie.</p><a class=\"btn\" href=\"/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html\">Přečíst nejnovější článek →</a></div></article>\n    <aside class=\"current-aside\"><p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p><p class=\"aside-date\">1. 11. 2026</p><h2>Sportovní týden v Kadani: Panthers zvítězili, hokejisté padli pošesté v řadě</h2><p>Šestá porážka hokejistů SK Kadaň, vítězství hokejbalistů Panthers v Litoměřicích a těsná fotbalová dohrávka Tatranu. Ověřené výsledky kadaňského sportovního týdne.</p><a class=\"aside-button\" href=\"/clanky/sportovni-tyden-kadan-26-rijna-1-listopadu-2026.html\">Přečíst článek →</a><div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div></aside>\n  </section>",
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "<p>Z veřejného dopravního záznamu nelze určit příčinu nehody ani počet či stav případných zraněných. Přítomnost sanitky sama o sobě neprokazuje, že byl někdo zraněn nebo převezen do nemocnice.</p>",
+      "new": "<section data-news-update=\"kadan-chomutovska-20261106-verified\"><h2>Poškozený zaparkovaný automobil a informace hasičů</h2><p>Při páteční ranní nehodě v Chomutovské ulici se podle dopravního přehledu střet týkal <strong>tří osobních automobilů</strong>. Poškozen byl také <strong>zaparkovaný vůz</strong>.</p><p>Hasiči událost v 8:12 ohlásili jako <strong>dopravní nehodu se zraněním</strong>. Na místě zasahovala také zdravotnická záchranná služba. Přesný počet zraněných ani závažnost jejich poranění zatím nejsou potvrzeny. Příčinu nehody dostupné úřední záznamy neupřesňují.</p></section>",
       "count": 1,
-      "sha256_before": "486672d44659453097790b89b3b228a15d24ddd156c8e5ca48fdfd69d73b6f6a"
+      "sha256_before": "f6a7ab20d16eeeb50252def5f98cc1590a1ff768ec8a3cc170aa915b6f04ecd5"
     },
     {
-      "path": "clanky/index.html",
-      "old": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">",
-      "new": "<section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n    <article class=\"article-card service\" data-auto-article=\"reditelske-volno-kadan-dve-skoly-16-listopadu-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Dvě kadaňské školy oznámily ředitelské volno. Na Podlesí zavřou i družinu a jídelnu\" style=\"background-image:url('https://nasekadan.cz/social/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.png');background-color:#10283d;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">2. 11. 2026 · 00:22 · ŠKOLSTVÍ · KADAŇ</span><h3>Dvě kadaňské školy oznámily ředitelské volno. Na Podlesí zavřou i družinu a jídelnu</h3><p>Pondělí 16. listopadu 2026 bude pro žáky ZŠ Na Podlesí volným dnem. Kvůli školení pedagogů se nebude vyučovat a mimo provoz zůstanou školní družina i jídelna. Ředitelské volno má v plánu také kadaňská stavební průmyslovka a obchodní akademie.</p><a class=\"read-more\" href=\"/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html\">Přečíst článek →</a></div>\n    </article>",
-      "count": 1,
-      "sha256_before": "b73709cb892aa5acdd7b1c430a6172bbf3775e27cd57656916b468dbffa83716"
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody. Přítomnost sanitky sama o sobě nepotvrzuje zranění.",
+      "new": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody. Podle oznámení hasičů byla událost ohlášena se zraněním, podrobnější údaje o účastnících však zatím nejsou známy.",
+      "count": 1
     },
     {
-      "path": "rss.xml",
-      "old": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />",
-      "new": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n    <item><title>Dvě kadaňské školy oznámily ředitelské volno. Na Podlesí zavřou i družinu a jídelnu</title><description>Pondělí 16. listopadu 2026 bude pro žáky ZŠ Na Podlesí volným dnem. Kvůli školení pedagogů se nebude vyučovat a mimo provoz zůstanou školní družina i jídelna. Ředitelské volno má v plánu také kadaňská stavební průmyslovka a obchodní akademie.</description><link>https://nasekadan.cz/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html</link><guid isPermaLink=\"true\">https://nasekadan.cz/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html</guid><pubDate>Mon, 02 Nov 2026 00:22:55 +0100</pubDate><category>Školství</category><category>Kadaň</category><enclosure url=\"https://nasekadan.cz/social/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.png\" type=\"image/png\" length=\"31949\"/></item>",
-      "count": 1,
-      "sha256_before": "9ae050eaff2cf04e1d58a7b4df1830e069313840eb146345a5d3df155ebc0159"
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "Příčina ani údaje o zraněných nebyly v době vydání veřejně potvrzené.",
+      "new": "Hasiči událost ohlásili se zraněním. Počet zraněných ani příčina nehody zatím nebyly upřesněny.",
+      "count": 1
     },
     {
-      "path": "sitemap.xml",
-      "old": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">",
-      "new": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://nasekadan.cz/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html</loc><lastmod>2026-11-02</lastmod></url>",
-      "count": 1,
-      "sha256_before": "181d609ce0093f96d6c81416c37c304605844a3f95a0bcc6cef4c62351fda4cd"
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "<li>Vlastní fotografie, video a informace redakce Naše Kadaň z místa nehody.</li>",
+      "new": "<li>Vlastní fotografie, video a informace redakce Naše Kadaň z místa nehody.</li><li>Hasičský záchranný sbor Ústeckého kraje – hlášení dopravní nehody se zraněním z 6. listopadu 2026, 8:12.</li>",
+      "count": 1
     },
     {
-      "path": "news-sitemap.xml",
-      "old": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">",
-      "new": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">\n  <url><loc>https://nasekadan.cz/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html</loc><news:news><news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication><news:publication_date>2026-11-02T00:22:55+01:00</news:publication_date><news:title>Dvě kadaňské školy oznámily ředitelské volno. Na Podlesí zavřou i družinu a jídelnu</news:title></news:news></url>",
-      "count": 1,
-      "sha256_before": "a805b8a35a3307a5455eb644b68a866d9da29b554e9df44593d03af6927c6118"
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "<meta property=\"article:modified_time\" content=\"2026-11-06T09:20:09+01:00\">",
+      "new": "<meta property=\"article:modified_time\" content=\"2026-11-06T14:42:53+01:00\">",
+      "count": 1
+    },
+    {
+      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
+      "old": "\"dateModified\":\"2026-11-06T09:06:00+01:00\"",
+      "new": "\"dateModified\":\"2026-11-06T14:42:53+01:00\"",
+      "count": 1
     }
   ],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.html",
-    "https://nasekadan.cz/social/reditelske-volno-kadan-dve-skoly-16-listopadu-2026.png",
-    "https://nasekadan.cz/",
-    "https://nasekadan.cz/clanky/"
+    "https://nasekadan.cz/clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html"
   ],
   "verify_present": [
-    "reditelske-volno-kadan-dve-skoly-16-listopadu-2026",
-    "Dvě kadaňské školy oznámily ředitelské volno. Na Podlesí zavřou i družinu a jídelnu"
+    "kadan-chomutovska-20261106-verified",
+    "Poškozený zaparkovaný automobil a informace hasičů",
+    "dopravní nehodu se zraněním"
   ],
-  "verify_absent": []
+  "verify_absent": [
+    "Přítomnost sanitky sama o sobě nepotvrzuje zranění."
+  ]
 }
