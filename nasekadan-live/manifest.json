@@ -1,70 +1,71 @@
 {
   "schema": 1,
-  "version": "20261106-chomutovska-nehoda-zraneny-1450-002",
-  "files": [],
+  "version": "20261109-altan-smetanovy-sady-001",
+  "files": [
+    {
+      "path": "clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html",
+      "sha256": "b26243c845fa64c79b0f75ca0086147c0d0b69ac6317e93ddc4b62e6d43fe61f"
+    },
+    {
+      "path": "social/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.png",
+      "sha256": "326bd183972deca9958f8d7c35c67e7675957a4cefed5eb33d6de13d614cc15c"
+    }
+  ],
   "patches": [
     {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "<h2>Příčina ani údaje o zraněných zatím nejsou potvrzené</h2>",
-      "new": "<h2>Jedna lehce zraněná osoba převezena do nemocnice</h2>",
-      "count": 1,
-      "sha256_before": "f06d78fbe3fda214c24d470767ce3b7b88d92256ac7572cdde4799cde4b4806a"
-    },
-    {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "Hasiči událost v 8:12 ohlásili jako <strong>dopravní nehodu se zraněním</strong>. Na místě zasahovala také zdravotnická záchranná služba. Přesný počet zraněných ani závažnost jejich poranění zatím nejsou potvrzeny. Příčinu nehody dostupné úřední záznamy neupřesňují.",
-      "new": "Hasiči v ranním hlášení událost vedli jako <strong>dopravní nehodu se zraněním</strong>. Podle vyjádření mluvčího Zdravotnické záchranné služby Ústeckého kraje Patrika Christiana Cmoreje převzali záchranáři <strong>jednu osobu s lehkým zraněním</strong> a převezli ji do nemocnice v Kadani. Příčinu střetu nadále prověřují dopravní policisté.",
+      "path": "index.html",
+      "old": "<section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/sportovni-tyden-kadan-2-8-listopadu-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Sportovní týden v Kadani: Panthers dali jedenáct gólů, hokejový dorost zářil. A-tým dál čeká na výhru\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/sportovni-tyden-kadan-2-8-listopadu-2026-743be5a2f0.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\">\n        <small>SPORT · 2.–8. LISTOPADU 2026 · 8. 11. 2026 · 20:33</small>\n        <h1>Sportovní týden v Kadani: Panthers dali jedenáct gólů, hokejový dorost zářil. A-tým dál čeká na výhru</h1>\n        <p>Sportovní souhrn Kadaně za 2.–8. listopadu 2026: sedmá porážka hokejistů, kanonáda Panthers 11:6, dvě vysoké výhry dorostu, fotbal i běžecký pohár.</p>\n        <a class=\"btn\" href=\"/clanky/sportovni-tyden-kadan-2-8-listopadu-2026.html\">Přečíst nejnovější článek →</a>\n      </div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">8. 11. 2026 v 14:54</p>\n      <h2>Kam na svatomartinskou husu v Kadani? Prunéřov, Bílý Beránek i Střelnice zveřejnily nabídky</h2>\n      <p>Kam na svatomartinskou husu v Kadani a Prunéřově? Hody 11.–15. listopadu 2026, husí stehno za 489 Kč a slavnostní menu za 729 či 849 Kč.</p>\n      <a class=\"aside-button\" href=\"/clanky/svatomartinske-hody-husa-kadan-prunerov-2026.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
+      "new": "<section class=\"wrap hero\" id=\"clanky\" data-auto-latest-hero=\"1\" data-latest-article-href=\"/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html\">\n    <article class=\"lead\">\n      <div class=\"photo\" role=\"img\" aria-label=\"Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat;height:auto;aspect-ratio:1200/630\"></div>\n      <div class=\"copy\"><small>KADAŇ · INVESTICE MĚSTA · 9. 11. 2026 · 00:15</small><h1>Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu</h1><p>Rekonstrukce altánu v kadaňských Smetanových sadech má za sebou dva dodatky ke smlouvě. Původně sjednaná cena 8,63 milionu korun se navýšila na 9,62 milionu včetně DPH. Ukazují to dokumenty zveřejněné v registru smluv.</p><a class=\"btn\" href=\"/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html\">Přečíst nejnovější článek →</a></div>\n    </article>\n    <aside class=\"current-aside\">\n      <p class=\"aside-label\">DALŠÍ AKTUÁLNÍ ČLÁNEK</p>\n      <p class=\"aside-date\">8. 11. 2026 v 14:54</p>\n      <h2>Kam na svatomartinskou husu v Kadani? Prunéřov, Bílý Beránek i Střelnice zveřejnily nabídky</h2>\n      <p>Kam na svatomartinskou husu v Kadani a Prunéřově? Hody 11.–15. listopadu 2026, husí stehno za 489 Kč a slavnostní menu za 729 či 849 Kč.</p>\n      <a class=\"aside-button\" href=\"/clanky/svatomartinske-hody-husa-kadan-prunerov-2026.html\">Přečíst článek →</a>\n      <div class=\"aside-links\"><a href=\"/clanky/\">Všechny články podle data</a></div>\n    </aside>\n  </section>",
       "count": 1
     },
     {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody. Podle oznámení hasičů byla událost ohlášena se zraněním, podrobnější údaje o účastnících však zatím nejsou známy.",
-      "new": "Přinášíme vlastní fotografie a video ze zásahu u páteční nehody, při které jedna osoba utrpěla lehké zranění a byla převezena do kadaňské nemocnice.",
+      "path": "index.html",
+      "old": "    <div class=\"article-list\">\n",
+      "new": "    <div class=\"article-list\">\n    <article class=\"article-card hospital\" data-auto-article=\"altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">9. 11. 2026 · 00:15 · KADAŇ · INVESTICE MĚSTA</span><h3>Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu</h3><p>Rekonstrukce altánu v kadaňských Smetanových sadech má za sebou dva dodatky ke smlouvě. Původně sjednaná cena 8,63 milionu korun se navýšila na 9,62 milionu včetně DPH. Ukazují to dokumenty zveřejněné v registru smluv.</p><a class=\"read-more\" href=\"/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html\">Přečíst článek →</a></div>\n    </article>\n",
       "count": 1
     },
     {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "Hasiči událost ohlásili se zraněním. Počet zraněných ani příčina nehody zatím nebyly upřesněny.",
-      "new": "Záchranáři převezli jednoho lehce zraněného účastníka do nemocnice v Kadani. Přesná příčina nehody zůstává předmětem šetření.",
+      "path": "clanky/index.html",
+      "old": "  <section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n",
+      "new": "  <section class=\"archive-list\" aria-label=\"Chronologický přehled článků\">\n    <article class=\"article-card hospital\" data-auto-article=\"altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026\">\n      <div class=\"visual\" role=\"img\" aria-label=\"Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu\" style=\"background-image:linear-gradient(rgba(7,23,34,.04),rgba(7,23,34,.18)),url('https://nasekadan.cz/social/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.png');background-color:#0b202b;background-size:contain;background-position:center;background-repeat:no-repeat\"></div>\n      <div class=\"article-body\"><span class=\"meta\">9. 11. 2026 · 00:15 · KADAŇ · INVESTICE MĚSTA</span><h3>Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu</h3><p>Rekonstrukce altánu v kadaňských Smetanových sadech má za sebou dva dodatky ke smlouvě. Původně sjednaná cena 8,63 milionu korun se navýšila na 9,62 milionu včetně DPH. Ukazují to dokumenty zveřejněné v registru smluv.</p><a class=\"read-more\" href=\"/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html\">Přečíst článek →</a></div>\n    </article>\n",
       "count": 1
     },
     {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "<li>Hasičský záchranný sbor Ústeckého kraje – hlášení dopravní nehody se zraněním z 6. listopadu 2026, 8:12.</li>",
-      "new": "<li>Hasičský záchranný sbor Ústeckého kraje – hlášení dopravní nehody se zraněním z 6. listopadu 2026, 8:12.</li><li>Vyjádření mluvčího Zdravotnické záchranné služby Ústeckého kraje Patrika Christiana Cmoreje k lehce zraněnému účastníkovi převezenému do kadaňské nemocnice.</li>",
+      "path": "clanky/index.html",
+      "old": "<script data-nk-archive-schema=\"1\" type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"name\": \"Články Naše Kadaň – strana 1\", \"numberOfItems\": 447, \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://nasekadan.cz/clanky/sportovni-tyden-kadan-2-8-listopadu-2026.html\", \"name\": \"Sportovní týden v Kadani: Panthers dali jedenáct gólů, hokejový dorost zářil. A-tým dál čeká na výhru\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://nasekadan.cz/clanky/svatomartinske-hody-husa-kadan-prunerov-2026.html\", \"name\": \"Kam na svatomartinskou husu v Kadani? Prunéřov, Bílý Beránek i Střelnice zveřejnily nabídky\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-9-15-listopadu-2026.html\", \"name\": \"Kam v Kadani a okolí od 9. do 15. listopadu: svatý Martin, Pekelná brána a divadlo\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://nasekadan.cz/clanky/nemocnice-kadan-sto-dni-vedeni-gynekologie-finance-8-listopadu-2026.html\", \"name\": \"Sto dní nového vedení Nemocnice Kadaň: gynekologie do šestého patra a návrh podpory až 70 milionů\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://nasekadan.cz/clanky/gymka-day-kadan-otevrene-dvere-11-listopadu-2026.html\", \"name\": \"Roboti, virtuální realita i pokusy na vlastní kůži. Kadaňské gymnázium otevře dveře veřejnosti\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://nasekadan.cz/clanky/hokej-kadan-zdar-sedma-porazka-prodlouzeni-7-listopadu-2026.html\", \"name\": \"Sedmá porážka v řadě! Kadaň se proti Žďáru zvedla, naději na vítězství ale utnul gól v prodloužení\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://nasekadan.cz/clanky/svatomartinsky-trh-kadan-7-27-listopadu-2026.html\", \"name\": \"V Kadani začíná svatomartinský trh. Na návštěvníky čekají koblížky a podzimní dobroty\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://nasekadan.cz/clanky/halloween-treti-zs-kadan-6-listopadu-2026.html\", \"name\": \"FOTO A VIDEO: Duchové, příšery i čarodějnice. Třetí ZŠ v Kadani uspořádala Halloween\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://nasekadan.cz/clanky/kadan-obnovena-dodavka-tepla-havarie-cez-6-listopadu-2026.html\", \"name\": \"Dodávka tepla v Kadani byla po havárii u ČEZ obnovena. Stanice se vracejí do normálu\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://nasekadan.cz/clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html\", \"name\": \"V Chomutovské ulici v Kadani se srazila tři auta. Provoz byl omezený\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://nasekadan.cz/clanky/nemocnice-kadan-ortopedicka-ambulance-uzavrena-6-16-listopadu-2026.html\", \"name\": \"Ortopedická ambulance č. 1 v Kadani je dnes zavřená. Neotevře ani 16. listopadu\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://nasekadan.cz/clanky/padelovy-kurt-kadan-dodatek-vyssi-cena-listopad-2026.html\", \"name\": \"Nový padelový kurt v Kadani podražil. Město schválilo vícepráce, cena se blíží 2,5 milionu\"}]}</script>",
+      "new": "<script data-nk-archive-schema=\"1\" type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Články Naše Kadaň – strana 1\",\"numberOfItems\":448,\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"url\":\"https://nasekadan.cz/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html\",\"name\":\"Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu\"},{\"@type\":\"ListItem\",\"position\":2,\"url\":\"https://nasekadan.cz/clanky/sportovni-tyden-kadan-2-8-listopadu-2026.html\",\"name\":\"Sportovní týden v Kadani: Panthers dali jedenáct gólů, hokejový dorost zářil. A-tým dál čeká na výhru\"},{\"@type\":\"ListItem\",\"position\":3,\"url\":\"https://nasekadan.cz/clanky/svatomartinske-hody-husa-kadan-prunerov-2026.html\",\"name\":\"Kam na svatomartinskou husu v Kadani? Prunéřov, Bílý Beránek i Střelnice zveřejnily nabídky\"},{\"@type\":\"ListItem\",\"position\":4,\"url\":\"https://nasekadan.cz/clanky/kam-v-kadani-a-okoli-9-15-listopadu-2026.html\",\"name\":\"Kam v Kadani a okolí od 9. do 15. listopadu: svatý Martin, Pekelná brána a divadlo\"},{\"@type\":\"ListItem\",\"position\":5,\"url\":\"https://nasekadan.cz/clanky/nemocnice-kadan-sto-dni-vedeni-gynekologie-finance-8-listopadu-2026.html\",\"name\":\"Sto dní nového vedení Nemocnice Kadaň: gynekologie do šestého patra a návrh podpory až 70 milionů\"},{\"@type\":\"ListItem\",\"position\":6,\"url\":\"https://nasekadan.cz/clanky/gymka-day-kadan-otevrene-dvere-11-listopadu-2026.html\",\"name\":\"Roboti, virtuální realita i pokusy na vlastní kůži. Kadaňské gymnázium otevře dveře veřejnosti\"},{\"@type\":\"ListItem\",\"position\":7,\"url\":\"https://nasekadan.cz/clanky/hokej-kadan-zdar-sedma-porazka-prodlouzeni-7-listopadu-2026.html\",\"name\":\"Sedmá porážka v řadě! Kadaň se proti Žďáru zvedla, naději na vítězství ale utnul gól v prodloužení\"},{\"@type\":\"ListItem\",\"position\":8,\"url\":\"https://nasekadan.cz/clanky/svatomartinsky-trh-kadan-7-27-listopadu-2026.html\",\"name\":\"V Kadani začíná svatomartinský trh. Na návštěvníky čekají koblížky a podzimní dobroty\"},{\"@type\":\"ListItem\",\"position\":9,\"url\":\"https://nasekadan.cz/clanky/halloween-treti-zs-kadan-6-listopadu-2026.html\",\"name\":\"FOTO A VIDEO: Duchové, příšery i čarodějnice. Třetí ZŠ v Kadani uspořádala Halloween\"},{\"@type\":\"ListItem\",\"position\":10,\"url\":\"https://nasekadan.cz/clanky/kadan-obnovena-dodavka-tepla-havarie-cez-6-listopadu-2026.html\",\"name\":\"Dodávka tepla v Kadani byla po havárii u ČEZ obnovena. Stanice se vracejí do normálu\"},{\"@type\":\"ListItem\",\"position\":11,\"url\":\"https://nasekadan.cz/clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html\",\"name\":\"V Chomutovské ulici v Kadani se srazila tři auta. Provoz byl omezený\"},{\"@type\":\"ListItem\",\"position\":12,\"url\":\"https://nasekadan.cz/clanky/nemocnice-kadan-ortopedicka-ambulance-uzavrena-6-16-listopadu-2026.html\",\"name\":\"Ortopedická ambulance č. 1 v Kadani je dnes zavřená. Neotevře ani 16. listopadu\"},{\"@type\":\"ListItem\",\"position\":13,\"url\":\"https://nasekadan.cz/clanky/padelovy-kurt-kadan-dodatek-vyssi-cena-listopad-2026.html\",\"name\":\"Nový padelový kurt v Kadani podražil. Město schválilo vícepráce, cena se blíží 2,5 milionu\"}]}</script>",
       "count": 1
     },
     {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "<meta property=\"article:modified_time\" content=\"2026-11-06T14:42:53+01:00\">",
-      "new": "<meta property=\"article:modified_time\" content=\"2026-11-06T14:49:55+01:00\">",
+      "path": "rss.xml",
+      "old": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />",
+      "new": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n    <item><title>Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu</title><description>Rekonstrukce altánu v kadaňských Smetanových sadech má za sebou dva dodatky ke smlouvě. Původně sjednaná cena 8,63 milionu korun se navýšila na 9,62 milionu včetně DPH. Ukazují to dokumenty zveřejněné v registru smluv.</description><link>https://nasekadan.cz/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html</link><guid isPermaLink=\"true\">https://nasekadan.cz/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html</guid><pubDate>Mon, 09 Nov 2026 00:15:00 +0100</pubDate><category>KADAŇ</category><category>INVESTICE MĚSTA</category><szn:image><szn:url>https://nasekadan.cz/social/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.png</szn:url></szn:image></item>\n",
       "count": 1
     },
     {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "\"dateModified\":\"2026-11-06T14:42:53+01:00\"",
-      "new": "\"dateModified\":\"2026-11-06T14:49:55+01:00\"",
+      "path": "sitemap.xml",
+      "old": "  <url><loc>https://nasekadan.cz/clanky/</loc></url>",
+      "new": "  <url><loc>https://nasekadan.cz/clanky/</loc></url>\n  <url><loc>https://nasekadan.cz/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html</loc><lastmod>2026-11-09</lastmod></url>",
       "count": 1
     },
     {
-      "path": "clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html",
-      "old": "Dopravní nehoda tří osobních aut omezila v pátek ráno provoz v Chomutovské ulici v Kadani. Podle krajského dopravního přehledu zůstala na vozovce překážka a místem se projíždělo se zvýšenou opatrností.",
-      "new": "Dopravní nehoda tří osobních aut omezila v pátek ráno provoz v Chomutovské ulici v Kadani. Jedna osoba utrpěla lehké zranění a záchranáři ji převezli do kadaňské nemocnice. Podle krajského dopravního přehledu zůstala na vozovce překážka a místem se projíždělo se zvýšenou opatrností.",
+      "path": "news-sitemap.xml",
+      "old": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">",
+      "new": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">\n  <url><loc>https://nasekadan.cz/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html</loc><news:news><news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication><news:publication_date>2026-11-09T00:15:00+01:00</news:publication_date><news:title>Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu</news:title></news:news></url>",
       "count": 1
     }
   ],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/nehoda-tri-aut-chomutovska-kadan-6-listopadu-2026.html"
+    "https://nasekadan.cz/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html"
   ],
   "verify_present": [
-    "Jedna lehce zraněná osoba převezena do nemocnice",
-    "jednu osobu s lehkým zraněním",
-    "Patrika Christiana Cmoreje",
-    "zaparkovaný vůz"
+    "Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu",
+    "9 615 203,92 Kč",
+    "PETROM STAVBY",
+    "NewsArticle"
   ],
   "verify_absent": [
-    "Přesný počet zraněných ani závažnost jejich poranění zatím nejsou potvrzeny.",
-    "Počet zraněných ani příčina nehody zatím nebyly upřesněny."
+    "dosud nezveřejněno"
   ]
 }
