@@ -1,28 +1,29 @@
 {
   "schema": 1,
-  "version": "20261109-altan-smetanovy-sady-002",
+  "version": "20261110-kadan-fve-dotační-dodatek-0637-v1",
   "files": [
     {
-      "path": "clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html",
-      "sha256": "51f46d5bb26c9a0fa439c26e6bae5162af76fc4b3cbecc9c88975ece8ba49227"
+      "path": "clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html",
+      "sha256": "1de28dfef5fb9ef4d5a19ba08e231ba1845b88eefeb9a231b2f8a5d42089dadf"
     },
     {
-      "path": "social/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.png",
-      "sha256": "326bd183972deca9958f8d7c35c67e7675957a4cefed5eb33d6de13d614cc15c"
+      "path": "social/kadan-mestske-fve-projekt-2026-originalni-grafika.png",
+      "sha256": "fdfed75d270db9ceba168734280892e506bebe406ec2d63984d35a0584ffb070"
     }
   ],
   "patches": [],
   "deletes": [],
   "verify_urls": [
-    "https://nasekadan.cz/clanky/altan-smetanovy-sady-kadan-dodatky-cena-9-6-milionu-2026.html"
+    "https://nasekadan.cz/clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html"
   ],
   "verify_present": [
-    "Altán ve Smetanových sadech zdražil téměř o milion. Nová smluvní cena dosáhla 9,6 milionu",
-    "9 615 203,92 Kč",
-    "PETROM STAVBY",
-    "NewsArticle"
+    "Kadaň chce vyrábět vlastní elektřinu ze slunce",
+    "6 703 752 Kč",
+    "482,5 kWp",
+    "NewsArticle",
+    "https://smlouvy.gov.cz/smlouva/40222645"
   ],
   "verify_absent": [
-    "dosud nezveřejněno"
+    "ČLÁNEK PŘIPRAVOVÁN"
   ]
 }
