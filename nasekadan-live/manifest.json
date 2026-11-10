@@ -1,27 +1,41 @@
 {
   "schema": 1,
-  "version": "20261110-kadan-fve-dotační-dodatek-0637-v1",
-  "files": [
+  "version": "20261110-kadan-fve-publisher-index-rss-0640-v1",
+  "files": [],
+  "patches": [
     {
       "path": "clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html",
-      "sha256": "1de28dfef5fb9ef4d5a19ba08e231ba1845b88eefeb9a231b2f8a5d42089dadf"
+      "old": "2026-11-10T06:37:18+01:00",
+      "new": "2026-11-10T06:38:36+01:00",
+      "count": 4
     },
     {
-      "path": "social/kadan-mestske-fve-projekt-2026-originalni-grafika.png",
-      "sha256": "fdfed75d270db9ceba168734280892e506bebe406ec2d63984d35a0584ffb070"
+      "path": "clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html",
+      "old": "Publikováno 10. 11. 2026 v 06:37",
+      "new": "Publikováno 10. 11. 2026 v 06:38",
+      "count": 1
+    },
+    {
+      "path": "rss.xml",
+      "old": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n    <item>",
+      "new": "<atom:link href=\"https://nasekadan.cz/rss.xml\" rel=\"self\" type=\"application/rss+xml\" />\n    <item>\n      <title>Kadaň chce vyrábět vlastní elektřinu ze slunce. Velký projekt městských solárních elektráren ale mění podobu</title>\n      <description><![CDATA[Na střechách městských objektů mají vzniknout fotovoltaické elektrárny. Projekt ale mění podobu: snižuje se jeho výkon i dotační podpora, zatímco nové dotační cíle už nepočítají s akumulací.]]></description>\n      <link>https://nasekadan.cz/clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html</link>\n      <guid isPermaLink=\"true\">https://nasekadan.cz/clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html</guid>\n      <pubDate>Tue, 10 Nov 2026 06:38:36 +0100</pubDate>\n      <category>KADAŇ</category>\n      <category>INVESTICE</category>\n      <category>ENERGETIKA</category>\n      <szn:image><szn:url>https://nasekadan.cz/social/kadan-mestske-fve-projekt-2026-originalni-grafika.png</szn:url></szn:image>\n    </item>\n    <item>",
+      "count": 1
+    },
+    {
+      "path": "news-sitemap.xml",
+      "old": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">\n  <url>",
+      "new": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:news=\"http://www.google.com/schemas/sitemap-news/0.9\">\n  <url>\n    <loc>https://nasekadan.cz/clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html</loc>\n    <news:news>\n      <news:publication><news:name>Naše Kadaň</news:name><news:language>cs</news:language></news:publication>\n      <news:publication_date>2026-11-10T06:38:36+01:00</news:publication_date>\n      <news:title>Kadaň chce vyrábět vlastní elektřinu ze slunce. Velký projekt městských solárních elektráren ale mění podobu</news:title>\n    </news:news>\n  </url>\n  <url>",
+      "count": 1
     }
   ],
-  "patches": [],
   "deletes": [],
   "verify_urls": [
     "https://nasekadan.cz/clanky/kadan-mestske-solarni-elektrarny-dotace-zmeny-2026.html"
   ],
   "verify_present": [
-    "Kadaň chce vyrábět vlastní elektřinu ze slunce",
-    "6 703 752 Kč",
-    "482,5 kWp",
+    "Kadaň chce vyrábět vlastní elektřinu ze slunce. Velký projekt městských solárních elektráren ale mění podobu",
     "NewsArticle",
-    "https://smlouvy.gov.cz/smlouva/40222645"
+    "2026-11-10T06:38:36+01:00"
   ],
   "verify_absent": [
     "ČLÁNEK PŘIPRAVOVÁN"
