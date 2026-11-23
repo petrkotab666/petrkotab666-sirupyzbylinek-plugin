@@ -1,8 +1,15 @@
 {
   "schema": 1,
-  "version": "20261123-withdraw-closed-appeal-v1",
+  "version": "20261123-withdraw-closed-appeal-v2",
   "files": [],
-  "patches": [],
+  "patches": [
+    {
+      "path": "sitemap.xml",
+      "old": "<url><loc>https://nasekadan.cz/clanky/policie-patra-po-jedenapullete-divce-z-chomutovska-23-listopadu-2026.html</loc></url>",
+      "new": "",
+      "count": 1
+    }
+  ],
   "deletes": [
     "clanky/policie-patra-po-jedenapullete-divce-z-chomutovska-23-listopadu-2026.html",
     "social/policie-patra-po-jedenapullete-divce-z-chomutovska-23-listopadu-2026-5a92ecf944.png",
